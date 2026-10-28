@@ -1,0 +1,8 @@
+.deps/
+.venv/
+__pycache__/
+*.pyc
+samples/*_files/
+output/*.json
+output/*.html
+reports/*.csv
