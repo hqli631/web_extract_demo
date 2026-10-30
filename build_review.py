@@ -3,9 +3,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 OUTPUT = ROOT / 'output'
 OUTPUT.mkdir(exist_ok=True)
-ENTRY = '''<!doctype html><meta charset="utf-8"><title>区域复核入口</title>
-<p>原网页定位复核需要本地服务。请运行 start_review.ps1 后打开
-<a href="http://127.0.0.1:8765/visual_review.html">原网页区域复核</a>。</p>
+ENTRY = '''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>打开正文复核</title>
+<style>body{max-width:850px;margin:60px auto;padding:24px;font:18px/1.8 system-ui;color:#213047}pre{background:#eef3f8;padding:16px;white-space:pre-wrap}a{font-weight:bold;color:#006aff}</style>
+<h1>请通过本地服务打开正文复核</h1>
+<p>此文件是入口说明。网页列表、检测框和自动保存需要本地 Python 服务，直接双击 HTML 无法加载。</p>
+<p>在 VS Code 终端执行，并保持终端运行：</p>
+<pre>cd "D:\\codex project\\web_extract_demo"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\\start_review.ps1"</pre>
+<p>出现 Open http://127.0.0.1:8765/visual_review.html 后，点击：</p>
+<p><a href="http://127.0.0.1:8765/visual_review.html">打开新版正文优先复核页面</a></p>
+<p>若网页无法连接，检查服务终端是否报错；如果仍显示旧界面，在浏览器按 Ctrl+F5 刷新。</p>
 <script>if(location.protocol!=="file:")location.replace("/visual_review.html");</script>'''
-(OUTPUT / 'review.html').write_text(ENTRY, encoding='utf-8')
-print('output/review.html ready: use http://127.0.0.1:8765/visual_review.html')
+for name in ('review.html', 'visual_review.html'):
+    (OUTPUT / name).write_text(ENTRY, encoding='utf-8')
+print('Review entry pages ready: use http://127.0.0.1:8765/visual_review.html')

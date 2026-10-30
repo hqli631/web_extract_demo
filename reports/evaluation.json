@@ -1,0 +1,23 @@
+{
+  "unit": "region",
+  "reviewed": 0,
+  "baseline": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null
+  },
+  "rules": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null
+  },
+  "pages": [],
+  "errors": [],
+  "note": "Only explicitly reviewed, non-pending regions of unchanged snapshots are scored. In-sample scores are not held-out accuracy. Undetected DOM regions are outside this metric."
+}

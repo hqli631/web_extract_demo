@@ -1,0 +1,28 @@
+{
+  "checked_date": "2026-10-30",
+  "sources": [
+    {
+      "url": "https://www.toutiao.com/article/7702324677901697571/",
+      "status": "insufficient_static_text",
+      "http_status": 200,
+      "static_text_chars": 0,
+      "next_step": "Inspect the article in a normal browser and capture rendered DOM if article text loads. The response alone does not distinguish JS rendering from site interception."
+    },
+    {
+      "url": "https://k.sina.com.cn/article_2868676035_aafc85c301901z5cu.html",
+      "status": "robots_redirect_outside_allowed_domains",
+      "robots_url": "https://k.sina.com.cn/robots.txt",
+      "redirect_url": "https://www.sina.com.cn/",
+      "article_fetched": false,
+      "next_step": "Use a browser snapshot for now; do not interpret redirected homepage HTML as robots directives."
+    },
+    {
+      "url": "https://aicove.net/forum/t/97",
+      "status": "static_post_text_verified",
+      "batch_config": "config/collection_aicove.json",
+      "saved_topic_ids": [97, 41, 96, 95, 94],
+      "unique_sample_files": 5,
+      "next_step": "Review original-post text separately from replies, navigation, related topics and tools; validate XPath reuse on separate posts."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "seeds": ["https://aicove.net/forum/t/97"],
+  "allowed_domains": ["aicove.net"],
+  "article_url_pattern": "^https://aicove\\.net/forum/t/[0-9]+(?:[/?#].*)?$",
+  "discovery_url_pattern": "^https://aicove\\.net/forum/t/[0-9]+/?$",
+  "max_pages": 5,
+  "max_fetches": 15,
+  "max_depth": 1,
+  "delay_seconds": 1,
+  "min_text_chars": 200
+}

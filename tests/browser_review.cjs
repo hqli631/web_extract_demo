@@ -1,0 +1,37 @@
+/* Run with NODE_PATH pointing to a Playwright installation and PYTHON to Python. */
+const {chromium}=require('playwright');
+const {spawn}=require('child_process');
+const fs=require('fs'),os=require('os'),path=require('path'),assert=require('assert/strict');
+const root=path.resolve(__dirname,'..'),temp=fs.mkdtempSync(path.join(os.tmpdir(),'extract-review-'));
+for(const dir of ['samples','reports','config'])fs.mkdirSync(path.join(temp,dir));
+for(const name of ['visual_review.html','region_overlay.js'])fs.copyFileSync(path.join(root,name),path.join(temp,name));
+const text='This is a long article paragraph explaining a concrete subject with sufficient detail to be recognized as body text. ';
+fs.writeFileSync(path.join(temp,'samples','fixture.html'),`<!doctype html><html><head><title>Fixture</title></head><body><nav>Home</nav><article id="article"><h1>Title</h1><p>${text.repeat(4)}</p><p>Short ending.</p><div class="advertisement"><p>Advertisement offer</p></div></article><aside class="sidebar"><p>${text.repeat(2)}</p></aside><div><template shadowrootmode="open"><p>Shadow paragraph for locator test.</p></template></div></body></html>`);
+fs.appendFileSync(path.join(temp,'samples','fixture.html'),`<section><p>Outside main body candidate. ${text}</p></section><base href="https://example.invalid/"><script>document.body.innerHTML="site script destroyed saved content"</script>`);
+fs.writeFileSync(path.join(temp,'samples','fixture.html'),fs.readFileSync(path.join(temp,'samples','fixture.html'),'utf8').replace('<body>','<body class="sidebar_no">'));
+fs.copyFileSync(path.join(temp,'samples','fixture.html'),path.join(temp,'samples','fixture2.html'));
+const server=spawn(process.env.PYTHON||'python',['-u','-c',"import sys; from pathlib import Path; import serve_review as s; s.ROOT=Path(sys.argv[1]); server=s.ThreadingHTTPServer(('127.0.0.1',0),s.Handler); print(server.server_port,flush=True); server.serve_forever()",temp],{cwd:root,env:{...process.env,PYTHONPATH:path.join(root,'.deps')}});
+let browser;
+(async()=>{const port=await new Promise((resolve,reject)=>{server.stdout.once('data',x=>resolve(Number(x.toString().trim())));server.once('error',reject);server.once('exit',code=>reject(Error('server exited '+code)))});
+browser=await chromium.launch({headless:true,executablePath:process.env.CHROME||'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(`http://127.0.0.1:${port}/visual_review.html`);await page.waitForFunction(()=>typeof ready!=='undefined'&&ready);
+assert.ok(await page.evaluate(()=>rows.length>=6));assert.ok(await page.evaluate(()=>visible().length<rows.length));await page.getByText('批量修正 / XPath 规则',{exact:true}).click();
+assert.ok(await page.evaluate(()=>{const r=rows.find(r=>r.text.startsWith('Outside main body candidate.'));return r&&!r.is_main&&r.label==='body'&&visible().some(v=>v.id===r.id)}),'Body predictions outside main container must stay in focus view');
+const outside=await page.evaluate(()=>rows.find(r=>r.text.startsWith('Outside main body candidate.')));
+await page.evaluate(id=>post({type:'select',id}),outside.id);
+await page.waitForFunction(id=>group[0]===id,outside.id);
+const snapshotFrame=page.frames().find(f=>f.url().includes('/snapshot/'));
+assert.ok(await snapshotFrame.evaluate(id=>{const host=[...document.documentElement.children].find(n=>n.shadowRoot?.querySelector('.box'));const box=[...host.shadowRoot.querySelectorAll('.box')].find(n=>n.querySelector('.badge').textContent.startsWith(id+' '));return getComputedStyle(box).display!=='none'},outside.id));
+const short=await page.evaluate(()=>rows.find(r=>r.text==='Short ending.'));assert.equal(short.predicted_label,'body');
+await page.evaluate(id=>post({type:'select',id}),short.id);await page.waitForFunction(()=>group.length===1);
+await page.click('#parent');await page.waitForFunction(()=>group.length>=3);
+await page.click('#exclude');await page.click('#save');await page.waitForFunction(()=>document.querySelector('#saveState').textContent.startsWith('已保存'));
+assert.ok(JSON.parse(fs.readFileSync(path.join(temp,'reports','annotations.json'),'utf8'))['fixture.html'].regions.some(r=>r.reviewed&&r.label==='noise'));
+await page.click('#testRule');await page.waitForFunction(()=>ruleTest?.ids.length>0);await page.selectOption('#ruleLabel','noise');await page.fill('#ruleFiles','fixture.html,fixture2.html');await page.click('#saveRule');await page.waitForFunction(()=>document.querySelector('#ruleStatus').textContent.includes('已保存'));
+await page.reload();await page.waitForFunction(()=>typeof ready!=='undefined'&&ready);assert.equal(await page.evaluate(()=>rows.find(r=>r.text==='Short ending.').predicted_label),'noise');assert.equal(await page.evaluate(()=>rows.find(r=>r.text==='Short ending.').reviewed),true);
+await page.selectOption('#page','fixture2.html');await page.waitForFunction(()=>currentFile==='fixture2.html'&&ready);assert.equal(await page.evaluate(()=>rows.find(r=>r.text==='Short ending.').predicted_label),'noise');assert.equal(await page.evaluate(()=>rows.find(r=>r.text==='Short ending.').reviewed),false);
+// Correct and immediately switch: the correction must remain attached to its original page.
+await page.evaluate(()=>{const r=rows.find(r=>r.text==='Short ending.');r.label='body';r.reviewed=true;changed()});await page.selectOption('#page','fixture.html');await page.waitForFunction(()=>currentFile==='fixture.html'&&ready);assert.equal(JSON.parse(fs.readFileSync(path.join(temp,'reports','annotations.json'),'utf8'))['fixture2.html'].regions.find(r=>r.text==='Short ending.').label,'body');
+await page.getByText('批量修正 / XPath 规则',{exact:true}).click();await page.uncheck('#mainOnly');const shadow=await page.evaluate(()=>rows.find(r=>r.text==='Shadow paragraph for locator test.'));assert.equal(shadow.locator.length,2);await page.evaluate(id=>post({type:'select',id}),shadow.id);await page.waitForFunction(id=>group[0]===id,shadow.id);await page.click('#testRule');await page.waitForFunction(()=>ruleTest!==null);assert.equal(await page.evaluate(()=>ruleTest.ids.length),1);
+assert.deepEqual(errors,[]);console.log('PASS: main focus, parent bulk correction, atomic save, reload restore, XPath rule application, Shadow DOM locator.');
+})().catch(e=>{console.error(e);process.exitCode=1}).finally(async()=>{if(browser)await browser.close();server.kill();console.log('Isolated fixture files:',temp)});

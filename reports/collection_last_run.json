@@ -1,0 +1,62 @@
+{
+  "added": [
+    {
+      "file": "collected_855c0d89cc5b8f45.html",
+      "url": "https://aicove.net/forum/t/97",
+      "seed_url": "https://aicove.net/forum/t/97",
+      "domain": "aicove.net",
+      "content_hash": "c12e2dc1d665531eb9793c8a1c7ee830fa9fda129f1e870ccc5cb5acbb1938a7",
+      "snapshot": "eb6ada47208a1b7b59af060bcc53cf03635d8c21331ad00017bc9388abf463fc",
+      "fetched_at": "2026-10-30T09:13:00Z",
+      "mode": "static",
+      "text_chars": 1762
+    },
+    {
+      "file": "collected_911f560fdd154136.html",
+      "url": "https://aicove.net/forum/t/41",
+      "seed_url": "https://aicove.net/forum/t/41",
+      "domain": "aicove.net",
+      "content_hash": "d0520b7d2775bff7dae38a94a4e85bedda40acbb80080b36229db07179b7fce7",
+      "snapshot": "e19d25c69ba54724459ba2079a433b514f5cdc634f6eb83a80de7deddf0fa9a6",
+      "fetched_at": "2026-10-30T09:13:02Z",
+      "mode": "static",
+      "text_chars": 1646
+    },
+    {
+      "file": "collected_47c9a44f1ccc3dfa.html",
+      "url": "https://aicove.net/forum/t/96",
+      "seed_url": "https://aicove.net/forum/t/96",
+      "domain": "aicove.net",
+      "content_hash": "30991f8740d6687facc9297658b1a689c5da3406be40b96f8cee12e877d7ba77",
+      "snapshot": "35e8f92c0bef3cb604c09b7d7bae426e1ec75a0ab2093389f672502e7c514856",
+      "fetched_at": "2026-10-30T09:13:03Z",
+      "mode": "static",
+      "text_chars": 1740
+    },
+    {
+      "file": "collected_5b4a5a3b46bc6f7f.html",
+      "url": "https://aicove.net/forum/t/95",
+      "seed_url": "https://aicove.net/forum/t/95",
+      "domain": "aicove.net",
+      "content_hash": "1daa847d21bc23e5894e7a09024d5110b58251343542aa4d5c9b88cda64a2b4d",
+      "snapshot": "048fcb334639b0ab904bb31c0d32979d56f90eabf411cff45506718d83eca263",
+      "fetched_at": "2026-10-30T09:13:05Z",
+      "mode": "static",
+      "text_chars": 1758
+    },
+    {
+      "file": "collected_07299d33c58922ca.html",
+      "url": "https://aicove.net/forum/t/94",
+      "seed_url": "https://aicove.net/forum/t/94",
+      "domain": "aicove.net",
+      "content_hash": "29ca5f9243eab5a119f11ee9fdc35251a6e362b80ac1feb882969281f834ebd7",
+      "snapshot": "7a6f99231e4814ad5cc97ac2a500e89cd14c137a78a7933a33a5ac2c54853e8a",
+      "fetched_at": "2026-10-30T09:13:08Z",
+      "mode": "static",
+      "text_chars": 1728
+    }
+  ],
+  "attempts": 5,
+  "skipped": [],
+  "errors": []
+}

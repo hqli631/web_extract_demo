@@ -1,0 +1,14 @@
+{
+  "seeds": [
+    "https://www.toutiao.com/article/7702324677901697571/",
+    "https://k.sina.com.cn/article_2868676035_aafc85c301901z5cu.html",
+    "https://aicove.net/forum/t/97"
+  ],
+  "allowed_domains": ["www.toutiao.com", "k.sina.com.cn", "aicove.net"],
+  "article_url_pattern": "^https://(?:www\\.toutiao\\.com/article/[0-9]+/|k\\.sina\\.com\\.cn/article_[^/?]+\\.html|aicove\\.net/forum/t/[0-9]+)(?:[?#].*)?$",
+  "max_pages": 3,
+  "max_fetches": 3,
+  "max_depth": 0,
+  "delay_seconds": 1,
+  "min_text_chars": 200
+}
