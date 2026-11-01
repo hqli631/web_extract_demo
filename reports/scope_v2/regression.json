@@ -1,0 +1,517 @@
+{
+  "note": "Development regression using AI suggestions, not human gold or independent accuracy.",
+  "passed": 69,
+  "failed": 0,
+  "skipped": 0,
+  "pages": [
+    {
+      "file": "blog_01.html",
+      "page_type": "article",
+      "scope_method": "#artibody",
+      "before_chars": 4612,
+      "after_chars": 3935,
+      "checks": [
+        {
+          "id": "72ac3401e8e639081cb0926f",
+          "decision": "body",
+          "text": "10月26日，物理ai概念延续强势， 宇树科技 （688836.sh）收盘涨7.69%报672元，总市值达2718亿元。自10月16日盘中低点407.01元至26日收盘，宇树科技在7个交易日内累计上涨65.1%。",
+          "status": "pass"
+        },
+        {
+          "id": "6dcf6afc7f7b9fc08b5e17e9",
+          "decision": "body",
+          "text": "行情的触发点在10月下旬的两场会议。10月21日，英伟达ceo黄仁勋在柏林gtc大会上称“下一波浪潮是物理ai”，并宣布扩容isaac 机器人 开发平台；10月22日，2026世界物理ai大会暨宇树合作伙伴生态大会在杭州举行，宇树科技创始人王兴兴在演讲中表示，随着gpt-6发布，“物理ai已经看到被击穿的苗头，很可能最近1到2年或者2到3年”。",
+          "status": "pass"
+        },
+        {
+          "id": "9227b39141c7b4ee04314e6b",
+          "decision": "body",
+          "text": "21世纪经济报道记者根据wind收录的电话会议纪要统计，10月19日至25日这一周内，可查到纪要的物理ai及人形机器人相关电话会至少有18场，覆盖16家券商研究所， 东吴证券 更是有计算机、传媒互联网行业两场电话会。",
+          "status": "pass"
+        },
+        {
+          "id": "e54477112ff35392eed7dbb4",
+          "decision": "body",
+          "text": "从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以 海天瑞声 （688787.sh）为对象的有三场，涉及 国泰海通 计算机、东吴计算机、华创计算机，均由公司董秘出席；开源证券计算机团队请到 当虹科技 （688039.sh）代表； 国海证券 的具身智能研究团队请到 慈星股份 （维权） （300307.sz）董秘与数采专家同场； 国联民生 计算机则把仙工智能（06106.hk）相关人员请上会议。",
+          "status": "pass"
+        },
+        {
+          "id": "4b0b15e0984703cfe9484174",
+          "decision": "body",
+          "text": "第二类是物理ai有关专家交流，如东吴传媒互联网张良卫团队连做两场，分别是“物理ai产业专家交流”和“物理ai系列3：具身大脑专家交流”；第三类是团队内部的深度观点汇报。国泰海通机械首席肖群稀的“物理ai、具身智能与人形机器人”、 中金公司 汽车团队的“物理ai进展与4q26板块投资机会”均属此类。",
+          "status": "pass"
+        },
+        {
+          "id": "6ee1cde3e17fba8ba0d26f51",
+          "decision": "body",
+          "text": "东北证券 在其产业观察中提示，按英伟达的说法，物理ai覆盖机器人、自动驾驶与智能空间，相关基础设施由模型训练、仿真测试与端侧运行三部分组成。这意味着它更像一个横跨多个既有行业的技术体系，而非一个全新赛道。",
+          "status": "pass"
+        },
+        {
+          "id": "8c842dd03e1b6912874815c4",
+          "decision": "body",
+          "text": "例如，国海机械团队把第89期路演整期给了“人形机器人数采深度”；华源传媒互联网团队直接用了“卖铲子”这个说法，标题是“物理ai的卖铲子环节——数据采集”； 国金证券 具身智能团队的路演主题更直接，叫“数采：物理ai最大短板，数据基建即将爆发”。",
+          "status": "pass"
+        },
+        {
+          "id": "10dd3ada0212b1406bb63c25",
+          "decision": "body",
+          "text": "关于物理ai的进展， 华泰证券 机械设备团队把当前阶段概括为“从概念走向落地”，认为openai等模型企业自研人形机器人有望加速这一进程；国金证券机器人与具身智能团队在纪要中提示，行业目前“仅缺少这一突破的触发信号”，一旦某家头部企业积累数千万至亿个小时数据并实现大脑泛化，全行业将快速跟进布局数据赛道，路径与chatgpt突破后全行业加码算力相似。",
+          "status": "pass"
+        },
+        {
+          "id": "d6af6237d53e1a8e419d383d",
+          "decision": "noise",
+          "text": "vip课程推荐",
+          "status": "pass"
+        },
+        {
+          "id": "2937e26a5be9819011dc9c56",
+          "decision": "noise",
+          "text": "股市直播",
+          "status": "pass"
+        },
+        {
+          "id": "f0cf5c9492b6217b6805489a",
+          "decision": "noise",
+          "text": "7x24小时",
+          "status": "pass"
+        },
+        {
+          "id": "724e6fdd0e28ca088c5d0324",
+          "decision": "noise",
+          "text": "交易提示 操盘必读 证券报 最新公告 限售解禁 数据中心 条件选股 券商评级 股价预测 板块行情 千股千评 个股诊断 大宗交易 财报查询 业绩预告 etf期权 类余额宝 基金净值 基金对比 基金排名 商品行情 外盘期货 商品持仓 现货报价 cftc持仓 期指行情 期指持仓 期指研究 行业指数 权重股票 期货名人 专家坐堂 高清解盘 期货入门 各国国债 期市要闻 期货研究 机构评论 品种大全 外汇计算器 人民币牌价 中间价 美元指数 直盘行情 所有行情 美元相关 人民币相关 交叉盘 拆借利率 货币分析 机构观点 经济数据 专家坐堂 分析师圈 国债收益率 全球滚动 cftc持仓 比特币 外汇计算器 黄金资讯 白银分析 实物金价 etf持仓 黄金td 白银td 金银币 专家坐堂 基础知识 现货黄金 现货白银 现货铂金 现货钯金 高清解盘 黄金吧 白银吧 黄金分析 cftc持仓",
+          "status": "pass"
+        },
+        {
+          "id": "3df18193a971bb53c6232aaf",
+          "decision": "body",
+          "text": "物理ai概念究竟指什么、能不能撑起一条新主线、卡点又在何处等问题，在这批路演里被反复讨论。",
+          "status": "pass"
+        },
+        {
+          "id": "fde22c0412730de7ecbe25ab",
+          "decision": "body",
+          "text": "券商分析师路演忙",
+          "status": "pass"
+        },
+        {
+          "id": "19fd7a5bcd9f0a73b2399b94",
+          "decision": "body",
+          "text": "今天市场广泛流传的一个说法是，卖方分析师周末集体加班，“44场物理ai的电话会议刷屏”。",
+          "status": "pass"
+        },
+        {
+          "id": "0afc877fc12a210677e12f07",
+          "decision": "body",
+          "text": "从时间分布看，18场中有14场集中在10月24日至25日这个周末，其余4场分散在10月19日晚至22日。密度最高的10月25日，一天内有12家机构发布纪要。",
+          "status": "pass"
+        },
+        {
+          "id": "b3173144d95726d0f6b12a2f",
+          "decision": "body",
+          "text": "什么是物理ai？",
+          "status": "pass"
+        },
+        {
+          "id": "3adc30006e2e6d45a0cbe8d6",
+          "decision": "body",
+          "text": "按中国信通院《具身智能发展报告（2026年）》的定义，物理ai指通过把物理规律嵌入感知、推理、生成和行动全过程，使人工智能具备更强的真实性、可靠性与可部署性。",
+          "status": "pass"
+        },
+        {
+          "id": "3b064ea1f90b15aaef3ee1fa",
+          "decision": "body",
+          "text": "物理ai成ai新主线？",
+          "status": "pass"
+        },
+        {
+          "id": "f4e58b9142542f55a4ecbd14",
+          "decision": "body",
+          "text": "物理ai为何被视作ai投资的新主线？卖方分析师们的论述大致落在三个层面：",
+          "status": "pass"
+        },
+        {
+          "id": "8118b348e82bfd90ab8e95ac",
+          "decision": "body",
+          "text": "算力叙事的接续是第三层。黄仁勋在柏林gtc上称“下一轮计算浪潮是理解并作用于物理世界的ai”。",
+          "status": "pass"
+        },
+        {
+          "id": "bc477dbaae8ec2e517439558",
+          "decision": "body",
+          "text": "换言之，这一叙事直接回应了市场对海外算力资本开支见顶的担忧——物理ai若成立，受益的不仅仅是机器人，更是整条ai产业链。",
+          "status": "pass"
+        },
+        {
+          "id": "f193d56c292ad5478d88b4d4",
+          "decision": "body",
+          "text": "物理ai的卡点落在哪？",
+          "status": "pass"
+        },
+        {
+          "id": "35d0c402826d191f6affa391",
+          "decision": "body",
+          "text": "此次卖方多场路演的主题词高度重合：数据采集是物理ai的一大瓶颈。",
+          "status": "pass"
+        },
+        {
+          "id": "9c82396aca4039e5a52ef5fa",
+          "decision": "body",
+          "text": "国金证券的判断是，当前人形机器人大脑与物理ai模型的行业卡点“并非算力，而是数据量”：国内行业整体数据量仅万小时级，而大脑突破需要千万至亿小时级。",
+          "status": "pass"
+        },
+        {
+          "id": "a65166532d36ffcd7fe1c9c2",
+          "decision": "body",
+          "text": "共识并不牢固，宇树提示风险",
+          "status": "pass"
+        },
+        {
+          "id": "749d1a3bcebc327061348177",
+          "decision": "body",
+          "text": "不过，卖方对于物理ai的密集路演，并不等于共识已经牢固。",
+          "status": "pass"
+        },
+        {
+          "id": "9ecbb85d5d9a5b98f554cd62",
+          "decision": "body",
+          "text": "与卖方推荐同时出现的，是上市公司自己的风险提示。",
+          "status": "pass"
+        },
+        {
+          "id": "0bba6cdea7fd3a6cd9346c26",
+          "decision": "body",
+          "text": "公告还称，若行业大规模商业化落地进度不及预期，公司未来营收扩张及业绩释放可能受到不利影响，存在估值回归的投资风险。",
+          "status": "pass"
+        },
+        {
+          "id": "3589fd982b9e5a639a6426ea",
+          "decision": "metadata",
+          "text": "（声明：文章内容仅供参考，不构成投资建议。投资者据此操作，风险自担。）",
+          "status": "pass"
+        },
+        {
+          "id": "6c57a2d614f925c88688faab",
+          "decision": "metadata",
+          "text": "责任编辑：石秀珍 sf183",
+          "status": "pass"
+        },
+        {
+          "id": "55322c02b15c807a5710df7c",
+          "decision": "metadata",
+          "text": "新浪财经声明：此消息系转载自合作媒体，新浪财经登载此文出于传递更多信息之目的，文章内容仅供参考，不构成投资建议。",
+          "status": "pass"
+        },
+        {
+          "id": "cecaedf8bc42d86103a8138c",
+          "decision": "noise",
+          "text": "24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "file": "blog_02.html",
+      "page_type": "article",
+      "scope_method": "consumption-page H1 = document title > article",
+      "before_chars": 3439,
+      "after_chars": 1753,
+      "checks": [
+        {
+          "id": "5ee2a968b56373501794be3f",
+          "decision": "noise",
+          "text": "他出生在湖北黄冈的一个普通村子，父母都是面朝黄土背朝天的农民，家里连一件像样的家电都没有，他17岁考上武大的时候，全村人凑钱给他凑了第一年的学费，连去武汉的火车票都是村里的小学老师给他买的。",
+          "status": "pass"
+        },
+        {
+          "id": "9136d0313ae41e34fccb1241",
+          "decision": "noise",
+          "text": "大学四年他没买过一件超过100块的衣服，所有课余时间全泡在计算机实验室里写代码，毕业的时候手里攥着华为的offer，背着一个装着几件换洗衣物的双肩包，就直接坐绿皮火车跑到了深圳。",
+          "status": "pass"
+        },
+        {
+          "id": "5c1b0ca685497c353b5ae766",
+          "decision": "noise",
+          "text": "在华为的19年里，他几乎把自己整个青春都扑在了工作上，刚入职的时候他在2012实验室做底层算法开发，为了赶一个5g核心算法的攻关项目，连续三个月每天在实验室待到凌晨两点，困了就趴在工位上睡两个小时，醒了接着改代码。",
+          "status": "pass"
+        },
+        {
+          "id": "574eb8a559da71102fa39c09",
+          "decision": "noise",
+          "text": "他的工牌编号排在前一万号，一路跟着公司从2g时代走到5g时代，经历过海外市场开拓的攻坚，也经历过芯片断供时期的全员加班攻坚，19年里他只休过两次超过一周的年假，连孩子出生的那天，他都在远程对接海外的项目上线。",
+          "status": "pass"
+        },
+        {
+          "id": "8aa40a9f52d32507cb7826b3",
+          "decision": "noise",
+          "text": "很多人以为他攒下1300万，全靠高薪和股票分红，可他自己在帖里算了一笔账：刚入职的时候月薪才8000块，前五年几乎没什么积蓄，真正的财富积累，是跟着公司的成长一步步滚出来的。",
+          "status": "pass"
+        },
+        {
+          "id": "955caac22f79ebc096fd56b6",
+          "decision": "noise",
+          "text": "最戳中全网网友的，是他最后说的那段话：“我以前总以为，钱最大的用处就是买贵的东西，买更好的车，买更大的房子，直到40岁这年我才明白，金钱最大的价值从来不是用来消费的，而是给人选择权。",
+          "status": "pass"
+        },
+        {
+          "id": "9838d608ce58ee002ba03ec9",
+          "decision": "noise",
+          "text": "他的故事戳中了无数在大城市打拼的普通年轻人的痛点：很多人在互联网大厂里熬了十几年，手里拿着高薪，却被房贷、车贷、子女教育牢牢捆在一线城市，根本没有任何选择的余地，想走不敢走，想留又熬不动。",
+          "status": "pass"
+        },
+        {
+          "id": "5b402abb45ad50e993974850",
+          "decision": "noise",
+          "text": "而这个农村出来的工程师，靠着19年的勤恳打拼，终于给自己攒下了这份“说走就走”的选择权，不用被任何人绑定，不用为了任何外部评价活着，完全按照自己的意愿安排接下来的人生。",
+          "status": "pass"
+        },
+        {
+          "id": "1a40cf7577573d0e8530dad1",
+          "decision": "noise",
+          "text": "现在他已经把老家的房子重新装修好了，就在武汉东湖边上，推开窗就能看到湖面的风景，父母已经提前搬过去住了，孩子也联系好了当地的学校，再过两个月深圳的房产过户完成，他就会带着全家彻底离开打拼了19年的深圳。",
+          "status": "pass"
+        },
+        {
+          "id": "3b6ee5d063def0b88ad28bdd",
+          "decision": "noise",
+          "text": "打算卖掉深圳的房产回老家安度晚年，还坦言\"感谢华为给了农村娃翻身机会\"。 很多人看完第一反应是羡慕，觉得这简直是普通人职场逆袭的完美样本，可顺着他的自述往深了看，你会发现这份“40岁退休”的底气，根本不是靠运气撞出来的。 他出生在湖北",
+          "status": "pass"
+        },
+        {
+          "id": "b33ed1acc5644563b7e4831c",
+          "decision": "body",
+          "text": "这笔收入的体量很容易估算。如果有 500 万块 gpu 纳入付费授权范围，按每块每年 2,000 美元（现汇率约合 13,355 元人民币）计算，英伟达每年就能入账 100 亿美元（现汇率约合 667.74 亿元人民币）；只要客户持续续费，五年合计可达 500 亿美元（现汇率约合 3,338.72 亿元人民币）。但这里存在不确定之处：英伟达没有说明 2,000 美元（现汇率约合 13,355 元人民币）这个报价对应的 gpu 适用范围，也没有确认它是不是统一标准定价。这套授权具体包含哪些软件、不同产品之间权限会不会重叠，同样尚不明确。",
+          "status": "pass"
+        },
+        {
+          "id": "357e9b6d18485884923dc74a",
+          "decision": "body",
+          "text": "英伟达早在九月就推出了开放智能体安全平台，这套新参考架构是在前者基础上延伸而来，把管控思路拓展到企业基础设施与边缘设备。",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "file": "collected_07299d33c58922ca.html",
+      "page_type": "forum_post",
+      "scope_method": "#floor-1 .md-body:not(.signature-md)",
+      "before_chars": 254,
+      "after_chars": 280,
+      "checks": []
+    },
+    {
+      "file": "collected_47c9a44f1ccc3dfa.html",
+      "page_type": "forum_post",
+      "scope_method": "#floor-1 .md-body:not(.signature-md)",
+      "before_chars": 273,
+      "after_chars": 292,
+      "checks": []
+    },
+    {
+      "file": "collected_5b4a5a3b46bc6f7f.html",
+      "page_type": "forum_post",
+      "scope_method": "#floor-1 .md-body:not(.signature-md)",
+      "before_chars": 291,
+      "after_chars": 310,
+      "checks": []
+    },
+    {
+      "file": "collected_855c0d89cc5b8f45.html",
+      "page_type": "forum_post",
+      "scope_method": "#floor-1 .md-body:not(.signature-md)",
+      "before_chars": 291,
+      "after_chars": 314,
+      "checks": []
+    },
+    {
+      "file": "collected_911f560fdd154136.html",
+      "page_type": "forum_post",
+      "scope_method": "#floor-1 .md-body:not(.signature-md)",
+      "before_chars": 24,
+      "after_chars": 208,
+      "checks": [
+        {
+          "id": "d8abac969593d6365c1e8995",
+          "decision": "metadata",
+          "text": "置顶 【公告】点赞/点踩/打赏不再要求 lv.1",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "file": "forum_01.html",
+      "page_type": "listing",
+      "scope_method": ".url-info repeated cards",
+      "before_chars": 249,
+      "after_chars": 0,
+      "checks": [
+        {
+          "id": "64bb249aebeabfead8d8f908",
+          "decision": "noise",
+          "text": "飞桨是百度基于多年深度学习技术研究和业务应用打造的产业级深度学习平台。它是中国首个自主研发、功能完备、开源开放的产业级深度学习平台，集成了深度学习核心训练和推理框架、基础模型库、端到端开发套件、丰富的工具组件。",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "file": "forum_02.html",
+      "page_type": "listing",
+      "scope_method": ".topic-list / #topic-list-heading",
+      "before_chars": 8898,
+      "after_chars": 0,
+      "checks": [
+        {
+          "id": "a622b9759f312fe714a0ea2c",
+          "decision": "noise",
+          "text": "所有最新话题",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "file": "news_01.html",
+      "page_type": "article",
+      "scope_method": "main p[data-sticky-nav-anchor=true] + narrative headings",
+      "before_chars": 2964,
+      "after_chars": 3076,
+      "checks": [
+        {
+          "id": "eef6374d320a22aa8956f736",
+          "decision": "noise",
+          "text": "发现更多",
+          "status": "pass"
+        },
+        {
+          "id": "a5a27929fe6ae9046e8f884f",
+          "decision": "noise",
+          "text": "轮到你了，梅西——姆巴佩领跑史诗级世界杯金靴之争",
+          "status": "pass"
+        },
+        {
+          "id": "ed8bc73339959351399b51eb",
+          "decision": "noise",
+          "text": "推崇⽑泽东的“z世代”：弹幕、“教员”与政治失语",
+          "status": "pass"
+        },
+        {
+          "id": "2e81bd6562ed09076f9e3191",
+          "decision": "noise",
+          "text": "d&g时装品牌“辱华”风波 中国明星集体抵制",
+          "status": "pass"
+        },
+        {
+          "id": "319351fd039bdfee64084fbb",
+          "decision": "noise",
+          "text": "迪奥展出“眯眯眼”女性照片陷入“辱华”风波，摄影师致歉",
+          "status": "pass"
+        },
+        {
+          "id": "835a19d375a14c9b17ba773d",
+          "decision": "noise",
+          "text": "“眯眯眼”广告再引争议，民族主义兴起下的“带节奏”还是“反辱华”？",
+          "status": "pass"
+        },
+        {
+          "id": "92cd8e86dc3768c0162e0f67",
+          "decision": "noise",
+          "text": "尊界v800“煞车门”：从产品安全之争到“恨国”论战",
+          "status": "pass"
+        },
+        {
+          "id": "5b86ca92d3dff5dc3c2717cf",
+          "decision": "noise",
+          "text": "头条新闻",
+          "status": "pass"
+        },
+        {
+          "id": "31d6d3d550e8258311deb7ff",
+          "decision": "noise",
+          "text": "刘延东逝世：“红二代”“团派”背景，政治局里少见的女性身影",
+          "status": "pass"
+        },
+        {
+          "id": "1dc56134daa8689204ccb4fe",
+          "decision": "noise",
+          "text": "特别推荐",
+          "status": "pass"
+        },
+        {
+          "id": "64d8f07235172711e08023cc",
+          "decision": "noise",
+          "text": "热门内容",
+          "status": "pass"
+        },
+        {
+          "id": "354bd5d5903c3dc616292f37",
+          "decision": "body",
+          "text": "声明以姆巴佩个人公司interconnected ventures的信笺发出，发布时间为欧洲早上、北京时间傍晚，消息传到中国后旋即登上微博热搜首位。",
+          "status": "pass"
+        },
+        {
+          "id": "123fe7f464ffcba47cff8d14",
+          "decision": "body",
+          "text": "姆巴佩在回答中并未点名。不过，节目后期制作加入了一张将他的面孔与毛泽东形象合成的图片，不少观众因此认为，他所指的正是毛泽东。",
+          "status": "pass"
+        },
+        {
+          "id": "74537884b070d31da69063f5",
+          "decision": "body",
+          "text": "bbc未能独立核实该访谈的录制及发布时间。《the bridge》官方社交媒体帐号已无法找到相关片段，节目网站亦未提供重播。",
+          "status": "pass"
+        },
+        {
+          "id": "433d532592e4199e1c595048",
+          "decision": "body",
+          "text": "中国外交部也加入评论。发言人郭嘉昆10月27日在例行记者会上回应相关提问时说：“我们注意到有关报导。伤害中国人民感情的言行自然会遭到中国社会各界的共同抵制。”",
+          "status": "pass"
+        },
+        {
+          "id": "b018c3c52b5dc2acbbbe8700",
+          "decision": "body",
+          "text": "社论指出，他遭受的种族歧视与其此次言论性质相似，他不应一边赚中国人的钱，一边伤害中国人的感情。",
+          "status": "pass"
+        },
+        {
+          "id": "327bdf85aa79f7cb117d9d02",
+          "decision": "body",
+          "text": "在微博、抖音等平台上，不少网民仍在发问：姆巴佩到底说了什么？事件缘由为何？",
+          "status": "pass"
+        },
+        {
+          "id": "cc82562d17032774c295c57c",
+          "decision": "body",
+          "text": "姆巴佩风波因此已不止是一场围绕球星言论的舆论事件，同时折射出毛泽东在当代中国社会中的特殊位置。",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "file": "news_02.html",
+      "page_type": "article",
+      "scope_method": "consumption-page H1 = document title > article",
+      "before_chars": 1911,
+      "after_chars": 864,
+      "checks": [
+        {
+          "id": "2d04b409f4cfe68d2b632ae7",
+          "decision": "noise",
+          "text": "格隆汇10月28日｜谷歌deepmind周二在官网发布了genie 4，可让用户通过文字提示创建可供探索的虚拟世界，并可以使用键盘操控在其中游历。用户还可以在场景展开过程中输入指令，实时改变天气或添加角色等。谷歌表示，模拟环境最长可运行两分钟，约为上一代genie 3的两倍。",
+          "status": "pass"
+        },
+        {
+          "id": "f182a22a1d519cf53945cd70",
+          "decision": "body",
+          "text": "谷歌首席执行官桑达尔 · 皮查伊（sundar pichai）今天在其个人账号上发布推文，称 genie 4 是谷歌迄今为止最逼真、最具互动性的世界模型。",
+          "status": "pass"
+        },
+        {
+          "id": "de8409171f34b336b8fe0039",
+          "decision": "body",
+          "text": "deepmind 工程师 diego rivas 承认，genie 4 仍处早期阶段；长时间模拟可能出现细节漂移，音频准确性和画面内文字可读性也尚未完全解决。",
+          "status": "pass"
+        }
+      ]
+    }
+  ]
+}

@@ -1,23 +1,655 @@
 {
   "unit": "region",
-  "reviewed": 0,
+  "reviewed": 529,
   "baseline": {
-    "tp": 0,
-    "fp": 0,
-    "fn": 0,
-    "precision": null,
-    "recall": null,
-    "f1": null
+    "tp": 126,
+    "fp": 5,
+    "fn": 29,
+    "precision": 0.9618320610687023,
+    "recall": 0.8129032258064516,
+    "f1": 0.8811188811188811
   },
   "rules": {
-    "tp": 0,
-    "fp": 0,
-    "fn": 0,
-    "precision": null,
-    "recall": null,
-    "f1": null
+    "tp": 126,
+    "fp": 5,
+    "fn": 29,
+    "precision": 0.9618320610687023,
+    "recall": 0.8129032258064516,
+    "f1": 0.8811188811188811
   },
-  "pages": [],
-  "errors": [],
+  "pages": [
+    {
+      "file": "blog_01.html",
+      "status": "evaluated",
+      "total": 144,
+      "reviewed": 48,
+      "coverage": 0.3333333333333333,
+      "baseline": {
+        "tp": 45,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "rules": {
+        "tp": 45,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "file": "blog_02.html",
+      "status": "evaluated",
+      "total": 245,
+      "reviewed": 22,
+      "coverage": 0.08979591836734693,
+      "baseline": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9090909090909091,
+        "f1": 0.9523809523809523
+      },
+      "rules": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9090909090909091,
+        "f1": 0.9523809523809523
+      }
+    },
+    {
+      "file": "collected_07299d33c58922ca.html",
+      "status": "evaluated",
+      "total": 141,
+      "reviewed": 19,
+      "coverage": 0.1347517730496454,
+      "baseline": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "rules": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "file": "collected_47c9a44f1ccc3dfa.html",
+      "status": "evaluated",
+      "total": 141,
+      "reviewed": 19,
+      "coverage": 0.1347517730496454,
+      "baseline": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "rules": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "file": "collected_5b4a5a3b46bc6f7f.html",
+      "status": "evaluated",
+      "total": 141,
+      "reviewed": 19,
+      "coverage": 0.1347517730496454,
+      "baseline": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "rules": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "file": "collected_855c0d89cc5b8f45.html",
+      "status": "evaluated",
+      "total": 141,
+      "reviewed": 19,
+      "coverage": 0.1347517730496454,
+      "baseline": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "rules": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "file": "collected_911f560fdd154136.html",
+      "status": "evaluated",
+      "total": 143,
+      "reviewed": 21,
+      "coverage": 0.14685314685314685,
+      "baseline": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "rules": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "file": "forum_01.html",
+      "status": "evaluated",
+      "total": 112,
+      "reviewed": 1,
+      "coverage": 0.008928571428571428,
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "rules": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "file": "forum_02.html",
+      "status": "evaluated",
+      "total": 507,
+      "reviewed": 276,
+      "coverage": 0.5443786982248521,
+      "baseline": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 23,
+        "precision": 1.0,
+        "recall": 0.23333333333333334,
+        "f1": 0.3783783783783784
+      },
+      "rules": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 23,
+        "precision": 1.0,
+        "recall": 0.23333333333333334,
+        "f1": 0.3783783783783784
+      }
+    },
+    {
+      "file": "news_01.html",
+      "status": "evaluated",
+      "total": 213,
+      "reviewed": 70,
+      "coverage": 0.3286384976525822,
+      "baseline": {
+        "tp": 33,
+        "fp": 5,
+        "fn": 3,
+        "precision": 0.868421052631579,
+        "recall": 0.9166666666666666,
+        "f1": 0.8918918918918919
+      },
+      "rules": {
+        "tp": 33,
+        "fp": 5,
+        "fn": 3,
+        "precision": 0.868421052631579,
+        "recall": 0.9166666666666666,
+        "f1": 0.8918918918918919
+      }
+    },
+    {
+      "file": "news_02.html",
+      "status": "evaluated",
+      "total": 195,
+      "reviewed": 15,
+      "coverage": 0.07692307692307693,
+      "baseline": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.8181818181818182,
+        "f1": 0.9
+      },
+      "rules": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.8181818181818182,
+        "f1": 0.9
+      }
+    }
+  ],
+  "errors": [
+    {
+      "file": "blog_02.html",
+      "id": 47,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-image\"][1]",
+        "./*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"span\"][1]"
+      ],
+      "text": "英伟达瞄准 AI 软件订阅收入，黄仁勋提出每块 GPU 每年约 2000 美元",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 156,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][5]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "想把聊天记录导出来存档 结果拿到一堆乱码和废话 Gemini 避坑经验",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 171,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][6]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "AI 视频慢镜头为什么容易变形，应该怎样设计动作 AI视频",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 185,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][7]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "见鬼了 OpenAI训练中的模型自己钻了个DNS配置漏洞跑出离线环境 训练停了十来天 AI大百科 行业动态",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 200,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][8]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "角色参考图越加越不稳？先做一轮删图测试，再决定要不要重做模型 AI视频",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 214,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][9]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "网页端终于能看到用量条了，这插件解了我的心结 Claude 资源分享",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 229,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][10]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "公司要建知识库，办公软件自带的那个我实在不想用 自动化办公 问题求助",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 238,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][11]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "同一个自动化脚本 一家给我上了半页伦理课 另一家一句话就开干 综合交流大区 避坑吐槽",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 253,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][12]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "分享最近做的 AI 录音软件可完全免费使用 综合交流大区 资源分享",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 276,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][14]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "号称五行代码起一套多智能体 我把它翻了一遍 Github精品资源 工具推荐",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 291,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][15]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "把自己那个价格监控站重构了一遍 顺手让Agent自己修自己 综合交流大区 项目展示",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 306,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][16]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "AI 视频导进剪辑软件就偏色？先判断文件变了还是播放方式变了 AI视频",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 318,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][17]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "AI当SRE？运维自动化这波真的要彻底颠覆了！ 综合交流大区 AI资讯",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 333,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][18]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "给机器用的邮件命令行，这个思路我觉得对了 Github精品资源 开源项目",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 370,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][21]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "Seedance 2.5出了4K版 先出480P样片挑满意的再出正片 做短剧的省钱了 综合交流大区 AI资讯",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 385,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][22]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "这么多写代码的工具 你们最后留在机器上的是哪个 AI大百科 交流讨论",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 400,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][23]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "一边喊AI替代人 一边一年多招了一万二 这账怎么算 综合交流大区 创业商业",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 409,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][24]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "不是错觉，那个模型这两天是真的开始磨洋工了 翻车事件 避坑指南",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 422,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][25]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "最危险的从来不是模型答错 是那个允许按钮点太顺手 技术交流 经验分享",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 433,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][26]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "这两个国产助手压根不是一类东西，别再拉一起比了 AI大百科 概念科普",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 448,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][27]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "底模挂了蒸馏权重之后 步数和引导值到底该怎么填 技术交流 问题排错",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 463,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][28]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "「AI编码智能体」其实是五种东西，很多项目死就死在选错了层 AI大百科 技术原理",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 478,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][29]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "无限DeepSeek账号？这羊毛薅得我都怕了！ 综合交流大区 资源分享",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "forum_02.html",
+      "id": 493,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"table\"][1]/*[local-name()=\"tbody\"][1]/*[local-name()=\"tr\"][30]/*[local-name()=\"td\"][1]"
+      ],
+      "text": "让几个模型玩同一款剧情游戏，性格差得比我想的离谱 综合交流大区 闲聊吹水",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "news_01.html",
+      "id": 18,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"figure\"][1]/*[local-name()=\"figcaption\"][1]"
+      ],
+      "text": "图像加注文字， 姆巴佩就“独裁者”迷因言论发表道歉声明，中国足协随即要求其“公开正式道歉”，多家中国品牌已宣布终止合作，央视总台暂停播出相关赛事。",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "news_01.html",
+      "id": 35,
+      "type": "false_positive",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"section\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][1]"
+      ],
+      "text": "姆巴佩就“中国独裁者”迷因道歉：风波背后的资讯真空与“毛泽东热”",
+      "prediction": "body",
+      "truth": "recommendation"
+    },
+    {
+      "file": "news_01.html",
+      "id": 37,
+      "type": "false_positive",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"section\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][2]"
+      ],
+      "text": "官方统计：中国“养老”人数首次超过“养小”",
+      "prediction": "body",
+      "truth": "recommendation"
+    },
+    {
+      "file": "news_01.html",
+      "id": 39,
+      "type": "false_positive",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"section\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][3]"
+      ],
+      "text": "什么时候“豪华经济舱”值得多花钱？我们比较全球五家评价最高的航空公司",
+      "prediction": "body",
+      "truth": "recommendation"
+    },
+    {
+      "file": "news_01.html",
+      "id": 41,
+      "type": "false_positive",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"section\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][4]"
+      ],
+      "text": "Anthropic 重磅上市——目前我们知道的五件惊人信息",
+      "prediction": "body",
+      "truth": "recommendation"
+    },
+    {
+      "file": "news_01.html",
+      "id": 47,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"figure\"][3]/*[local-name()=\"figcaption\"][1]"
+      ],
+      "text": "图像加注文字， 微博用户透过将迷因打码并遮蔽与毛泽东相关的内容，重新转发了这个对比图。",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "news_01.html",
+      "id": 54,
+      "type": "false_positive",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][20]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"p\"][1]"
+      ],
+      "text": "此文包含X提供的内容。由于这些内容会使用曲奇或小甜饼等科技，我们在加载任何内容前会寻求您的认可。 您可能在给与许可前愿意阅读X小甜饼政策和隐私政策。 希望阅读上述内容，请点击“接受并继续”。",
+      "prediction": "body",
+      "truth": "advertisement"
+    },
+    {
+      "file": "news_01.html",
+      "id": 86,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"figure\"][7]/*[local-name()=\"figcaption\"][1]"
+      ],
+      "text": "视频加注文字， “教员万岁”：中国Z世代为何重新“拥抱”毛泽东？",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "news_02.html",
+      "id": 46,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-image\"][1]",
+        "./*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"span\"][1]"
+      ],
+      "text": "皮查伊称 Genie 4 是谷歌迄今最逼真、最具互动性的 AI 世界模型",
+      "prediction": "pending",
+      "truth": "body"
+    },
+    {
+      "file": "news_02.html",
+      "id": 49,
+      "type": "false_negative",
+      "locator": [
+        "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"cp-article-image\"][1]",
+        "./*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"span\"][1]"
+      ],
+      "text": "皮查伊称 Genie 4 是谷歌迄今最逼真、最具互动性的 AI 世界模型",
+      "prediction": "pending",
+      "truth": "body"
+    }
+  ],
   "note": "Only explicitly reviewed, non-pending regions of unchanged snapshots are scored. In-sample scores are not held-out accuracy. Undetected DOM regions are outside this metric."
 }

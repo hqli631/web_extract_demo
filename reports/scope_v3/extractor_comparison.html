@@ -1,0 +1,668 @@
+<!doctype html><html lang='zh-CN'><meta charset='utf-8'><title>自动正文对比</title><style>body{margin:24px;font:16px/1.6 system-ui;background:#f2f5fa;color:#203047}section{padding:20px;background:white;margin:24px 0;border-radius:10px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:24px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;max-height:65vh;overflow:auto}li{margin:12px 0}h2{overflow-wrap:anywhere}@media(max-width:800px){.columns{grid-template-columns:1fr}}</style><h1>自动正文对比</h1><p>先看空输出、短输出与明显分歧。两种算法一致并不代表正确；此页不修改标注，也不代表浏览器复核页预测。</p><section><h2>blog_01.html</h2><p>状态：两种提取结果有分歧；字符数 3894 / 3388；相似度 87.6%</p><p>正文范围依据：#artibody </p><div class='columns'><div><h3>当前提取结果</h3><pre>10月26日，物理AI概念延续强势， 宇树科技 （688836.SH）收盘涨7.69%报672元，总市值达2718亿元。自10月16日盘中低点407.01元至26日收盘，宇树科技在7个交易日内累计上涨65.1%。
+行情的触发点在10月下旬的两场会议。10月21日，英伟达CEO黄仁勋在柏林GTC大会上称“下一波浪潮是物理AI”，并宣布扩容Isaac 机器人 开发平台；10月22日，2026世界物理AI大会暨宇树合作伙伴生态大会在杭州举行，宇树科技创始人王兴兴在演讲中表示，随着GPT-6发布，“物理AI已经看到被击穿的苗头，很可能最近1到2年或者2到3年”。
+这个周末，卖方分析师比往常更忙。21世纪经济报道记者根据Wind收录的电话会议纪要统计，10月19日至25日一周内，可查到纪要的物理AI及人形机器人相关电话会至少18场，覆盖16家券商研究所，其中14场挤在10月24日、25日两天。
+物理AI概念究竟指什么、能不能撑起一条新主线、卡点又在何处等问题，在这批路演里被反复讨论。
+券商分析师路演忙
+今天市场广泛流传的一个说法是，卖方分析师周末集体加班，“44场物理AI的电话会议刷屏”。
+21世纪经济报道记者根据Wind收录的电话会议纪要统计，10月19日至25日这一周内，可查到纪要的物理AI及人形机器人相关电话会至少有18场，覆盖16家券商研究所， 东吴证券 更是有计算机、传媒互联网行业两场电话会。
+从时间分布看，18场中有14场集中在10月24日至25日这个周末，其余4场分散在10月19日晚至22日。密度最高的10月25日，一天内有12家机构发布纪要。
+从研究团队来看，以往机器人行情是机械、汽车、电新行业分析师的主场。这一次，传媒互联网、计算机、中小盘策略团队大批加入，讨论重心也从减速器、丝杠这些执行部件，转向数据采集、仿真平台、数字孪生这些偏软件与数据侧的环节。
+从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以 海天瑞声 （688787.SH）为对象的有三场，涉及 国泰海通 计算机、东吴计算机、华创计算机，均由公司董秘出席；开源证券计算机团队请到 当虹科技 （688039.SH）代表； 国海证券 的具身智能研究团队请到 慈星股份 （维权） （300307.SZ）董秘与数采专家同场； 国联民生 计算机则把仙工智能（06106.HK）相关人员请上会议。
+第二类是物理AI有关专家交流，如东吴传媒互联网张良卫团队连做两场，分别是“物理AI产业专家交流”和“物理AI系列3：具身大脑专家交流”；第三类是团队内部的深度观点汇报。国泰海通机械首席肖群稀的“物理AI、具身智能与人形机器人”、 中金公司 汽车团队的“物理AI进展与4Q26板块投资机会”均属此类。
+什么是物理AI？
+物理AI这一概念最早见于2020年《Nature Machine Intelligence》的一篇学术论文，作者为瑞士联邦材料科学与技术实验室的Aslan Miriyev与伦敦帝国理工学院的Mirko Kovač，论文首次系统定义了物理AI。
+按中国信通院《具身智能发展报告（2026年）》的定义，物理AI指通过把物理规律嵌入感知、推理、生成和行动全过程，使人工智能具备更强的真实性、可靠性与可部署性。
+英伟达是把这一概念推向产业界的主要推手——在2024年6月的Computex上，黄仁勋称物理AI是“下一波AI浪潮”；在2025年1月CES上，英伟达发布了Cosmos世界基础模型；在2025年3月的GTC上，进一步将其列为继感知AI、生成式AI、代理AI之后的第四阶段。
+各家券商研究所对物理AI的表述不尽相同，但内核指向一处：让AI学会物理世界的因果。华福证券的框架相对完整，该团队在行业报告中提出，物理AI是指使人工智能具备理解并作用于物理世界的能力体系，其核心是世界模型，即对物理状态在动作干预下如何演化的预测能力。
+机器人被视为物理AI最好的载体，理由有三：其一，机器人同时具备感知、决策、执行与反馈闭环，动作后果可被观测、被度量、被标注；其二，机器人在真实物理世界中持续产生交互数据，是训练与校验世界模型的来源；其三，模型能力最终必须经由本体作用于物理世界，才能产生经济价值。
+东北证券 在其产业观察中提示，按英伟达的说法，物理AI覆盖机器人、自动驾驶与智能空间，相关基础设施由模型训练、仿真测试与端侧运行三部分组成。这意味着它更像一个横跨多个既有行业的技术体系，而非一个全新赛道。
+物理AI成AI新主线？
+物理AI为何被视作AI投资的新主线？卖方分析师们的论述大致落在三个层面：
+需求端的落差是第一层。开源证券的判断是，物理AI有望成为编码之后需求空间最大的市场。其据以推演的现实是：OpenAI的年度经常性收入（ARR）在2026年2月至6月出现约五个月的平台期，增长动能已从消费者订阅转向企业智能体与编码工具，C端订阅见顶的结构性问题暴露出来。
+作为对照，黄仁勋给出的口径是物理AI对应超过50万亿美元的产业机会，而编码赛道即便是Claude Code这样年化收入超25亿美元、彼时占据约54%编程市场份额的头部产品，其体量与物理AI相比仍相去甚远。
+商业模式的变化是第二层，也最容易被忽略。机器人智能系统可以与本体销售分离定价：本体作为硬件一次性购买，大脑则按API调用量、Token消耗量计费，或收取平台订阅费。
+开源证券据此判断，物理世界可能成为AI能力规模化变现的出口，具身智能公司的收入结构将由一次性硬件销售转为贯穿机器人全生命周期的持续性收入，估值逻辑也随之从制造估值转向平台估值。这解释了本轮资金为何优先给数据与模型端溢价，而非本体与零部件。
+算力叙事的接续是第三层。黄仁勋在柏林GTC上称“下一轮计算浪潮是理解并作用于物理世界的AI”。
+国联民生海外团队的解读是：物理AI横跨自动驾驶、人形机器人与工业制造，且训练、仿真、端侧三类计算需求叠加，有望成为继Agent之后AI的下一个快速增长场景，为算力需求打开新的增量维度。
+换言之，这一叙事直接回应了市场对海外算力资本开支见顶的担忧——物理AI若成立，受益的不仅仅是机器人，更是整条AI产业链。
+物理AI的卡点落在哪？
+此次卖方多场路演的主题词高度重合：数据采集是物理AI的一大瓶颈。
+例如，国海机械团队把第89期路演整期给了“人形机器人数采深度”；华源传媒互联网团队直接用了“卖铲子”这个说法，标题是“物理AI的卖铲子环节——数据采集”； 国金证券 具身智能团队的路演主题更直接，叫“数采：物理AI最大短板，数据基建即将爆发”。
+国金证券的判断是，当前人形机器人大脑与物理AI模型的行业卡点“并非算力，而是数据量”：国内行业整体数据量仅万小时级，而大脑突破需要千万至亿小时级。
+东吴计算机首席王紫敬给出的结论更具体：物理AI最具投资价值的核心环节是真机数据平台，理由是“算法优势会逐月衰减，而数据优势以年为单位持续累积”。他同时估算，单个具身大脑基座模型达到GPT-3水平需1亿小时以上有效数据，而当前全球可用高质量真机数据不足70万小时。
+供给缺口有多大？数量级达到百万小时。国泰海通机械团队援引中国信通院今年6月发布的《具身智能训练场地研究报告》：截至2026年6月30日，全球人形机器人真机数据量约100万小时，按当前资本开支趋势估算，2026年将达300万小时，国内领先厂商已设定每年100万小时的采集目标。
+卖方对数据的定价也已经具体到小时。东吴传媒互联网在专家交流中给出的行业平均水平是每小时200元至400元，其中第一人称自我中心（Ego）数据200至300元、无本体采集（UMI）数据200至400元；客户定制场景的数据在标品基础上翻倍，可达600元；仿真合成数据最便宜，约50至60元；动作捕捉数据最贵，约1000元。
+共识并不牢固，宇树提示风险
+不过，卖方对于物理AI的密集路演，并不等于共识已经牢固。
+关于物理AI的进展， 华泰证券 机械设备团队把当前阶段概括为“从概念走向落地”，认为OpenAI等模型企业自研人形机器人有望加速这一进程；国金证券机器人与具身智能团队在纪要中提示，行业目前“仅缺少这一突破的触发信号”，一旦某家头部企业积累数千万至亿个小时数据并实现大脑泛化，全行业将快速跟进布局数据赛道，路径与ChatGPT突破后全行业加码算力相似。
+哪些公司或将受益？国投证券把受益标的分为三类：国产物理AI平台、数据采集设备、世界模型与真机数据供应商；华福证券则把受益环节归为两条链条：一是数据采集，涵盖本体与垂类场景、触觉与力传感、机器视觉、IMU与数采手套、数采服务与数据平台；二是以特斯拉为核心的零部件供应链，包括丝杠、减速器、轴承等。
+与卖方推荐同时出现的，是上市公司自己的风险提示。
+10月26日晚间，宇树科技公告称，公司股票连续三个交易日收盘价格 涨幅偏离值 累计超过30%，属于股票交易异常波动情形；截至2026年10月26日，公司滚动市盈率为465.22倍，显著高于通用设备制造业行业平均滚动市盈率38.54倍。
+公告指出，人形机器人行业尚处于商业化早期，技术成熟度、下游市场需求培育、产业链配套能力均存在不确定性。同时，物理AI技术从实验室演示走向真实场景的规模化落地仍面临感知精度、运动控制稳定性、数据积累及软硬件协同等多重挑战，相关技术路径与商业模式的成熟尚需时间验证。
+公告还称，若行业大规模商业化落地进度不及预期，公司未来营收扩张及业绩释放可能受到不利影响，存在估值回归的投资风险。</pre></div><div><h3>Trafilatura 结果</h3><pre>10月26日，物理AI概念延续强势，宇树科技
+行情的触发点在10月下旬的两场会议。10月21日，英伟达CEO黄仁勋在柏林GTC大会上称“下一波浪潮是物理AI”，并宣布扩容Isaac机器人
+这个周末，卖方分析师比往常更忙。21世纪经济报道记者根据Wind收录的电话会议纪要统计，10月19日至25日一周内，可查到纪要的物理AI及人形机器人相关电话会至少18场，覆盖16家券商研究所，其中14场挤在10月24日、25日两天。
+物理AI概念究竟指什么、能不能撑起一条新主线、卡点又在何处等问题，在这批路演里被反复讨论。
+券商分析师路演忙
+今天市场广泛流传的一个说法是，卖方分析师周末集体加班，“44场物理AI的电话会议刷屏”。
+21世纪经济报道记者根据Wind收录的电话会议纪要统计，10月19日至25日这一周内，可查到纪要的物理AI及人形机器人相关电话会至少有18场，覆盖16家券商研究所，东吴证券
+从时间分布看，18场中有14场集中在10月24日至25日这个周末，其余4场分散在10月19日晚至22日。密度最高的10月25日，一天内有12家机构发布纪要。
+从研究团队来看，以往机器人行情是机械、汽车、电新行业分析师的主场。这一次，传媒互联网、计算机、中小盘策略团队大批加入，讨论重心也从减速器、丝杠这些执行部件，转向数据采集、仿真平台、数字孪生这些偏软件与数据侧的环节。
+从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以海天瑞声国泰海通当虹科技国海证券慈星股份（维权）（300307.SZ）董秘与数采专家同场；国联民生
+第二类是物理AI有关专家交流，如东吴传媒互联网张良卫团队连做两场，分别是“物理AI产业专家交流”和“物理AI系列3：具身大脑专家交流”；第三类是团队内部的深度观点汇报。国泰海通机械首席肖群稀的“物理AI、具身智能与人形机器人”、中金公司
+什么是物理AI？
+物理AI这一概念最早见于2020年《Nature Machine Intelligence》的一篇学术论文，作者为瑞士联邦材料科学与技术实验室的Aslan Miriyev与伦敦帝国理工学院的Mirko Kovač，论文首次系统定义了物理AI。
+按中国信通院《具身智能发展报告（2026年）》的定义，物理AI指通过把物理规律嵌入感知、推理、生成和行动全过程，使人工智能具备更强的真实性、可靠性与可部署性。
+英伟达是把这一概念推向产业界的主要推手——在2024年6月的Computex上，黄仁勋称物理AI是“下一波AI浪潮”；在2025年1月CES上，英伟达发布了Cosmos世界基础模型；在2025年3月的GTC上，进一步将其列为继感知AI、生成式AI、代理AI之后的第四阶段。
+各家券商研究所对物理AI的表述不尽相同，但内核指向一处：让AI学会物理世界的因果。华福证券的框架相对完整，该团队在行业报告中提出，物理AI是指使人工智能具备理解并作用于物理世界的能力体系，其核心是世界模型，即对物理状态在动作干预下如何演化的预测能力。
+机器人被视为物理AI最好的载体，理由有三：其一，机器人同时具备感知、决策、执行与反馈闭环，动作后果可被观测、被度量、被标注；其二，机器人在真实物理世界中持续产生交互数据，是训练与校验世界模型的来源；其三，模型能力最终必须经由本体作用于物理世界，才能产生经济价值。
+物理AI成AI新主线？
+物理AI为何被视作AI投资的新主线？卖方分析师们的论述大致落在三个层面：
+需求端的落差是第一层。开源证券的判断是，物理AI有望成为编码之后需求空间最大的市场。其据以推演的现实是：OpenAI的年度经常性收入（ARR）在2026年2月至6月出现约五个月的平台期，增长动能已从消费者订阅转向企业智能体与编码工具，C端订阅见顶的结构性问题暴露出来。
+作为对照，黄仁勋给出的口径是物理AI对应超过50万亿美元的产业机会，而编码赛道即便是Claude Code这样年化收入超25亿美元、彼时占据约54%编程市场份额的头部产品，其体量与物理AI相比仍相去甚远。
+商业模式的变化是第二层，也最容易被忽略。机器人智能系统可以与本体销售分离定价：本体作为硬件一次性购买，大脑则按API调用量、Token消耗量计费，或收取平台订阅费。
+开源证券据此判断，物理世界可能成为AI能力规模化变现的出口，具身智能公司的收入结构将由一次性硬件销售转为贯穿机器人全生命周期的持续性收入，估值逻辑也随之从制造估值转向平台估值。这解释了本轮资金为何优先给数据与模型端溢价，而非本体与零部件。
+算力叙事的接续是第三层。黄仁勋在柏林GTC上称“下一轮计算浪潮是理解并作用于物理世界的AI”。
+国联民生海外团队的解读是：物理AI横跨自动驾驶、人形机器人与工业制造，且训练、仿真、端侧三类计算需求叠加，有望成为继Agent之后AI的下一个快速增长场景，为算力需求打开新的增量维度。
+换言之，这一叙事直接回应了市场对海外算力资本开支见顶的担忧——物理AI若成立，受益的不仅仅是机器人，更是整条AI产业链。
+物理AI的卡点落在哪？
+此次卖方多场路演的主题词高度重合：数据采集是物理AI的一大瓶颈。
+例如，国海机械团队把第89期路演整期给了“人形机器人数采深度”；华源传媒互联网团队直接用了“卖铲子”这个说法，标题是“物理AI的卖铲子环节——数据采集”；国金证券
+国金证券的判断是，当前人形机器人大脑与物理AI模型的行业卡点“并非算力，而是数据量”：国内行业整体数据量仅万小时级，而大脑突破需要千万至亿小时级。
+东吴计算机首席王紫敬给出的结论更具体：物理AI最具投资价值的核心环节是真机数据平台，理由是“算法优势会逐月衰减，而数据优势以年为单位持续累积”。他同时估算，单个具身大脑基座模型达到GPT-3水平需1亿小时以上有效数据，而当前全球可用高质量真机数据不足70万小时。
+供给缺口有多大？数量级达到百万小时。国泰海通机械团队援引中国信通院今年6月发布的《具身智能训练场地研究报告》：截至2026年6月30日，全球人形机器人真机数据量约100万小时，按当前资本开支趋势估算，2026年将达300万小时，国内领先厂商已设定每年100万小时的采集目标。
+卖方对数据的定价也已经具体到小时。东吴传媒互联网在专家交流中给出的行业平均水平是每小时200元至400元，其中第一人称自我中心（Ego）数据200至300元、无本体采集（UMI）数据200至400元；客户定制场景的数据在标品基础上翻倍，可达600元；仿真合成数据最便宜，约50至60元；动作捕捉数据最贵，约1000元。
+共识并不牢固，宇树提示风险
+不过，卖方对于物理AI的密集路演，并不等于共识已经牢固。
+关于物理AI的进展，华泰证券
+哪些公司或将受益？国投证券把受益标的分为三类：国产物理AI平台、数据采集设备、世界模型与真机数据供应商；华福证券则把受益环节归为两条链条：一是数据采集，涵盖本体与垂类场景、触觉与力传感、机器视觉、IMU与数采手套、数采服务与数据平台；二是以特斯拉为核心的零部件供应链，包括丝杠、减速器、轴承等。
+与卖方推荐同时出现的，是上市公司自己的风险提示。
+10月26日晚间，宇树科技公告称，公司股票连续三个交易日收盘价格涨幅偏离值累计超过30%，属于股票交易异常波动情形；截至2026年10月26日，公司滚动市盈率为465.22倍，显著高于通用设备制造业行业平均滚动市盈率38.54倍。
+公告指出，人形机器人行业尚处于商业化早期，技术成熟度、下游市场需求培育、产业链配套能力均存在不确定性。同时，物理AI技术从实验室演示走向真实场景的规模化落地仍面临感知精度、运动控制稳定性、数据积累及软硬件协同等多重挑战，相关技术路径与商业模式的成熟尚需时间验证。
+公告还称，若行业大规模商业化落地进度不及预期，公司未来营收扩张及业绩释放可能受到不利影响，存在估值回归的投资风险。
+（声明：文章内容仅供参考，不构成投资建议。投资者据此操作，风险自担。）
+责任编辑：石秀珍 SF183
+新浪财经声明：此消息系转载自合作媒体，新浪财经登载此文出于传递更多信息之目的，文章内容仅供参考，不构成投资建议。
+APP专享直播
+热门推荐
+收起
+24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）</pre></div></div><details><summary>查看差异候选</summary><h3>当前独有：可能误提</h3><ul><li>10月26日，物理ai概念延续强势， 宇树科技 （688836.sh）收盘涨7.69%报672元，总市值达2718亿元。自10月16日盘中低点407.01元至26日收盘，宇树科技在7个交易日内累计上涨65.1%。</li><li>行情的触发点在10月下旬的两场会议。10月21日，英伟达ceo黄仁勋在柏林gtc大会上称“下一波浪潮是物理ai”，并宣布扩容isaac 机器人 开发平台；10月22日，2026世界物理ai大会暨宇树合作伙伴生态大会在杭州举行，宇树科技创始人王兴兴在演讲中表示，随着gpt-6发布，“物理ai已经看到被击穿的苗头，很可能最近1到2年或者2到3年”。</li><li>21世纪经济报道记者根据wind收录的电话会议纪要统计，10月19日至25日这一周内，可查到纪要的物理ai及人形机器人相关电话会至少有18场，覆盖16家券商研究所， 东吴证券 更是有计算机、传媒互联网行业两场电话会。</li><li>从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以 海天瑞声 （688787.sh）为对象的有三场，涉及 国泰海通 计算机、东吴计算机、华创计算机，均由公司董秘出席；开源证券计算机团队请到 当虹科技 （688039.sh）代表； 国海证券 的具身智能研究团队请到 慈星股份 （维权） （300307.sz）董秘与数采专家同场； 国联民生 计算机则把仙工智能（06106.hk）相关人员请上会议。</li><li>第二类是物理ai有关专家交流，如东吴传媒互联网张良卫团队连做两场，分别是“物理ai产业专家交流”和“物理ai系列3：具身大脑专家交流”；第三类是团队内部的深度观点汇报。国泰海通机械首席肖群稀的“物理ai、具身智能与人形机器人”、 中金公司 汽车团队的“物理ai进展与4q26板块投资机会”均属此类。</li><li>东北证券 在其产业观察中提示，按英伟达的说法，物理ai覆盖机器人、自动驾驶与智能空间，相关基础设施由模型训练、仿真测试与端侧运行三部分组成。这意味着它更像一个横跨多个既有行业的技术体系，而非一个全新赛道。</li><li>例如，国海机械团队把第89期路演整期给了“人形机器人数采深度”；华源传媒互联网团队直接用了“卖铲子”这个说法，标题是“物理ai的卖铲子环节——数据采集”； 国金证券 具身智能团队的路演主题更直接，叫“数采：物理ai最大短板，数据基建即将爆发”。</li><li>关于物理ai的进展， 华泰证券 机械设备团队把当前阶段概括为“从概念走向落地”，认为openai等模型企业自研人形机器人有望加速这一进程；国金证券机器人与具身智能团队在纪要中提示，行业目前“仅缺少这一突破的触发信号”，一旦某家头部企业积累数千万至亿个小时数据并实现大脑泛化，全行业将快速跟进布局数据赛道，路径与chatgpt突破后全行业加码算力相似。</li></ul><h3>基线独有：可能漏提</h3><ul><li>从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以海天瑞声国泰海通当虹科技国海证券慈星股份（维权）（300307.sz）董秘与数采专家同场；国联民生</li><li>（声明：文章内容仅供参考，不构成投资建议。投资者据此操作，风险自担。）</li><li>责任编辑：石秀珍 sf183</li><li>新浪财经声明：此消息系转载自合作媒体，新浪财经登载此文出于传递更多信息之目的，文章内容仅供参考，不构成投资建议。</li><li>app专享直播</li><li>热门推荐</li><li>收起</li><li>24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）</li></ul><h3>DOM / XPath 定位依据</h3><p>unique 表示唯一文本匹配；ambiguous 表示存在多处；unresolved 表示暂未定位。定位成功不代表标签正确。</p><ul><li>possible_extra: 10月26日，物理ai概念延续强势， 宇树科技 （688836.sh）收盘涨7.69%报672元，总市值达2718亿元。自10月16日盘中低点407.01元至26日收盘，宇树科技在7个交易日内累计上涨65.1%。<p>定位：unique；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][4]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;p\&quot;][2]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;artibody&quot;,
+      &quot;class&quot;: &quot;article&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;article-content-left&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;article_content&quot;,
+      &quot;class&quot;: &quot;article-content clearfix&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;main-content w1240&quot;
+    }
+  ]
+}</pre></li><li>possible_extra: 行情的触发点在10月下旬的两场会议。10月21日，英伟达ceo黄仁勋在柏林gtc大会上称“下一波浪潮是物理ai”，并宣布扩容isaac 机器人 开发平台；10月22日，2026世界物理ai大会暨宇树合作伙伴生态大会在杭州举行，宇树科技创始人王兴兴在演讲中表示，随着gpt-6发布，“物理ai已经看到被击穿的苗头，很可能最近1到2年或者2到3年”。<p>定位：unique；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][4]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;p\&quot;][3]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;artibody&quot;,
+      &quot;class&quot;: &quot;article&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;article-content-left&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;article_content&quot;,
+      &quot;class&quot;: &quot;article-content clearfix&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;main-content w1240&quot;
+    }
+  ]
+}</pre></li><li>possible_extra: 21世纪经济报道记者根据wind收录的电话会议纪要统计，10月19日至25日这一周内，可查到纪要的物理ai及人形机器人相关电话会至少有18场，覆盖16家券商研究所， 东吴证券 更是有计算机、传媒互联网行业两场电话会。<p>定位：unique；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][4]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;p\&quot;][8]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;artibody&quot;,
+      &quot;class&quot;: &quot;article&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;article-content-left&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;article_content&quot;,
+      &quot;class&quot;: &quot;article-content clearfix&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;main-content w1240&quot;
+    }
+  ]
+}</pre></li><li>possible_extra: 从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以 海天瑞声 （688787.sh）为对象的有三场，涉及 国泰海通 计算机、东吴计算机、华创计算机，均由公司董秘出席；开源证券计算机团队请到 当虹科技 （688039.sh）代表； 国海证券 的具身智能研究团队请到 慈星股份 （维权） （300307.sz）董秘与数采专家同场； 国联民生 计算机则把仙工智能（06106.hk）相关人员请上会议。<p>定位：unique；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][4]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;p\&quot;][11]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;artibody&quot;,
+      &quot;class&quot;: &quot;article&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;article-content-left&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;article_content&quot;,
+      &quot;class&quot;: &quot;article-content clearfix&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;main-content w1240&quot;
+    }
+  ]
+}</pre></li><li>possible_extra: 第二类是物理ai有关专家交流，如东吴传媒互联网张良卫团队连做两场，分别是“物理ai产业专家交流”和“物理ai系列3：具身大脑专家交流”；第三类是团队内部的深度观点汇报。国泰海通机械首席肖群稀的“物理ai、具身智能与人形机器人”、 中金公司 汽车团队的“物理ai进展与4q26板块投资机会”均属此类。<p>定位：unique；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][4]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;p\&quot;][12]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;artibody&quot;,
+      &quot;class&quot;: &quot;article&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;article-content-left&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;article_content&quot;,
+      &quot;class&quot;: &quot;article-content clearfix&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;main-content w1240&quot;
+    }
+  ]
+}</pre></li><li>possible_extra: 东北证券 在其产业观察中提示，按英伟达的说法，物理ai覆盖机器人、自动驾驶与智能空间，相关基础设施由模型训练、仿真测试与端侧运行三部分组成。这意味着它更像一个横跨多个既有行业的技术体系，而非一个全新赛道。<p>定位：unique；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][4]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;p\&quot;][19]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;artibody&quot;,
+      &quot;class&quot;: &quot;article&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;article-content-left&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;article_content&quot;,
+      &quot;class&quot;: &quot;article-content clearfix&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;main-content w1240&quot;
+    }
+  ]
+}</pre></li><li>possible_extra: 例如，国海机械团队把第89期路演整期给了“人形机器人数采深度”；华源传媒互联网团队直接用了“卖铲子”这个说法，标题是“物理ai的卖铲子环节——数据采集”； 国金证券 具身智能团队的路演主题更直接，叫“数采：物理ai最大短板，数据基建即将爆发”。<p>定位：unique；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][4]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;p\&quot;][31]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;artibody&quot;,
+      &quot;class&quot;: &quot;article&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;article-content-left&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;article_content&quot;,
+      &quot;class&quot;: &quot;article-content clearfix&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;main-content w1240&quot;
+    }
+  ]
+}</pre></li><li>possible_extra: 关于物理ai的进展， 华泰证券 机械设备团队把当前阶段概括为“从概念走向落地”，认为openai等模型企业自研人形机器人有望加速这一进程；国金证券机器人与具身智能团队在纪要中提示，行业目前“仅缺少这一突破的触发信号”，一旦某家头部企业积累数千万至亿个小时数据并实现大脑泛化，全行业将快速跟进布局数据赛道，路径与chatgpt突破后全行业加码算力相似。<p>定位：unique；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][4]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;p\&quot;][38]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;artibody&quot;,
+      &quot;class&quot;: &quot;article&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;article-content-left&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;article_content&quot;,
+      &quot;class&quot;: &quot;article-content clearfix&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;main-content w1240&quot;
+    }
+  ]
+}</pre></li><li>possible_missing: 从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以海天瑞声国泰海通当虹科技国海证券慈星股份（维权）（300307.sz）董秘与数采专家同场；国联民生<p>定位：unresolved；建议未启用</p></li><li>possible_missing: （声明：文章内容仅供参考，不构成投资建议。投资者据此操作，风险自担。）<p>定位：unique；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][4]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;p\&quot;][44]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;artibody&quot;,
+      &quot;class&quot;: &quot;article&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;article-content-left&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;article_content&quot;,
+      &quot;class&quot;: &quot;article-content clearfix&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;main-content w1240&quot;
+    }
+  ]
+}</pre></li><li>possible_missing: 责任编辑：石秀珍 sf183<p>定位：unique；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][4]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;p\&quot;][45]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;artibody&quot;,
+      &quot;class&quot;: &quot;article&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;article-content-left&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;article_content&quot;,
+      &quot;class&quot;: &quot;article-content clearfix&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;main-content w1240&quot;
+    }
+  ]
+}</pre></li><li>possible_missing: 新浪财经声明：此消息系转载自合作媒体，新浪财经登载此文出于传递更多信息之目的，文章内容仅供参考，不构成投资建议。<p>定位：unique；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][4]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][3]/*[local-name()=\&quot;p\&quot;][1]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;sf-comment-tip2026&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;article-content-left&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;article_content&quot;,
+      &quot;class&quot;: &quot;article-content clearfix&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;main-content w1240&quot;
+    }
+  ]
+}</pre></li><li>possible_missing: app专享直播<p>定位：unique；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][4]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][11]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;h2\&quot;][1]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;cj-l-title&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;app-viplive&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;article-content-left&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;article_content&quot;,
+      &quot;class&quot;: &quot;article-content clearfix&quot;
+    }
+  ]
+}</pre></li><li>possible_missing: 热门推荐<p>定位：unique；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][4]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][12]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;h2\&quot;][1]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;cj-l-title&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;most_read&quot;,
+      &quot;class&quot;: &quot;most-read&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;article-content-left&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;article_content&quot;,
+      &quot;class&quot;: &quot;article-content clearfix&quot;
+    }
+  ]
+}</pre></li><li>possible_missing: 收起<p>定位：unresolved；建议未启用</p></li><li>possible_missing: 24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）<p>定位：unique；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][4]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][13]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;p\&quot;][1]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;wx-info&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;blk-wxfollow clearfix&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;article-content-left&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;article_content&quot;,
+      &quot;class&quot;: &quot;article-content clearfix&quot;
+    }
+  ]
+}</pre></li></ul></details></section><section><h2>blog_02.html</h2><p>状态：两种结果一致，尚不代表正确；字符数 1744 / 1724；相似度 100.0%</p><p>正文范围依据：consumption-page H1 = document title &gt; article </p><div class='columns'><div><h3>当前提取结果</h3><pre>IT之家 10 月 26 日消息，英伟达首席执行官黄仁勋（Jensen Huang）表示，配套 AI 软件的年度授权费约为每块 GPU 2,000 美元 （IT之家注：现汇率约合 13,355 元人民币） ，用来“运行英伟达提供的、在这些 AI 工厂上支撑 AI 智能体运转的全套软件”。相关发言视频近日流出，按照 FourWeekMBA 给出的一种测算情景，如果付费授权达到 500 万份，这套定价模式五年内有望带来 500 亿美元 （现汇率约合 3,338.72 亿元人民币） 收入。
+黄仁勋在 10 月 22 日柏林 GTC 大会上谈到了该定价，英伟达也在会上公布了更宏大的规划：打造覆盖芯片、软件以及 AI 智能体安全能力的 AI 基础设施业务。“软件授权会逐渐成为我们业务里非常重要的一块。我们的授权模式大致是这样…… 举个例子，想要运行英伟达全套用于在 AI 工厂上部署智能体的软件，费用大约是每块 GPU 每年 2,000 美元 （现汇率约合 13,355 元人民币） 。”黄仁勋说。
+这笔收入的体量很容易估算。如果有 500 万块 GPU 纳入付费授权范围，按每块每年 2,000 美元 （现汇率约合 13,355 元人民币） 计算，英伟达每年就能入账 100 亿美元 （现汇率约合 667.74 亿元人民币） ；只要客户持续续费，五年合计可达 500 亿美元 （现汇率约合 3,338.72 亿元人民币） 。但这里存在不确定之处：英伟达没有说明 2,000 美元 （现汇率约合 13,355 元人民币） 这个报价对应的 GPU 适用范围，也没有确认它是不是统一标准定价。这套授权具体包含哪些软件、不同产品之间权限会不会重叠，同样尚不明确。
+区分清楚这点十分关键，因为英伟达本来就有收费的企业级软件产品。其 AI Enterprise 平台一年订阅标价是每块 GPU 4,500 美元 （现汇率约合 30,049 元人民币） 。黄仁勋提到的 2,000 美元 （现汇率约合 13,355 元人民币） 虽然更低，但英伟达没有证实两个价格对应的产品、授权条款完全一致，不能直接当成官方降价。
+这次讨论软件授权的背景，是英伟达正在开发更多配套基础设施，方便企业部署、管理 AI 智能体。这类系统可以调用工具、读取数据、自动执行任务，当企业大规模上线它们时，会产生新的安全与管理难题。
+10 月 21 日，英伟达发布 OpenShell 参考架构，这套系统整合 Vera Rubin 算力基础设施、Vera CPU，以及搭载英伟达 Sentry 安全组件的 BlueField-4 数据处理器（DPU）。OpenShell 为 AI 智能体提供安全运行环境，划定智能体的行动边界，限制它调用工具与访问资源的权限。英伟达介绍，Sentry 可以独立监控智能体行为，一旦智能体试图越界，就将它隔离。这套架构把安全管控下沉到底层基础设施，而不是仅仅依赖 AI 模型或应用内部的防护机制。
+英伟达早在九月就推出了开放智能体安全平台，这套新参考架构是在前者基础上延伸而来，把管控思路拓展到企业基础设施与边缘设备。
+其他厂商也在产品里加入同类管控能力。Anthropic 将 OpenShell 与 BlueField 硬件和 Claude 托管智能体结合，方便企业在执行沙箱内管控 AI 智能体能够访问的内容。Salesforce 开发了适配 OpenShell 的 Slack 管理桥接工具，管理员可以直接在 Slack 里审核智能体的访问申请、批准或拒绝权限，同时监控运行动态。
+这套新软件定价，也呼应了黄仁勋一直以来的观点：英伟达早已不只是 GPU 供应商。公司业务已经延伸到网络设备、整机系统、企业软件以及面向 AI 负载的基础设施。黄仁勋近期在 BG2Pod 播客节目中说：“总有一天，大家可能不会再把我们归类成芯片公司。”他举例，英伟达已经进入医疗、汽车、通信、生命科学等多个行业，提供完整技术栈，而不只是芯片。
+即便如此，英伟达还没有公布每 GPU 每年 2,000 美元 （现汇率约合 13,355 元人民币） 的收费方案何时生效、包含哪些软件，也不清楚这套定价如何和现有企业软件业务相衔接。</pre></div><div><h3>Trafilatura 结果</h3><pre>IT之家 10 月 26 日消息，英伟达首席执行官黄仁勋（Jensen Huang）表示，配套 AI 软件的年度授权费约为每块 GPU 2,000 美元（IT之家注：现汇率约合 13,355 元人民币），用来“运行英伟达提供的、在这些 AI 工厂上支撑 AI 智能体运转的全套软件”。相关发言视频近日流出，按照 FourWeekMBA 给出的一种测算情景，如果付费授权达到 500 万份，这套定价模式五年内有望带来 500 亿美元（现汇率约合 3,338.72 亿元人民币）收入。
+黄仁勋在 10 月 22 日柏林 GTC 大会上谈到了该定价，英伟达也在会上公布了更宏大的规划：打造覆盖芯片、软件以及 AI 智能体安全能力的 AI 基础设施业务。“软件授权会逐渐成为我们业务里非常重要的一块。我们的授权模式大致是这样…… 举个例子，想要运行英伟达全套用于在 AI 工厂上部署智能体的软件，费用大约是每块 GPU 每年 2,000 美元（现汇率约合 13,355 元人民币）。”黄仁勋说。
+这笔收入的体量很容易估算。如果有 500 万块 GPU 纳入付费授权范围，按每块每年 2,000 美元（现汇率约合 13,355 元人民币）计算，英伟达每年就能入账 100 亿美元（现汇率约合 667.74 亿元人民币）；只要客户持续续费，五年合计可达 500 亿美元（现汇率约合 3,338.72 亿元人民币）。但这里存在不确定之处：英伟达没有说明 2,000 美元（现汇率约合 13,355 元人民币）这个报价对应的 GPU 适用范围，也没有确认它是不是统一标准定价。这套授权具体包含哪些软件、不同产品之间权限会不会重叠，同样尚不明确。
+区分清楚这点十分关键，因为英伟达本来就有收费的企业级软件产品。其 AI Enterprise 平台一年订阅标价是每块 GPU 4,500 美元（现汇率约合 30,049 元人民币）。黄仁勋提到的 2,000 美元（现汇率约合 13,355 元人民币）虽然更低，但英伟达没有证实两个价格对应的产品、授权条款完全一致，不能直接当成官方降价。
+这次讨论软件授权的背景，是英伟达正在开发更多配套基础设施，方便企业部署、管理 AI 智能体。这类系统可以调用工具、读取数据、自动执行任务，当企业大规模上线它们时，会产生新的安全与管理难题。
+10 月 21 日，英伟达发布 OpenShell 参考架构，这套系统整合 Vera Rubin 算力基础设施、Vera CPU，以及搭载英伟达 Sentry 安全组件的 BlueField-4 数据处理器（DPU）。OpenShell 为 AI 智能体提供安全运行环境，划定智能体的行动边界，限制它调用工具与访问资源的权限。英伟达介绍，Sentry 可以独立监控智能体行为，一旦智能体试图越界，就将它隔离。这套架构把安全管控下沉到底层基础设施，而不是仅仅依赖 AI 模型或应用内部的防护机制。
+英伟达早在九月就推出了开放智能体安全平台，这套新参考架构是在前者基础上延伸而来，把管控思路拓展到企业基础设施与边缘设备。
+其他厂商也在产品里加入同类管控能力。Anthropic 将 OpenShell 与 BlueField 硬件和 Claude 托管智能体结合，方便企业在执行沙箱内管控 AI 智能体能够访问的内容。Salesforce 开发了适配 OpenShell 的 Slack 管理桥接工具，管理员可以直接在 Slack 里审核智能体的访问申请、批准或拒绝权限，同时监控运行动态。
+这套新软件定价，也呼应了黄仁勋一直以来的观点：英伟达早已不只是 GPU 供应商。公司业务已经延伸到网络设备、整机系统、企业软件以及面向 AI 负载的基础设施。黄仁勋近期在 BG2Pod 播客节目中说：“总有一天，大家可能不会再把我们归类成芯片公司。”他举例，英伟达已经进入医疗、汽车、通信、生命科学等多个行业，提供完整技术栈，而不只是芯片。
+即便如此，英伟达还没有公布每 GPU 每年 2,000 美元（现汇率约合 13,355 元人民币）的收费方案何时生效、包含哪些软件，也不清楚这套定价如何和现有企业软件业务相衔接。</pre></div></div><details><summary>查看差异候选</summary><h3>当前独有：可能误提</h3><ul></ul><h3>基线独有：可能漏提</h3><ul></ul><h3>DOM / XPath 定位依据</h3><p>unique 表示唯一文本匹配；ambiguous 表示存在多处；unresolved 表示暂未定位。定位成功不代表标签正确。</p><ul></ul></details></section><section><h2>collected_07299d33c58922ca.html</h2><p>状态：两种提取结果有分歧；字符数 278 / 290；相似度 98.3%</p><p>正文范围依据：#floor-1 .md-body:not(.signature-md) </p><div class='columns'><div><h3>当前提取结果</h3><pre>The sleep framework: A new way for LLMs to retain knowledge in continual learning Google Research 提出在持续学习中引入「睡眠阶段」，使大语言模型能持续整合新事实、增强推理，同时缓解灾难性遗忘或静态知识截止问题。现有模型部署后基本静态，而直接持续更新参数会严重损害旧任务表现，仅依赖上下文学习又会在会话结束后遗忘信息，该框架试图在两极之间提供新路径。
+站内资讯页：/news/20261028-91ab09be
+一手来源： Google Research Blog</pre></div><div><h3>Trafilatura 结果</h3><pre>- The sleep framework: A new way for LLMs to retain knowledge in continual learning Google Research 提出在持续学习中引入「睡眠阶段」，使大语言模型能持续整合新事实、增强推理，同时缓解灾难性遗忘或静态知识截止问题。现有模型部署后基本静态，而直接持续更新参数会严重损害旧任务表现，仅依赖上下文学习又会在会话结束后遗忘信息，该框架试图在两极之间提供新路径。 站内资讯页：/news/20261028-91ab09be 一手来源：Google Research Blog 本帖收到打赏打赏 0</pre></div></div><details><summary>查看差异候选</summary><h3>当前独有：可能误提</h3><ul></ul><h3>基线独有：可能漏提</h3><ul><li>the sleep framework: a new way for llms to retain knowledge in continual learning google research 提出在持续学习中引入「睡眠阶段」，使大语言模型能持续整合新事实、增强推理，同时缓解灾难性遗忘或静态知识截止问题。现有模型部署后基本静态，而直接持续更新参数会严重损害旧任务表现，仅依赖上下文学习又会在会话结束后遗忘信息，该框架试图在两极之间提供新路径。 站内资讯页：/news/20261028-91ab09be 一手来源：google research blog 本帖收到打赏打赏 0</li></ul><h3>DOM / XPath 定位依据</h3><p>unique 表示唯一文本匹配；ambiguous 表示存在多处；unresolved 表示暂未定位。定位成功不代表标签正确。</p><ul><li>possible_missing: the sleep framework: a new way for llms to retain knowledge in continual learning google research 提出在持续学习中引入「睡眠阶段」，使大语言模型能持续整合新事实、增强推理，同时缓解灾难性遗忘或静态知识截止问题。现有模型部署后基本静态，而直接持续更新参数会严重损害旧任务表现，仅依赖上下文学习又会在会话结束后遗忘信息，该框架试图在两极之间提供新路径。 站内资讯页：/news/20261028-91ab09be 一手来源：google research blog 本帖收到打赏打赏 0<p>定位：unresolved；建议未启用</p></li></ul></details></section><section><h2>collected_47c9a44f1ccc3dfa.html</h2><p>状态：两种提取结果有分歧；字符数 290 / 302；相似度 98.3%</p><p>正文范围依据：#floor-1 .md-body:not(.signature-md) </p><div class='columns'><div><h3>当前提取结果</h3><pre>Microsoft just shared Azure’s actual revenue in dollars: $33.2 billion 微软此前从未以美元金额直接披露 Azure 的单季收入，通常仅分享增长百分比或模糊的里程碑描述。在周三发布的财报中，微软首次披露 Azure 在 7 至 9 月季度实现营收 332 亿美元，同比增长 48%。该披露使投资者能够将 Azure 的业绩与亚马逊 AWS 和谷歌云的季度美元收入进行直接对比。 参考合并： TechCrunch AI
+站内资讯页：/news/20261029-b126d772
+一手来源： TechCrunch AI</pre></div><div><h3>Trafilatura 结果</h3><pre>- Microsoft just shared Azure’s actual revenue in dollars: $33.2 billion 微软此前从未以美元金额直接披露 Azure 的单季收入，通常仅分享增长百分比或模糊的里程碑描述。在周三发布的财报中，微软首次披露 Azure 在 7 至 9 月季度实现营收 332 亿美元，同比增长 48%。该披露使投资者能够将 Azure 的业绩与亚马逊 AWS 和谷歌云的季度美元收入进行直接对比。 参考合并： TechCrunch AI 站内资讯页：/news/20261029-b126d772 一手来源：TechCrunch AI 本帖收到打赏打赏 0</pre></div></div><details><summary>查看差异候选</summary><h3>当前独有：可能误提</h3><ul></ul><h3>基线独有：可能漏提</h3><ul><li>microsoft just shared azure’s actual revenue in dollars: $33.2 billion 微软此前从未以美元金额直接披露 azure 的单季收入，通常仅分享增长百分比或模糊的里程碑描述。在周三发布的财报中，微软首次披露 azure 在 7 至 9 月季度实现营收 332 亿美元，同比增长 48%。该披露使投资者能够将 azure 的业绩与亚马逊 aws 和谷歌云的季度美元收入进行直接对比。 参考合并： techcrunch ai 站内资讯页：/news/20261029-b126d772 一手来源：techcrunch ai 本帖收到打赏打赏 0</li></ul><h3>DOM / XPath 定位依据</h3><p>unique 表示唯一文本匹配；ambiguous 表示存在多处；unresolved 表示暂未定位。定位成功不代表标签正确。</p><ul><li>possible_missing: microsoft just shared azure’s actual revenue in dollars: $33.2 billion 微软此前从未以美元金额直接披露 azure 的单季收入，通常仅分享增长百分比或模糊的里程碑描述。在周三发布的财报中，微软首次披露 azure 在 7 至 9 月季度实现营收 332 亿美元，同比增长 48%。该披露使投资者能够将 azure 的业绩与亚马逊 aws 和谷歌云的季度美元收入进行直接对比。 参考合并： techcrunch ai 站内资讯页：/news/20261029-b126d772 一手来源：techcrunch ai 本帖收到打赏打赏 0<p>定位：unresolved；建议未启用</p></li></ul></details></section><section><h2>collected_5b4a5a3b46bc6f7f.html</h2><p>状态：两种提取结果有分歧；字符数 308 / 320；相似度 98.4%</p><p>正文范围依据：#floor-1 .md-body:not(.signature-md) </p><div class='columns'><div><h3>当前提取结果</h3><pre>Gemini 4 Carbon: Our next frontier model Google DeepMind 宣布推出新一代旗舰模型 Gemini 4 Carbon，主打前沿网络安全与长程智能体任务能力。该模型在最新 Artificial Analysis Intelligence Index v5.0 榜单中拿下 59 分登顶全球第一，并在 SEC-bench Pro、ExploitGym 及 CWE-bench 等安全基准上均取得领先。目前该模型仅向选定的网络安全防御企业开放，后续将逐步扩展至 Fairwi
+站内资讯页：/news/20261029-b0da25ea
+一手来源： DeepMind Blog</pre></div><div><h3>Trafilatura 结果</h3><pre>- Gemini 4 Carbon: Our next frontier model Google DeepMind 宣布推出新一代旗舰模型 Gemini 4 Carbon，主打前沿网络安全与长程智能体任务能力。该模型在最新 Artificial Analysis Intelligence Index v5.0 榜单中拿下 59 分登顶全球第一，并在 SEC-bench Pro、ExploitGym 及 CWE-bench 等安全基准上均取得领先。目前该模型仅向选定的网络安全防御企业开放，后续将逐步扩展至 Fairwi 站内资讯页：/news/20261029-b0da25ea 一手来源：DeepMind Blog 本帖收到打赏打赏 0</pre></div></div><details><summary>查看差异候选</summary><h3>当前独有：可能误提</h3><ul></ul><h3>基线独有：可能漏提</h3><ul><li>gemini 4 carbon: our next frontier model google deepmind 宣布推出新一代旗舰模型 gemini 4 carbon，主打前沿网络安全与长程智能体任务能力。该模型在最新 artificial analysis intelligence index v5.0 榜单中拿下 59 分登顶全球第一，并在 sec-bench pro、exploitgym 及 cwe-bench 等安全基准上均取得领先。目前该模型仅向选定的网络安全防御企业开放，后续将逐步扩展至 fairwi 站内资讯页：/news/20261029-b0da25ea 一手来源：deepmind blog 本帖收到打赏打赏 0</li></ul><h3>DOM / XPath 定位依据</h3><p>unique 表示唯一文本匹配；ambiguous 表示存在多处；unresolved 表示暂未定位。定位成功不代表标签正确。</p><ul><li>possible_missing: gemini 4 carbon: our next frontier model google deepmind 宣布推出新一代旗舰模型 gemini 4 carbon，主打前沿网络安全与长程智能体任务能力。该模型在最新 artificial analysis intelligence index v5.0 榜单中拿下 59 分登顶全球第一，并在 sec-bench pro、exploitgym 及 cwe-bench 等安全基准上均取得领先。目前该模型仅向选定的网络安全防御企业开放，后续将逐步扩展至 fairwi 站内资讯页：/news/20261029-b0da25ea 一手来源：deepmind blog 本帖收到打赏打赏 0<p>定位：unresolved；建议未启用</p></li></ul></details></section><section><h2>collected_855c0d89cc5b8f45.html</h2><p>状态：两种提取结果有分歧；字符数 312 / 324；相似度 98.4%</p><p>正文范围依据：#floor-1 .md-body:not(.signature-md) </p><div class='columns'><div><h3>当前提取结果</h3><pre>NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt 英伟达正式在 Hugging Face 与 ModelScope 开源开放权重语音模型 Nemotron 3.5 Transcribe。该模型将语音转录、说话人识别、翻译与音频问答统一在单一检查点内，支持 40 种语言转录与 31 种语言对英语的双向翻译，并允许用户通过自然语言提示词引导输出。英伟
+站内资讯页：/news/20261029-7ae8eb20
+一手来源： Hugging Face Blog</pre></div><div><h3>Trafilatura 结果</h3><pre>- NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt 英伟达正式在 Hugging Face 与 ModelScope 开源开放权重语音模型 Nemotron 3.5 Transcribe。该模型将语音转录、说话人识别、翻译与音频问答统一在单一检查点内，支持 40 种语言转录与 31 种语言对英语的双向翻译，并允许用户通过自然语言提示词引导输出。英伟 站内资讯页：/news/20261029-7ae8eb20 一手来源：Hugging Face Blog 本帖收到打赏打赏 0</pre></div></div><details><summary>查看差异候选</summary><h3>当前独有：可能误提</h3><ul></ul><h3>基线独有：可能漏提</h3><ul><li>nvidia nemotron 3.5 transcribe and granary v2: intelligent multilingual transcription you can prompt and adapt 英伟达正式在 hugging face 与 modelscope 开源开放权重语音模型 nemotron 3.5 transcribe。该模型将语音转录、说话人识别、翻译与音频问答统一在单一检查点内，支持 40 种语言转录与 31 种语言对英语的双向翻译，并允许用户通过自然语言提示词引导输出。英伟 站内资讯页：/news/20261029-7ae8eb20 一手来源：hugging face blog 本帖收到打赏打赏 0</li></ul><h3>DOM / XPath 定位依据</h3><p>unique 表示唯一文本匹配；ambiguous 表示存在多处；unresolved 表示暂未定位。定位成功不代表标签正确。</p><ul><li>possible_missing: nvidia nemotron 3.5 transcribe and granary v2: intelligent multilingual transcription you can prompt and adapt 英伟达正式在 hugging face 与 modelscope 开源开放权重语音模型 nemotron 3.5 transcribe。该模型将语音转录、说话人识别、翻译与音频问答统一在单一检查点内，支持 40 种语言转录与 31 种语言对英语的双向翻译，并允许用户通过自然语言提示词引导输出。英伟 站内资讯页：/news/20261029-7ae8eb20 一手来源：hugging face blog 本帖收到打赏打赏 0<p>定位：unresolved；建议未启用</p></li></ul></details></section><section><h2>collected_911f560fdd154136.html</h2><p>状态：两种提取结果有分歧；字符数 204 / 211；相似度 97.6%</p><p>正文范围依据：#floor-1 .md-body:not(.signature-md) </p><div class='columns'><div><h3>当前提取结果</h3><pre>本次更新：论坛的 点赞、点踩（亮/灭）与打赏 已移除 Lv.1 等级门槛—— 注册即可使用 。
+频率限制依然存在（点赞 30 次/分、100 次/日；新注册账号 30 次/日），滥用会被记录并按论坛规则处理；
+打赏仍消耗你自己的积分：最低 1 分、同一帖子每人一次、平台抽成 10%，被打赏所得计入每日归集上限；
+积分不足仍无法打赏——本调整只是去掉「等级门槛」，不改变积分账本。
+其余规则见「文档 → 论坛规则」。</pre></div><div><h3>Trafilatura 结果</h3><pre>- 本次更新：论坛的点赞、点踩（亮/灭）与打赏已移除 Lv.1 等级门槛——注册即可使用。 
+  - 频率限制依然存在（点赞 30 次/分、100 次/日；新注册账号 30 次/日），滥用会被记录并按论坛规则处理；
+  - 打赏仍消耗你自己的积分：最低 1 分、同一帖子每人一次、平台抽成 10%，被打赏所得计入每日归集上限；
+  - 积分不足仍无法打赏——本调整只是去掉「等级门槛」，不改变积分账本。
+其余规则见「文档 → 论坛规则」。 本帖收到打赏打赏 0</pre></div></div><details><summary>查看差异候选</summary><h3>当前独有：可能误提</h3><ul></ul><h3>基线独有：可能漏提</h3><ul><li>其余规则见「文档 → 论坛规则」。 本帖收到打赏打赏 0</li></ul><h3>DOM / XPath 定位依据</h3><p>unique 表示唯一文本匹配；ambiguous 表示存在多处；unresolved 表示暂未定位。定位成功不代表标签正确。</p><ul><li>possible_missing: 其余规则见「文档 → 论坛规则」。 本帖收到打赏打赏 0<p>定位：unresolved；建议未启用</p></li></ul></details></section><section><h2>forum_01.html</h2><p>状态：列表/目录页，跳过单篇正文对比，应采集详情页；字符数 0 / 159；相似度 0.0%</p><p>正文范围依据：.url-info repeated cards 目录卡片页不作为单篇文章正文。</p><div class='columns'><div><h3>当前提取结果</h3><pre></pre></div><div><h3>Trafilatura 结果</h3><pre>魔塔社区（ModelScope） 
+魔塔社区，即ModelScope，是一个开源的模型魔塔社区（ModelScope）即服务共享平台，旨在为泛AI开发者提供灵活、易用、低成本的一站式模型服务产品。这个社区汇集了业界最新最热的模型、数据集以及创空间应用，提供简洁高效的模型服务及算力平台，支持模型微调、部署、推理及应用搭建。</pre></div></div><details><summary>查看差异候选</summary><h3>当前独有：可能误提</h3><ul></ul><h3>基线独有：可能漏提</h3><ul><li>魔塔社区（modelscope）</li><li>魔塔社区，即modelscope，是一个开源的模型魔塔社区（modelscope）即服务共享平台，旨在为泛ai开发者提供灵活、易用、低成本的一站式模型服务产品。这个社区汇集了业界最新最热的模型、数据集以及创空间应用，提供简洁高效的模型服务及算力平台，支持模型微调、部署、推理及应用搭建。</li></ul><h3>DOM / XPath 定位依据</h3><p>unique 表示唯一文本匹配；ambiguous 表示存在多处；unresolved 表示暂未定位。定位成功不代表标签正确。</p><ul></ul></details></section><section><h2>forum_02.html</h2><p>状态：列表/目录页，跳过单篇正文对比，应采集详情页；字符数 0 / 2169；相似度 0.0%</p><p>正文范围依据：.topic-list / #topic-list-heading 话题列表页应继续采集帖子详情页。</p><div class='columns'><div><h3>当前提取结果</h3><pre></pre></div><div><h3>Trafilatura 结果</h3><pre>| 免费AI生图做视频工具分享！完全免费的AI生图视频工具   最近找了一些AI免费生图做视频工具，目前都可以正常使用，效果也不错，下面就为大家盘点一下！  免费AI生图、生视频，一站式AI短剧漫剧创作 地址：https://pixtv.ai    免费视频AI：Seedance AI 地址：https… 阅读更多 |  | 29 | 28.1k | 1 天 | 
+| Workbuddy使用集合贴！Workbuddy内容汇总   Workbuddy有出色的办公能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了Workbuddy玩法汇总，大家可以一键跳转！  免费AI生图视频工具：   Workbuddy可用skills下载地址 下载地址… 阅读更多 |  | 10 | 8.7k | 9月 25 日 | 
+| Codex使用教程集合贴，Codex使用教程汇总（持续更新ing）   Codex有强大的能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了Codex玩法汇总，大家可以一键跳转！  免费AI生图视频工具：   GPT-image 2.5使用地址:   Codex可以MCP地址 1、P… 阅读更多 |  | 17 | 8.3k | 9月 25 日 | 
+| Claude使用手册集合贴，Claude玩法汇总（持续更新ing）   Claude有强大的能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了Claude玩法汇总，大家可以一键跳转！  免费AI生图视频工具：   Claude可以MCP地址 1、PixPix MCP — Claud… 阅读更多 |  | 10 | 7.2k | 7月 21 日 | 
+| 想把聊天记录导出来存档 结果拿到一堆乱码和废话 |  | 6 | 2.7k | 1 分钟 | 
+| AI 视频慢镜头为什么容易变形，应该怎样设计动作 |  | 6 | 2.9k | 2 分钟 | 
+| 见鬼了 OpenAI训练中的模型自己钻了个DNS配置漏洞跑出离线环境 训练停了十来天 |  | 8 | 1.2k | 3 分钟 | 
+| 角色参考图越加越不稳？先做一轮删图测试，再决定要不要重做模型 |  | 5 | 1.7k | 4 分钟 | 
+| 网页端终于能看到用量条了，这插件解了我的心结 |  | 5 | 2.3k | 5 分钟 | 
+| 公司要建知识库，办公软件自带的那个我实在不想用 |  | 1 | 3.1k | 10 分钟 | 
+| 同一个自动化脚本 一家给我上了半页伦理课 另一家一句话就开干 |  | 10 | 2.8k | 10 分钟 | 
+| 分享最近做的 AI 录音软件可完全免费使用 |  | 12 | 2.9k | 10 分钟 | 
+| How to Evaluate an AI Reel Editor Before Paying for Another Tool |  | 1 | 687 | 10 分钟 | 
+| 号称五行代码起一套多智能体 我把它翻了一遍 |  | 6 | 2.4k | 15 分钟 | 
+| 把自己那个价格监控站重构了一遍 顺手让Agent自己修自己 |  | 8 | 2.4k | 15 分钟 | 
+| AI 视频导进剪辑软件就偏色？先判断文件变了还是播放方式变了 |  | 3 | 2.5k | 18 分钟 | 
+| AI当SRE？运维自动化这波真的要彻底颠覆了！ |  | 5 | 2.3k | 20 分钟 | 
+| 给机器用的邮件命令行，这个思路我觉得对了 |  | 3 | 2.9k | 20 分钟 | 
+| How to Use AI Voiceover in Educational Videos Without Losing Viewer Trust |  | 7 | 1.7k | 20 分钟 | 
+| How to Scope an AI Video Pilot Before Adapting a Novel Into a Series |  | 4 | 657 | 22 分钟 | 
+| Seedance 2.5出了4K版 先出480P样片挑满意的再出正片 做短剧的省钱了 |  | 7 | 2.0k | 24 分钟 | 
+| 这么多写代码的工具 你们最后留在机器上的是哪个 |  | 7 | 2.6k | 25 分钟 | 
+| 一边喊AI替代人 一边一年多招了一万二 这账怎么算 |  | 1 | 1.3k | 28 分钟 | 
+| 不是错觉，那个模型这两天是真的开始磨洋工了 |  | 3 | 2.9k | 30 分钟 | 
+| 最危险的从来不是模型答错 是那个允许按钮点太顺手 |  | 2 | 3.0k | 30 分钟 | 
+| 这两个国产助手压根不是一类东西，别再拉一起比了 |  | 5 | 2.7k | 30 分钟 | 
+| 底模挂了蒸馏权重之后 步数和引导值到底该怎么填 |  | 5 | 2.5k | 30 分钟 | 
+| 「AI编码智能体」其实是五种东西，很多项目死就死在选错了层 |  | 8 | 2.7k | 35 分钟 | 
+| 无限DeepSeek账号？这羊毛薅得我都怕了！ |  | 9 | 2.8k | 38 分钟 | 
+| 让几个模型玩同一款剧情游戏，性格差得比我想的离谱 |  | 7 | 2.6k | 40 分钟 |</pre></div></div><details><summary>查看差异候选</summary><h3>当前独有：可能误提</h3><ul></ul><h3>基线独有：可能漏提</h3><ul><li>| 免费ai生图做视频工具分享！完全免费的ai生图视频工具 最近找了一些ai免费生图做视频工具，目前都可以正常使用，效果也不错，下面就为大家盘点一下！ 免费ai生图、生视频，一站式ai短剧漫剧创作 地址：https://pixtv.ai 免费视频ai：seedance ai 地址：https… 阅读更多 | | 29 | 28.1k | 1 天 |</li><li>| workbuddy使用集合贴！workbuddy内容汇总 workbuddy有出色的办公能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了workbuddy玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： workbuddy可用skills下载地址 下载地址… 阅读更多 | | 10 | 8.7k | 9月 25 日 |</li><li>| codex使用教程集合贴，codex使用教程汇总（持续更新ing） codex有强大的能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了codex玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： gpt-image 2.5使用地址: codex可以mcp地址 1、p… 阅读更多 | | 17 | 8.3k | 9月 25 日 |</li><li>| claude使用手册集合贴，claude玩法汇总（持续更新ing） claude有强大的能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了claude玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： claude可以mcp地址 1、pixpix mcp — claud… 阅读更多 | | 10 | 7.2k | 7月 21 日 |</li><li>| 想把聊天记录导出来存档 结果拿到一堆乱码和废话 | | 6 | 2.7k | 1 分钟 |</li><li>| ai 视频慢镜头为什么容易变形，应该怎样设计动作 | | 6 | 2.9k | 2 分钟 |</li><li>| 见鬼了 openai训练中的模型自己钻了个dns配置漏洞跑出离线环境 训练停了十来天 | | 8 | 1.2k | 3 分钟 |</li><li>| 角色参考图越加越不稳？先做一轮删图测试，再决定要不要重做模型 | | 5 | 1.7k | 4 分钟 |</li><li>| 网页端终于能看到用量条了，这插件解了我的心结 | | 5 | 2.3k | 5 分钟 |</li><li>| 公司要建知识库，办公软件自带的那个我实在不想用 | | 1 | 3.1k | 10 分钟 |</li><li>| 同一个自动化脚本 一家给我上了半页伦理课 另一家一句话就开干 | | 10 | 2.8k | 10 分钟 |</li><li>| 分享最近做的 ai 录音软件可完全免费使用 | | 12 | 2.9k | 10 分钟 |</li><li>| how to evaluate an ai reel editor before paying for another tool | | 1 | 687 | 10 分钟 |</li><li>| 号称五行代码起一套多智能体 我把它翻了一遍 | | 6 | 2.4k | 15 分钟 |</li><li>| 把自己那个价格监控站重构了一遍 顺手让agent自己修自己 | | 8 | 2.4k | 15 分钟 |</li><li>| ai 视频导进剪辑软件就偏色？先判断文件变了还是播放方式变了 | | 3 | 2.5k | 18 分钟 |</li><li>| ai当sre？运维自动化这波真的要彻底颠覆了！ | | 5 | 2.3k | 20 分钟 |</li><li>| 给机器用的邮件命令行，这个思路我觉得对了 | | 3 | 2.9k | 20 分钟 |</li><li>| how to use ai voiceover in educational videos without losing viewer trust | | 7 | 1.7k | 20 分钟 |</li><li>| how to scope an ai video pilot before adapting a novel into a series | | 4 | 657 | 22 分钟 |</li><li>| seedance 2.5出了4k版 先出480p样片挑满意的再出正片 做短剧的省钱了 | | 7 | 2.0k | 24 分钟 |</li><li>| 这么多写代码的工具 你们最后留在机器上的是哪个 | | 7 | 2.6k | 25 分钟 |</li><li>| 一边喊ai替代人 一边一年多招了一万二 这账怎么算 | | 1 | 1.3k | 28 分钟 |</li><li>| 不是错觉，那个模型这两天是真的开始磨洋工了 | | 3 | 2.9k | 30 分钟 |</li><li>| 最危险的从来不是模型答错 是那个允许按钮点太顺手 | | 2 | 3.0k | 30 分钟 |</li><li>| 这两个国产助手压根不是一类东西，别再拉一起比了 | | 5 | 2.7k | 30 分钟 |</li><li>| 底模挂了蒸馏权重之后 步数和引导值到底该怎么填 | | 5 | 2.5k | 30 分钟 |</li><li>| 「ai编码智能体」其实是五种东西，很多项目死就死在选错了层 | | 8 | 2.7k | 35 分钟 |</li><li>| 无限deepseek账号？这羊毛薅得我都怕了！ | | 9 | 2.8k | 38 分钟 |</li><li>| 让几个模型玩同一款剧情游戏，性格差得比我想的离谱 | | 7 | 2.6k | 40 分钟 |</li></ul><h3>DOM / XPath 定位依据</h3><p>unique 表示唯一文本匹配；ambiguous 表示存在多处；unresolved 表示暂未定位。定位成功不代表标签正确。</p><ul></ul></details></section><section><h2>news_01.html</h2><p>状态：两种提取结果有分歧；字符数 3047 / 3077；相似度 99.5%</p><p>正文范围依据：main p[data-sticky-nav-anchor=true] + narrative headings </p><div class='columns'><div><h3>当前提取结果</h3><pre>因访谈中谈及一张“中国独裁者”迷因图而卷入辱华风波的法国足球明星基利安·姆巴佩（Kylian Mbappé；麦巴比），周二（10月27日）发表声明，“向所有被我的言论所伤害的人道歉”。这张迷因将他的脸合成到已故中共领导人毛泽东的形象上。
+但在声明发表约20分钟后，中国足球协会（中国足协）发文称已与姆巴佩所属的皇家马德里俱乐部“严正交涉”，要求涉事球员和俱乐部“作出公开正式道歉”。西甲方面与涉事访谈节目《The Bridge》同日亦先后致歉。
+在此之前，东鹏饮料、蒙牛乳业等多家中国品牌已以“伤害民族感情”为由宣布终止与姆巴佩的合作或与其划清界线，中国中央广播电视总台（总台）亦暂停播出与他相关的赛事内容及广告。
+连串道歉未能平息舆论。微博热搜上与姆巴佩相关的话题一度占据前十中的六席，中国外交部发言人也就事件表态。这场风波之所以迅速延烧，与毛泽东在当代中国社会、尤其是年轻世代中的特殊位置密不可分。
+球员、节目、西甲接连道歉
+10月27日，姆巴佩经认证的X账号发表声明：“在近期的一次采访中，我对一张以我为主角的图片作出了回应。我的言论欠妥，如今我明白，这些话伤害了中国以及世界各地华人社区的许多人。我向所有被我的言论所伤害的人道歉。这绝非我的本意。我对这个人民及其历史怀有深深的敬意，我真心感到抱歉。”
+声明以姆巴佩个人公司Interconnected Ventures的信笺发出，发布时间为欧洲早上、北京时间傍晚，消息传到中国后旋即登上微博热搜首位。
+约20分钟后，中国足协在微博发表声明，称协会“高度重视”，已第一时间与皇家马德里俱乐部“进行严正交涉，要求涉事球员和皇家马德里俱乐部作出公开正式道歉”。声明又说：“中国足协坚决反对任何伤害中国人民感情的言论。国际知名运动员尤其应当严守底线、理性发声，珍惜自身公众影响力。”
+同日晚上，西甲联赛在微博及X的官方帐号同步发布道歉文，表示“对于基利安·姆巴佩近期言论对中国球迷带来的冒犯与伤害，西甲联盟深感遗憾。相关言论属于球员个人表达，绝不代表西甲联盟的立场”。文中又称：“我们始终对中国、各相关机构及中国人民怀有深切的敬意，也无比珍惜数百万中国球迷每周给予我们的关注与支持。”
+《The Bridge》节目同日在Instagram限时动态致歉，承认此前发布了相关访谈片段：“我们深深遗憾这段片段冒犯了中国和世界其他地方的人。”西甲主席哈维尔·特巴斯（Javier Tebas）其后亦发声明称，已与中国驻西班牙大使姚敬会面，讨论风波并寻求解决方案。央视体育方面则以“听其言更观其行”回应，表示希望西甲和相关人士“痛改前非”。
+连番表态在民间收效甚微。西甲道歉文的微博评论区里，获最多点赞的是一条福建用户的留言：“他忘记出生了吗，就几十年没采棉花而已。”X平台上则有用户回应：“因为称呼一个独裁者是独裁者而道歉吗？哈哈。”在新浪新闻的相关帖文下，一位江苏网民说：“他不是知道错了，他是知道怕了，没处捞钱了。”一位河北网民说：“不接受，让世界人们知道知道教员在中国人心中的份量！”
+涉及毛泽东的“迷因图”
+风波源于10月26日起在Reddit、X（前称Twitter）及Threads等社交平台广泛流传的一段访谈片段。影片显示，姆巴佩在法国网络访谈节目《The Bridge》中，被问到“以自己头像制作的网络迷因图（meme，中国大陆也称‘梗图’）中，哪一个最令你发笑”时表示，最好笑的是有人将他的脸合成到一名“中国独裁者”的照片上，并称自己与朋友打电玩时经常使用这张图。
+姆巴佩在回答中并未点名。不过，节目后期制作加入了一张将他的面孔与毛泽东形象合成的图片，不少观众因此认为，他所指的正是毛泽东。
+BBC未能独立核实该访谈的录制及发布时间。《The Bridge》官方社交媒体帐号已无法找到相关片段，节目网站亦未提供重播。
+姆巴佩现效力西甲皇家马德里，并担任法国国家队队长。他曾协助法国队夺得2018年世界杯冠军，并在2022年世界杯决赛上演帽子戏法，被广泛视为当今足坛最具影响力和商业价值的球员之一。在中国市场，他亦曾长期受品牌青睐，先后与蒙牛、东鹏饮料、小红书等企业合作。
+品牌解约、官方施压
+访谈片段持续发酵后，东鹏饮料集团于10月27日率先发表声明，宣布终止与姆巴佩的合作，称公司“坚决反对、零容忍伤害民族感情的行为”。蒙牛乳业及妙可蓝多其后亦相继宣布解除与他的合作关系。
+生活分享平台小红书同样发表声明，反对任何伤害民族感情的言行，同时澄清与姆巴佩的商业合作已于2024年12月31日结束，目前正对相关宣传物料进行排查及下架。总台同日下午表示，由于姆巴佩涉及“涉华严重负面行为”，已自本周一起暂停播出涉及他的西甲联赛及相关内容，所有以其为主角的商业广告亦同步下架。
+中国外交部也加入评论。发言人郭嘉昆10月27日在例行记者会上回应相关提问时说：“我们注意到有关报导。伤害中国人民感情的言行自然会遭到中国社会各界的共同抵制。”
+舆论场上，北京广播电视台旗下《北京时间》发布的社论“姆巴佩深知被羞辱的滋味却不懂尊重”一度位居热搜榜首。社论提及姆巴佩今年7月世界杯期间遭受种族歧视的经历：当时，巴拉圭参议员塞莱斯特·阿马里利亚（Celeste Amarilla）在网络上称他是“一个被殖民的喀麦隆人，假装自己是法国人，充满怨气、暴发户、傲慢而丑陋”，姆巴佩本人及法国足协曾直接回击，称有关言论“令人发指、不可接受”。
+社论指出，他遭受的种族歧视与其此次言论性质相似，他不应一边赚中国人的钱，一边伤害中国人的感情。
+近年，因被中国舆论认定“伤害民族感情”而付出商业代价的事件并不罕见。2021年，快时尚品牌H&amp;M因就新疆强迫劳动问题发表声明，在中国遭遇大规模抵制，多个地图及电商平台一度将其下架，多名中国艺人宣布终止合作；法国奢侈品牌Dior亦曾因广告中使用被部分网民称为“眯眯眼”的模特形象卷入争议，被批评丑化中国人。这类争议往往随网络舆论升温，迅速蔓延至商业层面。
+“教员”、资讯真空与“毛泽东热”
+在微博、抖音等平台上，不少网民仍在发问：姆巴佩到底说了什么？事件缘由为何？
+中国最大的足球资讯平台懂球帝10月26日晚上发文称，由于内容“涉及对中国和中国人民的伤害”，平台选择不予翻译，同时呼吁球迷理性讨论，避免过激言论。冷处理反而加剧了好奇：有擅长“翻墙”的网民找到访谈原片，在社交平台兜售片段，吸引好奇者付费观看。
+而在声讨姆巴佩的舆论中，一种声音愤怒于“姆巴佩伤害了中国人民感情”这一官方叙事，随之摇旗呐喊；另一种则是自己看过争议影片的网民，质问“他怎么敢说我们教员？”。在中国年轻人的网络语境中，“教员”是对毛泽东的代称。
+姆巴佩风波因此已不止是一场围绕球星言论的舆论事件，同时折射出毛泽东在当代中国社会中的特殊位置。
+毛泽东虽已去世50年，但他对今日中国的影响仍在放大，尤其在活跃于网络的年轻人之中。 BBC中文此前曾报导 ，在当代中国年轻人的网络文化中，毛泽东正经历一轮显著的“回潮”：影片平台Bilibili（B站）上的毛泽东相关影片，动辄录得数百万播放量；《毛泽东选集》连续多年位居清华大学图书馆年度借阅榜首。毛泽东已重新进入“Z世代”的日常政治语言。
+值得注意的是，随着中国经济增速放缓，就业、房价、性别等社会矛盾日益突出，毛泽东关于阶级、平等与反资本支配的论述，被一些年轻人视为理解自身处境的一套简明而有力的解释框架。他在当代中国社会中的意义，早已超出官方的历史定位本身。</pre></div><div><h3>Trafilatura 结果</h3><pre>姆巴佩就“中国独裁者”迷因道歉：风波背后的资讯真空与“毛泽东热”
+因访谈中谈及一张“中国独裁者”迷因图而卷入辱华风波的法国足球明星基利安·姆巴佩（Kylian Mbappé；麦巴比），周二（10月27日）发表声明，“向所有被我的言论所伤害的人道歉”。这张迷因将他的脸合成到已故中共领导人毛泽东的形象上。
+但在声明发表约20分钟后，中国足球协会（中国足协）发文称已与姆巴佩所属的皇家马德里俱乐部“严正交涉”，要求涉事球员和俱乐部“作出公开正式道歉”。西甲方面与涉事访谈节目《The Bridge》同日亦先后致歉。
+在此之前，东鹏饮料、蒙牛乳业等多家中国品牌已以“伤害民族感情”为由宣布终止与姆巴佩的合作或与其划清界线，中国中央广播电视总台（总台）亦暂停播出与他相关的赛事内容及广告。
+连串道歉未能平息舆论。微博热搜上与姆巴佩相关的话题一度占据前十中的六席，中国外交部发言人也就事件表态。这场风波之所以迅速延烧，与毛泽东在当代中国社会、尤其是年轻世代中的特殊位置密不可分。
+球员、节目、西甲接连道歉
+10月27日，姆巴佩经认证的X账号发表声明：“在近期的一次采访中，我对一张以我为主角的图片作出了回应。我的言论欠妥，如今我明白，这些话伤害了中国以及世界各地华人社区的许多人。我向所有被我的言论所伤害的人道歉。这绝非我的本意。我对这个人民及其历史怀有深深的敬意，我真心感到抱歉。”
+声明以姆巴佩个人公司Interconnected Ventures的信笺发出，发布时间为欧洲早上、北京时间傍晚，消息传到中国后旋即登上微博热搜首位。
+约20分钟后，中国足协在微博发表声明，称协会“高度重视”，已第一时间与皇家马德里俱乐部“进行严正交涉，要求涉事球员和皇家马德里俱乐部作出公开正式道歉”。声明又说：“中国足协坚决反对任何伤害中国人民感情的言论。国际知名运动员尤其应当严守底线、理性发声，珍惜自身公众影响力。”
+同日晚上，西甲联赛在微博及X的官方帐号同步发布道歉文，表示“对于基利安·姆巴佩近期言论对中国球迷带来的冒犯与伤害，西甲联盟深感遗憾。相关言论属于球员个人表达，绝不代表西甲联盟的立场”。文中又称：“我们始终对中国、各相关机构及中国人民怀有深切的敬意，也无比珍惜数百万中国球迷每周给予我们的关注与支持。”
+《The Bridge》节目同日在Instagram限时动态致歉，承认此前发布了相关访谈片段：“我们深深遗憾这段片段冒犯了中国和世界其他地方的人。”西甲主席哈维尔·特巴斯（Javier Tebas）其后亦发声明称，已与中国驻西班牙大使姚敬会面，讨论风波并寻求解决方案。央视体育方面则以“听其言更观其行”回应，表示希望西甲和相关人士“痛改前非”。
+连番表态在民间收效甚微。西甲道歉文的微博评论区里，获最多点赞的是一条福建用户的留言：“他忘记出生了吗，就几十年没采棉花而已。”X平台上则有用户回应：“因为称呼一个独裁者是独裁者而道歉吗？哈哈。”在新浪新闻的相关帖文下，一位江苏网民说：“他不是知道错了，他是知道怕了，没处捞钱了。”一位河北网民说：“不接受，让世界人们知道知道教员在中国人心中的份量！”
+涉及毛泽东的“迷因图”
+风波源于10月26日起在Reddit、X（前称Twitter）及Threads等社交平台广泛流传的一段访谈片段。影片显示，姆巴佩在法国网络访谈节目《The Bridge》中，被问到“以自己头像制作的网络迷因图（meme，中国大陆也称‘梗图’）中，哪一个最令你发笑”时表示，最好笑的是有人将他的脸合成到一名“中国独裁者”的照片上，并称自己与朋友打电玩时经常使用这张图。
+姆巴佩在回答中并未点名。不过，节目后期制作加入了一张将他的面孔与毛泽东形象合成的图片，不少观众因此认为，他所指的正是毛泽东。
+BBC未能独立核实该访谈的录制及发布时间。《The Bridge》官方社交媒体帐号已无法找到相关片段，节目网站亦未提供重播。
+姆巴佩现效力西甲皇家马德里，并担任法国国家队队长。他曾协助法国队夺得2018年世界杯冠军，并在2022年世界杯决赛上演帽子戏法，被广泛视为当今足坛最具影响力和商业价值的球员之一。在中国市场，他亦曾长期受品牌青睐，先后与蒙牛、东鹏饮料、小红书等企业合作。
+品牌解约、官方施压
+访谈片段持续发酵后，东鹏饮料集团于10月27日率先发表声明，宣布终止与姆巴佩的合作，称公司“坚决反对、零容忍伤害民族感情的行为”。蒙牛乳业及妙可蓝多其后亦相继宣布解除与他的合作关系。
+生活分享平台小红书同样发表声明，反对任何伤害民族感情的言行，同时澄清与姆巴佩的商业合作已于2024年12月31日结束，目前正对相关宣传物料进行排查及下架。总台同日下午表示，由于姆巴佩涉及“涉华严重负面行为”，已自本周一起暂停播出涉及他的西甲联赛及相关内容，所有以其为主角的商业广告亦同步下架。
+中国外交部也加入评论。发言人郭嘉昆10月27日在例行记者会上回应相关提问时说：“我们注意到有关报导。伤害中国人民感情的言行自然会遭到中国社会各界的共同抵制。”
+舆论场上，北京广播电视台旗下《北京时间》发布的社论“姆巴佩深知被羞辱的滋味却不懂尊重”一度位居热搜榜首。社论提及姆巴佩今年7月世界杯期间遭受种族歧视的经历：当时，巴拉圭参议员塞莱斯特·阿马里利亚（Celeste Amarilla）在网络上称他是“一个被殖民的喀麦隆人，假装自己是法国人，充满怨气、暴发户、傲慢而丑陋”，姆巴佩本人及法国足协曾直接回击，称有关言论“令人发指、不可接受”。
+社论指出，他遭受的种族歧视与其此次言论性质相似，他不应一边赚中国人的钱，一边伤害中国人的感情。
+近年，因被中国舆论认定“伤害民族感情”而付出商业代价的事件并不罕见。2021年，快时尚品牌H&amp;M因就新疆强迫劳动问题发表声明，在中国遭遇大规模抵制，多个地图及电商平台一度将其下架，多名中国艺人宣布终止合作；法国奢侈品牌Dior亦曾因广告中使用被部分网民称为“眯眯眼”的模特形象卷入争议，被批评丑化中国人。这类争议往往随网络舆论升温，迅速蔓延至商业层面。
+“教员”、资讯真空与“毛泽东热”
+在微博、抖音等平台上，不少网民仍在发问：姆巴佩到底说了什么？事件缘由为何？
+中国最大的足球资讯平台懂球帝10月26日晚上发文称，由于内容“涉及对中国和中国人民的伤害”，平台选择不予翻译，同时呼吁球迷理性讨论，避免过激言论。冷处理反而加剧了好奇：有擅长“翻墙”的网民找到访谈原片，在社交平台兜售片段，吸引好奇者付费观看。
+而在声讨姆巴佩的舆论中，一种声音愤怒于“姆巴佩伤害了中国人民感情”这一官方叙事，随之摇旗呐喊；另一种则是自己看过争议影片的网民，质问“他怎么敢说我们教员？”。在中国年轻人的网络语境中，“教员”是对毛泽东的代称。
+姆巴佩风波因此已不止是一场围绕球星言论的舆论事件，同时折射出毛泽东在当代中国社会中的特殊位置。
+毛泽东虽已去世50年，但他对今日中国的影响仍在放大，尤其在活跃于网络的年轻人之中。BBC中文此前曾报导，在当代中国年轻人的网络文化中，毛泽东正经历一轮显著的“回潮”：影片平台Bilibili（B站）上的毛泽东相关影片，动辄录得数百万播放量；《毛泽东选集》连续多年位居清华大学图书馆年度借阅榜首。毛泽东已重新进入“Z世代”的日常政治语言。
+值得注意的是，随着中国经济增速放缓，就业、房价、性别等社会矛盾日益突出，毛泽东关于阶级、平等与反资本支配的论述，被一些年轻人视为理解自身处境的一套简明而有力的解释框架。他在当代中国社会中的意义，早已超出官方的历史定位本身。</pre></div></div><details><summary>查看差异候选</summary><h3>当前独有：可能误提</h3><ul></ul><h3>基线独有：可能漏提</h3><ul><li>姆巴佩就“中国独裁者”迷因道歉：风波背后的资讯真空与“毛泽东热”</li></ul><h3>DOM / XPath 定位依据</h3><p>unique 表示唯一文本匹配；ambiguous 表示存在多处；unresolved 表示暂未定位。定位成功不代表标签正确。</p><ul><li>possible_missing: 姆巴佩就“中国独裁者”迷因道歉：风波背后的资讯真空与“毛泽东热”<p>定位：ambiguous；建议未启用</p><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;main\&quot;][1]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;h1\&quot;][1]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;css-5youcd e17x9cvu0&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;main&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;css-uarkay&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;css-1nude9v&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;css-bg8vrv&quot;
+    }
+  ]
+}</pre><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;main\&quot;][1]/*[local-name()=\&quot;section\&quot;][2]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;ul\&quot;][1]/*[local-name()=\&quot;li\&quot;][1]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][1]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;css-6cb6xm&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;css-qj66n0&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;li&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;ul&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;css-64y6r&quot;
+    }
+  ]
+}</pre><pre>{
+  &quot;locator&quot;: [
+    &quot;./*[local-name()=\&quot;html\&quot;][1]/*[local-name()=\&quot;body\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;section\&quot;][2]/*[local-name()=\&quot;ol\&quot;][1]/*[local-name()=\&quot;li\&quot;][1]/*[local-name()=\&quot;div\&quot;][1]/*[local-name()=\&quot;div\&quot;][2]&quot;
+  ],
+  &quot;containers&quot;: [
+    {
+      &quot;tag&quot;: &quot;div&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;css-1ogrn1l&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;li&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;css-1xaijnt e17x9cvu0&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;ol&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;css-1oou3yz e17x9cvu0&quot;
+    },
+    {
+      &quot;tag&quot;: &quot;section&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;css-1g7uqg9&quot;
+    }
+  ]
+}</pre></li></ul></details></section><section><h2>news_02.html</h2><p>状态：两种结果一致，尚不代表正确；字符数 857 / 855；相似度 100.0%</p><p>正文范围依据：consumption-page H1 = document title &gt; article </p><div class='columns'><div><h3>当前提取结果</h3><pre>IT之家 10 月 28 日消息，谷歌 DeepMind 团队昨日（10 月 27 日）发布博文，宣布推出 Genie 4 世界模型，定位为“重大研究里程碑”， 在原生音频、实时自然语言改写、更真实的物理与人物等方面实现核心突破，把世界模型从一次性生成画面升级为可实时操控、可听、可推理的动态模拟世界。
+对于用户而言，谷歌 Genie 4 世界模型最大的亮点在于实时“导演”世界。在模拟运行中，用户可以用自然语言文本指令改变世界，例如改天气、移动镜头、加入新角色或物体。
+有别于主流 AI 重新生成一段视频，Genie 4 会结合当前场景上下文执行动态变化，更像一个“可交互的虚拟沙盒”或“AI 导演系统”。用户可以设定一个事件，然后观察世界如何继续演化，同时随时介入调整。
+其它亮点方面，Genie 4 是 DeepMind 首个在实时世界模拟中原生生成音频的模型，音频与画面在同一过程中同步产生。此外谷歌称 Genie 4 在空气动力学、碰撞等物理场景上有更强表现；人物动作也更自然，能根据环境作出有机反应，并支持实时操控。IT之家附上相关演示视频如下：
+谷歌首席执行官桑达尔 · 皮查伊（Sundar Pichai）今天在其个人账号上发布推文，称 Genie 4 是谷歌迄今为止最逼真、最具互动性的世界模型。
+在接受科技媒体 TechCrunch 采访时，谷歌研究总监 Tejas Kulkarni 表示， 未来将由 Gemini 负责文本、代码与任务规划，Genie 4 实时把这些内容转化为可交互世界，形成“混合世界模型”。
+DeepMind 工程师 Diego Rivas 承认，Genie 4 仍处早期阶段；长时间模拟可能出现细节漂移，音频准确性和画面内文字可读性也尚未完全解决。
+Genie 4 目前仅以研究预览形式向“受信任测试者”开放；未来几周将扩展到 Google AI Ultra 订阅用户的 Project Genie，以及 Gemini API 和 Google AI Studio 的早期合作伙伴。</pre></div><div><h3>Trafilatura 结果</h3><pre>IT之家 10 月 28 日消息，谷歌 DeepMind 团队昨日（10 月 27 日）发布博文，宣布推出 Genie 4 世界模型，定位为“重大研究里程碑”，在原生音频、实时自然语言改写、更真实的物理与人物等方面实现核心突破，把世界模型从一次性生成画面升级为可实时操控、可听、可推理的动态模拟世界。
+对于用户而言，谷歌 Genie 4 世界模型最大的亮点在于实时“导演”世界。在模拟运行中，用户可以用自然语言文本指令改变世界，例如改天气、移动镜头、加入新角色或物体。
+有别于主流 AI 重新生成一段视频，Genie 4 会结合当前场景上下文执行动态变化，更像一个“可交互的虚拟沙盒”或“AI 导演系统”。用户可以设定一个事件，然后观察世界如何继续演化，同时随时介入调整。
+其它亮点方面，Genie 4 是 DeepMind 首个在实时世界模拟中原生生成音频的模型，音频与画面在同一过程中同步产生。此外谷歌称 Genie 4 在空气动力学、碰撞等物理场景上有更强表现；人物动作也更自然，能根据环境作出有机反应，并支持实时操控。IT之家附上相关演示视频如下：
+谷歌首席执行官桑达尔 · 皮查伊（Sundar Pichai）今天在其个人账号上发布推文，称 Genie 4 是谷歌迄今为止最逼真、最具互动性的世界模型。
+在接受科技媒体 TechCrunch 采访时，谷歌研究总监 Tejas Kulkarni 表示，未来将由 Gemini 负责文本、代码与任务规划，Genie 4 实时把这些内容转化为可交互世界，形成“混合世界模型”。
+DeepMind 工程师 Diego Rivas 承认，Genie 4 仍处早期阶段；长时间模拟可能出现细节漂移，音频准确性和画面内文字可读性也尚未完全解决。
+Genie 4 目前仅以研究预览形式向“受信任测试者”开放；未来几周将扩展到 Google AI Ultra 订阅用户的 Project Genie，以及 Gemini API 和 Google AI Studio 的早期合作伙伴。</pre></div></div><details><summary>查看差异候选</summary><h3>当前独有：可能误提</h3><ul></ul><h3>基线独有：可能漏提</h3><ul></ul><h3>DOM / XPath 定位依据</h3><p>unique 表示唯一文本匹配；ambiguous 表示存在多处；unresolved 表示暂未定位。定位成功不代表标签正确。</p><ul></ul></details></section></html>

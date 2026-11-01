@@ -133,7 +133,7 @@ def collect(config, root=ROOT, limit_override=None, dry_run=False):
                 base.decompose()
             document.head.insert(0, document.new_tag('base', href=final))
             path = root/'samples'/name
-            path.parent.mkdir(exist_ok=True)
+            path.parent.mkdir(exist_ok=True, parents=True)
             path.write_text(str(document), encoding='utf-8')
             item = dict(file=name, url=final, seed_url=url, domain=urlsplit(final).hostname,
                         content_hash=digest, snapshot=hashlib.sha256(path.read_bytes()).hexdigest(),
@@ -142,7 +142,7 @@ def collect(config, root=ROOT, limit_override=None, dry_run=False):
             manifest.append(item);added.append(item);hashes.add(digest)
         except Exception as exc:
             errors.append(dict(url=url, error=str(exc)))
-    manifest_path.parent.mkdir(exist_ok=True)
+    manifest_path.parent.mkdir(exist_ok=True, parents=True)
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
     summary = dict(added=added, attempts=attempts, skipped=skipped, errors=errors)
     (root/'reports/collection_last_run.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')

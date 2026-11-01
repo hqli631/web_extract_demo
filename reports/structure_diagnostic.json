@@ -1,0 +1,338 @@
+[
+  {
+    "file": "blog_01.html",
+    "title": "宇树科技股价连续暴涨，分析师忙翻了！物理AI受益股梳理_新浪财经_新浪网",
+    "nodes": [
+      {
+        "tag": "h1",
+        "id": null,
+        "cls": [
+          "main-title"
+        ],
+        "text": "宇树科技股价连续暴涨，分析师忙翻了！物理AI受益股梳理",
+        "ancestors": [
+          "div:['main-content', 'w1240']",
+          "body:[]",
+          "html:[]"
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "artibody",
+        "cls": [
+          "article"
+        ],
+        "text": "专题：A股已体现性价比 长期配置价值凸显 10月26日，物理AI概念延续强势， 宇树科技 （688836.SH）收盘涨7.69%报672元，总市值达2718亿元。自10月16日盘中低点407.01元至26日收盘，宇树科技在7个交易日内累计上涨65.1%。 行情的触发点在10月下旬的两场会议。10月21日，英伟达CEO黄仁勋在柏林GTC大会上称“下一波浪潮是物理AI”，并宣布扩容Isaac 机器人 开发平台；10月22日，2026世界物理",
+        "ancestors": [
+          "div:['article-content-left']",
+          "div:['article-content', 'clearfix']",
+          "div:['main-content', 'w1240']"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "blog_02.html",
+    "title": "英伟达瞄准 AI 软件订阅收入，黄仁勋提出每块 GPU 每年约 2000 美元",
+    "nodes": [
+      {
+        "tag": "h1",
+        "id": null,
+        "cls": [
+          "viewsHeaderText"
+        ],
+        "text": "英伟达瞄准 AI 软件订阅收入，黄仁勋提出每块 GPU 每年约 2000 美元",
+        "ancestors": [
+          "div:['viewsHeader']",
+          "div:['viewsInfo', 'gradientBackground', 'polished']",
+          "views-header-wc:[]"
+        ]
+      },
+      {
+        "tag": "article",
+        "id": null,
+        "cls": [
+          "article-reader-container"
+        ],
+        "text": "IT之家 10 月 26 日消息，英伟达首席执行官黄仁勋（Jensen Huang）表示，配套 AI 软件的年度授权费约为每块 GPU 2,000 美元 （IT之家注：现汇率约合 13,355 元人民币） ，用来“运行英伟达提供的、在这些 AI 工厂上支撑 AI 智能体运转的全套软件”。相关发言视频近日流出，按照 FourWeekMBA 给出的一种测算情景，如果付费授权达到 500 万份，这套定价模式五年内有望带来 500 亿美元 （现",
+        "ancestors": [
+          "cp-article-reader:[]",
+          "div:['article-page']",
+          "msn-article-page:[]"
+        ]
+      },
+      {
+        "tag": "h1",
+        "id": null,
+        "cls": [
+          "viewsHeaderText"
+        ],
+        "text": "一位华为员工自述：出身农村，17岁考上武大，21岁入职华为，勤恳干了19年，40岁时手握1300万存款",
+        "ancestors": [
+          "div:['viewsHeader']",
+          "div:['viewsInfo', 'gradientBackground', 'polished']",
+          "views-header-wc:[]"
+        ]
+      },
+      {
+        "tag": "article",
+        "id": null,
+        "cls": [
+          "article-reader-container"
+        ],
+        "text": "打算卖掉深圳的房产回老家安度晚年，还坦言\"感谢华为给了农村娃翻身机会\"。 很多人看完第一反应是羡慕，觉得这简直是普通人职场逆袭的完美样本，可顺着他的自述往深了看，你会发现这份“40岁退休”的底气，根本不是靠运气撞出来的。 他出生在湖北黄冈的一个普通村子，父母都是面朝黄土背朝天的农民，家里连一件像样的家电都没有，他17岁考上武大的时候，全村人凑钱给他凑了第一年的学费，连去武汉的火车票都是村里的小学老师给他买的。 大学四年他没买过一件超过1",
+        "ancestors": [
+          "cp-article-reader:[]",
+          "div:['article-page']",
+          "msn-article-page:[]"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "collected_07299d33c58922ca.html",
+    "title": "Google Research 提出「睡眠」框架，缓解大模… · AI湾",
+    "nodes": [
+      {
+        "tag": "h1",
+        "id": null,
+        "cls": [
+          "flex",
+          "flex-wrap",
+          "items-center",
+          "gap-2",
+          "text-[22px]",
+          "font-semibold",
+          "tracking-tight",
+          "text-fg"
+        ],
+        "text": "Google Research 提出「睡眠」框架，缓解大模…",
+        "ancestors": [
+          "header:['mt-2', 'mb-5']",
+          "main:['min-w-0']",
+          "div:['grid', 'gap-6', 'lg:grid-cols-[190px_minmax(0,1fr)_300px]']"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "collected_47c9a44f1ccc3dfa.html",
+    "title": "微软首次披露 Azure 季度实际收入：单季达 332 亿… · AI湾",
+    "nodes": [
+      {
+        "tag": "h1",
+        "id": null,
+        "cls": [
+          "flex",
+          "flex-wrap",
+          "items-center",
+          "gap-2",
+          "text-[22px]",
+          "font-semibold",
+          "tracking-tight",
+          "text-fg"
+        ],
+        "text": "微软首次披露 Azure 季度实际收入：单季达 332 亿…",
+        "ancestors": [
+          "header:['mt-2', 'mb-5']",
+          "main:['min-w-0']",
+          "div:['grid', 'gap-6', 'lg:grid-cols-[190px_minmax(0,1fr)_300px]']"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "collected_5b4a5a3b46bc6f7f.html",
+    "title": "Google DeepMind 发布旗舰模型 Gemini… · AI湾",
+    "nodes": [
+      {
+        "tag": "h1",
+        "id": null,
+        "cls": [
+          "flex",
+          "flex-wrap",
+          "items-center",
+          "gap-2",
+          "text-[22px]",
+          "font-semibold",
+          "tracking-tight",
+          "text-fg"
+        ],
+        "text": "Google DeepMind 发布旗舰模型 Gemini…",
+        "ancestors": [
+          "header:['mt-2', 'mb-5']",
+          "main:['min-w-0']",
+          "div:['grid', 'gap-6', 'lg:grid-cols-[190px_minmax(0,1fr)_300px]']"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "collected_855c0d89cc5b8f45.html",
+    "title": "英伟达开源语音模型 Nemotron 3.5 Transc… · AI湾",
+    "nodes": [
+      {
+        "tag": "h1",
+        "id": null,
+        "cls": [
+          "flex",
+          "flex-wrap",
+          "items-center",
+          "gap-2",
+          "text-[22px]",
+          "font-semibold",
+          "tracking-tight",
+          "text-fg"
+        ],
+        "text": "英伟达开源语音模型 Nemotron 3.5 Transc…",
+        "ancestors": [
+          "header:['mt-2', 'mb-5']",
+          "main:['min-w-0']",
+          "div:['grid', 'gap-6', 'lg:grid-cols-[190px_minmax(0,1fr)_300px]']"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "collected_911f560fdd154136.html",
+    "title": "【公告】点赞/点踩/打赏不再要求 Lv.1 · AI湾",
+    "nodes": [
+      {
+        "tag": "h1",
+        "id": null,
+        "cls": [
+          "flex",
+          "flex-wrap",
+          "items-center",
+          "gap-2",
+          "text-[22px]",
+          "font-semibold",
+          "tracking-tight",
+          "text-fg"
+        ],
+        "text": "置顶 【公告】点赞/点踩/打赏不再要求 Lv.1",
+        "ancestors": [
+          "header:['mt-2', 'mb-5']",
+          "main:['min-w-0']",
+          "div:['grid', 'gap-6', 'lg:grid-cols-[190px_minmax(0,1fr)_300px]']"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "forum_01.html",
+    "title": "AI开发者社区 - 技术交流、资源共享，共创人工智能未来 | AIGC工具导航",
+    "nodes": []
+  },
+  {
+    "file": "forum_02.html",
+    "title": "CocoLoop AI社区 - AI智能体技术社区",
+    "nodes": [
+      {
+        "tag": "div",
+        "id": null,
+        "cls": [
+          "list-controls"
+        ],
+        "text": "所有最新话题 类别 标签 最新 热门 类别",
+        "ancestors": [
+          "div:[]",
+          "div:['wrap']",
+          "div:['discourse-root', 'ember-view']"
+        ]
+      },
+      {
+        "tag": "h1",
+        "id": "topic-list-heading",
+        "cls": [
+          "sr-only"
+        ],
+        "text": "所有最新话题",
+        "ancestors": [
+          "div:['container']",
+          "div:['list-controls']",
+          "div:[]"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "news_01.html",
+    "title": "姆巴佩道歉：“中国独裁者”迷因风波背后的资讯真空与“毛泽东热” - BBC News 中文",
+    "nodes": [
+      {
+        "tag": "h1",
+        "id": "content",
+        "cls": [
+          "article-heading",
+          "css-nir6jv",
+          "e1j37txl0"
+        ],
+        "text": "姆巴佩就“中国独裁者”迷因道歉：风波背后的资讯真空与“毛泽东热”",
+        "ancestors": [
+          "div:['css-5youcd', 'e17x9cvu0']",
+          "main:['css-uarkay']",
+          "div:['css-1nude9v']"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "news_02.html",
+    "title": "皮查伊称 Genie 4 是谷歌迄今最逼真、最具互动性的 AI 世界模型",
+    "nodes": [
+      {
+        "tag": "h1",
+        "id": null,
+        "cls": [
+          "viewsHeaderText"
+        ],
+        "text": "皮查伊称 Genie 4 是谷歌迄今最逼真、最具互动性的 AI 世界模型",
+        "ancestors": [
+          "div:['viewsHeader']",
+          "div:['viewsInfo', 'gradientBackground', 'polished']",
+          "views-header-wc:[]"
+        ]
+      },
+      {
+        "tag": "article",
+        "id": null,
+        "cls": [
+          "article-reader-container"
+        ],
+        "text": "IT之家 10 月 28 日消息，谷歌 DeepMind 团队昨日（10 月 27 日）发布博文，宣布推出 Genie 4 世界模型，定位为“重大研究里程碑”， 在原生音频、实时自然语言改写、更真实的物理与人物等方面实现核心突破，把世界模型从一次性生成画面升级为可实时操控、可听、可推理的动态模拟世界。 对于用户而言，谷歌 Genie 4 世界模型最大的亮点在于实时“导演”世界。在模拟运行中，用户可以用自然语言文本指令改变世界，例如改天气",
+        "ancestors": [
+          "cp-article-reader:[]",
+          "div:['article-page']",
+          "msn-article-page:[]"
+        ]
+      },
+      {
+        "tag": "h1",
+        "id": null,
+        "cls": [
+          "viewsHeaderText"
+        ],
+        "text": "谷歌发布新版人工智能世界模型Genie 4",
+        "ancestors": [
+          "div:['viewsHeader']",
+          "div:['viewsInfo', 'gradientBackground', 'polished']",
+          "views-header-wc:[]"
+        ]
+      },
+      {
+        "tag": "article",
+        "id": null,
+        "cls": [
+          "article-reader-container"
+        ],
+        "text": "格隆汇10月28日｜谷歌DeepMind周二在官网发布了Genie 4，可让用户通过文字提示创建可供探索的虚拟世界，并可以使用键盘操控在其中游历。用户还可以在场景展开过程中输入指令，实时改变天气或添加角色等。谷歌表示，模拟环境最长可运行两分钟，约为上一代Genie 3的两倍。 谷歌发布新版人工智能世界模型Genie 4",
+        "ancestors": [
+          "cp-article-reader:[]",
+          "div:['article-page']",
+          "msn-article-page:[]"
+        ]
+      }
+    ]
+  }
+]

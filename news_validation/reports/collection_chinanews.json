@@ -1,0 +1,45 @@
+{
+  "added": [
+    {
+      "file": "collected_c2d1dbf788829343.html",
+      "url": "https://www.chinanews.com.cn/gn/2026/10-30/10723267.shtml",
+      "seed_url": "https://www.chinanews.com.cn/gn/2026/10-30/10723267.shtml",
+      "domain": "www.chinanews.com.cn",
+      "content_hash": "3dc6c6079290eeef2fda4f0f0364737cd6556a75dcfebafd5e3b0793bd6f568d",
+      "snapshot": "52a4220f77485575658a438491db4c3fa531dd8af184f5384d38a94147b364f4",
+      "fetched_at": "2026-10-30T14:00:12Z",
+      "mode": "static",
+      "text_chars": 3806
+    },
+    {
+      "file": "collected_4b026cde5c5744c1.html",
+      "url": "https://www.chinanews.com.cn/gn/2026/10-30/10723258.shtml",
+      "seed_url": "https://www.chinanews.com.cn/gn/2026/10-30/10723258.shtml",
+      "domain": "www.chinanews.com.cn",
+      "content_hash": "aabd7c5a425872afa67810cb8e86586c42424a6160838b4586505e7d52cbefa7",
+      "snapshot": "b53e3bfc9e5edd761ada80a7ff05c2d08c76500c8194a38ca9802c9b0a83dde6",
+      "fetched_at": "2026-10-30T14:00:13Z",
+      "mode": "static",
+      "text_chars": 4200
+    },
+    {
+      "file": "collected_4fdd3a7b48c5a575.html",
+      "url": "https://www.chinanews.com.cn/gn/2026/10-29/10722575.shtml",
+      "seed_url": "https://www.chinanews.com.cn/gn/2026/10-29/10722575.shtml",
+      "domain": "www.chinanews.com.cn",
+      "content_hash": "2385b45a4b058e3ecdce75312482e9959a6a4556d64d0d774d811badc93ab747",
+      "snapshot": "305e22fd4b5146f48dc9c96e77293385a4e60efc664c68bf3941166d5112d294",
+      "fetched_at": "2026-10-30T14:00:15Z",
+      "mode": "static",
+      "text_chars": 4510
+    }
+  ],
+  "attempts": 4,
+  "skipped": [
+    {
+      "url": "https://www.chinanews.com.cn/china/",
+      "reason": "discovery_only_or_url_filter"
+    }
+  ],
+  "errors": []
+}

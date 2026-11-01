@@ -1,0 +1,193 @@
+{
+  "generated_at": "2026-10-30T14:08:58.316Z",
+  "note": "Browser/static integration regression; external resources blocked; not extraction accuracy or visual parity.",
+  "pages": [
+    {
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "page_type": "article",
+      "scope_method": "#artibody",
+      "regions": 215,
+      "main": 42,
+      "body": 42,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "blog_02.html",
+      "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+      "page_type": "article",
+      "scope_method": "consumption-page H1 = document title > article",
+      "regions": 242,
+      "main": 10,
+      "body": 10,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "collected_07299d33c58922ca.html",
+      "snapshot": "7a6f99231e4814ad5cc97ac2a500e89cd14c137a78a7933a33a5ac2c54853e8a",
+      "page_type": "forum_post",
+      "scope_method": "#floor-1 .md-body:not(.signature-md)",
+      "regions": 93,
+      "main": 3,
+      "body": 3,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "collected_14a028de299edfab.html",
+      "snapshot": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+      "page_type": "article",
+      "scope_method": "#artibody",
+      "regions": 157,
+      "main": 23,
+      "body": 23,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "collected_47c9a44f1ccc3dfa.html",
+      "snapshot": "35e8f92c0bef3cb604c09b7d7bae426e1ec75a0ab2093389f672502e7c514856",
+      "page_type": "forum_post",
+      "scope_method": "#floor-1 .md-body:not(.signature-md)",
+      "regions": 93,
+      "main": 3,
+      "body": 3,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "collected_4b026cde5c5744c1.html",
+      "snapshot": "b53e3bfc9e5edd761ada80a7ff05c2d08c76500c8194a38ca9802c9b0a83dde6",
+      "page_type": "article",
+      "scope_method": "中新网 .left_zw",
+      "regions": 307,
+      "main": 6,
+      "body": 6,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "collected_4fdd3a7b48c5a575.html",
+      "snapshot": "305e22fd4b5146f48dc9c96e77293385a4e60efc664c68bf3941166d5112d294",
+      "page_type": "article",
+      "scope_method": "中新网 .left_zw",
+      "regions": 306,
+      "main": 6,
+      "body": 6,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "collected_5b4a5a3b46bc6f7f.html",
+      "snapshot": "048fcb334639b0ab904bb31c0d32979d56f90eabf411cff45506718d83eca263",
+      "page_type": "forum_post",
+      "scope_method": "#floor-1 .md-body:not(.signature-md)",
+      "regions": 93,
+      "main": 3,
+      "body": 3,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "collected_855c0d89cc5b8f45.html",
+      "snapshot": "eb6ada47208a1b7b59af060bcc53cf03635d8c21331ad00017bc9388abf463fc",
+      "page_type": "forum_post",
+      "scope_method": "#floor-1 .md-body:not(.signature-md)",
+      "regions": 93,
+      "main": 3,
+      "body": 3,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "collected_911f560fdd154136.html",
+      "snapshot": "e19d25c69ba54724459ba2079a433b514f5cdc634f6eb83a80de7deddf0fa9a6",
+      "page_type": "forum_post",
+      "scope_method": "#floor-1 .md-body:not(.signature-md)",
+      "regions": 95,
+      "main": 5,
+      "body": 5,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "collected_af5904c15d1deebc.html",
+      "snapshot": "c6348f97447c665018d507e3ed78a99a2d0989b13bc60087bb075bc8680ce4c4",
+      "page_type": "article",
+      "scope_method": "#artibody",
+      "regions": 154,
+      "main": 16,
+      "body": 16,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "collected_c2d1dbf788829343.html",
+      "snapshot": "52a4220f77485575658a438491db4c3fa531dd8af184f5384d38a94147b364f4",
+      "page_type": "article",
+      "scope_method": "中新网 .left_zw",
+      "regions": 307,
+      "main": 7,
+      "body": 7,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "collected_c5d4b9cdcf5b4c91.html",
+      "snapshot": "90cd0ef9d6c814125d32242d1da9b37be789fe19e4fa8a08581069b336924088",
+      "page_type": "article",
+      "scope_method": "#artibody",
+      "regions": 160,
+      "main": 21,
+      "body": 21,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "forum_01.html",
+      "snapshot": "4fe21bccbc274a6e6098c0bd08d5fabe4c396ec12a6e81fe6ac07ff392821129",
+      "page_type": "listing",
+      "scope_method": ".url-info repeated cards",
+      "regions": 221,
+      "main": 0,
+      "body": 0,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "forum_02.html",
+      "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+      "page_type": "listing",
+      "scope_method": ".topic-list / #topic-list-heading",
+      "regions": 121,
+      "main": 0,
+      "body": 0,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "news_01.html",
+      "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+      "page_type": "article",
+      "scope_method": "main p[data-sticky-nav-anchor=true] + narrative headings",
+      "regions": 291,
+      "main": 30,
+      "body": 30,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    },
+    {
+      "file": "news_02.html",
+      "snapshot": "c2dc93c18b02eda5f4100b3ec50d47c171d40ae257138b5a84aa5d71c78e7599",
+      "page_type": "article",
+      "scope_method": "consumption-page H1 = document title > article",
+      "regions": 198,
+      "main": 8,
+      "body": 8,
+      "unmapped": 0,
+      "canonical_content_matches": true
+    }
+  ]
+}

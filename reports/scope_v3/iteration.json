@@ -1,0 +1,213 @@
+{
+  "original_reviewed": 27,
+  "original_categories": {
+    "true_extra": 1,
+    "baseline_omission": 8,
+    "baseline_fragmentation": 1,
+    "policy_metadata": 4,
+    "baseline_noise": 3,
+    "baseline_control": 1,
+    "mixed_baseline_block": 5,
+    "format_only": 4
+  },
+  "current_raw_differences": 22,
+  "current_unreviewed": 0,
+  "current_differences": [
+    {
+      "file": "blog_01.html",
+      "text": "10月26日，物理ai概念延续强势， 宇树科技 （688836.sh）收盘涨7.69%报672元，总市值达2718亿元。自10月16日盘中低点407.01元至26日收盘，宇树科技在7个交易日内累计上涨65.1%。",
+      "status": "reviewed",
+      "category": "baseline_omission",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "行情的触发点在10月下旬的两场会议。10月21日，英伟达ceo黄仁勋在柏林gtc大会上称“下一波浪潮是物理ai”，并宣布扩容isaac 机器人 开发平台；10月22日，2026世界物理ai大会暨宇树合作伙伴生态大会在杭州举行，宇树科技创始人王兴兴在演讲中表示，随着gpt-6发布，“物理ai已经看到被击穿的苗头，很可能最近1到2年或者2到3年”。",
+      "status": "reviewed",
+      "category": "baseline_omission",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "21世纪经济报道记者根据wind收录的电话会议纪要统计，10月19日至25日这一周内，可查到纪要的物理ai及人形机器人相关电话会至少有18场，覆盖16家券商研究所， 东吴证券 更是有计算机、传媒互联网行业两场电话会。",
+      "status": "reviewed",
+      "category": "baseline_omission",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以 海天瑞声 （688787.sh）为对象的有三场，涉及 国泰海通 计算机、东吴计算机、华创计算机，均由公司董秘出席；开源证券计算机团队请到 当虹科技 （688039.sh）代表； 国海证券 的具身智能研究团队请到 慈星股份 （维权） （300307.sz）董秘与数采专家同场； 国联民生 计算机则把仙工智能（06106.hk）相关人员请上会议。",
+      "status": "reviewed",
+      "category": "baseline_omission",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "第二类是物理ai有关专家交流，如东吴传媒互联网张良卫团队连做两场，分别是“物理ai产业专家交流”和“物理ai系列3：具身大脑专家交流”；第三类是团队内部的深度观点汇报。国泰海通机械首席肖群稀的“物理ai、具身智能与人形机器人”、 中金公司 汽车团队的“物理ai进展与4q26板块投资机会”均属此类。",
+      "status": "reviewed",
+      "category": "baseline_omission",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "东北证券 在其产业观察中提示，按英伟达的说法，物理ai覆盖机器人、自动驾驶与智能空间，相关基础设施由模型训练、仿真测试与端侧运行三部分组成。这意味着它更像一个横跨多个既有行业的技术体系，而非一个全新赛道。",
+      "status": "reviewed",
+      "category": "baseline_omission",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "例如，国海机械团队把第89期路演整期给了“人形机器人数采深度”；华源传媒互联网团队直接用了“卖铲子”这个说法，标题是“物理ai的卖铲子环节——数据采集”； 国金证券 具身智能团队的路演主题更直接，叫“数采：物理ai最大短板，数据基建即将爆发”。",
+      "status": "reviewed",
+      "category": "baseline_omission",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "关于物理ai的进展， 华泰证券 机械设备团队把当前阶段概括为“从概念走向落地”，认为openai等模型企业自研人形机器人有望加速这一进程；国金证券机器人与具身智能团队在纪要中提示，行业目前“仅缺少这一突破的触发信号”，一旦某家头部企业积累数千万至亿个小时数据并实现大脑泛化，全行业将快速跟进布局数据赛道，路径与chatgpt突破后全行业加码算力相似。",
+      "status": "reviewed",
+      "category": "baseline_omission",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以海天瑞声国泰海通当虹科技国海证券慈星股份（维权）（300307.sz）董秘与数采专家同场；国联民生",
+      "status": "reviewed",
+      "category": "baseline_fragmentation",
+      "reason": "基线将原段落中的股票代码及部分文字删除并拼接，原始完整段落已在当前正文中；不补写这段残缺版本，也不视为真实漏提。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "（声明：文章内容仅供参考，不构成投资建议。投资者据此操作，风险自担。）",
+      "status": "reviewed",
+      "category": "policy_metadata",
+      "reason": "免责声明或责任编辑信息，按项目口径单列元数据；从叙述正文排除符合预期。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "责任编辑：石秀珍 sf183",
+      "status": "reviewed",
+      "category": "policy_metadata",
+      "reason": "免责声明或责任编辑信息，按项目口径单列元数据；从叙述正文排除符合预期。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "新浪财经声明：此消息系转载自合作媒体，新浪财经登载此文出于传递更多信息之目的，文章内容仅供参考，不构成投资建议。",
+      "status": "reviewed",
+      "category": "policy_metadata",
+      "reason": "免责声明或责任编辑信息，按项目口径单列元数据；从叙述正文排除符合预期。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "app专享直播",
+      "status": "reviewed",
+      "category": "baseline_noise",
+      "reason": "APP专享直播、热门推荐或公众号引流属于推荐/推广模块，不是文章正文。基线独有也不应补入。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "热门推荐",
+      "status": "reviewed",
+      "category": "baseline_noise",
+      "reason": "APP专享直播、热门推荐或公众号引流属于推荐/推广模块，不是文章正文。基线独有也不应补入。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "收起",
+      "status": "reviewed",
+      "category": "baseline_control",
+      "reason": "“收起”是界面折叠控制，不是正文。当前无唯一最小文本块，保留现状，不自动扩大删除范围。"
+    },
+    {
+      "file": "blog_01.html",
+      "text": "24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）",
+      "status": "reviewed",
+      "category": "baseline_noise",
+      "reason": "APP专享直播、热门推荐或公众号引流属于推荐/推广模块，不是文章正文。基线独有也不应补入。"
+    },
+    {
+      "file": "collected_07299d33c58922ca.html",
+      "text": "the sleep framework: a new way for llms to retain knowledge in continual learning google research 提出在持续学习中引入「睡眠阶段」，使大语言模型能持续整合新事实、增强推理，同时缓解灾难性遗忘或静态知识截止问题。现有模型部署后基本静态，而直接持续更新参数会严重损害旧任务表现，仅依赖上下文学习又会在会话结束后遗忘信息，该框架试图在两极之间提供新路径。 站内资讯页：/news/20261028-91ab09be 一手来源：google research blog 本帖收到打赏打赏 0",
+      "status": "reviewed",
+      "category": "mixed_baseline_block",
+      "reason": "基线将楼主原帖标题/文字/来源与“本帖收到打赏 打赏0”界面元素合成一段；当前原帖正文与来源已保留，应排除打赏控件，不能整体补回。"
+    },
+    {
+      "file": "collected_47c9a44f1ccc3dfa.html",
+      "text": "microsoft just shared azure’s actual revenue in dollars: $33.2 billion 微软此前从未以美元金额直接披露 azure 的单季收入，通常仅分享增长百分比或模糊的里程碑描述。在周三发布的财报中，微软首次披露 azure 在 7 至 9 月季度实现营收 332 亿美元，同比增长 48%。该披露使投资者能够将 azure 的业绩与亚马逊 aws 和谷歌云的季度美元收入进行直接对比。 参考合并： techcrunch ai 站内资讯页：/news/20261029-b126d772 一手来源：techcrunch ai 本帖收到打赏打赏 0",
+      "status": "reviewed",
+      "category": "mixed_baseline_block",
+      "reason": "基线将楼主原帖标题/文字/来源与“本帖收到打赏 打赏0”界面元素合成一段；当前原帖正文与来源已保留，应排除打赏控件，不能整体补回。"
+    },
+    {
+      "file": "collected_5b4a5a3b46bc6f7f.html",
+      "text": "gemini 4 carbon: our next frontier model google deepmind 宣布推出新一代旗舰模型 gemini 4 carbon，主打前沿网络安全与长程智能体任务能力。该模型在最新 artificial analysis intelligence index v5.0 榜单中拿下 59 分登顶全球第一，并在 sec-bench pro、exploitgym 及 cwe-bench 等安全基准上均取得领先。目前该模型仅向选定的网络安全防御企业开放，后续将逐步扩展至 fairwi 站内资讯页：/news/20261029-b0da25ea 一手来源：deepmind blog 本帖收到打赏打赏 0",
+      "status": "reviewed",
+      "category": "mixed_baseline_block",
+      "reason": "基线将楼主原帖标题/文字/来源与“本帖收到打赏 打赏0”界面元素合成一段；当前原帖正文与来源已保留，应排除打赏控件，不能整体补回。"
+    },
+    {
+      "file": "collected_855c0d89cc5b8f45.html",
+      "text": "nvidia nemotron 3.5 transcribe and granary v2: intelligent multilingual transcription you can prompt and adapt 英伟达正式在 hugging face 与 modelscope 开源开放权重语音模型 nemotron 3.5 transcribe。该模型将语音转录、说话人识别、翻译与音频问答统一在单一检查点内，支持 40 种语言转录与 31 种语言对英语的双向翻译，并允许用户通过自然语言提示词引导输出。英伟 站内资讯页：/news/20261029-7ae8eb20 一手来源：hugging face blog 本帖收到打赏打赏 0",
+      "status": "reviewed",
+      "category": "mixed_baseline_block",
+      "reason": "基线将楼主原帖标题/文字/来源与“本帖收到打赏 打赏0”界面元素合成一段；当前原帖正文与来源已保留，应排除打赏控件，不能整体补回。"
+    },
+    {
+      "file": "collected_911f560fdd154136.html",
+      "text": "其余规则见「文档 → 论坛规则」。 本帖收到打赏打赏 0",
+      "status": "reviewed",
+      "category": "mixed_baseline_block",
+      "reason": "“其余规则见「文档 → 论坛规则」。”已存在当前正文；基线拼入的打赏提示属于界面内容，无需补回。"
+    },
+    {
+      "file": "news_01.html",
+      "text": "姆巴佩就“中国独裁者”迷因道歉：风波背后的资讯真空与“毛泽东热”",
+      "status": "reviewed",
+      "category": "policy_metadata",
+      "reason": "文章标题单列为元数据，与正文分开；基线把标题并入正文不代表漏提。"
+    }
+  ],
+  "transfer_pages": [
+    {
+      "file": "collected_c9024ec104da84ab.html",
+      "url": "https://aicove.net/forum/t/93",
+      "title": "Liquid AI 发布 LFM3：统一文本、视觉、音频与… · AI湾",
+      "content": "Build specialized multimodal models with LFM3 Liquid AI 发布新一代 Liquid Foundation Models（LFM3），将文本、视觉、音频、全模态与决策模型整合到同一骨干架构上，参数规模均在 2B 级，可在单 GPU 上微调并部署到目标环境。架构通过硬件在环搜索针对智能体场景重新设计，搜索覆盖从手机、树莓派 5 到云 GPU、高通 Hexagon NPU 的 14 种设备与后端组合。\n站内资讯页：/news/20261028-db98bf59\n一手来源： Hugging Face Blog",
+      "page_type": "forum_post",
+      "scope_method": "#floor-1 .md-body:not(.signature-md)",
+      "body_matches": true,
+      "controls_excluded": true,
+      "passed": true,
+      "label_source": "conversation_ai_review",
+      "reviewed": false
+    },
+    {
+      "file": "collected_141505cabed87281.html",
+      "url": "https://aicove.net/forum/t/92",
+      "title": "Google DeepMind 发布 Genie 4 世界… · AI湾",
+      "content": "Genie 4: A new generation of world simulation Google DeepMind 宣布新一代世界模型 Genie 4，可生成更逼真、可实时交互的模拟世界，并原生支持音乐、环境音与交互对话等音频生成。模型融合了 Gemini 家族能力，由 Gemini 模型在后台提供推理以维持模拟的连贯性，目前已以研究预览形式放出。媒体实测指出其会话时长约两分钟，更长会话会出现视觉不一致；该模型目前仍属早期研究模型。 参考合并： 爱范儿 · The Decoder · TechCrunch\n站内资讯页：/news/20261028-d17d13a0\n一手来源： DeepMind Blog",
+      "page_type": "forum_post",
+      "scope_method": "#floor-1 .md-body:not(.signature-md)",
+      "body_matches": true,
+      "controls_excluded": true,
+      "passed": true,
+      "label_source": "conversation_ai_review",
+      "reviewed": false
+    },
+    {
+      "file": "collected_3b69860c318b6f83.html",
+      "url": "https://aicove.net/forum/t/91",
+      "title": "OpenAI 宣布数学、计算机科学、物理学三项新发现，试验… · AI湾",
+      "content": "Working with academic communities to build scientific understanding OpenAI 宣布在调和分析、复杂性理论和量子场论方向取得三项新发现，并将这些手稿定位为「原始研究数据」。此次发布引入外部专家担任「引导者」组织团队理解结果，参与者无需签署保密协议、可自由讨论并发表结论，OpenAI 表示不会为内部模型产生的这些发现寻求学术署名。 参考合并： 36氪 · The Verge AI\n站内资讯页：/news/20261027-f16aefe8\n一手来源： OpenAI News",
+      "page_type": "forum_post",
+      "scope_method": "#floor-1 .md-body:not(.signature-md)",
+      "body_matches": true,
+      "controls_excluded": true,
+      "passed": true,
+      "label_source": "conversation_ai_review",
+      "reviewed": false
+    }
+  ],
+  "note": "AI content review and same-template transfer check; not independent accuracy or model training."
+}

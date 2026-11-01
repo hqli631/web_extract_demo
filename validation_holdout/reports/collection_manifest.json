@@ -1,0 +1,35 @@
+[
+  {
+    "file": "collected_c9024ec104da84ab.html",
+    "url": "https://aicove.net/forum/t/93",
+    "seed_url": "https://aicove.net/forum/t/93",
+    "domain": "aicove.net",
+    "content_hash": "043f9aa50621b07fec972be685e7483c9180ca0773780973766ff050c2dfa071",
+    "snapshot": "44af686a89b1e07f440773117380b4359748cffd3317fba8f1c22d34ee6328a4",
+    "fetched_at": "2026-10-30T13:34:47Z",
+    "mode": "static",
+    "text_chars": 1734
+  },
+  {
+    "file": "collected_3b69860c318b6f83.html",
+    "url": "https://aicove.net/forum/t/91",
+    "seed_url": "https://aicove.net/forum/t/91",
+    "domain": "aicove.net",
+    "content_hash": "b84b9238524bb5f22886c9e87394b299198e777316776c7d4276b2ca68eca1b4",
+    "snapshot": "db02892eac9124b6819842d9a937afded0e8534485313bcbbbf3aac2d4923874",
+    "fetched_at": "2026-10-30T13:35:16Z",
+    "mode": "static",
+    "text_chars": 1727
+  },
+  {
+    "file": "collected_141505cabed87281.html",
+    "url": "https://aicove.net/forum/t/92",
+    "seed_url": "https://aicove.net/forum/t/92",
+    "domain": "aicove.net",
+    "content_hash": "abcabc72bf290c8b6e27766a8d178d8ff1402d22d9ba1f63bc4dc4ab46ac3be0",
+    "snapshot": "b2e7b4aeeb745eecfc3c599896601d9a3acc8673f0025ca651e3b90c4f20c1a2",
+    "fetched_at": "2026-10-30T13:36:05Z",
+    "mode": "static",
+    "text_chars": 1763
+  }
+]

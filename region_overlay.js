@@ -29,7 +29,7 @@
   const colors={title:'#087f8c',time:'#7653b7',source:'#7653b7',author:'#7653b7',navigation:'#64748b',advertisement:'#c2410c',recommendation:'#b45309',sidebar:'#9a6700',comment:'#be185d',toolbar:'#475569',footer:'#64748b',image:'#0369a1',media:'#0369a1'};
   const css=document.createElement('style');css.textContent='.badge{white-space:nowrap;max-width:150px;overflow:hidden;text-overflow:ellipsis;border:0;line-height:16px}.box:hover{z-index:2}'+Object.entries(colors).map(([k,v])=>`.${k}{border-color:${v}}.${k} .badge{background:${v}}`).join('');ui.append(css);
   let regions=[], selected=0, queued=false, enabled=true;
-  let mainNode=null, chosen=null, focus=true, rules=[];
+  let chosen=null, focus=true, rules=[], prediction=null;
   const snapshot=document.querySelector('meta[name="review-snapshot"]')?.content||'';
   function xpath(n){let parts=[];while(n?.nodeType===1){let i=1,p=n.previousElementSibling;while(p){if(p.localName===n.localName)i++;p=p.previousElementSibling}parts.unshift('*[local-name()="'+n.localName+'"]['+i+']');n=n.parentElement}return './'+parts.join('/')}
   function locator(n){const root=n.getRootNode();return root.host?[...locator(root.host),xpath(n)]:[xpath(n)]}
@@ -64,40 +64,41 @@
       while(p){if(p.matches(semantic)&&eligible.has(p))return false;p=p.parentElement}
       return true;
     });
-    // 先找正文主容器：可见文本量高、链接比例低、噪声身份少的容器。
-    // Aggregate visible leaf text across shadow hosts: host.innerText does not
-    // include text in its shadow tree and cannot score web components reliably.
-    const stats=new Map();
-    for(const c of candidates){const text=clean(c.innerText);if(!text)continue;const label=classify(c,text),likely=label==='body'||(label==='pending'&&c.matches('p,li,pre,blockquote'));
-      let n=c.parentElement||c.getRootNode().host;
-      while(n&&n!==document.body&&n!==document.documentElement){const s=stats.get(n)||{text:0,body:0};s.text+=text.length;if(likely)s.body+=text.length;stats.set(n,s);n=n.parentElement||n.getRootNode().host}
-    }
-    function mainScore(n){const s=stats.get(n),identity=(n.id+' '+n.className).toLowerCase();
-      let score=Math.min(s.body,12000)/100-(s.text-s.body)/Math.max(s.text,1)*50+(n.matches('article,main')?25:0);
-      if(/article|story|content|正文/.test(identity))score+=15;
-      if(/nav|menu|side|aside|footer|comment|recommend|advert|banner/.test(identity)||n.matches('aside,nav,footer'))score-=100;
-      if(n.querySelector('article,main'))score-=25;
-      return score;
-    }
-    mainNode=[...stats.keys()].filter(n=>stats.get(n).body>=120).sort((a,b)=>mainScore(b)-mainScore(a))[0]||null;
-    regions=candidates.map((node,i)=>{
+    // The Python extractor owns body decisions and text order. Visible DOM
+    // candidates only supplement ancillary labels; they cannot invent body text.
+    const byId=new Map(all.map(n=>[n.getAttribute('data-review-node'),n]));
+    const covered=[];
+    const entries=prediction.regions.map(r=>{
+      const node=byId.get(r.source_node)||null;
+      if(node)covered.push(node);
+      const auxiliary=node?classify(node,r.text):'pending';
+      let label=['正文候选','标题/小标题'].includes(r.auto_label)?'body':r.auto_label==='待判断'?'pending':r.auto_label==='元数据'?(auxiliary==='body'||auxiliary==='pending'?'source':auxiliary):(auxiliary==='body'||auxiliary==='pending'?'noise':auxiliary);
+      return {node,text:r.text,label,reason:r.reason,canonical_id:r.region_id};
+    });
+    for(const node of candidates){
+      if(covered.some(n=>contains(n,node)||contains(node,n)))continue;
       const text=clean(node.innerText)||node.alt||node.getAttribute('aria-label')||node.title||'['+node.tagName.toLowerCase()+' 非文本区域]';
-      const label=classify(node,clean(node.innerText));
+      let label=classify(node,clean(node.innerText));
+      if(label==='body')label='pending';
+      entries.push({node,text,label,reason:'未被静态提取器收录的可见区域',canonical_id:null});
+    }
+    regions=entries.map((entry,i)=>{
+      const {node,text,label}=entry;
       const box=document.createElement('div');box.className='box '+label;
-      const badge=document.createElement('button');badge.className='badge';badge.textContent=(i+1)+' '+names[label];
+      const badge=document.createElement('button');badge.className='badge';
       badge.onclick=e=>{e.preventDefault();e.stopPropagation();select(i+1,false)};
       box.append(badge);ui.append(box);
-      const inMain=!!(mainNode && contains(mainNode,node));
-      const initial=inMain&&label==='pending'&&node.matches('p,li,pre,blockquote,h2,h3')?'body':label;
-      return {id:i+1,node,box,text,locator:locator(node),tag:node.tagName.toLowerCase(),label:initial,auto_label:initial,predicted_label:initial,reviewed:false,kind:node.matches('img,svg,video,audio,iframe,canvas')?'media':'text',is_main:inMain};
+      const rect=node?.getBoundingClientRect();
+      const mapping_status=!node?'unmapped':!rect.width||!rect.height||getComputedStyle(node).visibility==='hidden'?'hidden':'mapped';
+      return {id:i+1,node,box,text,locator:node?locator(node):[],tag:node?.tagName.toLowerCase()||'unknown',label,auto_label:label,predicted_label:label,reviewed:false,kind:'text',is_main:label==='body',canonical_id:entry.canonical_id,reason:entry.reason,mapping_status};
     });
     applyRules();publish();draw();
   }
-  function publish(){send('regions',{title:document.title,snapshot,regions:regions.map(({node,box,...r})=>r)})}
-  function applyRules(){for(const r of regions){r.predicted_label=r.auto_label;for(const rule of rules){try{const target=resolve(rule.locator);if(target&&contains(target,r.node))r.predicted_label=rule.label}catch{}}r.label=r.predicted_label}}
+  function publish(){send('regions',{title:document.title,snapshot,extraction:{page_type:prediction.page_type,scope_method:prediction.scope_method,content:prediction.content,status:prediction.extraction_status},regions:regions.map(({node,box,...r})=>r)})}
+  function applyRules(){for(const r of regions){r.predicted_label=r.auto_label;for(const rule of rules){try{const target=resolve(rule.locator);if(target&&r.node&&contains(target,r.node))r.predicted_label=rule.label}catch{}}r.label=r.predicted_label}}
   function select(id,scroll){selected=id;const r=regions.find(r=>r.id===id);if(!r)return;
-    chosen=r.node;if(scroll)r.node.scrollIntoView({block:'center',behavior:'instant'});draw();send('selected',{id,locator:locator(chosen),text:clean(chosen.innerText).slice(0,180)});}
-  function draw(){queued=false;host.style.display=enabled?'block':'none';for(const r of regions){const b=r.node.getBoundingClientRect();r.box.style.cssText=`left:${b.left}px;top:${b.top}px;width:${b.width}px;height:${b.height}px;display:${b.bottom<0||b.top>innerHeight||(focus&&!r.is_main&&!['body','missing'].includes(r.label)&&r.id!==selected)?'none':'block'}`;r.box.className='box '+r.label+(r.id===selected?' selected':'');r.box.querySelector('.badge').textContent=r.id+' '+names[r.label]}}
+    chosen=r.node;if(!chosen){send('mapping-error',{message:'此静态区域在快照中未定位，正文仍保留在预览中。'});return}if(scroll)r.node.scrollIntoView({block:'center',behavior:'instant'});draw();send('selected',{id,locator:locator(chosen),text:clean(chosen.innerText).slice(0,180)});}
+  function draw(){queued=false;host.style.display=enabled?'block':'none';for(const r of regions){if(!r.node||r.mapping_status==='hidden'){r.box.style.display='none';continue}const b=r.node.getBoundingClientRect();r.box.style.cssText=`left:${b.left}px;top:${b.top}px;width:${b.width}px;height:${b.height}px;display:${b.bottom<0||b.top>innerHeight||(focus&&!r.is_main&&!['body','missing'].includes(r.label)&&r.id!==selected)?'none':'block'}`;r.box.className='box '+r.label+(r.id===selected?' selected':'');r.box.querySelector('.badge').textContent=r.id+' '+names[r.label]}}
   function schedule(){if(!queued){queued=true;requestAnimationFrame(draw)}}
   addEventListener('scroll',schedule,true);addEventListener('resize',schedule);
   addEventListener('click',e=>{if(e.composedPath().includes(host))return;const r=regions.find(r=>e.composedPath().includes(r.node));if(r){e.preventDefault();e.stopPropagation();select(r.id,false)}},true);
@@ -106,7 +107,20 @@
     if(m.type==='test-rule'){try{const target=resolve(m.locator);send('rule-match',{ids:regions.filter(r=>target&&contains(target,r.node)).map(r=>r.id)})}catch(err){send('rule-match',{ids:[],error:err.message})}}
   });
   let started=false;
-  async function start(){if(started)return;started=true;try{const file=decodeURIComponent(location.pathname.split('/').pop());rules=(await (await fetch(location.origin+'/api/rules')).json()).filter(r=>(r.files||[r.file]).includes(file))}catch{}detect()}
+  async function start(){
+    if(started)return;started=true;
+    try{
+      const file=decodeURIComponent(location.pathname.split('/').pop());
+      const response=await fetch(location.origin+'/api/extraction/'+encodeURIComponent(file),{cache:'no-store'});
+      if(!response.ok)throw Error('正文接口不可用（HTTP '+response.status+'），请重新启动 start_review.ps1，并打开新终端打印的地址。');
+      prediction=await response.json();
+      if(prediction.snapshot!==snapshot)throw Error('网页已更新，请重新加载以匹配快照。');
+      const ruleResponse=await fetch(location.origin+'/api/rules',{cache:'no-store'});
+      if(!ruleResponse.ok)throw Error('XPath 规则加载失败，请重试。');
+      rules=(await ruleResponse.json()).filter(r=>(r.files||[r.file]).includes(file));
+      detect();
+    }catch(err){send('error',{message:err.message})}
+  }
   // 不等待远程广告和图片触发 load；稍后仍可通过刷新重新检测动态页面。
   if(document.readyState==='loading')addEventListener('DOMContentLoaded',()=>setTimeout(start,600),{once:true});else setTimeout(start,600);
   new ResizeObserver(schedule).observe(document.documentElement);

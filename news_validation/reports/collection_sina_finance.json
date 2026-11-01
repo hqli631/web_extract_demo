@@ -1,0 +1,45 @@
+{
+  "added": [
+    {
+      "file": "collected_c5d4b9cdcf5b4c91.html",
+      "url": "https://finance.sina.com.cn/roll/2026-10-30/doc-iniwxzqf8395423.shtml",
+      "seed_url": "https://finance.sina.com.cn/roll/2026-10-30/doc-iniwxzqf8395423.shtml",
+      "domain": "finance.sina.com.cn",
+      "content_hash": "0e839eecd19765b4a7dc570f93677ef72d35234d5ad5fc243b0716a34c9ee281",
+      "snapshot": "90cd0ef9d6c814125d32242d1da9b37be789fe19e4fa8a08581069b336924088",
+      "fetched_at": "2026-10-30T14:00:18Z",
+      "mode": "static",
+      "text_chars": 5059
+    },
+    {
+      "file": "collected_14a028de299edfab.html",
+      "url": "https://finance.sina.com.cn/roll/2026-10-30/doc-iniwxzqf8395260.shtml",
+      "seed_url": "https://finance.sina.com.cn/roll/2026-10-30/doc-iniwxzqf8395260.shtml",
+      "domain": "finance.sina.com.cn",
+      "content_hash": "a668aa7a1c8e03504fc586b14f53ee58823759516d768bb597f1bea06e0c7612",
+      "snapshot": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+      "fetched_at": "2026-10-30T14:00:19Z",
+      "mode": "static",
+      "text_chars": 5005
+    },
+    {
+      "file": "collected_af5904c15d1deebc.html",
+      "url": "https://finance.sina.com.cn/wm/2026-10-30/doc-iniwxksk5906408.shtml",
+      "seed_url": "https://finance.sina.com.cn/wm/2026-10-30/doc-iniwxksk5906408.shtml",
+      "domain": "finance.sina.com.cn",
+      "content_hash": "5243b0024c2cbe331fe4cf2b7863b4c173ecb3d0244c2de5ae667208ba13ffe2",
+      "snapshot": "c6348f97447c665018d507e3ed78a99a2d0989b13bc60087bb075bc8680ce4c4",
+      "fetched_at": "2026-10-30T14:00:21Z",
+      "mode": "static",
+      "text_chars": 4087
+    }
+  ],
+  "attempts": 4,
+  "skipped": [
+    {
+      "url": "https://finance.sina.com.cn/",
+      "reason": "discovery_only_or_url_filter"
+    }
+  ],
+  "errors": []
+}

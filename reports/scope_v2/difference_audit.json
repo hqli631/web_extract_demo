@@ -1,0 +1,956 @@
+{
+  "producer": "AI in current conversation; no external API",
+  "source_queue": "reports/scope_v2/auto_review_queue.json",
+  "queue_sha256": "42658bd0f027c15dc07632df859c6bc85eb232d17ae8464c7769c5748aa45469",
+  "records": [
+    {
+      "id": "0bf5508737d1aaf3b8574218",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_extra",
+      "text": "专题：a股已体现性价比 长期配置价值凸显",
+      "match_status": "ambiguous",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][1]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1]",
+          "tag": "p",
+          "id": "",
+          "class": "",
+          "expected_text": "专题：A股已体现性价比 长期配置价值凸显",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "artibody",
+              "class": "article"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "main-content w1240"
+            }
+          ]
+        },
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][1]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[5]/div",
+          "tag": "div",
+          "id": "",
+          "class": "keywords",
+          "expected_text": "相关专题： \n\t\t\t\t\t\t\t\t A股已体现性价比 长期配置价值凸显专题",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-relzt"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "main-content w1240"
+            }
+          ]
+        }
+      ],
+      "category": "true_extra",
+      "decision": "noise",
+      "reason": "专题聚合页的独立链接位于正文容器内，但没有叙述内容；应排除。已增加仅针对专题链接独占段落的规则。"
+    },
+    {
+      "id": "72ac3401e8e639081cb0926f",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_extra",
+      "text": "10月26日，物理ai概念延续强势， 宇树科技 （688836.sh）收盘涨7.69%报672元，总市值达2718亿元。自10月16日盘中低点407.01元至26日收盘，宇树科技在7个交易日内累计上涨65.1%。",
+      "match_status": "unique",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][2]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[2]",
+          "tag": "p",
+          "id": "",
+          "class": "",
+          "expected_text": "10月26日，物理AI概念延续强势， 宇树科技 （688836.SH）收盘涨7.69%报672元，总市值达2718亿元。自10月16日盘中低点407.01元至26日收盘，宇树科技在7个交易日内累计上涨65.1%。",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "artibody",
+              "class": "article"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "main-content w1240"
+            }
+          ]
+        }
+      ],
+      "category": "baseline_omission",
+      "decision": "body",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "id": "6dcf6afc7f7b9fc08b5e17e9",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_extra",
+      "text": "行情的触发点在10月下旬的两场会议。10月21日，英伟达ceo黄仁勋在柏林gtc大会上称“下一波浪潮是物理ai”，并宣布扩容isaac 机器人 开发平台；10月22日，2026世界物理ai大会暨宇树合作伙伴生态大会在杭州举行，宇树科技创始人王兴兴在演讲中表示，随着gpt-6发布，“物理ai已经看到被击穿的苗头，很可能最近1到2年或者2到3年”。",
+      "match_status": "unique",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][3]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[3]",
+          "tag": "p",
+          "id": "",
+          "class": "",
+          "expected_text": "行情的触发点在10月下旬的两场会议。10月21日，英伟达CEO黄仁勋在柏林GTC大会上称“下一波浪潮是物理AI”，并宣布扩容Isaac 机器人 开发平台；10月22日，2026世界物理AI大会暨宇树合作伙伴生态大会在杭州举行，宇树科技创始人王兴兴在演讲中表示，随着GPT-6发布，“物理AI已经看到被击穿的苗头，很可能最近1到2年或者2到3年”。",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "artibody",
+              "class": "article"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "main-content w1240"
+            }
+          ]
+        }
+      ],
+      "category": "baseline_omission",
+      "decision": "body",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "id": "9227b39141c7b4ee04314e6b",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_extra",
+      "text": "21世纪经济报道记者根据wind收录的电话会议纪要统计，10月19日至25日这一周内，可查到纪要的物理ai及人形机器人相关电话会至少有18场，覆盖16家券商研究所， 东吴证券 更是有计算机、传媒互联网行业两场电话会。",
+      "match_status": "unique",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][8]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[8]",
+          "tag": "p",
+          "id": "",
+          "class": "",
+          "expected_text": "21世纪经济报道记者根据Wind收录的电话会议纪要统计，10月19日至25日这一周内，可查到纪要的物理AI及人形机器人相关电话会至少有18场，覆盖16家券商研究所， 东吴证券 更是有计算机、传媒互联网行业两场电话会。",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "artibody",
+              "class": "article"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "main-content w1240"
+            }
+          ]
+        }
+      ],
+      "category": "baseline_omission",
+      "decision": "body",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "id": "e54477112ff35392eed7dbb4",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_extra",
+      "text": "从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以 海天瑞声 （688787.sh）为对象的有三场，涉及 国泰海通 计算机、东吴计算机、华创计算机，均由公司董秘出席；开源证券计算机团队请到 当虹科技 （688039.sh）代表； 国海证券 的具身智能研究团队请到 慈星股份 （维权） （300307.sz）董秘与数采专家同场； 国联民生 计算机则把仙工智能（06106.hk）相关人员请上会议。",
+      "match_status": "unique",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][11]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[11]",
+          "tag": "p",
+          "id": "",
+          "class": "",
+          "expected_text": "从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以 海天瑞声 （688787.SH）为对象的有三场，涉及 国泰海通 计算机、东吴计算机、华创计算机，均由公司董秘出席；开源证券计算机团队请到 当虹科技 （688039.SH）代表； 国海证券 的具身智能研究团队请到 慈星股份 （维权） （300307.SZ）董秘与数采专家同场； 国联民生 计算机则把仙工智能（06106.HK）相关人员请上会议。",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "artibody",
+              "class": "article"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "main-content w1240"
+            }
+          ]
+        }
+      ],
+      "category": "baseline_omission",
+      "decision": "body",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "id": "4b0b15e0984703cfe9484174",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_extra",
+      "text": "第二类是物理ai有关专家交流，如东吴传媒互联网张良卫团队连做两场，分别是“物理ai产业专家交流”和“物理ai系列3：具身大脑专家交流”；第三类是团队内部的深度观点汇报。国泰海通机械首席肖群稀的“物理ai、具身智能与人形机器人”、 中金公司 汽车团队的“物理ai进展与4q26板块投资机会”均属此类。",
+      "match_status": "unique",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][12]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[12]",
+          "tag": "p",
+          "id": "",
+          "class": "",
+          "expected_text": "第二类是物理AI有关专家交流，如东吴传媒互联网张良卫团队连做两场，分别是“物理AI产业专家交流”和“物理AI系列3：具身大脑专家交流”；第三类是团队内部的深度观点汇报。国泰海通机械首席肖群稀的“物理AI、具身智能与人形机器人”、 中金公司 汽车团队的“物理AI进展与4Q26板块投资机会”均属此类。",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "artibody",
+              "class": "article"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "main-content w1240"
+            }
+          ]
+        }
+      ],
+      "category": "baseline_omission",
+      "decision": "body",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "id": "6ee1cde3e17fba8ba0d26f51",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_extra",
+      "text": "东北证券 在其产业观察中提示，按英伟达的说法，物理ai覆盖机器人、自动驾驶与智能空间，相关基础设施由模型训练、仿真测试与端侧运行三部分组成。这意味着它更像一个横跨多个既有行业的技术体系，而非一个全新赛道。",
+      "match_status": "unique",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][19]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[19]",
+          "tag": "p",
+          "id": "",
+          "class": "",
+          "expected_text": "东北证券 在其产业观察中提示，按英伟达的说法，物理AI覆盖机器人、自动驾驶与智能空间，相关基础设施由模型训练、仿真测试与端侧运行三部分组成。这意味着它更像一个横跨多个既有行业的技术体系，而非一个全新赛道。",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "artibody",
+              "class": "article"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "main-content w1240"
+            }
+          ]
+        }
+      ],
+      "category": "baseline_omission",
+      "decision": "body",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "id": "8c842dd03e1b6912874815c4",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_extra",
+      "text": "例如，国海机械团队把第89期路演整期给了“人形机器人数采深度”；华源传媒互联网团队直接用了“卖铲子”这个说法，标题是“物理ai的卖铲子环节——数据采集”； 国金证券 具身智能团队的路演主题更直接，叫“数采：物理ai最大短板，数据基建即将爆发”。",
+      "match_status": "unique",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][31]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[31]",
+          "tag": "p",
+          "id": "",
+          "class": "",
+          "expected_text": "例如，国海机械团队把第89期路演整期给了“人形机器人数采深度”；华源传媒互联网团队直接用了“卖铲子”这个说法，标题是“物理AI的卖铲子环节——数据采集”； 国金证券 具身智能团队的路演主题更直接，叫“数采：物理AI最大短板，数据基建即将爆发”。",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "artibody",
+              "class": "article"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "main-content w1240"
+            }
+          ]
+        }
+      ],
+      "category": "baseline_omission",
+      "decision": "body",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "id": "10dd3ada0212b1406bb63c25",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_extra",
+      "text": "关于物理ai的进展， 华泰证券 机械设备团队把当前阶段概括为“从概念走向落地”，认为openai等模型企业自研人形机器人有望加速这一进程；国金证券机器人与具身智能团队在纪要中提示，行业目前“仅缺少这一突破的触发信号”，一旦某家头部企业积累数千万至亿个小时数据并实现大脑泛化，全行业将快速跟进布局数据赛道，路径与chatgpt突破后全行业加码算力相似。",
+      "match_status": "unique",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][38]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[38]",
+          "tag": "p",
+          "id": "",
+          "class": "",
+          "expected_text": "关于物理AI的进展， 华泰证券 机械设备团队把当前阶段概括为“从概念走向落地”，认为OpenAI等模型企业自研人形机器人有望加速这一进程；国金证券机器人与具身智能团队在纪要中提示，行业目前“仅缺少这一突破的触发信号”，一旦某家头部企业积累数千万至亿个小时数据并实现大脑泛化，全行业将快速跟进布局数据赛道，路径与ChatGPT突破后全行业加码算力相似。",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "artibody",
+              "class": "article"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "main-content w1240"
+            }
+          ]
+        }
+      ],
+      "category": "baseline_omission",
+      "decision": "body",
+      "reason": "此前已审核的 artibody 连续正文，保留。Trafilatura 没有完整输出不能成为删文依据。"
+    },
+    {
+      "id": "84a0ee5c9bbf2455d2932b8b",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_missing",
+      "text": "从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以海天瑞声国泰海通当虹科技国海证券慈星股份（维权）（300307.sz）董秘与数采专家同场；国联民生",
+      "match_status": "unresolved",
+      "evidence": [],
+      "category": "baseline_fragmentation",
+      "decision": "keep_current",
+      "reason": "基线将原段落中的股票代码及部分文字删除并拼接，原始完整段落已在当前正文中；不补写这段残缺版本，也不视为真实漏提。"
+    },
+    {
+      "id": "3589fd982b9e5a639a6426ea",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_missing",
+      "text": "（声明：文章内容仅供参考，不构成投资建议。投资者据此操作，风险自担。）",
+      "match_status": "unique",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][44]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[44]",
+          "tag": "p",
+          "id": "",
+          "class": "",
+          "expected_text": "（声明：文章内容仅供参考，不构成投资建议。投资者据此操作，风险自担。）",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "artibody",
+              "class": "article"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "main-content w1240"
+            }
+          ]
+        }
+      ],
+      "category": "policy_metadata",
+      "decision": "metadata",
+      "reason": "免责声明或责任编辑信息，按项目口径单列元数据；从叙述正文排除符合预期。"
+    },
+    {
+      "id": "6c57a2d614f925c88688faab",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_missing",
+      "text": "责任编辑：石秀珍 sf183",
+      "match_status": "unique",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][45]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[45]",
+          "tag": "p",
+          "id": "",
+          "class": "article-editor",
+          "expected_text": "责任编辑：石秀珍 SF183",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "artibody",
+              "class": "article"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "main-content w1240"
+            }
+          ]
+        }
+      ],
+      "category": "policy_metadata",
+      "decision": "metadata",
+      "reason": "免责声明或责任编辑信息，按项目口径单列元数据；从叙述正文排除符合预期。"
+    },
+    {
+      "id": "55322c02b15c807a5710df7c",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_missing",
+      "text": "新浪财经声明：此消息系转载自合作媒体，新浪财经登载此文出于传递更多信息之目的，文章内容仅供参考，不构成投资建议。",
+      "match_status": "unique",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][3]/*[local-name()=\"p\"][1]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[3]/p",
+          "tag": "p",
+          "id": "",
+          "class": "",
+          "expected_text": "新浪财经声明：此消息系转载自合作媒体，新浪财经登载此文出于传递更多信息之目的，文章内容仅供参考，不构成投资建议。",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "",
+              "class": "sf-comment-tip2026"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "main-content w1240"
+            }
+          ]
+        }
+      ],
+      "category": "policy_metadata",
+      "decision": "metadata",
+      "reason": "免责声明或责任编辑信息，按项目口径单列元数据；从叙述正文排除符合预期。"
+    },
+    {
+      "id": "86a72e26b8affd1d7d286bd7",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_missing",
+      "text": "app专享直播",
+      "match_status": "unique",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][11]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[11]/div[1]/h2",
+          "tag": "h2",
+          "id": "",
+          "class": "",
+          "expected_text": "APP专享直播",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "",
+              "class": "cj-l-title"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "app-viplive"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            }
+          ]
+        }
+      ],
+      "category": "baseline_noise",
+      "decision": "noise",
+      "reason": "APP专享直播、热门推荐或公众号引流属于推荐/推广模块，不是文章正文。基线独有也不应补入。"
+    },
+    {
+      "id": "733aa6657a56c0cc849552fd",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_missing",
+      "text": "热门推荐",
+      "match_status": "unique",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][12]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[12]/div[1]/h2",
+          "tag": "h2",
+          "id": "",
+          "class": "",
+          "expected_text": "热门推荐",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "",
+              "class": "cj-l-title"
+            },
+            {
+              "tag": "div",
+              "id": "most_read",
+              "class": "most-read"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            }
+          ]
+        }
+      ],
+      "category": "baseline_noise",
+      "decision": "noise",
+      "reason": "APP专享直播、热门推荐或公众号引流属于推荐/推广模块，不是文章正文。基线独有也不应补入。"
+    },
+    {
+      "id": "558feba19161b0e657f7b0b4",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_missing",
+      "text": "收起",
+      "match_status": "unresolved",
+      "evidence": [],
+      "category": "baseline_control",
+      "decision": "noise",
+      "reason": "“收起”是界面折叠控制，不是正文。当前无唯一最小文本块，保留现状，不自动扩大删除范围。"
+    },
+    {
+      "id": "cecaedf8bc42d86103a8138c",
+      "file": "blog_01.html",
+      "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "kind": "possible_missing",
+      "text": "24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）",
+      "match_status": "unique",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][13]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][1]"
+          ],
+          "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[13]/div[2]/p",
+          "tag": "p",
+          "id": "",
+          "class": "",
+          "expected_text": "24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "",
+              "class": "wx-info"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "blk-wxfollow clearfix"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "article-content-left"
+            },
+            {
+              "tag": "div",
+              "id": "article_content",
+              "class": "article-content clearfix"
+            }
+          ]
+        }
+      ],
+      "category": "baseline_noise",
+      "decision": "noise",
+      "reason": "APP专享直播、热门推荐或公众号引流属于推荐/推广模块，不是文章正文。基线独有也不应补入。"
+    },
+    {
+      "id": "96b3230b5cc9254bd9711148",
+      "file": "collected_07299d33c58922ca.html",
+      "snapshot": "7a6f99231e4814ad5cc97ac2a500e89cd14c137a78a7933a33a5ac2c54853e8a",
+      "kind": "possible_missing",
+      "text": "- the sleep framework: a new way for llms to retain knowledge in continual learning google research 提出在持续学习中引入「睡眠阶段」，使大语言模型能持续整合新事实、增强推理，同时缓解灾难性遗忘或静态知识截止问题。现有模型部署后基本静态，而直接持续更新参数会严重损害旧任务表现，仅依赖上下文学习又会在会话结束后遗忘信息，该框架试图在两极之间提供新路径。 站内资讯页：/news/20261028-91ab09be 一手来源：google research blog 本帖收到打赏打赏 0",
+      "match_status": "unresolved",
+      "evidence": [],
+      "category": "mixed_baseline_block",
+      "decision": "keep_current",
+      "reason": "基线将楼主原帖标题/文字/来源与“本帖收到打赏 打赏0”界面元素合成一段；当前原帖正文与来源已保留，应排除打赏控件，不能整体补回。"
+    },
+    {
+      "id": "b9baab0134cc36cf66da9e48",
+      "file": "collected_47c9a44f1ccc3dfa.html",
+      "snapshot": "35e8f92c0bef3cb604c09b7d7bae426e1ec75a0ab2093389f672502e7c514856",
+      "kind": "possible_missing",
+      "text": "- microsoft just shared azure’s actual revenue in dollars: $33.2 billion 微软此前从未以美元金额直接披露 azure 的单季收入，通常仅分享增长百分比或模糊的里程碑描述。在周三发布的财报中，微软首次披露 azure 在 7 至 9 月季度实现营收 332 亿美元，同比增长 48%。该披露使投资者能够将 azure 的业绩与亚马逊 aws 和谷歌云的季度美元收入进行直接对比。 参考合并： techcrunch ai 站内资讯页：/news/20261029-b126d772 一手来源：techcrunch ai 本帖收到打赏打赏 0",
+      "match_status": "unresolved",
+      "evidence": [],
+      "category": "mixed_baseline_block",
+      "decision": "keep_current",
+      "reason": "基线将楼主原帖标题/文字/来源与“本帖收到打赏 打赏0”界面元素合成一段；当前原帖正文与来源已保留，应排除打赏控件，不能整体补回。"
+    },
+    {
+      "id": "55af71dad4232518d694b9db",
+      "file": "collected_5b4a5a3b46bc6f7f.html",
+      "snapshot": "048fcb334639b0ab904bb31c0d32979d56f90eabf411cff45506718d83eca263",
+      "kind": "possible_missing",
+      "text": "- gemini 4 carbon: our next frontier model google deepmind 宣布推出新一代旗舰模型 gemini 4 carbon，主打前沿网络安全与长程智能体任务能力。该模型在最新 artificial analysis intelligence index v5.0 榜单中拿下 59 分登顶全球第一，并在 sec-bench pro、exploitgym 及 cwe-bench 等安全基准上均取得领先。目前该模型仅向选定的网络安全防御企业开放，后续将逐步扩展至 fairwi 站内资讯页：/news/20261029-b0da25ea 一手来源：deepmind blog 本帖收到打赏打赏 0",
+      "match_status": "unresolved",
+      "evidence": [],
+      "category": "mixed_baseline_block",
+      "decision": "keep_current",
+      "reason": "基线将楼主原帖标题/文字/来源与“本帖收到打赏 打赏0”界面元素合成一段；当前原帖正文与来源已保留，应排除打赏控件，不能整体补回。"
+    },
+    {
+      "id": "467e40a23d2cc231c50030c8",
+      "file": "collected_855c0d89cc5b8f45.html",
+      "snapshot": "eb6ada47208a1b7b59af060bcc53cf03635d8c21331ad00017bc9388abf463fc",
+      "kind": "possible_missing",
+      "text": "- nvidia nemotron 3.5 transcribe and granary v2: intelligent multilingual transcription you can prompt and adapt 英伟达正式在 hugging face 与 modelscope 开源开放权重语音模型 nemotron 3.5 transcribe。该模型将语音转录、说话人识别、翻译与音频问答统一在单一检查点内，支持 40 种语言转录与 31 种语言对英语的双向翻译，并允许用户通过自然语言提示词引导输出。英伟 站内资讯页：/news/20261029-7ae8eb20 一手来源：hugging face blog 本帖收到打赏打赏 0",
+      "match_status": "unresolved",
+      "evidence": [],
+      "category": "mixed_baseline_block",
+      "decision": "keep_current",
+      "reason": "基线将楼主原帖标题/文字/来源与“本帖收到打赏 打赏0”界面元素合成一段；当前原帖正文与来源已保留，应排除打赏控件，不能整体补回。"
+    },
+    {
+      "id": "3417f43df10140dcc709e1fe",
+      "file": "collected_911f560fdd154136.html",
+      "snapshot": "e19d25c69ba54724459ba2079a433b514f5cdc634f6eb83a80de7deddf0fa9a6",
+      "kind": "possible_missing",
+      "text": "- 本次更新：论坛的点赞、点踩（亮/灭）与打赏已移除 lv.1 等级门槛——注册即可使用。",
+      "match_status": "unresolved",
+      "evidence": [],
+      "category": "format_only",
+      "decision": "body",
+      "reason": "原帖对应正文或列表项已完整存在，差异仅为基线序列化添加的“- ”前缀；改进比较归一化，不修改原文。"
+    },
+    {
+      "id": "611118d434657a90a546d8fc",
+      "file": "collected_911f560fdd154136.html",
+      "snapshot": "e19d25c69ba54724459ba2079a433b514f5cdc634f6eb83a80de7deddf0fa9a6",
+      "kind": "possible_missing",
+      "text": "- 频率限制依然存在（点赞 30 次/分、100 次/日；新注册账号 30 次/日），滥用会被记录并按论坛规则处理；",
+      "match_status": "unresolved",
+      "evidence": [],
+      "category": "format_only",
+      "decision": "body",
+      "reason": "原帖对应正文或列表项已完整存在，差异仅为基线序列化添加的“- ”前缀；改进比较归一化，不修改原文。"
+    },
+    {
+      "id": "ad6b6ae3eb05c03104e3f76f",
+      "file": "collected_911f560fdd154136.html",
+      "snapshot": "e19d25c69ba54724459ba2079a433b514f5cdc634f6eb83a80de7deddf0fa9a6",
+      "kind": "possible_missing",
+      "text": "- 打赏仍消耗你自己的积分：最低 1 分、同一帖子每人一次、平台抽成 10%，被打赏所得计入每日归集上限；",
+      "match_status": "unresolved",
+      "evidence": [],
+      "category": "format_only",
+      "decision": "body",
+      "reason": "原帖对应正文或列表项已完整存在，差异仅为基线序列化添加的“- ”前缀；改进比较归一化，不修改原文。"
+    },
+    {
+      "id": "9842d4d047086e0aa4cb0ea9",
+      "file": "collected_911f560fdd154136.html",
+      "snapshot": "e19d25c69ba54724459ba2079a433b514f5cdc634f6eb83a80de7deddf0fa9a6",
+      "kind": "possible_missing",
+      "text": "- 积分不足仍无法打赏——本调整只是去掉「等级门槛」，不改变积分账本。",
+      "match_status": "unresolved",
+      "evidence": [],
+      "category": "format_only",
+      "decision": "body",
+      "reason": "原帖对应正文或列表项已完整存在，差异仅为基线序列化添加的“- ”前缀；改进比较归一化，不修改原文。"
+    },
+    {
+      "id": "2e979b6e56d02a639f0b86bd",
+      "file": "collected_911f560fdd154136.html",
+      "snapshot": "e19d25c69ba54724459ba2079a433b514f5cdc634f6eb83a80de7deddf0fa9a6",
+      "kind": "possible_missing",
+      "text": "其余规则见「文档 → 论坛规则」。 本帖收到打赏打赏 0",
+      "match_status": "unresolved",
+      "evidence": [],
+      "category": "mixed_baseline_block",
+      "decision": "keep_current",
+      "reason": "“其余规则见「文档 → 论坛规则」。”已存在当前正文；基线拼入的打赏提示属于界面内容，无需补回。"
+    },
+    {
+      "id": "2eac5d7de4677882e576d8c0",
+      "file": "news_01.html",
+      "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+      "kind": "possible_missing",
+      "text": "姆巴佩就“中国独裁者”迷因道歉：风波背后的资讯真空与“毛泽东热”",
+      "match_status": "ambiguous",
+      "evidence": [
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"h1\"][1]"
+          ],
+          "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/main/div[1]/h1",
+          "tag": "h1",
+          "id": "content",
+          "class": "article-heading css-nir6jv e1j37txl0",
+          "expected_text": "姆巴佩就“中国独裁者”迷因道歉：风波背后的资讯真空与“毛泽东热”",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "",
+              "class": "css-5youcd e17x9cvu0"
+            },
+            {
+              "tag": "main",
+              "id": "",
+              "class": "css-uarkay"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "css-1nude9v"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "css-bg8vrv"
+            }
+          ]
+        },
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"section\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]"
+          ],
+          "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/main/section[2]/div/ul/li[1]/div/div[2]/div",
+          "tag": "div",
+          "id": "",
+          "class": "css-1nw71o6",
+          "expected_text": "姆巴佩就“中国独裁者”迷因道歉：风波背后的资讯真空与“毛泽东热”",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "",
+              "class": "css-6cb6xm"
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "class": "css-qj66n0"
+            },
+            {
+              "tag": "li",
+              "id": "",
+              "class": ""
+            },
+            {
+              "tag": "ul",
+              "id": "",
+              "class": "css-64y6r"
+            }
+          ]
+        },
+        {
+          "locator": [
+            "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][2]/*[local-name()=\"ol\"][1]/*[local-name()=\"li\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]"
+          ],
+          "source_xpath": "/html/body/div[2]/div/div/div/section[2]/ol/li[1]/div/div[2]",
+          "tag": "div",
+          "id": "",
+          "class": "css-rylvsa",
+          "expected_text": "姆巴佩就“中国独裁者”迷因道歉：风波背后的资讯真空与“毛泽东热”",
+          "containers": [
+            {
+              "tag": "div",
+              "id": "",
+              "class": "css-1ogrn1l"
+            },
+            {
+              "tag": "li",
+              "id": "",
+              "class": "css-1xaijnt e17x9cvu0"
+            },
+            {
+              "tag": "ol",
+              "id": "",
+              "class": "css-1oou3yz e17x9cvu0"
+            },
+            {
+              "tag": "section",
+              "id": "",
+              "class": "css-1g7uqg9"
+            }
+          ]
+        }
+      ],
+      "category": "policy_metadata",
+      "decision": "metadata",
+      "reason": "文章标题单列为元数据，与正文分开；基线把标题并入正文不代表漏提。"
+    }
+  ],
+  "note": "Content-bound audit of all 27 original v2 disagreements. Not human gold or accuracy measurement."
+}

@@ -1,0 +1,15 @@
+{
+  "development_urls": [
+    "https://aicove.net/forum/t/97",
+    "https://aicove.net/forum/t/41",
+    "https://aicove.net/forum/t/96",
+    "https://aicove.net/forum/t/95",
+    "https://aicove.net/forum/t/94"
+  ],
+  "frozen_code_sha256": {
+    "extract.py": "f34dc27e4c4824a3dad88d156ae4bd9d7540427ac266a16ba438141ec92fbced",
+    "content_scope.py": "1ea904c979c023f5e034c3c1c57c6ad92c9762d0f0e12397188abafaea191b0d",
+    "compare_extractors.py": "cde060c8d6db67df261eaba6c50534e5025a9e58f117d8b50f3052ee3ef41030"
+  },
+  "scope": "3 previously unused URLs from same site/template; transfer smoke check, not independent measured accuracy"
+}

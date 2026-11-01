@@ -1,0 +1,18 @@
+{
+  "added": [
+    {
+      "file": "collected_141505cabed87281.html",
+      "url": "https://aicove.net/forum/t/92",
+      "seed_url": "https://aicove.net/forum/t/92",
+      "domain": "aicove.net",
+      "content_hash": "abcabc72bf290c8b6e27766a8d178d8ff1402d22d9ba1f63bc4dc4ab46ac3be0",
+      "snapshot": "b2e7b4aeeb745eecfc3c599896601d9a3acc8673f0025ca651e3b90c4f20c1a2",
+      "fetched_at": "2026-10-30T13:36:05Z",
+      "mode": "static",
+      "text_chars": 1763
+    }
+  ],
+  "attempts": 1,
+  "skipped": [],
+  "errors": []
+}

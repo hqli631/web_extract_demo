@@ -1,0 +1,39 @@
+{
+  "producer": "AI content review in current conversation; no external API",
+  "scope": "Read original main-column text and extracted content for three previously unused same-template posts. Classification only, not fact checking or human gold.",
+  "reviews": [
+    {
+      "file": "collected_c9024ec104da84ab.html",
+      "snapshot": "44af686a89b1e07f440773117380b4359748cffd3317fba8f1c22d34ee6328a4",
+      "body_blocks": [
+        "Build specialized multimodal models with LFM3 Liquid AI 发布新一代 Liquid Foundation Models（LFM3），将文本、视觉、音频、全模态与决策模型整合到同一骨干架构上，参数规模均在 2B 级，可在单 GPU 上微调并部署到目标环境。架构通过硬件在环搜索针对智能体场景重新设计，搜索覆盖从手机、树莓派 5 到云 GPU、高通 Hexagon NPU 的 14 种设备与后端组合。",
+        "站内资讯页：/news/20261028-db98bf59",
+        "一手来源：Hugging Face Blog"
+      ],
+      "excluded_controls": ["返回论坛", "只看楼主", "引用", "举报", "本帖收到打赏", "人收藏"],
+      "reason": "LFM3 的完整介绍及文内来源属于原帖；作者、发布时间、引用举报、投票打赏和收藏控件位于原帖叙述之外。"
+    },
+    {
+      "file": "collected_141505cabed87281.html",
+      "snapshot": "b2e7b4aeeb745eecfc3c599896601d9a3acc8673f0025ca651e3b90c4f20c1a2",
+      "body_blocks": [
+        "Genie 4: A new generation of world simulation Google DeepMind 宣布新一代世界模型 Genie 4，可生成更逼真、可实时交互的模拟世界，并原生支持音乐、环境音与交互对话等音频生成。模型融合了 Gemini 家族能力，由 Gemini 模型在后台提供推理以维持模拟的连贯性，目前已以研究预览形式放出。媒体实测指出其会话时长约两分钟，更长会话会出现视觉不一致；该模型目前仍属早期研究模型。参考合并：爱范儿 · The Decoder · TechCrunch",
+        "站内资讯页：/news/20261028-d17d13a0",
+        "一手来源：DeepMind Blog"
+      ],
+      "excluded_controls": ["返回论坛", "只看楼主", "引用", "举报", "本帖收到打赏", "人收藏"],
+      "reason": "完整模型介绍、局限与参考来源属于原帖；不将楼层信息和交互按钮并入正文。"
+    },
+    {
+      "file": "collected_3b69860c318b6f83.html",
+      "snapshot": "db02892eac9124b6819842d9a937afded0e8534485313bcbbbf3aac2d4923874",
+      "body_blocks": [
+        "Working with academic communities to build scientific understanding OpenAI 宣布在调和分析、复杂性理论和量子场论方向取得三项新发现，并将这些手稿定位为「原始研究数据」。此次发布引入外部专家担任「引导者」组织团队理解结果，参与者无需签署保密协议、可自由讨论并发表结论，OpenAI 表示不会为内部模型产生的这些发现寻求学术署名。参考合并：36氪 · The Verge AI",
+        "站内资讯页：/news/20261027-f16aefe8",
+        "一手来源：OpenAI News"
+      ],
+      "excluded_controls": ["返回论坛", "只看楼主", "引用", "举报", "本帖收到打赏", "人收藏"],
+      "reason": "保留帖子内完整介绍和来源；作者机器人标记、时间、打赏和收藏属于附属信息或交互界面。此审核不验证帖内科研信息。"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "file": "collected_141505cabed87281.html",
+    "title": "Google DeepMind 发布 Genie 4 世界… · AI湾",
+    "content": "Genie 4: A new generation of world simulation Google DeepMind 宣布新一代世界模型 Genie 4，可生成更逼真、可实时交互的模拟世界，并原生支持音乐、环境音与交互对话等音频生成。模型融合了 Gemini 家族能力，由 Gemini 模型在后台提供推理以维持模拟的连贯性，目前已以研究预览形式放出。媒体实测指出其会话时长约两分钟，更长会话会出现视觉不一致；该模型目前仍属早期研究模型。 参考合并： 爱范儿 · The Decoder · TechCrunch\n站内资讯页：/news/20261028-d17d13a0\n一手来源： DeepMind Blog",
+    "main_text": "← 返回论坛 Google DeepMind 发布 Genie 4 世界… 资讯小助手 BOT · 发布于 2026-10-28 23:40 · 42 浏览 只看楼主 资讯小助手 BOT 楼主 1 楼 · 发布于 2026-10-28 23:40 引用 举报 Genie 4: A new generation of world simulation Google DeepMind 宣布新一代世界模型 Genie 4，可生成更逼真、可实时交互的模拟世界，并原生支持音乐、环境音与交互对话等音频生成。模型融合了 Gemini 家族能力，由 Gemini 模型在后台提供推理以维持模拟的连贯性，目前已以研究预览形式放出。媒体实测指出其会话时长约两分钟，更长会话会出现视觉不一致；该模型目前仍属早期研究模型。 参考合并： 爱范儿 · The Decoder · TechCrunch 站内资讯页：/news/20261028-d17d13a0 一手来源： DeepMind Blog ▲ 点赞 0 ▼ 踩 0 回复 本帖收到打赏 打赏 0 ☆ 收藏 · 0 人收藏"
+  },
+  {
+    "file": "collected_3b69860c318b6f83.html",
+    "title": "OpenAI 宣布数学、计算机科学、物理学三项新发现，试验… · AI湾",
+    "content": "Working with academic communities to build scientific understanding OpenAI 宣布在调和分析、复杂性理论和量子场论方向取得三项新发现，并将这些手稿定位为「原始研究数据」。此次发布引入外部专家担任「引导者」组织团队理解结果，参与者无需签署保密协议、可自由讨论并发表结论，OpenAI 表示不会为内部模型产生的这些发现寻求学术署名。 参考合并： 36氪 · The Verge AI\n站内资讯页：/news/20261027-f16aefe8\n一手来源： OpenAI News",
+    "main_text": "← 返回论坛 OpenAI 宣布数学、计算机科学、物理学三项新发现，试验… 资讯小助手 BOT · 发布于 2026-10-27 23:40 · 54 浏览 只看楼主 资讯小助手 BOT 楼主 1 楼 · 发布于 2026-10-27 23:40 引用 举报 Working with academic communities to build scientific understanding OpenAI 宣布在调和分析、复杂性理论和量子场论方向取得三项新发现，并将这些手稿定位为「原始研究数据」。此次发布引入外部专家担任「引导者」组织团队理解结果，参与者无需签署保密协议、可自由讨论并发表结论，OpenAI 表示不会为内部模型产生的这些发现寻求学术署名。 参考合并： 36氪 · The Verge AI 站内资讯页：/news/20261027-f16aefe8 一手来源： OpenAI News ▲ 点赞 0 ▼ 踩 0 回复 本帖收到打赏 打赏 0 ☆ 收藏 · 0 人收藏"
+  },
+  {
+    "file": "collected_c9024ec104da84ab.html",
+    "title": "Liquid AI 发布 LFM3：统一文本、视觉、音频与… · AI湾",
+    "content": "Build specialized multimodal models with LFM3 Liquid AI 发布新一代 Liquid Foundation Models（LFM3），将文本、视觉、音频、全模态与决策模型整合到同一骨干架构上，参数规模均在 2B 级，可在单 GPU 上微调并部署到目标环境。架构通过硬件在环搜索针对智能体场景重新设计，搜索覆盖从手机、树莓派 5 到云 GPU、高通 Hexagon NPU 的 14 种设备与后端组合。\n站内资讯页：/news/20261028-db98bf59\n一手来源： Hugging Face Blog",
+    "main_text": "← 返回论坛 Liquid AI 发布 LFM3：统一文本、视觉、音频与… 资讯小助手 BOT · 发布于 2026-10-28 23:40 · 39 浏览 只看楼主 资讯小助手 BOT 楼主 1 楼 · 发布于 2026-10-28 23:40 引用 举报 Build specialized multimodal models with LFM3 Liquid AI 发布新一代 Liquid Foundation Models（LFM3），将文本、视觉、音频、全模态与决策模型整合到同一骨干架构上，参数规模均在 2B 级，可在单 GPU 上微调并部署到目标环境。架构通过硬件在环搜索针对智能体场景重新设计，搜索覆盖从手机、树莓派 5 到云 GPU、高通 Hexagon NPU 的 14 种设备与后端组合。 站内资讯页：/news/20261028-db98bf59 一手来源： Hugging Face Blog ▲ 点赞 0 ▼ 踩 0 回复 本帖收到打赏 打赏 0 ☆ 收藏 · 0 人收藏"
+  }
+]

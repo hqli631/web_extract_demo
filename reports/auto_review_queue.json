@@ -1,0 +1,5073 @@
+[
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "宇树科技股价连续暴涨，分析师忙翻了！物理ai受益股梳理",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"h1\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/h1",
+        "tag": "h1",
+        "id": "",
+        "class": "main-title",
+        "expected_text": "宇树科技股价连续暴涨，分析师忙翻了！物理AI受益股梳理",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "class": ""
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][3]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[3]/div/div/div[1]",
+        "tag": "div",
+        "id": "",
+        "class": "second-title",
+        "expected_text": "宇树科技股价连续暴涨，分析师忙翻了！物理AI受益股梳理",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "top-bar-inner clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "top_bar",
+            "class": "top-bar ani top-bar-fixed"
+          },
+          {
+            "tag": "div",
+            "id": "top_bar_wrap",
+            "class": "top-bar-wrap"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "ambiguous",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "宇树科技股价连续暴涨，分析师忙翻了！物理ai受益股梳理 2026年10月27日 07:27 21世纪经济报道 新浪财经app 举报 缩小字体 放大字体 收藏 微博 分享 md 微信 腾讯qq qq空间",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "宇树科技股价连续暴涨，分析师忙翻了！物理ai受益股梳理 2026年10月27日 07:27 21世纪经济报道 新浪财经app 举报 缩小字体 放大字体 收藏 微博 分享 md 微信 腾讯qq qq空间",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "宇树科技股价连续暴涨，分析师忙翻了！物理ai受益股梳理 2026年10月27日 07:27 21世纪经济报道 新浪财经app 举报 缩小字体 放大字体 收藏 微博 分享 md 微信 腾讯qq qq空间",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "10月26日，物理ai概念延续强势， 宇树科技 （688836.sh）收盘涨7.69%报672元，总市值达2718亿元。自10月16日盘中低点407.01元至26日收盘，宇树科技在7个交易日内累计上涨65.1%。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][2]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[2]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "10月26日，物理AI概念延续强势， 宇树科技 （688836.SH）收盘涨7.69%报672元，总市值达2718亿元。自10月16日盘中低点407.01元至26日收盘，宇树科技在7个交易日内累计上涨65.1%。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "行情的触发点在10月下旬的两场会议。10月21日，英伟达ceo黄仁勋在柏林gtc大会上称“下一波浪潮是物理ai”，并宣布扩容isaac 机器人 开发平台；10月22日，2026世界物理ai大会暨宇树合作伙伴生态大会在杭州举行，宇树科技创始人王兴兴在演讲中表示，随着gpt-6发布，“物理ai已经看到被击穿的苗头，很可能最近1到2年或者2到3年”。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][3]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[3]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "行情的触发点在10月下旬的两场会议。10月21日，英伟达CEO黄仁勋在柏林GTC大会上称“下一波浪潮是物理AI”，并宣布扩容Isaac 机器人 开发平台；10月22日，2026世界物理AI大会暨宇树合作伙伴生态大会在杭州举行，宇树科技创始人王兴兴在演讲中表示，随着GPT-6发布，“物理AI已经看到被击穿的苗头，很可能最近1到2年或者2到3年”。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "21世纪经济报道记者根据wind收录的电话会议纪要统计，10月19日至25日这一周内，可查到纪要的物理ai及人形机器人相关电话会至少有18场，覆盖16家券商研究所， 东吴证券 更是有计算机、传媒互联网行业两场电话会。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][8]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[8]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "21世纪经济报道记者根据Wind收录的电话会议纪要统计，10月19日至25日这一周内，可查到纪要的物理AI及人形机器人相关电话会至少有18场，覆盖16家券商研究所， 东吴证券 更是有计算机、传媒互联网行业两场电话会。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以 海天瑞声 （688787.sh）为对象的有三场，涉及 国泰海通 计算机、东吴计算机、华创计算机，均由公司董秘出席；开源证券计算机团队请到 当虹科技 （688039.sh）代表； 国海证券 的具身智能研究团队请到 慈星股份 （维权） （300307.sz）董秘与数采专家同场； 国联民生 计算机则把仙工智能（06106.hk）相关人员请上会议。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][11]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[11]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以 海天瑞声 （688787.SH）为对象的有三场，涉及 国泰海通 计算机、东吴计算机、华创计算机，均由公司董秘出席；开源证券计算机团队请到 当虹科技 （688039.SH）代表； 国海证券 的具身智能研究团队请到 慈星股份 （维权） （300307.SZ）董秘与数采专家同场； 国联民生 计算机则把仙工智能（06106.HK）相关人员请上会议。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "第二类是物理ai有关专家交流，如东吴传媒互联网张良卫团队连做两场，分别是“物理ai产业专家交流”和“物理ai系列3：具身大脑专家交流”；第三类是团队内部的深度观点汇报。国泰海通机械首席肖群稀的“物理ai、具身智能与人形机器人”、 中金公司 汽车团队的“物理ai进展与4q26板块投资机会”均属此类。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][12]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[12]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "第二类是物理AI有关专家交流，如东吴传媒互联网张良卫团队连做两场，分别是“物理AI产业专家交流”和“物理AI系列3：具身大脑专家交流”；第三类是团队内部的深度观点汇报。国泰海通机械首席肖群稀的“物理AI、具身智能与人形机器人”、 中金公司 汽车团队的“物理AI进展与4Q26板块投资机会”均属此类。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "东北证券 在其产业观察中提示，按英伟达的说法，物理ai覆盖机器人、自动驾驶与智能空间，相关基础设施由模型训练、仿真测试与端侧运行三部分组成。这意味着它更像一个横跨多个既有行业的技术体系，而非一个全新赛道。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][19]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[19]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "东北证券 在其产业观察中提示，按英伟达的说法，物理AI覆盖机器人、自动驾驶与智能空间，相关基础设施由模型训练、仿真测试与端侧运行三部分组成。这意味着它更像一个横跨多个既有行业的技术体系，而非一个全新赛道。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "例如，国海机械团队把第89期路演整期给了“人形机器人数采深度”；华源传媒互联网团队直接用了“卖铲子”这个说法，标题是“物理ai的卖铲子环节——数据采集”； 国金证券 具身智能团队的路演主题更直接，叫“数采：物理ai最大短板，数据基建即将爆发”。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][31]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[31]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "例如，国海机械团队把第89期路演整期给了“人形机器人数采深度”；华源传媒互联网团队直接用了“卖铲子”这个说法，标题是“物理AI的卖铲子环节——数据采集”； 国金证券 具身智能团队的路演主题更直接，叫“数采：物理AI最大短板，数据基建即将爆发”。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "关于物理ai的进展， 华泰证券 机械设备团队把当前阶段概括为“从概念走向落地”，认为openai等模型企业自研人形机器人有望加速这一进程；国金证券机器人与具身智能团队在纪要中提示，行业目前“仅缺少这一突破的触发信号”，一旦某家头部企业积累数千万至亿个小时数据并实现大脑泛化，全行业将快速跟进布局数据赛道，路径与chatgpt突破后全行业加码算力相似。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][38]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[38]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "关于物理AI的进展， 华泰证券 机械设备团队把当前阶段概括为“从概念走向落地”，认为OpenAI等模型企业自研人形机器人有望加速这一进程；国金证券机器人与具身智能团队在纪要中提示，行业目前“仅缺少这一突破的触发信号”，一旦某家头部企业积累数千万至亿个小时数据并实现大脑泛化，全行业将快速跟进布局数据赛道，路径与ChatGPT突破后全行业加码算力相似。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "vip课程推荐",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][9]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[9]/div[1]/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "",
+        "expected_text": "VIP课程推荐",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "cj-l-title"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "vip-class"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "股市直播",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[2]/div[1]/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "tit1",
+        "expected_text": "股市直播",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "cj-r-block"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-right"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "股票简称 最新价 涨跌幅 以下为热门股票 三峡能源 3.37 -0.30% 京东方ａ 4.83 +2.11% tcl科技 4.51 +1.81% 中远海控 16.46 -0.78% 格力电器 37.30 +1.91%",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "股票简称 最新价 涨跌幅 以下为热门股票 三峡能源 3.37 -0.30% 京东方ａ 4.83 +2.11% tcl科技 4.51 +1.81% 中远海控 16.46 -0.78% 格力电器 37.30 +1.91%",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "股票简称 最新价 涨跌幅 以下为热门股票 三峡能源 3.37 -0.30% 京东方ａ 4.83 +2.11% tcl科技 4.51 +1.81% 中远海控 16.46 -0.78% 格力电器 37.30 +1.91%",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "以下为热门股票 三峡能源 3.37 -0.30% 京东方ａ 4.83 +2.11% tcl科技 4.51 +1.81% 中远海控 16.46 -0.78% 格力电器 37.30 +1.91%",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "三峡能源 3.37 -0.30% 京东方ａ 4.83 +2.11% tcl科技 4.51 +1.81% 中远海控 16.46 -0.78% 格力电器 37.30 +1.91%",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "7x24小时",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][9]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[2]/div[2]/div[9]/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "tit2",
+        "expected_text": "7X24小时",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "cj_7x24_list",
+            "class": "cj-r-block"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "cj-r-block"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-right"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "交易提示 操盘必读 证券报 最新公告 限售解禁 数据中心 条件选股 券商评级 股价预测 板块行情 千股千评 个股诊断 大宗交易 财报查询 业绩预告 etf期权 类余额宝 基金净值 基金对比 基金排名 商品行情 外盘期货 商品持仓 现货报价 cftc持仓 期指行情 期指持仓 期指研究 行业指数 权重股票 期货名人 专家坐堂 高清解盘 期货入门 各国国债 期市要闻 期货研究 机构评论 品种大全 外汇计算器 人民币牌价 中间价 美元指数 直盘行情 所有行情 美元相关 人民币相关 交叉盘 拆借利率 货币分析 机构观点 经济数据 专家坐堂 分析师圈 国债收益率 全球滚动 cftc持仓 比特币 外汇计算器 黄金资讯 白银分析 实物金价 etf持仓 黄金td 白银td 金银币 专家坐堂 基础知识 现货黄金 现货白银 现货铂金 现货钯金 高清解盘 黄金吧 白银吧 黄金分析 cftc持仓",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][15]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[2]/div[2]/div[15]",
+        "tag": "div",
+        "id": "",
+        "class": "seo_data_list",
+        "expected_text": "交易提示 \n 操盘必读 \n 证券报 \n 最新公告 \n 限售解禁 \n 数据中心 \n 条件选股 \n 券商评级 \n 股价预测 \n 板块行情 \n 千股千评 \n 个股诊断 \n 大宗交易 \n 财报查询 \n 业绩预告 \n ETF期权 \n 类余额宝 \n 基金净值 \n 基金对比 \n 基金排名 商品行情 \n 外盘期货 \n 商品持仓 \n 现货报价 \n CFTC持仓 \n 期指行情  \n 期指持仓 \n 期指研究 \n 行业指数 \n 权重股票 \n 期货名人 \n 专家坐堂 \n 高清解盘  \n 期货入门 \n 各国国债 \n 期市要闻 \n 期货研究  \n 机构评论  \n 品种大全 外汇计算器 \n 人民币牌价 \n 中间价 \n 美元指数 \n 直盘行情 \n 所有行情  \t\t\n 美元相关  \t\n 人民币相关 \n 交叉盘 \n 拆借利率 \n 货币分析 \n 机构观点 \n 经济数据 \n 专家坐堂 \n 分析师圈 \n 国债收益率 \n 全球滚动 \n CFTC持仓 \n 比特币 外汇计算器 \n\t\t 黄金资讯 \n\n\n\t\t 白银分析 \n\t\t 实物金价 \n\n\n\t\t ETF持仓 \n\t 黄金TD \n\t\t 白银TD \n\t\t 金银币 \n\n\t\t 专家坐堂 \n\t\t 基础知识 \n\t 现货黄金 \n\t\t 现货白银 \n\t\t 现货铂金 \n\t\t 现货钯金 \n\t\t 高清解盘 \n\n\t\t 黄金吧    白银吧 \n\t\t 黄金分析 \n\t\t CFTC持仓",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "cj-r-block"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-right"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "董明珠还能为格力奋战多久？|《至少一个小时》 梁建章：中国人口衰竭的速度前所未有 冷友斌回应网友质疑：说价格高 对飞鹤不公平！ 王中军：我喜欢比较“江湖”一点的人",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "物理ai概念究竟指什么、能不能撑起一条新主线、卡点又在何处等问题，在这批路演里被反复讨论。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][5]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[5]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "物理AI概念究竟指什么、能不能撑起一条新主线、卡点又在何处等问题，在这批路演里被反复讨论。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "券商分析师路演忙",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][6]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[6]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "券商分析师路演忙",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "今天市场广泛流传的一个说法是，卖方分析师周末集体加班，“44场物理ai的电话会议刷屏”。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][7]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[7]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "今天市场广泛流传的一个说法是，卖方分析师周末集体加班，“44场物理AI的电话会议刷屏”。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "从时间分布看，18场中有14场集中在10月24日至25日这个周末，其余4场分散在10月19日晚至22日。密度最高的10月25日，一天内有12家机构发布纪要。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][9]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[9]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "从时间分布看，18场中有14场集中在10月24日至25日这个周末，其余4场分散在10月19日晚至22日。密度最高的10月25日，一天内有12家机构发布纪要。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以海天瑞声国泰海通当虹科技国海证券慈星股份（维权）（300307.sz）董秘与数采专家同场；国联民生",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "什么是物理ai？",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][13]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[13]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "什么是物理AI？",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "按中国信通院《具身智能发展报告（2026年）》的定义，物理ai指通过把物理规律嵌入感知、推理、生成和行动全过程，使人工智能具备更强的真实性、可靠性与可部署性。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][15]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[15]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "按中国信通院《具身智能发展报告（2026年）》的定义，物理AI指通过把物理规律嵌入感知、推理、生成和行动全过程，使人工智能具备更强的真实性、可靠性与可部署性。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "物理ai成ai新主线？",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][20]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[20]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "物理AI成AI新主线？",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "物理ai为何被视作ai投资的新主线？卖方分析师们的论述大致落在三个层面：",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][21]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[21]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "物理AI为何被视作AI投资的新主线？卖方分析师们的论述大致落在三个层面：",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "算力叙事的接续是第三层。黄仁勋在柏林gtc上称“下一轮计算浪潮是理解并作用于物理世界的ai”。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][26]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[26]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "算力叙事的接续是第三层。黄仁勋在柏林GTC上称“下一轮计算浪潮是理解并作用于物理世界的AI”。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "换言之，这一叙事直接回应了市场对海外算力资本开支见顶的担忧——物理ai若成立，受益的不仅仅是机器人，更是整条ai产业链。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][28]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[28]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "换言之，这一叙事直接回应了市场对海外算力资本开支见顶的担忧——物理AI若成立，受益的不仅仅是机器人，更是整条AI产业链。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "物理ai的卡点落在哪？",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][29]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[29]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "物理AI的卡点落在哪？",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "此次卖方多场路演的主题词高度重合：数据采集是物理ai的一大瓶颈。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][30]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[30]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "此次卖方多场路演的主题词高度重合：数据采集是物理AI的一大瓶颈。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "国金证券的判断是，当前人形机器人大脑与物理ai模型的行业卡点“并非算力，而是数据量”：国内行业整体数据量仅万小时级，而大脑突破需要千万至亿小时级。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][32]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[32]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "国金证券的判断是，当前人形机器人大脑与物理AI模型的行业卡点“并非算力，而是数据量”：国内行业整体数据量仅万小时级，而大脑突破需要千万至亿小时级。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "共识并不牢固，宇树提示风险",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][36]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[36]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "共识并不牢固，宇树提示风险",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "不过，卖方对于物理ai的密集路演，并不等于共识已经牢固。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][37]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[37]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "不过，卖方对于物理AI的密集路演，并不等于共识已经牢固。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "与卖方推荐同时出现的，是上市公司自己的风险提示。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][40]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[40]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "与卖方推荐同时出现的，是上市公司自己的风险提示。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "公告还称，若行业大规模商业化落地进度不及预期，公司未来营收扩张及业绩释放可能受到不利影响，存在估值回归的投资风险。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][43]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[43]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "公告还称，若行业大规模商业化落地进度不及预期，公司未来营收扩张及业绩释放可能受到不利影响，存在估值回归的投资风险。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "（声明：文章内容仅供参考，不构成投资建议。投资者据此操作，风险自担。）",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][44]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[44]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "（声明：文章内容仅供参考，不构成投资建议。投资者据此操作，风险自担。）",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "责任编辑：石秀珍 sf183",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][45]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[45]",
+        "tag": "p",
+        "id": "",
+        "class": "article-editor",
+        "expected_text": "责任编辑：石秀珍 SF183",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "新浪财经声明：此消息系转载自合作媒体，新浪财经登载此文出于传递更多信息之目的，文章内容仅供参考，不构成投资建议。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][3]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[3]/p",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "新浪财经声明：此消息系转载自合作媒体，新浪财经登载此文出于传递更多信息之目的，文章内容仅供参考，不构成投资建议。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "sf-comment-tip2026"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "收起",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_01.html",
+    "snapshot": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][13]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[13]/div[2]/p",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "wx-info"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "blk-wxfollow clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "精选住宿，享至少八五折优惠 广告 booking.com 广告 访问 it之家 599美元→649美元，苹果macbook neo在美国官网教育商店涨价 盖世小鸡推出新款g7 pro手柄，《gta6》色调 12 月上线：2025 款理想 i6 官宣支持付费升级电动前备箱，产品负责人透露“价格公道” 一人霸服，资源全吃，进服送打金神器，800%爆率，神装满地 广告 一人霸服 广告",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "精选住宿，享至少八五折优惠 广告 booking.com 广告 访问 it之家 599美元→649美元，苹果macbook neo在美国官网教育商店涨价 盖世小鸡推出新款g7 pro手柄，《gta6》色调 12 月上线：2025 款理想 i6 官宣支持付费升级电动前备箱，产品负责人透露“价格公道” 一人霸服，资源全吃，进服送打金神器，800%爆率，神装满地 广告 一人霸服 广告",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "精选住宿，享至少八五折优惠 广告 booking.com 广告 访问 it之家 599美元→649美元，苹果macbook neo在美国官网教育商店涨价 盖世小鸡推出新款g7 pro手柄，《gta6》色调 12 月上线：2025 款理想 i6 官宣支持付费升级电动前备箱，产品负责人透露“价格公道” 一人霸服，资源全吃，进服送打金神器，800%爆率，神装满地 广告 一人霸服 广告",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "访问 it之家 599美元→649美元，苹果macbook neo在美国官网教育商店涨价 盖世小鸡推出新款g7 pro手柄，《gta6》色调 12 月上线：2025 款理想 i6 官宣支持付费升级电动前备箱，产品负责人透露“价格公道”",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "599美元→649美元，苹果macbook neo在美国官网教育商店涨价 盖世小鸡推出新款g7 pro手柄，《gta6》色调 12 月上线：2025 款理想 i6 官宣支持付费升级电动前备箱，产品负责人透露“价格公道”",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "赞助内容",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"above-river-block\"][1]",
+          "./*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[4]/consumption-page/div/div[2]/above-river-block/template/div/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "heading c3",
+        "expected_text": "赞助内容",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "above-river-block",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"above-river-block\"][1]",
+          "./*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[2]/above-river-block/template/div/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "heading c3",
+        "expected_text": "赞助内容",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "above-river-block",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "ambiguous",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "他出生在湖北黄冈的一个普通村子，父母都是面朝黄土背朝天的农民，家里连一件像样的家电都没有，他17岁考上武大的时候，全村人凑钱给他凑了第一年的学费，连去武汉的火车票都是村里的小学老师给他买的。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]",
+          "./*[local-name()=\"p\"][3]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/template/p[3]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "他出生在湖北黄冈的一个普通村子，父母都是面朝黄土背朝天的农民，家里连一件像样的家电都没有，他17岁考上武大的时候，全村人凑钱给他凑了第一年的学费，连去武汉的火车票都是村里的小学老师给他买的。",
+        "containers": [
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "class": "article-reader-container"
+          },
+          {
+            "tag": "cp-article-reader",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "大学四年他没买过一件超过100块的衣服，所有课余时间全泡在计算机实验室里写代码，毕业的时候手里攥着华为的offer，背着一个装着几件换洗衣物的双肩包，就直接坐绿皮火车跑到了深圳。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]",
+          "./*[local-name()=\"p\"][4]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/template/p[4]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "大学四年他没买过一件超过100块的衣服，所有课余时间全泡在计算机实验室里写代码，毕业的时候手里攥着华为的offer，背着一个装着几件换洗衣物的双肩包，就直接坐绿皮火车跑到了深圳。",
+        "containers": [
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "class": "article-reader-container"
+          },
+          {
+            "tag": "cp-article-reader",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "在华为的19年里，他几乎把自己整个青春都扑在了工作上，刚入职的时候他在2012实验室做底层算法开发，为了赶一个5g核心算法的攻关项目，连续三个月每天在实验室待到凌晨两点，困了就趴在工位上睡两个小时，醒了接着改代码。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]",
+          "./*[local-name()=\"p\"][5]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/template/p[5]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "在华为的19年里，他几乎把自己整个青春都扑在了工作上，刚入职的时候他在2012实验室做底层算法开发，为了赶一个5G核心算法的攻关项目，连续三个月每天在实验室待到凌晨两点，困了就趴在工位上睡两个小时，醒了接着改代码。",
+        "containers": [
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "class": "article-reader-container"
+          },
+          {
+            "tag": "cp-article-reader",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "他的工牌编号排在前一万号，一路跟着公司从2g时代走到5g时代，经历过海外市场开拓的攻坚，也经历过芯片断供时期的全员加班攻坚，19年里他只休过两次超过一周的年假，连孩子出生的那天，他都在远程对接海外的项目上线。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]",
+          "./*[local-name()=\"p\"][6]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/template/p[6]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "他的工牌编号排在前一万号，一路跟着公司从2G时代走到5G时代，经历过海外市场开拓的攻坚，也经历过芯片断供时期的全员加班攻坚，19年里他只休过两次超过一周的年假，连孩子出生的那天，他都在远程对接海外的项目上线。",
+        "containers": [
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "class": "article-reader-container"
+          },
+          {
+            "tag": "cp-article-reader",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "很多人以为他攒下1300万，全靠高薪和股票分红，可他自己在帖里算了一笔账：刚入职的时候月薪才8000块，前五年几乎没什么积蓄，真正的财富积累，是跟着公司的成长一步步滚出来的。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]",
+          "./*[local-name()=\"p\"][7]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/template/p[7]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "很多人以为他攒下1300万，全靠高薪和股票分红，可他自己在帖里算了一笔账：刚入职的时候月薪才8000块，前五年几乎没什么积蓄，真正的财富积累，是跟着公司的成长一步步滚出来的。",
+        "containers": [
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "class": "article-reader-container"
+          },
+          {
+            "tag": "cp-article-reader",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "最戳中全网网友的，是他最后说的那段话：“我以前总以为，钱最大的用处就是买贵的东西，买更好的车，买更大的房子，直到40岁这年我才明白，金钱最大的价值从来不是用来消费的，而是给人选择权。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]",
+          "./*[local-name()=\"p\"][10]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/template/p[10]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "最戳中全网网友的，是他最后说的那段话：“我以前总以为，钱最大的用处就是买贵的东西，买更好的车，买更大的房子，直到40岁这年我才明白，金钱最大的价值从来不是用来消费的，而是给人选择权。",
+        "containers": [
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "class": "article-reader-container"
+          },
+          {
+            "tag": "cp-article-reader",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "他的故事戳中了无数在大城市打拼的普通年轻人的痛点：很多人在互联网大厂里熬了十几年，手里拿着高薪，却被房贷、车贷、子女教育牢牢捆在一线城市，根本没有任何选择的余地，想走不敢走，想留又熬不动。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]",
+          "./*[local-name()=\"p\"][13]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/template/p[13]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "他的故事戳中了无数在大城市打拼的普通年轻人的痛点：很多人在互联网大厂里熬了十几年，手里拿着高薪，却被房贷、车贷、子女教育牢牢捆在一线城市，根本没有任何选择的余地，想走不敢走，想留又熬不动。",
+        "containers": [
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "class": "article-reader-container"
+          },
+          {
+            "tag": "cp-article-reader",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "而这个农村出来的工程师，靠着19年的勤恳打拼，终于给自己攒下了这份“说走就走”的选择权，不用被任何人绑定，不用为了任何外部评价活着，完全按照自己的意愿安排接下来的人生。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]",
+          "./*[local-name()=\"p\"][14]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/template/p[14]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "而这个农村出来的工程师，靠着19年的勤恳打拼，终于给自己攒下了这份“说走就走”的选择权，不用被任何人绑定，不用为了任何外部评价活着，完全按照自己的意愿安排接下来的人生。",
+        "containers": [
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "class": "article-reader-container"
+          },
+          {
+            "tag": "cp-article-reader",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "现在他已经把老家的房子重新装修好了，就在武汉东湖边上，推开窗就能看到湖面的风景，父母已经提前搬过去住了，孩子也联系好了当地的学校，再过两个月深圳的房产过户完成，他就会带着全家彻底离开打拼了19年的深圳。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]",
+          "./*[local-name()=\"p\"][15]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/template/p[15]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "现在他已经把老家的房子重新装修好了，就在武汉东湖边上，推开窗就能看到湖面的风景，父母已经提前搬过去住了，孩子也联系好了当地的学校，再过两个月深圳的房产过户完成，他就会带着全家彻底离开打拼了19年的深圳。",
+        "containers": [
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "class": "article-reader-container"
+          },
+          {
+            "tag": "cp-article-reader",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "打算卖掉深圳的房产回老家安度晚年，还坦言\"感谢华为给了农村娃翻身机会\"。 很多人看完第一反应是羡慕，觉得这简直是普通人职场逆袭的完美样本，可顺着他的自述往深了看，你会发现这份“40岁退休”的底气，根本不是靠运气撞出来的。 他出生在湖北",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-image\"][1]",
+          "./*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/div[1]/cp-article-image/template/div/div",
+        "tag": "div",
+        "id": "",
+        "class": "image-caption-container image-caption-container-ux-impr articlewc-image-caption-container",
+        "expected_text": "打算卖掉深圳的房产回老家安度晚年，还坦言\"感谢华为给了农村娃翻身机会\"。  很多人看完第一反应是羡慕，觉得这简直是普通人职场逆袭的完美样本，可顺着他的自述往深了看，你会发现这份“40岁退休”的底气，根本不是靠运气撞出来的。   他出生在湖北",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-image-container polished"
+          },
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article-image",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-image-slot"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "打算卖掉深圳的房产回老家安度晚年，还坦言\"感谢华为给了农村娃翻身机会\"。 很多人看完第一反应是羡慕，觉得这简直是普通人职场逆袭的完美样本，可顺着他的自述往深了看，你会发现这份“40岁退休”的底气，根本不是靠运气撞出来的。 他出生在湖北",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-image\"][1]",
+          "./*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/div[1]/cp-article-image/template/div/div",
+        "tag": "div",
+        "id": "",
+        "class": "image-caption-container image-caption-container-ux-impr articlewc-image-caption-container",
+        "expected_text": "打算卖掉深圳的房产回老家安度晚年，还坦言\"感谢华为给了农村娃翻身机会\"。  很多人看完第一反应是羡慕，觉得这简直是普通人职场逆袭的完美样本，可顺着他的自述往深了看，你会发现这份“40岁退休”的底气，根本不是靠运气撞出来的。   他出生在湖北",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-image-container polished"
+          },
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article-image",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-image-slot"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "打算卖掉深圳的房产回老家安度晚年，还坦言\"感谢华为给了农村娃翻身机会\"。 很多人看完第一反应是羡慕，觉得这简直是普通人职场逆袭的完美样本，可顺着他的自述往深了看，你会发现这份“40岁退休”的底气，根本不是靠运气撞出来的。 他出生在湖北",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-image\"][1]",
+          "./*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/div[1]/cp-article-image/template/div/div",
+        "tag": "div",
+        "id": "",
+        "class": "image-caption-container image-caption-container-ux-impr articlewc-image-caption-container",
+        "expected_text": "打算卖掉深圳的房产回老家安度晚年，还坦言\"感谢华为给了农村娃翻身机会\"。  很多人看完第一反应是羡慕，觉得这简直是普通人职场逆袭的完美样本，可顺着他的自述往深了看，你会发现这份“40岁退休”的底气，根本不是靠运气撞出来的。   他出生在湖北",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-image-container polished"
+          },
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article-image",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-image-slot"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "赞助内容",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"above-river-block\"][1]",
+          "./*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[4]/consumption-page/div/div[2]/above-river-block/template/div/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "heading c3",
+        "expected_text": "赞助内容",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "above-river-block",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"above-river-block\"][1]",
+          "./*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[2]/above-river-block/template/div/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "heading c3",
+        "expected_text": "赞助内容",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "above-river-block",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "ambiguous",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "这笔收入的体量很容易估算。如果有 500 万块 gpu 纳入付费授权范围，按每块每年 2,000 美元（现汇率约合 13,355 元人民币）计算，英伟达每年就能入账 100 亿美元（现汇率约合 667.74 亿元人民币）；只要客户持续续费，五年合计可达 500 亿美元（现汇率约合 3,338.72 亿元人民币）。但这里存在不确定之处：英伟达没有说明 2,000 美元（现汇率约合 13,355 元人民币）这个报价对应的 gpu 适用范围，也没有确认它是不是统一标准定价。这套授权具体包含哪些软件、不同产品之间权限会不会重叠，同样尚不明确。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]",
+          "./*[local-name()=\"p\"][4]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[4]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/template/p[4]",
+        "tag": "p",
+        "id": "",
+        "class": "continue-read-break",
+        "expected_text": "这笔收入的体量很容易估算。如果有 500 万块 GPU 纳入付费授权范围，按每块每年 2,000 美元 （现汇率约合 13,355 元人民币） 计算，英伟达每年就能入账 100 亿美元 （现汇率约合 667.74 亿元人民币） ；只要客户持续续费，五年合计可达 500 亿美元 （现汇率约合 3,338.72 亿元人民币） 。但这里存在不确定之处：英伟达没有说明 2,000 美元 （现汇率约合 13,355 元人民币） 这个报价对应的 GPU 适用范围，也没有确认它是不是统一标准定价。这套授权具体包含哪些软件、不同产品之间权限会不会重叠，同样尚不明确。",
+        "containers": [
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "class": "article-reader-container"
+          },
+          {
+            "tag": "cp-article-reader",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "blog_02.html",
+    "snapshot": "59c85ba09fb10bc78b52761fa3c67f65508fbe324bba9c13b12e9d816aec4e83",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "英伟达早在九月就推出了开放智能体安全平台，这套新参考架构是在前者基础上延伸而来，把管控思路拓展到企业基础设施与边缘设备。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]",
+          "./*[local-name()=\"p\"][8]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[4]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/template/p[8]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "英伟达早在九月就推出了开放智能体安全平台，这套新参考架构是在前者基础上延伸而来，把管控思路拓展到企业基础设施与边缘设备。",
+        "containers": [
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "class": "article-reader-container"
+          },
+          {
+            "tag": "cp-article-reader",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_07299d33c58922ca.html",
+    "snapshot": "7a6f99231e4814ad5cc97ac2a500e89cd14c137a78a7933a33a5ac2c54853e8a",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "google research 提出「睡眠」框架，缓解大模…",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"header\"][1]/*[local-name()=\"h1\"][1]"
+        ],
+        "source_xpath": "/html/body/main/div/div/main/header/h1",
+        "tag": "h1",
+        "id": "",
+        "class": "flex flex-wrap items-center gap-2 text-[22px] font-semibold tracking-tight text-fg",
+        "expected_text": "Google Research 提出「睡眠」框架，缓解大模…",
+        "containers": [
+          {
+            "tag": "header",
+            "id": "",
+            "class": "mt-2 mb-5"
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "class": "min-w-0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "grid gap-6 lg:grid-cols-[190px_minmax(0,1fr)_300px]"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "mx-auto w-full max-w-[1280px] px-6 py-10 sm:py-12"
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"aside\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][4]"
+        ],
+        "source_xpath": "/html/body/main/div/div/aside/div[4]/ul/li[4]",
+        "tag": "li",
+        "id": "",
+        "class": "",
+        "expected_text": "Google Research 提出「睡眠」框架，缓解大模… 资讯速递 资讯小助手   0 1 天前",
+        "containers": [
+          {
+            "tag": "ul",
+            "id": "",
+            "class": "space-y-1.5"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "rounded-2xl border border-line bg-bg-elev p-3"
+          },
+          {
+            "tag": "aside",
+            "id": "",
+            "class": "space-y-4"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "grid gap-6 lg:grid-cols-[190px_minmax(0,1fr)_300px]"
+          }
+        ]
+      }
+    ],
+    "match_status": "ambiguous",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_07299d33c58922ca.html",
+    "snapshot": "7a6f99231e4814ad5cc97ac2a500e89cd14c137a78a7933a33a5ac2c54853e8a",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "- the sleep framework: a new way for llms to retain knowledge in continual learning google research 提出在持续学习中引入「睡眠阶段」，使大语言模型能持续整合新事实、增强推理，同时缓解灾难性遗忘或静态知识截止问题。现有模型部署后基本静态，而直接持续更新参数会严重损害旧任务表现，仅依赖上下文学习又会在会话结束后遗忘信息，该框架试图在两极之间提供新路径。 站内资讯页：/news/20261028-91ab09be 一手来源：google research blog 本帖收到打赏打赏 0",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_47c9a44f1ccc3dfa.html",
+    "snapshot": "35e8f92c0bef3cb604c09b7d7bae426e1ec75a0ab2093389f672502e7c514856",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "微软首次披露 azure 季度实际收入：单季达 332 亿…",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"header\"][1]/*[local-name()=\"h1\"][1]"
+        ],
+        "source_xpath": "/html/body/main/div/div/main/header/h1",
+        "tag": "h1",
+        "id": "",
+        "class": "flex flex-wrap items-center gap-2 text-[22px] font-semibold tracking-tight text-fg",
+        "expected_text": "微软首次披露 Azure 季度实际收入：单季达 332 亿…",
+        "containers": [
+          {
+            "tag": "header",
+            "id": "",
+            "class": "mt-2 mb-5"
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "class": "min-w-0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "grid gap-6 lg:grid-cols-[190px_minmax(0,1fr)_300px]"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "mx-auto w-full max-w-[1280px] px-6 py-10 sm:py-12"
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"aside\"][1]/*[local-name()=\"div\"][3]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][2]"
+        ],
+        "source_xpath": "/html/body/main/div/div/aside/div[3]/ul/li[2]",
+        "tag": "li",
+        "id": "",
+        "class": "",
+        "expected_text": "微软首次披露 Azure 季度实际收入：单季达 332 亿… 资讯速递 资讯小助手   0 9 小时前",
+        "containers": [
+          {
+            "tag": "ul",
+            "id": "",
+            "class": "space-y-1.5"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "rounded-2xl border border-line bg-bg-elev p-3"
+          },
+          {
+            "tag": "aside",
+            "id": "",
+            "class": "space-y-4"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "grid gap-6 lg:grid-cols-[190px_minmax(0,1fr)_300px]"
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"aside\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][2]"
+        ],
+        "source_xpath": "/html/body/main/div/div/aside/div[4]/ul/li[2]",
+        "tag": "li",
+        "id": "",
+        "class": "",
+        "expected_text": "微软首次披露 Azure 季度实际收入：单季达 332 亿… 资讯速递 资讯小助手   0 9 小时前",
+        "containers": [
+          {
+            "tag": "ul",
+            "id": "",
+            "class": "space-y-1.5"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "rounded-2xl border border-line bg-bg-elev p-3"
+          },
+          {
+            "tag": "aside",
+            "id": "",
+            "class": "space-y-4"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "grid gap-6 lg:grid-cols-[190px_minmax(0,1fr)_300px]"
+          }
+        ]
+      }
+    ],
+    "match_status": "ambiguous",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_47c9a44f1ccc3dfa.html",
+    "snapshot": "35e8f92c0bef3cb604c09b7d7bae426e1ec75a0ab2093389f672502e7c514856",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "- microsoft just shared azure’s actual revenue in dollars: $33.2 billion 微软此前从未以美元金额直接披露 azure 的单季收入，通常仅分享增长百分比或模糊的里程碑描述。在周三发布的财报中，微软首次披露 azure 在 7 至 9 月季度实现营收 332 亿美元，同比增长 48%。该披露使投资者能够将 azure 的业绩与亚马逊 aws 和谷歌云的季度美元收入进行直接对比。 参考合并： techcrunch ai 站内资讯页：/news/20261029-b126d772 一手来源：techcrunch ai 本帖收到打赏打赏 0",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_5b4a5a3b46bc6f7f.html",
+    "snapshot": "048fcb334639b0ab904bb31c0d32979d56f90eabf411cff45506718d83eca263",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "google deepmind 发布旗舰模型 gemini…",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"header\"][1]/*[local-name()=\"h1\"][1]"
+        ],
+        "source_xpath": "/html/body/main/div/div/main/header/h1",
+        "tag": "h1",
+        "id": "",
+        "class": "flex flex-wrap items-center gap-2 text-[22px] font-semibold tracking-tight text-fg",
+        "expected_text": "Google DeepMind 发布旗舰模型 Gemini…",
+        "containers": [
+          {
+            "tag": "header",
+            "id": "",
+            "class": "mt-2 mb-5"
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "class": "min-w-0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "grid gap-6 lg:grid-cols-[190px_minmax(0,1fr)_300px]"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "mx-auto w-full max-w-[1280px] px-6 py-10 sm:py-12"
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"aside\"][1]/*[local-name()=\"div\"][3]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][3]"
+        ],
+        "source_xpath": "/html/body/main/div/div/aside/div[3]/ul/li[3]",
+        "tag": "li",
+        "id": "",
+        "class": "",
+        "expected_text": "Google DeepMind 发布旗舰模型 Gemini… 资讯速递 资讯小助手   0 9 小时前",
+        "containers": [
+          {
+            "tag": "ul",
+            "id": "",
+            "class": "space-y-1.5"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "rounded-2xl border border-line bg-bg-elev p-3"
+          },
+          {
+            "tag": "aside",
+            "id": "",
+            "class": "space-y-4"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "grid gap-6 lg:grid-cols-[190px_minmax(0,1fr)_300px]"
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"aside\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][3]"
+        ],
+        "source_xpath": "/html/body/main/div/div/aside/div[4]/ul/li[3]",
+        "tag": "li",
+        "id": "",
+        "class": "",
+        "expected_text": "Google DeepMind 发布旗舰模型 Gemini… 资讯速递 资讯小助手   0 9 小时前",
+        "containers": [
+          {
+            "tag": "ul",
+            "id": "",
+            "class": "space-y-1.5"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "rounded-2xl border border-line bg-bg-elev p-3"
+          },
+          {
+            "tag": "aside",
+            "id": "",
+            "class": "space-y-4"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "grid gap-6 lg:grid-cols-[190px_minmax(0,1fr)_300px]"
+          }
+        ]
+      }
+    ],
+    "match_status": "ambiguous",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_5b4a5a3b46bc6f7f.html",
+    "snapshot": "048fcb334639b0ab904bb31c0d32979d56f90eabf411cff45506718d83eca263",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "- gemini 4 carbon: our next frontier model google deepmind 宣布推出新一代旗舰模型 gemini 4 carbon，主打前沿网络安全与长程智能体任务能力。该模型在最新 artificial analysis intelligence index v5.0 榜单中拿下 59 分登顶全球第一，并在 sec-bench pro、exploitgym 及 cwe-bench 等安全基准上均取得领先。目前该模型仅向选定的网络安全防御企业开放，后续将逐步扩展至 fairwi 站内资讯页：/news/20261029-b0da25ea 一手来源：deepmind blog 本帖收到打赏打赏 0",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_855c0d89cc5b8f45.html",
+    "snapshot": "eb6ada47208a1b7b59af060bcc53cf03635d8c21331ad00017bc9388abf463fc",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "英伟达开源语音模型 nemotron 3.5 transc…",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"header\"][1]/*[local-name()=\"h1\"][1]"
+        ],
+        "source_xpath": "/html/body/main/div/div/main/header/h1",
+        "tag": "h1",
+        "id": "",
+        "class": "flex flex-wrap items-center gap-2 text-[22px] font-semibold tracking-tight text-fg",
+        "expected_text": "英伟达开源语音模型 Nemotron 3.5 Transc…",
+        "containers": [
+          {
+            "tag": "header",
+            "id": "",
+            "class": "mt-2 mb-5"
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "class": "min-w-0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "grid gap-6 lg:grid-cols-[190px_minmax(0,1fr)_300px]"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "mx-auto w-full max-w-[1280px] px-6 py-10 sm:py-12"
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"aside\"][1]/*[local-name()=\"div\"][3]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][1]"
+        ],
+        "source_xpath": "/html/body/main/div/div/aside/div[3]/ul/li[1]",
+        "tag": "li",
+        "id": "",
+        "class": "",
+        "expected_text": "英伟达开源语音模型 Nemotron 3.5 Transc… 资讯速递 资讯小助手   0 9 小时前",
+        "containers": [
+          {
+            "tag": "ul",
+            "id": "",
+            "class": "space-y-1.5"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "rounded-2xl border border-line bg-bg-elev p-3"
+          },
+          {
+            "tag": "aside",
+            "id": "",
+            "class": "space-y-4"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "grid gap-6 lg:grid-cols-[190px_minmax(0,1fr)_300px]"
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"aside\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][1]"
+        ],
+        "source_xpath": "/html/body/main/div/div/aside/div[4]/ul/li[1]",
+        "tag": "li",
+        "id": "",
+        "class": "",
+        "expected_text": "英伟达开源语音模型 Nemotron 3.5 Transc… 资讯速递 资讯小助手   0 9 小时前",
+        "containers": [
+          {
+            "tag": "ul",
+            "id": "",
+            "class": "space-y-1.5"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "rounded-2xl border border-line bg-bg-elev p-3"
+          },
+          {
+            "tag": "aside",
+            "id": "",
+            "class": "space-y-4"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "grid gap-6 lg:grid-cols-[190px_minmax(0,1fr)_300px]"
+          }
+        ]
+      }
+    ],
+    "match_status": "ambiguous",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_855c0d89cc5b8f45.html",
+    "snapshot": "eb6ada47208a1b7b59af060bcc53cf03635d8c21331ad00017bc9388abf463fc",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "- nvidia nemotron 3.5 transcribe and granary v2: intelligent multilingual transcription you can prompt and adapt 英伟达正式在 hugging face 与 modelscope 开源开放权重语音模型 nemotron 3.5 transcribe。该模型将语音转录、说话人识别、翻译与音频问答统一在单一检查点内，支持 40 种语言转录与 31 种语言对英语的双向翻译，并允许用户通过自然语言提示词引导输出。英伟 站内资讯页：/news/20261029-7ae8eb20 一手来源：hugging face blog 本帖收到打赏打赏 0",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_911f560fdd154136.html",
+    "snapshot": "e19d25c69ba54724459ba2079a433b514f5cdc634f6eb83a80de7deddf0fa9a6",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "置顶 【公告】点赞/点踩/打赏不再要求 lv.1",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"header\"][1]/*[local-name()=\"h1\"][1]"
+        ],
+        "source_xpath": "/html/body/main/div/div/main/header/h1",
+        "tag": "h1",
+        "id": "",
+        "class": "flex flex-wrap items-center gap-2 text-[22px] font-semibold tracking-tight text-fg",
+        "expected_text": "置顶 【公告】点赞/点踩/打赏不再要求 Lv.1",
+        "containers": [
+          {
+            "tag": "header",
+            "id": "",
+            "class": "mt-2 mb-5"
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "class": "min-w-0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "grid gap-6 lg:grid-cols-[190px_minmax(0,1fr)_300px]"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "mx-auto w-full max-w-[1280px] px-6 py-10 sm:py-12"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_911f560fdd154136.html",
+    "snapshot": "e19d25c69ba54724459ba2079a433b514f5cdc634f6eb83a80de7deddf0fa9a6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "- 本次更新：论坛的点赞、点踩（亮/灭）与打赏已移除 lv.1 等级门槛——注册即可使用。",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_911f560fdd154136.html",
+    "snapshot": "e19d25c69ba54724459ba2079a433b514f5cdc634f6eb83a80de7deddf0fa9a6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "- 频率限制依然存在（点赞 30 次/分、100 次/日；新注册账号 30 次/日），滥用会被记录并按论坛规则处理；",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_911f560fdd154136.html",
+    "snapshot": "e19d25c69ba54724459ba2079a433b514f5cdc634f6eb83a80de7deddf0fa9a6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "- 打赏仍消耗你自己的积分：最低 1 分、同一帖子每人一次、平台抽成 10%，被打赏所得计入每日归集上限；",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_911f560fdd154136.html",
+    "snapshot": "e19d25c69ba54724459ba2079a433b514f5cdc634f6eb83a80de7deddf0fa9a6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "- 积分不足仍无法打赏——本调整只是去掉「等级门槛」，不改变积分账本。",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_911f560fdd154136.html",
+    "snapshot": "e19d25c69ba54724459ba2079a433b514f5cdc634f6eb83a80de7deddf0fa9a6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "其余规则见「文档 → 论坛规则」。 本帖收到打赏打赏 0",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_01.html",
+    "snapshot": "4fe21bccbc274a6e6098c0bd08d5fabe4c396ec12a6e81fe6ac07ff392821129",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "飞桨是百度基于多年深度学习技术研究和业务应用打造的产业级深度学习平台。它是中国首个自主研发、功能完备、开源开放的产业级深度学习平台，集成了深度学习核心训练和推理框架、基础模型库、端到端开发套件、丰富的工具组件。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][3]/*[local-name()=\"div\"][3]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][6]/*[local-name()=\"div\"][1]/*[local-name()=\"a\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[3]/div[3]/div/div/div[1]/div[6]/div/a/div/div[2]/p",
+        "tag": "p",
+        "id": "",
+        "class": "overflowClip_1 m-0 text-muted text-xs",
+        "expected_text": "飞桨是百度基于多年深度学习技术研究和业务应用打造的产业级深度学习平台。它是中国首个自主研发、功能完备、开源开放的产业级深度学习平台，集成了深度学习核心训练和推理框架、基础模型库、端到端开发套件、丰富的工具组件。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "url-info flex-fill"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "card-body url-content d-flex align-items-center"
+          },
+          {
+            "tag": "a",
+            "id": "",
+            "class": "card no-c is-views mb-4 site-3495"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "url-body default "
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "所有最新话题",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][3]/*[local-name()=\"div\"][1]/*[local-name()=\"h1\"][1]"
+        ],
+        "source_xpath": "/html/body/section/div[1]/div[5]/div[2]/div[3]/div/h1",
+        "tag": "h1",
+        "id": "topic-list-heading",
+        "class": "sr-only",
+        "expected_text": "所有最新话题",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "container"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "list-controls"
+          },
+          {
+            "tag": "div",
+            "id": "main-outlet",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "main-outlet-wrapper",
+            "class": "wrap"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "话题列表，带有按钮的列标题可以排序。 话题 发帖人 回复 浏览量 活动 免费ai生图做视频工具分享！完全免费的ai生图视频工具 福利专区 交流讨论 最近找了一些ai免费生图做视频工具，目前都可以正常使用，效果也不错，下面就为大家盘点一下！ 免费ai生图、生视频，一站式ai短剧漫剧创作 地址：https://pixtv.ai 免费视频ai：seedance ai 地址：https… 阅读更多 29 28.1k 1 天 workbuddy使用集合贴！workbuddy内容汇总 技术交流 交流讨论 workbuddy有出色的办公能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了workbuddy玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： workbuddy可用skills下载地址 下载地址… 阅读更多 10 8.7k 9月 25 日 codex使用教程集合贴，codex使用教程汇总（持续更新ing） 技术交流 交流讨论 codex有强大的能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了codex玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： gpt-image 2.5使用地址: codex可以mcp地址 1、p… 阅读更多 17 8.3k 9月 25 日 claude使用手册集合贴，claude玩法汇总（持续更新ing） claude 资源分享 claude有强大的能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了claude玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： claude可以mcp地址 1、pixpix mcp — claud… 阅读更多 10 7.2k 7月 21 日 想把聊天记录导出来存档 结果拿到一堆乱码和废话 gemini 避坑经验 6 2.7k 1 分钟 ai 视频慢镜头为什么容易变形，应该怎样设计动作 ai视频 6 2.9k 2 分钟 见鬼了 openai训练中的模型自己钻了个dns配置漏洞跑出离线环境 训练停了十来天 ai大百科 行业动态 8 1.2k 3 分钟 角色参考图越加越不稳？先做一轮删图测试，再决定要不要重做模型 ai视频 5 1.7k 4 分钟 网页端终于能看到用量条了，这插件解了我的心结 claude 资源分享 5 2.3k 5 分钟 公司要建知识库，办公软件自带的那个我实在不想用 自动化办公 问题求助 1 3.1k 10 分钟 同一个自动化脚本 一家给我上了半页伦理课 另一家一句话就开干 综合交流大区 避坑吐槽 10 2.8k 10 分钟 分享最近做的 ai 录音软件可完全免费使用 综合交流大区 资源分享 12 2.9k 10 分钟 how to evaluate an ai reel editor before paying for another tool ai video creators 1 687 10 分钟 号称五行代码起一套多智能体 我把它翻了一遍 github精品资源 工具推荐 6 2.4k 15 分钟 把自己那个价格监控站重构了一遍 顺手让agent自己修自己 综合交流大区 项目展示 8 2.4k 15 分钟 ai 视频导进剪辑软件就偏色？先判断文件变了还是播放方式变了 ai视频 3 2.5k 18 分钟 ai当sre？运维自动化这波真的要彻底颠覆了！ 综合交流大区 ai资讯 5 2.3k 20 分钟 给机器用的邮件命令行，这个思路我觉得对了 github精品资源 开源项目 3 2.9k 20 分钟 how to use ai voiceover in educational videos without losing viewer trust ai video creators 7 1.7k 20 分钟 how to scope an ai video pilot before adapting a novel into a series ai video creators 4 657 22 分钟 seedance 2.5出了4k版 先出480p样片挑满意的再出正片 做短剧的省钱了 综合交流大区 ai资讯 7 2.0k 24 分钟 这么多写代码的工具 你们最后留在机器上的是哪个 ai大百科 交流讨论 7 2.6k 25 分钟 一边喊ai替代人 一边一年多招了一万二 这账怎么算 综合交流大区 创业商业 1 1.3k 28 分钟 不是错觉，那个模型这两天是真的开始磨洋工了 翻车事件 避坑指南 3 2.9k 30 分钟 最危险的从来不是模型答错 是那个允许按钮点太顺手 技术交流 经验分享 2 3.0k 30 分钟 这两个国产助手压根不是一类东西，别再拉一起比了 ai大百科 概念科普 5 2.7k 30 分钟 底模挂了蒸馏权重之后 步数和引导值到底该怎么填 技术交流 问题排错 5 2.5k 30 分钟 「ai编码智能体」其实是五种东西，很多项目死就死在选错了层 ai大百科 技术原理 8 2.7k 35 分钟 无限deepseek账号？这羊毛薅得我都怕了！ 综合交流大区 资源分享 9 2.8k 38 分钟 让几个模型玩同一款剧情游戏，性格差得比我想的离谱 综合交流大区 闲聊吹水 7 2.6k 40 分钟",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "话题列表，带有按钮的列标题可以排序。 话题 发帖人 回复 浏览量 活动 免费ai生图做视频工具分享！完全免费的ai生图视频工具 福利专区 交流讨论 最近找了一些ai免费生图做视频工具，目前都可以正常使用，效果也不错，下面就为大家盘点一下！ 免费ai生图、生视频，一站式ai短剧漫剧创作 地址：https://pixtv.ai 免费视频ai：seedance ai 地址：https… 阅读更多 29 28.1k 1 天 workbuddy使用集合贴！workbuddy内容汇总 技术交流 交流讨论 workbuddy有出色的办公能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了workbuddy玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： workbuddy可用skills下载地址 下载地址… 阅读更多 10 8.7k 9月 25 日 codex使用教程集合贴，codex使用教程汇总（持续更新ing） 技术交流 交流讨论 codex有强大的能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了codex玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： gpt-image 2.5使用地址: codex可以mcp地址 1、p… 阅读更多 17 8.3k 9月 25 日 claude使用手册集合贴，claude玩法汇总（持续更新ing） claude 资源分享 claude有强大的能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了claude玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： claude可以mcp地址 1、pixpix mcp — claud… 阅读更多 10 7.2k 7月 21 日 想把聊天记录导出来存档 结果拿到一堆乱码和废话 gemini 避坑经验 6 2.7k 1 分钟 ai 视频慢镜头为什么容易变形，应该怎样设计动作 ai视频 6 2.9k 2 分钟 见鬼了 openai训练中的模型自己钻了个dns配置漏洞跑出离线环境 训练停了十来天 ai大百科 行业动态 8 1.2k 3 分钟 角色参考图越加越不稳？先做一轮删图测试，再决定要不要重做模型 ai视频 5 1.7k 4 分钟 网页端终于能看到用量条了，这插件解了我的心结 claude 资源分享 5 2.3k 5 分钟 公司要建知识库，办公软件自带的那个我实在不想用 自动化办公 问题求助 1 3.1k 10 分钟 同一个自动化脚本 一家给我上了半页伦理课 另一家一句话就开干 综合交流大区 避坑吐槽 10 2.8k 10 分钟 分享最近做的 ai 录音软件可完全免费使用 综合交流大区 资源分享 12 2.9k 10 分钟 how to evaluate an ai reel editor before paying for another tool ai video creators 1 687 10 分钟 号称五行代码起一套多智能体 我把它翻了一遍 github精品资源 工具推荐 6 2.4k 15 分钟 把自己那个价格监控站重构了一遍 顺手让agent自己修自己 综合交流大区 项目展示 8 2.4k 15 分钟 ai 视频导进剪辑软件就偏色？先判断文件变了还是播放方式变了 ai视频 3 2.5k 18 分钟 ai当sre？运维自动化这波真的要彻底颠覆了！ 综合交流大区 ai资讯 5 2.3k 20 分钟 给机器用的邮件命令行，这个思路我觉得对了 github精品资源 开源项目 3 2.9k 20 分钟 how to use ai voiceover in educational videos without losing viewer trust ai video creators 7 1.7k 20 分钟 how to scope an ai video pilot before adapting a novel into a series ai video creators 4 657 22 分钟 seedance 2.5出了4k版 先出480p样片挑满意的再出正片 做短剧的省钱了 综合交流大区 ai资讯 7 2.0k 24 分钟 这么多写代码的工具 你们最后留在机器上的是哪个 ai大百科 交流讨论 7 2.6k 25 分钟 一边喊ai替代人 一边一年多招了一万二 这账怎么算 综合交流大区 创业商业 1 1.3k 28 分钟 不是错觉，那个模型这两天是真的开始磨洋工了 翻车事件 避坑指南 3 2.9k 30 分钟 最危险的从来不是模型答错 是那个允许按钮点太顺手 技术交流 经验分享 2 3.0k 30 分钟 这两个国产助手压根不是一类东西，别再拉一起比了 ai大百科 概念科普 5 2.7k 30 分钟 底模挂了蒸馏权重之后 步数和引导值到底该怎么填 技术交流 问题排错 5 2.5k 30 分钟 「ai编码智能体」其实是五种东西，很多项目死就死在选错了层 ai大百科 技术原理 8 2.7k 35 分钟 无限deepseek账号？这羊毛薅得我都怕了！ 综合交流大区 资源分享 9 2.8k 38 分钟 让几个模型玩同一款剧情游戏，性格差得比我想的离谱 综合交流大区 闲聊吹水 7 2.6k 40 分钟",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "话题列表，带有按钮的列标题可以排序。 话题 发帖人 回复 浏览量 活动 免费ai生图做视频工具分享！完全免费的ai生图视频工具 福利专区 交流讨论 最近找了一些ai免费生图做视频工具，目前都可以正常使用，效果也不错，下面就为大家盘点一下！ 免费ai生图、生视频，一站式ai短剧漫剧创作 地址：https://pixtv.ai 免费视频ai：seedance ai 地址：https… 阅读更多 29 28.1k 1 天 workbuddy使用集合贴！workbuddy内容汇总 技术交流 交流讨论 workbuddy有出色的办公能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了workbuddy玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： workbuddy可用skills下载地址 下载地址… 阅读更多 10 8.7k 9月 25 日 codex使用教程集合贴，codex使用教程汇总（持续更新ing） 技术交流 交流讨论 codex有强大的能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了codex玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： gpt-image 2.5使用地址: codex可以mcp地址 1、p… 阅读更多 17 8.3k 9月 25 日 claude使用手册集合贴，claude玩法汇总（持续更新ing） claude 资源分享 claude有强大的能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了claude玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： claude可以mcp地址 1、pixpix mcp — claud… 阅读更多 10 7.2k 7月 21 日 想把聊天记录导出来存档 结果拿到一堆乱码和废话 gemini 避坑经验 6 2.7k 1 分钟 ai 视频慢镜头为什么容易变形，应该怎样设计动作 ai视频 6 2.9k 2 分钟 见鬼了 openai训练中的模型自己钻了个dns配置漏洞跑出离线环境 训练停了十来天 ai大百科 行业动态 8 1.2k 3 分钟 角色参考图越加越不稳？先做一轮删图测试，再决定要不要重做模型 ai视频 5 1.7k 4 分钟 网页端终于能看到用量条了，这插件解了我的心结 claude 资源分享 5 2.3k 5 分钟 公司要建知识库，办公软件自带的那个我实在不想用 自动化办公 问题求助 1 3.1k 10 分钟 同一个自动化脚本 一家给我上了半页伦理课 另一家一句话就开干 综合交流大区 避坑吐槽 10 2.8k 10 分钟 分享最近做的 ai 录音软件可完全免费使用 综合交流大区 资源分享 12 2.9k 10 分钟 how to evaluate an ai reel editor before paying for another tool ai video creators 1 687 10 分钟 号称五行代码起一套多智能体 我把它翻了一遍 github精品资源 工具推荐 6 2.4k 15 分钟 把自己那个价格监控站重构了一遍 顺手让agent自己修自己 综合交流大区 项目展示 8 2.4k 15 分钟 ai 视频导进剪辑软件就偏色？先判断文件变了还是播放方式变了 ai视频 3 2.5k 18 分钟 ai当sre？运维自动化这波真的要彻底颠覆了！ 综合交流大区 ai资讯 5 2.3k 20 分钟 给机器用的邮件命令行，这个思路我觉得对了 github精品资源 开源项目 3 2.9k 20 分钟 how to use ai voiceover in educational videos without losing viewer trust ai video creators 7 1.7k 20 分钟 how to scope an ai video pilot before adapting a novel into a series ai video creators 4 657 22 分钟 seedance 2.5出了4k版 先出480p样片挑满意的再出正片 做短剧的省钱了 综合交流大区 ai资讯 7 2.0k 24 分钟 这么多写代码的工具 你们最后留在机器上的是哪个 ai大百科 交流讨论 7 2.6k 25 分钟 一边喊ai替代人 一边一年多招了一万二 这账怎么算 综合交流大区 创业商业 1 1.3k 28 分钟 不是错觉，那个模型这两天是真的开始磨洋工了 翻车事件 避坑指南 3 2.9k 30 分钟 最危险的从来不是模型答错 是那个允许按钮点太顺手 技术交流 经验分享 2 3.0k 30 分钟 这两个国产助手压根不是一类东西，别再拉一起比了 ai大百科 概念科普 5 2.7k 30 分钟 底模挂了蒸馏权重之后 步数和引导值到底该怎么填 技术交流 问题排错 5 2.5k 30 分钟 「ai编码智能体」其实是五种东西，很多项目死就死在选错了层 ai大百科 技术原理 8 2.7k 35 分钟 无限deepseek账号？这羊毛薅得我都怕了！ 综合交流大区 资源分享 9 2.8k 38 分钟 让几个模型玩同一款剧情游戏，性格差得比我想的离谱 综合交流大区 闲聊吹水 7 2.6k 40 分钟",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "话题列表，带有按钮的列标题可以排序。 话题 发帖人 回复 浏览量 活动 免费ai生图做视频工具分享！完全免费的ai生图视频工具 福利专区 交流讨论 最近找了一些ai免费生图做视频工具，目前都可以正常使用，效果也不错，下面就为大家盘点一下！ 免费ai生图、生视频，一站式ai短剧漫剧创作 地址：https://pixtv.ai 免费视频ai：seedance ai 地址：https… 阅读更多 29 28.1k 1 天 workbuddy使用集合贴！workbuddy内容汇总 技术交流 交流讨论 workbuddy有出色的办公能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了workbuddy玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： workbuddy可用skills下载地址 下载地址… 阅读更多 10 8.7k 9月 25 日 codex使用教程集合贴，codex使用教程汇总（持续更新ing） 技术交流 交流讨论 codex有强大的能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了codex玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： gpt-image 2.5使用地址: codex可以mcp地址 1、p… 阅读更多 17 8.3k 9月 25 日 claude使用手册集合贴，claude玩法汇总（持续更新ing） claude 资源分享 claude有强大的能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了claude玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： claude可以mcp地址 1、pixpix mcp — claud… 阅读更多 10 7.2k 7月 21 日 想把聊天记录导出来存档 结果拿到一堆乱码和废话 gemini 避坑经验 6 2.7k 1 分钟 ai 视频慢镜头为什么容易变形，应该怎样设计动作 ai视频 6 2.9k 2 分钟 见鬼了 openai训练中的模型自己钻了个dns配置漏洞跑出离线环境 训练停了十来天 ai大百科 行业动态 8 1.2k 3 分钟 角色参考图越加越不稳？先做一轮删图测试，再决定要不要重做模型 ai视频 5 1.7k 4 分钟 网页端终于能看到用量条了，这插件解了我的心结 claude 资源分享 5 2.3k 5 分钟 公司要建知识库，办公软件自带的那个我实在不想用 自动化办公 问题求助 1 3.1k 10 分钟 同一个自动化脚本 一家给我上了半页伦理课 另一家一句话就开干 综合交流大区 避坑吐槽 10 2.8k 10 分钟 分享最近做的 ai 录音软件可完全免费使用 综合交流大区 资源分享 12 2.9k 10 分钟 how to evaluate an ai reel editor before paying for another tool ai video creators 1 687 10 分钟 号称五行代码起一套多智能体 我把它翻了一遍 github精品资源 工具推荐 6 2.4k 15 分钟 把自己那个价格监控站重构了一遍 顺手让agent自己修自己 综合交流大区 项目展示 8 2.4k 15 分钟 ai 视频导进剪辑软件就偏色？先判断文件变了还是播放方式变了 ai视频 3 2.5k 18 分钟 ai当sre？运维自动化这波真的要彻底颠覆了！ 综合交流大区 ai资讯 5 2.3k 20 分钟 给机器用的邮件命令行，这个思路我觉得对了 github精品资源 开源项目 3 2.9k 20 分钟 how to use ai voiceover in educational videos without losing viewer trust ai video creators 7 1.7k 20 分钟 how to scope an ai video pilot before adapting a novel into a series ai video creators 4 657 22 分钟 seedance 2.5出了4k版 先出480p样片挑满意的再出正片 做短剧的省钱了 综合交流大区 ai资讯 7 2.0k 24 分钟 这么多写代码的工具 你们最后留在机器上的是哪个 ai大百科 交流讨论 7 2.6k 25 分钟 一边喊ai替代人 一边一年多招了一万二 这账怎么算 综合交流大区 创业商业 1 1.3k 28 分钟 不是错觉，那个模型这两天是真的开始磨洋工了 翻车事件 避坑指南 3 2.9k 30 分钟 最危险的从来不是模型答错 是那个允许按钮点太顺手 技术交流 经验分享 2 3.0k 30 分钟 这两个国产助手压根不是一类东西，别再拉一起比了 ai大百科 概念科普 5 2.7k 30 分钟 底模挂了蒸馏权重之后 步数和引导值到底该怎么填 技术交流 问题排错 5 2.5k 30 分钟 「ai编码智能体」其实是五种东西，很多项目死就死在选错了层 ai大百科 技术原理 8 2.7k 35 分钟 无限deepseek账号？这羊毛薅得我都怕了！ 综合交流大区 资源分享 9 2.8k 38 分钟 让几个模型玩同一款剧情游戏，性格差得比我想的离谱 综合交流大区 闲聊吹水 7 2.6k 40 分钟",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 免费ai生图做视频工具分享！完全免费的ai生图视频工具 最近找了一些ai免费生图做视频工具，目前都可以正常使用，效果也不错，下面就为大家盘点一下！ 免费ai生图、生视频，一站式ai短剧漫剧创作 地址：https://pixtv.ai 免费视频ai：seedance ai 地址：https… 阅读更多 | | 29 | 28.1k | 1 天 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| workbuddy使用集合贴！workbuddy内容汇总 workbuddy有出色的办公能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了workbuddy玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： workbuddy可用skills下载地址 下载地址… 阅读更多 | | 10 | 8.7k | 9月 25 日 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| codex使用教程集合贴，codex使用教程汇总（持续更新ing） codex有强大的能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了codex玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： gpt-image 2.5使用地址: codex可以mcp地址 1、p… 阅读更多 | | 17 | 8.3k | 9月 25 日 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| claude使用手册集合贴，claude玩法汇总（持续更新ing） claude有强大的能力，能帮大家做很多事情，不过很多朋友装好以后不知道怎么使用，于是这里为大家做了claude玩法汇总，大家可以一键跳转！ 免费ai生图视频工具： claude可以mcp地址 1、pixpix mcp — claud… 阅读更多 | | 10 | 7.2k | 7月 21 日 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 想把聊天记录导出来存档 结果拿到一堆乱码和废话 | | 6 | 2.7k | 1 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| ai 视频慢镜头为什么容易变形，应该怎样设计动作 | | 6 | 2.9k | 2 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 见鬼了 openai训练中的模型自己钻了个dns配置漏洞跑出离线环境 训练停了十来天 | | 8 | 1.2k | 3 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 角色参考图越加越不稳？先做一轮删图测试，再决定要不要重做模型 | | 5 | 1.7k | 4 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 网页端终于能看到用量条了，这插件解了我的心结 | | 5 | 2.3k | 5 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 公司要建知识库，办公软件自带的那个我实在不想用 | | 1 | 3.1k | 10 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 同一个自动化脚本 一家给我上了半页伦理课 另一家一句话就开干 | | 10 | 2.8k | 10 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 分享最近做的 ai 录音软件可完全免费使用 | | 12 | 2.9k | 10 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| how to evaluate an ai reel editor before paying for another tool | | 1 | 687 | 10 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 号称五行代码起一套多智能体 我把它翻了一遍 | | 6 | 2.4k | 15 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 把自己那个价格监控站重构了一遍 顺手让agent自己修自己 | | 8 | 2.4k | 15 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| ai 视频导进剪辑软件就偏色？先判断文件变了还是播放方式变了 | | 3 | 2.5k | 18 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| ai当sre？运维自动化这波真的要彻底颠覆了！ | | 5 | 2.3k | 20 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 给机器用的邮件命令行，这个思路我觉得对了 | | 3 | 2.9k | 20 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| how to use ai voiceover in educational videos without losing viewer trust | | 7 | 1.7k | 20 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| how to scope an ai video pilot before adapting a novel into a series | | 4 | 657 | 22 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| seedance 2.5出了4k版 先出480p样片挑满意的再出正片 做短剧的省钱了 | | 7 | 2.0k | 24 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 这么多写代码的工具 你们最后留在机器上的是哪个 | | 7 | 2.6k | 25 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 一边喊ai替代人 一边一年多招了一万二 这账怎么算 | | 1 | 1.3k | 28 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 不是错觉，那个模型这两天是真的开始磨洋工了 | | 3 | 2.9k | 30 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 最危险的从来不是模型答错 是那个允许按钮点太顺手 | | 2 | 3.0k | 30 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 这两个国产助手压根不是一类东西，别再拉一起比了 | | 5 | 2.7k | 30 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 底模挂了蒸馏权重之后 步数和引导值到底该怎么填 | | 5 | 2.5k | 30 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 「ai编码智能体」其实是五种东西，很多项目死就死在选错了层 | | 8 | 2.7k | 35 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 无限deepseek账号？这羊毛薅得我都怕了！ | | 9 | 2.8k | 38 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "forum_02.html",
+    "snapshot": "c46f76bac65a7def984dd76662f998062e5f76998135f074a2535f8234b90ba6",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "| 让几个模型玩同一款剧情游戏，性格差得比我想的离谱 | | 7 | 2.6k | 40 分钟 |",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "发现更多",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/section[1]/h2",
+        "tag": "h2",
+        "id": "topic-discovery-heading",
+        "class": "css-dd4ych",
+        "expected_text": "发现更多",
+        "containers": [
+          {
+            "tag": "section",
+            "id": "topic-discovery-component",
+            "class": "css-1ys4koj"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1nude9v"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-bg8vrv"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1kb1fna"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "更多短片",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/section[2]/div/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "css-1gibf5j",
+        "expected_text": "更多短片",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-79elbk e92pi9o0"
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "class": "css-2isknu"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1nude9v"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-bg8vrv"
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/section[2]/div/p",
+        "tag": "p",
+        "id": "end-of-portrait-video-carousel",
+        "class": "css-mcqrb5 e92pi9o2",
+        "expected_text": "更多短片结束",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-79elbk e92pi9o0"
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "class": "css-2isknu"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1nude9v"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-bg8vrv"
+          }
+        ]
+      }
+    ],
+    "match_status": "ambiguous",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "轮到你了，梅西——姆巴佩领跑史诗级世界杯金靴之争",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][3]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"h3\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/section[3]/ul/li[1]/div/div/div[2]/h3",
+        "tag": "h3",
+        "id": "",
+        "class": "css-ct7oks e5dz66j0",
+        "expected_text": "轮到你了，梅西——姆巴佩领跑史诗级世界杯金靴之争",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-hjtdl7 ek7zgns0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-70p486 ek7zgns1"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-y9vlx"
+          },
+          {
+            "tag": "li",
+            "id": "",
+            "class": "css-dozr74 e1jmybte0"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "推崇⽑泽东的“z世代”：弹幕、“教员”与政治失语",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][3]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"h3\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/section[3]/ul/li[2]/div/div/div[2]/h3",
+        "tag": "h3",
+        "id": "",
+        "class": "css-ct7oks e5dz66j0",
+        "expected_text": "推崇⽑泽东的“Z世代”：弹幕、“教员”与政治失语",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-hjtdl7 ek7zgns0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-70p486 ek7zgns1"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-y9vlx"
+          },
+          {
+            "tag": "li",
+            "id": "",
+            "class": "css-dozr74 e1jmybte0"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "d&g时装品牌“辱华”风波 中国明星集体抵制",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][3]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][3]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"h3\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/section[3]/ul/li[3]/div/div/div[2]/h3",
+        "tag": "h3",
+        "id": "",
+        "class": "css-ct7oks e5dz66j0",
+        "expected_text": "D&G时装品牌“辱华”风波 中国明星集体抵制",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-hjtdl7 ek7zgns0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-70p486 ek7zgns1"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-y9vlx"
+          },
+          {
+            "tag": "li",
+            "id": "",
+            "class": "css-dozr74 e1jmybte0"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "迪奥展出“眯眯眼”女性照片陷入“辱华”风波，摄影师致歉",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][3]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"h3\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/section[3]/ul/li[4]/div/div/div[2]/h3",
+        "tag": "h3",
+        "id": "",
+        "class": "css-ct7oks e5dz66j0",
+        "expected_text": "迪奥展出“眯眯眼”女性照片陷入“辱华”风波，摄影师致歉",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-hjtdl7 ek7zgns0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-70p486 ek7zgns1"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-y9vlx"
+          },
+          {
+            "tag": "li",
+            "id": "",
+            "class": "css-dozr74 e1jmybte0"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "“眯眯眼”广告再引争议，民族主义兴起下的“带节奏”还是“反辱华”？",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][3]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][5]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"h3\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/section[3]/ul/li[5]/div/div/div[2]/h3",
+        "tag": "h3",
+        "id": "",
+        "class": "css-ct7oks e5dz66j0",
+        "expected_text": "“眯眯眼”广告再引争议，民族主义兴起下的“带节奏”还是“反辱华”？",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-hjtdl7 ek7zgns0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-70p486 ek7zgns1"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-y9vlx"
+          },
+          {
+            "tag": "li",
+            "id": "",
+            "class": "css-dozr74 e1jmybte0"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "尊界v800“煞车门”：从产品安全之争到“恨国”论战",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][3]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][6]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"h3\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/section[3]/ul/li[6]/div/div/div[2]/h3",
+        "tag": "h3",
+        "id": "",
+        "class": "css-ct7oks e5dz66j0",
+        "expected_text": "尊界V800“煞车门”：从产品安全之争到“恨国”论战",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-hjtdl7 ek7zgns0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-70p486 ek7zgns1"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-y9vlx"
+          },
+          {
+            "tag": "li",
+            "id": "",
+            "class": "css-dozr74 e1jmybte0"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "头条新闻",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[2]/div[1]/section/div/h2",
+        "tag": "h2",
+        "id": "section-label-heading-top-stories-heading",
+        "class": "css-a5e1ct e1jnsqox1",
+        "expected_text": "头条新闻",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1iqf05p e1jnsqox0"
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "class": "css-8cenrp"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-10pxgv6"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-t64zae"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "刘延东逝世：“红二代”“团派”背景，政治局里少见的女性身影",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"h3\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[2]/div[1]/section/ul/li[1]/div/div/div/h3",
+        "tag": "h3",
+        "id": "",
+        "class": "css-1takd7g e5dz66j0",
+        "expected_text": "刘延东逝世：“红二代”“团派”背景，政治局里少见的女性身影",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-hjtdl7 ek7zgns0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-70p486 ek7zgns1"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-ey9z5j"
+          },
+          {
+            "tag": "li",
+            "id": "",
+            "class": "css-s6v87m e1jmybte0"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "西班牙列车相撞至少64死：我们目前已知甚么？",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"h3\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[2]/div[1]/section/ul/li[2]/div/div/div/h3",
+        "tag": "h3",
+        "id": "",
+        "class": "css-1takd7g e5dz66j0",
+        "expected_text": "西班牙列车相撞至少64死：我们目前已知甚么？",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-hjtdl7 ek7zgns0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-70p486 ek7zgns1"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-ey9z5j"
+          },
+          {
+            "tag": "li",
+            "id": "",
+            "class": "css-s6v87m e1jmybte0"
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][2]/*[local-name()=\"ol\"][1]/*[local-name()=\"li\"][8]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/section[2]/ol/li[8]/div/div[2]",
+        "tag": "div",
+        "id": "",
+        "class": "css-rylvsa",
+        "expected_text": "西班牙列车相撞至少64死：我们目前已知甚么？",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1ogrn1l"
+          },
+          {
+            "tag": "li",
+            "id": "",
+            "class": "css-1xaijnt e17x9cvu0"
+          },
+          {
+            "tag": "ol",
+            "id": "",
+            "class": "css-1oou3yz e17x9cvu0"
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "class": "css-1g7uqg9"
+          }
+        ]
+      }
+    ],
+    "match_status": "ambiguous",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "anthropic 重磅上市——目前我们知道的五件惊人信息",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"section\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/main/section[2]/div/ul/li[4]/div/div[2]/div",
+        "tag": "div",
+        "id": "",
+        "class": "css-1nw71o6",
+        "expected_text": "Anthropic 重磅上市——目前我们知道的五件惊人信息",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-6cb6xm"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-qj66n0"
+          },
+          {
+            "tag": "li",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "ul",
+            "id": "",
+            "class": "css-64y6r"
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][1]/*[local-name()=\"ul\"][1]/*[local-name()=\"li\"][3]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"h3\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[2]/div[1]/section/ul/li[3]/div/div/div/h3",
+        "tag": "h3",
+        "id": "",
+        "class": "css-1takd7g e5dz66j0",
+        "expected_text": "Anthropic 重磅上市——目前我们知道的五件惊人信息",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-hjtdl7 ek7zgns0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-70p486 ek7zgns1"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-ey9z5j"
+          },
+          {
+            "tag": "li",
+            "id": "",
+            "class": "css-s6v87m e1jmybte0"
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][2]/*[local-name()=\"ol\"][1]/*[local-name()=\"li\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/section[2]/ol/li[4]/div/div[2]",
+        "tag": "div",
+        "id": "",
+        "class": "css-rylvsa",
+        "expected_text": "Anthropic 重磅上市——目前我们知道的五件惊人信息",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1ogrn1l"
+          },
+          {
+            "tag": "li",
+            "id": "",
+            "class": "css-1xaijnt e17x9cvu0"
+          },
+          {
+            "tag": "ol",
+            "id": "",
+            "class": "css-1oou3yz e17x9cvu0"
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "class": "css-1g7uqg9"
+          }
+        ]
+      }
+    ],
+    "match_status": "ambiguous",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "特别推荐",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"section\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[2]/div[2]/section/div/h2",
+        "tag": "h2",
+        "id": "section-label-heading-features-analysis-heading",
+        "class": "css-a5e1ct e1jnsqox1",
+        "expected_text": "特别推荐",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "e1784lya2 css-175pw82 e1jnsqox0"
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "class": "css-yr6hg1 e1784lya0"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-10pxgv6"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-t64zae"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "热门内容",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"section\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/section[2]/div/h2",
+        "tag": "h2",
+        "id": "section-label-heading-Most-Read",
+        "class": "css-a5e1ct e1jnsqox1",
+        "expected_text": "热门内容",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1xzbuyl e1jnsqox0"
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "class": "css-1g7uqg9"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1kb1fna"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-xhd3h8"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "声明以姆巴佩个人公司interconnected ventures的信笺发出，发布时间为欧洲早上、北京时间傍晚，消息传到中国后旋即登上微博热搜首位。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][10]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/main/div[10]/p",
+        "tag": "p",
+        "id": "",
+        "class": "css-yezvz5 emv7gn60",
+        "expected_text": "声明以姆巴佩个人公司Interconnected Ventures的信笺发出，发布时间为欧洲早上、北京时间傍晚，消息传到中国后旋即登上微博热搜首位。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1k9op6x e17x9cvu0"
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "class": "css-uarkay"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1nude9v"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-bg8vrv"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "姆巴佩在回答中并未点名。不过，节目后期制作加入了一张将他的面孔与毛泽东形象合成的图片，不少观众因此认为，他所指的正是毛泽东。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][17]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/main/div[17]/p",
+        "tag": "p",
+        "id": "",
+        "class": "css-yezvz5 emv7gn60",
+        "expected_text": "姆巴佩在回答中并未点名。不过，节目后期制作加入了一张将他的面孔与毛泽东形象合成的图片，不少观众因此认为，他所指的正是毛泽东。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1k9op6x e17x9cvu0"
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "class": "css-uarkay"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1nude9v"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-bg8vrv"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "bbc未能独立核实该访谈的录制及发布时间。《the bridge》官方社交媒体帐号已无法找到相关片段，节目网站亦未提供重播。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][18]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/main/div[18]/p",
+        "tag": "p",
+        "id": "",
+        "class": "css-yezvz5 emv7gn60",
+        "expected_text": "BBC未能独立核实该访谈的录制及发布时间。《The Bridge》官方社交媒体帐号已无法找到相关片段，节目网站亦未提供重播。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1k9op6x e17x9cvu0"
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "class": "css-uarkay"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1nude9v"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-bg8vrv"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "中国外交部也加入评论。发言人郭嘉昆10月27日在例行记者会上回应相关提问时说：“我们注意到有关报导。伤害中国人民感情的言行自然会遭到中国社会各界的共同抵制。”",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][24]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/main/div[24]/p",
+        "tag": "p",
+        "id": "",
+        "class": "css-yezvz5 emv7gn60",
+        "expected_text": "中国外交部也加入评论。发言人郭嘉昆10月27日在例行记者会上回应相关提问时说：“我们注意到有关报导。伤害中国人民感情的言行自然会遭到中国社会各界的共同抵制。”",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1k9op6x e17x9cvu0"
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "class": "css-uarkay"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1nude9v"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-bg8vrv"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "社论指出，他遭受的种族歧视与其此次言论性质相似，他不应一边赚中国人的钱，一边伤害中国人的感情。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][26]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/main/div[26]/p",
+        "tag": "p",
+        "id": "",
+        "class": "css-yezvz5 emv7gn60",
+        "expected_text": "社论指出，他遭受的种族歧视与其此次言论性质相似，他不应一边赚中国人的钱，一边伤害中国人的感情。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1k9op6x e17x9cvu0"
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "class": "css-uarkay"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1nude9v"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-bg8vrv"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "在微博、抖音等平台上，不少网民仍在发问：姆巴佩到底说了什么？事件缘由为何？",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][29]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/main/div[29]/p",
+        "tag": "p",
+        "id": "",
+        "class": "css-yezvz5 emv7gn60",
+        "expected_text": "在微博、抖音等平台上，不少网民仍在发问：姆巴佩到底说了什么？事件缘由为何？",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1k9op6x e17x9cvu0"
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "class": "css-uarkay"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1nude9v"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-bg8vrv"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_01.html",
+    "snapshot": "50f8e65c4a660b13ff397f6c2e107771396b722061db3ed9e03480cc0f163537",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "姆巴佩风波因此已不止是一场围绕球星言论的舆论事件，同时折射出毛泽东在当代中国社会中的特殊位置。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"main\"][1]/*[local-name()=\"div\"][32]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div/div/div/div/div[1]/main/div[32]/p",
+        "tag": "p",
+        "id": "",
+        "class": "css-yezvz5 emv7gn60",
+        "expected_text": "姆巴佩风波因此已不止是一场围绕球星言论的舆论事件，同时折射出毛泽东在当代中国社会中的特殊位置。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1k9op6x e17x9cvu0"
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "class": "css-uarkay"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-1nude9v"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "css-bg8vrv"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_02.html",
+    "snapshot": "c2dc93c18b02eda5f4100b3ec50d47c171d40ae257138b5a84aa5d71c78e7599",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "精选住宿，享至少八五折优惠 广告 booking.com 广告 访问 it之家 599美元→649美元，苹果macbook neo在美国官网教育商店涨价 盖世小鸡推出新款g7 pro手柄，《gta6》色调 12 月上线：2025 款理想 i6 官宣支持付费升级电动前备箱，产品负责人透露“价格公道” 一人霸服，资源全吃，进服送打金神器，800%爆率，神装满地 广告 一人霸服 广告",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_02.html",
+    "snapshot": "c2dc93c18b02eda5f4100b3ec50d47c171d40ae257138b5a84aa5d71c78e7599",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "精选住宿，享至少八五折优惠 广告 booking.com 广告 访问 it之家 599美元→649美元，苹果macbook neo在美国官网教育商店涨价 盖世小鸡推出新款g7 pro手柄，《gta6》色调 12 月上线：2025 款理想 i6 官宣支持付费升级电动前备箱，产品负责人透露“价格公道” 一人霸服，资源全吃，进服送打金神器，800%爆率，神装满地 广告 一人霸服 广告",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_02.html",
+    "snapshot": "c2dc93c18b02eda5f4100b3ec50d47c171d40ae257138b5a84aa5d71c78e7599",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "精选住宿，享至少八五折优惠 广告 booking.com 广告 访问 it之家 599美元→649美元，苹果macbook neo在美国官网教育商店涨价 盖世小鸡推出新款g7 pro手柄，《gta6》色调 12 月上线：2025 款理想 i6 官宣支持付费升级电动前备箱，产品负责人透露“价格公道” 一人霸服，资源全吃，进服送打金神器，800%爆率，神装满地 广告 一人霸服 广告",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_02.html",
+    "snapshot": "c2dc93c18b02eda5f4100b3ec50d47c171d40ae257138b5a84aa5d71c78e7599",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "访问 it之家 599美元→649美元，苹果macbook neo在美国官网教育商店涨价 盖世小鸡推出新款g7 pro手柄，《gta6》色调 12 月上线：2025 款理想 i6 官宣支持付费升级电动前备箱，产品负责人透露“价格公道”",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_02.html",
+    "snapshot": "c2dc93c18b02eda5f4100b3ec50d47c171d40ae257138b5a84aa5d71c78e7599",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "599美元→649美元，苹果macbook neo在美国官网教育商店涨价 盖世小鸡推出新款g7 pro手柄，《gta6》色调 12 月上线：2025 款理想 i6 官宣支持付费升级电动前备箱，产品负责人透露“价格公道”",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_02.html",
+    "snapshot": "c2dc93c18b02eda5f4100b3ec50d47c171d40ae257138b5a84aa5d71c78e7599",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "赞助内容",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"above-river-block\"][1]",
+          "./*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[4]/consumption-page/div/div[2]/above-river-block/template/div/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "heading c3",
+        "expected_text": "赞助内容",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "above-river-block",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"above-river-block\"][1]",
+          "./*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[2]/above-river-block/template/div/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "heading c3",
+        "expected_text": "赞助内容",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "above-river-block",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "ambiguous",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_02.html",
+    "snapshot": "c2dc93c18b02eda5f4100b3ec50d47c171d40ae257138b5a84aa5d71c78e7599",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "格隆汇10月28日｜谷歌deepmind周二在官网发布了genie 4，可让用户通过文字提示创建可供探索的虚拟世界，并可以使用键盘操控在其中游历。用户还可以在场景展开过程中输入指令，实时改变天气或添加角色等。谷歌表示，模拟环境最长可运行两分钟，约为上一代genie 3的两倍。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]",
+          "./*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/template/p",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "格隆汇10月28日｜谷歌DeepMind周二在官网发布了Genie 4，可让用户通过文字提示创建可供探索的虚拟世界，并可以使用键盘操控在其中游历。用户还可以在场景展开过程中输入指令，实时改变天气或添加角色等。谷歌表示，模拟环境最长可运行两分钟，约为上一代Genie 3的两倍。",
+        "containers": [
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "class": "article-reader-container"
+          },
+          {
+            "tag": "cp-article-reader",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_02.html",
+    "snapshot": "c2dc93c18b02eda5f4100b3ec50d47c171d40ae257138b5a84aa5d71c78e7599",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "广告 访问 格隆汇 美国银行：投资者连续第二周撤出美股 波罗的海干散货运价指数上涨，受海岬型船运价走强提振 双鹭药业(002038.sz)前三季净亏损3.50亿元 广告",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_02.html",
+    "snapshot": "c2dc93c18b02eda5f4100b3ec50d47c171d40ae257138b5a84aa5d71c78e7599",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "广告 访问 格隆汇 美国银行：投资者连续第二周撤出美股 波罗的海干散货运价指数上涨，受海岬型船运价走强提振 双鹭药业(002038.sz)前三季净亏损3.50亿元 广告",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_02.html",
+    "snapshot": "c2dc93c18b02eda5f4100b3ec50d47c171d40ae257138b5a84aa5d71c78e7599",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "广告 访问 格隆汇 美国银行：投资者连续第二周撤出美股 波罗的海干散货运价指数上涨，受海岬型船运价走强提振 双鹭药业(002038.sz)前三季净亏损3.50亿元 广告",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_02.html",
+    "snapshot": "c2dc93c18b02eda5f4100b3ec50d47c171d40ae257138b5a84aa5d71c78e7599",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "赞助内容",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"above-river-block\"][1]",
+          "./*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[4]/consumption-page/div/div[2]/above-river-block/template/div/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "heading c3",
+        "expected_text": "赞助内容",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "above-river-block",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"above-river-block\"][1]",
+          "./*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[5]/consumption-page/div/div[2]/above-river-block/template/div/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "heading c3",
+        "expected_text": "赞助内容",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "above-river-block",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "ambiguous",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_02.html",
+    "snapshot": "c2dc93c18b02eda5f4100b3ec50d47c171d40ae257138b5a84aa5d71c78e7599",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "谷歌首席执行官桑达尔 · 皮查伊（sundar pichai）今天在其个人账号上发布推文，称 genie 4 是谷歌迄今为止最逼真、最具互动性的世界模型。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]",
+          "./*[local-name()=\"p\"][5]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[4]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/template/p[5]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "谷歌首席执行官桑达尔 · 皮查伊（Sundar Pichai）今天在其个人账号上发布推文，称  Genie 4 是谷歌迄今为止最逼真、最具互动性的世界模型。",
+        "containers": [
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "class": "article-reader-container"
+          },
+          {
+            "tag": "cp-article-reader",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "news_02.html",
+    "snapshot": "c2dc93c18b02eda5f4100b3ec50d47c171d40ae257138b5a84aa5d71c78e7599",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "deepmind 工程师 diego rivas 承认，genie 4 仍处早期阶段；长时间模拟可能出现细节漂移，音频准确性和画面内文字可读性也尚未完全解决。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"fluent-design-system-provider\"][1]/*[local-name()=\"entry-point-views\"][1]/*[local-name()=\"consumption-feed-wc\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][4]/*[local-name()=\"consumption-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"desktop-article-content\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"msn-article-page\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"cp-article-reader\"][1]/*[local-name()=\"article\"][1]/*[local-name()=\"cp-article\"][1]",
+          "./*[local-name()=\"p\"][8]"
+        ],
+        "source_xpath": "/html/body/fluent-design-system-provider/entry-point-views/consumption-feed-wc/div/div[4]/consumption-page/div/div[1]/div[2]/div[2]/desktop-article-content/div[1]/msn-article-page/div/cp-article-reader/article/cp-article/template/p[8]",
+        "tag": "p",
+        "id": "",
+        "class": "continue-read-break",
+        "expected_text": "DeepMind 工程师 Diego Rivas 承认，Genie 4 仍处早期阶段；长时间模拟可能出现细节漂移，音频准确性和画面内文字可读性也尚未完全解决。",
+        "containers": [
+          {
+            "tag": "template",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "cp-article",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "class": "article-reader-container"
+          },
+          {
+            "tag": "cp-article-reader",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  }
+]

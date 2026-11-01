@@ -7,12 +7,14 @@ import hashlib
 import threading
 import argparse
 from bs4 import BeautifulSoup
+from review_source import marked_source
+from extract import extract_file
 
 ROOT = Path(__file__).resolve().parent
 SAVE_LOCK = threading.Lock()
 
 def snapshot(path, origin='http://127.0.0.1:8765'):
-    soup = BeautifulSoup(path.read_bytes(), 'html.parser')
+    soup = marked_source(path.read_text(encoding='utf-8', errors='ignore'))
     # Saved while scrolled: the site's JS would normally reset this sticky state
     # at scrollTop=0. Frozen snapshots must reset it explicitly instead.
     for node in soup.select('#top_bar.top-bar-fixed'):
@@ -79,6 +81,22 @@ class Handler(SimpleHTTPRequestHandler):
         if path == '/api/pages':
             data = json.dumps([p.name for p in sorted((ROOT / 'samples').glob('*.html'))]).encode()
             return self.send_bytes(data, 'application/json')
+        if path.startswith('/api/extraction/'):
+            name = path[len('/api/extraction/'):]
+            if Path(name).name != name or not name.endswith('.html'):
+                return self.send_error(400)
+            page = ROOT / 'samples' / name
+            if not page.is_file():
+                return self.send_error(404)
+            try:
+                before = hashlib.sha256(page.read_bytes()).hexdigest()
+                result = extract_file(page)
+                result['snapshot'] = hashlib.sha256(page.read_bytes()).hexdigest()
+                if before != result['snapshot']:
+                    return self.send_error(409, 'Sample changed during extraction; reload')
+                return self.send_bytes(json.dumps(result, ensure_ascii=False).encode('utf-8'), 'application/json')
+            except Exception as exc:
+                return self.send_error(500, str(exc))
         if path in ('/api/annotations', '/api/rules'):
             target = ROOT / ('reports/annotations.json' if path.endswith('annotations') else 'config/rules.json')
             with SAVE_LOCK:

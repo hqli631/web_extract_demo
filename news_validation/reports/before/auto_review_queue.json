@@ -1,0 +1,1346 @@
+[
+  {
+    "file": "collected_14a028de299edfab.html",
+    "snapshot": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "10月29日， 东方证券 合并重组上海证券迎来关键性进展。东方证券发布公告称，公司发行股份及支付现金购买资产暨关联交易申请已获得上海证券交易所并购重组审核委员会审核通过。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][2]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[2]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "10月29日， 东方证券 合并重组上海证券迎来关键性进展。东方证券发布公告称，公司发行股份及支付现金购买资产暨关联交易申请已获得上海证券交易所并购重组审核委员会审核通过。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_14a028de299edfab.html",
+    "snapshot": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "而在此前的10月27日晚间， 华鑫股份 （600621.sh）公告，控股股东上海仪电（集团）有限公司（下称“仪电集团”）与上海国盛（集团）有限公司（下称“国盛集团”）、上海国茂控股有限公司（下称“国茂控股”）签署股份转让框架协议，拟协议转让所持2.86亿股，占公司总股本的26.99%，转让价格13.85元/股，总价款39.66亿元。国盛集团受让2.33亿股，占22.00%，价款32.33亿元；国茂控股受让5293.89万股，占4.99%，价款7.33亿元。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][3]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[3]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "而在此前的10月27日晚间， 华鑫股份 （600621.SH）公告，控股股东上海仪电（集团）有限公司（下称“仪电集团”）与上海国盛（集团）有限公司（下称“国盛集团”）、上海国茂控股有限公司（下称“国茂控股”）签署股份转让框架协议，拟协议转让所持2.86亿股，占公司总股本的26.99%，转让价格13.85元/股，总价款39.66亿元。国盛集团受让2.33亿股，占22.00%，价款32.33亿元；国茂控股受让5293.89万股，占4.99%，价款7.33亿元。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_14a028de299edfab.html",
+    "snapshot": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "方案分三步走：资产置换，用地产资产换仪电集团持有的华鑫证券66%股权；发行股份购买资产，向 飞乐音响 和 上海贝岭 收购剩余24%和2%股权，合计拿下华鑫证券92%股权，交易作价约49.26亿元；募集配套资金，以10.6元/股向仪电集团、国盛资产及 中国太保 旗下产品发行股份，募资12.72亿元，用于补充华鑫证券资本金。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][7]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[7]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "方案分三步走：资产置换，用地产资产换仪电集团持有的华鑫证券66%股权；发行股份购买资产，向 飞乐音响 和 上海贝岭 收购剩余24%和2%股权，合计拿下华鑫证券92%股权，交易作价约49.26亿元；募集配套资金，以10.6元/股向仪电集团、国盛资产及 中国太保 旗下产品发行股份，募资12.72亿元，用于补充华鑫证券资本金。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_14a028de299edfab.html",
+    "snapshot": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "其一，国盛集团是上海市属国有资本投资运营公司，承担“存量运营+产业直投”功能，建设国资改革和存量盘活平台，重点开展航空航天、集成电路、重大装备等领域专项投资，并参股 国泰海通 、上海农商银行等金融机构。作为控股股东，它给华鑫股份带来的是战略性新兴行业的产业资源。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][10]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[10]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "其一，国盛集团是上海市属国有资本投资运营公司，承担“存量运营+产业直投”功能，建设国资改革和存量盘活平台，重点开展航空航天、集成电路、重大装备等领域专项投资，并参股 国泰海通 、上海农商银行等金融机构。作为控股股东，它给华鑫股份带来的是战略性新兴行业的产业资源。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_14a028de299edfab.html",
+    "snapshot": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "其三，国茂控股则是新面孔。这家公司2025年11月组建成立，注册资本130亿元，由上海国际集团、 上港集团 、申能集团等10家市属国企共同出资，定位国际化新型大宗商品贸易投资平台，以现货贸易为基础、金融期货为特色，拥有较为丰富的产业资源与业务场景。4.99%的持股，对应的是大宗商品领域的协同空间。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][12]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[12]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "其三，国茂控股则是新面孔。这家公司2025年11月组建成立，注册资本130亿元，由上海国际集团、 上港集团 、申能集团等10家市属国企共同出资，定位国际化新型大宗商品贸易投资平台，以现货贸易为基础、金融期货为特色，拥有较为丰富的产业资源与业务场景。4.99%的持股，对应的是大宗商品领域的协同空间。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_14a028de299edfab.html",
+    "snapshot": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "方案分三步走：资产置换，用地产资产换仪电集团持有的华鑫证券66%股权；发行股份购买资产，向飞乐音响上海贝岭中国太保",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_14a028de299edfab.html",
+    "snapshot": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "vip课程推荐",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][7]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[7]/div[1]/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "",
+        "expected_text": "VIP课程推荐",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "cj-l-title"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "vip-class"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_14a028de299edfab.html",
+    "snapshot": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "app专享直播",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][8]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[8]/div[1]/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "",
+        "expected_text": "APP专享直播",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "cj-l-title"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "app-viplive"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_14a028de299edfab.html",
+    "snapshot": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "热门推荐",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][9]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[9]/div[1]/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "",
+        "expected_text": "热门推荐",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "cj-l-title"
+          },
+          {
+            "tag": "div",
+            "id": "most_read",
+            "class": "most-read"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_14a028de299edfab.html",
+    "snapshot": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "收起",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_14a028de299edfab.html",
+    "snapshot": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][10]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[10]/div[2]/p",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "wx-info"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "blk-wxfollow clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_4b026cde5c5744c1.html",
+    "snapshot": "b53e3bfc9e5edd761ada80a7ff05c2d08c76500c8194a38ca9802c9b0a83dde6",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "[ 网上传播视听节目许可证(0106168) ] [ 京icp证040655号 ] [ 京公网安备 11010202009201号 ] [ 京icp备2021034286号-7 ] [ 互联网宗教信息服务许可证：京(2022)0000118；京(2022)0000119 ] [ 互联网新闻信息服务许可证10120180010 ] 违法和不良信息举报平台 举报邮箱：jubao@chinanews.com.cn 举报受理和处置管理办法 总机：86-10-87826688 copyright ©1999-2026 chinanews.com. all rights reserved",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_4b026cde5c5744c1.html",
+    "snapshot": "b53e3bfc9e5edd761ada80a7ff05c2d08c76500c8194a38ca9802c9b0a83dde6",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "[ 网上传播视听节目许可证(0106168) ] [ 京icp证040655号 ] [ 京公网安备 11010202009201号 ] [ 京icp备2021034286号-7 ] [ 互联网宗教信息服务许可证：京(2022)0000118；京(2022)0000119 ] [ 互联网新闻信息服务许可证10120180010 ] 违法和不良信息举报平台 举报邮箱：jubao@chinanews.com.cn 举报受理和处置管理办法 总机：86-10-87826688",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][11]/*[local-name()=\"div\"][3]/*[local-name()=\"div\"][1]"
+        ],
+        "source_xpath": "/html/body/div[11]/div[3]/div[1]",
+        "tag": "div",
+        "id": "",
+        "class": "des",
+        "expected_text": "[ 网上传播视听节目许可证(0106168) ] [ 京ICP证040655号 ] [\n\n                         京公网安备 11010202009201号 ] [ 京ICP备2021034286号-7 ] [ 互联网宗教信息服务许可证：京(2022)0000118；京(2022)0000119 ] \n\n                                   [ 互联网新闻信息服务许可证10120180010 ] 违法和不良信息举报平台  举报邮箱：jubao@chinanews.com.cn  举报受理和处置管理办法   总机：86-10-87826688",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "pagebottom_nr"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "pagebottom"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_4fdd3a7b48c5a575.html",
+    "snapshot": "305e22fd4b5146f48dc9c96e77293385a4e60efc664c68bf3941166d5112d294",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "[ 网上传播视听节目许可证(0106168) ] [ 京icp证040655号 ] [ 京公网安备 11010202009201号 ] [ 京icp备2021034286号-7 ] [ 互联网宗教信息服务许可证：京(2022)0000118；京(2022)0000119 ] [ 互联网新闻信息服务许可证10120180010 ] 违法和不良信息举报平台 举报邮箱：jubao@chinanews.com.cn 举报受理和处置管理办法 总机：86-10-87826688 copyright ©1999-2026 chinanews.com. all rights reserved",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_4fdd3a7b48c5a575.html",
+    "snapshot": "305e22fd4b5146f48dc9c96e77293385a4e60efc664c68bf3941166d5112d294",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "[ 网上传播视听节目许可证(0106168) ] [ 京icp证040655号 ] [ 京公网安备 11010202009201号 ] [ 京icp备2021034286号-7 ] [ 互联网宗教信息服务许可证：京(2022)0000118；京(2022)0000119 ] [ 互联网新闻信息服务许可证10120180010 ] 违法和不良信息举报平台 举报邮箱：jubao@chinanews.com.cn 举报受理和处置管理办法 总机：86-10-87826688",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][11]/*[local-name()=\"div\"][3]/*[local-name()=\"div\"][1]"
+        ],
+        "source_xpath": "/html/body/div[11]/div[3]/div[1]",
+        "tag": "div",
+        "id": "",
+        "class": "des",
+        "expected_text": "[ 网上传播视听节目许可证(0106168) ] [ 京ICP证040655号 ] [\n\n                         京公网安备 11010202009201号 ] [ 京ICP备2021034286号-7 ] [ 互联网宗教信息服务许可证：京(2022)0000118；京(2022)0000119 ] \n\n                                   [ 互联网新闻信息服务许可证10120180010 ] 违法和不良信息举报平台  举报邮箱：jubao@chinanews.com.cn  举报受理和处置管理办法   总机：86-10-87826688",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "pagebottom_nr"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "pagebottom"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_4fdd3a7b48c5a575.html",
+    "snapshot": "305e22fd4b5146f48dc9c96e77293385a4e60efc664c68bf3941166d5112d294",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "请提高警惕，仔细甄别信息真伪，谨防上当受骗。如发现此类虚假宣传、涉嫌诈骗线索，请及时向公安机关报案。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][7]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][6]"
+        ],
+        "source_xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "请提高警惕，仔细甄别信息真伪，谨防上当受骗。如发现此类虚假宣传、涉嫌诈骗线索，请及时向公安机关报案。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "left_zw"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_content"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_more"
+          },
+          {
+            "tag": "div",
+            "id": "cont_1_1_2",
+            "class": "content"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_af5904c15d1deebc.html",
+    "snapshot": "c6348f97447c665018d507e3ed78a99a2d0989b13bc60087bb075bc8680ce4c4",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "10月29日晚间， 博盈特焊 公告，拟通过发行股份及支付现金相结合的方式，用4.95亿元向和时天成、张政、饶建荣、苏宣江、苏州国品、信海翰、联莱共创7名交易对方，购买其合计持有的苏州罗克莱海洋装备股份有限公司（以下简称“罗克莱”）55%股份，同时，公司拟向不超过35名特定投资者发行股份募集配套资金。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "10月29日晚间， 博盈特焊 公告，拟通过发行股份及支付现金相结合的方式，用4.95亿元向和时天成、张政、饶建荣、苏宣江、苏州国品、信海翰、联莱共创7名交易对方，购买其合计持有的苏州罗克莱海洋装备股份有限公司（以下简称“罗克莱”）55%股份，同时，公司拟向不超过35名特定投资者发行股份募集配套资金。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_af5904c15d1deebc.html",
+    "snapshot": "c6348f97447c665018d507e3ed78a99a2d0989b13bc60087bb075bc8680ce4c4",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "vip课程推荐",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][7]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[7]/div[1]/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "",
+        "expected_text": "VIP课程推荐",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "cj-l-title"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "vip-class"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_af5904c15d1deebc.html",
+    "snapshot": "c6348f97447c665018d507e3ed78a99a2d0989b13bc60087bb075bc8680ce4c4",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "app专享直播",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][9]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[9]/div[1]/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "",
+        "expected_text": "APP专享直播",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "cj-l-title"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "app-viplive"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_af5904c15d1deebc.html",
+    "snapshot": "c6348f97447c665018d507e3ed78a99a2d0989b13bc60087bb075bc8680ce4c4",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "热门推荐",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][10]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[10]/div[1]/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "",
+        "expected_text": "热门推荐",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "cj-l-title"
+          },
+          {
+            "tag": "div",
+            "id": "most_read",
+            "class": "most-read"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_af5904c15d1deebc.html",
+    "snapshot": "c6348f97447c665018d507e3ed78a99a2d0989b13bc60087bb075bc8680ce4c4",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "收起",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_af5904c15d1deebc.html",
+    "snapshot": "c6348f97447c665018d507e3ed78a99a2d0989b13bc60087bb075bc8680ce4c4",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][11]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[11]/div[2]/p",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "wx-info"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "blk-wxfollow clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_c2d1dbf788829343.html",
+    "snapshot": "52a4220f77485575658a438491db4c3fa531dd8af184f5384d38a94147b364f4",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "[ 网上传播视听节目许可证(0106168) ] [ 京icp证040655号 ] [ 京公网安备 11010202009201号 ] [ 京icp备2021034286号-7 ] [ 互联网宗教信息服务许可证：京(2022)0000118；京(2022)0000119 ] [ 互联网新闻信息服务许可证10120180010 ] 违法和不良信息举报平台 举报邮箱：jubao@chinanews.com.cn 举报受理和处置管理办法 总机：86-10-87826688 copyright ©1999-2026 chinanews.com. all rights reserved",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_c2d1dbf788829343.html",
+    "snapshot": "52a4220f77485575658a438491db4c3fa531dd8af184f5384d38a94147b364f4",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "[ 网上传播视听节目许可证(0106168) ] [ 京icp证040655号 ] [ 京公网安备 11010202009201号 ] [ 京icp备2021034286号-7 ] [ 互联网宗教信息服务许可证：京(2022)0000118；京(2022)0000119 ] [ 互联网新闻信息服务许可证10120180010 ] 违法和不良信息举报平台 举报邮箱：jubao@chinanews.com.cn 举报受理和处置管理办法 总机：86-10-87826688",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][11]/*[local-name()=\"div\"][3]/*[local-name()=\"div\"][1]"
+        ],
+        "source_xpath": "/html/body/div[11]/div[3]/div[1]",
+        "tag": "div",
+        "id": "",
+        "class": "des",
+        "expected_text": "[ 网上传播视听节目许可证(0106168) ] [ 京ICP证040655号 ] [\n\n                         京公网安备 11010202009201号 ] [ 京ICP备2021034286号-7 ] [ 互联网宗教信息服务许可证：京(2022)0000118；京(2022)0000119 ] \n\n                                   [ 互联网新闻信息服务许可证10120180010 ] 违法和不良信息举报平台  举报邮箱：jubao@chinanews.com.cn  举报受理和处置管理办法   总机：86-10-87826688",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "pagebottom_nr"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "pagebottom"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_c2d1dbf788829343.html",
+    "snapshot": "52a4220f77485575658a438491db4c3fa531dd8af184f5384d38a94147b364f4",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "这次修订的主要内容包括如下4个方面：贯彻落实上位法规定要求，进一步保障当事人合法权益，进一步规范公安机关执法行为，进一步健全衔接机制、严密执法程序。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][7]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][2]"
+        ],
+        "source_xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "这次修订的主要内容包括如下4个方面：贯彻落实上位法规定要求，进一步保障当事人合法权益，进一步规范公安机关执法行为，进一步健全衔接机制、严密执法程序。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "left_zw"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_content"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_more"
+          },
+          {
+            "tag": "div",
+            "id": "cont_1_1_2",
+            "class": "content"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_c2d1dbf788829343.html",
+    "snapshot": "52a4220f77485575658a438491db4c3fa531dd8af184f5384d38a94147b364f4",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "公众可以通过以下途径和方式提出意见建议：",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][7]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][3]"
+        ],
+        "source_xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "公众可以通过以下途径和方式提出意见建议：",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "left_zw"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_content"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_more"
+          },
+          {
+            "tag": "div",
+            "id": "cont_1_1_2",
+            "class": "content"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_c2d1dbf788829343.html",
+    "snapshot": "52a4220f77485575658a438491db4c3fa531dd8af184f5384d38a94147b364f4",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "1、通过公安部网站(www.mps.gov.cn)查阅公开征求意见稿。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][7]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][4]"
+        ],
+        "source_xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "1、通过公安部网站(www.mps.gov.cn)查阅公开征求意见稿。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "left_zw"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_content"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_more"
+          },
+          {
+            "tag": "div",
+            "id": "cont_1_1_2",
+            "class": "content"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_c2d1dbf788829343.html",
+    "snapshot": "52a4220f77485575658a438491db4c3fa531dd8af184f5384d38a94147b364f4",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "2、通过邮件将意见发送至：fazhijumps@163.com.",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][7]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][5]"
+        ],
+        "source_xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "2、通过邮件将意见发送至：fazhijumps@163.com.",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "left_zw"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_content"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_more"
+          },
+          {
+            "tag": "div",
+            "id": "cont_1_1_2",
+            "class": "content"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_c2d1dbf788829343.html",
+    "snapshot": "52a4220f77485575658a438491db4c3fa531dd8af184f5384d38a94147b364f4",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "意见反馈截止时间为2026年11月28日。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][7]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][7]"
+        ],
+        "source_xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "意见反馈截止时间为2026年11月28日。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "left_zw"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_content"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_more"
+          },
+          {
+            "tag": "div",
+            "id": "cont_1_1_2",
+            "class": "content"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_c5d4b9cdcf5b4c91.html",
+    "snapshot": "90cd0ef9d6c814125d32242d1da9b37be789fe19e4fa8a08581069b336924088",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "责任编辑：石秀珍 sf183",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][23]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[23]",
+        "tag": "p",
+        "id": "",
+        "class": "article-editor",
+        "expected_text": "责任编辑：石秀珍 SF183",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "artibody",
+            "class": "article"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main-content w1240"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_c5d4b9cdcf5b4c91.html",
+    "snapshot": "90cd0ef9d6c814125d32242d1da9b37be789fe19e4fa8a08581069b336924088",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "vip课程推荐",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][7]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[7]/div[1]/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "",
+        "expected_text": "VIP课程推荐",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "cj-l-title"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "vip-class"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_c5d4b9cdcf5b4c91.html",
+    "snapshot": "90cd0ef9d6c814125d32242d1da9b37be789fe19e4fa8a08581069b336924088",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "app专享直播",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][9]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[9]/div[1]/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "",
+        "expected_text": "APP专享直播",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "cj-l-title"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "app-viplive"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_c5d4b9cdcf5b4c91.html",
+    "snapshot": "90cd0ef9d6c814125d32242d1da9b37be789fe19e4fa8a08581069b336924088",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "热门推荐",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][10]/*[local-name()=\"div\"][1]/*[local-name()=\"h2\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[10]/div[1]/h2",
+        "tag": "h2",
+        "id": "",
+        "class": "",
+        "expected_text": "热门推荐",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "cj-l-title"
+          },
+          {
+            "tag": "div",
+            "id": "most_read",
+            "class": "most-read"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_c5d4b9cdcf5b4c91.html",
+    "snapshot": "90cd0ef9d6c814125d32242d1da9b37be789fe19e4fa8a08581069b336924088",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "收起",
+    "evidence": [],
+    "match_status": "unresolved",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_c5d4b9cdcf5b4c91.html",
+    "snapshot": "90cd0ef9d6c814125d32242d1da9b37be789fe19e4fa8a08581069b336924088",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][11]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[2]/div[4]/div[1]/div[11]/div[2]/p",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "24小时滚动播报最新的财经资讯和视频，更多粉丝福利扫描二维码关注（sinafinance）",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "wx-info"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "blk-wxfollow clearfix"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content-left"
+          },
+          {
+            "tag": "div",
+            "id": "article_content",
+            "class": "article-content clearfix"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  }
+]

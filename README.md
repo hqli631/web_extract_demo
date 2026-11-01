@@ -24,6 +24,10 @@ start_review.ps1      启动复核服务
 run.ps1               运行静态抽取流程
 apply_review.py       根据CSV人工标签生成修正结果
 evaluate.py           评估人工已确认区域，生成错例和规则建议
+compare_extractors.py 比较当前启发式抽取器与 Trafilatura 的页面级结果
+dom_evidence.py       将差异文本定位回原始快照 DOM，保留 Shadow DOM 定位边界
+ai_review.py          导出 AI 审核任务、校验建议、生成独立正文修正候选
+requirements.txt      Python 运行依赖
 capture_page.js       在浏览器中重新保存当前渲染页面
 collect_pages.py      定向采集静态 HTML
 config/               采集配置和已启用的 XPath 规则
@@ -38,7 +42,7 @@ REVIEW_GUIDE.md       定位复核详细说明
 Windows、PowerShell、Python 3.10+、Chrome或Edge。项目脚本会优先使用 `.venv`，否则使用配置的Python解释器。换电脑时可安装依赖：
 
 ```powershell
-python -m pip install beautifulsoup4 lxml
+python -m pip install -r requirements.txt
 ```
 
 ## 运行静态抽取
@@ -205,6 +209,63 @@ Precision 低意味着正文混入杂质；Recall 低意味着漏提正文。没
 
 这一步实现“自动找差异、生成候选修正规则、复用已验证规则”，不是无人监督的模型训练。规则在同一页上修好后的分数只代表样本内效果。每种模板至少留 2 个页面只用于验证，不根据这些页面修改规则；上线前还需单独建立足量测试集。
 
+### 新增：自动比较两种正文抽取器
+
+`compare_extractors.py` 会将当前启发式提取器与 Trafilatura 的结果按页面比较，输出双方独有的段落候选。它不写入 `annotations.json`，也不会擅自把差异改成标签；两种算法意见一致仍可能同时漏掉正文。
+
+在项目目录新建一个 PowerShell 终端，安装依赖到项目本地目录：
+
+```powershell
+cd "D:\codex project\web_extract_demo"
+& "C:\Users\35516\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" -m pip install --target .deps -r requirements.txt
+$env:PYTHONPATH = ".deps"
+& "C:\Users\35516\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" .\compare_extractors.py --sample collected_855c0d89cc5b8f45.html
+```
+
+把最后一个文件名替换成 `samples` 里的 HTML 文件名。先从一个 AI 湾楼主帖子开始，再分别试一篇新闻和一篇博客。检查 `reports/extractor_comparison.md` 的页面摘要和双方独有段落；完整文本在同目录 JSON。当前独有段落是“可能误提”，基线独有段落是“可能漏提”，先比较候选区域和 DOM，再把确认后的模板规则加入规则配置。不要根据单页分歧直接改成全站通用规则。
+
+如果安装依赖时报网络连接错误，先保留报错内容；采集代理设置与 Python 包下载代理是两套配置。安装成功后，`[ERROR] 缺少 Trafilatura` 不应再出现。
+
+不带 `--sample` 运行可批量比较 `samples/*.html`。同时生成 `reports/extractor_comparison.html`：直接用浏览器打开此文件即可查看左右正文和可展开差异，不需要重启服务。服务仍在 8768 运行时也可访问 `http://127.0.0.1:8768/reports/extractor_comparison.html`。报告展示静态抽取流程，不改变 `visual_review.html` 的标签。
+
+`empty_output` 仅表示至少一种算法没有输出正文，不表示原网页没有内容。浏览器快照中的正文可能位于声明式 Shadow DOM 的 `<template shadowrootmode>` 内；静态提取与 Trafilatura 对比现在都先在副本中展开这些模板，再解析文本。原样本不改动，普通未启用的 template 不参与提取。此处理不等同浏览器的 slot 分配或可见性计算，仍可能包含隐藏/重复内容，需要继续做结构过滤。
+
+送入 Trafilatura 的 HTML 副本还会移除内联 `style`，避免浏览器捕获的巨量计算样式影响筛选；原快照和当前提取器输入不作同样的样式移除。两种输出字符数差异不能解释为准确率提升。
+
+### 自动差异队列与 XPath 依据
+
+每次运行比较脚本，同时生成 `reports/auto_review_queue.json`，对比页展开差异候选后可查看 DOM / XPath 定位依据：
+
+- `possible_extra` / `exclude_candidate`：当前独有内容，可能需要排除。
+- `possible_missing` / `include_candidate`：基线独有内容，可能需要保留。
+- `unique`：找到一个包含该文本的候选块；`ambiguous`：匹配多处；`unresolved`：未定位。文本定位成功不等于标签判断正确。
+- `locator`：原始快照定位链，跨 Shadow DOM 时分段。`source_xpath`：包含 template 的原始文件结构路径，不能直接当浏览器 Shadow DOM XPath 使用。
+- `snapshot`、`expected_text`、`containers`：分别用于快照校验、匹配文本核验和祖先容器分析。最多列出三个匹配，不自动把长段模糊匹配到整页。
+- 所有候选 `enabled=false`；普通差异项 `reviewed=false`，来源为 `algorithm_disagreement`。不写入人工真值，也不自动启用 XPath 规则。提取器为空时只生成诊断项，避免把另一方整篇文章误列为标签错误。
+
+下一阶段可让 AI 读取队列中的文本和 DOM 证据返回建议，再检查快照、定位范围和跨页表现后启用规则。当前没有调用云端或本地 AI；页面内容仅作为待分析数据，不应作为模型执行指令。未定位、重复匹配与纯格式分歧仍需要后续处理。`visual_review.html` 仍使用原浏览器预测流程，本工具不会直接更新其标注。
+
+### 已实现：对话 AI 审核结果导入与修正候选
+
+新增 `ai_review.py` 支持离线审核闭环。首批 `blog_01.html` 的 12 条唯一定位差异由当前对话中的 AI 审核：8 条建议保留正文，4 条建议排除推广或侧栏。未调用外部 API，也不是程序独立运行模型。此样本内审核不构成独立准确率测试。
+
+打开 `reports/ai_review.html` 查看 AI 决策、理由与按建议生成的正文候选。`reports/ai_review_response.json` 是该批原始建议，`ai_review_tasks.json` 是任务包，`ai_review_suggestions.json` 是经过本地校验的建议；`output/ai_corrected_results.json` 包含正文候选和各块是否实际改变。原始输出、样本、人工标注和规则配置均不覆盖。
+
+需要重新生成这批任务或重新导入建议时：
+
+```powershell
+cd "D:\codex project\web_extract_demo"
+$env:PYTHONPATH = ".deps"
+& "C:\Users\35516\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" .\ai_review.py prepare --limit 12
+& "C:\Users\35516\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" .\ai_review.py import --response .\reports\ai_review_response.json
+```
+
+任务 ID 由文件、快照、差异和证据生成。若重新采集/修改页面、改变差异队列，旧建议可能不再匹配，必须重新审核，不应强行套用。`prepare` 选取前 N 条唯一定位候选，不自动跳过先前审核过的条目。
+
+可把任务包作为数据交给选定的模型服务，返回 `{"decisions":[{"id":"任务ID","decision":"body|noise|metadata|uncertain","reason":"依据"}]}` 后导入。`body` 保留正文，`noise` 排除，`metadata` 从纯正文中排除但保留在建议记录中，`uncertain` 不改变结果。只对原始快照中唯一定位、整块文本匹配、并能在静态区域中唯一对应的条目生成修正候选；局部、重复或未定位的结果不整块套用。未知 ID、重复 ID、源文件变化或伪造定位被拒绝，AI 不允许自带新 XPath。浏览器复核页尚未接入此候选，后续可统一输出并在新页面验证规则复用。
+
+报告将空输出列为 `empty_output`、不足 100 字的结果列为 `short_output`，这些状态是排查提示，不代表短文章必然错误。相似度使用去空白后字符五元组的对称 Dice，范围为 0–1，不是准确率；标点、段落边界和基线漏提仍会造成分歧。JSON 记录快照哈希、双方正文和全部差异。静态提取器现在检查祖先导航/侧栏/页脚，排除文章容器之外的站点页头，同时保留文章内部 header 中的标题；浏览器检测流程尚未同步这些静态规则。
+
 ### 第五步：定向采集更多网页
 
 新增 `collect_pages.py` 和 `config/collection.json`。配置默认为空，避免在不知道目标网站时抓取无关内容。将实际可访问的列表页、文章页、RSS 或 sitemap URL 填入 `seeds`，将精确主机名填入 `allowed_domains`，`article_url_pattern` 用正则限制要保存的文章 URL。例如以下只是配置格式，需换成自己的网址：
@@ -279,8 +340,121 @@ AI 湾帖子建议以楼主原帖正文为目标，标题、时间、作者单�
 
 头条静态空壳需在正常浏览器中确认文章确实加载后，用 `capture_page.js` 保存渲染快照；HTTP 200 并不能确定原因是客户端渲染还是站点拦截。新浪本轮没有抓取文章正文，不能据此断言文章本身不可访问；本轮保留域名限制，未扩大允许范围。
 
+### 当前对话 AI 审核（2026-10-30）
+
+已由当前对话中的 AI 阅读差异文本、DOM 容器与文章标题，填写 `reports/ai_review_response.json`；没有调用外部模型 API。它是保存下来的本轮审核判断，不是运行脚本就会自动产生的新 AI 判断。
+
+本轮原始队列 150 条差异，其中 71 条能唯一定位，去重后为 69 条，已全部审核：36 条正文、29 条杂质、4 条元数据。68 条已应用到正文候选，实际改变 56 个区域；1 条因静态区域重复匹配未应用。另 79 条定位不明确或未找到的原始差异尚未审核修正。
+
+| 文件 | 本轮用途 |
+|---|---|
+| `reports/ai_review.html` | 直接打开查看逐页诊断、修正候选、审核原因与 XPath；审核详情可展开 |
+| `reports/ai_review_tasks.json` | 当前快照对应的待审核文本与定位证据 |
+| `reports/ai_review_response.json` | 当前对话 AI 给出的标签、理由和页面诊断 |
+| `reports/ai_review_suggestions.json` | 校验快照、任务指纹和 DOM 后的建议；不是人工真值 |
+| `output/ai_corrected_results.json` | 修正候选及实际变更记录；不覆盖原始抽取结果 |
+| `reports/article_context.json` | MSN 多文章快照中核实的局部文章标题，辅助说明混入来源 |
+
+可重新校验并生成相同快照的本轮报告：
+
+```powershell
+cd "D:\codex project\web_extract_demo"
+$env:PYTHONPATH = ".deps"
+& "C:\Users\35516\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" .\ai_review.py import --response .\reports\ai_review_response.json
+```
+
+更新样本后应先重新生成比较和任务，不能直接复用旧决策；旧响应绑定文件快照与任务指纹，校验不通过会拒绝应用。本轮报告不会直接修改 `visual_review.html` 的标签、人工标注或可复用 XPath 规则。
+
+本轮发现：MSN 快照包含多篇独立文章，`article` 容器不代表全部属于目标文章；短正文被 80 字阈值漏掉；导航目录和话题列表被当成文章。`collected_911f560fdd154136.html` 移出标题后候选为空，是短原帖正文漏提未解决，不能据此认为原网页没内容。
+
+下一步依次推进：先识别详情页/列表页并限定目标文章容器；再为短段落、原帖列表和 Shadow DOM 完善定位，解决剩余差异；将已审核结论归纳为候选 XPath 规则，在同模板的其他页面验证后再启用；最后才扩大定向采集。AI 建议保持独立来源，不用于冒充人工准确率或模型训练结果。
+
+### 正文范围优化第二轮
+
+本轮将审核发现落实到静态提取器 `extract.py`，正文范围选择集中在 `content_scope.py`：
+
+- AI 湾使用 `#floor-1 .md-body:not(.signature-md)` 保留楼主原帖，排除签名、回复和侧栏；原帖内短段落、列表项一并保留。
+- 新浪使用 `#artibody`；具有标准语义标记的页面优先使用 `[itemprop="articleBody"]`。
+- MSN 多文章快照按 `consumption-page` 的 H1 与文档标题唯一匹配，提取该页内的 article；不能唯一匹配时暂缓，避免把多篇文章拼接起来。
+- BBC 样本使用正文段落上的 `data-sticky-nav-anchor` 及正文小标题，避免依赖自动生成的 CSS 类名。
+- 话题列表和重复的网站目录卡片标记为 `listing` / `not_article`，不把它们的空文章输出当作故障。
+- 修复广告标识的误匹配：`continue-read-break` 不再因包含 `ad-` 而被排除。文章标题、责任编辑及部分声明单列为元数据。
+
+当前 11 页重跑结果在 `reports/scope_v2/progress.html`，新版与 Trafilatura 的差异在同目录的 `extractor_comparison.html`，完整提取结果在 `output/scoped_results.json`。之前的 AI 审核报告、队列与人工标注保持不变。复现命令：
+
+```powershell
+$env:PYTHONPATH = ".deps"
+& "C:\Users\35516\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" .\compare_extractors.py --reports-dir .\reports\scope_v2
+& "C:\Users\35516\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" .\check_scope_regression.py
+```
+
+此前 AI 审核的 69 条开发样例全部符合本轮提取预期；公告原帖从仅提取 24 字标题改为 208 字正文。差异队列从 150 条减少到 27 条，其中包括列表页退出文章对比的影响。上述数字是开发回归与算法差异，不是独立准确率。新模板仍可能不适配，未知页面沿用旧长度规则并返回警告。
+
+当前浏览器复核页和静态提取器仍使用不同算法。本轮改进通过上述新报告查看，刷新 `visual_review.html` 不会自动获得本轮范围判断。下一步应在未参与规则修改的同站新页面验证，并单独处理新版 27 条差异中的格式、推荐模块和真实漏提，再考虑同步浏览器检测。
+
+### 第三轮：审核剩余差异并验证新页面
+
+最新入口是 `reports/scope_v3/progress.html`，可查看全部现有页面的第三轮正文、每条差异的审核理由，以及 3 个新帖子上的验证结果。`output/scoped_results_v3.json` 是对应的开发样本提取结果。旧报告保留作为前后对照。
+
+当前对话 AI 已审核第二轮剩余的 27 条差异，结果保存在 `reports/scope_v2/difference_audit.json`，绑定原队列哈希与样本快照：
+
+- 一条真实误提：文章容器内的独立「专题：…」链接。规则仅排除链接独占的专题段落，保留叙述中讨论专题的文字。
+- 四条格式差异：基线添加 `- ` 等列表前缀。比较时归一化，不修改保存的网页或原始正文；真正缺失的列表项仍报告差异。
+- 剩余 22 条是有审核依据的算法分歧，包括基线漏正文、删改段落内容、拼入打赏控件、保留推荐入口或元数据。保留当前提取，不为追求两算法完全一致而补入杂质。
+
+`build_iteration_report.py` 按同文件、同快照、同差异类型、同归一化文本对照已保存审核；新出现或已变更的内容会标为未审核，不会自动继承旧结论。它重放当前对话的判断，不会在后台调用 AI。输出中的“0 条无审核依据”只针对当前这 22 条差异，不表示整页已经没有错误。
+
+另从既有页面链接中选择 `/forum/t/93`、`/forum/t/92`、`/forum/t/91`，与原 5 个开发帖子 URL 不重合。采集配置在 `config/collection_holdout.json`，快照、来源清单、提取代码哈希、当前对话 AI 的逐页审核分别保存在 `validation_holdout/` 下，未覆盖开发样本。帖子 92 首次请求超时，重试成功；初次和重试记录分别保留。三个新帖子均符合本轮 AI 对原帖边界的判断，正文和文内来源保留，返回/引用/举报/打赏/收藏控件排除。它们仅覆盖同一论坛模板，不能当作跨站准确率或人工真值。
+
+重新生成最新报告：
+
+```powershell
+$env:PYTHONPATH = ".deps"
+& "C:\Users\35516\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" .\compare_extractors.py --reports-dir .\reports\scope_v3
+& "C:\Users\35516\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" .\build_iteration_report.py
+```
+
+新页面验证使用冻结的提取代码哈希和快照。代码变化后脚本会拒绝沿用旧“冻结验证”的说法，需要建立新一轮验证记录。下一阶段应扩展新闻站或不同论坛模板，并让浏览器复核页使用同一份正文范围结果，以减少两套算法造成的展示差异。
+
 ### 正文优先显示的修正
 
 正文主容器与正文标签是两个独立概念。旧版只显示主容器内区域，会隐藏论坛列表其他行中已标为正文的内容；现已改为“正文优先（含区外正文）”，保留主区内区域，以及任何位置标为 `body`/`missing` 的区域。它只改变框和卡片筛选，不改变正文预览/保存内容的筛选。正文预览仍按最终正文标签拼接。
 
-当前浏览器算法：检测可见 DOM 段落/列表项/表格单元等，去除父子重复；根据祖先 id/class 和标签识别导航、广告、侧栏、评论等，未命中时以 80 字符为正文候选阈值；聚合可见候选文本选择一个主容器，主区内短 p/li/pre/blockquote/h2/h3 从待判断提升为正文；依次应用 XPath 规则，最后恢复同快照人工真值。主容器评分为启发式，长列表上可能只选择第一行，不能以它作为正文完整性的保证。列表页卡片是摘要，不能等同链接文章全文；需要全文时需另外采集详情页。静态 extract.py 与浏览器复核流程使用不同的区域划分，旧 output/results.json 不代表新版复核结果。
+当前浏览器正文判断已统一（2026-10-30）：`GET /api/extraction/<文件名>` 直接调用 `extract.py`，使用 `content_scope.py` 选择目标正文。正文高亮、预览和导出以这份结果的文本及顺序为起点，不再在浏览器内通过80字阈值或主容器评分另判正文。`review_source.py` 在内存副本中为每个原始 DOM 节点赋予稳定 ID，让静态区域映射回快照，包括开放 Shadow DOM；不改写样本文件。框显示受页面可见性限制：隐藏节点标记 `hidden`，不可定位（例如关闭的 Shadow DOM）标记 `unmapped`，正文仍留在预览和导出中，不假装它们不存在。
+
+浏览器仍为其他可见区域细分广告、导航、侧栏等标签，但不能因此新增正文。默认“正文优先”展示共享预测的正文和最终被保留的区域；取消勾选后可查看其他区域。列表页 `listing` 的正文为空属于正常结果；应采集其链接指向的详情页。
+
+应用顺序是：共享静态预测 → 本文件的 XPath 规则（后写优先）→ 同快照、同定位链且同文本的已确认修正。`predicted_label` 保留规则后的预测，`label` 是最终标注。右侧预览及导出使用最终标注，因此应用规则或人工修正后可以与基础提取结果不同。修正继续自动保存至 `reports/annotations.json`；这些浏览器修正不会自动覆盖基础 `output/results.json`，训练与批量规则发布仍需独立验证。未重新运行提取脚本的历史报告也不会自动更新。
+
+运行新版界面：
+
+```powershell
+cd "D:\codex project\web_extract_demo"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\start_review.ps1 -Port 8769
+```
+
+打开本次终端打印的 `Open http://127.0.0.1:端口/visual_review.html`。端口被占用时程序会另选端口；必须打开新地址，单纯刷新旧服务不会加载新的 Python 接口。接口不可用时页面明确报错，不会退回另一套正文判断。
+
+本轮验证：`tests/test_review_source.py` 检查静态区域和快照身份一致、重复段落不合并、源文件不变；`tests/browser_review.cjs` 检查共享正文一致、隐藏/不可定位正文、Shadow DOM、XPath 规则、保存恢复和接口失败；`tests/smoke_samples.cjs` 在禁止外部资源的浏览器中逐页检查现有样本，输出 `reports/browser_sync/regression.json`。这些是功能与一致性回归，不是正文准确率或视觉还原度评测。
+
+下一步优先扩展一个新闻模板的详情页样本，给新样本保存快照与 AI 审核依据，再比较漏提/误提并验证可复用规则。旧 `validation_holdout` 保持冻结；本轮修改代码后不能沿用旧代码哈希作为新版本的独立验证结论。
+
+### 新闻站点扩展与可重复回归（2026-10-30）
+
+已根据 `config/collection_news.json` 从中新网国内频道、新浪财经首页发现并采集各3篇详情页，遵循站点 robots、域名白名单、请求间隔及抓取上限。原始快照、来源 URL、采集日志、改进前后对比均位于 `news_validation/`；通过审核预期检查的6页已复制到主项目 `samples/`，总计17页，可在复核页下拉框中切换。
+
+当前对话 AI 阅读原始正文与35条算法差异，保存 `news_validation/reports/ai_audit.json` 和 `difference_audit.json`。前者记录完整正文段落、顺序、排除内容与样本哈希；后者记录逐条分歧的判定依据。它们是本轮 AI 开发预期，不是人工真值、训练结果或独立测试集。后续运行不会自动生成新的 AI 审核判断；新页面标记为 `unreviewed`，变更快照标记为 `stale`，均禁止发布。
+
+本轮修复：中新网使用唯一 `.left_zw` 容器及标题中的站点标识限定正文，排除页脚版权并保留短提示、反馈步骤、截止日期；独立记者署名及括号内“文章来源”单列，不把叙述句里提及记者的内容误删。新浪正文内的股票链接和短小标题保持完整；Trafilatura 的遗漏及推广混入不作为真值照抄。
+
+重跑保存样本的比较和审核回归：
+
+```powershell
+cd "D:\codex project\web_extract_demo"
+$env:PYTHONPATH = ".deps"
+& "C:\Users\35516\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" .\run_news_validation.py
+```
+
+加 `--collect` 会按配置尝试发现新文章，执行去重并保存来源；新文章需要新审核记录后才能通过检查。加 `--publish` 只会将全部匹配现有审核预期的批次加入主项目，拒绝覆盖不同内容的同名文件。
+
+查看 `news_validation/reports/progress.html` 可展开每页正文及回归细节，并进入改进前后对比；`regression.json` 保存6页的逐页结果，`legacy_regression.json` 保存此前69条开发样例的回归结果。重新启动复核服务才会载入新的 Python 正文规则。

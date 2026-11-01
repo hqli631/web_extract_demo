@@ -1,0 +1,28 @@
+{
+  "targets": [
+    {
+      "name": "chinanews",
+      "seeds": ["https://www.chinanews.com.cn/china/"],
+      "allowed_domains": ["www.chinanews.com.cn"],
+      "article_url_pattern": "^https://www\\.chinanews\\.com\\.cn/gn/[0-9]{4}/[0-9]{2}-[0-9]{2}/[0-9]+\\.shtml$",
+      "discovery_url_pattern": "^https://www\\.chinanews\\.com\\.cn/gn/[0-9]{4}/[0-9]{2}-[0-9]{2}/[0-9]+\\.shtml$",
+      "max_pages": 3,
+      "max_fetches": 5,
+      "max_depth": 1,
+      "delay_seconds": 1,
+      "min_text_chars": 200
+    },
+    {
+      "name": "sina_finance",
+      "seeds": ["https://finance.sina.com.cn/"],
+      "allowed_domains": ["finance.sina.com.cn"],
+      "article_url_pattern": "^https://finance\\.sina\\.com\\.cn/(?:[^/?]+/)*[0-9]{4}-[0-9]{2}-[0-9]{2}/doc-[a-z0-9]+\\.shtml$",
+      "discovery_url_pattern": "^https://finance\\.sina\\.com\\.cn/(?:[^/?]+/)*[0-9]{4}-[0-9]{2}-[0-9]{2}/doc-[a-z0-9]+\\.shtml$",
+      "max_pages": 3,
+      "max_fetches": 5,
+      "max_depth": 1,
+      "delay_seconds": 1,
+      "min_text_chars": 200
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "producer": "AI review in the current conversation; no external API call",
+  "scope": "All uniquely located, deduplicated disagreements in the current queue; classification against article-body policy, not fact checking. Reasons use text, DOM containers and article headings.",
+  "decisions": [
+    {
+      "id": "72ac3401e8e639081cb0926f",
+      "decision": "body",
+      "reason": "位于 artibody 正文容器，描述文章主题中的价格变动，是连续叙述段落；基线未完整收录不构成删除依据。"
+    },
+    {
+      "id": "6dcf6afc7f7b9fc08b5e17e9",
+      "decision": "body",
+      "reason": "位于 artibody，继续解释行情触发因素，和前段主题连续；属于正文。此分类不验证段落中的事实真伪。"
+    },
+    {
+      "id": "9227b39141c7b4ee04314e6b",
+      "decision": "body",
+      "reason": "位于 artibody，记者统计及相关数据支撑文章叙述，不是导航或推荐。"
+    },
+    {
+      "id": "e54477112ff35392eed7dbb4",
+      "decision": "body",
+      "reason": "位于 artibody，对参会阵容作第一类展开，内容是文章叙述。"
+    },
+    {
+      "id": "4b0b15e0984703cfe9484174",
+      "decision": "body",
+      "reason": "位于 artibody，承接前文第一类叙述，说明第二类和第三类情况，应保留。"
+    },
+    {
+      "id": "6ee1cde3e17fba8ba0d26f51",
+      "decision": "body",
+      "reason": "位于 artibody，解释物理 AI 产业基础设施与主题关联，属于正文分析。"
+    },
+    {
+      "id": "8c842dd03e1b6912874815c4",
+      "decision": "body",
+      "reason": "位于 artibody，以具体路演主题为例展开数据采集观点，是正文举例。"
+    },
+    {
+      "id": "10dd3ada0212b1406bb63c25",
+      "decision": "body",
+      "reason": "位于 artibody，汇总多家团队对主题的判断，是正文论述，不应因算法分歧删除。"
+    },
+    {
+      "id": "d6af6237d53e1a8e419d383d",
+      "decision": "noise",
+      "reason": "VIP 课程推荐位于 vip-class 容器，是推广模块标题，不是文章内部小标题。"
+    },
+    {
+      "id": "2937e26a5be9819011dc9c56",
+      "decision": "noise",
+      "reason": "股市直播位于 article-content-right 的 cj-r-block，属于右侧资讯模块，不是本文正文。"
+    },
+    {
+      "id": "f0cf5c9492b6217b6805489a",
+      "decision": "noise",
+      "reason": "7x24小时位于右栏 cj_7x24_list 模块，属于滚动资讯入口，应排除。"
+    },
+    {
+      "id": "724e6fdd0e28ca088c5d0324",
+      "decision": "noise",
+      "reason": "大量行情、计算器、基金排行等入口位于右栏 cj-r-block，是工具导航集合，不是连续正文。"
+    },
+    {
+      "id": "3df18193a971bb53c6232aaf",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "fde22c0412730de7ecbe25ab",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "19fd7a5bcd9f0a73b2399b94",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "0afc877fc12a210677e12f07",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "b3173144d95726d0f6b12a2f",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "3adc30006e2e6d45a0cbe8d6",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "3b064ea1f90b15aaef3ee1fa",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "f4e58b9142542f55a4ecbd14",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "8118b348e82bfd90ab8e95ac",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "bc477dbaae8ec2e517439558",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "f193d56c292ad5478d88b4d4",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "35d0c402826d191f6affa391",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "9c82396aca4039e5a52ef5fa",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "a65166532d36ffcd7fe1c9c2",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "749d1a3bcebc327061348177",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "9ecbb85d5d9a5b98f554cd62",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "0bba6cdea7fd3a6cd9346c26",
+      "decision": "body",
+      "reason": "位于 #artibody 正文容器，与物理 AI 文章论述连续，是短段落或文内小标题；不能因不足 80 字而漏掉。"
+    },
+    {
+      "id": "3589fd982b9e5a639a6426ea",
+      "decision": "metadata",
+      "reason": "文章末尾的投资风险免责声明，按本项目叙述正文口径单列附属信息，不并入正文；这是一项提取口径选择。"
+    },
+    {
+      "id": "6c57a2d614f925c88688faab",
+      "decision": "metadata",
+      "reason": "责任编辑署名单列为文章元数据，不是正文叙述。"
+    },
+    {
+      "id": "55322c02b15c807a5710df7c",
+      "decision": "metadata",
+      "reason": "新浪转载来源与投资免责声明，单列附属信息，不并入叙述正文。"
+    },
+    {
+      "id": "cecaedf8bc42d86103a8138c",
+      "decision": "noise",
+      "reason": "位于 wx-info/blk-wxfollow，是公众号二维码引流说明，不是正文。"
+    },
+    {
+      "id": "5ee2a968b56373501794be3f",
+      "decision": "noise",
+      "reason": "所在 consumption-page 的 H1 是“一位华为员工自述：出身农村…”，而快照目标标题为英伟达 GPU 软件订阅。属于保存快照混入的另一篇文章，不能合并为目标正文。"
+    },
+    {
+      "id": "9136d0313ae41e34fccb1241",
+      "decision": "noise",
+      "reason": "所在 consumption-page 的 H1 是“一位华为员工自述：出身农村…”，而快照目标标题为英伟达 GPU 软件订阅。属于保存快照混入的另一篇文章，不能合并为目标正文。"
+    },
+    {
+      "id": "5c1b0ca685497c353b5ae766",
+      "decision": "noise",
+      "reason": "所在 consumption-page 的 H1 是“一位华为员工自述：出身农村…”，而快照目标标题为英伟达 GPU 软件订阅。属于保存快照混入的另一篇文章，不能合并为目标正文。"
+    },
+    {
+      "id": "574eb8a559da71102fa39c09",
+      "decision": "noise",
+      "reason": "所在 consumption-page 的 H1 是“一位华为员工自述：出身农村…”，而快照目标标题为英伟达 GPU 软件订阅。属于保存快照混入的另一篇文章，不能合并为目标正文。"
+    },
+    {
+      "id": "8aa40a9f52d32507cb7826b3",
+      "decision": "noise",
+      "reason": "所在 consumption-page 的 H1 是“一位华为员工自述：出身农村…”，而快照目标标题为英伟达 GPU 软件订阅。属于保存快照混入的另一篇文章，不能合并为目标正文。"
+    },
+    {
+      "id": "955caac22f79ebc096fd56b6",
+      "decision": "noise",
+      "reason": "所在 consumption-page 的 H1 是“一位华为员工自述：出身农村…”，而快照目标标题为英伟达 GPU 软件订阅。属于保存快照混入的另一篇文章，不能合并为目标正文。"
+    },
+    {
+      "id": "9838d608ce58ee002ba03ec9",
+      "decision": "noise",
+      "reason": "所在 consumption-page 的 H1 是“一位华为员工自述：出身农村…”，而快照目标标题为英伟达 GPU 软件订阅。属于保存快照混入的另一篇文章，不能合并为目标正文。"
+    },
+    {
+      "id": "5b402abb45ad50e993974850",
+      "decision": "noise",
+      "reason": "所在 consumption-page 的 H1 是“一位华为员工自述：出身农村…”，而快照目标标题为英伟达 GPU 软件订阅。属于保存快照混入的另一篇文章，不能合并为目标正文。"
+    },
+    {
+      "id": "1a40cf7577573d0e8530dad1",
+      "decision": "noise",
+      "reason": "所在 consumption-page 的 H1 是“一位华为员工自述：出身农村…”，而快照目标标题为英伟达 GPU 软件订阅。属于保存快照混入的另一篇文章，不能合并为目标正文。"
+    },
+    {
+      "id": "3b6ee5d063def0b88ad28bdd",
+      "decision": "noise",
+      "reason": "华为员工故事的重复图片说明/文本，属于另一篇文章而非英伟达目标文章。仅为片段匹配或重复区域时不做整块删除。"
+    },
+    {
+      "id": "b33ed1acc5644563b7e4831c",
+      "decision": "body",
+      "reason": "位于与英伟达软件订阅标题对应的 consumption-page 正文，计算每块 GPU 每年约 2000 美元的授权收入及其不确定性，应保留。"
+    },
+    {
+      "id": "357e9b6d18485884923dc74a",
+      "decision": "body",
+      "reason": "位于与目标标题对应的同一 cp-article，承接该文章安全平台与参考架构介绍，是文内短段落。"
+    },
+    {
+      "id": "d8abac969593d6365c1e8995",
+      "decision": "metadata",
+      "reason": "H1 中的置顶公告及帖子标题属于标题元数据，原帖正文应另行抽取。"
+    },
+    {
+      "id": "64bb249aebeabfead8d8f908",
+      "decision": "noise",
+      "reason": "位于 card-body/url-info 的网站目录卡片，是飞桨站点介绍；当前页面是导航目录而非单篇文章，不能作为文章正文。"
+    },
+    {
+      "id": "a622b9759f312fe714a0ea2c",
+      "decision": "noise",
+      "reason": "位于 list-controls 的“所有最新话题”是话题列表筛选/栏目标题，不是单篇原帖正文。此页是列表页，应继续采集详情页。"
+    },
+    {
+      "id": "eef6374d320a22aa8956f736",
+      "decision": "noise",
+      "reason": "位于主题发现、文章推荐卡片或头条/热门栏目，是其他文章入口或栏目标题；即使与姆巴佩文章主题相近也不能并入本文正文。"
+    },
+    {
+      "id": "a5a27929fe6ae9046e8f884f",
+      "decision": "noise",
+      "reason": "位于主题发现、文章推荐卡片或头条/热门栏目，是其他文章入口或栏目标题；即使与姆巴佩文章主题相近也不能并入本文正文。"
+    },
+    {
+      "id": "ed8bc73339959351399b51eb",
+      "decision": "noise",
+      "reason": "位于主题发现、文章推荐卡片或头条/热门栏目，是其他文章入口或栏目标题；即使与姆巴佩文章主题相近也不能并入本文正文。"
+    },
+    {
+      "id": "2e81bd6562ed09076f9e3191",
+      "decision": "noise",
+      "reason": "位于主题发现、文章推荐卡片或头条/热门栏目，是其他文章入口或栏目标题；即使与姆巴佩文章主题相近也不能并入本文正文。"
+    },
+    {
+      "id": "319351fd039bdfee64084fbb",
+      "decision": "noise",
+      "reason": "位于主题发现、文章推荐卡片或头条/热门栏目，是其他文章入口或栏目标题；即使与姆巴佩文章主题相近也不能并入本文正文。"
+    },
+    {
+      "id": "835a19d375a14c9b17ba773d",
+      "decision": "noise",
+      "reason": "位于主题发现、文章推荐卡片或头条/热门栏目，是其他文章入口或栏目标题；即使与姆巴佩文章主题相近也不能并入本文正文。"
+    },
+    {
+      "id": "92cd8e86dc3768c0162e0f67",
+      "decision": "noise",
+      "reason": "位于主题发现、文章推荐卡片或头条/热门栏目，是其他文章入口或栏目标题；即使与姆巴佩文章主题相近也不能并入本文正文。"
+    },
+    {
+      "id": "5b86ca92d3dff5dc3c2717cf",
+      "decision": "noise",
+      "reason": "位于主题发现、文章推荐卡片或头条/热门栏目，是其他文章入口或栏目标题；即使与姆巴佩文章主题相近也不能并入本文正文。"
+    },
+    {
+      "id": "31d6d3d550e8258311deb7ff",
+      "decision": "noise",
+      "reason": "位于主题发现、文章推荐卡片或头条/热门栏目，是其他文章入口或栏目标题；即使与姆巴佩文章主题相近也不能并入本文正文。"
+    },
+    {
+      "id": "1dc56134daa8689204ccb4fe",
+      "decision": "noise",
+      "reason": "位于主题发现、文章推荐卡片或头条/热门栏目，是其他文章入口或栏目标题；即使与姆巴佩文章主题相近也不能并入本文正文。"
+    },
+    {
+      "id": "64d8f07235172711e08023cc",
+      "decision": "noise",
+      "reason": "位于主题发现、文章推荐卡片或头条/热门栏目，是其他文章入口或栏目标题；即使与姆巴佩文章主题相近也不能并入本文正文。"
+    },
+    {
+      "id": "354bd5d5903c3dc616292f37",
+      "decision": "body",
+      "reason": "位于 main 内的正文段落容器 css-1k9op6x/e17x9cvu0，连续展开姆巴佩事件背景与回应，是被长度阈值漏掉的短正文。分类不验证新闻事实。"
+    },
+    {
+      "id": "123fe7f464ffcba47cff8d14",
+      "decision": "body",
+      "reason": "位于 main 内的正文段落容器 css-1k9op6x/e17x9cvu0，连续展开姆巴佩事件背景与回应，是被长度阈值漏掉的短正文。分类不验证新闻事实。"
+    },
+    {
+      "id": "74537884b070d31da69063f5",
+      "decision": "body",
+      "reason": "位于 main 内的正文段落容器 css-1k9op6x/e17x9cvu0，连续展开姆巴佩事件背景与回应，是被长度阈值漏掉的短正文。分类不验证新闻事实。"
+    },
+    {
+      "id": "433d532592e4199e1c595048",
+      "decision": "body",
+      "reason": "位于 main 内的正文段落容器 css-1k9op6x/e17x9cvu0，连续展开姆巴佩事件背景与回应，是被长度阈值漏掉的短正文。分类不验证新闻事实。"
+    },
+    {
+      "id": "b018c3c52b5dc2acbbbe8700",
+      "decision": "body",
+      "reason": "位于 main 内的正文段落容器 css-1k9op6x/e17x9cvu0，连续展开姆巴佩事件背景与回应，是被长度阈值漏掉的短正文。分类不验证新闻事实。"
+    },
+    {
+      "id": "327bdf85aa79f7cb117d9d02",
+      "decision": "body",
+      "reason": "位于 main 内的正文段落容器 css-1k9op6x/e17x9cvu0，连续展开姆巴佩事件背景与回应，是被长度阈值漏掉的短正文。分类不验证新闻事实。"
+    },
+    {
+      "id": "cc82562d17032774c295c57c",
+      "decision": "body",
+      "reason": "位于 main 内的正文段落容器 css-1k9op6x/e17x9cvu0，连续展开姆巴佩事件背景与回应，是被长度阈值漏掉的短正文。分类不验证新闻事实。"
+    },
+    {
+      "id": "2d04b409f4cfe68d2b632ae7",
+      "decision": "noise",
+      "reason": "所在 consumption-page 的 H1 为“谷歌发布新版人工智能世界模型Genie 4”，目标文章 H1 为“皮查伊称 Genie 4…”。这是快照内另一篇格隆汇报道，虽同主题也应排除。"
+    },
+    {
+      "id": "f182a22a1d519cf53945cd70",
+      "decision": "body",
+      "reason": "位于与皮查伊 Genie 4 标题对应的 consumption-page 正文，分别描述皮查伊评价和工程师披露的局限，属于目标文章短正文。"
+    },
+    {
+      "id": "de8409171f34b336b8fe0039",
+      "decision": "body",
+      "reason": "位于与皮查伊 Genie 4 标题对应的 consumption-page 正文，分别描述皮查伊评价和工程师披露的局限，属于目标文章短正文。"
+    }
+  ],
+  "page_notes": {
+    "blog_01.html": "已补回多处短正文与文内小标题，排除右栏工具及推广；免责声明与责任编辑按元数据口径单列。仍有未唯一定位的差异未处理。",
+    "blog_02.html": "快照混入另一篇华为员工故事，本轮已排除唯一完整匹配的相关块；一个重复图片说明块未应用。目标文章是英伟达 GPU 软件订阅。其余未审核内容仍可能混入其他文章。",
+    "collected_911f560fdd154136.html": "本轮仅审核标题，移出叙述正文后候选为空。原网页有原帖内容；旧算法漏掉短列表正文，相关差异尚未唯一定位。此结果不表示网页无内容，也不是已修复成功。",
+    "forum_01.html": "页面实际是网站导航目录，飞桨卡片不属于单篇文章。剩余候选不能当作文章正文，应采集详情页后重新提取。",
+    "forum_02.html": "页面实际是话题列表；剩余候选主要是列表信息，不能当作单篇原帖正文。下一步应采集主题详情页。",
+    "news_01.html": "排除推荐、热门与其他文章卡片标题，补回七处短正文。未审核部分仍需后续定位处理。",
+    "news_02.html": "快照含两篇同主题报道；排除另一篇格隆汇报道的唯一完整段落，补回目标皮查伊文章中的两处短正文。"
+  }
+}
