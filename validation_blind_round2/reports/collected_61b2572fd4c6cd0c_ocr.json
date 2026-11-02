@@ -1,0 +1,72 @@
+{
+  "sample": "collected_61b2572fd4c6cd0c.html",
+  "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+  "engine": "RapidOCR ONNX",
+  "note": "OCR output is unverified and is not automatically merged into extracted body.",
+  "reference_note": "Similarity compares against uncorrected AI visual transcription; it is not ground-truth accuracy.",
+  "images": [
+    {
+      "image_order": 1,
+      "file": "images\\collected_61b2572fd4c6cd0c\\01.jpg",
+      "status": "ok",
+      "text": "言道\n中共中央就党的重要文件\n和国家重大方针政策\n听取各民主党派中央、\n全国工商联负责人\n和无党派人士的意见\n是全过程人民民主\n特别是社会主义协商民主的\n重要体现\n习近平\n在党外人士座谈会上说\n2026年8月21日\n中國新用绸\nWWW.CHINANEWS.COM.CN",
+      "line_count": 14,
+      "min_confidence": 0.598,
+      "reference_similarity": 0.732
+    },
+    {
+      "image_order": 2,
+      "file": "images\\collected_61b2572fd4c6cd0c\\02.jpg",
+      "status": "ok",
+      "text": "言道\n治国必先治党，强国必先强党\n越是长期执政，\n越是承平日久，\n越是环境复杂，\n越要增强忧患意识、做到居安思危，\n持之以恒推进全面从严治党，\n确保中国共产党\n始终成为中国特色社会主义事业的\n坚强领导核心。\n习近平\n在党外人士座谈会上说\n2026年8月21日\n中國新用绸\nWWW.CHINANEWS.COM.CN",
+      "line_count": 15,
+      "min_confidence": 0.6045,
+      "reference_similarity": 0.783
+    },
+    {
+      "image_order": 3,
+      "file": "images\\collected_61b2572fd4c6cd0c\\03.jpg",
+      "status": "ok",
+      "text": "言道\n要站在保持党的先进性和纯洁性、\n巩固党的执政地位、\n实现党的使命任务的战略高度，\n坚定信心、保持定力，\n切实把中国共产党\n治理好、建设强。\n习近平\n在党外人士座谈会上说\n2026年8月21日\n中國新用網\nWWW.CHINANEWS.COM.CN",
+      "line_count": 12,
+      "min_confidence": 0.661,
+      "reference_similarity": 0.7191
+    },
+    {
+      "image_order": 4,
+      "file": "images\\collected_61b2572fd4c6cd0c\\04.jpg",
+      "status": "ok",
+      "text": "言道\n解决党内存在的问题，\n首先要立足于\n中国共产党的自身力量，\n不断实现党的\n自我净化、自我完善、\n自我革新、自我提高；\n还要依靠人民的支持，\n主动接受人民监督，\n虚心听取群众批评，\n把人民群众的拥护和支持\n转化为\n持之以恒推进全面从严治党的\n强大动力。\n习近平\n在党外人士座谈会上说\n2026年8月21日\n中国新開網\nWWW.CHINANEWS.COM.CN",
+      "line_count": 19,
+      "min_confidence": 0.5696,
+      "reference_similarity": 0.8188
+    },
+    {
+      "image_order": 5,
+      "file": "images\\collected_61b2572fd4c6cd0c\\05.jpg",
+      "status": "ok",
+      "text": "言道\n要坚持\n党性党风党纪一起抓，\n正风肃纪反腐相贯通，\n把管人、管事、管权\n有机结合起来，\n把锤炼党性、提高能力、净化生态\n统一起来。\n习近平\n在党外人士座谈会上说\n2026年8月21日\n中國新用绸\nWWW.CHINANEWS.COM.CN",
+      "line_count": 13,
+      "min_confidence": 0.595,
+      "reference_similarity": 0.7024
+    },
+    {
+      "image_order": 6,
+      "file": "images\\collected_61b2572fd4c6cd0c\\06.jpg",
+      "status": "ok",
+      "text": "言道\n要坚持以上率下，\n从领导干部抓起严起，\n强化教育管理监督，\n引引导党员、干部\n做到慎独慎初慎微、\n自重自省自警自励。\n习近平\n在党外人士座谈会上说\n2026年8月21日\n中國新用绸\nWWW.CHINANEWS.COM.CN",
+      "line_count": 12,
+      "min_confidence": 0.595,
+      "reference_similarity": 0.671
+    },
+    {
+      "image_order": 7,
+      "file": "images\\collected_61b2572fd4c6cd0c\\07.jpg",
+      "status": "ok",
+      "text": "言道\n希望\n各民主党派、工商联和无党派人士\n不忘多党合作初心，\n坚定拥护中国共产党领导\n不断夯实共同思想政治基础，\n积极建言资政，\n发挥好民主监督职能，\n故中国共产党的\n好参谋、好帮手、好同事。\n习近平\n在党外人士座谈会上说\n2026年8月21日\n中國新用绸\nWWW.CHINANEWS.COM.CN",
+      "line_count": 15,
+      "min_confidence": 0.598,
+      "reference_similarity": 0.7189
+    }
+  ]
+}

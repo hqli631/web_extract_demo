@@ -46,10 +46,12 @@
       ],
       "needs_ocr_candidate": true,
       "content_completeness": "image_content_unverified",
+      "visual_review_status": "complete",
       "comparison_status": "disagreement",
-      "review_status": "pending_ai_review",
+      "review_status": "needs_ocr",
       "review_result": {
-        "reason": "没有对应样本的审核记录"
+        "reason": "AI 视觉审核确认图片承载正文；提取器当前只输出 DOM 导语，需 OCR 或图像文字合并后才能完整通过",
+        "visual_body_blocks": 8
       },
       "warnings": [
         "正文范围包含图片；当前仅提取 DOM 文本，未识别图片中的文字。",

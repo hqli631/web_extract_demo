@@ -1,0 +1,75 @@
+{
+  "note": "仅登记正文范围内的图片，不下载图片、不执行 OCR。",
+  "images": [
+    {
+      "file": "collected_61b2572fd4c6cd0c.html",
+      "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+      "url": "https://www.chinanews.com.cn/gn/2026/10-30/10723634.shtml",
+      "image_order": 1,
+      "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/d5fb3a0515854f06a48af013ebbc88e6.jpg",
+      "alt": "",
+      "ocr_status": "not_run",
+      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。"
+    },
+    {
+      "file": "collected_61b2572fd4c6cd0c.html",
+      "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+      "url": "https://www.chinanews.com.cn/gn/2026/10-30/10723634.shtml",
+      "image_order": 2,
+      "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/614664a441744715af77fd05c4546b64.jpg",
+      "alt": "",
+      "ocr_status": "not_run",
+      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。"
+    },
+    {
+      "file": "collected_61b2572fd4c6cd0c.html",
+      "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+      "url": "https://www.chinanews.com.cn/gn/2026/10-30/10723634.shtml",
+      "image_order": 3,
+      "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/189bb4ef8c984e53b1c678d92e9df3c1.jpg",
+      "alt": "",
+      "ocr_status": "not_run",
+      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。"
+    },
+    {
+      "file": "collected_61b2572fd4c6cd0c.html",
+      "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+      "url": "https://www.chinanews.com.cn/gn/2026/10-30/10723634.shtml",
+      "image_order": 4,
+      "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/d304e3bf5c6e4edba6808a4b77cb2118.jpg",
+      "alt": "",
+      "ocr_status": "not_run",
+      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。"
+    },
+    {
+      "file": "collected_61b2572fd4c6cd0c.html",
+      "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+      "url": "https://www.chinanews.com.cn/gn/2026/10-30/10723634.shtml",
+      "image_order": 5,
+      "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/390b124e93cc4635b179542cdfa7f4c9.jpg",
+      "alt": "",
+      "ocr_status": "not_run",
+      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。"
+    },
+    {
+      "file": "collected_61b2572fd4c6cd0c.html",
+      "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+      "url": "https://www.chinanews.com.cn/gn/2026/10-30/10723634.shtml",
+      "image_order": 6,
+      "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/86bb6e8d9b5045a5b4c96faa1f20f5f4.jpg",
+      "alt": "",
+      "ocr_status": "not_run",
+      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。"
+    },
+    {
+      "file": "collected_61b2572fd4c6cd0c.html",
+      "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+      "url": "https://www.chinanews.com.cn/gn/2026/10-30/10723634.shtml",
+      "image_order": 7,
+      "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/a27765918ae34485a768e651e0f346c1.jpg",
+      "alt": "",
+      "ocr_status": "not_run",
+      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。"
+    }
+  ]
+}

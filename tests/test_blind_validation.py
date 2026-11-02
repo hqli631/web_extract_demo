@@ -1,10 +1,36 @@
 import unittest
+import json
+import tempfile
+from pathlib import Path
 
-from run_blind_validation import audit_page, development_overlap
+from run_blind_validation import audit_page, development_overlap, run
 from collect_pages import exclusion_reason
 
 
 class BlindValidationTests(unittest.TestCase):
+    def test_image_inventory_preserves_order_and_unverified_state(self):
+        root = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory(dir=root) as folder:
+            batch = Path(folder)
+            (batch / 'reports').mkdir()
+            (batch / 'samples').mkdir()
+            (batch / 'evaluation_context.json').write_text(json.dumps({
+                'frozen_code_sha256': __import__('run_blind_validation').code_hashes(),
+                'urls': [seed for target in json.loads((root / 'config/collection_blind.json').read_text(encoding='utf-8'))['targets'] for seed in target['seeds']],
+            }), encoding='utf-8')
+            (batch / 'reports/collection_manifest.json').write_text('[]', encoding='utf-8')
+            (batch / 'reports/ai_review.json').write_text('{"pages":[]}', encoding='utf-8')
+            (batch / 'samples/sample.html').write_text('<article><p>' + '正文内容。' * 20 + '</p><img src="one.jpg"><img src="two.jpg"></article>', encoding='utf-8')
+            (batch / 'reports/collection_manifest.json').write_text(json.dumps([{
+                'file': 'sample.html', 'url': 'https://new.example/article',
+                'snapshot': __import__('hashlib').sha256((batch / 'samples/sample.html').read_bytes()).hexdigest(),
+            }]), encoding='utf-8')
+            run(batch=batch)
+            inventory = json.loads((batch / 'reports/image_inventory.json').read_text(encoding='utf-8'))
+            self.assertEqual([item['image_order'] for item in inventory['images']], [1, 2])
+            self.assertTrue(all(item['ocr_status'] == 'not_run' for item in inventory['images']))
+
+
     def test_image_article_cannot_pass_as_complete_text(self):
         status, _ = audit_page({'content': 'intro'}, 'same',
                                {'snapshot': 'same', 'requires_ocr': True})

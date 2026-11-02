@@ -123,6 +123,8 @@ def run(do_collect=False, batch=BATCH):
     manifest = read(batch / 'reports/collection_manifest.json')
     audit_path = batch / 'reports/ai_review.json'
     audits = {item['file']: item for item in read(audit_path)['pages']} if audit_path.exists() else {}
+    visual_path = batch / 'reports/ai_visual_review.json'
+    visual_audits = read(visual_path) if visual_path.exists() else {}
     pages = []
     known = development_entries()
     for path, comparison in zip(samples, comparisons):
@@ -134,6 +136,11 @@ def run(do_collect=False, batch=BATCH):
         overlap = development_overlap(entry, snapshot, known)
         if overlap:
             review_status, review_result = 'development_overlap', {'reason': overlap}
+        elif visual_audits.get('sample') == path.name and visual_audits.get('snapshot') == snapshot:
+            review_status, review_result = 'needs_ocr', {
+                'reason': 'AI 视觉审核确认图片承载正文；提取器当前只输出 DOM 导语，需 OCR 或图像文字合并后才能完整通过',
+                'visual_body_blocks': len(visual_audits.get('body_blocks', [])),
+            }
         pages.append({
             'file': path.name,
             'snapshot': snapshot,
@@ -145,6 +152,8 @@ def run(do_collect=False, batch=BATCH):
             'body_images': result.get('body_images', []),
             'needs_ocr_candidate': result.get('needs_ocr_candidate', False),
             'content_completeness': result.get('content_completeness', ''),
+            'visual_review_status': ('complete' if visual_audits.get('sample') == path.name
+                                     and visual_audits.get('snapshot') == snapshot else 'not_reviewed'),
             'comparison_status': comparison['status'],
             'review_status': review_status,
             'review_result': review_result,
@@ -155,6 +164,19 @@ def run(do_collect=False, batch=BATCH):
         'note': '逐页审核绑定 HTML 快照；提取器分歧不是正确性标签。此批不自动修改规则或主 samples。',
         'pages': pages,
     })
+    image_inventory = []
+    for page in pages:
+        for index, image in enumerate(page.get('body_images', []), 1):
+            image_inventory.append({
+                'file': page['file'], 'snapshot': page['snapshot'], 'url': page['url'],
+                'image_order': index, 'src': image['src'], 'alt': image.get('alt', ''),
+                'ocr_status': 'not_run',
+                'note': '图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。',
+            })
+    write(batch / 'reports/image_inventory.json', {
+        'note': '仅登记正文范围内的图片，不下载图片、不执行 OCR。',
+        'images': image_inventory,
+    })
     cards = []
     for page in pages:
         body = page['content'] or ('识别为列表页，未输出单篇正文。' if page['page_type'] == 'listing' else '正文为空，需重点审核。')
@@ -164,10 +186,12 @@ def run(do_collect=False, batch=BATCH):
             + '<p>' + escape(page['file']) + ' · ' + escape(page['page_type']) + ' · ' + escape(page['scope_method'])
             + ' · ' + escape(page['comparison_status']) + ' · 审核：' + escape(page['review_status']) + '</p>'
             + '<p>' + escape(page['review_result'].get('reason', '')) + '</p>'
+            + '<p>图像审核：' + escape(page.get('visual_review_status', 'not_reviewed')) + '</p>'
             + '<p>' + escape('；'.join(page['warnings'])) + '</p>'
-            + ('<p>正文图片：' + str(len(page.get('body_images', []))) + ' 张（当前不执行 OCR）</p><ul>'
-               + ''.join('<li><code>' + escape(image['src']) + '</code> ' + escape(image.get('alt', '')) + '</li>'
-                         for image in page.get('body_images', [])) + '</ul>'
+            + ('<p>正文图片：' + str(len(page.get('body_images', []))) + ' 张（当前不执行 OCR）</p><ol>'
+               + ''.join('<li><a href="' + escape(image['src'] if image['src'].startswith(('https://', 'http://')) else 'https:' + image['src'], quote=True)
+                         + '">' + escape(image.get('alt') or image['src']) + '</a></li>'
+                         for image in page.get('body_images', [])) + '</ol>'
                if page.get('body_images') else '')
             + '<pre>' + escape(body) + '</pre></section>'
         )
