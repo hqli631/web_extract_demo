@@ -1,0 +1,11 @@
+{
+  "added": [],
+  "attempts": 1,
+  "skipped": [],
+  "errors": [
+    {
+      "url": "https://k.sina.com.cn/article_2868676035_aafc85c301901z5cu.html?from=finance&kdurlshow=1",
+      "error": "robots policy or robots fetch failure: skipped"
+    }
+  ]
+}

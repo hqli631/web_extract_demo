@@ -1,0 +1,471 @@
+[
+  {
+    "file": "collected_5029464d5612ed80.html",
+    "snapshot": "26ac7b953e696277079cb8e24e1ee167397e3b9172a8d9b291c9a31325e4968b",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "习言道｜近5000字公报，“严”字贯穿始终",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][5]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"h1\"][1]"
+        ],
+        "source_xpath": "/html/body/div[5]/div[1]/div[1]/h1",
+        "tag": "h1",
+        "id": "",
+        "class": "",
+        "expected_text": "习言道｜近5000字公报，“严”字贯穿始终",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "left"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "divnew w1280"
+          },
+          {
+            "tag": "div",
+            "id": "second-title",
+            "class": "title_fixed"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "class": ""
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][6]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"h1\"][1]"
+        ],
+        "source_xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/h1",
+        "tag": "h1",
+        "id": "",
+        "class": "content_left_title",
+        "expected_text": "习言道｜近5000字公报，“严”字贯穿始终",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_more"
+          },
+          {
+            "tag": "div",
+            "id": "cont_1_1_2",
+            "class": "content"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "con_left"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main_content w1280"
+          }
+        ]
+      }
+    ],
+    "match_status": "ambiguous",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_61b2572fd4c6cd0c.html",
+    "snapshot": "8795596df0f973754c7a6faff5652dc206487933f087a7c17e638a8efb872371",
+    "kind": "possible_extra",
+    "action": "exclude_candidate",
+    "text": "8月21日，中共中央在中南海召开党外人士座谈会，就中共中央关于持之以恒推进全面从严治党若干重大问题的决定听取各民主党派中央、全国工商联负责人和无党派人士代表的意见建议。中共中央总书记习近平主持座谈会并发表重要讲话。他指出——",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][6]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][1]"
+        ],
+        "source_xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "8月21日，中共中央在中南海召开党外人士座谈会，就中共中央关于持之以恒推进全面从严治党若干重大问题的决定听取各民主党派中央、全国工商联负责人和无党派人士代表的意见建议。中共中央总书记习近平主持座谈会并发表重要讲话。他指出——",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "left_zw"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_content"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_more"
+          },
+          {
+            "tag": "div",
+            "id": "cont_1_1_2",
+            "class": "content"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_61b2572fd4c6cd0c.html",
+    "snapshot": "8795596df0f973754c7a6faff5652dc206487933f087a7c17e638a8efb872371",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "本网站所刊载信息，不代表中新社和中新网观点。 刊用本网站稿件，务经书面授权。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][10]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]"
+        ],
+        "source_xpath": "/html/body/div[10]/div[2]/div[1]",
+        "tag": "div",
+        "id": "",
+        "class": "des",
+        "expected_text": "本网站所刊载信息，不代表中新社和中新网观点。 刊用本网站稿件，务经书面授权。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "pagebottom_nr"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "pagebottom"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_61b2572fd4c6cd0c.html",
+    "snapshot": "8795596df0f973754c7a6faff5652dc206487933f087a7c17e638a8efb872371",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "未经授权禁止转载、摘编、复制及建立镜像，违者将依法追究法律责任。",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][10]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]"
+        ],
+        "source_xpath": "/html/body/div[10]/div[2]/div[2]",
+        "tag": "div",
+        "id": "",
+        "class": "des",
+        "expected_text": "未经授权禁止转载、摘编、复制及建立镜像，违者将依法追究法律责任。",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "pagebottom_nr"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "pagebottom"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_61b2572fd4c6cd0c.html",
+    "snapshot": "8795596df0f973754c7a6faff5652dc206487933f087a7c17e638a8efb872371",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "copyright ©1999-2026",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][10]/*[local-name()=\"div\"][3]/*[local-name()=\"div\"][2]"
+        ],
+        "source_xpath": "/html/body/div[10]/div[3]/div[2]",
+        "tag": "div",
+        "id": "",
+        "class": "des",
+        "expected_text": "Copyright ©1999-2026\n\n\n \n  chinanews.com. All Rights Reserved",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "pagebottom_nr"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "pagebottom"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_61b2572fd4c6cd0c.html",
+    "snapshot": "8795596df0f973754c7a6faff5652dc206487933f087a7c17e638a8efb872371",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "chinanews.com. all rights reserved",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][10]/*[local-name()=\"div\"][3]/*[local-name()=\"div\"][2]"
+        ],
+        "source_xpath": "/html/body/div[10]/div[3]/div[2]",
+        "tag": "div",
+        "id": "",
+        "class": "des",
+        "expected_text": "Copyright ©1999-2026\n\n\n \n  chinanews.com. All Rights Reserved",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "pagebottom_nr"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "pagebottom"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "html",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "collected_c2d1dbf788829343.html",
+    "snapshot": "668e7d5a55071cb6cfdc7c83f098f5909692f7534dd0d4fbf1edea2c6f02764e",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "公安部就修订《公安机关办理行政案件程序规定》公开征求意见",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][6]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"h1\"][1]"
+        ],
+        "source_xpath": "/html/body/div[6]/div[1]/div[1]/h1",
+        "tag": "h1",
+        "id": "",
+        "class": "",
+        "expected_text": "公安部就修订《公安机关办理行政案件程序规定》公开征求意见",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "left"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "divnew w1280"
+          },
+          {
+            "tag": "div",
+            "id": "second-title",
+            "class": "title_fixed"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "class": ""
+          }
+        ]
+      },
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][7]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"h1\"][1]"
+        ],
+        "source_xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/h1",
+        "tag": "h1",
+        "id": "",
+        "class": "content_left_title",
+        "expected_text": "公安部就修订《公安机关办理行政案件程序规定》公开征求意见",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "content_maincontent_more"
+          },
+          {
+            "tag": "div",
+            "id": "cont_1_1_2",
+            "class": "content"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "con_left"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "main_content w1280"
+          }
+        ]
+      }
+    ],
+    "match_status": "ambiguous",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "rendered_4b4fa7bd89532eaa.html",
+    "snapshot": "6d8e18883dccbc1aac965e7026dd7e733554bbe636468a15bf46526934234286",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "霍尔木兹海峡一艘油轮遇袭起火",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"h1\"][1]"
+        ],
+        "source_xpath": "/html/body/div[1]/div[2]/div[2]/div[1]/div/div/div/div/h1",
+        "tag": "h1",
+        "id": "",
+        "class": "",
+        "expected_text": "霍尔木兹海峡一艘油轮遇袭起火",
+        "containers": [
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "expand-container"
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  },
+  {
+    "file": "rendered_4b4fa7bd89532eaa.html",
+    "snapshot": "6d8e18883dccbc1aac965e7026dd7e733554bbe636468a15bf46526934234286",
+    "kind": "possible_missing",
+    "action": "include_candidate",
+    "text": "责任编辑：欧阳文芊",
+    "evidence": [
+      {
+        "locator": [
+          "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"article\"][1]/*[local-name()=\"p\"][4]"
+        ],
+        "source_xpath": "/html/body/div[1]/div[2]/div[2]/div[1]/div/div/div/div/div[2]/article/p[4]",
+        "tag": "p",
+        "id": "",
+        "class": "",
+        "expected_text": "责任编辑：欧阳文芊",
+        "containers": [
+          {
+            "tag": "article",
+            "id": "",
+            "class": "syl-article-base syl-page-article tt-article-content syl-device-pc"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": "article-content"
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "class": ""
+          }
+        ]
+      }
+    ],
+    "match_status": "unique",
+    "enabled": false,
+    "label_source": "algorithm_disagreement",
+    "reviewed": false
+  }
+]

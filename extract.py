@@ -103,6 +103,15 @@ def collect_regions(soup, scope=None):
             "manual_label": "",
             "reason": reason,
         })
+    # Remove only contiguous production credits at the end of narrative.
+    for region in reversed(regions):
+        if region['auto_label'] not in {'正文候选', '标题/小标题'}:
+            continue
+        if re.fullmatch(r'[｜|]\s*(?:(?:总策划|策划|统筹|执笔|审校|视觉)[：:]\s*[^。！？]{1,50}|[^。！？]{1,60}出品)', region['text']):
+            region['auto_label'] = '元数据'
+            region['reason'] = '正文末尾连续制作署名'
+        else:
+            break
     return regions
 
 
@@ -117,9 +126,29 @@ def extract_file(path: Path) -> dict:
     scope = select_scope(soup, title)
     regions = collect_regions(soup, scope)
     content = "\n".join(r["text"] for r in regions if r["auto_label"] in {"正文候选", "标题/小标题"})
+    images = []
+    seen_images = set()
+    for root in scope[0]:
+        for image in root.find_all('img'):
+            if any(parent.name in {'aside', 'footer', 'nav'} or NOISE_WORDS.search(
+                    ' '.join([str(parent.get('id', '')), ' '.join(parent.get('class', []))]))
+                   for parent in [image, *image.parents] if getattr(parent, 'name', None)):
+                continue
+            src = image.get('data-src') or image.get('data-original') or image.get('src')
+            if src and src not in seen_images:
+                seen_images.add(src)
+                images.append({'src': src, 'alt': image.get('alt', '')})
+    warnings = list(scope[3])
+    if images:
+        warnings.append('正文范围包含图片；当前仅提取 DOM 文本，未识别图片中的文字。')
+    ocr_candidate = len(images) >= 3 and len(content) < 300
+    if ocr_candidate:
+        warnings.append('图片较多且文本较少，疑似图片正文，需要 OCR 或图像审核。')
     return {"file": path.name, "title": title, "regions": regions,
             "content": content, "content_length": len(content),
-            "page_type":scope[1], "scope_method":scope[2], "warnings":scope[3],
+            "page_type":scope[1], "scope_method":scope[2], "warnings":warnings,
+            "body_images": images, "needs_ocr_candidate": ocr_candidate,
+            "content_completeness": 'image_content_unverified' if images else 'text_only_not_independently_verified',
             "extraction_status":'not_article' if scope[1] == 'listing' else 'ok' if content else 'empty_body'}
 
 

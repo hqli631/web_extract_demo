@@ -301,11 +301,35 @@
       "checks": []
     },
     {
+      "file": "collected_14a028de299edfab.html",
+      "page_type": "article",
+      "scope_method": "#artibody",
+      "before_chars": 0,
+      "after_chars": 2330,
+      "checks": []
+    },
+    {
       "file": "collected_47c9a44f1ccc3dfa.html",
       "page_type": "forum_post",
       "scope_method": "#floor-1 .md-body:not(.signature-md)",
       "before_chars": 273,
       "after_chars": 292,
+      "checks": []
+    },
+    {
+      "file": "collected_4b026cde5c5744c1.html",
+      "page_type": "article",
+      "scope_method": "中新网 .left_zw",
+      "before_chars": 0,
+      "after_chars": 811,
+      "checks": []
+    },
+    {
+      "file": "collected_4fdd3a7b48c5a575.html",
+      "page_type": "article",
+      "scope_method": "中新网 .left_zw",
+      "before_chars": 0,
+      "after_chars": 1107,
       "checks": []
     },
     {
@@ -338,6 +362,30 @@
           "status": "pass"
         }
       ]
+    },
+    {
+      "file": "collected_af5904c15d1deebc.html",
+      "page_type": "article",
+      "scope_method": "#artibody",
+      "before_chars": 0,
+      "after_chars": 1375,
+      "checks": []
+    },
+    {
+      "file": "collected_c2d1dbf788829343.html",
+      "page_type": "article",
+      "scope_method": "中新网 .left_zw",
+      "before_chars": 0,
+      "after_chars": 409,
+      "checks": []
+    },
+    {
+      "file": "collected_c5d4b9cdcf5b4c91.html",
+      "page_type": "article",
+      "scope_method": "#artibody",
+      "before_chars": 0,
+      "after_chars": 2322,
+      "checks": []
     },
     {
       "file": "forum_01.html",

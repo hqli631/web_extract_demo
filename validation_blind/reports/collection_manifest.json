@@ -1,0 +1,46 @@
+[
+  {
+    "file": "rendered_4b4fa7bd89532eaa.html",
+    "url": "https://www.toutiao.com/article/7702324677901697571/?log_from=0dd71d544be3f8_1793350577886&wid=1793608916171",
+    "seed_url": "https://www.toutiao.com/article/7702324677901697571/?log_from=0dd71d544be3f8_1793350577886",
+    "domain": "www.toutiao.com",
+    "content_hash": "4fbf1f666ff7316fbbf3dcaff5c07c4099ceb6db85a2d9b971589c64f246f072",
+    "snapshot": "6d8e18883dccbc1aac965e7026dd7e733554bbe636468a15bf46526934234286",
+    "fetched_at": "2026-11-02T08:42:00.559Z",
+    "mode": "rendered_browser",
+    "text_chars": 3807
+  },
+  {
+    "file": "collected_c2d1dbf788829343.html",
+    "url": "https://www.chinanews.com.cn/gn/2026/10-30/10723267.shtml",
+    "seed_url": "https://www.chinanews.com.cn/gn/2026/10-30/10723267.shtml",
+    "domain": "www.chinanews.com.cn",
+    "content_hash": "29757b9566d4b7a58b9fc73c4b7a06620c6ea604bae0263fae9e425466d6f002",
+    "snapshot": "668e7d5a55071cb6cfdc7c83f098f5909692f7534dd0d4fbf1edea2c6f02764e",
+    "fetched_at": "2026-11-02T09:10:26Z",
+    "mode": "static",
+    "text_chars": 3774
+  },
+  {
+    "file": "collected_61b2572fd4c6cd0c.html",
+    "url": "https://www.chinanews.com.cn/gn/2026/10-30/10723634.shtml",
+    "seed_url": "https://www.chinanews.com.cn/gn/2026/10-30/10723634.shtml",
+    "domain": "www.chinanews.com.cn",
+    "content_hash": "b395304c08617345283f4c44b3f604cda49445e7c799efec8260b1316811e8ca",
+    "snapshot": "8795596df0f973754c7a6faff5652dc206487933f087a7c17e638a8efb872371",
+    "fetched_at": "2026-11-02T09:28:02Z",
+    "mode": "static",
+    "text_chars": 3571
+  },
+  {
+    "file": "collected_5029464d5612ed80.html",
+    "url": "https://www.chinanews.com.cn/gn/2026/10-30/10723610.shtml",
+    "seed_url": "https://www.chinanews.com.cn/gn/2026/10-30/10723610.shtml",
+    "domain": "www.chinanews.com.cn",
+    "content_hash": "103117172249f75be92606c5f6a8642fbadae65e4998f9f1abcdaec25564656a",
+    "snapshot": "26ac7b953e696277079cb8e24e1ee167397e3b9172a8d9b291c9a31325e4968b",
+    "fetched_at": "2026-11-02T09:28:03Z",
+    "mode": "static",
+    "text_chars": 4707
+  }
+]

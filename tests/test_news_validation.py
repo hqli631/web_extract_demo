@@ -6,6 +6,24 @@ from extract import extract_file
 
 
 class NewsValidationTests(unittest.TestCase):
+    def test_trailing_credits_are_metadata(self):
+        result = self.run_page('<article><p>正常正文。</p><p>｜策划：张三</p><p>｜审校：李四</p><p>｜工作室出品</p></article>')
+        self.assertEqual(result['content'], '正常正文。')
+
+    def test_credit_words_and_mid_article_line_are_preserved(self):
+        result = self.run_page('<article><p>本文讨论策划：如何审校。</p><p>｜策划：张三</p><p>随后开展新工作。</p></article>')
+        self.assertIn('｜策划：张三', result['content'])
+        self.assertIn('本文讨论策划', result['content'])
+
+    def test_image_heavy_article_is_flagged(self):
+        result = self.run_page('<article><p>导语。</p><img src="1.png"><img data-src="2.png"><img src="3.png"></article>')
+        self.assertTrue(result['needs_ocr_candidate'])
+        self.assertEqual(len(result['body_images']), 3)
+
+    def test_sidebar_images_are_excluded(self):
+        result = self.run_page('<article><p>正文。</p><aside><img src="ad.png"></aside></article>')
+        self.assertEqual(result['body_images'], [])
+
     def run_page(self, source):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / 'page.html'

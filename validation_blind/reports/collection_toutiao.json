@@ -1,0 +1,13 @@
+{
+  "added": [],
+  "attempts": 1,
+  "skipped": [
+    {
+      "url": "https://www.toutiao.com/article/7702324677901697571/?log_from=0dd71d544be3f8_1793350577886",
+      "reason": "insufficient_static_text",
+      "text_chars": 0,
+      "suggestion": "Inspect in browser; save a rendered snapshot if article text is present."
+    }
+  ],
+  "errors": []
+}

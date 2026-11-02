@@ -458,3 +458,27 @@ $env:PYTHONPATH = ".deps"
 加 `--collect` 会按配置尝试发现新文章，执行去重并保存来源；新文章需要新审核记录后才能通过检查。加 `--publish` 只会将全部匹配现有审核预期的批次加入主项目，拒绝覆盖不同内容的同名文件。
 
 查看 `news_validation/reports/progress.html` 可展开每页正文及回归细节，并进入改进前后对比；`regression.json` 保存6页的逐页结果，`legacy_regression.json` 保存此前69条开发样例的回归结果。重新启动复核服务才会载入新的 Python 正文规则。
+# 最新开发回归入口
+
+运行现有样本测试并打开报告：
+
+~~~powershell
+cd 'D:\codex project\web_extract_demo'
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File '.\test_project.ps1' -OpenReport
+~~~
+
+报告位于 reports/development_cases/progress.html，数据位于同目录 results.json。
+该入口运行功能测试，然后复用已审核页面检查修改效果，不联网、不代表独立验证准确率。
+正文末尾连续的制作署名会作为元数据排除，正文中间出现的同类文本保留。
+提取结果新增 body_images、needs_ocr_candidate、content_completeness；正文图片尚未经过 OCR。
+needs_ocr_candidate 使用“至少三张图片且正文少于300字”的启发式，只提示风险，不证明图片一定包含正文。
+
+旧冻结验证报告仍在 validation_blind/reports/progress.html，保留修改前结论。
+提取代码已变化，新冻结批次使用以下命令；旧批次不能直接重新生成：
+
+~~~powershell
+$env:PYTHONPATH='.deps'
+& 'C:\Users\35516\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' run_blind_validation.py --batch validation_blind_round2 --collect
+~~~
+
+下一步是补充未参与本次规则调整的新文章做独立验证，以及评估图片文字识别。

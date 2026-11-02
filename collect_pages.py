@@ -21,7 +21,21 @@ def canonical(url):
     return urlunsplit((p.scheme.lower(), p.netloc.lower(), p.path or '/', p.query, ''))
 
 
-def collect(config, root=ROOT, limit_override=None, dry_run=False):
+def exclusion_reason(url, content_hash, entries):
+    def identity(value):
+        p = urlsplit(value or '')
+        return (p.scheme.lower(), p.netloc.lower(), p.path.rstrip('/'))
+    for entry in entries:
+        if url and any(value and identity(url) == identity(value)
+                       for value in (entry.get('url'), entry.get('seed_url'))):
+            return 'excluded_development_url'
+        if content_hash and content_hash == entry.get('content_hash'):
+            return 'excluded_development_content'
+    return ''
+
+
+def collect(config, root=ROOT, limit_override=None, dry_run=False, excluded_entries=None):
+    excluded_entries = excluded_entries or []
     domains = set(config.get('allowed_domains', []))
     seeds = config.get('seeds', [])
     if not domains or not seeds:
@@ -93,6 +107,10 @@ def collect(config, root=ROOT, limit_override=None, dry_run=False):
         if url in seen or not allowed(url):
             continue
         seen.add(url)
+        reason = exclusion_reason(url, None, excluded_entries)
+        if reason and pattern.search(url):
+            skipped.append(dict(url=url, reason=reason))
+            continue
         attempts += 1
         try:
             if not permitted(url):
@@ -121,6 +139,10 @@ def collect(config, root=ROOT, limit_override=None, dry_run=False):
                 skipped.append(dict(url=final, reason='insufficient_static_text', text_chars=len(text), suggestion='Inspect in browser; save a rendered snapshot if article text is present.'))
                 continue
             digest = hashlib.sha256(text.encode()).hexdigest()
+            reason = exclusion_reason(final, digest, excluded_entries)
+            if reason:
+                skipped.append(dict(url=final, reason=reason))
+                continue
             if digest in hashes:
                 skipped.append(dict(url=final, reason='duplicate_content'))
                 continue

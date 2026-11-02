@@ -1,0 +1,40 @@
+{
+  "targets": [
+    {
+      "name": "toutiao",
+      "seeds": ["https://www.toutiao.com/article/7702324677901697571/?log_from=0dd71d544be3f8_1793350577886"],
+      "allowed_domains": ["www.toutiao.com"],
+      "article_url_pattern": "^https://www\\.toutiao\\.com/article/[0-9]+/\\??[^#]*$",
+      "discovery_url_pattern": "a^",
+      "max_pages": 1,
+      "max_fetches": 1,
+      "max_depth": 0,
+      "delay_seconds": 1,
+      "min_text_chars": 200
+    },
+    {
+      "name": "sina_k",
+      "seeds": ["https://k.sina.com.cn/article_2868676035_aafc85c301901z5cu.html?from=finance&kdurlshow=1"],
+      "allowed_domains": ["k.sina.com.cn"],
+      "article_url_pattern": "^https://k\\.sina\\.com\\.cn/article_[0-9a-z]+_[0-9a-z]+\\.html(?:\\?.*)?$",
+      "discovery_url_pattern": "a^",
+      "max_pages": 1,
+      "max_fetches": 1,
+      "max_depth": 0,
+      "delay_seconds": 1,
+      "min_text_chars": 200
+    },
+    {
+      "name": "chinanews_transfer",
+      "seeds": ["https://www.chinanews.com.cn/china/"],
+      "allowed_domains": ["www.chinanews.com.cn"],
+      "article_url_pattern": "^https://www\\.chinanews\\.com\\.cn/gn/[0-9]{4}/[0-9]{2}-[0-9]{2}/[0-9]+\\.shtml$",
+      "discovery_url_pattern": "^https://www\\.chinanews\\.com\\.cn/gn/[0-9]{4}/[0-9]{2}-[0-9]{2}/[0-9]+\\.shtml$",
+      "max_pages": 1,
+      "max_fetches": 4,
+      "max_depth": 1,
+      "delay_seconds": 1,
+      "min_text_chars": 200
+    }
+  ]
+}
