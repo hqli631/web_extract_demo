@@ -488,3 +488,18 @@ $env:PYTHONPATH='.deps'
 ~~~
 
 下一步是补充未参与本次规则调整的新文章做独立验证，以及评估图片文字识别。
+
+## 图片正文 OCR 与合成候选
+
+可选依赖与运行方式（在项目目录执行）：
+
+~~~powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-ocr.txt
+.\.venv\Scripts\python.exe ocr_validation_images.py --profile chinanews_quote_card_v1
+$env:PYTHONPATH = '.deps'
+.\.venv\Scripts\python.exe compose_ocr_candidate.py
+~~~
+
+默认读取第二批已下载的图片；其他批次可传入 --batch 和 --file。ocr_validation_images.py 保留逐行坐标、置信度与原图画框；ocr_layout.py 中的可选版式规则仅适用于匹配的中新网引语卡片，默认不启用。未匹配图片保留待判断。
+
+compose_ocr_candidate.py 按网页快照顺序交错排列 DOM 文字与 OCR 正文候选，检查快照、图片来源、顺序和哈希，生成独立的 *_combined_candidate.json 和 HTML。默认报告在 validation_blind_round2/reports/ 下。合成结果尚未校对，不改写 output/results.json，也不改变独立验证通过率；存在缺图、过期结果或无法确定顺序时拒绝或标为 blocked。

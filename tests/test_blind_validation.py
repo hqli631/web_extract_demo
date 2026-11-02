@@ -3,11 +3,20 @@ import json
 import tempfile
 from pathlib import Path
 
-from run_blind_validation import audit_page, development_overlap, run
+from run_blind_validation import audit_page, development_overlap, run, preserve_image_reviews
 from collect_pages import exclusion_reason
 
 
 class BlindValidationTests(unittest.TestCase):
+    def test_image_review_is_preserved_only_for_same_snapshot_and_image(self):
+        item = dict(file='page.html', snapshot='one', image_order=1, src='a.jpg', ocr_status='not_run')
+        old = dict(item, ocr_status='ai_visual_reviewed', transcription='文字')
+        result = preserve_image_reviews([dict(item)], [old])
+        self.assertEqual(result[0]['transcription'], '文字')
+        for key, value in [('snapshot', 'two'), ('src', 'b.jpg'), ('image_order', 2)]:
+            changed = dict(item, **{key: value})
+            self.assertNotIn('transcription', preserve_image_reviews([changed], [old])[0])
+
     def test_image_inventory_preserves_order_and_unverified_state(self):
         root = Path(__file__).resolve().parents[1]
         with tempfile.TemporaryDirectory(dir=root) as folder:

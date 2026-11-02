@@ -1,5 +1,5 @@
 {
-  "note": "仅登记正文范围内的图片，不下载图片、不执行 OCR。",
+  "note": "本步骤仅登记图片，不下载或运行 OCR；匹配相同快照、地址和顺序的已有审核记录予以保留。",
   "images": [
     {
       "file": "collected_61b2572fd4c6cd0c.html",
@@ -8,8 +8,10 @@
       "image_order": 1,
       "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/d5fb3a0515854f06a48af013ebbc88e6.jpg",
       "alt": "",
-      "ocr_status": "not_run",
-      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。"
+      "ocr_status": "ai_visual_reviewed",
+      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。",
+      "transcription": "中共中央就党的重要文件和国家重大方针政策听取各民主党派中央、全国工商联负责人和无党派人士的意见，是全过程人民民主特别是社会主义协商民主的重要体现。",
+      "review_note": "来自已有 AI 视觉审核记录，未人工校对，不作为 OCR 真值"
     },
     {
       "file": "collected_61b2572fd4c6cd0c.html",
@@ -18,8 +20,10 @@
       "image_order": 2,
       "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/614664a441744715af77fd05c4546b64.jpg",
       "alt": "",
-      "ocr_status": "not_run",
-      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。"
+      "ocr_status": "ai_visual_reviewed",
+      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。",
+      "transcription": "治国必先治党，强国必先强党。越是长期执政，越是承平日久，越是环境复杂，越要增强忧患意识、做到居安思危，持之以恒推进全面从严治党，确保中国共产党始终成为中国特色社会主义事业的坚强领导核心。",
+      "review_note": "来自已有 AI 视觉审核记录，未人工校对，不作为 OCR 真值"
     },
     {
       "file": "collected_61b2572fd4c6cd0c.html",
@@ -28,8 +32,10 @@
       "image_order": 3,
       "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/189bb4ef8c984e53b1c678d92e9df3c1.jpg",
       "alt": "",
-      "ocr_status": "not_run",
-      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。"
+      "ocr_status": "ai_visual_reviewed",
+      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。",
+      "transcription": "要站在保持党的先进性和纯洁性、巩固党的执政地位、实现党的使命任务的战略高度，坚定信心、保持定力，切实把中国共产党治理好、建设强。",
+      "review_note": "来自已有 AI 视觉审核记录，未人工校对，不作为 OCR 真值"
     },
     {
       "file": "collected_61b2572fd4c6cd0c.html",
@@ -38,8 +44,10 @@
       "image_order": 4,
       "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/d304e3bf5c6e4edba6808a4b77cb2118.jpg",
       "alt": "",
-      "ocr_status": "not_run",
-      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。"
+      "ocr_status": "ai_visual_reviewed",
+      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。",
+      "transcription": "解决党内存在的问题，首先要立足于中国共产党的自身力量，不断实现党的自我净化、自我完善、自我革新、自我提高；还要依靠人民的支持，主动接受人民监督，虚心听取群众批评，把人民群众的拥护和支持转化为持之以恒推进全面从严治党的强大动力。",
+      "review_note": "来自已有 AI 视觉审核记录，未人工校对，不作为 OCR 真值"
     },
     {
       "file": "collected_61b2572fd4c6cd0c.html",
@@ -48,8 +56,10 @@
       "image_order": 5,
       "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/390b124e93cc4635b179542cdfa7f4c9.jpg",
       "alt": "",
-      "ocr_status": "not_run",
-      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。"
+      "ocr_status": "ai_visual_reviewed",
+      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。",
+      "transcription": "要坚持党性党风党纪一起抓，正风肃纪反腐相贯通，把管人、管事、管权有机结合起来，把锤炼党性、提高能力、净化生态统一起来。",
+      "review_note": "来自已有 AI 视觉审核记录，未人工校对，不作为 OCR 真值"
     },
     {
       "file": "collected_61b2572fd4c6cd0c.html",
@@ -58,8 +68,10 @@
       "image_order": 6,
       "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/86bb6e8d9b5045a5b4c96faa1f20f5f4.jpg",
       "alt": "",
-      "ocr_status": "not_run",
-      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。"
+      "ocr_status": "ai_visual_reviewed",
+      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。",
+      "transcription": "要坚持以上率下，从领导干部抓起严起，强化教育管理监督，引导党员、干部做到慎独慎初慎微、自重自省自警自励。",
+      "review_note": "来自已有 AI 视觉审核记录，未人工校对，不作为 OCR 真值"
     },
     {
       "file": "collected_61b2572fd4c6cd0c.html",
@@ -68,8 +80,10 @@
       "image_order": 7,
       "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/a27765918ae34485a768e651e0f346c1.jpg",
       "alt": "",
-      "ocr_status": "not_run",
-      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。"
+      "ocr_status": "ai_visual_reviewed",
+      "note": "图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。",
+      "transcription": "希望各民主党派、工商联和无党派人士不忘初心，坚守中国共产党领导，不断夯实共同思想政治基础，积极建言资政，发挥好民主监督职能，做中国共产党的好参谋、好帮手、好同事。",
+      "review_note": "来自已有 AI 视觉审核记录，未人工校对，不作为 OCR 真值"
     }
   ]
 }

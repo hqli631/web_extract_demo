@@ -76,6 +76,19 @@ def audit_page(result, snapshot, audit):
     }
 
 
+def preserve_image_reviews(images, previous):
+    """Keep review metadata only for the identical snapshot image and position."""
+    def identity(item):
+        return tuple(item.get(key) for key in ('file', 'snapshot', 'image_order', 'src'))
+    known = {identity(item): item for item in previous}
+    for item in images:
+        old = known.get(identity(item), {})
+        for key in ('ocr_status', 'transcription', 'review_note'):
+            if key in old:
+                item[key] = old[key]
+    return images
+
+
 def run(do_collect=False, batch=BATCH):
     context_path = batch / 'evaluation_context.json'
     current_hashes = code_hashes()
@@ -173,9 +186,11 @@ def run(do_collect=False, batch=BATCH):
                 'ocr_status': 'not_run',
                 'note': '图片属于提取范围；图中文字尚未识别，不能视为正文已完整提取。',
             })
-    write(batch / 'reports/image_inventory.json', {
-        'note': '仅登记正文范围内的图片，不下载图片、不执行 OCR。',
-        'images': image_inventory,
+    inventory_path = batch / 'reports/image_inventory.json'
+    previous_images = read(inventory_path).get('images', []) if inventory_path.exists() else []
+    write(inventory_path, {
+        'note': '本步骤仅登记图片，不下载或运行 OCR；匹配相同快照、地址和顺序的已有审核记录予以保留。',
+        'images': preserve_image_reviews(image_inventory, previous_images),
     })
     cards = []
     for page in pages:
@@ -187,6 +202,9 @@ def run(do_collect=False, batch=BATCH):
             + ' · ' + escape(page['comparison_status']) + ' · 审核：' + escape(page['review_status']) + '</p>'
             + '<p>' + escape(page['review_result'].get('reason', '')) + '</p>'
             + '<p>图像审核：' + escape(page.get('visual_review_status', 'not_reviewed')) + '</p>'
+            + ('<p><a href="' + escape(Path(page['file']).stem + '_combined_candidate.html', quote=True)
+               + '">查看 DOM 与 OCR 合成候选（独立结果，尚未校对）</a></p>'
+               if (batch / 'reports' / (Path(page['file']).stem + '_combined_candidate.html')).exists() else '')
             + '<p>' + escape('；'.join(page['warnings'])) + '</p>'
             + ('<p>正文图片：' + str(len(page.get('body_images', []))) + ' 张（当前不执行 OCR）</p><ol>'
                + ''.join('<li><a href="' + escape(image['src'] if image['src'].startswith(('https://', 'http://')) else 'https:' + image['src'], quote=True)
