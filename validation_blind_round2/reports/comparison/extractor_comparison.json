@@ -1,0 +1,255 @@
+[
+  {
+    "file": "collected_61b2572fd4c6cd0c.html",
+    "current_chars": 112,
+    "baseline_chars": 124,
+    "similarity_estimate": 0.0,
+    "current_only": [
+      "8月21日，中共中央在中南海召开党外人士座谈会，就中共中央关于持之以恒推进全面从严治党若干重大问题的决定听取各民主党派中央、全国工商联负责人和无党派人士代表的意见建议。中共中央总书记习近平主持座谈会并发表重要讲话。他指出——"
+    ],
+    "baseline_only": [
+      "本网站所刊载信息，不代表中新社和中新网观点。 刊用本网站稿件，务经书面授权。",
+      "未经授权禁止转载、摘编、复制及建立镜像，违者将依法追究法律责任。",
+      "copyright ©1999-2026",
+      "chinanews.com. all rights reserved"
+    ],
+    "title": "习言道｜治国必先治党，强国必先强党-中新网",
+    "page_type": "article",
+    "scope_method": "中新网 .left_zw",
+    "warnings": [
+      "正文范围包含图片；当前仅提取 DOM 文本，未识别图片中的文字。",
+      "图片较多且文本较少，疑似图片正文，需要 OCR 或图像审核。"
+    ],
+    "current_text": "8月21日，中共中央在中南海召开党外人士座谈会，就中共中央关于持之以恒推进全面从严治党若干重大问题的决定听取各民主党派中央、全国工商联负责人和无党派人士代表的意见建议。中共中央总书记习近平主持座谈会并发表重要讲话。他指出——",
+    "baseline_text": "本网站所刊载信息，不代表中新社和中新网观点。 刊用本网站稿件，务经书面授权。\n未经授权禁止转载、摘编、复制及建立镜像，违者将依法追究法律责任。\nCopyright ©1999-2026\n chinanews.com. All Rights Reserved",
+    "status": "disagreement",
+    "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+    "queue": [
+      {
+        "file": "collected_61b2572fd4c6cd0c.html",
+        "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+        "kind": "possible_extra",
+        "action": "exclude_candidate",
+        "text": "8月21日，中共中央在中南海召开党外人士座谈会，就中共中央关于持之以恒推进全面从严治党若干重大问题的决定听取各民主党派中央、全国工商联负责人和无党派人士代表的意见建议。中共中央总书记习近平主持座谈会并发表重要讲话。他指出——",
+        "evidence": [
+          {
+            "locator": [
+              "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][6]/*[local-name()=\"div\"][1]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][4]/*[local-name()=\"div\"][2]/*[local-name()=\"p\"][1]"
+            ],
+            "source_xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p",
+            "tag": "p",
+            "id": "",
+            "class": "",
+            "expected_text": "8月21日，中共中央在中南海召开党外人士座谈会，就中共中央关于持之以恒推进全面从严治党若干重大问题的决定听取各民主党派中央、全国工商联负责人和无党派人士代表的意见建议。中共中央总书记习近平主持座谈会并发表重要讲话。他指出——",
+            "containers": [
+              {
+                "tag": "div",
+                "id": "",
+                "class": "left_zw"
+              },
+              {
+                "tag": "div",
+                "id": "",
+                "class": "content_maincontent_content"
+              },
+              {
+                "tag": "div",
+                "id": "",
+                "class": "content_maincontent_more"
+              },
+              {
+                "tag": "div",
+                "id": "cont_1_1_2",
+                "class": "content"
+              }
+            ]
+          }
+        ],
+        "match_status": "unique",
+        "enabled": false,
+        "label_source": "algorithm_disagreement",
+        "reviewed": false
+      },
+      {
+        "file": "collected_61b2572fd4c6cd0c.html",
+        "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+        "kind": "possible_missing",
+        "action": "include_candidate",
+        "text": "本网站所刊载信息，不代表中新社和中新网观点。 刊用本网站稿件，务经书面授权。",
+        "evidence": [
+          {
+            "locator": [
+              "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][10]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][1]"
+            ],
+            "source_xpath": "/html/body/div[10]/div[2]/div[1]",
+            "tag": "div",
+            "id": "",
+            "class": "des",
+            "expected_text": "本网站所刊载信息，不代表中新社和中新网观点。 刊用本网站稿件，务经书面授权。",
+            "containers": [
+              {
+                "tag": "div",
+                "id": "",
+                "class": "pagebottom_nr"
+              },
+              {
+                "tag": "div",
+                "id": "",
+                "class": "pagebottom"
+              },
+              {
+                "tag": "body",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "html",
+                "id": "",
+                "class": ""
+              }
+            ]
+          }
+        ],
+        "match_status": "unique",
+        "enabled": false,
+        "label_source": "algorithm_disagreement",
+        "reviewed": false
+      },
+      {
+        "file": "collected_61b2572fd4c6cd0c.html",
+        "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+        "kind": "possible_missing",
+        "action": "include_candidate",
+        "text": "未经授权禁止转载、摘编、复制及建立镜像，违者将依法追究法律责任。",
+        "evidence": [
+          {
+            "locator": [
+              "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][10]/*[local-name()=\"div\"][2]/*[local-name()=\"div\"][2]"
+            ],
+            "source_xpath": "/html/body/div[10]/div[2]/div[2]",
+            "tag": "div",
+            "id": "",
+            "class": "des",
+            "expected_text": "未经授权禁止转载、摘编、复制及建立镜像，违者将依法追究法律责任。",
+            "containers": [
+              {
+                "tag": "div",
+                "id": "",
+                "class": "pagebottom_nr"
+              },
+              {
+                "tag": "div",
+                "id": "",
+                "class": "pagebottom"
+              },
+              {
+                "tag": "body",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "html",
+                "id": "",
+                "class": ""
+              }
+            ]
+          }
+        ],
+        "match_status": "unique",
+        "enabled": false,
+        "label_source": "algorithm_disagreement",
+        "reviewed": false
+      },
+      {
+        "file": "collected_61b2572fd4c6cd0c.html",
+        "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+        "kind": "possible_missing",
+        "action": "include_candidate",
+        "text": "copyright ©1999-2026",
+        "evidence": [
+          {
+            "locator": [
+              "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][10]/*[local-name()=\"div\"][3]/*[local-name()=\"div\"][2]"
+            ],
+            "source_xpath": "/html/body/div[10]/div[3]/div[2]",
+            "tag": "div",
+            "id": "",
+            "class": "des",
+            "expected_text": "Copyright ©1999-2026\n\n\n \n  chinanews.com. All Rights Reserved",
+            "containers": [
+              {
+                "tag": "div",
+                "id": "",
+                "class": "pagebottom_nr"
+              },
+              {
+                "tag": "div",
+                "id": "",
+                "class": "pagebottom"
+              },
+              {
+                "tag": "body",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "html",
+                "id": "",
+                "class": ""
+              }
+            ]
+          }
+        ],
+        "match_status": "unique",
+        "enabled": false,
+        "label_source": "algorithm_disagreement",
+        "reviewed": false
+      },
+      {
+        "file": "collected_61b2572fd4c6cd0c.html",
+        "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+        "kind": "possible_missing",
+        "action": "include_candidate",
+        "text": "chinanews.com. all rights reserved",
+        "evidence": [
+          {
+            "locator": [
+              "./*[local-name()=\"html\"][1]/*[local-name()=\"body\"][1]/*[local-name()=\"div\"][10]/*[local-name()=\"div\"][3]/*[local-name()=\"div\"][2]"
+            ],
+            "source_xpath": "/html/body/div[10]/div[3]/div[2]",
+            "tag": "div",
+            "id": "",
+            "class": "des",
+            "expected_text": "Copyright ©1999-2026\n\n\n \n  chinanews.com. All Rights Reserved",
+            "containers": [
+              {
+                "tag": "div",
+                "id": "",
+                "class": "pagebottom_nr"
+              },
+              {
+                "tag": "div",
+                "id": "",
+                "class": "pagebottom"
+              },
+              {
+                "tag": "body",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "html",
+                "id": "",
+                "class": ""
+              }
+            ]
+          }
+        ],
+        "match_status": "unique",
+        "enabled": false,
+        "label_source": "algorithm_disagreement",
+        "reviewed": false
+      }
+    ]
+  }
+]

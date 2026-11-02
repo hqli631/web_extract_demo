@@ -142,6 +142,9 @@ def run(do_collect=False, batch=BATCH):
             'page_type': result['page_type'],
             'scope_method': result['scope_method'],
             'content': result['content'],
+            'body_images': result.get('body_images', []),
+            'needs_ocr_candidate': result.get('needs_ocr_candidate', False),
+            'content_completeness': result.get('content_completeness', ''),
             'comparison_status': comparison['status'],
             'review_status': review_status,
             'review_result': review_result,
@@ -161,7 +164,12 @@ def run(do_collect=False, batch=BATCH):
             + '<p>' + escape(page['file']) + ' · ' + escape(page['page_type']) + ' · ' + escape(page['scope_method'])
             + ' · ' + escape(page['comparison_status']) + ' · 审核：' + escape(page['review_status']) + '</p>'
             + '<p>' + escape(page['review_result'].get('reason', '')) + '</p>'
-            + '<p>' + escape('；'.join(page['warnings'])) + '</p><pre>' + escape(body) + '</pre></section>'
+            + '<p>' + escape('；'.join(page['warnings'])) + '</p>'
+            + ('<p>正文图片：' + str(len(page.get('body_images', []))) + ' 张（当前不执行 OCR）</p><ul>'
+               + ''.join('<li><code>' + escape(image['src']) + '</code> ' + escape(image.get('alt', '')) + '</li>'
+                         for image in page.get('body_images', [])) + '</ul>'
+               if page.get('body_images') else '')
+            + '<pre>' + escape(body) + '</pre></section>'
         )
     html = (
         '<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>陌生页面冻结验证</title>'

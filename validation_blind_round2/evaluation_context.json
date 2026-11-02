@@ -1,0 +1,13 @@
+{
+  "frozen_code_sha256": {
+    "extract.py": "8cbb98457ee3669a993215be5e168eef774722a098ec10808dfabfa485387748",
+    "content_scope.py": "f5f90b707edd71035d1ae35937cd2a2367ef4a4f3f5e07691ef9577fcad63849",
+    "compare_extractors.py": "cde060c8d6db67df261eaba6c50534e5025a9e58f117d8b50f3052ee3ef41030"
+  },
+  "note": "冻结提取代码后采集；在审核结论记录前不要依据本批页面修改规则。",
+  "urls": [
+    "https://www.toutiao.com/article/7702324677901697571/?log_from=0dd71d544be3f8_1793350577886",
+    "https://k.sina.com.cn/article_2868676035_aafc85c301901z5cu.html?from=finance&kdurlshow=1",
+    "https://www.chinanews.com.cn/china/"
+  ]
+}

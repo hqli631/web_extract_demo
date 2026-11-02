@@ -1,0 +1,60 @@
+{
+  "code_sha256": {
+    "extract.py": "8cbb98457ee3669a993215be5e168eef774722a098ec10808dfabfa485387748",
+    "content_scope.py": "f5f90b707edd71035d1ae35937cd2a2367ef4a4f3f5e07691ef9577fcad63849",
+    "compare_extractors.py": "cde060c8d6db67df261eaba6c50534e5025a9e58f117d8b50f3052ee3ef41030"
+  },
+  "note": "逐页审核绑定 HTML 快照；提取器分歧不是正确性标签。此批不自动修改规则或主 samples。",
+  "pages": [
+    {
+      "file": "collected_61b2572fd4c6cd0c.html",
+      "snapshot": "b02094e512579760f0ff653678f12491759f0869f07ac09463d82bed64437dfd",
+      "url": "https://www.chinanews.com.cn/gn/2026/10-30/10723634.shtml",
+      "title": "习言道｜治国必先治党，强国必先强党-中新网",
+      "page_type": "article",
+      "scope_method": "中新网 .left_zw",
+      "content": "8月21日，中共中央在中南海召开党外人士座谈会，就中共中央关于持之以恒推进全面从严治党若干重大问题的决定听取各民主党派中央、全国工商联负责人和无党派人士代表的意见建议。中共中央总书记习近平主持座谈会并发表重要讲话。他指出——",
+      "body_images": [
+        {
+          "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/d5fb3a0515854f06a48af013ebbc88e6.jpg",
+          "alt": ""
+        },
+        {
+          "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/614664a441744715af77fd05c4546b64.jpg",
+          "alt": ""
+        },
+        {
+          "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/189bb4ef8c984e53b1c678d92e9df3c1.jpg",
+          "alt": ""
+        },
+        {
+          "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/d304e3bf5c6e4edba6808a4b77cb2118.jpg",
+          "alt": ""
+        },
+        {
+          "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/390b124e93cc4635b179542cdfa7f4c9.jpg",
+          "alt": ""
+        },
+        {
+          "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/86bb6e8d9b5045a5b4c96faa1f20f5f4.jpg",
+          "alt": ""
+        },
+        {
+          "src": "//i2.chinanews.com.cn/simg/cmshd/2026/10/30/a27765918ae34485a768e651e0f346c1.jpg",
+          "alt": ""
+        }
+      ],
+      "needs_ocr_candidate": true,
+      "content_completeness": "image_content_unverified",
+      "comparison_status": "disagreement",
+      "review_status": "pending_ai_review",
+      "review_result": {
+        "reason": "没有对应样本的审核记录"
+      },
+      "warnings": [
+        "正文范围包含图片；当前仅提取 DOM 文本，未识别图片中的文字。",
+        "图片较多且文本较少，疑似图片正文，需要 OCR 或图像审核。"
+      ]
+    }
+  ]
+}
