@@ -1,0 +1,7 @@
+{
+  "name": "chinanews_text_with_captions",
+  "version": 1,
+  "title_xpath": "//h1",
+  "container_xpath": "//div[contains(concat(' ', normalize-space(@class), ' '), ' left_zw ')]",
+  "block_xpath": "./p | ./div[contains(concat(' ', normalize-space(@class), ' '), ' pictext ')]"
+}
