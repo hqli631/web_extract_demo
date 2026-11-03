@@ -48,7 +48,236 @@
           "text": "意见反馈截止时间为2026年11月28日。",
           "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]"
         }
-      ]
+      ],
+      "quality": {
+        "checks": [
+          {
+            "id": "candidate_coverage",
+            "label": "候选文字覆盖",
+            "status": "structural_pass",
+            "note": "仅检查当前容器内非已知杂质区域的 p 与 pictext，不证明整页完整。",
+            "evidence": []
+          },
+          {
+            "id": "known_exclusions",
+            "label": "已知广告/编辑区域混入",
+            "status": "structural_pass",
+            "note": "仅识别 adInContent、adEditor；未标记的推广内容仍可能混入。",
+            "evidence": []
+          },
+          {
+            "id": "source_evidence",
+            "label": "XPath 与原文一致",
+            "status": "structural_pass",
+            "note": "输出文本块在本次 HTML 中唯一定位并匹配文字。",
+            "evidence": []
+          },
+          {
+            "id": "order_overlap",
+            "label": "顺序和重复覆盖",
+            "status": "structural_pass",
+            "note": "检查 DOM 顺序，不能保证等于视觉阅读顺序。",
+            "evidence": []
+          },
+          {
+            "id": "semantic_quality",
+            "label": "语义完整与杂质判断",
+            "status": "unknown",
+            "note": "结构检查不判断语义；如有对话 AI 审核记录，在下方单独展示。",
+            "evidence": []
+          },
+          {
+            "id": "image_text",
+            "label": "图片内文字",
+            "status": "not_applicable",
+            "note": "容器中有 0 个 img 元素；未进行 OCR，未判断是否承载正文。",
+            "evidence": []
+          }
+        ],
+        "excluded_regions": [
+          {
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/table",
+            "text": "",
+            "reason": "已知广告/编辑结构，记录排除依据"
+          },
+          {
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[1]",
+            "text": "【编辑:付子豪】",
+            "reason": "已知广告/编辑结构，记录排除依据"
+          }
+        ],
+        "finding_count": 0
+      },
+      "semantic_review": {
+        "status": "current",
+        "note": "审核记录与本次输入、规则和输出匹配。",
+        "reviewer": "当前对话中的 AI（Codex）",
+        "reviewed_at": "2026-11-03",
+        "scope": "已阅读三篇全部提取文本，并对照所选正文容器的直接子元素和文字；未做整页浏览器渲染、容器外完整性审核、图片像素审核或事实核查。结论是AI意见，不是人工真值。当前范围保留文章段落、图说、小标题、导语与受访者简介，独立署名建议另存作者字段。运行脚本只验证和展示记录，不会重新调用AI。",
+        "record": {
+          "file": "xpath_practice.html",
+          "fingerprint": "9aa7e909907214f96400135dde94bdc646fc2a68430330661e6e5d75909316c3",
+          "summary": "本次保存的正文容器可见文字中，征求意见事项、反馈方式及截止时间均保留；未发现应删除的署名行。",
+          "rubrics": [
+            {
+              "id": "text_scope",
+              "label": "文章文字范围",
+              "status": "pass",
+              "reason": "导语、修订内容、三种反馈方式和截止日期构成完整公告叙事；联系邮箱是公告内容，不应当作推广删除。",
+              "evidence": [
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]",
+                  "quote": "中新网10月30日电 公安部30日在官网发布公告称，为贯彻落实修订后的治安管理处罚法、行政处罚法等法律法规，进一步规范公安行政执法，提高公安机关行政案件办理质量和执法水平，经充分调研论证，公安部起草了《公安机关办理行政案件程序规定(修订征求意见稿)》，向社会公开征求意见。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]",
+                  "quote": "这次修订的主要内容包括如下4个方面：贯彻落实上位法规定要求，进一步保障当事人合法权益，进一步规范公安机关执法行为，进一步健全衔接机制、严密执法程序。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]",
+                  "quote": "公众可以通过以下途径和方式提出意见建议："
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]",
+                  "quote": "1、通过公安部网站(www.mps.gov.cn)查阅公开征求意见稿。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]",
+                  "quote": "2、通过邮件将意见发送至：fazhijumps@163.com."
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]",
+                  "quote": "3、通过信函方式将意见寄至：北京市东城区东长安街14号公安部法制局，邮编100741，并在信封上注明“对《公安机关办理行政案件程序规定(修订征求意见稿)》的意见建议”。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]",
+                  "quote": "意见反馈截止时间为2026年11月28日。"
+                }
+              ]
+            },
+            {
+              "id": "non_content",
+              "label": "署名与杂质",
+              "status": "pass",
+              "reason": "当前七块均与征求意见事项相关；导语电头保留，邮箱及邮寄地址属于办理方式。未见已选块中的广告或编辑署名。",
+              "evidence": [
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]",
+                  "quote": "中新网10月30日电 公安部30日在官网发布公告称，为贯彻落实修订后的治安管理处罚法、行政处罚法等法律法规，进一步规范公安行政执法，提高公安机关行政案件办理质量和执法水平，经充分调研论证，公安部起草了《公安机关办理行政案件程序规定(修订征求意见稿)》，向社会公开征求意见。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]",
+                  "quote": "2、通过邮件将意见发送至：fazhijumps@163.com."
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]",
+                  "quote": "3、通过信函方式将意见寄至：北京市东城区东长安街14号公安部法制局，邮编100741，并在信封上注明“对《公安机关办理行政案件程序规定(修订征求意见稿)》的意见建议”。"
+                }
+              ]
+            },
+            {
+              "id": "captions",
+              "label": "图片说明",
+              "status": "unknown",
+              "reason": "当前容器没有提取到图片说明；不据此推断页面其他区域没有图片。",
+              "evidence": []
+            },
+            {
+              "id": "order",
+              "label": "叙述顺序",
+              "status": "pass",
+              "reason": "事项说明后依次列出反馈方式，最后是截止日期，保持本次 DOM 的文章顺序。",
+              "evidence": [
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]",
+                  "quote": "这次修订的主要内容包括如下4个方面：贯彻落实上位法规定要求，进一步保障当事人合法权益，进一步规范公安机关执法行为，进一步健全衔接机制、严密执法程序。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]",
+                  "quote": "公众可以通过以下途径和方式提出意见建议："
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]",
+                  "quote": "1、通过公安部网站(www.mps.gov.cn)查阅公开征求意见稿。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]",
+                  "quote": "2、通过邮件将意见发送至：fazhijumps@163.com."
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]",
+                  "quote": "3、通过信函方式将意见寄至：北京市东城区东长安街14号公安部法制局，邮编100741，并在信封上注明“对《公安机关办理行政案件程序规定(修订征求意见稿)》的意见建议”。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]",
+                  "quote": "意见反馈截止时间为2026年11月28日。"
+                }
+              ]
+            },
+            {
+              "id": "image_text",
+              "label": "图片内正文",
+              "status": "unknown",
+              "reason": "本轮只审核 HTML 文字，没有检查图片像素。",
+              "evidence": []
+            }
+          ],
+          "corrections": [],
+          "proposals": [
+            "维持现有提取结果；不要把公告中的邮箱和网址按广告词删除。"
+          ]
+        }
+      },
+      "cleaned": {
+        "status": "unchanged",
+        "policy_version": 1,
+        "authors": [],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "中新网10月30日电 公安部30日在官网发布公告称，为贯彻落实修订后的治安管理处罚法、行政处罚法等法律法规，进一步规范公安行政执法，提高公安机关行政案件办理质量和执法水平，经充分调研论证，公安部起草了《公安机关办理行政案件程序规定(修订征求意见稿)》，向社会公开征求意见。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]"
+          },
+          {
+            "type": "paragraph",
+            "text": "这次修订的主要内容包括如下4个方面：贯彻落实上位法规定要求，进一步保障当事人合法权益，进一步规范公安机关执法行为，进一步健全衔接机制、严密执法程序。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]"
+          },
+          {
+            "type": "paragraph",
+            "text": "公众可以通过以下途径和方式提出意见建议：",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]"
+          },
+          {
+            "type": "paragraph",
+            "text": "1、通过公安部网站(www.mps.gov.cn)查阅公开征求意见稿。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]"
+          },
+          {
+            "type": "paragraph",
+            "text": "2、通过邮件将意见发送至：fazhijumps@163.com.",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]"
+          },
+          {
+            "type": "paragraph",
+            "text": "3、通过信函方式将意见寄至：北京市东城区东长安街14号公安部法制局，邮编100741，并在信封上注明“对《公安机关办理行政案件程序规定(修订征求意见稿)》的意见建议”。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]"
+          },
+          {
+            "type": "paragraph",
+            "text": "意见反馈截止时间为2026年11月28日。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]"
+          }
+        ],
+        "applied": [],
+        "note": "没有需要执行的已确认修正；正文与图片说明保持原序。",
+        "raw_block_count": 7,
+        "clean_block_count": 7,
+        "conservation_check": true,
+        "review_fingerprint": "9aa7e909907214f96400135dde94bdc646fc2a68430330661e6e5d75909316c3",
+        "projection_sha256": "6e6bdc01faa678c55603419d2f9a5f42308e2db842892691aaac359375763cee"
+      },
+      "author_candidates": []
     },
     {
       "file": "xpath_practice_02.html",
@@ -190,6 +419,386 @@
           "type": "paragraph",
           "text": "南半球的春日里，赤楠树继续生长。树下的人们追忆着这个年轻人的勇敢，也希望将他留下的这份善意和爱传递下去。(完)",
           "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[24]"
+        }
+      ],
+      "quality": {
+        "checks": [
+          {
+            "id": "candidate_coverage",
+            "label": "候选文字覆盖",
+            "status": "structural_pass",
+            "note": "仅检查当前容器内非已知杂质区域的 p 与 pictext，不证明整页完整。",
+            "evidence": []
+          },
+          {
+            "id": "known_exclusions",
+            "label": "已知广告/编辑区域混入",
+            "status": "structural_pass",
+            "note": "仅识别 adInContent、adEditor；未标记的推广内容仍可能混入。",
+            "evidence": []
+          },
+          {
+            "id": "source_evidence",
+            "label": "XPath 与原文一致",
+            "status": "structural_pass",
+            "note": "输出文本块在本次 HTML 中唯一定位并匹配文字。",
+            "evidence": []
+          },
+          {
+            "id": "order_overlap",
+            "label": "顺序和重复覆盖",
+            "status": "structural_pass",
+            "note": "检查 DOM 顺序，不能保证等于视觉阅读顺序。",
+            "evidence": []
+          },
+          {
+            "id": "semantic_quality",
+            "label": "语义完整与杂质判断",
+            "status": "unknown",
+            "note": "结构检查不判断语义；如有对话 AI 审核记录，在下方单独展示。",
+            "evidence": []
+          },
+          {
+            "id": "image_text",
+            "label": "图片内文字",
+            "status": "unknown",
+            "note": "容器中有 3 个 img 元素；未进行 OCR，未判断是否承载正文。",
+            "evidence": [
+              {
+                "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[1]/img",
+                "text": "",
+                "reason": "需判断是否承载正文文字"
+              },
+              {
+                "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]/img",
+                "text": "",
+                "reason": "需判断是否承载正文文字"
+              },
+              {
+                "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[5]/img",
+                "text": "",
+                "reason": "需判断是否承载正文文字"
+              }
+            ]
+          }
+        ],
+        "excluded_regions": [
+          {
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/table",
+            "text": "",
+            "reason": "已知广告/编辑结构，记录排除依据"
+          },
+          {
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[7]",
+            "text": "【编辑:黄嘉雯】",
+            "reason": "已知广告/编辑结构，记录排除依据"
+          }
+        ],
+        "finding_count": 0
+      },
+      "semantic_review": {
+        "status": "current",
+        "note": "审核记录与本次输入、规则和输出匹配。",
+        "reviewer": "当前对话中的 AI（Codex）",
+        "reviewed_at": "2026-11-03",
+        "scope": "已阅读三篇全部提取文本，并对照所选正文容器的直接子元素和文字；未做整页浏览器渲染、容器外完整性审核、图片像素审核或事实核查。结论是AI意见，不是人工真值。当前范围保留文章段落、图说、小标题、导语与受访者简介，独立署名建议另存作者字段。运行脚本只验证和展示记录，不会重新调用AI。",
+        "record": {
+          "file": "xpath_practice_02.html",
+          "fingerprint": "995ac23c93940e2e0575b2a77ca9886e2f4bcc9ddaa69c8541d9ff863f595a93",
+          "summary": "文章叙述、小标题与三条图说保留合理；第2块是独立记者署名，若正文与作者分字段应单独保存。",
+          "rubrics": [
+            {
+              "id": "text_scope",
+              "label": "文章文字范围",
+              "status": "pass",
+              "reason": "事件背景、家属和同学回忆以及文章结尾连续；小标题属于文章结构，应保留。仅评估当前正文容器的 HTML 可见文字。",
+              "evidence": [
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]",
+                  "quote": "中新网澳大利亚伍伦贡11月2日电 题：追忆中国留学生蒋安桐：澳大利亚海滩舍己救人，三年后被追授“英勇行为嘉奖”"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]",
+                  "quote": "澳大利亚伍伦贡大学校园内，三年前为纪念中国留学生蒋安桐种下的赤楠树，如今已枝繁叶茂。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]",
+                  "quote": "三年前的这一天，蒋安桐在伍伦贡市仙女草地海滩搭救遇险同学时不幸离世，年仅28岁。今年9月，他被澳大利亚总督追授“英勇行为嘉奖”。10月21日，新南威尔士州州督在伍伦贡大学举行颁授仪式，由其父母代领荣誉证书。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]",
+                  "quote": "“同学得救了，他却没回来”"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[13]",
+                  "quote": "“他总是乐于助人”"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[18]",
+                  "quote": "“安桐一直没有被忘记”"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[24]",
+                  "quote": "南半球的春日里，赤楠树继续生长。树下的人们追忆着这个年轻人的勇敢，也希望将他留下的这份善意和爱传递下去。(完)"
+                }
+              ]
+            },
+            {
+              "id": "non_content",
+              "label": "署名与杂质",
+              "status": "needs_review",
+              "reason": "第2块“中新网记者 薄雯雯”是独立署名而非叙述段落。建议移到作者/署名字段；保留原始块供追溯，不应粗略按“记者”删除所有段落。",
+              "evidence": [
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]",
+                  "quote": "中新网记者 薄雯雯"
+                }
+              ]
+            },
+            {
+              "id": "captions",
+              "label": "图片说明",
+              "status": "pass",
+              "reason": "三条说明分别介绍纪念碑、人物肖像和献花场景，与文章直接相关，应按 caption 保存。",
+              "evidence": [
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]",
+                  "quote": "当地时间10月29日，澳大利亚伍伦贡大学中国留学生蒋安桐追思会在伍伦贡举行。图为设立在伍伦贡大学校园内的蒋安桐纪念碑。 中新社记者 薄雯雯 摄"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[4]",
+                  "quote": "图为蒋安桐。 (受访者供图)"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[6]",
+                  "quote": "当地时间10月29日，伍伦贡大学师生及中澳各界人士向蒋安桐纪念碑献花。 中新社记者 薄雯雯 摄"
+                }
+              ]
+            },
+            {
+              "id": "order",
+              "label": "叙述顺序",
+              "status": "pass",
+              "reason": "事件背景、回忆和纪念活动按原文顺序排列，图说位于对应段落间。未核验浏览器视觉排序。",
+              "evidence": [
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]",
+                  "quote": "三年前的这一天，蒋安桐在伍伦贡市仙女草地海滩搭救遇险同学时不幸离世，年仅28岁。今年9月，他被澳大利亚总督追授“英勇行为嘉奖”。10月21日，新南威尔士州州督在伍伦贡大学举行颁授仪式，由其父母代领荣誉证书。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]",
+                  "quote": "当地时间10月29日，澳大利亚伍伦贡大学中国留学生蒋安桐追思会在伍伦贡举行。图为设立在伍伦贡大学校园内的蒋安桐纪念碑。 中新社记者 薄雯雯 摄"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]",
+                  "quote": "“同学得救了，他却没回来”"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[20]",
+                  "quote": "他表示，三年来，伍伦贡大学的师生、当地警方、华侨华人以及许许多多中澳民众，也一直用不同的方式表达着对安桐的怀念和敬意。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[6]",
+                  "quote": "当地时间10月29日，伍伦贡大学师生及中澳各界人士向蒋安桐纪念碑献花。 中新社记者 薄雯雯 摄"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[21]",
+                  "quote": "伍伦贡大学副校长海伦·帕特里奇表示，安桐始终是学校大家庭的一员。为纪念安桐，学校组织相关足球赛，并设立了以蒋安桐命名的计算机科学硕士优秀奖学金。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[24]",
+                  "quote": "南半球的春日里，赤楠树继续生长。树下的人们追忆着这个年轻人的勇敢，也希望将他留下的这份善意和爱传递下去。(完)"
+                }
+              ]
+            },
+            {
+              "id": "image_text",
+              "label": "图片内正文",
+              "status": "unknown",
+              "reason": "未查看原图像素，纪念碑上的文字是否还需额外提取尚未判断。",
+              "evidence": []
+            }
+          ],
+          "corrections": [
+            {
+              "operation": "move_to_author",
+              "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]",
+              "expected_text": "中新网记者 薄雯雯",
+              "author_name": "薄雯雯",
+              "reason": "语义审核确认这是独立署名行，移入作者字段。"
+            }
+          ],
+          "proposals": [
+            "新增作者/署名字段，将已确认的第2块单独归类；当前规则和基准暂不改。",
+            "后续用开发页验证严格的独立署名识别条件，并保留未见页检查，避免误删正文中的记者发言。"
+          ]
+        }
+      },
+      "cleaned": {
+        "status": "applied",
+        "policy_version": 1,
+        "authors": [
+          {
+            "name": "薄雯雯",
+            "byline": "中新网记者 薄雯雯",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]",
+            "raw_block_index": 2
+          }
+        ],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "中新网澳大利亚伍伦贡11月2日电 题：追忆中国留学生蒋安桐：澳大利亚海滩舍己救人，三年后被追授“英勇行为嘉奖”",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]"
+          },
+          {
+            "type": "paragraph",
+            "text": "澳大利亚伍伦贡大学校园内，三年前为纪念中国留学生蒋安桐种下的赤楠树，如今已枝繁叶茂。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]"
+          },
+          {
+            "type": "paragraph",
+            "text": "树前的纪念碑上写着：“纪念一位对足球充满热情的优秀学生，他的勇敢精神将被亲友及伍伦贡大学珍视铭记。”",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]"
+          },
+          {
+            "type": "paragraph",
+            "text": "今年10月29日，中国驻悉尼总领馆在伍伦贡大学举办蒋安桐追思会。他的父母、师生好友及中澳各界人士来到这里，为纪念树浇水，在碑前献花。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]"
+          },
+          {
+            "type": "paragraph",
+            "text": "三年前的这一天，蒋安桐在伍伦贡市仙女草地海滩搭救遇险同学时不幸离世，年仅28岁。今年9月，他被澳大利亚总督追授“英勇行为嘉奖”。10月21日，新南威尔士州州督在伍伦贡大学举行颁授仪式，由其父母代领荣誉证书。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]"
+          },
+          {
+            "type": "caption",
+            "text": "当地时间10月29日，澳大利亚伍伦贡大学中国留学生蒋安桐追思会在伍伦贡举行。图为设立在伍伦贡大学校园内的蒋安桐纪念碑。 中新社记者 薄雯雯 摄",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]"
+          },
+          {
+            "type": "paragraph",
+            "text": "“同学得救了，他却没回来”",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]"
+          },
+          {
+            "type": "paragraph",
+            "text": "“安桐，爸爸妈妈来看你了。”蒋安桐母亲安静坤在追思会上说，“赤楠树长高了，枝叶一年比一年舒展。看着它，妈妈会想起你年轻、挺拔的模样。”",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]"
+          },
+          {
+            "type": "paragraph",
+            "text": "安桐的名字里，藏着父母朴素而美好的愿望。蒋安桐父亲蒋宇告诉记者，“安”取自母亲的姓氏，也有平安之意；“桐”则希望他像梧桐树一样高大挺拔，能为他人遮阴纳凉。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[9]"
+          },
+          {
+            "type": "paragraph",
+            "text": "据蒋宇回忆，事发当天，安桐与几名同学在海边活动。发现一名同学遇险后，他与另一名同学上前施救，随后被海水带向深处，不幸遇难。据警方调查情况，推测安桐可能遭遇了离岸流。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[10]"
+          },
+          {
+            "type": "caption",
+            "text": "图为蒋安桐。 (受访者供图)",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[4]"
+          },
+          {
+            "type": "paragraph",
+            "text": "“同学得救了，他却没回来。这不是冲动，他只是放不下同学。”安静坤说，在澳大利亚求学时，安桐帮助英语不够熟练的中国留学生练习口语，鼓励他们主动交流；骑行途中有同学摔伤，他叫来救护车，在急诊室守了一整夜。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[11]"
+          },
+          {
+            "type": "paragraph",
+            "text": "在父亲的记忆中，安桐阳光开朗，喜欢运动，总是热心帮助别人，却很少向家人说起自己的荣誉和善举。许多往事，是家人后来整理物品、与同学交谈时才知道的。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[12]"
+          },
+          {
+            "type": "paragraph",
+            "text": "“他总是乐于助人”",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[13]"
+          },
+          {
+            "type": "paragraph",
+            "text": "2023年7月，蒋安桐来到伍伦贡大学攻读硕士学位。短暂的求学时光里，他与身边人结下了深厚友谊。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[14]"
+          },
+          {
+            "type": "paragraph",
+            "text": "追思会上，多位同学讲述他在学业、生活和职业规划上给予的帮助，回忆他的善良、真诚与乐观。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[15]"
+          },
+          {
+            "type": "paragraph",
+            "text": "“安桐十分阳光开朗、幽默风趣，他总是乐于助人。”蒋安桐好友、获救者贾斯廷·彭回忆，安桐热爱足球，积极参加学校组织的足球训练和比赛。两人常常结伴活动，他带安桐骑行，安桐则带他接触摄影，还教他包饺子。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[16]"
+          },
+          {
+            "type": "paragraph",
+            "text": "谈起往事，贾斯廷几度哽咽。他说，对安桐的铭记应延续到未来的每一年。即使没有站在这棵纪念树前，也应始终记得，这个世界上曾有这样一个人，愿意在危急时刻伸出援手，帮助和支持他人。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[17]"
+          },
+          {
+            "type": "paragraph",
+            "text": "“安桐一直没有被忘记”",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[18]"
+          },
+          {
+            "type": "paragraph",
+            "text": "“三年过去了，我们依然怀念他。因为安桐留给我们的，不只是一个令人悲痛和惋惜的故事，更是一份值得永远铭记的勇气、善良与担当。”中国驻悉尼总领事馆代总领事王春生在追思会上说。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[19]"
+          },
+          {
+            "type": "paragraph",
+            "text": "他表示，三年来，伍伦贡大学的师生、当地警方、华侨华人以及许许多多中澳民众，也一直用不同的方式表达着对安桐的怀念和敬意。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[20]"
+          },
+          {
+            "type": "caption",
+            "text": "当地时间10月29日，伍伦贡大学师生及中澳各界人士向蒋安桐纪念碑献花。 中新社记者 薄雯雯 摄",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[6]"
+          },
+          {
+            "type": "paragraph",
+            "text": "伍伦贡大学副校长海伦·帕特里奇表示，安桐始终是学校大家庭的一员。为纪念安桐，学校组织相关足球赛，并设立了以蒋安桐命名的计算机科学硕士优秀奖学金。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[21]"
+          },
+          {
+            "type": "paragraph",
+            "text": "获该奖学金的陈同学每月都会到安桐的纪念碑前送上一束花。她在发给安静坤的消息中写道：“我去送花时发现不止有我一个人在这么做，我想学校里一定有更多人也一样还记得他，怀念他。”",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[22]"
+          },
+          {
+            "type": "paragraph",
+            "text": "蒋宇说，当地华人朋友也给予一家人许多帮助。原本素昧平生的人，如今像亲人一样，让他们在异国他乡感受到温暖。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[23]"
+          },
+          {
+            "type": "paragraph",
+            "text": "南半球的春日里，赤楠树继续生长。树下的人们追忆着这个年轻人的勇敢，也希望将他留下的这份善意和爱传递下去。(完)",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[24]"
+          }
+        ],
+        "applied": [
+          {
+            "operation": "move_to_author",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]",
+            "expected_text": "中新网记者 薄雯雯",
+            "author_name": "薄雯雯",
+            "reason": "语义审核确认这是独立署名行，移入作者字段。"
+          }
+        ],
+        "note": "独立署名已移到作者字段；图片说明和其余正文保持原序。这是执行已记录的修正，尚未对清理后结果另做 AI 审核。",
+        "raw_block_count": 27,
+        "clean_block_count": 26,
+        "conservation_check": true,
+        "review_fingerprint": "995ac23c93940e2e0575b2a77ca9886e2f4bcc9ddaa69c8541d9ff863f595a93",
+        "projection_sha256": "2fc6300fbc8f9e91d564ce8a1983cdea244fcd29eae7987ecad87fb6722e766a"
+      },
+      "author_candidates": [
+        {
+          "raw_block_index": 2,
+          "text": "中新网记者 薄雯雯",
+          "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]",
+          "reason": "短段落包含署名词，且没有问句或完整句标点；需要语义审核确认。"
         }
       ]
     },
@@ -368,6 +977,464 @@
           "type": "paragraph",
           "text": "伊扎特·萨阿德(Ezzat Saad)，现任埃及外交事务委员会主任，是埃及前外交部部长助理、埃及前驻俄罗斯大使、中国非洲研究院顾问，2026全球南方现代化论坛嘉宾。",
           "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[30]"
+        }
+      ],
+      "quality": {
+        "checks": [
+          {
+            "id": "candidate_coverage",
+            "label": "候选文字覆盖",
+            "status": "structural_pass",
+            "note": "仅检查当前容器内非已知杂质区域的 p 与 pictext，不证明整页完整。",
+            "evidence": []
+          },
+          {
+            "id": "known_exclusions",
+            "label": "已知广告/编辑区域混入",
+            "status": "structural_pass",
+            "note": "仅识别 adInContent、adEditor；未标记的推广内容仍可能混入。",
+            "evidence": []
+          },
+          {
+            "id": "source_evidence",
+            "label": "XPath 与原文一致",
+            "status": "structural_pass",
+            "note": "输出文本块在本次 HTML 中唯一定位并匹配文字。",
+            "evidence": []
+          },
+          {
+            "id": "order_overlap",
+            "label": "顺序和重复覆盖",
+            "status": "structural_pass",
+            "note": "检查 DOM 顺序，不能保证等于视觉阅读顺序。",
+            "evidence": []
+          },
+          {
+            "id": "semantic_quality",
+            "label": "语义完整与杂质判断",
+            "status": "unknown",
+            "note": "结构检查不判断语义；如有对话 AI 审核记录，在下方单独展示。",
+            "evidence": []
+          },
+          {
+            "id": "image_text",
+            "label": "图片内文字",
+            "status": "unknown",
+            "note": "容器中有 5 个 img 元素；未进行 OCR，未判断是否承载正文。",
+            "evidence": [
+              {
+                "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[1]/img",
+                "text": "",
+                "reason": "需判断是否承载正文文字"
+              },
+              {
+                "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]/img",
+                "text": "",
+                "reason": "需判断是否承载正文文字"
+              },
+              {
+                "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[4]/img",
+                "text": "",
+                "reason": "需判断是否承载正文文字"
+              },
+              {
+                "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[6]/img",
+                "text": "",
+                "reason": "需判断是否承载正文文字"
+              },
+              {
+                "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[8]/img",
+                "text": "",
+                "reason": "需判断是否承载正文文字"
+              }
+            ]
+          }
+        ],
+        "excluded_regions": [
+          {
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/table",
+            "text": "",
+            "reason": "已知广告/编辑结构，记录排除依据"
+          },
+          {
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[10]",
+            "text": "【编辑:付子豪】",
+            "reason": "已知广告/编辑结构，记录排除依据"
+          }
+        ],
+        "finding_count": 0
+      },
+      "semantic_review": {
+        "status": "current",
+        "note": "审核记录与本次输入、规则和输出匹配。",
+        "reviewer": "当前对话中的 AI（Codex）",
+        "reviewed_at": "2026-11-03",
+        "scope": "已阅读三篇全部提取文本，并对照所选正文容器的直接子元素和文字；未做整页浏览器渲染、容器外完整性审核、图片像素审核或事实核查。结论是AI意见，不是人工真值。当前范围保留文章段落、图说、小标题、导语与受访者简介，独立署名建议另存作者字段。运行脚本只验证和展示记录，不会重新调用AI。",
+        "record": {
+          "file": "xpath_practice_03.html",
+          "fingerprint": "79af6ecb89b14b74f180c60953fe42cd7e759e2d1f9c39d9506601ee5211014a",
+          "summary": "访谈导语、问答、图说及受访者简介均已保留；第3块是独立记者署名，问答中的“中新社记者：”必须保留。",
+          "rubrics": [
+            {
+              "id": "text_scope",
+              "label": "文章文字范围",
+              "status": "pass",
+              "reason": "访谈引入、三个问题及回答和受访者简介均属于本次“文章及附属简介”的保留范围；“(完)”之后仍有简介，不能用该标记截断全部后文。",
+              "evidence": [
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]",
+                  "quote": "中新社约翰内斯堡11月3日电 题：全球南方现代化如何抓住AI机遇？"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]",
+                  "quote": "——专访埃及外交事务委员会主任伊扎特·萨阿德"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]",
+                  "quote": "在全球南方群体性崛起、共同迈向现代化的进程中，中国走出了立足本国国情、重视本土经验的现代化道路——中国式现代化。进入人工智能(AI)时代，中国推进“人工智能+”行动，人工智能核心产业规模已超万亿元人民币，推动人工智能更好赋能发展。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]",
+                  "quote": "中新社记者：您如何看待人工智能在目前全球南方现代化中的作用？"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[10]",
+                  "quote": "中新社记者：您如何评价中国在推动人工智能惠及全球南方、促进更加公平包容的全球人工智能治理方面发挥的作用？"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[18]",
+                  "quote": "中新社记者：今年是中埃建交70周年。两国应如何进一步深化人工智能应用、人才培养和技术合作？这种合作能为其他全球南方国家现代化建设提供哪些经验？"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[28]",
+                  "quote": "此外，两国合作并不仅限于人工智能，还包括航天产业等许多领域，而这对埃及实现现代化都十分重要。(完)"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[29]",
+                  "quote": "受访者简介："
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[30]",
+                  "quote": "伊扎特·萨阿德(Ezzat Saad)，现任埃及外交事务委员会主任，是埃及前外交部部长助理、埃及前驻俄罗斯大使、中国非洲研究院顾问，2026全球南方现代化论坛嘉宾。"
+                }
+              ]
+            },
+            {
+              "id": "non_content",
+              "label": "署名与杂质",
+              "status": "needs_review",
+              "reason": "第3块“中新社记者 孙翔”为独立署名，可移到作者字段；第7、11、20块带冒号的“中新社记者：”是访谈问题，不是杂质。",
+              "evidence": [
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]",
+                  "quote": "中新社记者 孙翔"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]",
+                  "quote": "中新社记者：您如何看待人工智能在目前全球南方现代化中的作用？"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[10]",
+                  "quote": "中新社记者：您如何评价中国在推动人工智能惠及全球南方、促进更加公平包容的全球人工智能治理方面发挥的作用？"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[18]",
+                  "quote": "中新社记者：今年是中埃建交70周年。两国应如何进一步深化人工智能应用、人才培养和技术合作？这种合作能为其他全球南方国家现代化建设提供哪些经验？"
+                }
+              ]
+            },
+            {
+              "id": "captions",
+              "label": "图片说明",
+              "status": "pass",
+              "reason": "四条图说分别涉及AI展示、合作中心、论坛和受访者专访，属于文章图片说明。",
+              "evidence": [
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]",
+                  "quote": "哈萨克斯坦，阿斯塔纳世博园区的“Alem.AI”国际人工智能中心。展示的多款人形机器人。 (资料图)中新社记者 单璐 摄"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[5]",
+                  "quote": "2026年7月20日，上海，中国—金砖国家人工智能发展与合作中心‌吸引参观者。中新社发 陈玉宇 摄"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[7]",
+                  "quote": "当地时间9月30日，2026全球南方现代化论坛在埃及开罗举行，本次论坛主题是“人工智能浪潮：全球南方现代化的机遇与挑战”。图为“全球南方青年说”嘉宾分享人工智能助力发展案例。 中新社记者 孙翔 摄"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[9]",
+                  "quote": "埃及外交事务委员会主任伊扎特·萨阿德接受中新社“东西问”专访。中新社记者 孙翔 摄"
+                }
+              ]
+            },
+            {
+              "id": "order",
+              "label": "叙述顺序",
+              "status": "pass",
+              "reason": "导语后按问答组织，最后附受访者简介；保留DOM文字顺序，未核验视觉排序。",
+              "evidence": [
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]",
+                  "quote": "现将采访实录摘要如下："
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]",
+                  "quote": "中新社记者：您如何看待人工智能在目前全球南方现代化中的作用？"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]",
+                  "quote": "伊扎特·萨阿德：当前，人工智能正在经历一场革命。人工智能能够改善世界各地数以百万计民众的生活，尤其是全球南方国家民众的生活。无论是在医疗卫生、农业、环境保护，还是生活中的许多其他领域，人工智能都蕴藏着巨大潜力。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[18]",
+                  "quote": "中新社记者：今年是中埃建交70周年。两国应如何进一步深化人工智能应用、人才培养和技术合作？这种合作能为其他全球南方国家现代化建设提供哪些经验？"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[19]",
+                  "quote": "伊扎特·萨阿德：谈到埃及和中国之间的合作，实际上存在很多机遇。"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[28]",
+                  "quote": "此外，两国合作并不仅限于人工智能，还包括航天产业等许多领域，而这对埃及实现现代化都十分重要。(完)"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[29]",
+                  "quote": "受访者简介："
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[9]",
+                  "quote": "埃及外交事务委员会主任伊扎特·萨阿德接受中新社“东西问”专访。中新社记者 孙翔 摄"
+                },
+                {
+                  "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[30]",
+                  "quote": "伊扎特·萨阿德(Ezzat Saad)，现任埃及外交事务委员会主任，是埃及前外交部部长助理、埃及前驻俄罗斯大使、中国非洲研究院顾问，2026全球南方现代化论坛嘉宾。"
+                }
+              ]
+            },
+            {
+              "id": "image_text",
+              "label": "图片内正文",
+              "status": "unknown",
+              "reason": "容器存在图片，本次未查看图片像素，不能认定图内文字已提取。",
+              "evidence": []
+            }
+          ],
+          "corrections": [
+            {
+              "operation": "move_to_author",
+              "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]",
+              "expected_text": "中新社记者 孙翔",
+              "author_name": "孙翔",
+              "reason": "语义审核确认这是独立署名行，移入作者字段。"
+            }
+          ],
+          "proposals": [
+            "将第3块独立署名作为作者元数据候选，问答中的记者提问保留。",
+            "保留受访者简介和对应图说；若未来任务要求只留访谈主体，应先修改明确的内容范围再评测。",
+            "该页现已用于语义审核和分析；若用其修改规则，不再计为未见验证页。"
+          ]
+        }
+      },
+      "cleaned": {
+        "status": "applied",
+        "policy_version": 1,
+        "authors": [
+          {
+            "name": "孙翔",
+            "byline": "中新社记者 孙翔",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]",
+            "raw_block_index": 3
+          }
+        ],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "中新社约翰内斯堡11月3日电 题：全球南方现代化如何抓住AI机遇？",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]"
+          },
+          {
+            "type": "paragraph",
+            "text": "——专访埃及外交事务委员会主任伊扎特·萨阿德",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]"
+          },
+          {
+            "type": "paragraph",
+            "text": "在全球南方群体性崛起、共同迈向现代化的进程中，中国走出了立足本国国情、重视本土经验的现代化道路——中国式现代化。进入人工智能(AI)时代，中国推进“人工智能+”行动，人工智能核心产业规模已超万亿元人民币，推动人工智能更好赋能发展。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]"
+          },
+          {
+            "type": "paragraph",
+            "text": "全球南方应如何抓住人工智能机遇，使其为全球南方现代化注入新动能？中国的理念与实践又能带来哪些启示？中新社“东西问”日前在开罗就此专访埃及外交事务委员会主任伊扎特·萨阿德(Ezzat Saad)。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]"
+          },
+          {
+            "type": "paragraph",
+            "text": "现将采访实录摘要如下：",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]"
+          },
+          {
+            "type": "paragraph",
+            "text": "中新社记者：您如何看待人工智能在目前全球南方现代化中的作用？",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]"
+          },
+          {
+            "type": "paragraph",
+            "text": "伊扎特·萨阿德：当前，人工智能正在经历一场革命。人工智能能够改善世界各地数以百万计民众的生活，尤其是全球南方国家民众的生活。无论是在医疗卫生、农业、环境保护，还是生活中的许多其他领域，人工智能都蕴藏着巨大潜力。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]"
+          },
+          {
+            "type": "paragraph",
+            "text": "同时，我们也看到在人工智能问题上，全球正出现一道鸿沟，这既涉及技术，也涉及治理。这项技术不应该被少数几个国家垄断。作为全球南方国家，我们应该共享这一领域的最新发展成果，从而改善人民生活，推动世界各国实现可持续发展。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[9]"
+          },
+          {
+            "type": "caption",
+            "text": "哈萨克斯坦，阿斯塔纳世博园区的“Alem.AI”国际人工智能中心。展示的多款人形机器人。 (资料图)中新社记者 单璐 摄",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]"
+          },
+          {
+            "type": "paragraph",
+            "text": "中新社记者：您如何评价中国在推动人工智能惠及全球南方、促进更加公平包容的全球人工智能治理方面发挥的作用？",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[10]"
+          },
+          {
+            "type": "paragraph",
+            "text": "伊扎特·萨阿德：在2026世界人工智能大会暨人工智能全球治理高级别会议上，中方宣布系列举措，包括未来5年将面向发展中国家提供专题研修培训；面向阿拉伯国家联盟、非洲联盟、上海合作组织、金砖国家等建设国际人工智能应用合作中心等。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[11]"
+          },
+          {
+            "type": "paragraph",
+            "text": "我们赞赏中国在金砖国家、上合组织等平台上提出的有关倡议，并推动在人工智能领域加强与全球南方国家的合作。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[12]"
+          },
+          {
+            "type": "paragraph",
+            "text": "我们同样赞赏，中国强调应当在多边机构框架下推进人工智能治理，无论是在联合国，还是在非盟、阿盟等区域组织，以及中非合作论坛、中阿合作论坛等机制。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[13]"
+          },
+          {
+            "type": "paragraph",
+            "text": "这意味着，所有相关国家都有机会参与其中，与其他志同道合的国家一道塑造人工智能的未来。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[14]"
+          },
+          {
+            "type": "paragraph",
+            "text": "全球人工智能治理应为所有文明、所有语言提供充分的参与空间，使它们都能够共同参与塑造人工智能的未来，这一点至关重要。这实际上关系到文明之间的对话。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[15]"
+          },
+          {
+            "type": "paragraph",
+            "text": "人工智能不应该被某一种文明或某一种语言所垄断，而应该由所有语言、所有文明共同分享。正因为如此，我们高度赞赏中国提出的有关倡议，以及此前在中国举行的相关会议。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[16]"
+          },
+          {
+            "type": "paragraph",
+            "text": "我们应当加强协调与合作，同时交流彼此在人工智能领域的经验。我认为，这也是中方在许多场合所强调的核心理念，即我们应该以公平、开放的方式处理人工智能问题，使每一个国家都能够从这场新的技术革命中受益。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[17]"
+          },
+          {
+            "type": "caption",
+            "text": "2026年7月20日，上海，中国—金砖国家人工智能发展与合作中心‌吸引参观者。中新社发 陈玉宇 摄",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[5]"
+          },
+          {
+            "type": "paragraph",
+            "text": "中新社记者：今年是中埃建交70周年。两国应如何进一步深化人工智能应用、人才培养和技术合作？这种合作能为其他全球南方国家现代化建设提供哪些经验？",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[18]"
+          },
+          {
+            "type": "paragraph",
+            "text": "伊扎特·萨阿德：谈到埃及和中国之间的合作，实际上存在很多机遇。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[19]"
+          },
+          {
+            "type": "paragraph",
+            "text": "首先，中国同包括埃及在内的多个阿拉伯国家建立了全面战略伙伴关系。这意味着双方的合作领域非常广泛，而我认为人工智能将成为其中一个非常重要的领域。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[20]"
+          },
+          {
+            "type": "paragraph",
+            "text": "其次，除了中国与阿拉伯国家之间的双边合作之外，我们还拥有一个可以推动基础设施、人工智能以及其他众多领域合作的制度性框架，那就是中阿合作论坛。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[21]"
+          },
+          {
+            "type": "paragraph",
+            "text": "中阿合作论坛可以作为一个多边机制，共同确定人工智能领域的诸多合作方向，并探索如何通过这些合作实现互利共赢。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[22]"
+          },
+          {
+            "type": "paragraph",
+            "text": "中国已经是埃及以及整个阿拉伯世界最重要的贸易和经济伙伴之一，这本身就为双方进一步深化合作提供了良好基础。尤其是在我们讨论作为全球南方组成部分的阿拉伯国家如何推进现代化时，中国能够发挥重要作用。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[23]"
+          },
+          {
+            "type": "caption",
+            "text": "当地时间9月30日，2026全球南方现代化论坛在埃及开罗举行，本次论坛主题是“人工智能浪潮：全球南方现代化的机遇与挑战”。图为“全球南方青年说”嘉宾分享人工智能助力发展案例。 中新社记者 孙翔 摄",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[7]"
+          },
+          {
+            "type": "paragraph",
+            "text": "在人工智能领域，我们非常重视同中国开展能力建设合作。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[24]"
+          },
+          {
+            "type": "paragraph",
+            "text": "2025年，埃及发布第二版《国家人工智能战略(2025—2030年)》，确立了治理、技术、数据、基础设施、创新生态系统和人才六大支柱，并规划开发国家人工智能模型、生成高质量的阿拉伯语数据集等。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[25]"
+          },
+          {
+            "type": "paragraph",
+            "text": "按照规划，到2030年，埃及人工智能专业人员和专家数量将翻一番，达到3万人；信息通信技术产业对国内生产总值(GDP)的贡献率将提高至7.7%。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[26]"
+          },
+          {
+            "type": "paragraph",
+            "text": "我相信，中国也将在这一过程中给予我们支持。未来五年，我们将开展许多共同或联合项目。通过这些项目，中国将帮助我们进一步了解和掌握人工智能技术，并为埃及培养相关人才，使他们接受人工智能这场新技术革命不同技术领域的专业培训。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[27]"
+          },
+          {
+            "type": "paragraph",
+            "text": "此外，两国合作并不仅限于人工智能，还包括航天产业等许多领域，而这对埃及实现现代化都十分重要。(完)",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[28]"
+          },
+          {
+            "type": "paragraph",
+            "text": "受访者简介：",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[29]"
+          },
+          {
+            "type": "caption",
+            "text": "埃及外交事务委员会主任伊扎特·萨阿德接受中新社“东西问”专访。中新社记者 孙翔 摄",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[9]"
+          },
+          {
+            "type": "paragraph",
+            "text": "伊扎特·萨阿德(Ezzat Saad)，现任埃及外交事务委员会主任，是埃及前外交部部长助理、埃及前驻俄罗斯大使、中国非洲研究院顾问，2026全球南方现代化论坛嘉宾。",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[30]"
+          }
+        ],
+        "applied": [
+          {
+            "operation": "move_to_author",
+            "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]",
+            "expected_text": "中新社记者 孙翔",
+            "author_name": "孙翔",
+            "reason": "语义审核确认这是独立署名行，移入作者字段。"
+          }
+        ],
+        "note": "独立署名已移到作者字段；图片说明和其余正文保持原序。这是执行已记录的修正，尚未对清理后结果另做 AI 审核。",
+        "raw_block_count": 34,
+        "clean_block_count": 33,
+        "conservation_check": true,
+        "review_fingerprint": "79af6ecb89b14b74f180c60953fe42cd7e759e2d1f9c39d9506601ee5211014a",
+        "projection_sha256": "d1592070c34497a95fe5f9b509958f803e12103c2b8b2d054803a8fa83af4ee9"
+      },
+      "author_candidates": [
+        {
+          "raw_block_index": 3,
+          "text": "中新社记者 孙翔",
+          "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]",
+          "reason": "短段落包含署名词，且没有问句或完整句标点；需要语义审核确认。"
         }
       ]
     }

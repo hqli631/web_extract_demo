@@ -503,3 +503,19 @@ $env:PYTHONPATH = '.deps'
 默认读取第二批已下载的图片；其他批次可传入 --batch 和 --file。ocr_validation_images.py 保留逐行坐标、置信度与原图画框；ocr_layout.py 中的可选版式规则仅适用于匹配的中新网引语卡片，默认不启用。未匹配图片保留待判断。
 
 compose_ocr_candidate.py 按网页快照顺序交错排列 DOM 文字与 OCR 正文候选，检查快照、图片来源、顺序和哈希，生成独立的 *_combined_candidate.json 和 HTML。默认报告在 validation_blind_round2/reports/ 下。合成结果尚未校对，不改写 output/results.json，也不改变独立验证通过率；存在缺图、过期结果或无法确定顺序时拒绝或标为 blocked。
+
+## XPath 实验的当前入口
+
+这部分用于学习“抽取 -> 审核 -> 受限修正 -> 回归”的工程闭环，不会把 AI 意见冒充人工真值。运行命令：
+
+    .\.venv\Scripts\python.exe -X utf8 .\xpath_batch.py
+
+报告在 output/xpath_practice/summary.html，结构化结果在同目录的 results.json。报告同时显示原始提取块、结构检查、当前对话 AI 的语义审核、清理后的正文和自动署名候选。原始结果仍用于回归基准，清理结果是派生投影。
+
+当前三篇练习页的原始块数为 7、27、34。已确认的两条独立署名分别进入作者字段，生成 7、26、33 个正文/图说块；访谈中的“中新社记者：……”问题、图说和受访者简介保持不变。候选扫描器只减少审核范围，不能单独决定删除或移动。
+
+完整检查命令：
+
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\test_project.ps1
+
+项目当前自动化测试合计 70 项，包含真实练习样本的署名修正、原始结果不变、访谈问题保留、图说保留和冻结基准一致性检查。测试通过表示这些已编码行为及已保存样本回归一致，不表示对所有网页的准确率。岗位学习的分步实操与验收清单见 [INTERNSHIP_PRACTICUM.md](INTERNSHIP_PRACTICUM.md)。
