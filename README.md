@@ -1,5 +1,17 @@
 # Web Extract Demo
 
+后续按[岗位对齐固定计划](docs/ROLE_ALIGNED_LEARNING_PLAN.md)推进：先做布局簇、少样本代码生成、CPU批量执行及代码反馈修复，再衔接Rubrics校准、Agentic RL和RSI。第三阶段尚未执行，下一步从布局分组与样本协议开始。
+
+## 阶段总结与回顾
+
+第一阶段的静态网页抽取与回归、第二阶段的四课及Rubrics计分补齐均已完成约定的工程范围；个人掌握通过运行和解释报告确认。
+
+- [阶段回顾总索引](docs/LEARNING_STAGE_INDEX.md)：当前进程、阅读顺序和后续阶段归档约定。
+- [第一阶段总结](docs/STAGE1_SUMMARY.md)：六篇样例、DOM/XPath、字段分类、原始证据与回归操作。
+- [第二阶段总结](docs/STAGE2_SUMMARY.md)：任务协议、候选验证、审核反馈、新页漏表、质量判断题与计分边界。
+
+后续各阶段完成时分别新增总结并更新索引。已有采集、可视化及OCR辅助工具的存在，不代表动态网页、无人值守AI评审或RL训练已经完成。
+
 当前学习重点是对齐岗位聊天中的Rubrics评审与计分，操作说明见 [质量判断题计分](docs/RUBRICS_SCORING_GUIDE.md)。运行：
 
 ~~~powershell

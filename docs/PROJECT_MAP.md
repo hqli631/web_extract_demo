@@ -2,6 +2,8 @@
 
 ## 当前学习入口
 
+- 阶段回顾统一入口：docs/LEARNING_STAGE_INDEX.md。第一阶段总结为STAGE1_SUMMARY.md，第二阶段总结为STAGE2_SUMMARY.md，分别包含进程、知识点、操作、证据及边界；后续阶段完成时单独归档。
+
 - 当前对齐截图的Rubrics计分操作：docs/RUBRICS_SCORING_GUIDE.md；运行learning/agent_io/score_body_quality.py，报告output/agent_io/quality_score/index.html。完成五道质量题、保存AI评审、确定性算分及反例；不等同于已经训练模型。
 - **第二阶段四课操作已完成：先看 docs/STAGE2_COMPLETION.md，运行 learning/agent_io/finish_stage2.py，打开 output/agent_io/final/index.html。固定计划与完成证据见 STAGE2_PLAN.md；不再追加课程。**
 - `docs/STAGE2_AGENT_LESSON5.md`：开发/回归/未见样例分工与7个定位边界实验。
