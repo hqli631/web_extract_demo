@@ -29,4 +29,7 @@
 ```powershell
 .\.venv\Scripts\python.exe -X utf8 .\learning\xpath\xpath_practice_sina.py collected_af5904c15d1deebc.html
 .\.venv\Scripts\python.exe -X utf8 .\learning\xpath\check_xpath_sina_batch.py
+.\.venv\Scripts\python.exe -X utf8 .\learning\run_project1.py
 ```
+
+统一验收报告位于 `output/project1/index.html`，结构化汇总位于同目录 `results.json`。

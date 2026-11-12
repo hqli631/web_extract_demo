@@ -520,6 +520,19 @@ compose_ocr_candidate.py 按网页快照顺序交错排列 DOM 文字与 OCR 正
 
 项目当前自动化测试合计 72 项，包含真实练习样本的署名修正、原始结果不变、访谈问题保留、图说保留、冻结基准一致性，以及隔离迁移报告的回溯标记检查。测试通过表示这些已编码行为及已保存样本回归一致，不表示对所有网页的准确率。岗位学习的分步实操与验收清单见 [docs/INTERNSHIP_PRACTICUM.md](docs/INTERNSHIP_PRACTICUM.md)。
 
+## 第一个项目统一验收
+
+在项目根目录运行：
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 .\learning\run_project1.py
+Start-Process .\output\project1\index.html
+```
+
+该入口离线重跑六篇已保存新闻样例，覆盖中新网和新浪两种模板；它会检查原始快照、正文字段、作者/来源/小标题分类、排除记录、历史审核状态和工程测试，并生成 `output/project1/index.html`。
+
+当前项目 v1 的完成范围是：保存的 HTML 能按两类模板提取标题和可读内容，结果有 XPath 与 SHA256 证据，已确认的署名/来源/小标题有独立字段，规则变化能通过回归发现。当前不宣称任意网站准确率，也不把六篇开发样例当成未见测试集；下一阶段是新增未参与规则调整的页面，按模板建立独立验证集。
+
 ## 单页 XPath 迁移检查
 
 对一个尚未放入练习批次的本地 HTML 试运行当前规则，不触碰冻结基准：

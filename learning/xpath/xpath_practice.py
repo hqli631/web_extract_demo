@@ -4,7 +4,7 @@ from pathlib import Path
 from lxml import html
 
 
-# __file__ 是当前脚本的位置，parent 是脚本所在目录。
+# 脚本位于 learning/xpath，向上两层定位项目根目录。
 project_dir = Path(__file__).resolve().parents[2]
 rules_path = project_dir / "xpath_rules.json"
 
