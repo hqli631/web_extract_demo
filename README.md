@@ -1,5 +1,14 @@
 # Web Extract Demo
 
+当前学习重点是对齐岗位聊天中的Rubrics评审与计分，操作说明见 [质量判断题计分](docs/RUBRICS_SCORING_GUIDE.md)。运行：
+
+~~~powershell
+.\.venv\Scripts\python.exe -X utf8 .\learning\agent_io\score_body_quality.py
+Start-Process ".\output\agent_io\quality_score\index.html"
+~~~
+
+当前对话AI已保存基于证据的逐题判断，程序离线校验并计分；不是每次调用模型，也没有RL参数训练。
+
 这是一个用于实习学习的网页正文抽取实验项目，包含网页读取、区域识别、原网页定位复核、人工标注、自动保存和结果评测。
 
 ## 当前学习状态：第二阶段四课已收尾
