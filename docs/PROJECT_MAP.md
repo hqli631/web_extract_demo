@@ -2,6 +2,12 @@
 
 ## 当前学习入口
 
+- `docs/STAGE2_AGENT_LESSON3.md`：Rubrics、当前对话 AI 的全文审核与清理反例。
+- `learning/agent_io/review_pipeline.py`：复建全文任务，检查审核记录，生成独立的可追溯结果。
+- `config/agent_review_rubric.json`：本课产品质量标准，变动会使旧审核失效。
+- `docs/STAGE2_AGENT_LESSON2.md`：当前对话 AI 提出 XPath 候选，独立检查与拒绝反例。
+- `learning/agent_io/check_candidate.py`：检查候选与任务、快照、原始段落的对应关系。
+- `output/agent_io/candidate.json`：本轮 AI 规则建议，尚未发布；检查报告为同目录 check.html / check.json。
 - `docs/STAGE2_AGENT_LESSON1.md`：第二阶段 Agent 任务输入与输出协议。
 - `learning/agent_io/prepare_task.py`：准备两页开发样例任务包，不调用模型。
 

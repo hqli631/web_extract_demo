@@ -1,0 +1,24 @@
+{
+  "task_id": "sina-selector-cdb6723cd3045467",
+  "source_sha256": {
+    "blog_01.html": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "collected_14a028de299edfab.html": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327"
+  },
+  "rules": {
+    "title_xpath": "//h1",
+    "container_xpath": "//div[@id='artibody']",
+    "block_xpath": "./p"
+  },
+  "explanations": {
+    "title_xpath": "两页都只有一个非空 h1，可作当前模板标题候选，不依赖文章文字。",
+    "container_xpath": "两页提供的容器都是 id 为 artibody 的 div；使用共享属性避免依赖多层位置链。容器由任务提供，本轮没有自动发现容器。",
+    "block_xpath": "从容器选直接子 p，以 DOM 顺序保留原始段落；执行器读取完整 text_content，保留内联链接文字并过滤空段落。专题导航与责任编辑也先收集，分类清理另做。"
+  },
+  "limitations": [
+    "仅观察两份已知开发样例；通过检查不说明跨站或未见页面准确率。",
+    "直接子 p 会漏掉嵌套段落、div 图说、图片和表格。",
+    "原始候选包含专题导航和责任编辑，不能直接作为最终清理正文。",
+    "标题或容器不唯一、模板变化、静态快照缺少动态内容时，需要报异常并重新验证。",
+    "任务包的长段落预览被截断，不能据此完成全文语义审核。"
+  ]
+}

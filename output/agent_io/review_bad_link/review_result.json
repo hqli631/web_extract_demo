@@ -1,0 +1,18 @@
+{
+  "accepted": false,
+  "issues": [
+    "blog_01.html #2: 违反可执行 Rubric：需要 keep/R4，收到 exclude/R2",
+    "blog_01.html #2: 本轮未提供支持该非保留动作的结构证据"
+  ],
+  "pages": [],
+  "review_task_id": "sina-review-72fe84554aa5d7e7",
+  "rubric_version": 1,
+  "review_origin": {
+    "reviewer": "current_conversation_ai",
+    "method": "本轮读取两页68段完整文字及链接/属性后作出的保存审核；重放程序不调用AI。",
+    "sample_role": "known_development_samples"
+  },
+  "program_ai_calls": 0,
+  "published": false,
+  "validation_scope": "协议、证据完整性和列明的结构约束；不是语义准确率或泛化证明"
+}

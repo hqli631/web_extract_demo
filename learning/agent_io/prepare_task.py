@@ -1,7 +1,6 @@
 """准备离线 Agent 规则生成任务；不调用模型，不改变现有抽取规则。"""
 import hashlib
 import json
-import re
 from pathlib import Path
 
 from lxml import html
