@@ -1,5 +1,9 @@
 # Web Extract Demo
 
+当前学习：第三阶段3.1进行中，先按[布局分组操作说明](docs/STAGE3_UNIT1.md)运行learning/cluster_layouts.py并看output/stage3/layout/index.html。仅完成历史结构盘点，样本协议尚未冻结；未进入代码生成。
+
+岗位清单对照见 [GOAL_CHECKLIST_STATUS.md](docs/GOAL_CHECKLIST_STATUS.md)，其中明确区分了已完成基础、已有Rubrics/任务协议原型、尚未开始的Coding Agent、ReAct、多Agent、RL、微调和RSI工作。
+
 后续按[岗位对齐固定计划](docs/ROLE_ALIGNED_LEARNING_PLAN.md)推进：先做布局簇、少样本代码生成、CPU批量执行及代码反馈修复，再衔接Rubrics校准、Agentic RL和RSI。第三阶段尚未执行，下一步从布局分组与样本协议开始。
 
 ## 阶段总结与回顾
