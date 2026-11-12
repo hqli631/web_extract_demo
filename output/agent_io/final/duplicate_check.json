@@ -1,0 +1,24 @@
+{
+  "scanned_article_snapshots": 20,
+  "pages": [
+    {
+      "id": "new_1",
+      "exact_body_duplicate": false,
+      "nearest_file": "samples/collected_af5904c15d1deebc.html",
+      "char5_jaccard": 0.003731,
+      "near_duplicate_threshold": 0.85,
+      "near_duplicate": false,
+      "body_characters": 4587
+    },
+    {
+      "id": "new_2",
+      "exact_body_duplicate": false,
+      "nearest_file": "samples/collected_c5d4b9cdcf5b4c91.html",
+      "char5_jaccard": 0.005697,
+      "near_duplicate_threshold": 0.85,
+      "near_duplicate": false,
+      "body_characters": 1614
+    }
+  ],
+  "scope": "当前工作区历史URL、文章容器文本精确与字符5gram近重复；不能证明工作区外使用史。"
+}

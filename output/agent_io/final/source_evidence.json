@@ -1,0 +1,82 @@
+[
+  {
+    "id": "new_1",
+    "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-12/doc-iniyniex1156506.shtml",
+    "listing_title": "财经快讯APP哪个好？2026年6款主流财经资讯软件评测：谁更适合追踪市场突发消息？",
+    "previous_url_match": false,
+    "attempted_at": "2026-11-12T07:22:41.127629+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-12/doc-iniyniex1156506.shtml",
+    "file": "output/agent_io/final/snapshots/new_1.html",
+    "snapshot_sha256": "31ad123ca0847e21ae41e642d62ac7d149c9a54bc764d68e5568f4e737c4bf8f",
+    "title_count": 1,
+    "container_count": 1,
+    "title": "财经快讯APP哪个好？2026年6款主流财经资讯软件评测：谁更适合追踪市场突发消息？",
+    "raw_count": 104,
+    "tables": [],
+    "widgets": [
+      {
+        "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div[2]",
+        "text": "海量资讯、精准解读，尽在新浪财经APP"
+      }
+    ],
+    "extraction_status": "raw_extracted"
+  },
+  {
+    "id": "new_2",
+    "url": "https://finance.sina.com.cn/stock/aigcy/2026-11-12/doc-iniynife8504660.shtml",
+    "listing_title": "股票涨停分析看哪个APP？四款工具对比",
+    "previous_url_match": false,
+    "attempted_at": "2026-11-12T07:22:42.417866+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://finance.sina.com.cn/stock/aigcy/2026-11-12/doc-iniynife8504660.shtml",
+    "file": "output/agent_io/final/snapshots/new_2.html",
+    "snapshot_sha256": "ca89961908ed43c07ab938c9015c6d809050c0345fbf6a79749fc726737a7ded",
+    "title_count": 1,
+    "container_count": 1,
+    "title": "股票涨停分析看哪个APP？四款工具对比",
+    "raw_count": 20,
+    "tables": [
+      {
+        "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/table",
+        "text": "APP 涨停分析的重心 使用边界 新浪财经APP 涨停聚焦、涨停内参、掘金龙虎榜全链条，AI联动消息面做归因 偏基本面与消息面归因，深度盘口需进入个股页查看 同花顺 连板梯队、涨停强度、短线精灵、问财选股，技术面工具齐全 涨停原因多为机器标签，完整盘口与资金数据需付费开通Level-2 东方财富 涨停专题、涨停情绪、多板个股，股吧讨论热度直观 偏信息聚合与社区观点，成体系的归因输出较少 财联社 快讯披露快，内参栏目含涨停分析与预测 缺全市场涨停统计、炸板监测、连板梯队等功能",
+        "rows": [
+          [
+            "APP",
+            "涨停分析的重心",
+            "使用边界"
+          ],
+          [
+            "新浪财经APP",
+            "涨停聚焦、涨停内参、掘金龙虎榜全链条，AI联动消息面做归因",
+            "偏基本面与消息面归因，深度盘口需进入个股页查看"
+          ],
+          [
+            "同花顺",
+            "连板梯队、涨停强度、短线精灵、问财选股，技术面工具齐全",
+            "涨停原因多为机器标签，完整盘口与资金数据需付费开通Level-2"
+          ],
+          [
+            "东方财富",
+            "涨停专题、涨停情绪、多板个股，股吧讨论热度直观",
+            "偏信息聚合与社区观点，成体系的归因输出较少"
+          ],
+          [
+            "财联社",
+            "快讯披露快，内参栏目含涨停分析与预测",
+            "缺全市场涨停统计、炸板监测、连板梯队等功能"
+          ]
+        ]
+      }
+    ],
+    "widgets": [
+      {
+        "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div[2]",
+        "text": "海量资讯、精准解读，尽在新浪财经APP"
+      }
+    ],
+    "extraction_status": "raw_extracted"
+  }
+]

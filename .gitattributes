@@ -1,0 +1,4 @@
+# Keep exact network snapshot bytes for the frozen Stage 2 batch.
+output/agent_io/final/snapshots/*.html -text
+output/agent_io/final/discovery.html -text
+output/agent_io/final/robots.txt -text

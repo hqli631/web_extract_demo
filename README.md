@@ -2,6 +2,17 @@
 
 这是一个用于实习学习的网页正文抽取实验项目，包含网页读取、区域识别、原网页定位复核、人工标注、自动保存和结果评测。
 
+## 当前学习状态：第二阶段四课已收尾
+
+固定计划见 [四课计划](docs/STAGE2_PLAN.md)，具体知识、操作与3分钟项目讲述见 [阶段收尾](docs/STAGE2_COMPLETION.md)。在项目根目录运行：
+
+~~~powershell
+.\.venv\Scripts\python.exe -X utf8 .\learning\agent_io\finish_stage2.py
+Start-Process ".\output\agent_io\final\index.html"
+~~~
+
+默认离线重放已知回归与两页新快照审核，不联网或调用AI。第一篇104个原始p保留103正文、1编辑；第二篇20个原始p保留19正文、1编辑，但漏掉正文比较表，暂不作为完整文章采用。保留失败证据与限定采用条件，不把程序通过当总体准确率。本阶段不再自动扩展新课。
+
 ## 项目目标
 
 1. 从保存的 HTML 中提取标题和正文候选。

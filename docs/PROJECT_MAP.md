@@ -2,6 +2,7 @@
 
 ## 当前学习入口
 
+- **第二阶段四课操作已完成：先看 docs/STAGE2_COMPLETION.md，运行 learning/agent_io/finish_stage2.py，打开 output/agent_io/final/index.html。固定计划与完成证据见 STAGE2_PLAN.md；不再追加课程。**
 - `docs/STAGE2_AGENT_LESSON5.md`：开发/回归/未见样例分工与7个定位边界实验。
 - `learning/agent_io/evaluate_batch.py`：核对冻结输入，生成 output/agent_io/evaluation/index.html。
 - `config/agent_eval_batch.json`：实验分组、规则/代码/快照哈希与预期状态。

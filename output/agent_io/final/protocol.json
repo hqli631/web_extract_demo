@@ -1,0 +1,12 @@
+{
+  "frozen_at": "2026-11-12T07:20:54.326931+00:00",
+  "target": "https://finance.sina.com.cn/roll/",
+  "count": 2,
+  "selection": "列表DOM顺序前2个未在项目历史中出现的新浪文章URL；不按抽取结果挑页，失败也不替换。",
+  "scope": "新浪文章模板复用观察；固定规则，模板不符也记录。",
+  "frozen": {
+    "output/agent_io/candidate.json": "d15b98d2feab133dd34a570287495434b56b5216ea906ca429def330fa9a5c53",
+    "config/agent_review_rubric.json": "585ac3bb58c288e9a01d18d87feb445a0d84739a729e892564c539896c1f83f0"
+  },
+  "quality": "核对标题、正文完整性、杂质和元数据；记录图片/动态内容局限；AI审核不是独立人工金标。"
+}

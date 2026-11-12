@@ -1,0 +1,26 @@
+[
+  {
+    "id": "new_1",
+    "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-12/doc-iniyniex1156506.shtml",
+    "listing_title": "财经快讯APP哪个好？2026年6款主流财经资讯软件评测：谁更适合追踪市场突发消息？",
+    "previous_url_match": false,
+    "attempted_at": "2026-11-12T07:22:41.127629+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-12/doc-iniyniex1156506.shtml",
+    "file": "output/agent_io/final/snapshots/new_1.html",
+    "snapshot_sha256": "31ad123ca0847e21ae41e642d62ac7d149c9a54bc764d68e5568f4e737c4bf8f"
+  },
+  {
+    "id": "new_2",
+    "url": "https://finance.sina.com.cn/stock/aigcy/2026-11-12/doc-iniynife8504660.shtml",
+    "listing_title": "股票涨停分析看哪个APP？四款工具对比",
+    "previous_url_match": false,
+    "attempted_at": "2026-11-12T07:22:42.417866+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://finance.sina.com.cn/stock/aigcy/2026-11-12/doc-iniynife8504660.shtml",
+    "file": "output/agent_io/final/snapshots/new_2.html",
+    "snapshot_sha256": "ca89961908ed43c07ab938c9015c6d809050c0345fbf6a79749fc726737a7ded"
+  }
+]
