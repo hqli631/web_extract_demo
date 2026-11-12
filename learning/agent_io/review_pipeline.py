@@ -49,9 +49,11 @@ def build_task():
 
 def validate_review(task, audit):
     issues = []
+    issue_records = []
     pages = []
-    def fail(message):
+    def fail(message, **evidence):
         issues.append(message)
+        issue_records.append({'message': message, **evidence})
     if not isinstance(audit, dict) or audit.get('review_task_id') != task['review_task_id']:
         return {'accepted': False, 'issues': ['审核与当前全文任务不对应'], 'pages': []}
     decisions = audit.get('pages')
@@ -94,7 +96,10 @@ def validate_review(task, audit):
             disclosure = block['text'].startswith('（声明：')
             required = ('exclude', 'R2') if topic else ('editor', 'R3') if editor else ('keep', 'R5') if disclosure else ('keep', 'R4') if links else None
             if required and (action, criterion) != required:
-                fail(prefix + f'违反可执行 Rubric：需要 {required[0]}/{required[1]}，收到 {action}/{criterion}')
+                fail(prefix + f'违反可执行 Rubric：需要 {required[0]}/{required[1]}，收到 {action}/{criterion}',
+                     code='rubric_conflict', file=name, index=block['index'], xpath=block['xpath'],
+                     text=block['text'], actual={'action': action, 'criterion': criterion},
+                     expected={'action': required[0], 'criterion': required[1]})
             if (action == 'exclude' and not topic) or (action == 'editor' and not editor):
                 fail(prefix + '本轮未提供支持该非保留动作的结构证据')
             if action == 'uncertain':
@@ -104,7 +109,8 @@ def validate_review(task, audit):
                 output[destination].append({**block, 'criterion': criterion, 'reason': decision.get('reason')})
         pages.append(output)
     # 拒绝时不给出部分清理结果，避免误用。
-    return {'accepted': not issues, 'issues': issues, 'pages': pages if not issues else [],
+    return {'accepted': not issues, 'issues': issues, 'issue_records': issue_records,
+            'pages': pages if not issues else [],
             'review_task_id': task['review_task_id'], 'rubric_version': task['rubric']['version'],
             'audit_sha256': digest(audit),
             'review_origin': audit.get('origin'), 'program_ai_calls': 0, 'published': False,

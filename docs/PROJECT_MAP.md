@@ -2,6 +2,12 @@
 
 ## 当前学习入口
 
+- `docs/STAGE2_AGENT_LESSON5.md`：开发/回归/未见样例分工与7个定位边界实验。
+- `learning/agent_io/evaluate_batch.py`：核对冻结输入，生成 output/agent_io/evaluation/index.html。
+- `config/agent_eval_batch.json`：实验分组、规则/代码/快照哈希与预期状态。
+- `docs/STAGE2_AGENT_LESSON4.md`：结构化拒绝反馈、单个审核决定修正与回归。
+- `learning/agent_io/repair_review.py`：一条命令重放完整修正实验。
+- `output/agent_io/repair/index.html`：修改前后和复验报告；修正计划为 output/agent_io/repair_plan.json。
 - `docs/STAGE2_AGENT_LESSON3.md`：Rubrics、当前对话 AI 的全文审核与清理反例。
 - `learning/agent_io/review_pipeline.py`：复建全文任务，检查审核记录，生成独立的可追溯结果。
 - `config/agent_review_rubric.json`：本课产品质量标准，变动会使旧审核失效。

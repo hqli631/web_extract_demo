@@ -1,0 +1,31 @@
+{
+  "review_task_id": "sina-review-72fe84554aa5d7e7",
+  "input_audit_sha256": "b131c1ab8e1547fd6b8d12c6ada40a734e337fefa0ba8e9af543eebbd784e5a2",
+  "accepted": false,
+  "issues": [
+    "blog_01.html #2: 违反可执行 Rubric：需要 keep/R4，收到 exclude/R2",
+    "blog_01.html #2: 本轮未提供支持该非保留动作的结构证据"
+  ],
+  "issue_records": [
+    {
+      "message": "blog_01.html #2: 违反可执行 Rubric：需要 keep/R4，收到 exclude/R2",
+      "code": "rubric_conflict",
+      "file": "blog_01.html",
+      "index": 2,
+      "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[2]",
+      "text": "10月26日，物理AI概念延续强势，宇树科技（688836.SH）收盘涨7.69%报672元，总市值达2718亿元。自10月16日盘中低点407.01元至26日收盘，宇树科技在7个交易日内累计上涨65.1%。",
+      "actual": {
+        "action": "exclude",
+        "criterion": "R2"
+      },
+      "expected": {
+        "action": "keep",
+        "criterion": "R4"
+      }
+    },
+    {
+      "message": "blog_01.html #2: 本轮未提供支持该非保留动作的结构证据"
+    }
+  ],
+  "instruction": "只修正有证据的审核决定；禁止改写原文、XPath、Rubrics或其他决定。"
+}

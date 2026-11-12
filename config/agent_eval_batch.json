@@ -1,0 +1,81 @@
+{
+  "batch_id": "stage2-boundaries-v1",
+  "frozen_at": "2026-11-12",
+  "freeze_policy": "固定规则、Rubrics、实验代码和原始快照；运行时核对，绝不自动刷新冻结哈希。",
+  "frozen_files": {
+    "output/agent_io/candidate.json": "d15b98d2feab133dd34a570287495434b56b5216ea906ca429def330fa9a5c53",
+    "config/agent_review_rubric.json": "585ac3bb58c288e9a01d18d87feb445a0d84739a729e892564c539896c1f83f0",
+    "learning/agent_io/evaluate_batch.py": "94c5bdd099e8e968ebe34ebbf0ce48f7326dcbabb16a7a41a246aeaea0274d02",
+    "samples/blog_01.html": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+    "samples/collected_14a028de299edfab.html": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+    "samples/collected_af5904c15d1deebc.html": "c6348f97447c665018d507e3ed78a99a2d0989b13bc60087bb075bc8680ce4c4",
+    "samples/xpath_practice.html": "ce107f27354964c4f31b06b5a7731963e8b7edab9c228e07f23fbfd2c9a82c5d"
+  },
+  "cases": [
+    {
+      "id": "dev_blog",
+      "role": "development_regression",
+      "source": "samples/blog_01.html",
+      "expected_raw_count": 45,
+      "expected_status": "structural_contract_pass",
+      "interpretation": "规则生成使用过的页面；原始45段只验证已知结构与数量，不等于正文质量。"
+    },
+    {
+      "id": "dev_merger",
+      "role": "development_regression",
+      "source": "samples/collected_14a028de299edfab.html",
+      "expected_raw_count": 23,
+      "expected_status": "structural_contract_pass",
+      "interpretation": "第二份已知开发页；用于确认固定XPath仍能执行。"
+    },
+    {
+      "id": "known_transfer",
+      "role": "known_transfer",
+      "source": "samples/collected_af5904c15d1deebc.html",
+      "expected_raw_count": 17,
+      "expected_status": "structural_contract_pass",
+      "interpretation": "第三篇未放入第2课任务，但更早已参与项目开发，因此是已知迁移页，不是未见测试。结构通过不表示小标题、来源分类已经验证。"
+    },
+    {
+      "id": "other_template",
+      "role": "cross_template_probe",
+      "source": "samples/xpath_practice.html",
+      "expected_raw_count": 7,
+      "expected_status": "container_not_unique",
+      "interpretation": "已知中新网模板使用left_zw而不是artibody。新浪专用规则找不到容器，说明需要模板识别/路由，不应把0段归咎于语义审核。"
+    },
+    {
+      "id": "nested_one",
+      "role": "synthetic_probe",
+      "source": "samples/collected_14a028de299edfab.html",
+      "mutation": "wrap_first_p",
+      "expected_raw_count": 23,
+      "expected_status": "raw_count_mismatch",
+      "interpretation": "受控地给第一段外包div，文字完全保留。容器仍唯一且结果非空，但./p只返回22段，说明非空检查抓不到局部漏提。23是实验变换前的已知参照，并非通用页面的自动真值。"
+    },
+    {
+      "id": "nested_all",
+      "role": "synthetic_probe",
+      "source": "samples/collected_14a028de299edfab.html",
+      "mutation": "wrap_all_p",
+      "expected_raw_count": 23,
+      "expected_status": "empty_blocks",
+      "interpretation": "所有段落外包div；容器仍找到，页面仍有文字，但./p返回0。这是块定位问题，不是页面没有内容。"
+    },
+    {
+      "id": "renamed_container",
+      "role": "synthetic_probe",
+      "source": "samples/collected_14a028de299edfab.html",
+      "mutation": "rename_container",
+      "expected_raw_count": 23,
+      "expected_status": "container_not_unique",
+      "interpretation": "容器id变化导致旧规则找不到容器。应先检测模板变化，不能靠修改审核标签补救。"
+    }
+  ],
+  "limits": [
+    "所有真实页是已知数据，不能推断未见准确率。",
+    "受控变体继承同一源页，只测试明确的结构变化，不是独立样本。",
+    "按字节哈希去重不等于语义去重；真实新批次还需规范URL及内容近重复处理。",
+    "本实验只测定位边界，不执行AI语义评分或规则修正。"
+  ]
+}
