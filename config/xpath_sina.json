@@ -1,0 +1,7 @@
+{
+  "name": "sina_article_practice",
+  "version": 2,
+  "title_xpath": "//h1",
+  "container_xpath": "//div[@id='artibody']",
+  "block_xpath": "./p[not(contains(concat(' ', normalize-space(@class), ' '), ' article-editor '))]"
+}

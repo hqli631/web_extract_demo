@@ -5,7 +5,7 @@ from lxml import html
 
 
 # __file__ 是当前脚本的位置，parent 是脚本所在目录。
-project_dir = Path(__file__).resolve().parent
+project_dir = Path(__file__).resolve().parents[2]
 rules_path = project_dir / "xpath_rules.json"
 
 with rules_path.open("r", encoding="utf-8") as file:

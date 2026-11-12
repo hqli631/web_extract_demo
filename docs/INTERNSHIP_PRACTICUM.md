@@ -87,3 +87,14 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\test_project.ps1
 
 下一阶段不是继续给三篇旧样本增加规则，而是做模板分组和未见页面验证。新增页面先保留原始 HTML、来源、抓取时间和 SHA256；按模板分配开发与验证；运行现有规则；只对失败页面做定向错误分析。这样工作量随页面类型增长，而不是随正文段落数线性增长。
 
+### 单页迁移操作
+
+对候选新页面先运行隔离入口：
+
+~~~powershell
+.\.venv\Scripts\python.exe -X utf8 .\xpath_transfer.py .\path\to\article.html
+Start-Process .\output\xpath_transfer\article.html
+~~~
+
+检查标题、容器数、段落顺序、图说、编辑信息和结构警报。输出若带有历史审核匹配，按“已知样本回溯检查”记录，不能计入未见验证；若没有历史记录，也只代表尚未语义审核，需用独立的来源/页面检查建立参考答案。记录页面 URL、抓取日期、HTML 哈希、网站模板、规则版本、提取段数、错误类型和结论。现有归档没有未审过的中新网文章，因此真正的同模板未见验证还要等一份新快照；目前可验证的是两份已审快照的历史兼容性，结果分别为 6 段 + 1 图说、6 段，且都排除了编辑行。
+

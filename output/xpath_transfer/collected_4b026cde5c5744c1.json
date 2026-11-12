@@ -1,0 +1,120 @@
+{
+  "file": "collected_4b026cde5c5744c1.html",
+  "source_sha256": "b53e3bfc9e5edd761ada80a7ff05c2d08c76500c8194a38ca9802c9b0a83dde6",
+  "title": "专家共话长征国家文化公园建设与红色文化传承",
+  "container_count": 1,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "中新网泸州10月30日电 (轩瑾婉)29日，“文化公园里的四川”主题宣传教育活动·古蔺行举行建设故事分享与专家交流研讨。与会专家围绕长征国家文化公园规划建设、文物保护、社区参与和文化传承等话题展开交流，探讨红色资源保护利用的实践路径。",
+      "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]"
+    },
+    {
+      "type": "caption",
+      "text": "图为交流研讨现场。 轩瑾婉 摄",
+      "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]"
+    },
+    {
+      "type": "paragraph",
+      "text": "长征国家文化公园并非传统意义上的休闲公园或主题公园，而是依托长征历史路线，串联文物、纪念场馆和历史文化名城名镇村落的文化遗产廊道。北京清华同衡规划院文物保护利用分院总规划师杜凡丁表示，建设长征国家文化公园，核心是讲好长征故事，让人们从“见物”到“见人”再到“见精神”。相关规划按照“1主4支”的路线体系展开，将长征历史整理为55条故事线、14个篇章，让历史遗存成为讲述长征故事的重要载体。",
+      "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]"
+    },
+    {
+      "type": "paragraph",
+      "text": "讲好长征故事，离不开对历史遗存的调查和保护。四川省文物考古研究院党委副书记、副院长刘禄山表示，长征文物资源调查需要结合文献研究、口述访谈和实地勘察，通过多方印证确认遗址信息。保护过程中，既要重视文物本体，也要关注周边历史环境和风貌，并兼顾当地群众生活需求。",
+      "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]"
+    },
+    {
+      "type": "paragraph",
+      "text": "古蔺县红军旧址修缮实践体现了这一理念。古蔺县文化广播电视和旅游局文物保护副研究馆员邱光前介绍，今年4月，在太平镇红三军团旧址修缮过程中，工作人员发现施工图纸与现场实际情况不符，随即停工，并邀请专家到场指导，按照不改变文物原状、最小干预的原则调整设计方案。",
+      "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]"
+    },
+    {
+      "type": "paragraph",
+      "text": "如何让遗址保护与群众生活相协调？电子科技大学公共管理学院副院长杨菁认为，红色遗址及周边公共文化空间建设需要兼顾公共性、功能性和传承性，既要保留历史空间，也要考虑居民出行、休憩等实际需求。同时，应推动居民参与文化讲解和活动，让其成为文化传承的参与者。",
+      "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]"
+    },
+    {
+      "type": "paragraph",
+      "text": "在四川师范大学历史文化与旅游学院、中国边疆研究院院长汪洪亮看来，长征文化传播既要体现历史高度，也要讲好具体、生动的微观故事。研学旅游不应停留在一次性参观打卡，还应走进课堂和社区，结合影视、戏剧等形式，让长征文化融入日常生活。(完)",
+      "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]"
+    }
+  ],
+  "quality": {
+    "checks": [
+      {
+        "id": "candidate_coverage",
+        "label": "候选文字覆盖",
+        "status": "structural_pass",
+        "note": "仅检查当前容器内非已知杂质区域的 p 与 pictext，不证明整页完整。",
+        "evidence": []
+      },
+      {
+        "id": "known_exclusions",
+        "label": "已知广告/编辑区域混入",
+        "status": "structural_pass",
+        "note": "仅识别 adInContent、adEditor；未标记的推广内容仍可能混入。",
+        "evidence": []
+      },
+      {
+        "id": "source_evidence",
+        "label": "XPath 与原文一致",
+        "status": "structural_pass",
+        "note": "输出文本块在本次 HTML 中唯一定位并匹配文字。",
+        "evidence": []
+      },
+      {
+        "id": "order_overlap",
+        "label": "顺序和重复覆盖",
+        "status": "structural_pass",
+        "note": "检查 DOM 顺序，不能保证等于视觉阅读顺序。",
+        "evidence": []
+      },
+      {
+        "id": "semantic_quality",
+        "label": "语义完整与杂质判断",
+        "status": "unknown",
+        "note": "结构检查不判断语义；如有对话 AI 审核记录，在下方单独展示。",
+        "evidence": []
+      },
+      {
+        "id": "image_text",
+        "label": "图片内文字",
+        "status": "unknown",
+        "note": "容器中有 1 个 img 元素；未进行 OCR，未判断是否承载正文。",
+        "evidence": [
+          {
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[1]/img",
+            "text": "",
+            "reason": "需判断是否承载正文文字"
+          }
+        ]
+      }
+    ],
+    "excluded_regions": [
+      {
+        "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/table",
+        "text": "",
+        "reason": "已知广告/编辑结构，记录排除依据"
+      },
+      {
+        "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]",
+        "text": "【编辑:何颖】",
+        "reason": "已知广告/编辑结构，记录排除依据"
+      }
+    ],
+    "finding_count": 0
+  },
+  "review_state": "not_reviewed",
+  "baseline_state": "not_compared",
+  "transfer_evidence": {
+    "status": "retrospective_match",
+    "reference_source": "news_validation/reports/ai_audit.json",
+    "reference_kind": "historical_development_audit",
+    "expected_paragraphs": 6,
+    "actual_paragraphs": 6,
+    "ordered_text_match": true,
+    "note": "逐段文字与历史审核正文顺序一致（忽略空白差异）；该页过去已参与抽取器比较和 AI 审核，只算回溯兼容性检查，不是未见页面或盲测。"
+  },
+  "scope_note": "隔离迁移检查：未读取或修改开发集冻结基准；结构检查不等于语义审核或准确率。"
+}

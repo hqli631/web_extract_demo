@@ -34,7 +34,7 @@ config/               采集配置和已启用的 XPath 规则
 tests/                评测/采集单元测试和浏览器交互验证
 output/               自动生成的JSON和HTML
 reports/              CSV、评测报告和自动保存的标注
-REVIEW_GUIDE.md       定位复核详细说明
+docs/                  学习文档、复核指南、实践记录和样本来源
 ```
 
 ## 一键同步到 GitHub
@@ -518,4 +518,13 @@ compose_ocr_candidate.py 按网页快照顺序交错排列 DOM 文字与 OCR 正
 
     powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\test_project.ps1
 
-项目当前自动化测试合计 70 项，包含真实练习样本的署名修正、原始结果不变、访谈问题保留、图说保留和冻结基准一致性检查。测试通过表示这些已编码行为及已保存样本回归一致，不表示对所有网页的准确率。岗位学习的分步实操与验收清单见 [INTERNSHIP_PRACTICUM.md](INTERNSHIP_PRACTICUM.md)。
+项目当前自动化测试合计 72 项，包含真实练习样本的署名修正、原始结果不变、访谈问题保留、图说保留、冻结基准一致性，以及隔离迁移报告的回溯标记检查。测试通过表示这些已编码行为及已保存样本回归一致，不表示对所有网页的准确率。岗位学习的分步实操与验收清单见 [docs/INTERNSHIP_PRACTICUM.md](docs/INTERNSHIP_PRACTICUM.md)。
+
+## 单页 XPath 迁移检查
+
+对一个尚未放入练习批次的本地 HTML 试运行当前规则，不触碰冻结基准：
+
+    .\.venv\Scripts\python.exe -X utf8 .\xpath_transfer.py .\samples\your_page.html
+
+报告写入 output/xpath_transfer/，同时生成 HTML 与 JSON。它会显示标题、容器数、块顺序、XPath、结构检查和 SHA256。若该快照已存在历史 AI 审核记录，会额外比较段落并明确标成回溯兼容性结果；历史页面不能算未见盲测。没有匹配的历史审核时，语义状态保持“尚未审核”，结构检查也不等于准确率。运行前先将新页面复制到隔离目录，并记录其 URL、模板和来源。
+
