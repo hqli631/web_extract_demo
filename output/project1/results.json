@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-12T03:23:34.587864+00:00",
+  "generated_at": "2026-11-12T03:47:10.398573+00:00",
   "status": "passed",
   "failure": null,
   "scope": "6 篇已知开发样例、2 类模板；离线功能验收",
@@ -90,7 +90,7 @@
         "tests"
       ],
       "returncode": 0,
-      "log": "Pages: 1 ; audited pass: 0 ; pending: 1 ; stale: 0 ; development overlap excluded: 0 ; needs OCR: 0 ; fail: 0\nD:\\codex project\\web_extract_demo\\tmpjn1_hwht\\reports\\progress.html\n........................................................................\n----------------------------------------------------------------------\nRan 72 tests in 2.349s\n\nOK\n"
+      "log": "Pages: 1 ; audited pass: 0 ; pending: 1 ; stale: 0 ; development overlap excluded: 0 ; needs OCR: 0 ; fail: 0\nD:\\codex project\\web_extract_demo\\tmp3ro4de77\\reports\\progress.html\n........................................................................\n----------------------------------------------------------------------\nRan 72 tests in 2.567s\n\nOK\n"
     }
   ],
   "pages": [

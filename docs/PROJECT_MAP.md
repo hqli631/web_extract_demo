@@ -2,6 +2,11 @@
 
 ## 当前学习入口
 
+- `docs/STAGE2_AGENT_LESSON1.md`：第二阶段 Agent 任务输入与输出协议。
+- `learning/agent_io/prepare_task.py`：准备两页开发样例任务包，不调用模型。
+
+- `docs/PROJECT1_KNOWLEDGE_REVIEW.md`：第一阶段具体知识点、代码解释、操作练习和个人验收。
+
 - `learning/xpath/`：用户运行的 XPath 练习与检查脚本。
 - `docs/xpath_basics_notes.md`：XPath 知识说明。
 - `docs/xpath_practice_notes.md`：实验过程与结果记录。
