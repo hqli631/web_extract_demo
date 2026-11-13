@@ -1,0 +1,330 @@
+{
+  "unit": "3.1",
+  "status": "ready_for_user_learning_check",
+  "test_counts": {
+    "sina": 6,
+    "chinanews": 6
+  },
+  "historical_duplicate_pairs": [
+    {
+      "left": "samples/collected_c2d1dbf788829343.html",
+      "right": "samples/xpath_practice.html",
+      "similarity": 1.0
+    },
+    {
+      "left": "samples/collected_14a028de299edfab.html",
+      "right": "news_validation/samples/collected_14a028de299edfab.html",
+      "similarity": 1.0
+    },
+    {
+      "left": "samples/collected_4b026cde5c5744c1.html",
+      "right": "news_validation/samples/collected_4b026cde5c5744c1.html",
+      "similarity": 1.0
+    },
+    {
+      "left": "samples/collected_4fdd3a7b48c5a575.html",
+      "right": "news_validation/samples/collected_4fdd3a7b48c5a575.html",
+      "similarity": 1.0
+    },
+    {
+      "left": "samples/collected_af5904c15d1deebc.html",
+      "right": "news_validation/samples/collected_af5904c15d1deebc.html",
+      "similarity": 1.0
+    },
+    {
+      "left": "samples/collected_c2d1dbf788829343.html",
+      "right": "news_validation/samples/collected_c2d1dbf788829343.html",
+      "similarity": 1.0
+    },
+    {
+      "left": "samples/xpath_practice.html",
+      "right": "news_validation/samples/collected_c2d1dbf788829343.html",
+      "similarity": 1.0
+    },
+    {
+      "left": "samples/collected_c5d4b9cdcf5b4c91.html",
+      "right": "news_validation/samples/collected_c5d4b9cdcf5b4c91.html",
+      "similarity": 1.0
+    },
+    {
+      "left": "samples/collected_c2d1dbf788829343.html",
+      "right": "validation_blind/samples/collected_c2d1dbf788829343.html",
+      "similarity": 1.0
+    },
+    {
+      "left": "samples/xpath_practice.html",
+      "right": "validation_blind/samples/collected_c2d1dbf788829343.html",
+      "similarity": 1.0
+    },
+    {
+      "left": "news_validation/samples/collected_c2d1dbf788829343.html",
+      "right": "validation_blind/samples/collected_c2d1dbf788829343.html",
+      "similarity": 1.0
+    },
+    {
+      "left": "validation_blind/samples/collected_61b2572fd4c6cd0c.html",
+      "right": "validation_blind_round2/samples/collected_61b2572fd4c6cd0c.html",
+      "similarity": 1.0
+    }
+  ],
+  "protocol_sha256": "980cc116302c4dfa24a9742652693d5f1e84863e76b2a44d8c15fd94c3509040",
+  "tests": [
+    {
+      "target": "sina",
+      "url": "https://finance.sina.com.cn/jjxw/2026-11-12/doc-iniyntux1708821.shtml",
+      "role": "sealed_test",
+      "attempted_at": "2026-11-12T13:07:07.001803+00:00",
+      "status": "fetched",
+      "http_status": 200,
+      "final_url": "https://finance.sina.com.cn/jjxw/2026-11-12/doc-iniyntux1708821.shtml",
+      "file": "output/stage3/protocol/sina/test_01.html",
+      "sha256": "a443101bbcd6da6c0fb7ebe46e65b4078ec9967c7e20051b951611c17f6e42a2",
+      "shell_match": true,
+      "body_chars": 27,
+      "exact_snapshot_duplicate": false,
+      "historical_url_overlap": false,
+      "nearest_file": "output/agent_io/final/snapshots/new_2.html",
+      "char5_jaccard": 0.012837,
+      "near_duplicate": false,
+      "short_static_text_risk": true,
+      "eligible": true
+    },
+    {
+      "target": "sina",
+      "url": "https://finance.sina.com.cn/jjxw/2026-11-12/doc-iniyntux1707130.shtml",
+      "role": "sealed_test",
+      "attempted_at": "2026-11-12T13:07:08.360346+00:00",
+      "status": "fetched",
+      "http_status": 200,
+      "final_url": "https://finance.sina.com.cn/jjxw/2026-11-12/doc-iniyntux1707130.shtml",
+      "file": "output/stage3/protocol/sina/test_02.html",
+      "sha256": "55a1a38a56895553dfe0104d386d43cacc6c1a313b48c6862cf13ca94a1b34d5",
+      "shell_match": true,
+      "body_chars": 646,
+      "exact_snapshot_duplicate": false,
+      "historical_url_overlap": false,
+      "nearest_file": "output/stage3/protocol/sina/test_01.html",
+      "char5_jaccard": 0.037582,
+      "near_duplicate": false,
+      "short_static_text_risk": false,
+      "eligible": true
+    },
+    {
+      "target": "sina",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-12/doc-iniyntux1706914.shtml",
+      "role": "sealed_test",
+      "attempted_at": "2026-11-12T13:07:09.683814+00:00",
+      "status": "fetched",
+      "http_status": 200,
+      "final_url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-12/doc-iniyntux1706914.shtml",
+      "file": "output/stage3/protocol/sina/test_03.html",
+      "sha256": "e1874e56506d3a62eba36d2472eb8520e5c318589ddd20f20f861d1546c37e97",
+      "shell_match": true,
+      "body_chars": 829,
+      "exact_snapshot_duplicate": false,
+      "historical_url_overlap": false,
+      "nearest_file": "output/stage3/protocol/sina/test_01.html",
+      "char5_jaccard": 0.02551,
+      "near_duplicate": false,
+      "short_static_text_risk": false,
+      "eligible": true
+    },
+    {
+      "target": "sina",
+      "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-11-12/doc-iniyntuy8483121.shtml",
+      "role": "sealed_test",
+      "attempted_at": "2026-11-12T13:07:10.920376+00:00",
+      "status": "fetched",
+      "http_status": 200,
+      "final_url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-11-12/doc-iniyntuy8483121.shtml",
+      "file": "output/stage3/protocol/sina/test_04.html",
+      "sha256": "9467e7047aafc1ab0d6d21e1402bfa8d24bc5df75aae9725b47b65b0e37930b2",
+      "shell_match": true,
+      "body_chars": 2819,
+      "exact_snapshot_duplicate": false,
+      "historical_url_overlap": false,
+      "nearest_file": "output/stage3/protocol/sina/test_01.html",
+      "char5_jaccard": 0.007547,
+      "near_duplicate": false,
+      "short_static_text_risk": false,
+      "eligible": true
+    },
+    {
+      "target": "sina",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-12/doc-iniyntux1705945.shtml",
+      "role": "sealed_test",
+      "attempted_at": "2026-11-12T13:07:12.108604+00:00",
+      "status": "fetched",
+      "http_status": 200,
+      "final_url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-12/doc-iniyntux1705945.shtml",
+      "file": "output/stage3/protocol/sina/test_05.html",
+      "sha256": "bbbceeca33cccd3bdad273f9c344f5dda773fdb49b4c5e2ffd22f8655b58f61e",
+      "shell_match": true,
+      "body_chars": 469,
+      "exact_snapshot_duplicate": false,
+      "historical_url_overlap": false,
+      "nearest_file": "output/stage3/protocol/sina/test_01.html",
+      "char5_jaccard": 0.043197,
+      "near_duplicate": false,
+      "short_static_text_risk": false,
+      "eligible": true
+    },
+    {
+      "target": "sina",
+      "url": "https://finance.sina.com.cn/jjxw/2026-11-12/doc-iniyntuz3802178.shtml",
+      "role": "sealed_test",
+      "attempted_at": "2026-11-12T13:07:13.250805+00:00",
+      "status": "fetched",
+      "http_status": 200,
+      "final_url": "https://finance.sina.com.cn/jjxw/2026-11-12/doc-iniyntuz3802178.shtml",
+      "file": "output/stage3/protocol/sina/test_06.html",
+      "sha256": "cabecdca23c5805852e4af2ecdaf61d4c28fa6b2bd907aafe409f90562e29f00",
+      "shell_match": true,
+      "body_chars": 806,
+      "exact_snapshot_duplicate": false,
+      "historical_url_overlap": false,
+      "nearest_file": "output/stage3/protocol/sina/test_01.html",
+      "char5_jaccard": 0.030383,
+      "near_duplicate": false,
+      "short_static_text_risk": false,
+      "eligible": true
+    },
+    {
+      "target": "chinanews",
+      "url": "https://www.chinanews.com.cn/gn/2026/11-12/10730689.shtml",
+      "role": "sealed_test",
+      "attempted_at": "2026-11-12T13:07:14.864234+00:00",
+      "status": "fetched",
+      "http_status": 200,
+      "final_url": "https://www.chinanews.com.cn/gn/2026/11-12/10730689.shtml",
+      "file": "output/stage3/protocol/chinanews/test_01.html",
+      "sha256": "b8c0ea7c2e71e167b8aff06d7769a6ab8de519a00118beda6b06d95774e4415a",
+      "shell_match": true,
+      "body_chars": 836,
+      "exact_snapshot_duplicate": false,
+      "historical_url_overlap": false,
+      "nearest_file": "samples/collected_4b026cde5c5744c1.html",
+      "char5_jaccard": 0.00253,
+      "near_duplicate": false,
+      "short_static_text_risk": false,
+      "eligible": true
+    },
+    {
+      "target": "chinanews",
+      "url": "https://www.chinanews.com.cn/gn/2026/11-12/10730677.shtml",
+      "role": "sealed_test",
+      "attempted_at": "2026-11-12T13:07:16.048818+00:00",
+      "status": "fetched",
+      "http_status": 200,
+      "final_url": "https://www.chinanews.com.cn/gn/2026/11-12/10730677.shtml",
+      "file": "output/stage3/protocol/chinanews/test_02.html",
+      "sha256": "16cd6a170e9b1022d5d0ff7c729af1b9d8628a61eda2358c536c7759b7acf44d",
+      "shell_match": true,
+      "body_chars": 1041,
+      "exact_snapshot_duplicate": false,
+      "historical_url_overlap": false,
+      "nearest_file": "output/stage3/protocol/chinanews/test_01.html",
+      "char5_jaccard": 0.006225,
+      "near_duplicate": false,
+      "short_static_text_risk": false,
+      "eligible": true
+    },
+    {
+      "target": "chinanews",
+      "url": "https://www.chinanews.com.cn/gn/2026/11-03/10725089.shtml",
+      "role": "sealed_test",
+      "attempted_at": "2026-11-12T13:07:17.197439+00:00",
+      "status": "fetched",
+      "http_status": 200,
+      "final_url": "https://www.chinanews.com.cn/gn/2026/11-03/10725089.shtml",
+      "file": "output/stage3/protocol/chinanews/test_03.html",
+      "sha256": "019ef6b2bfbd3220e149e992afed145df7ad4012ce45a58b24950d53624c9c94",
+      "shell_match": true,
+      "body_chars": 85,
+      "exact_snapshot_duplicate": false,
+      "historical_url_overlap": false,
+      "nearest_file": "validation_blind/samples/collected_5029464d5612ed80.html",
+      "char5_jaccard": 0.002465,
+      "near_duplicate": false,
+      "short_static_text_risk": true,
+      "eligible": true
+    },
+    {
+      "target": "chinanews",
+      "url": "https://www.chinanews.com.cn/gn/2026/11-02/10724643.shtml",
+      "role": "sealed_test",
+      "attempted_at": "2026-11-12T13:07:18.332144+00:00",
+      "status": "fetched",
+      "http_status": 200,
+      "final_url": "https://www.chinanews.com.cn/gn/2026/11-02/10724643.shtml",
+      "file": "output/stage3/protocol/chinanews/test_04.html",
+      "sha256": "54fc27a679d4053108d39e680fc20dec136f8b995811cf9f72eaf1a942c49a97",
+      "shell_match": true,
+      "body_chars": 1211,
+      "exact_snapshot_duplicate": false,
+      "historical_url_overlap": false,
+      "nearest_file": "validation_blind/samples/collected_5029464d5612ed80.html",
+      "char5_jaccard": 0.061717,
+      "near_duplicate": false,
+      "short_static_text_risk": false,
+      "eligible": true
+    },
+    {
+      "target": "chinanews",
+      "url": "https://www.chinanews.com.cn/gn/2026/11-02/10724510.shtml",
+      "role": "sealed_test",
+      "attempted_at": "2026-11-12T13:07:19.484331+00:00",
+      "status": "fetched",
+      "http_status": 200,
+      "final_url": "https://www.chinanews.com.cn/gn/2026/11-02/10724510.shtml",
+      "file": "output/stage3/protocol/chinanews/test_05.html",
+      "sha256": "6fe45864eeec753a19d2a72ae896d9d28e49475faad64fde576bb83dec743c17",
+      "shell_match": true,
+      "body_chars": 135,
+      "exact_snapshot_duplicate": false,
+      "historical_url_overlap": false,
+      "nearest_file": "validation_blind_round2/samples/collected_61b2572fd4c6cd0c.html",
+      "char5_jaccard": 0.122727,
+      "near_duplicate": false,
+      "short_static_text_risk": false,
+      "eligible": true
+    },
+    {
+      "target": "chinanews",
+      "url": "https://www.chinanews.com.cn/gn/2026/11-11/10729971.shtml",
+      "role": "sealed_test",
+      "attempted_at": "2026-11-12T13:07:20.654155+00:00",
+      "status": "fetched",
+      "http_status": 200,
+      "final_url": "https://www.chinanews.com.cn/gn/2026/11-11/10729971.shtml",
+      "file": "output/stage3/protocol/chinanews/test_06.html",
+      "sha256": "5dede0bcdf633e9320824d5cd747b59d360d08a3553daf19c40903bdbbeb4d9a",
+      "shell_match": true,
+      "body_chars": 193,
+      "exact_snapshot_duplicate": false,
+      "historical_url_overlap": false,
+      "nearest_file": "output/stage3/protocol/chinanews/test_03.html",
+      "char5_jaccard": 0.015038,
+      "near_duplicate": false,
+      "short_static_text_risk": false,
+      "eligible": true
+    }
+  ],
+  "source_text_exposed_in_report": false,
+  "split_corrections": [
+    {
+      "removed_from_repair": "samples/collected_c2d1dbf788829343.html",
+      "duplicate_of": "samples/xpath_practice.html"
+    },
+    {
+      "added_to_repair": "validation_blind/samples/collected_5029464d5612ed80.html",
+      "selection": "first historical path in lexical order with matching shell and no near duplicate"
+    }
+  ],
+  "preflight_revision": "Removed unregistered >=100 character eligibility cutoff before split freeze; short pages retained as risks, no replacement URLs.",
+  "limitations": [
+    "历史知识辅助的任务壳簇，不是无监督或视觉聚类。",
+    "新测试只做结构/去重预检，未检查抽取效果；后续生成器不得读测试原文。",
+    "字符5gram去重是启发式，不能证明所有语义重复均被识别。"
+  ]
+}

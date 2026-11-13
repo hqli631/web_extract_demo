@@ -1,5 +1,9 @@
 # Web Extract Demo
 
+2026-11-13当前学习：3.2代码候选v1及生成组执行，运行learning/run_cluster_generation.py，报告output/stage3/generation/index.html。按[3.2带教说明](docs/STAGE3_UNIT2.md)观察接口/标题/原文证据。仅生成组，未执行修复和测试组；无外部模型API和训练。
+
+最新进度：3.1样本协议工程完成，运行learning/prepare_cluster_protocol.py并打开output/stage3/protocol/index.html；当前冻结分工为split_v2.json。每簇3生成/3修复/6新测试，两个短文本风险页保留。详见[3.1更新操作](docs/STAGE3_UNIT1.md)，待用户运行解释后进入3.2。
+
 当前学习：第三阶段3.1进行中，先按[布局分组操作说明](docs/STAGE3_UNIT1.md)运行learning/cluster_layouts.py并看output/stage3/layout/index.html。仅完成历史结构盘点，样本协议尚未冻结；未进入代码生成。
 
 岗位清单对照见 [GOAL_CHECKLIST_STATUS.md](docs/GOAL_CHECKLIST_STATUS.md)，其中明确区分了已完成基础、已有Rubrics/任务协议原型、尚未开始的Coding Agent、ReAct、多Agent、RL、微调和RSI工作。

@@ -1,0 +1,76 @@
+{
+  "protocol_sha256": "980cc116302c4dfa24a9742652693d5f1e84863e76b2a44d8c15fd94c3509040",
+  "status": "frozen",
+  "clusters": [
+    {
+      "cluster_id": "sina_shell_v2",
+      "generation": [
+        "samples/blog_01.html",
+        "samples/collected_14a028de299edfab.html",
+        "samples/collected_af5904c15d1deebc.html"
+      ],
+      "repair": [
+        "samples/collected_c5d4b9cdcf5b4c91.html",
+        "output/agent_io/final/snapshots/new_1.html",
+        "output/agent_io/final/snapshots/new_2.html"
+      ],
+      "test": [
+        "output/stage3/protocol/sina/test_01.html",
+        "output/stage3/protocol/sina/test_02.html",
+        "output/stage3/protocol/sina/test_03.html",
+        "output/stage3/protocol/sina/test_04.html",
+        "output/stage3/protocol/sina/test_05.html",
+        "output/stage3/protocol/sina/test_06.html"
+      ],
+      "snapshot_sha256": {
+        "samples/blog_01.html": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+        "samples/collected_14a028de299edfab.html": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+        "samples/collected_af5904c15d1deebc.html": "c6348f97447c665018d507e3ed78a99a2d0989b13bc60087bb075bc8680ce4c4",
+        "samples/collected_c5d4b9cdcf5b4c91.html": "90cd0ef9d6c814125d32242d1da9b37be789fe19e4fa8a08581069b336924088",
+        "output/agent_io/final/snapshots/new_1.html": "31ad123ca0847e21ae41e642d62ac7d149c9a54bc764d68e5568f4e737c4bf8f",
+        "output/agent_io/final/snapshots/new_2.html": "ca89961908ed43c07ab938c9015c6d809050c0345fbf6a79749fc726737a7ded",
+        "output/stage3/protocol/sina/test_01.html": "a443101bbcd6da6c0fb7ebe46e65b4078ec9967c7e20051b951611c17f6e42a2",
+        "output/stage3/protocol/sina/test_02.html": "55a1a38a56895553dfe0104d386d43cacc6c1a313b48c6862cf13ca94a1b34d5",
+        "output/stage3/protocol/sina/test_03.html": "e1874e56506d3a62eba36d2472eb8520e5c318589ddd20f20f861d1546c37e97",
+        "output/stage3/protocol/sina/test_04.html": "9467e7047aafc1ab0d6d21e1402bfa8d24bc5df75aae9725b47b65b0e37930b2",
+        "output/stage3/protocol/sina/test_05.html": "bbbceeca33cccd3bdad273f9c344f5dda773fdb49b4c5e2ffd22f8655b58f61e",
+        "output/stage3/protocol/sina/test_06.html": "cabecdca23c5805852e4af2ecdaf61d4c28fa6b2bd907aafe409f90562e29f00"
+      }
+    },
+    {
+      "cluster_id": "chinanews_shell_v2",
+      "generation": [
+        "samples/xpath_practice.html",
+        "samples/xpath_practice_02.html",
+        "samples/xpath_practice_03.html"
+      ],
+      "repair": [
+        "samples/collected_4b026cde5c5744c1.html",
+        "samples/collected_4fdd3a7b48c5a575.html",
+        "samples/collected_c2d1dbf788829343.html"
+      ],
+      "test": [
+        "output/stage3/protocol/chinanews/test_01.html",
+        "output/stage3/protocol/chinanews/test_02.html",
+        "output/stage3/protocol/chinanews/test_03.html",
+        "output/stage3/protocol/chinanews/test_04.html",
+        "output/stage3/protocol/chinanews/test_05.html",
+        "output/stage3/protocol/chinanews/test_06.html"
+      ],
+      "snapshot_sha256": {
+        "samples/collected_4b026cde5c5744c1.html": "b53e3bfc9e5edd761ada80a7ff05c2d08c76500c8194a38ca9802c9b0a83dde6",
+        "samples/collected_4fdd3a7b48c5a575.html": "305e22fd4b5146f48dc9c96e77293385a4e60efc664c68bf3941166d5112d294",
+        "samples/collected_c2d1dbf788829343.html": "52a4220f77485575658a438491db4c3fa531dd8af184f5384d38a94147b364f4",
+        "samples/xpath_practice.html": "ce107f27354964c4f31b06b5a7731963e8b7edab9c228e07f23fbfd2c9a82c5d",
+        "samples/xpath_practice_02.html": "601ced823ca9912cacac2d0ddc3ae0e94f43f4b8b63a541f917d3e32a122aae5",
+        "samples/xpath_practice_03.html": "1c9dea419228915c7358d39dbbdadb9771cf26d93e65887e4949ad21d4b09bb6",
+        "output/stage3/protocol/chinanews/test_01.html": "b8c0ea7c2e71e167b8aff06d7769a6ab8de519a00118beda6b06d95774e4415a",
+        "output/stage3/protocol/chinanews/test_02.html": "16cd6a170e9b1022d5d0ff7c729af1b9d8628a61eda2358c536c7759b7acf44d",
+        "output/stage3/protocol/chinanews/test_03.html": "019ef6b2bfbd3220e149e992afed145df7ad4012ce45a58b24950d53624c9c94",
+        "output/stage3/protocol/chinanews/test_04.html": "54fc27a679d4053108d39e680fc20dec136f8b995811cf9f72eaf1a942c49a97",
+        "output/stage3/protocol/chinanews/test_05.html": "6fe45864eeec753a19d2a72ae896d9d28e49475faad64fde576bb83dec743c17",
+        "output/stage3/protocol/chinanews/test_06.html": "5dede0bcdf633e9320824d5cd747b59d360d08a3553daf19c40903bdbbeb4d9a"
+      }
+    }
+  ]
+}

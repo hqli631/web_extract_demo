@@ -1,0 +1,134 @@
+[
+  {
+    "target": "sina",
+    "url": "https://finance.sina.com.cn/jjxw/2026-11-12/doc-iniyntux1708821.shtml",
+    "role": "sealed_test",
+    "attempted_at": "2026-11-12T13:07:07.001803+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://finance.sina.com.cn/jjxw/2026-11-12/doc-iniyntux1708821.shtml",
+    "file": "output/stage3/protocol/sina/test_01.html",
+    "sha256": "a443101bbcd6da6c0fb7ebe46e65b4078ec9967c7e20051b951611c17f6e42a2"
+  },
+  {
+    "target": "sina",
+    "url": "https://finance.sina.com.cn/jjxw/2026-11-12/doc-iniyntux1707130.shtml",
+    "role": "sealed_test",
+    "attempted_at": "2026-11-12T13:07:08.360346+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://finance.sina.com.cn/jjxw/2026-11-12/doc-iniyntux1707130.shtml",
+    "file": "output/stage3/protocol/sina/test_02.html",
+    "sha256": "55a1a38a56895553dfe0104d386d43cacc6c1a313b48c6862cf13ca94a1b34d5"
+  },
+  {
+    "target": "sina",
+    "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-12/doc-iniyntux1706914.shtml",
+    "role": "sealed_test",
+    "attempted_at": "2026-11-12T13:07:09.683814+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-12/doc-iniyntux1706914.shtml",
+    "file": "output/stage3/protocol/sina/test_03.html",
+    "sha256": "e1874e56506d3a62eba36d2472eb8520e5c318589ddd20f20f861d1546c37e97"
+  },
+  {
+    "target": "sina",
+    "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-11-12/doc-iniyntuy8483121.shtml",
+    "role": "sealed_test",
+    "attempted_at": "2026-11-12T13:07:10.920376+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-11-12/doc-iniyntuy8483121.shtml",
+    "file": "output/stage3/protocol/sina/test_04.html",
+    "sha256": "9467e7047aafc1ab0d6d21e1402bfa8d24bc5df75aae9725b47b65b0e37930b2"
+  },
+  {
+    "target": "sina",
+    "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-12/doc-iniyntux1705945.shtml",
+    "role": "sealed_test",
+    "attempted_at": "2026-11-12T13:07:12.108604+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-12/doc-iniyntux1705945.shtml",
+    "file": "output/stage3/protocol/sina/test_05.html",
+    "sha256": "bbbceeca33cccd3bdad273f9c344f5dda773fdb49b4c5e2ffd22f8655b58f61e"
+  },
+  {
+    "target": "sina",
+    "url": "https://finance.sina.com.cn/jjxw/2026-11-12/doc-iniyntuz3802178.shtml",
+    "role": "sealed_test",
+    "attempted_at": "2026-11-12T13:07:13.250805+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://finance.sina.com.cn/jjxw/2026-11-12/doc-iniyntuz3802178.shtml",
+    "file": "output/stage3/protocol/sina/test_06.html",
+    "sha256": "cabecdca23c5805852e4af2ecdaf61d4c28fa6b2bd907aafe409f90562e29f00"
+  },
+  {
+    "target": "chinanews",
+    "url": "https://www.chinanews.com.cn/gn/2026/11-12/10730689.shtml",
+    "role": "sealed_test",
+    "attempted_at": "2026-11-12T13:07:14.864234+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://www.chinanews.com.cn/gn/2026/11-12/10730689.shtml",
+    "file": "output/stage3/protocol/chinanews/test_01.html",
+    "sha256": "b8c0ea7c2e71e167b8aff06d7769a6ab8de519a00118beda6b06d95774e4415a"
+  },
+  {
+    "target": "chinanews",
+    "url": "https://www.chinanews.com.cn/gn/2026/11-12/10730677.shtml",
+    "role": "sealed_test",
+    "attempted_at": "2026-11-12T13:07:16.048818+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://www.chinanews.com.cn/gn/2026/11-12/10730677.shtml",
+    "file": "output/stage3/protocol/chinanews/test_02.html",
+    "sha256": "16cd6a170e9b1022d5d0ff7c729af1b9d8628a61eda2358c536c7759b7acf44d"
+  },
+  {
+    "target": "chinanews",
+    "url": "https://www.chinanews.com.cn/gn/2026/11-03/10725089.shtml",
+    "role": "sealed_test",
+    "attempted_at": "2026-11-12T13:07:17.197439+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://www.chinanews.com.cn/gn/2026/11-03/10725089.shtml",
+    "file": "output/stage3/protocol/chinanews/test_03.html",
+    "sha256": "019ef6b2bfbd3220e149e992afed145df7ad4012ce45a58b24950d53624c9c94"
+  },
+  {
+    "target": "chinanews",
+    "url": "https://www.chinanews.com.cn/gn/2026/11-02/10724643.shtml",
+    "role": "sealed_test",
+    "attempted_at": "2026-11-12T13:07:18.332144+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://www.chinanews.com.cn/gn/2026/11-02/10724643.shtml",
+    "file": "output/stage3/protocol/chinanews/test_04.html",
+    "sha256": "54fc27a679d4053108d39e680fc20dec136f8b995811cf9f72eaf1a942c49a97"
+  },
+  {
+    "target": "chinanews",
+    "url": "https://www.chinanews.com.cn/gn/2026/11-02/10724510.shtml",
+    "role": "sealed_test",
+    "attempted_at": "2026-11-12T13:07:19.484331+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://www.chinanews.com.cn/gn/2026/11-02/10724510.shtml",
+    "file": "output/stage3/protocol/chinanews/test_05.html",
+    "sha256": "6fe45864eeec753a19d2a72ae896d9d28e49475faad64fde576bb83dec743c17"
+  },
+  {
+    "target": "chinanews",
+    "url": "https://www.chinanews.com.cn/gn/2026/11-11/10729971.shtml",
+    "role": "sealed_test",
+    "attempted_at": "2026-11-12T13:07:20.654155+00:00",
+    "status": "fetched",
+    "http_status": 200,
+    "final_url": "https://www.chinanews.com.cn/gn/2026/11-11/10729971.shtml",
+    "file": "output/stage3/protocol/chinanews/test_06.html",
+    "sha256": "5dede0bcdf633e9320824d5cd747b59d360d08a3553daf19c40903bdbbeb4d9a"
+  }
+]

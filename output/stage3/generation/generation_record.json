@@ -1,0 +1,23 @@
+{
+  "task_id": "cluster-generation-63366b24691bc486",
+  "generator": "current_conversation_ai",
+  "model_api_calls": 0,
+  "generation_inputs_per_cluster": 3,
+  "input_scope": "generation_only; parent conversation knows historical repair examples, not a blind generation study",
+  "repair_pages_executed": 0,
+  "test_pages_executed": 0,
+  "training_updates": 0,
+  "execution_boundary": "reviewed trusted candidate + AST capability checks + subprocess timeout; NOT an OS sandbox for adversarial code",
+  "clusters": [
+    {
+      "cluster_id": "sina_shell_v2",
+      "candidate_file": "learning/generated/sina_v1.py",
+      "candidate_sha256": "d57fa070535176e9a56065fb776d4b249fb929f6a064dd438b318b02fcea99de"
+    },
+    {
+      "cluster_id": "chinanews_shell_v2",
+      "candidate_file": "learning/generated/chinanews_v1.py",
+      "candidate_sha256": "6cc49ba579af9d3dc85738ccfb5a1a24a7b6958ae32dfc724d98f44639e772ff"
+    }
+  ]
+}

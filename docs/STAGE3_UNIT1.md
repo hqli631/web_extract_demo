@@ -2,6 +2,80 @@
 
 状态：结构盘点程序已实现并运行；分组和样本分工是草案，尚未补齐新测试页与冻结协议。不要越过本单元开始生成代码。
 
+## 2026-11-12进度更新：3.1工程操作已完成，等用户运行解释
+
+上文状态和下文23页/15簇记录是第一组历史盘点。本次保留v1结果，新增五级模板壳核验、历史近重复检查、按列表顺序补采12个新测试快照，以及修订后的冻结分工。以output/stage3/protocol/split_v2.json为当前协议；split.json为发现生成/修复重复前的初版，不再用于后续生成。
+
+### 本次运行命令
+
+~~~powershell
+cd "D:\codex project\web_extract_demo"
+./.venv/Scripts/python.exe -X utf8 ./learning/prepare_cluster_protocol.py
+Start-Process "./output/stage3/protocol/index.html"
+~~~
+
+默认只读保存快照、执行结构和去重检查并重建报告，不联网、不调用模型、不生成抽取代码；不要加--collect，采集已完成，再次采集会被拒绝。
+
+预期：
+
+~~~text
+SHELL CLUSTERS: 2 verified: True
+SEALED TEST ELIGIBLE: {'sina': 6, 'chinanews': 6}
+UNIT 3.1: ready_for_user_learning_check ; split: frozen
+~~~
+
+### 先看报告中的两个壳路径
+
+新浪六个历史页的正文容器及祖先链：
+
+~~~text
+div[id=artibody;class=article]
+div[class=article-content-left]
+div[id=article_content;class=article-content.clearfix]
+div[class=main-content]
+body
+~~~
+
+中新网六个历史页也有一致的五级外壳，容器是div.left_zw。v1观察的是容器内部深度4路径，容易因段落样式、图说、表格不同拆细；v2把正文容器与祖先壳作为模板身份，把内部差异保留为簇内变体。这是基于历史知识的显式模板核验，不是为了凑两个簇降低0.60阈值，更不是通用无监督视觉聚类。
+
+壳匹配支持复用定位框架的假设，不证明抽取代码已经有效；中新网页有多个h1和表格结构，语义处理仍留给3.2/3.3。
+
+### 再看样本分工与重复修订
+
+每个任务壳簇固定3个生成页、3个历史修复页、6个新封存测试页，共24个槽位。测试URL从固定列表DOM顺序选取，排除工作区已知URL；采集失败不替换，未按提取效果挑页。
+
+近重复使用容器文字去空白后的字符5gram Jaccard，阈值0.85；另核对URL和快照SHA256。历史库发现12对重复候选，其中collected_c2d1dbf788829343.html与xpath_practice.html正文完全重复，不能分别占生成和修复名额。因此保留split.json初版，split_v2移除重复修复页，按历史路径字典序补入匹配壳且与已选页不近重复的validation_blind/samples/collected_5029464d5612ed80.html。该页此前已暴露，只作为修复材料，不作为新测试。
+
+12个新测试页均匹配对应模板壳，未达到0.85近重复阈值，最高相似度约0.123。这里只做静态结构和去重预检，未审核提取效果。报告不展示测试标题或正文；后续3.2生成者只能读取生成组，3.3才读取修复组。
+
+### 保留两个短文本难例
+
+两篇新页的静态容器文字少于100字。程序最初额外加了未写入采集前协议的100字入选门槛，在正式使用分工前删除该事后条件，记录在verification.json，页面未替换。现在两页均保留为短文本风险：可能是短消息、图片或动态内容，需要后续验证，不因短文本淘汰难例。
+
+### 本次文件
+
+|文件|作用|
+|---|---|
+|learning/prepare_cluster_protocol.py|壳核验、有限采集与默认离线复验|
+|output/stage3/protocol/protocol.json|采集前固定的选页顺序、目标、历史URL、模板壳|
+|sina/selection.json、chinanews/selection.json|列表快照哈希与原始选页顺序|
+|manifest.json|采集时间、URL、状态、快照哈希|
+|verification.json|重复证据、结构匹配、短文本风险和修订原因|
+|split_v2.json|当前冻结的3/3/6分工及快照哈希|
+|index.html|本次阅读入口，不展示封存正文|
+
+### 你亲手确认三个知识点
+
+1. v1的“15个内容结构簇”和v2的“2个任务模板壳簇”为什么能同时存在？分别看什么？
+2. 两个文件名不同，为什么不能分别当生成样本和修复样本？在报告里找到相似度1.0的例子。
+3. 静态文字很少的两页为什么保留？后续提取失败应记录什么，而不是怎么换掉它？
+
+工程操作达到3.1结束条件，用户运行并能解释上述问题后再进入3.2。新页仅在工作区历史范围核查“未使用”，不能证明工作区之外的使用史；结构和近重复预检不等于正文质量评估。
+
+---
+
+以下保留第一组盘点操作，作为方法演进回顾。
+
 ## 与岗位和固定计划的关系
 
 岗位先对网页按DOM/布局聚簇，再让Coding Agent看少量页生成整簇代码。只有理解“哪些页可共享规则、哪些是簇内变体”，才能解释代码复用与成本摊销。计划见[岗位学习计划3.1](ROLE_ALIGNED_LEARNING_PLAN.md)。

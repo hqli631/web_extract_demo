@@ -2,3 +2,9 @@
 output/agent_io/final/snapshots/*.html -text
 output/agent_io/final/discovery.html -text
 output/agent_io/final/robots.txt -text
+output/stage3/protocol/**/*.html -text
+output/stage3/protocol/**/robots.txt -text
+learning/generated/*_v1.py -text
+output/stage3/protocol/*.json -text
+output/stage3/protocol/**/*.json -text
+output/stage3/generation/*.json -text
