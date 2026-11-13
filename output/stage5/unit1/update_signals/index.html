@@ -1,0 +1,106 @@
+<!doctype html><html lang=zh-CN><meta charset=utf-8><title>5.1更新信号与开销</title>
+<style>body{font:16px/1.8 system-ui;max-width:1100px;margin:30px auto;padding:12px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:9px}pre{white-space:pre-wrap}aside{background:#fff4cd;padding:12px}</style>
+<h1>5.1后半：从优势到更新信号，再看质量与开销</h1>
+<aside>所有概率、两策略结果及成本均为假设，未训练或调用模型。原真实修复轨迹不补造奖励，第四阶段独立校准缺口保留。</aside>
+<h2>一、概率比不是奖励比</h2><p>取同一已采样动作：old概率0.2，current概率0.3，ratio=1.5。这里的动作概率是教学标量；LLM通常计算同一生成token的条件概率比，不能用这一项代表整条轨迹概率或完整训练目标。</p>
+<p>最大化s=min(ratio×A,clip(ratio,0.8,1.2)×A)。以下斜率只对ratio这个标量、且在边界之外求局部变化，不是模型权重梯度。</p>
+<table><tr><th>例子</th><th>A</th><th>old→current</th><th>ratio</th><th>s</th><th>局部斜率ds/dratio</th></tr>
+<tr><td>positive_below_clip</td><td>1</td><td>0.2 → 0.22</td><td>1.10</td><td>1.10</td><td>1</td></tr>
+<tr><td>positive_past_clip</td><td>1</td><td>0.2 → 0.3</td><td>1.50</td><td>1.20</td><td>0</td></tr>
+<tr><td>negative_past_clip</td><td>-1</td><td>0.2 → 0.1</td><td>0.50</td><td>-0.80</td><td>0</td></tr>
+<tr><td>negative_worse_direction</td><td>-1</td><td>0.2 → 0.3</td><td>1.50</td><td>-1.50</td><td>-1</td></tr>
+<tr><td>positive_worse_direction</td><td>1</td><td>0.2 → 0.1</td><td>0.50</td><td>0.50</td><td>1</td></tr>
+</table><p>正优势：提高动作概率通常有利，但ratio越过1.2后，这个项不继续给增加收益。负优势：降低概率通常有利，但ratio低于0.8后，这个项也不继续给增加收益。反方向的变化仍会受惩罚。裁剪不是把概率硬限制在区间内；其他token或KL项仍可能推动共享参数变化。</p>
+<h2>二、old policy和reference policy</h2><p>old用于记录采样时的概率，ratio比较current与old；reference提供稳定约束基准，KL衡量current相对它的偏离。两者可能暂时数值相同，职责仍不同。</p>
+<p>假设两种动作：reference=[0.5,0.5]，current=[0.75,0.25]，KL(current||reference)=0.130812 nats。分布相同KL为0；这不是模型准确率。训练目标可含减去β×KL的项，β和具体估计依框架配置，不在此临时调参。</p>
+<h2>三、固定四任务比较两种假设策略</h2><p>共同假设：任务/评价/最多4次尝试/成本口径相同。轮数包含首次生成与执行，纯修复轮数=总尝试轮数−1。2/4是全任务确认通过比例，不是已知初始失败任务的修复成功率。成本含失败与unknown任务全部已发生支出，单位不是人民币或真实账单。unknown不被填成0分，也不从分母消失。</p>
+<table><tr><th>策略</th><th>pass/fail/unknown</th><th>确认通过/全任务</th><th>全任务平均轮数</th><th>通过任务平均轮数</th><th>总成本</th><th>成本/确认通过</th></tr>
+<tr><td>baseline</td><td>2/1/1</td><td>50%</td><td>2.75</td><td>2.50</td><td>330</td><td>165.0</td></tr>
+<tr><td>efficient</td><td>2/1/1</td><td>50%</td><td>2.00</td><td>1.00</td><td>240</td><td>120.0</td></tr>
+</table><p>在这个假设对照中，确认通过率仍2/4，减少的是轮数和成本，不能称准确率提高。全任务轮数保留了失败和未知的投入，通过任务轮数回答“成功时要多久”，两个口径都要报。分组标签相同也不能证明全部内容质量完全相等；真实实验还需相同标准的逐题证据与重复测量。</p>
+<details><summary>每个任务的原始记录</summary><pre>{
+  &quot;baseline&quot;: {
+    &quot;tasks&quot;: [
+      {
+        &quot;task_id&quot;: &quot;T1&quot;,
+        &quot;outcome&quot;: &quot;pass&quot;,
+        &quot;rounds&quot;: 3,
+        &quot;cost_units&quot;: 90
+      },
+      {
+        &quot;task_id&quot;: &quot;T2&quot;,
+        &quot;outcome&quot;: &quot;pass&quot;,
+        &quot;rounds&quot;: 2,
+        &quot;cost_units&quot;: 60
+      },
+      {
+        &quot;task_id&quot;: &quot;T3&quot;,
+        &quot;outcome&quot;: &quot;fail&quot;,
+        &quot;rounds&quot;: 4,
+        &quot;cost_units&quot;: 120
+      },
+      {
+        &quot;task_id&quot;: &quot;T4&quot;,
+        &quot;outcome&quot;: &quot;unknown&quot;,
+        &quot;rounds&quot;: 2,
+        &quot;cost_units&quot;: 60
+      }
+    ],
+    &quot;metrics&quot;: {
+      &quot;total_tasks&quot;: 4,
+      &quot;pass&quot;: 2,
+      &quot;fail&quot;: 1,
+      &quot;unknown&quot;: 1,
+      &quot;confirmed_pass_rate_all_tasks&quot;: 0.5,
+      &quot;mean_rounds_all_tasks&quot;: 2.75,
+      &quot;mean_rounds_pass_tasks&quot;: 2.5,
+      &quot;total_cost_units&quot;: 330,
+      &quot;cost_units_per_confirmed_pass&quot;: 165.0
+    }
+  },
+  &quot;efficient&quot;: {
+    &quot;tasks&quot;: [
+      {
+        &quot;task_id&quot;: &quot;T1&quot;,
+        &quot;outcome&quot;: &quot;pass&quot;,
+        &quot;rounds&quot;: 1,
+        &quot;cost_units&quot;: 30
+      },
+      {
+        &quot;task_id&quot;: &quot;T2&quot;,
+        &quot;outcome&quot;: &quot;pass&quot;,
+        &quot;rounds&quot;: 1,
+        &quot;cost_units&quot;: 30
+      },
+      {
+        &quot;task_id&quot;: &quot;T3&quot;,
+        &quot;outcome&quot;: &quot;fail&quot;,
+        &quot;rounds&quot;: 4,
+        &quot;cost_units&quot;: 120
+      },
+      {
+        &quot;task_id&quot;: &quot;T4&quot;,
+        &quot;outcome&quot;: &quot;unknown&quot;,
+        &quot;rounds&quot;: 2,
+        &quot;cost_units&quot;: 60
+      }
+    ],
+    &quot;metrics&quot;: {
+      &quot;total_tasks&quot;: 4,
+      &quot;pass&quot;: 2,
+      &quot;fail&quot;: 1,
+      &quot;unknown&quot;: 1,
+      &quot;confirmed_pass_rate_all_tasks&quot;: 0.5,
+      &quot;mean_rounds_all_tasks&quot;: 2.0,
+      &quot;mean_rounds_pass_tasks&quot;: 1.0,
+      &quot;total_cost_units&quot;: 240,
+      &quot;cost_units_per_confirmed_pass&quot;: 120.0
+    }
+  },
+  &quot;controls&quot;: &quot;Same four tasks, outcome categories and total attempt budget of 4, assumed common evaluation and cost accounting. Rounds include the initial generation/execution attempt; repair-only rounds equal rounds minus one. Categories alone do not prove full quality equivalence. Not all tasks are established initial failures, so 2/4 is not a repair-success rate.&quot;,
+  &quot;conclusion&quot;: &quot;Same assumed confirmed pass rate 2/4, all-task rounds 2.75 -&gt; 2.00, pass-task rounds 2.50 -&gt; 1.00, cost 330 -&gt; 240 hypothetical units. Failed/unknown costs remain counted.&quot;,
+  &quot;reward_rule&quot;: &quot;No cost penalty formula selected. Unknown has no semantic score; keep it separate. Prefer reducing cost subject to quality and evidence constraints, not buying a higher number by dropping hard tasks.&quot;
+}</pre></details>
+<h2>四、实际训练还缺什么</h2><p>按policy采样代码/工具轨迹 → 执行与可靠评审 → 计算同任务组优势 → 计算token概率和loss（含mask、裁剪、KL等）→ 反向传播与优化器更新Actor → 固定测试集评估质量/轮数/总开销。本脚本只做数值解释，没有这条训练链的参数更新。</p>
+<h2>你的反馈</h2><p>C：正优势A=1、ratio=1.5时，为何这个标量项不再奖励继续提高概率？<br>D：两策略确认通过率相同，轮数和成本下降，应该如何描述收益，能说准确率提高吗？</p>
+<p><a href=results.json>完整实验数据</a> / <a href=../index.html>上一组轨迹和优势实验</a></p></html>

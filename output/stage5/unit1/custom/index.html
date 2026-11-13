@@ -1,0 +1,137 @@
+<!doctype html><html lang=zh-CN><meta charset=utf-8><title>5.1 轨迹与GRPO基础</title>
+<style>body{font:16px/1.8 system-ui;max-width:1100px;margin:30px auto;padding:12px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:9px}pre{white-space:pre-wrap;overflow-wrap:anywhere}aside{background:#fff4cd;padding:12px}</style>
+<h1>5.1：代码Agent轨迹与组相对优势</h1>
+<aside>历史修复轨迹有真实代码和结果，但未记录训练reward。下面数组均是假设奖励，未采样新模型、未训练、未更新参数。第四阶段独立校准仍未完成。</aside>
+<h2>一、谁在学习，谁在执行</h2><p>Actor是生成和修复代码的模型；Python/XPath是它生成的产物；执行器和评审提供环境观察。训练要改变Actor的参数，改一个Python文件不是RL。</p>
+<h2>二、历史修复轨迹</h2>
+<details><summary>1 task_and_observation：同布局网页任务、输出契约、少量开发样本构成Actor可见上下文。</summary><pre>{
+  &quot;step&quot;: 1,
+  &quot;role&quot;: &quot;task_and_observation&quot;,
+  &quot;summary&quot;: &quot;同布局网页任务、输出契约、少量开发样本构成Actor可见上下文。&quot;,
+  &quot;evidence&quot;: {
+    &quot;generation_task_id&quot;: &quot;cluster-generation-63366b24691bc486&quot;,
+    &quot;samples_per_cluster&quot;: 3
+  }
+}</pre></details>
+<details><summary>2 action：Actor生成v1抽取代码；这是动作产物，不是训练参数更新。</summary><pre>{
+  &quot;step&quot;: 2,
+  &quot;role&quot;: &quot;action&quot;,
+  &quot;summary&quot;: &quot;Actor生成v1抽取代码；这是动作产物，不是训练参数更新。&quot;,
+  &quot;code_sha256&quot;: &quot;d57fa070535176e9a56065fb776d4b249fb929f6a064dd438b318b02fcea99de&quot;
+}</pre></details>
+<details><summary>3 environment_observation：执行器运行修复页，发现独立署名仍在正文。</summary><pre>{
+  &quot;step&quot;: 3,
+  &quot;role&quot;: &quot;environment_observation&quot;,
+  &quot;summary&quot;: &quot;执行器运行修复页，发现独立署名仍在正文。&quot;,
+  &quot;evidence&quot;: {
+    &quot;file&quot;: &quot;samples/collected_c5d4b9cdcf5b4c91.html&quot;,
+    &quot;body_blocks&quot;: 22,
+    &quot;record&quot;: {
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;21世纪经济报道记者 程雪溶&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;
+    }
+  }
+}</pre></details>
+<details><summary>4 feedback：评审给出原文、XPath及要求：仅首段整行署名分流，保留正文中的记者叙述。</summary><pre>{
+  &quot;step&quot;: 4,
+  &quot;role&quot;: &quot;feedback&quot;,
+  &quot;summary&quot;: &quot;评审给出原文、XPath及要求：仅首段整行署名分流，保留正文中的记者叙述。&quot;,
+  &quot;evidence&quot;: {
+    &quot;code&quot;: &quot;standalone_byline_in_body&quot;,
+    &quot;file&quot;: &quot;samples/collected_c5d4b9cdcf5b4c91.html&quot;,
+    &quot;evidence&quot;: [
+      {
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;,
+        &quot;text&quot;: &quot;21世纪经济报道记者 程雪溶&quot;,
+        &quot;before&quot;: &quot;blocks.paragraph&quot;,
+        &quot;after&quot;: &quot;metadata.author&quot;
+      }
+    ],
+    &quot;requested&quot;: &quot;first direct p, full-line media-reporter-name signature only; narrative mentions kept&quot;
+  }
+}</pre></details>
+<details><summary>5 action：Actor输出v2代码补丁：位置约束加整行署名格式匹配。</summary><pre>{
+  &quot;step&quot;: 5,
+  &quot;role&quot;: &quot;action&quot;,
+  &quot;summary&quot;: &quot;Actor输出v2代码补丁：位置约束加整行署名格式匹配。&quot;,
+  &quot;code_sha256&quot;: &quot;ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003&quot;,
+  &quot;full_patch&quot;: &quot;--- sina_v1.py\n+++ sina_v2.py\n@@ -1,4 +1,4 @@\n-\&quot;\&quot;\&quot;Current-conversation AI candidate v1; static Sina article shell only.\&quot;\&quot;\&quot;\n+\&quot;\&quot;\&quot;Current-conversation AI candidate v2; static Sina article shell only.\&quot;\&quot;\&quot;\n import re\n from lxml import html\n \n@@ -32,6 +32,11 @@\n             item[&#x27;kind&#x27;] = &#x27;editor&#x27;\n             result[&#x27;metadata&#x27;].append(item)\n             return\n+        if (node.tag == &#x27;p&#x27; and body.xpath(&#x27;./p&#x27;) and node is body.xpath(&#x27;./p&#x27;)[0] and\n+                re.fullmatch(r&#x27;[\\u4e00-\\u9fff0-9]{2,20}记者\\s+[\\u4e00-\\u9fff·]{2,8}&#x27;, text)):\n+            item[&#x27;kind&#x27;] = &#x27;author&#x27;\n+            result[&#x27;metadata&#x27;].append(item)\n+            return\n         if node.tag == &#x27;p&#x27; and text.startswith(&#x27;专题：&#x27;) and node.xpath(&#x27;.//a&#x27;):\n             item[&#x27;kind&#x27;] = &#x27;topic_navigation&#x27;\n             result[&#x27;excluded&#x27;].append(item)\n@@ -53,6 +58,9 @@\n                                 &#x27;subheading&#x27; if node.tag.startswith(&#x27;h&#x27;) or &#x27;align-Center&#x27; in (node.get(&#x27;cms-style&#x27;) or &#x27;&#x27;).split() else &#x27;paragraph&#x27;)\n                 result[&#x27;blocks&#x27;].append(item)\n             return\n+        if text and node.tag in {&#x27;div&#x27;,&#x27;section&#x27;,&#x27;details&#x27;} and not node.xpath(&#x27;.//p|.//table|.//li|.//h2|.//h3|.//h4|.//figcaption|.//div&#x27;):\n+            result[&#x27;blocks&#x27;].append(item)\n+            return\n         for child in node:\n             visit(child)\n         if text and not len(node):\n&quot;
+}</pre></details>
+<details><summary>6 environment_observation：回归结果中署名转入作者；正文22块变21块；6篇生成页输出保持不变。</summary><pre>{
+  &quot;step&quot;: 6,
+  &quot;role&quot;: &quot;environment_observation&quot;,
+  &quot;summary&quot;: &quot;回归结果中署名转入作者；正文22块变21块；6篇生成页输出保持不变。&quot;,
+  &quot;evidence&quot;: {
+    &quot;body_before&quot;: 22,
+    &quot;body_after&quot;: 21,
+    &quot;author_record&quot;: {
+      &quot;kind&quot;: &quot;author&quot;,
+      &quot;text&quot;: &quot;21世纪经济报道记者 程雪溶&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;
+    },
+    &quot;generation_unchanged&quot;: 6
+  }
+}</pre></details>
+<p>以上是事后整理的交互轨迹，不是保存了old policy概率的训练rollout；numeric_reward=null。</p><h2>三、假设同任务候选的组内比较</h2>
+<h3>input</h3><p>mean=0.800000，population_std=0.000000</p>
+<table><tr><th>假设轨迹</th><th>reward</th><th>reward−均值</th><th>advantage</th></tr>
+<tr><td>T1</td><td>0.8</td><td>0.000000</td><td>0.000000</td></tr>
+<tr><td>T2</td><td>0.8</td><td>0.000000</td><td>0.000000</td></tr>
+<tr><td>T3</td><td>0.8</td><td>0.000000</td><td>0.000000</td></tr>
+<tr><td>T4</td><td>0.8</td><td>0.000000</td><td>0.000000</td></tr>
+</table>
+<h3>all_equal</h3><p>mean=0.800000，population_std=0.000000</p>
+<table><tr><th>假设轨迹</th><th>reward</th><th>reward−均值</th><th>advantage</th></tr>
+<tr><td>T1</td><td>0.8</td><td>0.000000</td><td>0.000000</td></tr>
+<tr><td>T2</td><td>0.8</td><td>0.000000</td><td>0.000000</td></tr>
+<tr><td>T3</td><td>0.8</td><td>0.000000</td><td>0.000000</td></tr>
+<tr><td>T4</td><td>0.8</td><td>0.000000</td><td>0.000000</td></tr>
+</table>
+<p>A=(r−组均值)/(总体标准差+1e−8)。正负表示相对本组，不表示绝对合格。全同分时A=0，只说明reward项没有组内区分信号，不能推出模型已最优或所有训练项都无梯度。</p>
+<h2>四、概率比裁剪：可选查看</h2><p>ratio=新policy对同一动作的概率/采样时old policy概率，不是reward的比值。s=min(ratio×A, clip(ratio,0.8,1.2)×A)，作为要最大化的标量项示例；训练loss通常还要取负号并加入其他项。</p>
+<pre>[
+  {
+    &quot;probability_ratio&quot;: 1.5,
+    &quot;advantage&quot;: 1,
+    &quot;clipped_ratio&quot;: 1.2,
+    &quot;unclipped_term&quot;: 1.5,
+    &quot;clipped_term&quot;: 1.2,
+    &quot;surrogate&quot;: 1.2
+  },
+  {
+    &quot;probability_ratio&quot;: 0.5,
+    &quot;advantage&quot;: -1,
+    &quot;clipped_ratio&quot;: 0.8,
+    &quot;unclipped_term&quot;: -0.5,
+    &quot;clipped_term&quot;: -0.8,
+    &quot;surrogate&quot;: -0.8
+  },
+  {
+    &quot;probability_ratio&quot;: 1.5,
+    &quot;advantage&quot;: -1,
+    &quot;clipped_ratio&quot;: 1.2,
+    &quot;unclipped_term&quot;: -1.5,
+    &quot;clipped_term&quot;: -1.2,
+    &quot;surrogate&quot;: -1.5
+  },
+  {
+    &quot;probability_ratio&quot;: 0.5,
+    &quot;advantage&quot;: 1,
+    &quot;clipped_ratio&quot;: 0.8,
+    &quot;unclipped_term&quot;: 0.5,
+    &quot;clipped_term&quot;: 0.8,
+    &quot;surrogate&quot;: 0.5
+  }
+]</pre>
+<p>A=1、ratio=1.5时取1.2；A=−1、ratio=0.5时取−0.8。裁剪不是所有正负情况都切断：另两例分别−1.5、0.5。真正梯度需计算图与参数，本脚本只算数值。KL常约束当前policy与参考policy，参考policy与采样old policy角色不同。</p>
+<h2>五、本轮你需要解释</h2><p>1. Actor最终要学会改进什么，是否直接训练XPath？<br>2. 全组都是0.8时，为什么仅靠该组reward不能辨别哪条轨迹更好？</p>
+<p>状态s是任务和已有反馈形成的可见上下文；动作a可以是代码或工具调用；观察o来自执行器与评审。rollout是在某个policy下产生的轨迹；policy决定动作概率。终局奖励评价整条结果，credit assignment讨论如何把最终反馈归因给前面的动作。</p>
+<h2>执行边界</h2><pre>{
+  &quot;new_model_rollouts&quot;: 0,
+  &quot;external_model_api_calls&quot;: 0,
+  &quot;backward_passes&quot;: 0,
+  &quot;optimizer_steps&quot;: 0,
+  &quot;parameter_updates&quot;: 0
+}</pre>
+<p><a href=results.json>完整数值与轨迹证据</a></p></html>

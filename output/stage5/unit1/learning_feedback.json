@@ -1,0 +1,9 @@
+{
+  "source": "explicit user reply in current conversation",
+  "answers": [
+    {"id":"A","answer":"Actor是生成和修复代码的模型，由优化器更新Actor权重，才有模型训练参数更新，不是直接训练 XPath 本身","assessment":"correct conceptual distinction"},
+    {"id":"B","answer":"四条结果的奖励都等于均值，优势自然都是零","assessment":"correct group-relative calculation; no claim that all loss terms have zero gradient"}
+  ],
+  "next": "continue fixed unit5.1: scalar clipped update signal, KL roles and quality/rounds/cost comparisons",
+  "training_updates":0
+}

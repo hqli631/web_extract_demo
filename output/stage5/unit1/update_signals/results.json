@@ -1,0 +1,171 @@
+{
+  "unit": "5.1",
+  "origin": "Hypothetical numerical teaching cases, not measured policies or real rollouts.",
+  "probability_examples": [
+    {
+      "name": "positive_below_clip",
+      "old_action_probability": 0.2,
+      "current_action_probability": 0.22,
+      "advantage": 1,
+      "ratio": 1.0999999999999999,
+      "unclipped_term": 1.0999999999999999,
+      "clipped_term": 1.0999999999999999,
+      "surrogate": 1.0999999999999999,
+      "local_slope_wrt_ratio": 1,
+      "slope_scope": "Only this scalar term away from clip boundaries, not a full model gradient."
+    },
+    {
+      "name": "positive_past_clip",
+      "old_action_probability": 0.2,
+      "current_action_probability": 0.3,
+      "advantage": 1,
+      "ratio": 1.4999999999999998,
+      "unclipped_term": 1.4999999999999998,
+      "clipped_term": 1.2,
+      "surrogate": 1.2,
+      "local_slope_wrt_ratio": 0,
+      "slope_scope": "Only this scalar term away from clip boundaries, not a full model gradient."
+    },
+    {
+      "name": "negative_past_clip",
+      "old_action_probability": 0.2,
+      "current_action_probability": 0.1,
+      "advantage": -1,
+      "ratio": 0.5,
+      "unclipped_term": -0.5,
+      "clipped_term": -0.8,
+      "surrogate": -0.8,
+      "local_slope_wrt_ratio": 0,
+      "slope_scope": "Only this scalar term away from clip boundaries, not a full model gradient."
+    },
+    {
+      "name": "negative_worse_direction",
+      "old_action_probability": 0.2,
+      "current_action_probability": 0.3,
+      "advantage": -1,
+      "ratio": 1.4999999999999998,
+      "unclipped_term": -1.4999999999999998,
+      "clipped_term": -1.2,
+      "surrogate": -1.4999999999999998,
+      "local_slope_wrt_ratio": -1,
+      "slope_scope": "Only this scalar term away from clip boundaries, not a full model gradient."
+    },
+    {
+      "name": "positive_worse_direction",
+      "old_action_probability": 0.2,
+      "current_action_probability": 0.1,
+      "advantage": 1,
+      "ratio": 0.5,
+      "unclipped_term": 0.5,
+      "clipped_term": 0.8,
+      "surrogate": 0.5,
+      "local_slope_wrt_ratio": 1,
+      "slope_scope": "Only this scalar term away from clip boundaries, not a full model gradient."
+    }
+  ],
+  "kl_example": {
+    "reference": [
+      0.5,
+      0.5
+    ],
+    "current": [
+      0.75,
+      0.25
+    ],
+    "KL_current_reference_nats": 0.13081203594113697,
+    "note": "Exact two-action KL only; real LLM training uses token-level implementation-specific estimators. Old rollout policy and reference policy serve distinct roles."
+  },
+  "paired_experiment": {
+    "baseline": {
+      "tasks": [
+        {
+          "task_id": "T1",
+          "outcome": "pass",
+          "rounds": 3,
+          "cost_units": 90
+        },
+        {
+          "task_id": "T2",
+          "outcome": "pass",
+          "rounds": 2,
+          "cost_units": 60
+        },
+        {
+          "task_id": "T3",
+          "outcome": "fail",
+          "rounds": 4,
+          "cost_units": 120
+        },
+        {
+          "task_id": "T4",
+          "outcome": "unknown",
+          "rounds": 2,
+          "cost_units": 60
+        }
+      ],
+      "metrics": {
+        "total_tasks": 4,
+        "pass": 2,
+        "fail": 1,
+        "unknown": 1,
+        "confirmed_pass_rate_all_tasks": 0.5,
+        "mean_rounds_all_tasks": 2.75,
+        "mean_rounds_pass_tasks": 2.5,
+        "total_cost_units": 330,
+        "cost_units_per_confirmed_pass": 165.0
+      }
+    },
+    "efficient": {
+      "tasks": [
+        {
+          "task_id": "T1",
+          "outcome": "pass",
+          "rounds": 1,
+          "cost_units": 30
+        },
+        {
+          "task_id": "T2",
+          "outcome": "pass",
+          "rounds": 1,
+          "cost_units": 30
+        },
+        {
+          "task_id": "T3",
+          "outcome": "fail",
+          "rounds": 4,
+          "cost_units": 120
+        },
+        {
+          "task_id": "T4",
+          "outcome": "unknown",
+          "rounds": 2,
+          "cost_units": 60
+        }
+      ],
+      "metrics": {
+        "total_tasks": 4,
+        "pass": 2,
+        "fail": 1,
+        "unknown": 1,
+        "confirmed_pass_rate_all_tasks": 0.5,
+        "mean_rounds_all_tasks": 2.0,
+        "mean_rounds_pass_tasks": 1.0,
+        "total_cost_units": 240,
+        "cost_units_per_confirmed_pass": 120.0
+      }
+    },
+    "controls": "Same four tasks, outcome categories and total attempt budget of 4, assumed common evaluation and cost accounting. Rounds include the initial generation/execution attempt; repair-only rounds equal rounds minus one. Categories alone do not prove full quality equivalence. Not all tasks are established initial failures, so 2/4 is not a repair-success rate.",
+    "conclusion": "Same assumed confirmed pass rate 2/4, all-task rounds 2.75 -> 2.00, pass-task rounds 2.50 -> 1.00, cost 330 -> 240 hypothetical units. Failed/unknown costs remain counted.",
+    "reward_rule": "No cost penalty formula selected. Unknown has no semantic score; keep it separate. Prefer reducing cost subject to quality and evidence constraints, not buying a higher number by dropping hard tasks."
+  },
+  "training_status": {
+    "new_model_rollouts": 0,
+    "backward_passes": 0,
+    "optimizer_steps": 0,
+    "parameter_updates": 0
+  },
+  "learner_checks": [
+    "C: positive advantage at ratio 1.5 has a flat scalar surrogate; why is stronger probability growth not always rewarded?",
+    "D: same pass/fail/unknown outcomes but lower rounds/cost: what improved, and can we claim accuracy rose?"
+  ]
+}

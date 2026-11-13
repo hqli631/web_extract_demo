@@ -1,5 +1,9 @@
 # Web Extract Demo
 
+当前操作：5.1的Actor/同分优势已由用户正确解释；继续运行 learning/grpo_update_signals.py，打开 output/stage5/unit1/update_signals/index.html，观察概率比裁剪、KL与同任务质量/轮数/总成本。详见[5.1后半操作](docs/STAGE5_UNIT1_FOLLOWUP.md)。数据是假设，没有参数更新。
+
+当前学习已开始5.1：运行 learning/grpo_basics.py，打开 output/stage5/unit1/index.html。先看真实代码修复轨迹，再计算假设reward的组相对优势；没有模型参数更新。详见[5.1操作与讲解](docs/STAGE5_UNIT1.md)。第四阶段独立校准缺口保留。
+
 当前操作：D1/D2已收到用户确认，运行 learning/apply_body_policy.py，打开 output/stage4/policy_v2/index.html。可对照1条原标题转元数据、4条图说细化caption，文字与顺序保留。详见[第四阶段归档：工程成果与校准缺口](docs/STAGE4_SUMMARY.md)。独立校准仍待完成，当前分数不是稳定训练reward；下一学习单元来自固定5.1轨迹与GRPO基础。
 
 2026-11-13纠正：旧4.2将预期标签复制成实际答案，1.00评审结论撤回，历史批次已作废保留。现已保存当前对话AI逐案判断，引用/哈希校验及4.3门槛实验通过；独立复核和自然页校准仍待完成，第四阶段未整体结束。运行learning/run_rubric_calibration.py，报告output/stage4/calibration_v2/index.html，操作见docs/STAGE4_UNIT3.md。
