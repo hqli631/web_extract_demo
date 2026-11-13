@@ -1,0 +1,1477 @@
+{
+  "reviewer": "current_conversation_ai",
+  "method": "apply frozen 4.1 rubric to synthetic controlled cases; evidence protocol exercised",
+  "independent_human_gold": false,
+  "model_api_calls": 0,
+  "training_updates": 0,
+  "pages": [
+    {
+      "case_id": "correct",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q2",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q3",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q4",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q5",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        }
+      ]
+    },
+    {
+      "case_id": "missing_paragraph",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q2",
+          "verdict": "no",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/p[4]"
+        },
+        {
+          "id": "Q3",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q4",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q5",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        }
+      ]
+    },
+    {
+      "case_id": "missing_table",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q2",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q3",
+          "verdict": "no",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/table"
+        },
+        {
+          "id": "Q4",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q5",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        }
+      ]
+    },
+    {
+      "case_id": "missing_list",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q2",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q3",
+          "verdict": "no",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/ul"
+        },
+        {
+          "id": "Q4",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q5",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        }
+      ]
+    },
+    {
+      "case_id": "missing_caption",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q2",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q3",
+          "verdict": "no",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/div[1]"
+        },
+        {
+          "id": "Q4",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q5",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        }
+      ]
+    },
+    {
+      "case_id": "missing_folded",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q2",
+          "verdict": "no",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/div[2]"
+        },
+        {
+          "id": "Q3",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q4",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q5",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        }
+      ]
+    },
+    {
+      "case_id": "promotion_in_body",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q2",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q3",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q4",
+          "verdict": "no",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/div[4]"
+        },
+        {
+          "id": "Q5",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        }
+      ]
+    },
+    {
+      "case_id": "byline_in_body",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q2",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "byline",
+              "quote": "记者 张三"
+            },
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "byline",
+              "quote": "记者 张三"
+            },
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q3",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "byline",
+              "quote": "记者 张三"
+            },
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "byline",
+              "quote": "记者 张三"
+            },
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q4",
+          "verdict": "no",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/p[1]"
+        },
+        {
+          "id": "Q5",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        }
+      ]
+    },
+    {
+      "case_id": "cta_in_body",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q2",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q3",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q4",
+          "verdict": "no",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/p[6]"
+        },
+        {
+          "id": "Q5",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        }
+      ]
+    },
+    {
+      "case_id": "hidden_menu_in_body",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q2",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q3",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q4",
+          "verdict": "no",
+          "source_evidence": [
+            {
+              "id": "cta",
+              "quote": "对于这次试点，你怎么看？来评论区说说。"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "cta",
+              "quote": "对于这次试点，你怎么看？来评论区说说。"
+            }
+          ],
+          "reason": "记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/div[3]"
+        },
+        {
+          "id": "Q5",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "cta",
+              "quote": "对于这次试点，你怎么看？来评论区说说。"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "cta",
+              "quote": "对于这次试点，你怎么看？来评论区说说。"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        }
+      ]
+    },
+    {
+      "case_id": "duplicate",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q2",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q3",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q4",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q5",
+          "verdict": "no",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "同一回答出现两次；篇幅增加不代表质量提高。"
+        }
+      ]
+    },
+    {
+      "case_id": "reordered",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "访谈：社区如何使用人工智能"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q2",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "answer",
+              "quote": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "answer",
+              "quote": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q3",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "answer",
+              "quote": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "answer",
+              "quote": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q4",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q5",
+          "verdict": "no",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "原文均在但回答被放到问题前；完整性与顺序分别判断。"
+        }
+      ]
+    },
+    {
+      "case_id": "wrong_title",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "no",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "另一篇无关新闻"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "另一篇无关新闻"
+            }
+          ],
+          "reason": "正文未变但主标题错误，由Q1主评。"
+        },
+        {
+          "id": "Q2",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q3",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "intro",
+              "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+            },
+            {
+              "id": "question",
+              "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q4",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q5",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "menu",
+              "quote": "返回首页"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        }
+      ]
+    },
+    {
+      "case_id": "image_unknown",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "图解：社区试点"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "图解：社区试点"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "source_evidence": [
+            {
+              "id": "lead",
+              "quote": "请看试点图解。"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "lead",
+              "quote": "请看试点图解。"
+            }
+          ],
+          "reason": "源证据不足以确认图片承载的信息是否完整；按协议保留unknown。"
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "source_evidence": [
+            {
+              "id": "lead",
+              "quote": "请看试点图解。"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "lead",
+              "quote": "请看试点图解。"
+            }
+          ],
+          "reason": "源证据不足以确认图片承载的信息是否完整；按协议保留unknown。"
+        },
+        {
+          "id": "Q4",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "图解：社区试点"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "图解：社区试点"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        },
+        {
+          "id": "Q5",
+          "verdict": "yes",
+          "source_evidence": [
+            {
+              "id": "title",
+              "quote": "图解：社区试点"
+            }
+          ],
+          "output_evidence": [
+            {
+              "id": "title",
+              "quote": "图解：社区试点"
+            }
+          ],
+          "reason": "在本受控案例的静态源与候选记录中，未发现该题对应的错误。"
+        }
+      ]
+    }
+  ]
+}

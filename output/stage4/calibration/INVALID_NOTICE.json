@@ -1,0 +1,6 @@
+{
+  "valid": false,
+  "reason": "v1 copied expected_answers into actual; no review occurred; prior 1.00 claim withdrawn",
+  "replacement": "../calibration_v2/index.html",
+  "historical_files": "invalid_v1/"
+}

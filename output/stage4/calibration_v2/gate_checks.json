@@ -1,0 +1,608 @@
+{
+  "unknown": {
+    "case_id": "item_04",
+    "response_valid": true,
+    "raw_score": null,
+    "score": null,
+    "reward_signal": null,
+    "adoption": "needs_evidence",
+    "errors": [],
+    "answers": [
+      {
+        "id": "Q1",
+        "verdict": "yes",
+        "reason": "主标题相同。",
+        "source_evidence": [
+          {
+            "id": "title",
+            "quote": "访谈：社区如何使用人工智能"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "title",
+            "quote": "访谈：社区如何使用人工智能"
+          }
+        ]
+      },
+      {
+        "id": "Q2",
+        "verdict": "yes",
+        "reason": "导语、采访问句、回答、小标题、折叠叙述和分析均保留。",
+        "source_evidence": [
+          {
+            "id": "s02",
+            "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+          },
+          {
+            "id": "s03",
+            "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+          },
+          {
+            "id": "s04",
+            "quote": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。"
+          },
+          {
+            "id": "s05",
+            "quote": "试点结果"
+          },
+          {
+            "id": "s09",
+            "quote": "补充说明：试点数据尚未覆盖所有居民。"
+          },
+          {
+            "id": "s10",
+            "quote": "研究者指出，“来评论区说说”是一种常见互动引导语。"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"id\": \"o01\", \"kind\": \"paragraph\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\", \"xpath\": \"/html/body/div/p[2]\"}, {\"id\": \"o02\", \"kind\": \"paragraph\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\", \"xpath\": \"/html/body/div/p[3]\"}, {\"id\": \"o03\", \"kind\": \"paragraph\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\", \"xpath\": \"/html/body/div/p[4]\"}, {\"id\": \"o04\", \"kind\": \"subheading\", \"text\": \"试点结果\", \"xpath\": \"/html/body/div/h2\"}, {\"id\": \"o05\", \"kind\": \"list\", \"text\": \"保留人工核实环节。定期检查服务效果。\", \"xpath\": \"/html/body/div/ul\"}, {\"id\": \"o06\", \"kind\": \"table\", \"rows\": [[\"项目\", \"数量\"], [\"服务站\", \"3\"]], \"text\": \"项目数量服务站3\", \"xpath\": \"/html/body/div/table\"}, {\"id\": \"o07\", \"kind\": \"caption\", \"text\": \"图为社区服务站试点现场。\", \"xpath\": \"/html/body/div/div[1]\"}, {\"id\": \"o08\", \"kind\": \"paragraph\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\", \"xpath\": \"/html/body/div/div[2]\"}, {\"id\": \"o09\", \"kind\": \"paragraph\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\", \"xpath\": \"/html/body/div/p[5]\"}]"
+          }
+        ]
+      },
+      {
+        "id": "Q3",
+        "verdict": "unknown",
+        "reason": "两项列表、两列表格与图说完整且表格rows保持列关系。",
+        "source_evidence": [
+          {
+            "id": "s06",
+            "quote": "保留人工核实环节。定期检查服务效果。"
+          },
+          {
+            "id": "s07",
+            "quote": "项目数量服务站3"
+          },
+          {
+            "id": "s08",
+            "quote": "图为社区服务站试点现场。"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "o05",
+            "quote": "保留人工核实环节。定期检查服务效果。"
+          },
+          {
+            "id": "o06",
+            "quote": "项目数量服务站3"
+          },
+          {
+            "id": "o07",
+            "quote": "图为社区服务站试点现场。"
+          }
+        ]
+      },
+      {
+        "id": "Q4",
+        "verdict": "yes",
+        "reason": "独立署名已分为元数据，隐藏菜单和直接评论引导、APP推广未混入正文；分析引用仍保留。",
+        "source_evidence": [
+          {
+            "id": "s01",
+            "quote": "记者 张三"
+          },
+          {
+            "id": "s10",
+            "quote": "研究者指出，“来评论区说说”是一种常见互动引导语。"
+          },
+          {
+            "id": "s11",
+            "quote": "返回首页"
+          },
+          {
+            "id": "s12",
+            "quote": "对于这次试点，你怎么看？来评论区说说。"
+          },
+          {
+            "id": "s13",
+            "quote": "扫码下载本平台APP，领取优惠券。"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"id\": \"o01\", \"kind\": \"paragraph\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\", \"xpath\": \"/html/body/div/p[2]\"}, {\"id\": \"o02\", \"kind\": \"paragraph\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\", \"xpath\": \"/html/body/div/p[3]\"}, {\"id\": \"o03\", \"kind\": \"paragraph\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\", \"xpath\": \"/html/body/div/p[4]\"}, {\"id\": \"o04\", \"kind\": \"subheading\", \"text\": \"试点结果\", \"xpath\": \"/html/body/div/h2\"}, {\"id\": \"o05\", \"kind\": \"list\", \"text\": \"保留人工核实环节。定期检查服务效果。\", \"xpath\": \"/html/body/div/ul\"}, {\"id\": \"o06\", \"kind\": \"table\", \"rows\": [[\"项目\", \"数量\"], [\"服务站\", \"3\"]], \"text\": \"项目数量服务站3\", \"xpath\": \"/html/body/div/table\"}, {\"id\": \"o07\", \"kind\": \"caption\", \"text\": \"图为社区服务站试点现场。\", \"xpath\": \"/html/body/div/div[1]\"}, {\"id\": \"o08\", \"kind\": \"paragraph\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\", \"xpath\": \"/html/body/div/div[2]\"}, {\"id\": \"o09\", \"kind\": \"paragraph\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\", \"xpath\": \"/html/body/div/p[5]\"}]"
+          }
+        ]
+      },
+      {
+        "id": "Q5",
+        "verdict": "yes",
+        "reason": "各正文块按源顺序排列，无重复或杜撰；表格行列与源一致。",
+        "source_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"attributes\": {\"id\": \"byline\"}, \"html\": \"<p id=\\\"byline\\\">记者 张三</p>\\n\", \"id\": \"s01\", \"tag\": \"p\", \"text\": \"记者 张三\"}, {\"attributes\": {\"id\": \"intro\"}, \"html\": \"<p id=\\\"intro\\\">社区在三个服务站试用人工智能辅助咨询，详情见<a href=\\\"/report\\\">试点报告</a>。</p>\\n\", \"id\": \"s02\", \"tag\": \"p\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\"}, {\"attributes\": {\"id\": \"question\"}, \"html\": \"<p id=\\\"question\\\">中新社记者：您如何评价人工智能对社区服务的影响？</p>\\n\", \"id\": \"s03\", \"tag\": \"p\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\"}, {\"attributes\": {\"id\": \"answer\"}, \"html\": \"<p id=\\\"answer\\\">受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。</p>\\n\", \"id\": \"s04\", \"tag\": \"p\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\"}, {\"attributes\": {\"id\": \"heading\"}, \"html\": \"<h2 id=\\\"heading\\\">试点结果</h2>\\n\", \"id\": \"s05\", \"tag\": \"h2\", \"text\": \"试点结果\"}, {\"attributes\": {\"id\": \"list\"}, \"html\": \"<ul id=\\\"list\\\"><li>保留人工核实环节。</li><li>定期检查服务效果。</li></ul>\\n\", \"id\": \"s06\", \"tag\": \"ul\", \"text\": \"保留人工核实环节。定期检查服务效果。\"}, {\"attributes\": {\"id\": \"table\"}, \"html\": \"<table id=\\\"table\\\"><tr><th>项目</th><th>数量</th></tr><tr><td>服务站</td><td>3</td></tr></table>\\n\", \"id\": \"s07\", \"tag\": \"table\", \"text\": \"项目数量服务站3\"}, {\"attributes\": {\"class\": \"pictext\", \"id\": \"caption\"}, \"html\": \"<div id=\\\"caption\\\" class=\\\"pictext\\\">图为社区服务站试点现场。</div>\\n\", \"id\": \"s08\", \"tag\": \"div\", \"text\": \"图为社区服务站试点现场。\"}, {\"attributes\": {\"id\": \"folded\", \"style\": \"display:none\"}, \"html\": \"<div id=\\\"folded\\\" style=\\\"display:none\\\">补充说明：试点数据尚未覆盖所有居民。</div>\\n\", \"id\": \"s09\", \"tag\": \"div\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\"}, {\"attributes\": {\"id\": \"analysis\"}, \"html\": \"<p id=\\\"analysis\\\">研究者指出，“来评论区说说”是一种常见互动引导语。</p>\\n\", \"id\": \"s10\", \"tag\": \"p\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\"}, {\"attributes\": {\"id\": \"menu\", \"style\": \"display:none\"}, \"html\": \"<div id=\\\"menu\\\" style=\\\"display:none\\\"><a href=\\\"/\\\">返回首页</a></div>\\n\", \"id\": \"s11\", \"tag\": \"div\", \"text\": \"返回首页\"}, {\"attributes\": {\"id\": \"cta\"}, \"html\": \"<p id=\\\"cta\\\">对于这次试点，你怎么看？来评论区说说。</p>\\n\", \"id\": \"s12\", \"tag\": \"p\", \"text\": \"对于这次试点，你怎么看？来评论区说说。\"}, {\"attributes\": {\"id\": \"promotion\"}, \"html\": \"<div id=\\\"promotion\\\">扫码下载本平台APP，领取优惠券。</div>\\n\", \"id\": \"s13\", \"tag\": \"div\", \"text\": \"扫码下载本平台APP，领取优惠券。\"}]"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"id\": \"o01\", \"kind\": \"paragraph\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\", \"xpath\": \"/html/body/div/p[2]\"}, {\"id\": \"o02\", \"kind\": \"paragraph\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\", \"xpath\": \"/html/body/div/p[3]\"}, {\"id\": \"o03\", \"kind\": \"paragraph\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\", \"xpath\": \"/html/body/div/p[4]\"}, {\"id\": \"o04\", \"kind\": \"subheading\", \"text\": \"试点结果\", \"xpath\": \"/html/body/div/h2\"}, {\"id\": \"o05\", \"kind\": \"list\", \"text\": \"保留人工核实环节。定期检查服务效果。\", \"xpath\": \"/html/body/div/ul\"}, {\"id\": \"o06\", \"kind\": \"table\", \"rows\": [[\"项目\", \"数量\"], [\"服务站\", \"3\"]], \"text\": \"项目数量服务站3\", \"xpath\": \"/html/body/div/table\"}, {\"id\": \"o07\", \"kind\": \"caption\", \"text\": \"图为社区服务站试点现场。\", \"xpath\": \"/html/body/div/div[1]\"}, {\"id\": \"o08\", \"kind\": \"paragraph\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\", \"xpath\": \"/html/body/div/div[2]\"}, {\"id\": \"o09\", \"kind\": \"paragraph\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\", \"xpath\": \"/html/body/div/p[5]\"}]"
+          }
+        ]
+      }
+    ],
+    "unscored_reason": "存在unknown；不把未知当否，也不缩小分母。"
+  },
+  "invalid_quote": {
+    "case_id": "item_04",
+    "response_valid": false,
+    "raw_score": null,
+    "score": null,
+    "reward_signal": null,
+    "adoption": "withheld",
+    "errors": [
+      "Q1: 证据引文与原记录不符"
+    ],
+    "answers": [
+      {
+        "id": "Q1",
+        "verdict": "yes",
+        "reason": "主标题相同。",
+        "source_evidence": [
+          {
+            "id": "title",
+            "quote": "FABRICATED QUOTE"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "title",
+            "quote": "访谈：社区如何使用人工智能"
+          }
+        ]
+      },
+      {
+        "id": "Q2",
+        "verdict": "yes",
+        "reason": "导语、采访问句、回答、小标题、折叠叙述和分析均保留。",
+        "source_evidence": [
+          {
+            "id": "s02",
+            "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+          },
+          {
+            "id": "s03",
+            "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+          },
+          {
+            "id": "s04",
+            "quote": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。"
+          },
+          {
+            "id": "s05",
+            "quote": "试点结果"
+          },
+          {
+            "id": "s09",
+            "quote": "补充说明：试点数据尚未覆盖所有居民。"
+          },
+          {
+            "id": "s10",
+            "quote": "研究者指出，“来评论区说说”是一种常见互动引导语。"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"id\": \"o01\", \"kind\": \"paragraph\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\", \"xpath\": \"/html/body/div/p[2]\"}, {\"id\": \"o02\", \"kind\": \"paragraph\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\", \"xpath\": \"/html/body/div/p[3]\"}, {\"id\": \"o03\", \"kind\": \"paragraph\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\", \"xpath\": \"/html/body/div/p[4]\"}, {\"id\": \"o04\", \"kind\": \"subheading\", \"text\": \"试点结果\", \"xpath\": \"/html/body/div/h2\"}, {\"id\": \"o05\", \"kind\": \"list\", \"text\": \"保留人工核实环节。定期检查服务效果。\", \"xpath\": \"/html/body/div/ul\"}, {\"id\": \"o06\", \"kind\": \"table\", \"rows\": [[\"项目\", \"数量\"], [\"服务站\", \"3\"]], \"text\": \"项目数量服务站3\", \"xpath\": \"/html/body/div/table\"}, {\"id\": \"o07\", \"kind\": \"caption\", \"text\": \"图为社区服务站试点现场。\", \"xpath\": \"/html/body/div/div[1]\"}, {\"id\": \"o08\", \"kind\": \"paragraph\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\", \"xpath\": \"/html/body/div/div[2]\"}, {\"id\": \"o09\", \"kind\": \"paragraph\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\", \"xpath\": \"/html/body/div/p[5]\"}]"
+          }
+        ]
+      },
+      {
+        "id": "Q3",
+        "verdict": "yes",
+        "reason": "两项列表、两列表格与图说完整且表格rows保持列关系。",
+        "source_evidence": [
+          {
+            "id": "s06",
+            "quote": "保留人工核实环节。定期检查服务效果。"
+          },
+          {
+            "id": "s07",
+            "quote": "项目数量服务站3"
+          },
+          {
+            "id": "s08",
+            "quote": "图为社区服务站试点现场。"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "o05",
+            "quote": "保留人工核实环节。定期检查服务效果。"
+          },
+          {
+            "id": "o06",
+            "quote": "项目数量服务站3"
+          },
+          {
+            "id": "o07",
+            "quote": "图为社区服务站试点现场。"
+          }
+        ]
+      },
+      {
+        "id": "Q4",
+        "verdict": "yes",
+        "reason": "独立署名已分为元数据，隐藏菜单和直接评论引导、APP推广未混入正文；分析引用仍保留。",
+        "source_evidence": [
+          {
+            "id": "s01",
+            "quote": "记者 张三"
+          },
+          {
+            "id": "s10",
+            "quote": "研究者指出，“来评论区说说”是一种常见互动引导语。"
+          },
+          {
+            "id": "s11",
+            "quote": "返回首页"
+          },
+          {
+            "id": "s12",
+            "quote": "对于这次试点，你怎么看？来评论区说说。"
+          },
+          {
+            "id": "s13",
+            "quote": "扫码下载本平台APP，领取优惠券。"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"id\": \"o01\", \"kind\": \"paragraph\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\", \"xpath\": \"/html/body/div/p[2]\"}, {\"id\": \"o02\", \"kind\": \"paragraph\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\", \"xpath\": \"/html/body/div/p[3]\"}, {\"id\": \"o03\", \"kind\": \"paragraph\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\", \"xpath\": \"/html/body/div/p[4]\"}, {\"id\": \"o04\", \"kind\": \"subheading\", \"text\": \"试点结果\", \"xpath\": \"/html/body/div/h2\"}, {\"id\": \"o05\", \"kind\": \"list\", \"text\": \"保留人工核实环节。定期检查服务效果。\", \"xpath\": \"/html/body/div/ul\"}, {\"id\": \"o06\", \"kind\": \"table\", \"rows\": [[\"项目\", \"数量\"], [\"服务站\", \"3\"]], \"text\": \"项目数量服务站3\", \"xpath\": \"/html/body/div/table\"}, {\"id\": \"o07\", \"kind\": \"caption\", \"text\": \"图为社区服务站试点现场。\", \"xpath\": \"/html/body/div/div[1]\"}, {\"id\": \"o08\", \"kind\": \"paragraph\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\", \"xpath\": \"/html/body/div/div[2]\"}, {\"id\": \"o09\", \"kind\": \"paragraph\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\", \"xpath\": \"/html/body/div/p[5]\"}]"
+          }
+        ]
+      },
+      {
+        "id": "Q5",
+        "verdict": "yes",
+        "reason": "各正文块按源顺序排列，无重复或杜撰；表格行列与源一致。",
+        "source_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"attributes\": {\"id\": \"byline\"}, \"html\": \"<p id=\\\"byline\\\">记者 张三</p>\\n\", \"id\": \"s01\", \"tag\": \"p\", \"text\": \"记者 张三\"}, {\"attributes\": {\"id\": \"intro\"}, \"html\": \"<p id=\\\"intro\\\">社区在三个服务站试用人工智能辅助咨询，详情见<a href=\\\"/report\\\">试点报告</a>。</p>\\n\", \"id\": \"s02\", \"tag\": \"p\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\"}, {\"attributes\": {\"id\": \"question\"}, \"html\": \"<p id=\\\"question\\\">中新社记者：您如何评价人工智能对社区服务的影响？</p>\\n\", \"id\": \"s03\", \"tag\": \"p\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\"}, {\"attributes\": {\"id\": \"answer\"}, \"html\": \"<p id=\\\"answer\\\">受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。</p>\\n\", \"id\": \"s04\", \"tag\": \"p\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\"}, {\"attributes\": {\"id\": \"heading\"}, \"html\": \"<h2 id=\\\"heading\\\">试点结果</h2>\\n\", \"id\": \"s05\", \"tag\": \"h2\", \"text\": \"试点结果\"}, {\"attributes\": {\"id\": \"list\"}, \"html\": \"<ul id=\\\"list\\\"><li>保留人工核实环节。</li><li>定期检查服务效果。</li></ul>\\n\", \"id\": \"s06\", \"tag\": \"ul\", \"text\": \"保留人工核实环节。定期检查服务效果。\"}, {\"attributes\": {\"id\": \"table\"}, \"html\": \"<table id=\\\"table\\\"><tr><th>项目</th><th>数量</th></tr><tr><td>服务站</td><td>3</td></tr></table>\\n\", \"id\": \"s07\", \"tag\": \"table\", \"text\": \"项目数量服务站3\"}, {\"attributes\": {\"class\": \"pictext\", \"id\": \"caption\"}, \"html\": \"<div id=\\\"caption\\\" class=\\\"pictext\\\">图为社区服务站试点现场。</div>\\n\", \"id\": \"s08\", \"tag\": \"div\", \"text\": \"图为社区服务站试点现场。\"}, {\"attributes\": {\"id\": \"folded\", \"style\": \"display:none\"}, \"html\": \"<div id=\\\"folded\\\" style=\\\"display:none\\\">补充说明：试点数据尚未覆盖所有居民。</div>\\n\", \"id\": \"s09\", \"tag\": \"div\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\"}, {\"attributes\": {\"id\": \"analysis\"}, \"html\": \"<p id=\\\"analysis\\\">研究者指出，“来评论区说说”是一种常见互动引导语。</p>\\n\", \"id\": \"s10\", \"tag\": \"p\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\"}, {\"attributes\": {\"id\": \"menu\", \"style\": \"display:none\"}, \"html\": \"<div id=\\\"menu\\\" style=\\\"display:none\\\"><a href=\\\"/\\\">返回首页</a></div>\\n\", \"id\": \"s11\", \"tag\": \"div\", \"text\": \"返回首页\"}, {\"attributes\": {\"id\": \"cta\"}, \"html\": \"<p id=\\\"cta\\\">对于这次试点，你怎么看？来评论区说说。</p>\\n\", \"id\": \"s12\", \"tag\": \"p\", \"text\": \"对于这次试点，你怎么看？来评论区说说。\"}, {\"attributes\": {\"id\": \"promotion\"}, \"html\": \"<div id=\\\"promotion\\\">扫码下载本平台APP，领取优惠券。</div>\\n\", \"id\": \"s13\", \"tag\": \"div\", \"text\": \"扫码下载本平台APP，领取优惠券。\"}]"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"id\": \"o01\", \"kind\": \"paragraph\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\", \"xpath\": \"/html/body/div/p[2]\"}, {\"id\": \"o02\", \"kind\": \"paragraph\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\", \"xpath\": \"/html/body/div/p[3]\"}, {\"id\": \"o03\", \"kind\": \"paragraph\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\", \"xpath\": \"/html/body/div/p[4]\"}, {\"id\": \"o04\", \"kind\": \"subheading\", \"text\": \"试点结果\", \"xpath\": \"/html/body/div/h2\"}, {\"id\": \"o05\", \"kind\": \"list\", \"text\": \"保留人工核实环节。定期检查服务效果。\", \"xpath\": \"/html/body/div/ul\"}, {\"id\": \"o06\", \"kind\": \"table\", \"rows\": [[\"项目\", \"数量\"], [\"服务站\", \"3\"]], \"text\": \"项目数量服务站3\", \"xpath\": \"/html/body/div/table\"}, {\"id\": \"o07\", \"kind\": \"caption\", \"text\": \"图为社区服务站试点现场。\", \"xpath\": \"/html/body/div/div[1]\"}, {\"id\": \"o08\", \"kind\": \"paragraph\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\", \"xpath\": \"/html/body/div/div[2]\"}, {\"id\": \"o09\", \"kind\": \"paragraph\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\", \"xpath\": \"/html/body/div/p[5]\"}]"
+          }
+        ]
+      }
+    ]
+  },
+  "execution_error": {
+    "case_id": "item_04",
+    "response_valid": false,
+    "raw_score": null,
+    "score": null,
+    "reward_signal": null,
+    "adoption": "withheld",
+    "errors": [
+      "执行未成功，不能给语义质量分"
+    ],
+    "answers": []
+  },
+  "stale_task": {
+    "case_id": "item_04",
+    "response_valid": false,
+    "raw_score": null,
+    "score": null,
+    "reward_signal": null,
+    "adoption": "withheld",
+    "errors": [
+      "返回对应的任务或案例不一致"
+    ],
+    "answers": []
+  },
+  "missing_question": {
+    "case_id": "item_04",
+    "response_valid": false,
+    "raw_score": null,
+    "score": null,
+    "reward_signal": null,
+    "adoption": "withheld",
+    "errors": [
+      "五题必须按协议齐全返回，不能重复、缺题或改变题目"
+    ],
+    "answers": []
+  },
+  "dishonest_all_yes": {
+    "case_id": "item_05",
+    "response_valid": true,
+    "raw_score": 5,
+    "score": 1.0,
+    "reward_signal": 1.0,
+    "adoption": "candidate_within_static_scope",
+    "errors": [],
+    "answers": [
+      {
+        "id": "Q1",
+        "verdict": "yes",
+        "reason": "主标题相同。",
+        "source_evidence": [
+          {
+            "id": "title",
+            "quote": "访谈：社区如何使用人工智能"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "title",
+            "quote": "访谈：社区如何使用人工智能"
+          }
+        ]
+      },
+      {
+        "id": "Q2",
+        "verdict": "yes",
+        "reason": "源的主要叙述均在候选中，末尾推广不等于漏叙述。",
+        "source_evidence": [
+          {
+            "id": "s02",
+            "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+          },
+          {
+            "id": "s03",
+            "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+          },
+          {
+            "id": "s04",
+            "quote": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。"
+          },
+          {
+            "id": "s09",
+            "quote": "补充说明：试点数据尚未覆盖所有居民。"
+          },
+          {
+            "id": "s10",
+            "quote": "研究者指出，“来评论区说说”是一种常见互动引导语。"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"id\": \"o01\", \"kind\": \"paragraph\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\", \"xpath\": \"/html/body/div/p[2]\"}, {\"id\": \"o02\", \"kind\": \"paragraph\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\", \"xpath\": \"/html/body/div/p[3]\"}, {\"id\": \"o03\", \"kind\": \"paragraph\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\", \"xpath\": \"/html/body/div/p[4]\"}, {\"id\": \"o04\", \"kind\": \"subheading\", \"text\": \"试点结果\", \"xpath\": \"/html/body/div/h2\"}, {\"id\": \"o05\", \"kind\": \"list\", \"text\": \"保留人工核实环节。定期检查服务效果。\", \"xpath\": \"/html/body/div/ul\"}, {\"id\": \"o06\", \"kind\": \"table\", \"rows\": [[\"项目\", \"数量\"], [\"服务站\", \"3\"]], \"text\": \"项目数量服务站3\", \"xpath\": \"/html/body/div/table\"}, {\"id\": \"o07\", \"kind\": \"caption\", \"text\": \"图为社区服务站试点现场。\", \"xpath\": \"/html/body/div/div[1]\"}, {\"id\": \"o08\", \"kind\": \"paragraph\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\", \"xpath\": \"/html/body/div/div[2]\"}, {\"id\": \"o09\", \"kind\": \"paragraph\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\", \"xpath\": \"/html/body/div/p[5]\"}, {\"id\": \"o10\", \"kind\": \"paragraph\", \"text\": \"扫码下载本平台APP，领取优惠券。\", \"xpath\": \"/html/body/div/div[4]\"}]"
+          }
+        ]
+      },
+      {
+        "id": "Q3",
+        "verdict": "yes",
+        "reason": "列表、表格和图说均在。",
+        "source_evidence": [
+          {
+            "id": "s06",
+            "quote": "保留人工核实环节。定期检查服务效果。"
+          },
+          {
+            "id": "s07",
+            "quote": "项目数量服务站3"
+          },
+          {
+            "id": "s08",
+            "quote": "图为社区服务站试点现场。"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "o05",
+            "quote": "保留人工核实环节。定期检查服务效果。"
+          },
+          {
+            "id": "o06",
+            "quote": "项目数量服务站3"
+          },
+          {
+            "id": "o07",
+            "quote": "图为社区服务站试点现场。"
+          }
+        ]
+      },
+      {
+        "id": "Q4",
+        "verdict": "yes",
+        "reason": "SIMULATED wrong judgment: promotion mistakenly accepted; quotes still exist.",
+        "source_evidence": [
+          {
+            "id": "s13",
+            "quote": "扫码下载本平台APP，领取优惠券。"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "o10",
+            "quote": "扫码下载本平台APP，领取优惠券。"
+          }
+        ]
+      },
+      {
+        "id": "Q5",
+        "verdict": "yes",
+        "reason": "推广文案确实来自源且位置在末尾，无杜撰和重复；污染由Q4主评。",
+        "source_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"attributes\": {\"id\": \"byline\"}, \"html\": \"<p id=\\\"byline\\\">记者 张三</p>\\n\", \"id\": \"s01\", \"tag\": \"p\", \"text\": \"记者 张三\"}, {\"attributes\": {\"id\": \"intro\"}, \"html\": \"<p id=\\\"intro\\\">社区在三个服务站试用人工智能辅助咨询，详情见<a href=\\\"/report\\\">试点报告</a>。</p>\\n\", \"id\": \"s02\", \"tag\": \"p\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\"}, {\"attributes\": {\"id\": \"question\"}, \"html\": \"<p id=\\\"question\\\">中新社记者：您如何评价人工智能对社区服务的影响？</p>\\n\", \"id\": \"s03\", \"tag\": \"p\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\"}, {\"attributes\": {\"id\": \"answer\"}, \"html\": \"<p id=\\\"answer\\\">受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。</p>\\n\", \"id\": \"s04\", \"tag\": \"p\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\"}, {\"attributes\": {\"id\": \"heading\"}, \"html\": \"<h2 id=\\\"heading\\\">试点结果</h2>\\n\", \"id\": \"s05\", \"tag\": \"h2\", \"text\": \"试点结果\"}, {\"attributes\": {\"id\": \"list\"}, \"html\": \"<ul id=\\\"list\\\"><li>保留人工核实环节。</li><li>定期检查服务效果。</li></ul>\\n\", \"id\": \"s06\", \"tag\": \"ul\", \"text\": \"保留人工核实环节。定期检查服务效果。\"}, {\"attributes\": {\"id\": \"table\"}, \"html\": \"<table id=\\\"table\\\"><tr><th>项目</th><th>数量</th></tr><tr><td>服务站</td><td>3</td></tr></table>\\n\", \"id\": \"s07\", \"tag\": \"table\", \"text\": \"项目数量服务站3\"}, {\"attributes\": {\"class\": \"pictext\", \"id\": \"caption\"}, \"html\": \"<div id=\\\"caption\\\" class=\\\"pictext\\\">图为社区服务站试点现场。</div>\\n\", \"id\": \"s08\", \"tag\": \"div\", \"text\": \"图为社区服务站试点现场。\"}, {\"attributes\": {\"id\": \"folded\", \"style\": \"display:none\"}, \"html\": \"<div id=\\\"folded\\\" style=\\\"display:none\\\">补充说明：试点数据尚未覆盖所有居民。</div>\\n\", \"id\": \"s09\", \"tag\": \"div\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\"}, {\"attributes\": {\"id\": \"analysis\"}, \"html\": \"<p id=\\\"analysis\\\">研究者指出，“来评论区说说”是一种常见互动引导语。</p>\\n\", \"id\": \"s10\", \"tag\": \"p\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\"}, {\"attributes\": {\"id\": \"menu\", \"style\": \"display:none\"}, \"html\": \"<div id=\\\"menu\\\" style=\\\"display:none\\\"><a href=\\\"/\\\">返回首页</a></div>\\n\", \"id\": \"s11\", \"tag\": \"div\", \"text\": \"返回首页\"}, {\"attributes\": {\"id\": \"cta\"}, \"html\": \"<p id=\\\"cta\\\">对于这次试点，你怎么看？来评论区说说。</p>\\n\", \"id\": \"s12\", \"tag\": \"p\", \"text\": \"对于这次试点，你怎么看？来评论区说说。\"}, {\"attributes\": {\"id\": \"promotion\"}, \"html\": \"<div id=\\\"promotion\\\">扫码下载本平台APP，领取优惠券。</div>\\n\", \"id\": \"s13\", \"tag\": \"div\", \"text\": \"扫码下载本平台APP，领取优惠券。\"}]"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"id\": \"o01\", \"kind\": \"paragraph\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\", \"xpath\": \"/html/body/div/p[2]\"}, {\"id\": \"o02\", \"kind\": \"paragraph\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\", \"xpath\": \"/html/body/div/p[3]\"}, {\"id\": \"o03\", \"kind\": \"paragraph\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\", \"xpath\": \"/html/body/div/p[4]\"}, {\"id\": \"o04\", \"kind\": \"subheading\", \"text\": \"试点结果\", \"xpath\": \"/html/body/div/h2\"}, {\"id\": \"o05\", \"kind\": \"list\", \"text\": \"保留人工核实环节。定期检查服务效果。\", \"xpath\": \"/html/body/div/ul\"}, {\"id\": \"o06\", \"kind\": \"table\", \"rows\": [[\"项目\", \"数量\"], [\"服务站\", \"3\"]], \"text\": \"项目数量服务站3\", \"xpath\": \"/html/body/div/table\"}, {\"id\": \"o07\", \"kind\": \"caption\", \"text\": \"图为社区服务站试点现场。\", \"xpath\": \"/html/body/div/div[1]\"}, {\"id\": \"o08\", \"kind\": \"paragraph\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\", \"xpath\": \"/html/body/div/div[2]\"}, {\"id\": \"o09\", \"kind\": \"paragraph\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\", \"xpath\": \"/html/body/div/p[5]\"}, {\"id\": \"o10\", \"kind\": \"paragraph\", \"text\": \"扫码下载本平台APP，领取优惠券。\", \"xpath\": \"/html/body/div/div[4]\"}]"
+          }
+        ]
+      }
+    ],
+    "critical_failed": []
+  },
+  "interpretation": "Unknown/invalid/execution failures are withheld. A semantically wrong but protocol-valid all-yes review still passes: numerical gates alone do not solve judge errors.",
+  "copy_entire_page_simulated_judge": {
+    "case_id": "item_04",
+    "response_valid": true,
+    "raw_score": 3,
+    "score": 0.8,
+    "reward_signal": 0.8,
+    "adoption": "below_threshold",
+    "errors": [],
+    "answers": [
+      {
+        "id": "Q1",
+        "verdict": "yes",
+        "reason": "主标题相同。",
+        "source_evidence": [
+          {
+            "id": "title",
+            "quote": "访谈：社区如何使用人工智能"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"id\": \"s01\", \"text\": \"记者 张三\"}, {\"id\": \"s02\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\"}, {\"id\": \"s03\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\"}, {\"id\": \"s04\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\"}, {\"id\": \"s05\", \"text\": \"试点结果\"}, {\"id\": \"s06\", \"text\": \"保留人工核实环节。定期检查服务效果。\"}, {\"id\": \"s07\", \"text\": \"项目数量服务站3\"}, {\"id\": \"s08\", \"text\": \"图为社区服务站试点现场。\"}, {\"id\": \"s09\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\"}, {\"id\": \"s10\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\"}, {\"id\": \"s11\", \"text\": \"返回首页\"}, {\"id\": \"s12\", \"text\": \"对于这次试点，你怎么看？来评论区说说。\"}, {\"id\": \"s13\", \"text\": \"扫码下载本平台APP，领取优惠券。\"}]"
+          }
+        ]
+      },
+      {
+        "id": "Q2",
+        "verdict": "yes",
+        "reason": "导语、采访问句、回答、小标题、折叠叙述和分析均保留。",
+        "source_evidence": [
+          {
+            "id": "s02",
+            "quote": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。"
+          },
+          {
+            "id": "s03",
+            "quote": "中新社记者：您如何评价人工智能对社区服务的影响？"
+          },
+          {
+            "id": "s04",
+            "quote": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。"
+          },
+          {
+            "id": "s05",
+            "quote": "试点结果"
+          },
+          {
+            "id": "s09",
+            "quote": "补充说明：试点数据尚未覆盖所有居民。"
+          },
+          {
+            "id": "s10",
+            "quote": "研究者指出，“来评论区说说”是一种常见互动引导语。"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"id\": \"s01\", \"text\": \"记者 张三\"}, {\"id\": \"s02\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\"}, {\"id\": \"s03\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\"}, {\"id\": \"s04\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\"}, {\"id\": \"s05\", \"text\": \"试点结果\"}, {\"id\": \"s06\", \"text\": \"保留人工核实环节。定期检查服务效果。\"}, {\"id\": \"s07\", \"text\": \"项目数量服务站3\"}, {\"id\": \"s08\", \"text\": \"图为社区服务站试点现场。\"}, {\"id\": \"s09\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\"}, {\"id\": \"s10\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\"}, {\"id\": \"s11\", \"text\": \"返回首页\"}, {\"id\": \"s12\", \"text\": \"对于这次试点，你怎么看？来评论区说说。\"}, {\"id\": \"s13\", \"text\": \"扫码下载本平台APP，领取优惠券。\"}]"
+          }
+        ]
+      },
+      {
+        "id": "Q3",
+        "verdict": "yes",
+        "reason": "两项列表、两列表格与图说完整且表格rows保持列关系。",
+        "source_evidence": [
+          {
+            "id": "s06",
+            "quote": "保留人工核实环节。定期检查服务效果。"
+          },
+          {
+            "id": "s07",
+            "quote": "项目数量服务站3"
+          },
+          {
+            "id": "s08",
+            "quote": "图为社区服务站试点现场。"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"id\": \"s01\", \"text\": \"记者 张三\"}, {\"id\": \"s02\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\"}, {\"id\": \"s03\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\"}, {\"id\": \"s04\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\"}, {\"id\": \"s05\", \"text\": \"试点结果\"}, {\"id\": \"s06\", \"text\": \"保留人工核实环节。定期检查服务效果。\"}, {\"id\": \"s07\", \"text\": \"项目数量服务站3\"}, {\"id\": \"s08\", \"text\": \"图为社区服务站试点现场。\"}, {\"id\": \"s09\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\"}, {\"id\": \"s10\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\"}, {\"id\": \"s11\", \"text\": \"返回首页\"}, {\"id\": \"s12\", \"text\": \"对于这次试点，你怎么看？来评论区说说。\"}, {\"id\": \"s13\", \"text\": \"扫码下载本平台APP，领取优惠券。\"}]"
+          }
+        ]
+      },
+      {
+        "id": "Q4",
+        "verdict": "no",
+        "reason": "SIMULATION: copying all source includes author, menu, CTA and promotion; more text is not better quality.",
+        "source_evidence": [
+          {
+            "id": "s01",
+            "quote": "记者 张三"
+          },
+          {
+            "id": "s10",
+            "quote": "研究者指出，“来评论区说说”是一种常见互动引导语。"
+          },
+          {
+            "id": "s11",
+            "quote": "返回首页"
+          },
+          {
+            "id": "s12",
+            "quote": "对于这次试点，你怎么看？来评论区说说。"
+          },
+          {
+            "id": "s13",
+            "quote": "扫码下载本平台APP，领取优惠券。"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"id\": \"s01\", \"text\": \"记者 张三\"}, {\"id\": \"s02\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\"}, {\"id\": \"s03\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\"}, {\"id\": \"s04\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\"}, {\"id\": \"s05\", \"text\": \"试点结果\"}, {\"id\": \"s06\", \"text\": \"保留人工核实环节。定期检查服务效果。\"}, {\"id\": \"s07\", \"text\": \"项目数量服务站3\"}, {\"id\": \"s08\", \"text\": \"图为社区服务站试点现场。\"}, {\"id\": \"s09\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\"}, {\"id\": \"s10\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\"}, {\"id\": \"s11\", \"text\": \"返回首页\"}, {\"id\": \"s12\", \"text\": \"对于这次试点，你怎么看？来评论区说说。\"}, {\"id\": \"s13\", \"text\": \"扫码下载本平台APP，领取优惠券。\"}]"
+          }
+        ]
+      },
+      {
+        "id": "Q5",
+        "verdict": "yes",
+        "reason": "各正文块按源顺序排列，无重复或杜撰；表格行列与源一致。",
+        "source_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"attributes\": {\"id\": \"byline\"}, \"html\": \"<p id=\\\"byline\\\">记者 张三</p>\\n\", \"id\": \"s01\", \"tag\": \"p\", \"text\": \"记者 张三\"}, {\"attributes\": {\"id\": \"intro\"}, \"html\": \"<p id=\\\"intro\\\">社区在三个服务站试用人工智能辅助咨询，详情见<a href=\\\"/report\\\">试点报告</a>。</p>\\n\", \"id\": \"s02\", \"tag\": \"p\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\"}, {\"attributes\": {\"id\": \"question\"}, \"html\": \"<p id=\\\"question\\\">中新社记者：您如何评价人工智能对社区服务的影响？</p>\\n\", \"id\": \"s03\", \"tag\": \"p\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\"}, {\"attributes\": {\"id\": \"answer\"}, \"html\": \"<p id=\\\"answer\\\">受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。</p>\\n\", \"id\": \"s04\", \"tag\": \"p\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\"}, {\"attributes\": {\"id\": \"heading\"}, \"html\": \"<h2 id=\\\"heading\\\">试点结果</h2>\\n\", \"id\": \"s05\", \"tag\": \"h2\", \"text\": \"试点结果\"}, {\"attributes\": {\"id\": \"list\"}, \"html\": \"<ul id=\\\"list\\\"><li>保留人工核实环节。</li><li>定期检查服务效果。</li></ul>\\n\", \"id\": \"s06\", \"tag\": \"ul\", \"text\": \"保留人工核实环节。定期检查服务效果。\"}, {\"attributes\": {\"id\": \"table\"}, \"html\": \"<table id=\\\"table\\\"><tr><th>项目</th><th>数量</th></tr><tr><td>服务站</td><td>3</td></tr></table>\\n\", \"id\": \"s07\", \"tag\": \"table\", \"text\": \"项目数量服务站3\"}, {\"attributes\": {\"class\": \"pictext\", \"id\": \"caption\"}, \"html\": \"<div id=\\\"caption\\\" class=\\\"pictext\\\">图为社区服务站试点现场。</div>\\n\", \"id\": \"s08\", \"tag\": \"div\", \"text\": \"图为社区服务站试点现场。\"}, {\"attributes\": {\"id\": \"folded\", \"style\": \"display:none\"}, \"html\": \"<div id=\\\"folded\\\" style=\\\"display:none\\\">补充说明：试点数据尚未覆盖所有居民。</div>\\n\", \"id\": \"s09\", \"tag\": \"div\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\"}, {\"attributes\": {\"id\": \"analysis\"}, \"html\": \"<p id=\\\"analysis\\\">研究者指出，“来评论区说说”是一种常见互动引导语。</p>\\n\", \"id\": \"s10\", \"tag\": \"p\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\"}, {\"attributes\": {\"id\": \"menu\", \"style\": \"display:none\"}, \"html\": \"<div id=\\\"menu\\\" style=\\\"display:none\\\"><a href=\\\"/\\\">返回首页</a></div>\\n\", \"id\": \"s11\", \"tag\": \"div\", \"text\": \"返回首页\"}, {\"attributes\": {\"id\": \"cta\"}, \"html\": \"<p id=\\\"cta\\\">对于这次试点，你怎么看？来评论区说说。</p>\\n\", \"id\": \"s12\", \"tag\": \"p\", \"text\": \"对于这次试点，你怎么看？来评论区说说。\"}, {\"attributes\": {\"id\": \"promotion\"}, \"html\": \"<div id=\\\"promotion\\\">扫码下载本平台APP，领取优惠券。</div>\\n\", \"id\": \"s13\", \"tag\": \"div\", \"text\": \"扫码下载本平台APP，领取优惠券。\"}]"
+          }
+        ],
+        "output_evidence": [
+          {
+            "id": "inventory",
+            "quote": "[{\"id\": \"title\", \"text\": \"访谈：社区如何使用人工智能\"}, {\"id\": \"s01\", \"text\": \"记者 张三\"}, {\"id\": \"s02\", \"text\": \"社区在三个服务站试用人工智能辅助咨询，详情见试点报告。\"}, {\"id\": \"s03\", \"text\": \"中新社记者：您如何评价人工智能对社区服务的影响？\"}, {\"id\": \"s04\", \"text\": \"受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。\"}, {\"id\": \"s05\", \"text\": \"试点结果\"}, {\"id\": \"s06\", \"text\": \"保留人工核实环节。定期检查服务效果。\"}, {\"id\": \"s07\", \"text\": \"项目数量服务站3\"}, {\"id\": \"s08\", \"text\": \"图为社区服务站试点现场。\"}, {\"id\": \"s09\", \"text\": \"补充说明：试点数据尚未覆盖所有居民。\"}, {\"id\": \"s10\", \"text\": \"研究者指出，“来评论区说说”是一种常见互动引导语。\"}, {\"id\": \"s11\", \"text\": \"返回首页\"}, {\"id\": \"s12\", \"text\": \"对于这次试点，你怎么看？来评论区说说。\"}, {\"id\": \"s13\", \"text\": \"扫码下载本平台APP，领取优惠券。\"}]"
+          }
+        ]
+      }
+    ],
+    "critical_failed": []
+  }
+}

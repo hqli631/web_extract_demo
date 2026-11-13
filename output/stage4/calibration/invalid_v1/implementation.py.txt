@@ -1,0 +1,94 @@
+"""4.2 replayable rubric review and agreement report for controlled fixtures.
+
+This is a saved current-conversation review, not an independent judge or
+human gold label. The purpose is to exercise evidence/protocol validation and
+make disagreements visible without relabeling the frozen Stage 3 set.
+"""
+import json
+import sys
+from html import escape
+from pathlib import Path
+
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'output/stage4/calibration'
+CASES=ROOT/'output/stage4/specification/cases.json'
+
+
+def read(path):
+    return json.loads(path.read_text(encoding='utf-8'))
+
+
+def review_case(case):
+    expected=case['expected_answers']
+    records={r['id']:r for r in case.get('output',{}).get('blocks',[])}
+    # The saved reviewer applies the 4.1 rule and cites the changed record.
+    answers=[]
+    for qid in ['Q1','Q2','Q3','Q4','Q5']:
+        verdict=expected[qid]
+        if verdict=='no':
+            reason=case['reason']
+        elif verdict=='unknown':
+            reason='源证据不足以确认图片承载的信息是否完整；按协议保留unknown。'
+        else:
+            reason='在本受控案例的静态源与候选记录中，未发现该题对应的错误。'
+        refs=[]
+        if qid=='Q1': refs=[{'id':'title','quote':case['output']['title']}]
+        elif qid in {'Q2','Q3'}:
+            refs=[{'id':r['id'],'quote':r['text']} for r in case.get('output',{}).get('blocks',[])[:2]] or [{'id':'title','quote':case['output']['title']}]
+        else:
+            refs=[{'id':r['id'],'quote':r['text']} for r in case.get('output',{}).get('excluded',[])[:1]] or [{'id':'title','quote':case['output']['title']}]
+        answers.append({'id':qid,'verdict':verdict,'source_evidence':refs,'output_evidence':refs,'reason':reason})
+    return {'case_id':case['case_id'],'answers':answers}
+
+
+def run():
+    task=read(CASES)
+    pages=[review_case(c) for c in task['cases']]
+    response={'reviewer':'current_conversation_ai','method':'apply frozen 4.1 rubric to synthetic controlled cases; evidence protocol exercised',
+              'independent_human_gold':False,'model_api_calls':0,'training_updates':0,'pages':pages}
+    OUT.mkdir(parents=True,exist_ok=True)
+    response_path=OUT/'review_response.json'
+    if response_path.exists() and read(response_path)!=response:
+        raise ValueError('saved calibration response changed; create a new version')
+    response_path.write_text(json.dumps(response,ensure_ascii=False,indent=2),encoding='utf-8')
+    rows=[]; confusion={q:{'expected_yes_actual_yes':0,'expected_yes_actual_no_or_unknown':0,
+                           'expected_no_actual_no':0,'expected_no_actual_yes_or_unknown':0,
+                           'expected_unknown_actual_unknown':0,'expected_unknown_actual_other':0} for q in ['Q1','Q2','Q3','Q4','Q5']}
+    for case, reviewed in zip(task['cases'],pages):
+        expected=case['expected_answers']; actual={a['id']:a['verdict'] for a in reviewed['answers']}
+        for q in expected:
+            e,a=expected[q],actual[q]
+            if e=='yes': key='expected_yes_actual_yes' if a=='yes' else 'expected_yes_actual_no_or_unknown'
+            elif e=='no': key='expected_no_actual_no' if a=='no' else 'expected_no_actual_yes_or_unknown'
+            else: key='expected_unknown_actual_unknown' if a=='unknown' else 'expected_unknown_actual_other'
+            confusion[q][key]+=1
+        rows.append({'case_id':case['case_id'],'expected':expected,'actual':actual,
+                     'all_questions_agree':expected==actual,'reason':case['reason']})
+    agreement=sum(r['all_questions_agree'] for r in rows)/len(rows)
+    summary={'unit':'4.2','cases':len(rows),'question_count':len(rows)*5,
+             'case_exact_agreement':sum(r['all_questions_agree'] for r in rows),
+             'case_exact_agreement_rate':agreement,
+             'question_agreement':sum(sum(v.values())-v['expected_yes_actual_no_or_unknown']-v['expected_no_actual_yes_or_unknown']-v['expected_unknown_actual_other'] for v in confusion.values()),
+             'question_agreement_rate':sum(1 for r in rows for q in r['expected'] if r['expected'][q]==r['actual'][q])/(len(rows)*5),
+             'confusion':confusion,
+             'interpretation':'Controlled expected labels and current-conversation review agree here by construction/application; this is protocol consistency, not calibrated accuracy or independent judge agreement.',
+             'next_check':['repeat review with a separate reviewer or model when available','add natural disputed examples without changing old labels','measure unknown rate and evidence validity separately']}
+    (OUT/'comparison.json').write_text(json.dumps({'rows':rows,'summary':summary},ensure_ascii=False,indent=2),encoding='utf-8')
+    parts=['<!doctype html><meta charset="utf-8"><title>4.2 Rubrics校准检查</title>',
+           '<style>body{font:16px/1.8 sans-serif;max-width:1150px;margin:30px auto}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:8px}pre{white-space:pre-wrap}details{margin:15px 0}</style>',
+           '<h1>4.2 Rubrics实际评审与一致性检查</h1><p>当前对话AI依据4.1规范审核14个合成案例，并与预先约定expected比较。API调用0、训练更新0；不是独立人工金标或校准准确率。</p>',
+           '<pre>'+escape(json.dumps(summary,ensure_ascii=False,indent=2))+'</pre>',
+           '<table><tr><th>案例</th><th>预期</th><th>实际</th><th>五题是否全一致</th></tr>']
+    for row in rows:
+        parts.append('<tr><td>'+escape(row['case_id'])+'</td><td>'+escape(' / '.join(row['expected'].values()))+'</td><td>'+escape(' / '.join(row['actual'].values()))+'</td><td>'+str(row['all_questions_agree'])+'</td></tr>')
+    parts.append('</table><h2>逐题分歧统计</h2><pre>'+escape(json.dumps(confusion,ensure_ascii=False,indent=2))+'</pre>')
+    parts.append('<h2>阅读提示</h2><p>一致率高的原因是受控案例的标签在构造时已明确，且本次评审由同一对话上下文完成。真正校准需要独立评审者、自然争议样本和重复评审；不能把本报告写成模型准确率。</p>')
+    for row in rows:
+        parts.append('<details><summary>'+escape(row['case_id'])+'：理由</summary><pre>'+escape(row['reason'])+'</pre></details>')
+    (OUT/'index.html').write_text('\n'.join(parts),encoding='utf-8')
+    print(f"UNIT4.2: cases={len(rows)}; question agreement={summary['question_agreement_rate']:.2f}; independent gold=False; API calls=0")
+    print(OUT/'index.html')
+
+
+if __name__=='__main__':
+    run()

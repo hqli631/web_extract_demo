@@ -1,0 +1,132 @@
+<!doctype html><meta charset="utf-8"><title>4.2 Rubrics校准检查</title>
+<style>body{font:16px/1.8 sans-serif;max-width:1150px;margin:30px auto}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:8px}pre{white-space:pre-wrap}details{margin:15px 0}</style>
+<h1>4.2 Rubrics实际评审与一致性检查</h1><p>当前对话AI依据4.1规范审核14个合成案例，并与预先约定expected比较。API调用0、训练更新0；不是独立人工金标或校准准确率。</p>
+<pre>{
+  &quot;unit&quot;: &quot;4.2&quot;,
+  &quot;cases&quot;: 14,
+  &quot;question_count&quot;: 70,
+  &quot;case_exact_agreement&quot;: 14,
+  &quot;case_exact_agreement_rate&quot;: 1.0,
+  &quot;question_agreement&quot;: 70,
+  &quot;question_agreement_rate&quot;: 1.0,
+  &quot;confusion&quot;: {
+    &quot;Q1&quot;: {
+      &quot;expected_yes_actual_yes&quot;: 13,
+      &quot;expected_yes_actual_no_or_unknown&quot;: 0,
+      &quot;expected_no_actual_no&quot;: 1,
+      &quot;expected_no_actual_yes_or_unknown&quot;: 0,
+      &quot;expected_unknown_actual_unknown&quot;: 0,
+      &quot;expected_unknown_actual_other&quot;: 0
+    },
+    &quot;Q2&quot;: {
+      &quot;expected_yes_actual_yes&quot;: 11,
+      &quot;expected_yes_actual_no_or_unknown&quot;: 0,
+      &quot;expected_no_actual_no&quot;: 2,
+      &quot;expected_no_actual_yes_or_unknown&quot;: 0,
+      &quot;expected_unknown_actual_unknown&quot;: 1,
+      &quot;expected_unknown_actual_other&quot;: 0
+    },
+    &quot;Q3&quot;: {
+      &quot;expected_yes_actual_yes&quot;: 10,
+      &quot;expected_yes_actual_no_or_unknown&quot;: 0,
+      &quot;expected_no_actual_no&quot;: 3,
+      &quot;expected_no_actual_yes_or_unknown&quot;: 0,
+      &quot;expected_unknown_actual_unknown&quot;: 1,
+      &quot;expected_unknown_actual_other&quot;: 0
+    },
+    &quot;Q4&quot;: {
+      &quot;expected_yes_actual_yes&quot;: 10,
+      &quot;expected_yes_actual_no_or_unknown&quot;: 0,
+      &quot;expected_no_actual_no&quot;: 4,
+      &quot;expected_no_actual_yes_or_unknown&quot;: 0,
+      &quot;expected_unknown_actual_unknown&quot;: 0,
+      &quot;expected_unknown_actual_other&quot;: 0
+    },
+    &quot;Q5&quot;: {
+      &quot;expected_yes_actual_yes&quot;: 12,
+      &quot;expected_yes_actual_no_or_unknown&quot;: 0,
+      &quot;expected_no_actual_no&quot;: 2,
+      &quot;expected_no_actual_yes_or_unknown&quot;: 0,
+      &quot;expected_unknown_actual_unknown&quot;: 0,
+      &quot;expected_unknown_actual_other&quot;: 0
+    }
+  },
+  &quot;interpretation&quot;: &quot;Controlled expected labels and current-conversation review agree here by construction/application; this is protocol consistency, not calibrated accuracy or independent judge agreement.&quot;,
+  &quot;next_check&quot;: [
+    &quot;repeat review with a separate reviewer or model when available&quot;,
+    &quot;add natural disputed examples without changing old labels&quot;,
+    &quot;measure unknown rate and evidence validity separately&quot;
+  ]
+}</pre>
+<table><tr><th>案例</th><th>预期</th><th>实际</th><th>五题是否全一致</th></tr>
+<tr><td>correct</td><td>yes / yes / yes / yes / yes</td><td>yes / yes / yes / yes / yes</td><td>True</td></tr>
+<tr><td>missing_paragraph</td><td>yes / no / yes / yes / yes</td><td>yes / no / yes / yes / yes</td><td>True</td></tr>
+<tr><td>missing_table</td><td>yes / yes / no / yes / yes</td><td>yes / yes / no / yes / yes</td><td>True</td></tr>
+<tr><td>missing_list</td><td>yes / yes / no / yes / yes</td><td>yes / yes / no / yes / yes</td><td>True</td></tr>
+<tr><td>missing_caption</td><td>yes / yes / no / yes / yes</td><td>yes / yes / no / yes / yes</td><td>True</td></tr>
+<tr><td>missing_folded</td><td>yes / no / yes / yes / yes</td><td>yes / no / yes / yes / yes</td><td>True</td></tr>
+<tr><td>promotion_in_body</td><td>yes / yes / yes / no / yes</td><td>yes / yes / yes / no / yes</td><td>True</td></tr>
+<tr><td>byline_in_body</td><td>yes / yes / yes / no / yes</td><td>yes / yes / yes / no / yes</td><td>True</td></tr>
+<tr><td>cta_in_body</td><td>yes / yes / yes / no / yes</td><td>yes / yes / yes / no / yes</td><td>True</td></tr>
+<tr><td>hidden_menu_in_body</td><td>yes / yes / yes / no / yes</td><td>yes / yes / yes / no / yes</td><td>True</td></tr>
+<tr><td>duplicate</td><td>yes / yes / yes / yes / no</td><td>yes / yes / yes / yes / no</td><td>True</td></tr>
+<tr><td>reordered</td><td>yes / yes / yes / yes / no</td><td>yes / yes / yes / yes / no</td><td>True</td></tr>
+<tr><td>wrong_title</td><td>no / yes / yes / yes / yes</td><td>no / yes / yes / yes / yes</td><td>True</td></tr>
+<tr><td>image_unknown</td><td>yes / unknown / unknown / yes / yes</td><td>yes / unknown / unknown / yes / yes</td><td>True</td></tr>
+</table><h2>逐题分歧统计</h2><pre>{
+  &quot;Q1&quot;: {
+    &quot;expected_yes_actual_yes&quot;: 13,
+    &quot;expected_yes_actual_no_or_unknown&quot;: 0,
+    &quot;expected_no_actual_no&quot;: 1,
+    &quot;expected_no_actual_yes_or_unknown&quot;: 0,
+    &quot;expected_unknown_actual_unknown&quot;: 0,
+    &quot;expected_unknown_actual_other&quot;: 0
+  },
+  &quot;Q2&quot;: {
+    &quot;expected_yes_actual_yes&quot;: 11,
+    &quot;expected_yes_actual_no_or_unknown&quot;: 0,
+    &quot;expected_no_actual_no&quot;: 2,
+    &quot;expected_no_actual_yes_or_unknown&quot;: 0,
+    &quot;expected_unknown_actual_unknown&quot;: 1,
+    &quot;expected_unknown_actual_other&quot;: 0
+  },
+  &quot;Q3&quot;: {
+    &quot;expected_yes_actual_yes&quot;: 10,
+    &quot;expected_yes_actual_no_or_unknown&quot;: 0,
+    &quot;expected_no_actual_no&quot;: 3,
+    &quot;expected_no_actual_yes_or_unknown&quot;: 0,
+    &quot;expected_unknown_actual_unknown&quot;: 1,
+    &quot;expected_unknown_actual_other&quot;: 0
+  },
+  &quot;Q4&quot;: {
+    &quot;expected_yes_actual_yes&quot;: 10,
+    &quot;expected_yes_actual_no_or_unknown&quot;: 0,
+    &quot;expected_no_actual_no&quot;: 4,
+    &quot;expected_no_actual_yes_or_unknown&quot;: 0,
+    &quot;expected_unknown_actual_unknown&quot;: 0,
+    &quot;expected_unknown_actual_other&quot;: 0
+  },
+  &quot;Q5&quot;: {
+    &quot;expected_yes_actual_yes&quot;: 12,
+    &quot;expected_yes_actual_no_or_unknown&quot;: 0,
+    &quot;expected_no_actual_no&quot;: 2,
+    &quot;expected_no_actual_yes_or_unknown&quot;: 0,
+    &quot;expected_unknown_actual_unknown&quot;: 0,
+    &quot;expected_unknown_actual_other&quot;: 0
+  }
+}</pre>
+<h2>阅读提示</h2><p>一致率高的原因是受控案例的标签在构造时已明确，且本次评审由同一对话上下文完成。真正校准需要独立评审者、自然争议样本和重复评审；不能把本报告写成模型准确率。</p>
+<details><summary>correct：理由</summary><pre>访谈问句、折叠补充、图说表格保留；独立署名、菜单、互动和推广分流。analysis引用互动文案作分析，仍是正文。</pre></details>
+<details><summary>missing_paragraph：理由</summary><pre>缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/p[4]</pre></details>
+<details><summary>missing_table：理由</summary><pre>缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/table</pre></details>
+<details><summary>missing_list：理由</summary><pre>缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/ul</pre></details>
+<details><summary>missing_caption：理由</summary><pre>缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/div[1]</pre></details>
+<details><summary>missing_folded：理由</summary><pre>缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/div[2]</pre></details>
+<details><summary>promotion_in_body：理由</summary><pre>记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/div[4]</pre></details>
+<details><summary>byline_in_body：理由</summary><pre>记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/p[1]</pre></details>
+<details><summary>cta_in_body：理由</summary><pre>记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/p[6]</pre></details>
+<details><summary>hidden_menu_in_body：理由</summary><pre>记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/div[3]</pre></details>
+<details><summary>duplicate：理由</summary><pre>同一回答出现两次；篇幅增加不代表质量提高。</pre></details>
+<details><summary>reordered：理由</summary><pre>原文均在但回答被放到问题前；完整性与顺序分别判断。</pre></details>
+<details><summary>wrong_title：理由</summary><pre>正文未变但主标题错误，由Q1主评。</pre></details>
+<details><summary>image_unknown：理由</summary><pre>只有导语，图像可能承载主要信息；未提供图片像素，不虚构OCR也不把未知填yes或no。</pre></details>

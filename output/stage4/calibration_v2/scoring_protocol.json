@@ -1,0 +1,7 @@
+{
+  "task_sha256": "849f4e0084564f092e2281672ddf53c77eef31e0f1e4a193ecaae1f9d713b9b8",
+  "scorer_sha256": "046949e12f4130a31cff6771256a97631339f6dfad75c2b03e0c3084cef2a51a",
+  "rubric_sha256": "3443e73c8322842800d900105cc5d05c7dd1532f48319fa6c2d8738311e9eba9",
+  "gate_implementation_sha256": "83cdb1e6e001715b50443e0a76c40f8d92a39df3d61e2c238f8f009f94cfddf6",
+  "meaning": "Frozen teaching protocol; not independently calibrated reward."
+}

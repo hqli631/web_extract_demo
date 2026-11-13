@@ -1,0 +1,16 @@
+{
+  "item_01": "cta_in_body",
+  "item_02": "missing_table",
+  "item_03": "wrong_title",
+  "item_04": "correct",
+  "item_05": "promotion_in_body",
+  "item_06": "image_unknown",
+  "item_07": "missing_caption",
+  "item_08": "duplicate",
+  "item_09": "missing_paragraph",
+  "item_10": "hidden_menu_in_body",
+  "item_11": "missing_folded",
+  "item_12": "reordered",
+  "item_13": "missing_list",
+  "item_14": "byline_in_body"
+}

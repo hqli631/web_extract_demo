@@ -11,7 +11,7 @@
 |第一阶段|读懂DOM，用XPath抽取、分类、修正并回归|约定范围完成：6篇已知样例、2类模板|[第一阶段总结](STAGE1_SUMMARY.md)|[具体知识与操作](PROJECT1_KNOWLEDGE_REVIEW.md)|
 |第二阶段|任务协议、候选验证、Rubrics评审、反馈、复用与计分|四课及有限计分补齐完成；保留漏表失败和能力边界|[第二阶段总结](STAGE2_SUMMARY.md)|[四课回顾](STAGE2_COMPLETION.md)、[计分操作](RUBRICS_SCORING_GUIDE.md)|
 |第三阶段|布局簇、少样本代码生成、CPU执行、反馈修复和成本|固定四单元工程完成；12封存页6通过/3质量失败/2未知/1契约错误；个人理解待解释|[第三阶段总结](STAGE3_SUMMARY.md)|[固定计划](ROLE_ALIGNED_LEARNING_PLAN.md)、[3.1](STAGE3_UNIT1.md)、[3.2](STAGE3_UNIT2.md)、[3.3](STAGE3_UNIT3.md)、[3.4](STAGE3_UNIT4.md)|
-|第四阶段|Rubrics校准、批量评审与reward风险|4.1规范和14个受控错例准备完成，用户待运行解释；4.2/4.3未开始|完成时单独归档|[4.1操作说明](STAGE4_UNIT1.md)，按固定三单元推进|
+|第四阶段|Rubrics校准、批量评审与reward风险|4.1完成；旧4.2标签复制结论作废，新版保存对话AI判断；4.3门槛检查完成；独立复核/自然页校准待做|完成时单独归档|[4.1](STAGE4_UNIT1.md)、[4.2纠正](STAGE4_UNIT2.md)、[4.3操作](STAGE4_UNIT3.md)，第四阶段尚未完成|
 |第五阶段|Agentic RL/GRPO与RSI闭环|计划已定，训练依资源条件|完成时单独归档|同上，固定三单元|
 
 工程完成不等于个人已掌握。用户通过亲手运行、观察证据、解释结果确认学习情况；项目不以增加文件、课数或测试数量代表学习进度。

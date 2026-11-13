@@ -1,0 +1,327 @@
+{
+  "rows": [
+    {
+      "case_id": "correct",
+      "expected": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "actual": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "all_questions_agree": true,
+      "reason": "访谈问句、折叠补充、图说表格保留；独立署名、菜单、互动和推广分流。analysis引用互动文案作分析，仍是正文。"
+    },
+    {
+      "case_id": "missing_paragraph",
+      "expected": {
+        "Q1": "yes",
+        "Q2": "no",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "actual": {
+        "Q1": "yes",
+        "Q2": "no",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "all_questions_agree": true,
+      "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/p[4]"
+    },
+    {
+      "case_id": "missing_table",
+      "expected": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "no",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "actual": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "no",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "all_questions_agree": true,
+      "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/table"
+    },
+    {
+      "case_id": "missing_list",
+      "expected": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "no",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "actual": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "no",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "all_questions_agree": true,
+      "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/ul"
+    },
+    {
+      "case_id": "missing_caption",
+      "expected": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "no",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "actual": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "no",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "all_questions_agree": true,
+      "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/div[1]"
+    },
+    {
+      "case_id": "missing_folded",
+      "expected": {
+        "Q1": "yes",
+        "Q2": "no",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "actual": {
+        "Q1": "yes",
+        "Q2": "no",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "all_questions_agree": true,
+      "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/div[2]"
+    },
+    {
+      "case_id": "promotion_in_body",
+      "expected": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "no",
+        "Q5": "yes"
+      },
+      "actual": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "no",
+        "Q5": "yes"
+      },
+      "all_questions_agree": true,
+      "reason": "记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/div[4]"
+    },
+    {
+      "case_id": "byline_in_body",
+      "expected": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "no",
+        "Q5": "yes"
+      },
+      "actual": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "no",
+        "Q5": "yes"
+      },
+      "all_questions_agree": true,
+      "reason": "记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/p[1]"
+    },
+    {
+      "case_id": "cta_in_body",
+      "expected": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "no",
+        "Q5": "yes"
+      },
+      "actual": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "no",
+        "Q5": "yes"
+      },
+      "all_questions_agree": true,
+      "reason": "记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/p[6]"
+    },
+    {
+      "case_id": "hidden_menu_in_body",
+      "expected": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "no",
+        "Q5": "yes"
+      },
+      "actual": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "no",
+        "Q5": "yes"
+      },
+      "all_questions_agree": true,
+      "reason": "记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/div[3]"
+    },
+    {
+      "case_id": "duplicate",
+      "expected": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "no"
+      },
+      "actual": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "no"
+      },
+      "all_questions_agree": true,
+      "reason": "同一回答出现两次；篇幅增加不代表质量提高。"
+    },
+    {
+      "case_id": "reordered",
+      "expected": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "no"
+      },
+      "actual": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "no"
+      },
+      "all_questions_agree": true,
+      "reason": "原文均在但回答被放到问题前；完整性与顺序分别判断。"
+    },
+    {
+      "case_id": "wrong_title",
+      "expected": {
+        "Q1": "no",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "actual": {
+        "Q1": "no",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "all_questions_agree": true,
+      "reason": "正文未变但主标题错误，由Q1主评。"
+    },
+    {
+      "case_id": "image_unknown",
+      "expected": {
+        "Q1": "yes",
+        "Q2": "unknown",
+        "Q3": "unknown",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "actual": {
+        "Q1": "yes",
+        "Q2": "unknown",
+        "Q3": "unknown",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "all_questions_agree": true,
+      "reason": "只有导语，图像可能承载主要信息；未提供图片像素，不虚构OCR也不把未知填yes或no。"
+    }
+  ],
+  "summary": {
+    "unit": "4.2",
+    "cases": 14,
+    "question_count": 70,
+    "case_exact_agreement": 14,
+    "case_exact_agreement_rate": 1.0,
+    "question_agreement": 70,
+    "question_agreement_rate": 1.0,
+    "confusion": {
+      "Q1": {
+        "expected_yes_actual_yes": 13,
+        "expected_yes_actual_no_or_unknown": 0,
+        "expected_no_actual_no": 1,
+        "expected_no_actual_yes_or_unknown": 0,
+        "expected_unknown_actual_unknown": 0,
+        "expected_unknown_actual_other": 0
+      },
+      "Q2": {
+        "expected_yes_actual_yes": 11,
+        "expected_yes_actual_no_or_unknown": 0,
+        "expected_no_actual_no": 2,
+        "expected_no_actual_yes_or_unknown": 0,
+        "expected_unknown_actual_unknown": 1,
+        "expected_unknown_actual_other": 0
+      },
+      "Q3": {
+        "expected_yes_actual_yes": 10,
+        "expected_yes_actual_no_or_unknown": 0,
+        "expected_no_actual_no": 3,
+        "expected_no_actual_yes_or_unknown": 0,
+        "expected_unknown_actual_unknown": 1,
+        "expected_unknown_actual_other": 0
+      },
+      "Q4": {
+        "expected_yes_actual_yes": 10,
+        "expected_yes_actual_no_or_unknown": 0,
+        "expected_no_actual_no": 4,
+        "expected_no_actual_yes_or_unknown": 0,
+        "expected_unknown_actual_unknown": 0,
+        "expected_unknown_actual_other": 0
+      },
+      "Q5": {
+        "expected_yes_actual_yes": 12,
+        "expected_yes_actual_no_or_unknown": 0,
+        "expected_no_actual_no": 2,
+        "expected_no_actual_yes_or_unknown": 0,
+        "expected_unknown_actual_unknown": 0,
+        "expected_unknown_actual_other": 0
+      }
+    },
+    "interpretation": "Controlled expected labels and current-conversation review agree here by construction/application; this is protocol consistency, not calibrated accuracy or independent judge agreement.",
+    "next_check": [
+      "repeat review with a separate reviewer or model when available",
+      "add natural disputed examples without changing old labels",
+      "measure unknown rate and evidence validity separately"
+    ]
+  }
+}
