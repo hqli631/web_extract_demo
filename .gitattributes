@@ -15,5 +15,8 @@ learning/run_cluster_generation.py -text
 output/stage4/specification/*.json -text
 output/stage4/calibration/*.json -text
 output/stage4/calibration_v2/*.json -text
+output/stage4/natural_review/*.json -text
+output/stage4/policy_v2/*.json -text
+learning/apply_body_policy.py -text
 learning/agent_io/score_body_quality.py -text
 learning/run_rubric_calibration.py -text

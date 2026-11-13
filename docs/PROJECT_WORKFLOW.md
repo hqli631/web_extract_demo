@@ -1,5 +1,9 @@
 # 当前协作约定
 
+最新2026-11-13：用户明确确认D1原标题元数据、D2图说先保信息和顺序再细化caption，原话及规范记录于config/body_policy_v2.json、output/stage4/policy_v2/confirmed_decisions.json。learning/apply_body_policy.py演示1条原标题转元数据、4结构图说改caption；正文+元数据文字和XPath守恒，保留顺序不变；旧v2/第三阶段分数及原快照不改。第四阶段归档docs/STAGE4_SUMMARY.md，有限工程完成，独立校准未完成，下一学习来自固定5.1。本轮连同自然页复核达到3b2c3aa后2/2项目修改，按约定同步，成功以Git回执为准；用户旧脚本/报告/预览不纳入提交。
+
+最新2026-11-13：3b2c3aa已成功推送。此轮完成四篇历史自然网页当前对话复核，入口learning/run_natural_review.py，报告output/stage4/natural_review/index.html，操作docs/STAGE4_NATURAL_REVIEW.md。保存完整静态文章源和候选、引用核验、历史对照，两页Q4失败/一页图片unknown/一页静态文字通过。旧v2与第三阶段分数不变。独立上下文任务仍收到空消息，没有评审输出，独立校准待完成；两个用户规范判断D1/D2待反馈，不伪填用户答案。此轮为3b2c3aa后1/2项目修改，未到常规同步轮次。用户旧脚本、报告与预览继续保留。
+
 2026-11-13纠正：旧4.2将预期标签复制成实际答案，1.00评审结论撤回，历史批次已作废保留。现已保存当前对话AI逐案判断，引用/哈希校验及4.3门槛实验通过；独立复核和自然页校准仍待完成，第四阶段未整体结束。运行learning/run_rubric_calibration.py，报告output/stage4/calibration_v2/index.html，操作见docs/STAGE4_UNIT3.md。 本轮连同上一轮4.2达到4f18157后2/2项目修改，按约定同步；成功以Git回执为准。保留用户原有脚本与报告修改，不纳入提交。
 
 

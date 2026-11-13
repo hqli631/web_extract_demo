@@ -1,0 +1,22 @@
+[
+  {
+    "id": "D1",
+    "case_id": "natural_01",
+    "quote": "原标题：“9月启动开门红，10月已进入考核期”：银行业2027年“开门红”没有统一的“开门”时间，首季战役正变成全年连轴",
+    "question": "在主标题已单列的任务中，这条“原标题”保留在正文，还是移入original_title元数据？请说明你的任务规范。",
+    "current_proposal": "separate_as_metadata_original_title",
+    "why": "Q4已有独立署名污染，旧no不变；该决策补齐下一版分类规范，不能直接静默重写旧分数。",
+    "user_status": "pending",
+    "user_answer": null
+  },
+  {
+    "id": "D2",
+    "case_id": "natural_01",
+    "quote": "华夏银行太原分行公众号截图",
+    "question": "这条图说文字已保留，但kind=paragraph。应说“图说漏提”，还是“信息保留、类型不够精确”？",
+    "current_proposal": "information_present_type_inexact",
+    "why": "当前Q3主评信息及关系保留，未要求图说kind绝对准确。若增加类型准确率，应版本化新增诊断，不能为此把旧Q3改no。",
+    "user_status": "pending",
+    "user_answer": null
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "policy_id": "body-policy-v2",
+  "policy_sha256": "85592a441e09f1ed1b3951e36a147e997334fb51156178dc6f563a56c8fb0867",
+  "origin": "explicit user reply to D1 and D2 in current conversation",
+  "decisions": [
+    {
+      "id": "D1",
+      "user_status": "confirmed",
+      "user_answer": "单列元数据，保留信息，同时让正文更纯净"
+    },
+    {
+      "id": "D2",
+      "user_status": "confirmed",
+      "user_answer": "应判断为图说信息已保留，但类型应细化为 caption，图说信息也有一定重要性，先保证图说文字不丢、顺序正确，再考虑分类"
+    }
+  ]
+}
