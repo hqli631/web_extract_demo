@@ -1,0 +1,62 @@
+{
+  "measured": {
+    "model_api_calls": 0,
+    "conversation_generation_repair_cost": null,
+    "conversation_audit_cost": null,
+    "reason": "No recorded chat bill/token accounting; zero API calls does not mean total cost zero",
+    "cpu_seconds_per_attempt": 0.003720238095238095,
+    "benchmark_cases": 12
+  },
+  "formula": "(G + N*c + J)/N",
+  "assumptions": {
+    "currency": "illustrative units, not a quote",
+    "G_generation_repair": 10,
+    "CPU_process_hour_price": 1,
+    "J_fixed_audit_total": 2,
+    "important": "Fixed J is assumed. If each page needs review at cost j, J=N*j; that term does not amortize away."
+  },
+  "scenarios": [
+    {
+      "pages": 12,
+      "generation_repair_cost": 10,
+      "cpu_seconds_per_page": 0.003720238095238095,
+      "cpu_price_per_hour": 1,
+      "audit_total_cost": 2,
+      "cpu_cost_per_page": 1.0333994708994708e-06,
+      "total_cost": 12.00001240079365,
+      "amortized_cost_per_page": 1.0000010333994709,
+      "formula": "(generation_repair_cost + n * cpu_cost_per_page + audit_total_cost) / n",
+      "status": "assumption-based scenario, not observed billing or measured GPU savings"
+    },
+    {
+      "pages": 1000,
+      "generation_repair_cost": 10,
+      "cpu_seconds_per_page": 0.003720238095238095,
+      "cpu_price_per_hour": 1,
+      "audit_total_cost": 2,
+      "cpu_cost_per_page": 1.0333994708994708e-06,
+      "total_cost": 12.001033399470899,
+      "amortized_cost_per_page": 0.012001033399470899,
+      "formula": "(generation_repair_cost + n * cpu_cost_per_page + audit_total_cost) / n",
+      "status": "assumption-based scenario, not observed billing or measured GPU savings"
+    },
+    {
+      "pages": 100000,
+      "generation_repair_cost": 10,
+      "cpu_seconds_per_page": 0.003720238095238095,
+      "cpu_price_per_hour": 1,
+      "audit_total_cost": 2,
+      "cpu_cost_per_page": 1.0333994708994708e-06,
+      "total_cost": 12.103339947089948,
+      "amortized_cost_per_page": 0.00012103339947089948,
+      "formula": "(generation_repair_cost + n * cpu_cost_per_page + audit_total_cost) / n",
+      "status": "assumption-based scenario, not observed billing or measured GPU savings"
+    }
+  ],
+  "limits": [
+    "No measured GPU/per-page model baseline or empirical savings multiple",
+    "Windows process CPU timer is coarse; batch totals preferable to per-page CPU timing",
+    "Small warm-memory single-worker batch, no trillion-page extrapolation",
+    "Exploratory 11-page benchmark retained as benchmark_success_subset.json; benchmark.json includes all 12 attempts. Returning a dict does not mean contract/quality pass."
+  ]
+}

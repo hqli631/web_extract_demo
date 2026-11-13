@@ -1,0 +1,175 @@
+{
+  "reviewer": "current_conversation_ai",
+  "scope": "full static article DOM and neighboring regions; frozen rubric; no independent human gold/API",
+  "pages": [
+    {
+      "file": "output/stage3/protocol/sina/test_02.html",
+      "source_sha256": "55a1a38a56895553dfe0104d386d43cacc6c1a313b48c6862cf13ca94a1b34d5",
+      "candidate_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "answers": {
+        "Q1": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/h1[@class='main-title'] 原文“协鑫能科联合宁德时代骐骥换电落地“风光换储充”示范站”与输出标题一致。"
+        },
+        "Q2": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1..5]共5段叙述均完整保留：首段“11月12日消息，由宁德时代旗下骐骥换电…”至末段“…推动交通与能源产业融合发展。”。能源站参数和合作信息未漏。"
+        },
+        "Q3": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]完整清单：无table、li、figcaption、文本图说；只有5段叙述、尾部APP二维码和编辑。不存在需保留而遗漏的静态结构化信息。"
+        },
+        "Q4": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/p[6]“责任编辑：孙同怀”单列editor；div.appendQr_wrap“海量资讯、精准解读，尽在新浪财经APP”排除，未混入正文。合作和产品论述属于文章内容，不能因品牌名当广告删除。"
+        },
+        "Q5": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1..5]按源DOM顺序一一保留，只有空白规范化；股票关键词链接中的“宁德时代”“协鑫能科”文字仍在。未见重复、改写或新增。"
+        }
+      },
+      "notes": [
+        "已完整检查静态 artibody DOM、标题和周边组件；邻区为时间来源、分享、推荐、评论等，无遗漏的文章叙述。当前对话AI判断，非独立人工金标。",
+        "图片像素、视频与实时渲染不在本次静态文字任务的已验证范围；不据此宣称完整网页内容覆盖。"
+      ]
+    },
+    {
+      "file": "output/stage3/protocol/sina/test_03.html",
+      "source_sha256": "e1874e56506d3a62eba36d2472eb8520e5c318589ddd20f20f861d1546c37e97",
+      "candidate_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "answers": {
+        "Q1": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/h1[@class='main-title'] 原文“新云龙头Nebius发财报：预计2026年资本开支增加、业绩指引偏弱”与输出标题一致。"
+        },
+        "Q2": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1..15]全部15段叙述保留；从“周四，大型上市新型云厂商Nebius股价盘前下跌10%”至“Nebius披露，本季度完成57.5亿美元债务融资。”，每股亏损、营收和展望等源事实未缺。"
+        },
+        "Q3": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]完整清单中无table/li/文本图说；“每股亏损：每股亏损13美分”“营收：9.808亿美元，预期9.075亿美元”为p[3]/p[4]并已保留。行情图像像素不在任务范围，不能声称图像数据已抽取。"
+        },
+        "Q4": {
+          "answer": "no",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/div[1]/div/div[2]为div.ct_hqimg下的div.to_page，原文链接“查看最新行情”，它是行情跳转操作，不是新闻叙述，却成为输出首个paragraph。APP推广和编辑虽已分离，仍有这条导航污染。"
+        },
+        "Q5": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1..15]与已有行情链接均忠实引用源节点、源顺序未变，无重复或捏造。行情导航混入由Q4扣分，不能仅凭污染再判Q5失真。此项不评价报道现实事实真伪。"
+        }
+      },
+      "notes": [
+        "已完整检查静态 artibody DOM、标题和周边组件；邻区为时间来源、分享、推荐、评论等，无遗漏的文章叙述。当前对话AI判断，非独立人工金标。",
+        "图片像素、视频与实时渲染不在本次静态文字任务的已验证范围；不据此宣称完整网页内容覆盖。",
+        "受控折叠包装修复保留了未知文字包装，也可能扩大噪声覆盖；这条to_page导航是自然测试发现，不修改冻结候选。"
+      ]
+    },
+    {
+      "file": "output/stage3/protocol/sina/test_04.html",
+      "source_sha256": "9467e7047aafc1ab0d6d21e1402bfa8d24bc5df75aae9725b47b65b0e37930b2",
+      "candidate_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "answers": {
+        "Q1": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/h1[@class='main-title'] 原文“银行业2027年“开门红”没有统一的“开门”时间，首季战役正变成全年连轴”与输出标题一致。"
+        },
+        "Q2": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/p[2..28]完整保留原题说明、叙述和两处小标题：“‘散开’的时间表，淡化的名字”“沿用多年的时点规模，退居次要位置”；最后“比拼的就是每一天的经营是否扎实。”保留。正文叙述无漏段。"
+        },
+        "Q3": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/div[1..4]四条img_descr文本均在相同位置保留：“华夏银行太原分行公众号截图”“瑞丰银行公众号截图”“嘉兴银行网站截图”“桐乡农商银行微资讯公众号截图”；未见table/li。图说被标paragraph，是类型粗糙问题，但此次Q3按信息及关系保留判断为yes，不额外引入未冻结的类型评分。"
+        },
+        "Q4": {
+          "answer": "no",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1]整行独立署名“每经记者|刘嘉魁”仍在blocks中，应分流作者元数据。新格式使用竖线，未命中开发时的空白分隔署名规则。编辑和APP已排除，署名污染仍存在。"
+        },
+        "Q5": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1..28]及穿插的div[1..4]图说保持DOM顺序与原文；股票链接文字保留。未见杜撰、重复或事实改写；署名分类问题由Q4主评。"
+        }
+      },
+      "notes": [
+        "已完整检查静态 artibody DOM、标题和周边组件；邻区为时间来源、分享、推荐、评论等，无遗漏的文章叙述。当前对话AI判断，非独立人工金标。",
+        "图片像素、视频与实时渲染不在本次静态文字任务的已验证范围；不据此宣称完整网页内容覆盖。",
+        "小标题及图说多数标paragraph；信息和位置保留，结构类型精度属于后续明确规范的限制，不能测试后修改评价标准凑分。原标题说明保留为文内原题上下文，不据未冻结细则追加惩罚。"
+      ]
+    },
+    {
+      "file": "output/stage3/protocol/sina/test_05.html",
+      "source_sha256": "bbbceeca33cccd3bdad273f9c344f5dda773fdb49b4c5e2ffd22f8655b58f61e",
+      "candidate_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "answers": {
+        "Q1": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/h1[@class='main-title'] 原文“英伟达CEO黄仁勋或被罢免 苹果硬件负责人是候选人之一”与输出标题一致。"
+        },
+        "Q2": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1..8]共8段完整保留，包含p[5]小标题“风波持续发酵”。首段“据知情人士透露…”及末段“…为AI产业扩张提供资金支持。”均在，没有静态叙述遗漏。"
+        },
+        "Q3": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]完整清单无table/li/文本图说；开头img_wrapper的img alt为空，span.img_descr无文字，没有可核实的静态图说遗漏。p[5]小标题文字保留，虽然类型为paragraph。"
+        },
+        "Q4": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/p[9]“责任编辑：刘明亮”移入editor，div.appendQr_wrap的APP推广排除；8个正文块均为新闻叙述或小标题，无导航/推广混入。"
+        },
+        "Q5": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1..8]按序忠实保留，包括p[4]股票链接“苹果”“英特尔”。未见重复或新增；判断为抽取忠实，不验证新闻现实事实是否真实。"
+        }
+      },
+      "notes": [
+        "已完整检查静态 artibody DOM、标题和周边组件；邻区为时间来源、分享、推荐、评论等，无遗漏的文章叙述。当前对话AI判断，非独立人工金标。",
+        "图片像素、视频与实时渲染不在本次静态文字任务的已验证范围；不据此宣称完整网页内容覆盖。"
+      ]
+    },
+    {
+      "file": "output/stage3/protocol/sina/test_06.html",
+      "source_sha256": "cabecdca23c5805852e4af2ecdaf61d4c28fa6b2bd907aafe409f90562e29f00",
+      "candidate_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "answers": {
+        "Q1": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/h1[@class='main-title'] 原文“利好来了，“国家队”大手笔增持”与输出标题一致。"
+        },
+        "Q2": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1..7]全部主要叙述保留，包括427.57万股、1%、原持股5%至6%、后续不少于600万股等信息，末段行情“18.36元/股…78.5亿元”未漏。"
+        },
+        "Q3": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]完整清单无table/li/文本图说；两处img_wrapper的img alt和span.img_descr均为空，无可读静态图说。p[2]的font内5%与6%均保留；图片中潜在额外信息未验证。"
+        },
+        "Q4": {
+          "answer": "no",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/p[8]“对于这波操作，你怎么看？”和/p[9]“来评论区说说”是文章末尾评论互动引导，无新增新闻事实，属于任务要求排除的页面交互噪声；两条仍混在正文。编辑及APP推广已分离。"
+        },
+        "Q5": {
+          "answer": "yes",
+          "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1..9]输出与源文字及顺序一致，没有重复或杜撰；尾部互动文案污染由Q4扣分，不再重复判失真。"
+        }
+      },
+      "notes": [
+        "已完整检查静态 artibody DOM、标题和周边组件；邻区为时间来源、分享、推荐、评论等，无遗漏的文章叙述。当前对话AI判断，非独立人工金标。",
+        "图片像素、视频与实时渲染不在本次静态文字任务的已验证范围；不据此宣称完整网页内容覆盖。",
+        "结尾互动引导具有业务边界意义：本次按冻结的主要新闻正文/导航排除约定判Q4 no。适合让用户用一句话说明两条是否提供了新闻事实。"
+      ]
+    }
+  ],
+  "execution_errors": [
+    {
+      "file": "output/stage3/protocol/sina/test_01.html",
+      "source_sha256": "a443101bbcd6da6c0fb7ebe46e65b4078ec9967c7e20051b951611c17f6e42a2",
+      "candidate_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "execution": "error",
+      "error": "empty output",
+      "evidence": "/html/body/div[2]/div[4]/div[1]/div[2]/div[1]为video-2017#videoList0空播放器，静态DOM中只有视频配置脚本、APP推广和责任编辑，没有文字叙述；输出blocks=[]触发empty output契约错误。主标题明确“视频 | MSCI中国指数最新调整!…”。",
+      "interpretation": "非空正文契约失败与纯文本抽取适用范围问题；不伪造正文、不计成五题低分，不在此声称XPath漏掉了源中不存在的段落。视频语义与转写均未验证。"
+    }
+  ]
+}

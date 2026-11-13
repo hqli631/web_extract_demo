@@ -1,0 +1,67 @@
+{
+  "unit": "3.4",
+  "version": 1,
+  "split_sha256": "6f3f133391ba422c1df571da67ecbfa84330331aa72aea4d16f323f8984b7903",
+  "frozen_files": {
+    "learning/generated/sina_v2.py": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+    "learning/generated/chinanews_v2.py": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+    "config/body_quality_rubric.json": "8d3433382312093a6e3a833dfa599b03b0c9d5fc342ce0809d902eb4dcf890fa",
+    "learning/run_cluster_generation.py": "52e4baeaf915048f5de2fc4e110087a66f7aaeab20624eeb3ddf6d0620647b7e"
+  },
+  "candidates": {
+    "sina_shell_v2": "learning/generated/sina_v2.py",
+    "chinanews_shell_v2": "learning/generated/chinanews_v2.py"
+  },
+  "test_files": [
+    "output/stage3/protocol/sina/test_01.html",
+    "output/stage3/protocol/sina/test_02.html",
+    "output/stage3/protocol/sina/test_03.html",
+    "output/stage3/protocol/sina/test_04.html",
+    "output/stage3/protocol/sina/test_05.html",
+    "output/stage3/protocol/sina/test_06.html",
+    "output/stage3/protocol/chinanews/test_01.html",
+    "output/stage3/protocol/chinanews/test_02.html",
+    "output/stage3/protocol/chinanews/test_03.html",
+    "output/stage3/protocol/chinanews/test_04.html",
+    "output/stage3/protocol/chinanews/test_05.html",
+    "output/stage3/protocol/chinanews/test_06.html"
+  ],
+  "quality_scope": "static saved article DOM only; unknown for unsupported or ambiguous source evidence; not live rendered completeness or OCR",
+  "body_policy": "retain narrative, interview questions, subheadings, informative lists/tables/captions in document order; author/source/editor/production credits separate; page navigation/promotions excluded; do not drop static folded body solely due to visibility",
+  "review_method": "current conversation AI full static article DOM inventory versus candidate; cite XPath and text per question; no independent human gold, no API, no calibrated judge",
+  "review_fields": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4",
+    "Q5"
+  ],
+  "answers": [
+    "yes",
+    "no",
+    "unknown"
+  ],
+  "scoring": {
+    "yes": 1,
+    "no": -1,
+    "normalization": "(raw+5)/10",
+    "unknown_score": null,
+    "threshold": 0.9,
+    "critical": [
+      "Q2",
+      "Q3"
+    ]
+  },
+  "execution_failure": "separate execution/contract error, never silently drop failed page or treat as judge no",
+  "no_retuning": "do not modify v2 after first held-out execution; findings remain final-test evidence; further tuning requires a new development version and new test set",
+  "benchmark": {
+    "repeats": 7,
+    "warmups": 2,
+    "workers": 1,
+    "mode": "in-process trusted extractor CPU body, code loaded once; disk download/model/audit/startup excluded",
+    "p95": "nearest rank",
+    "quality_not_inferred_from_speed": true
+  },
+  "cost": "generation+repair+CPU+audit; API0 does not imply conversation reasoning free; unavailable costs null; scenarios explicitly assumed, no measured GPU savings",
+  "frozen_at_utc": "2026-11-13T08:46:59.265095+00:00"
+}

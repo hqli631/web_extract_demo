@@ -5,6 +5,10 @@ output/agent_io/final/robots.txt -text
 output/stage3/protocol/**/*.html -text
 output/stage3/protocol/**/robots.txt -text
 learning/generated/*_v1.py -text
+learning/generated/*_v2.py -text
+output/stage3/repair/*.json -text
 output/stage3/protocol/*.json -text
 output/stage3/protocol/**/*.json -text
 output/stage3/generation/*.json -text
+output/stage3/evaluation/*.json -text
+learning/run_cluster_generation.py -text

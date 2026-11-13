@@ -1,0 +1,198 @@
+{
+  "reviewer": "current_conversation_ai_child_review",
+  "method": "full saved static article DOM inspection versus frozen v2 output; not independent human gold",
+  "pages": [
+    {
+      "file": "output/stage3/protocol/chinanews/test_01.html",
+      "source_sha256": "b8c0ea7c2e71e167b8aff06d7769a6ab8de519a00118beda6b06d95774e4415a",
+      "candidate_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "answers": {
+        "Q1": {
+          "answer": "yes",
+          "evidence": "/html/body/div[7]/div[1]/div[2]/div[2]/h1 原文“M87*黑洞存在“甜甜圈”结构吗？最新天文研究确认无误”；输出title与该主标题空白规范化后一致。另一个h1是同题重复模板，未误取。"
+        },
+        "Q2": {
+          "answer": "yes",
+          "evidence": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]从“中新网北京11月12日电”到/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]“论文作者表示，这次研究新生成的图像再现了原始图中的环状结构……(完)”共6个叙述段落全保留，主要结论及争议、方法均在输出中。"
+        },
+        "Q3": {
+          "answer": "yes",
+          "evidence": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]“资料图：2019年4月……中新网记者 孙自法 摄”和/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[4]“本项研究根据事件视界望远镜……施普林格·自然 供图”均以caption保存且插入原位置。完整正文DOM无信息列表或表格，仅有空adInContent广告表。"
+        },
+        "Q4": {
+          "answer": "yes",
+          "evidence": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[5]“【编辑:王祎】”已入metadata.editor；/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/table[@class=\"adInContent\"]与/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[6][@id=\"function_code_page\"]已排除。8个正文块仅为6段叙述和2图说，无页外“更多精彩内容请进入国内新闻”。"
+        },
+        "Q5": {
+          "answer": "yes",
+          "evidence": "对照完整输出，/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]“中新网北京11月12日电 (记者 孙自法)作为人类首张黑洞照片，距地球约5500万光年、质量超太阳60亿倍的M87星系中心超大质量……”到/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]均为源DOM原文；8个输出块按源文档先后排列，无重复XPath、杜撰或改写。制作信息若单列仍保留原文位置；遗漏/未知覆盖由Q2、Q3判断，不重复扣本题。"
+        }
+      },
+      "notes": [
+        "已读取完整left_zw子节点和抽取结果，检查标题周边content_left_time、BaiduSpider及正文相邻channel。来源/时间/字号分享属于元信息或页面功能，未当正文缺漏；隐藏BaiduSpider作者字段与责任编辑同名，未未经核实补充成文章作者。",
+        "评审者为当前对话AI子任务，无独立人工金标、无外部模型API；评价限冻结静态任务，不判断新闻事实真伪，也不代表全网页泛化准确率。",
+        "图片像素未提取是已声明的能力边界；本页现有文本叙述与文字图说可核对，不据此声称整页视觉信息完整。"
+      ]
+    },
+    {
+      "file": "output/stage3/protocol/chinanews/test_02.html",
+      "source_sha256": "16cd6a170e9b1022d5d0ff7c729af1b9d8628a61eda2358c536c7759b7acf44d",
+      "candidate_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "answers": {
+        "Q1": {
+          "answer": "yes",
+          "evidence": "/html/body/div[7]/div[1]/div[2]/div[2]/h1 原文“专访孙中山家族后人孙雅丽：冀故乡的酸子树，让中山精神在宝岛再次扎根人心”；输出title与该主标题空白规范化后一致。另一个h1是同题重复模板，未误取。"
+        },
+        "Q2": {
+          "answer": "yes",
+          "evidence": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]“中新网11月12日电(燕新台)……”至/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[16]“采访尾声……共促民族复兴。(完)”16段全保留，包含酸子树种子赴台、筹备近一年及8次赴台、马来西亚交流和访谈引语。"
+        },
+        "Q3": {
+          "answer": "yes",
+          "evidence": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[1]/div[2]内嵌图说“中山市翠亨村孙中山故居门前的酸子树。中新网记者 朱延静 摄”及/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]、/div[5]、/div[7]的另3条图说均以caption保留，共4条。完整DOM无信息表格或列表。内嵌包装结构未导致漏图说。"
+        },
+        "Q4": {
+          "answer": "yes",
+          "evidence": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[8]“【编辑:黄嘉雯】”已单列editor，空adInContent表与function_code_page排除。记者朱延静署名属于图片说明的摄影信息，作为完整图说保留合理；不应仅见“记者”就删掉。"
+        },
+        "Q5": {
+          "answer": "yes",
+          "evidence": "对照完整输出，/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]“中新网11月12日电(燕新台)“最好的纪念是传承，最好的传承就是实践。”……”到/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[16]均为源DOM原文；20个输出块按源文档先后排列，无重复XPath、杜撰或改写。制作信息若单列仍保留原文位置；遗漏/未知覆盖由Q2、Q3判断，不重复扣本题。"
+        }
+      },
+      "notes": [
+        "已读取完整left_zw子节点和抽取结果，检查标题周边content_left_time、BaiduSpider及正文相邻channel。来源/时间/字号分享属于元信息或页面功能，未当正文缺漏；隐藏BaiduSpider作者字段与责任编辑同名，未未经核实补充成文章作者。",
+        "评审者为当前对话AI子任务，无独立人工金标、无外部模型API；评价限冻结静态任务，不判断新闻事实真伪，也不代表全网页泛化准确率。",
+        "图片像素未提取是已声明的能力边界；本页现有文本叙述与文字图说可核对，不据此声称整页视觉信息完整。"
+      ]
+    },
+    {
+      "file": "output/stage3/protocol/chinanews/test_03.html",
+      "source_sha256": "019ef6b2bfbd3220e149e992afed145df7ad4012ce45a58b24950d53624c9c94",
+      "candidate_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "answers": {
+        "Q1": {
+          "answer": "yes",
+          "evidence": "/html/body/div[6]/div[1]/div[2]/div[2]/h1 原文“【乌镇“网事”】习言道｜让更多国家和人民共享互联网发展成果”；输出title与该主标题空白规范化后一致。另一个h1是同题重复模板，未误取。"
+        },
+        "Q2": {
+          "answer": "unknown",
+          "evidence": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p 原文“网络空间关乎人类命运，网络空间未来应由世界各国共同开创。习近平总书记多次深入阐述构建网络空间命运共同体的中国方案，强调“让互联网更好造福人民、造福世界”。”作为唯一可核对的叙述段已完整保留；但正文另有6张img、alt均为空，图片主导该文章。静态文本证据不能核实完整新闻的主要叙述与结论是否另在图片中，因此不凭只有1块就判完整或漏提。"
+        },
+        "Q3": {
+          "answer": "unknown",
+          "evidence": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[1]/img、/div[3]/img、/div[5]/img、/div[7]/img、/div[9]/img、/div[11]/img共6张alt空图片；完整DOM未提供其图内文字、信息关系或文本图说，无法确认是否为承载信息的图表/文字卡片。不将未OCR内容伪造成已保留，也不重复判no扣分。"
+        },
+        "Q4": {
+          "answer": "yes",
+          "evidence": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[12]“【编辑:刘阳禾】”单列editor，function_code_page排除。唯一正文p为文章导语，无导航、推广或制作信息混入。"
+        },
+        "Q5": {
+          "answer": "yes",
+          "evidence": "对照完整输出，/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p“网络空间关乎人类命运，网络空间未来应由世界各国共同开创。习近平总书记多次深入阐述构建网络空间命运共同体的中国方案，强调“让互联网更……”到/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p均为源DOM原文；1个输出块按源文档先后排列，无重复XPath、杜撰或改写。制作信息若单列仍保留原文位置；遗漏/未知覆盖由Q2、Q3判断，不重复扣本题。"
+        }
+      },
+      "notes": [
+        "已读取完整left_zw子节点和抽取结果，检查标题周边content_left_time、BaiduSpider及正文相邻channel。来源/时间/字号分享属于元信息或页面功能，未当正文缺漏；隐藏BaiduSpider作者字段与责任编辑同名，未未经核实补充成文章作者。",
+        "评审者为当前对话AI子任务，无独立人工金标、无外部模型API；评价限冻结静态任务，不判断新闻事实真伪，也不代表全网页泛化准确率。",
+        "图片主导/完整性待核实：唯一文字段与6张alt空图片并存。需在后续采集/视觉能力任务中获取证据，本轮不调整冻结代码或剔除该难例。"
+      ]
+    },
+    {
+      "file": "output/stage3/protocol/chinanews/test_04.html",
+      "source_sha256": "54fc27a679d4053108d39e680fc20dec136f8b995811cf9f72eaf1a942c49a97",
+      "candidate_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "answers": {
+        "Q1": {
+          "answer": "yes",
+          "evidence": "/html/body/div[6]/div[1]/div[2]/div[2]/h1 原文“习言道｜30多年前，习近平给出一道“选择题””；输出title与该主标题空白规范化后一致。另一个h1是同题重复模板，未误取。"
+        },
+        "Q2": {
+          "answer": "yes",
+          "evidence": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]“中新网11月2日电 题：30多年前，习近平给出一道‘选择题’”至/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[20]“江山就是人民、人民就是江山。全面从严治党守的是人民的心。”20段完整保留；段内三个提问及后续引用未当作者署名删除。"
+        },
+        "Q3": {
+          "answer": "yes",
+          "evidence": "完整/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]内有1张alt空图片、20个叙述p及7个制作信息p，无文字图说、信息表格或列表；当前静态任务可判无此类结构需保留。图片像素不在本评分范围，未声称已OCR。"
+        },
+        "Q4": {
+          "answer": "yes",
+          "evidence": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[21]“｜总策划：俞岚”至/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[27]“｜中国新闻网‘习言道’工作室出品”7条连续尾部制作信息已入production_credit；/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]“【编辑:刘阳禾】”入editor。正文保留20叙述段，无制作信息污染。"
+        },
+        "Q5": {
+          "answer": "yes",
+          "evidence": "对照完整输出，/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]“中新网11月2日电 题：30多年前，习近平给出一道“选择题”……”到/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[20]均为源DOM原文；20个输出块按源文档先后排列，无重复XPath、杜撰或改写。制作信息若单列仍保留原文位置；遗漏/未知覆盖由Q2、Q3判断，不重复扣本题。"
+        }
+      },
+      "notes": [
+        "已读取完整left_zw子节点和抽取结果，检查标题周边content_left_time、BaiduSpider及正文相邻channel。来源/时间/字号分享属于元信息或页面功能，未当正文缺漏；隐藏BaiduSpider作者字段与责任编辑同名，未未经核实补充成文章作者。",
+        "评审者为当前对话AI子任务，无独立人工金标、无外部模型API；评价限冻结静态任务，不判断新闻事实真伪，也不代表全网页泛化准确率。",
+        "图片像素未提取是已声明的能力边界；本页现有文本叙述与文字图说可核对，不据此声称整页视觉信息完整。"
+      ]
+    },
+    {
+      "file": "output/stage3/protocol/chinanews/test_05.html",
+      "source_sha256": "6fe45864eeec753a19d2a72ae896d9d28e49475faad64fde576bb83dec743c17",
+      "candidate_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "answers": {
+        "Q1": {
+          "answer": "yes",
+          "evidence": "/html/body/div[6]/div[1]/div[2]/div[2]/h1 原文“习言道｜全面从严治党关键在严”；输出title与该主标题空白规范化后一致。另一个h1是同题重复模板，未误取。"
+        },
+        "Q2": {
+          "answer": "unknown",
+          "evidence": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p 原文“中国共产党第二十届中央委员会第五次全体会议，于2026年10月26日至29日在北京举行。全会听取和讨论了习近平受中央政治局委托所作的工作报告，审议通过了《中共中央关于持之以恒推进全面从严治党若干重大问题的决定》。习近平就《决定（讨论稿）》向全会作了说明。”作为唯一可核对的叙述段已完整保留；但正文另有6张img、alt均为空，图片主导该文章。静态文本证据不能核实完整新闻的主要叙述与结论是否另在图片中，因此不凭只有1块就判完整或漏提。"
+        },
+        "Q3": {
+          "answer": "unknown",
+          "evidence": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[1]/img、/div[3]/img、/div[5]/img、/div[7]/img、/div[9]/img、/div[11]/img共6张alt空图片；完整DOM未提供其图内文字、信息关系或文本图说，无法确认是否为承载信息的图表/文字卡片。不将未OCR内容伪造成已保留，也不重复判no扣分。"
+        },
+        "Q4": {
+          "answer": "yes",
+          "evidence": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[12]“【编辑:吴青潞】”单列editor，function_code_page排除。唯一正文p为文章导语，无导航、推广或制作信息混入。"
+        },
+        "Q5": {
+          "answer": "yes",
+          "evidence": "对照完整输出，/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p“中国共产党第二十届中央委员会第五次全体会议，于2026年10月26日至29日在北京举行。全会听取和讨论了习近平受中央政治局委托所作……”到/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p均为源DOM原文；1个输出块按源文档先后排列，无重复XPath、杜撰或改写。制作信息若单列仍保留原文位置；遗漏/未知覆盖由Q2、Q3判断，不重复扣本题。"
+        }
+      },
+      "notes": [
+        "已读取完整left_zw子节点和抽取结果，检查标题周边content_left_time、BaiduSpider及正文相邻channel。来源/时间/字号分享属于元信息或页面功能，未当正文缺漏；隐藏BaiduSpider作者字段与责任编辑同名，未未经核实补充成文章作者。",
+        "评审者为当前对话AI子任务，无独立人工金标、无外部模型API；评价限冻结静态任务，不判断新闻事实真伪，也不代表全网页泛化准确率。",
+        "图片主导/完整性待核实：唯一文字段与6张alt空图片并存。需在后续采集/视觉能力任务中获取证据，本轮不调整冻结代码或剔除该难例。"
+      ]
+    },
+    {
+      "file": "output/stage3/protocol/chinanews/test_06.html",
+      "source_sha256": "5dede0bcdf633e9320824d5cd747b59d360d08a3553daf19c40903bdbbeb4d9a",
+      "candidate_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "answers": {
+        "Q1": {
+          "answer": "yes",
+          "evidence": "/html/body/div[7]/div[1]/div[2]/div[2]/h1 原文“人民空军，生日快乐！”；输出title与该主标题空白规范化后一致。另一个h1是同题重复模板，未误取。"
+        },
+        "Q2": {
+          "answer": "yes",
+          "evidence": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]“2026年11月11日”到/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[19]“人民空军，生日快乐！”19个居中短段全保留。日期和周年句是这篇纪念文章的叙述开头，与标题旁发布时间不同；“如今的人民空军”等短行未因长度被丢掉。"
+        },
+        "Q3": {
+          "answer": "yes",
+          "evidence": "完整/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]中1张alt空图片，无文字图说、信息列表、信息表格；仅空adInContent广告表。输出按原DOM保留19个短段的关系；无需为了正文长度合并或虚构图片内容。"
+        },
+        "Q4": {
+          "answer": "yes",
+          "evidence": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]“【编辑:刘阳禾】”入editor，/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/table[@class=\"adInContent\"]和/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3][@id=\"function_code_page\"]排除。日期“2026年11月11日”与周年开篇属于文章正文，不是侧栏噪声。"
+        },
+        "Q5": {
+          "answer": "yes",
+          "evidence": "对照完整输出，/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]“2026年11月11日……”到/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[19]均为源DOM原文；19个输出块按源文档先后排列，无重复XPath、杜撰或改写。制作信息若单列仍保留原文位置；遗漏/未知覆盖由Q2、Q3判断，不重复扣本题。"
+        }
+      },
+      "notes": [
+        "已读取完整left_zw子节点和抽取结果，检查标题周边content_left_time、BaiduSpider及正文相邻channel。来源/时间/字号分享属于元信息或页面功能，未当正文缺漏；隐藏BaiduSpider作者字段与责任编辑同名，未未经核实补充成文章作者。",
+        "评审者为当前对话AI子任务，无独立人工金标、无外部模型API；评价限冻结静态任务，不判断新闻事实真伪，也不代表全网页泛化准确率。",
+        "图片像素未提取是已声明的能力边界；本页现有文本叙述与文字图说可核对，不据此声称整页视觉信息完整。"
+      ]
+    }
+  ]
+}

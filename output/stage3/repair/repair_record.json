@@ -1,0 +1,28 @@
+{
+  "unit": "3.3",
+  "rounds_used": 1,
+  "maximum_rounds": 2,
+  "split_sha256": "6f3f133391ba422c1df571da67ecbfa84330331aa72aea4d16f323f8984b7903",
+  "model_api_calls": 0,
+  "training_updates": 0,
+  "test_pages_executed": 0,
+  "repair_pages": 6,
+  "generation_regressions": 6,
+  "patches": [
+    {
+      "cluster_id": "sina_shell_v2",
+      "before_sha256": "d57fa070535176e9a56065fb776d4b249fb929f6a064dd438b318b02fcea99de",
+      "after_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "diff": "--- sina_v1.py\n+++ sina_v2.py\n@@ -1,4 +1,4 @@\n-\"\"\"Current-conversation AI candidate v1; static Sina article shell only.\"\"\"\n+\"\"\"Current-conversation AI candidate v2; static Sina article shell only.\"\"\"\n import re\n from lxml import html\n \n@@ -32,6 +32,11 @@\n             item['kind'] = 'editor'\n             result['metadata'].append(item)\n             return\n+        if (node.tag == 'p' and body.xpath('./p') and node is body.xpath('./p')[0] and\n+                re.fullmatch(r'[\\u4e00-\\u9fff0-9]{2,20}记者\\s+[\\u4e00-\\u9fff·]{2,8}', text)):\n+            item['kind'] = 'author'\n+            result['metadata'].append(item)\n+            return\n         if node.tag == 'p' and text.startswith('专题：') and node.xpath('.//a'):\n             item['kind'] = 'topic_navigation'\n             result['excluded'].append(item)\n@@ -53,6 +58,9 @@\n                                 'subheading' if node.tag.startswith('h') or 'align-Center' in (node.get('cms-style') or '').split() else 'paragraph')\n                 result['blocks'].append(item)\n             return\n+        if text and node.tag in {'div','section','details'} and not node.xpath('.//p|.//table|.//li|.//h2|.//h3|.//h4|.//figcaption|.//div'):\n+            result['blocks'].append(item)\n+            return\n         for child in node:\n             visit(child)\n         if text and not len(node):\n"
+    },
+    {
+      "cluster_id": "chinanews_shell_v2",
+      "before_sha256": "6cc49ba579af9d3dc85738ccfb5a1a24a7b6958ae32dfc724d98f44639e772ff",
+      "after_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "diff": "--- chinanews_v1.py\n+++ chinanews_v2.py\n@@ -1,4 +1,4 @@\n-\"\"\"Current-conversation AI candidate v1; static Chinanews left_zw shell only.\"\"\"\n+\"\"\"Current-conversation AI candidate v2; static Chinanews left_zw shell only.\"\"\"\n import re\n from lxml import html\n \n@@ -11,6 +11,18 @@\n         raise ValueError('expected one content_left_title and one left_zw')\n     body=bodies[0]\n     result=dict(title=' '.join(titles[0].text_content().split()),blocks=[],metadata=[],excluded=[],warnings=[])\n+\n+    # Only a contiguous suffix of explicit production-credit lines is metadata.\n+    credit_nodes=[]\n+    meaningful=[n for n in body if isinstance(n.tag,str) and n.tag not in {'script','style'}\n+                and ' '.join(n.text_content().split())\n+                and 'adEditor' not in (n.get('class') or '').split()]\n+    for n in reversed(meaningful):\n+        value=' '.join(n.text_content().split())\n+        if n.tag=='p' and re.fullmatch(r'[｜|](?:(?:总策划|策划|统筹|执笔|审校|视觉)[:：].+|.+工作室出品)',value):\n+            credit_nodes.append(n)\n+        else:\n+            break\n \n     def record(node,kind):\n         clone=html.fromstring(html.tostring(node))\n@@ -32,6 +44,10 @@\n             item['kind']='editor'\n             result['metadata'].append(item)\n             return\n+        if node in credit_nodes:\n+            item['kind']='production_credit'\n+            result['metadata'].append(item)\n+            return\n         # Full-line anchored pattern: interview questions containing a colon do not match.\n         if node.tag=='p' and re.fullmatch(r'中新[网社]记者\\s+[\\u4e00-\\u9fff·]{2,12}(?:\\s+[\\u4e00-\\u9fff·]{2,12})*',text):\n             item['kind']='author'\n@@ -48,6 +64,9 @@\n                               'subheading' if node.tag in {'h2','h3','h4'} else 'paragraph')\n                 result['blocks'].append(item)\n             return\n+        if text and node.tag in {'div','section','details'} and not node.xpath('.//p|.//table|.//li|.//h2|.//h3|.//h4|.//figcaption|.//div'):\n+            result['blocks'].append(item)\n+            return\n         for child in node:\n             visit(child)\n         if text and not len(node):\n"
+    }
+  ],
+  "process": "current conversation examined saved v1 evidence, wrote v2 patch; default command replays both versions, does not call a repair agent anew",
+  "contract_revision": "metadata adds production_credit; v1 default contract unchanged",
+  "not_claimed": "overall accuracy, independent judge calibration, autonomous API agent, or RL"
+}

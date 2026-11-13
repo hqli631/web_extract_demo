@@ -1,0 +1,804 @@
+{
+  "method": "single-process single-worker trusted extractor, compiled once per cluster",
+  "hardware": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_model": "AMD Ryzen 7 7840H with Radeon 780M Graphics",
+    "logical_cpu_count": 16,
+    "python_version": "3.12.14",
+    "lxml_version": "6.1.3.0",
+    "libxml_version": "2.11.9"
+  },
+  "worker_count": 1,
+  "cases_per_batch": 11,
+  "repeats": 7,
+  "warmup_batches": 2,
+  "input_bytes_per_batch": 1002014,
+  "measured_input_bytes": 7014098,
+  "candidate_sources": [
+    {
+      "cluster_id": "sina_shell_v2",
+      "source_utf8_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003"
+    },
+    {
+      "cluster_id": "chinanews_shell_v2",
+      "source_utf8_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2"
+    }
+  ],
+  "warmup_errors": [],
+  "batches": [
+    {
+      "repeat": 1,
+      "attempts": 11,
+      "successes": 11,
+      "wall_seconds": 0.034437499998603016,
+      "cpu_seconds": 0.046875,
+      "successful_pages_per_wall_second": 319.41923776250377
+    },
+    {
+      "repeat": 2,
+      "attempts": 11,
+      "successes": 11,
+      "wall_seconds": 0.05684869998367503,
+      "cpu_seconds": 0.046875,
+      "successful_pages_per_wall_second": 193.49606944677393
+    },
+    {
+      "repeat": 3,
+      "attempts": 11,
+      "successes": 11,
+      "wall_seconds": 0.03794360000756569,
+      "cpu_seconds": 0.046875,
+      "successful_pages_per_wall_second": 289.90396266581655
+    },
+    {
+      "repeat": 4,
+      "attempts": 11,
+      "successes": 11,
+      "wall_seconds": 0.03252700000302866,
+      "cpu_seconds": 0.015625,
+      "successful_pages_per_wall_second": 338.1805884027351
+    },
+    {
+      "repeat": 5,
+      "attempts": 11,
+      "successes": 11,
+      "wall_seconds": 0.05320019999635406,
+      "cpu_seconds": 0.046875,
+      "successful_pages_per_wall_second": 206.76613999108758
+    },
+    {
+      "repeat": 6,
+      "attempts": 11,
+      "successes": 11,
+      "wall_seconds": 0.0394537000101991,
+      "cpu_seconds": 0.046875,
+      "successful_pages_per_wall_second": 278.80781769913625
+    },
+    {
+      "repeat": 7,
+      "attempts": 11,
+      "successes": 11,
+      "wall_seconds": 0.04987380001693964,
+      "cpu_seconds": 0.046875,
+      "successful_pages_per_wall_second": 220.55668499821246
+    }
+  ],
+  "measurements": [
+    {
+      "repeat": 1,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_02.html",
+      "wall_seconds": 0.0020175000245217234,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 1,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_03.html",
+      "wall_seconds": 0.003347999998368323,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 1,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_04.html",
+      "wall_seconds": 0.003857599978800863,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 1,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_05.html",
+      "wall_seconds": 0.0022115999890957028,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 1,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_06.html",
+      "wall_seconds": 0.002484500000718981,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 1,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_01.html",
+      "wall_seconds": 0.002544199989642948,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 1,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_02.html",
+      "wall_seconds": 0.0036278000043239444,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 1,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_03.html",
+      "wall_seconds": 0.004043599998112768,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 1,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_04.html",
+      "wall_seconds": 0.004296099999919534,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 1,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_05.html",
+      "wall_seconds": 0.003328099992359057,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 1,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_06.html",
+      "wall_seconds": 0.002633399999467656,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 2,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_02.html",
+      "wall_seconds": 0.0033801000099629164,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 2,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_03.html",
+      "wall_seconds": 0.0029424999956972897,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 2,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_04.html",
+      "wall_seconds": 0.004302199988160282,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 2,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_05.html",
+      "wall_seconds": 0.0036318999773357064,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 2,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_06.html",
+      "wall_seconds": 0.0034727999882306904,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 2,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_01.html",
+      "wall_seconds": 0.0034645999839995056,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 2,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_02.html",
+      "wall_seconds": 0.004065799992531538,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 2,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_03.html",
+      "wall_seconds": 0.00404180001351051,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 2,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_04.html",
+      "wall_seconds": 0.003959100024076179,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 2,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_05.html",
+      "wall_seconds": 0.0032577000092715025,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 2,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_06.html",
+      "wall_seconds": 0.020295299997087568,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 3,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_02.html",
+      "wall_seconds": 0.002005100017413497,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 3,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_03.html",
+      "wall_seconds": 0.002922200015746057,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 3,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_04.html",
+      "wall_seconds": 0.004062199994223192,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 3,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_05.html",
+      "wall_seconds": 0.00282839999999851,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 3,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_06.html",
+      "wall_seconds": 0.004449400003068149,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 3,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_01.html",
+      "wall_seconds": 0.0033241999917663634,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 3,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_02.html",
+      "wall_seconds": 0.0033785999985411763,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 3,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_03.html",
+      "wall_seconds": 0.0029014000028837472,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 3,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_04.html",
+      "wall_seconds": 0.005223200016189367,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 3,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_05.html",
+      "wall_seconds": 0.003633100015576929,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 3,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_06.html",
+      "wall_seconds": 0.0031866000208538026,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 4,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_02.html",
+      "wall_seconds": 0.002175099973101169,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 4,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_03.html",
+      "wall_seconds": 0.0027886000170838088,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 4,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_04.html",
+      "wall_seconds": 0.0041485000110697,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 4,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_05.html",
+      "wall_seconds": 0.0029571999912150204,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 4,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_06.html",
+      "wall_seconds": 0.002539699984481558,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 4,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_01.html",
+      "wall_seconds": 0.002771800005575642,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 4,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_02.html",
+      "wall_seconds": 0.0031506000086665154,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 4,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_03.html",
+      "wall_seconds": 0.002900499996030703,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 4,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_04.html",
+      "wall_seconds": 0.0035436000034678727,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 4,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_05.html",
+      "wall_seconds": 0.002896300022257492,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 4,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_06.html",
+      "wall_seconds": 0.0026343000063207,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 5,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_02.html",
+      "wall_seconds": 0.0021210999984759837,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 5,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_03.html",
+      "wall_seconds": 0.020801299979211763,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 5,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_04.html",
+      "wall_seconds": 0.004596099985064939,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 5,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_05.html",
+      "wall_seconds": 0.003170500014675781,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 5,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_06.html",
+      "wall_seconds": 0.0023873000172898173,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 5,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_01.html",
+      "wall_seconds": 0.0031068000243976712,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 5,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_02.html",
+      "wall_seconds": 0.0030515000107698143,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 5,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_03.html",
+      "wall_seconds": 0.0032767000084277242,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 5,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_04.html",
+      "wall_seconds": 0.0032663000165484846,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 5,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_05.html",
+      "wall_seconds": 0.003555300005245954,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 5,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_06.html",
+      "wall_seconds": 0.0038323000189848244,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 6,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_02.html",
+      "wall_seconds": 0.0033318999921903014,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 6,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_03.html",
+      "wall_seconds": 0.004116900003282353,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 6,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_04.html",
+      "wall_seconds": 0.003960600006394088,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 6,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_05.html",
+      "wall_seconds": 0.0027283999952487648,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 6,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_06.html",
+      "wall_seconds": 0.003545299987308681,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 6,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_01.html",
+      "wall_seconds": 0.0040176000038627535,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 6,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_02.html",
+      "wall_seconds": 0.004256400017766282,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 6,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_03.html",
+      "wall_seconds": 0.002872400014894083,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 6,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_04.html",
+      "wall_seconds": 0.00379590000375174,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 6,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_05.html",
+      "wall_seconds": 0.0036786000127904117,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 6,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_06.html",
+      "wall_seconds": 0.0031131000141613185,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 7,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_02.html",
+      "wall_seconds": 0.0022923999931663275,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 7,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_03.html",
+      "wall_seconds": 0.0032239999854937196,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 7,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_04.html",
+      "wall_seconds": 0.01650490000611171,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 7,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_05.html",
+      "wall_seconds": 0.0023985000152606517,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 7,
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_06.html",
+      "wall_seconds": 0.002804600022500381,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 7,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_01.html",
+      "wall_seconds": 0.0034949999826494604,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 7,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_02.html",
+      "wall_seconds": 0.004411699977936223,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 7,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_03.html",
+      "wall_seconds": 0.0027057999977841973,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 7,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_04.html",
+      "wall_seconds": 0.004556900006718934,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 7,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_05.html",
+      "wall_seconds": 0.003792500006966293,
+      "cpu_seconds": 0.0,
+      "status": "ok",
+      "output_type": "dict"
+    },
+    {
+      "repeat": 7,
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_06.html",
+      "wall_seconds": 0.003656200016848743,
+      "cpu_seconds": 0.015625,
+      "status": "ok",
+      "output_type": "dict"
+    }
+  ],
+  "summary": {
+    "attempts": 77,
+    "successes": 77,
+    "failures": 0,
+    "execution_failure_rate": 0.0,
+    "batch_wall_seconds_total": 0.3042845000163652,
+    "batch_cpu_seconds_total": 0.296875,
+    "batch_wall_seconds_median": 0.0394537000101991,
+    "successful_pages_per_wall_second": 253.0526530134093,
+    "successful_pages_per_cpu_second": 259.36842105263156,
+    "successful_page_wall_seconds_p50": 0.0033318999921903014,
+    "successful_page_wall_seconds_p95": 0.005223200016189367,
+    "successful_page_cpu_seconds_mean": 0.0038555194805194805,
+    "successful_page_cpu_seconds_p50": 0.0,
+    "successful_page_cpu_seconds_p95": 0.015625
+  },
+  "limits": [
+    "Extraction-call timing excludes file reads, compile/import, validation, serialization, network, model generation/repair/review and cold process startup.",
+    "Fixed case order, warm in-memory input and one worker; repeated pages are not independent quality samples.",
+    "Execution success is not contract validity or semantic accuracy. Quality must be evaluated separately.",
+    "CPU process time includes this process only. Small local measurements cannot establish distributed or trillion-page throughput.",
+    "No per-page GPU/model baseline is measured; this is not an empirical GPU cost-reduction comparison."
+  ]
+}

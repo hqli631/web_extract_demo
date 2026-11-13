@@ -1,5 +1,9 @@
 # 当前协作约定
 
+最新2026-11-13：3.4先冻结评价协议再首次执行12封存页，v2未改；6候选通过/3质量失败/2unknown/1empty output契约错误。报告output/stage3/evaluation/index.html，归档docs/STAGE3_SUMMARY.md、STAGE3_UNIT4.md。139项测试通过。下一步第四阶段Rubrics固定三单元，未启动。用户反馈已理解署名归档及新页验证，需巩固“检验泛化不等于提高泛化”；后续每次先说明做什么/为何/下一步来源，在业务取舍或理解节点请用户反馈，助手承担代码修改。此轮连同3.3达到687d803后2 / 2项目修改，按约定同步；成功才归零，回执为准。保留旧用户脚本、报告和预览，不纳入此次提交。
+
+最新2026-11-13：3.3完成一轮反馈代码补丁，sina_v2/chinanews_v2；自然页1作者+7制作信息移出正文，生成组6篇不变，合成折叠内联包装补漏。入口learning/run_cluster_repair.py，docs/STAGE3_UNIT3.md。v1及生成记录保留，新增metadata.production_credit显式契约支持；封存页未执行。3.4待先冻结候选和评价。此轮为687d803推送后1 / 2修改，不到常规推送轮次。旧用户脚本/报告/预览继续保留。
+
 最新2026-11-13：按用户继续推进进入3.2。两簇v1候选位于learning/generated/；入口learning/run_cluster_generation.py只读每簇3篇生成页，不读修复/测试HTML。当前对话AI生成，无API；父对话有历史知识，不称盲生成。报告output/stage3/generation/index.html。代码、输入哈希冻结，后续补丁另存v2。执行器AST检查和超时不是OS沙箱。3.3未开始。此轮连同上一轮3.1完成达到2 / 2修改，按约定同步，实际以Git回执为准；保留用户extract_demo.py及旧脚本/报告/预览。
 
 最新2026-11-12：3.1壳核验/去重/补采/分工工程操作完成；入口learning/prepare_cluster_protocol.py，当前协议output/stage3/protocol/split_v2.json，两簇各3生成/3历史修复/6新测试。两个短文本新页保留为风险；旧split.json留作重复修订证据。默认离线复验，不得重采。等待用户运行解释再进入3.2；生成者禁止读取封存正文。本轮为29cf984后第1轮项目修改，计数1 / 2。以下旧进度属于历史状态。

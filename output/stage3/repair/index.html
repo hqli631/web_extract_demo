@@ -1,0 +1,2700 @@
+<!doctype html><meta charset="utf-8"><title>3.3 代码修复</title><style>body{font:16px/1.8 sans-serif;max-width:1100px;margin:30px auto}pre{white-space:pre-wrap}td,th{padding:8px;border:1px solid #ccc}table{border-collapse:collapse}</style>
+<h1>3.3 代码反馈修复：1轮/最多2轮</h1><p>固定修复组6页，生成组回归6页；封存测试未执行。当前对话AI给出反馈及补丁，离线命令仅重放。</p>
+<h2>自然页面变化</h2><table><tr><th>页面/分组</th><th>正文块</th><th>移至元数据</th></tr>
+<tr><td>samples/blog_01.html [generation]</td><td>43 → 43</td><td>0</td></tr>
+<tr><td>samples/collected_14a028de299edfab.html [generation]</td><td>23 → 23</td><td>0</td></tr>
+<tr><td>samples/collected_af5904c15d1deebc.html [generation]</td><td>16 → 16</td><td>0</td></tr>
+<tr><td>samples/collected_c5d4b9cdcf5b4c91.html [repair]</td><td>22 → 21</td><td>1</td></tr>
+<tr><td>output/agent_io/final/snapshots/new_1.html [repair]</td><td>103 → 103</td><td>0</td></tr>
+<tr><td>output/agent_io/final/snapshots/new_2.html [repair]</td><td>20 → 20</td><td>0</td></tr>
+<tr><td>samples/xpath_practice.html [generation]</td><td>7 → 7</td><td>0</td></tr>
+<tr><td>samples/xpath_practice_02.html [generation]</td><td>26 → 26</td><td>0</td></tr>
+<tr><td>samples/xpath_practice_03.html [generation]</td><td>33 → 33</td><td>0</td></tr>
+<tr><td>samples/collected_4b026cde5c5744c1.html [repair]</td><td>7 → 7</td><td>0</td></tr>
+<tr><td>samples/collected_4fdd3a7b48c5a575.html [repair]</td><td>6 → 6</td><td>0</td></tr>
+<tr><td>validation_blind/samples/collected_5029464d5612ed80.html [repair]</td><td>29 → 22</td><td>7</td></tr>
+</table><h2>反馈与原文证据</h2><pre>{
+  &quot;reviewer&quot;: &quot;current_conversation_ai&quot;,
+  &quot;review_scope&quot;: &quot;full static article DOM and v1 outputs of six fixed repair pages; not independent gold labels&quot;,
+  &quot;findings&quot;: [
+    {
+      &quot;code&quot;: &quot;standalone_byline_in_body&quot;,
+      &quot;file&quot;: &quot;samples/collected_c5d4b9cdcf5b4c91.html&quot;,
+      &quot;evidence&quot;: [
+        {
+          &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;,
+          &quot;text&quot;: &quot;21世纪经济报道记者 程雪溶&quot;,
+          &quot;before&quot;: &quot;blocks.paragraph&quot;,
+          &quot;after&quot;: &quot;metadata.author&quot;
+        }
+      ],
+      &quot;requested&quot;: &quot;first direct p, full-line media-reporter-name signature only; narrative mentions kept&quot;
+    },
+    {
+      &quot;code&quot;: &quot;production_credits_in_body&quot;,
+      &quot;file&quot;: &quot;validation_blind/samples/collected_5029464d5612ed80.html&quot;,
+      &quot;evidence&quot;: [
+        {
+          &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[23]&quot;,
+          &quot;text&quot;: &quot;｜总策划：俞岚&quot;,
+          &quot;before&quot;: &quot;blocks.paragraph&quot;,
+          &quot;after&quot;: &quot;metadata.production_credit&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[24]&quot;,
+          &quot;text&quot;: &quot;｜策划：周锐&quot;,
+          &quot;before&quot;: &quot;blocks.paragraph&quot;,
+          &quot;after&quot;: &quot;metadata.production_credit&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[25]&quot;,
+          &quot;text&quot;: &quot;｜统筹：马学玲&quot;,
+          &quot;before&quot;: &quot;blocks.paragraph&quot;,
+          &quot;after&quot;: &quot;metadata.production_credit&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[26]&quot;,
+          &quot;text&quot;: &quot;｜执笔：阚枫 袁秀月&quot;,
+          &quot;before&quot;: &quot;blocks.paragraph&quot;,
+          &quot;after&quot;: &quot;metadata.production_credit&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[27]&quot;,
+          &quot;text&quot;: &quot;｜审校：孙静波&quot;,
+          &quot;before&quot;: &quot;blocks.paragraph&quot;,
+          &quot;after&quot;: &quot;metadata.production_credit&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[28]&quot;,
+          &quot;text&quot;: &quot;｜视觉：张舰元 倪雯冰&quot;,
+          &quot;before&quot;: &quot;blocks.paragraph&quot;,
+          &quot;after&quot;: &quot;metadata.production_credit&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[29]&quot;,
+          &quot;text&quot;: &quot;｜中国新闻网“习言道”工作室出品&quot;,
+          &quot;before&quot;: &quot;blocks.paragraph&quot;,
+          &quot;after&quot;: &quot;metadata.production_credit&quot;
+        }
+      ],
+      &quot;requested&quot;: &quot;contiguous suffix of explicit pipe-prefixed production-credit lines -&gt; production_credit metadata; do not equate production staff with author&quot;
+    },
+    {
+      &quot;code&quot;: &quot;wrapper_inline_text_omitted&quot;,
+      &quot;evidence_scope&quot;: &quot;synthetic folded_leaf controls only&quot;,
+      &quot;requested&quot;: &quot;preserve inline-only text-bearing wrapper as one paragraph, regardless of display:none; not blanket keep hidden navigation&quot;
+    }
+  ],
+  &quot;no_change_needed&quot;: [
+    &quot;v1 already retains repair-page 5x3 table&quot;,
+    &quot;nested p already supported; retain as control&quot;
+  ],
+  &quot;remaining_limits&quot;: [
+    &quot;DOM/image content completeness not independently verified&quot;,
+    &quot;new wrapper text heuristic could capture unfamiliar noise&quot;,
+    &quot;mixed text/tail plus nested blocks not fully handled&quot;,
+    &quot;production-credit schema new; downstream must support it&quot;
+  ]
+}</pre>
+<details><summary>samples/collected_c5d4b9cdcf5b4c91.html：完整修改前后</summary><pre>{
+  &quot;file&quot;: &quot;samples/collected_c5d4b9cdcf5b4c91.html&quot;,
+  &quot;role&quot;: &quot;repair&quot;,
+  &quot;source_sha256&quot;: &quot;90cd0ef9d6c814125d32242d1da9b37be789fe19e4fa8a08581069b336924088&quot;,
+  &quot;before&quot;: {
+    &quot;title&quot;: &quot;恒大物业股权转让大结局，太盟投资将成新东家&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;21世纪经济报道记者 程雪溶&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;10月30日，恒大物业（6666.HK）发布公告称，太盟投资集团（PAG，下称“太盟投资”）下属投资控股平台已与中国恒大集团（下称“中国恒大”，已退市）及其子公司CEG Holdings （BVI） Limited签署关于恒大物业股份买卖的正式交易文件。太盟投资将以0.8359港元/股收购中国恒大持有的恒大物业1.361%股份，以0.7271港元/股收购CEG Holdings （BVI） Limited持有的恒大物业49.655%股份并承担其税费等负债合计5亿元人民币，按每股折算，合计对价两者一致。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[2]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;公告表明，待协议约定的有关先决条件达成后，将正式进行股权交割，届时太盟投资将成为恒大物业新控股股东，并向恒大物业其他股东按照每股0.8359港元的价格发起全面要约收购。历时一年多，恒大物业股权转让尘埃落定。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[3]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;太盟为何决意接手恒大物业？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[4]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;根据公开信息，太盟投资是专注亚太地区的多资产品种基金管理和投资平台，业务包括私募股权、不动产、信贷及市场三大核心板块，截至2026年6月30日，合计资产管理规模超过600亿美元，可谓实力雄厚。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[5]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;太盟投资为何决意收购恒大物业？一位投资行业资深人士在接受21世纪经济报道记者采访时指出，恒大物业经营的改善自然是最关键的因素。并且，太盟的并购投资团队深耕中国20多年，在粤港澳大湾区、长三角地区等都有投资布局，代表性案例包括投资腾讯音乐、收购珠海万达商管集团等。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[6]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;2021年下半年恒大集团“爆雷”之时，恒大物业刚刚在香港联交所上市不足1年。由于多种因素叠加，恒大物业2021年底已资不抵债，股价严重下挫，面临严重的资本市场风险和在管物业项目丢盘风险，后因年报无法按时披露，股票于2022年3月停牌，持续稳定经营及维持上市公司地位面临极大挑战。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[7]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;在随后一年多的风险化解中，恒大物业完成了资金占用事项独立调查、涉事董事更换以及内部控制整改工作，提升管理层独立性和诚信度，并做好与大股东风险隔离工作，最终在2023年8月复牌，上市公司地位得以保全。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[8]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;据21世纪经济报道记者了解，恒大集团“爆雷”以来，恒大物业千方百计稳定经营、提升服务质量，全力保障业主合法权益。为稳盘护盘，恒大物业对于交付年限较久的老旧小区，在绿化保洁、公用设施更新维护、维保修等方面持续投入，改善居住环境，提升服务管理水平。与此同时，支持保交楼项目，推动解决业主户内维修、消防、电梯、水电等配套遗留问题，赢得市场和广大业主的认可。恒大物业在管面积从2021年底的4.73亿平方米增加到2026年6月底的6.03亿平方米，新增项目大部分来自恒大体系外，共管理项目3194个，覆盖全国30个省（区、市）。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[9]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;细观太盟投资近年来的布局，物管、商管行业已在版图之中。2026年7月，在方圆生活服务（9978.HK）2023—2025年连续三年净亏损的情况下，太盟投资旗下公司以顾问身份促成方圆生活服务50.01%股权交易案，并有权以每股0.5港元的价格认购方圆生活服务7700万股股份；2021年8月，太盟投资联合其他投资人向珠海万达商管投资约380亿元，并在珠海万达商管赴港上市失败后，又联合其他投资人追加投资约600亿元。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[10]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;“聚光灯”下的股权转让&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[11]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;恒大物业股权转让一直在“聚光灯”下。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[12]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;2025年8月12日，中国恒大清盘人发布首份清盘进展报告，提及中国恒大及CEG Holdings （BVI） Limited合计持有的恒大物业股权是债权人的重要偿债资源，并将恒大物业股权出售作为最高优先事项。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[13]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;2026年10月22日，中国恒大清盘人发布的第二份清盘进展报告显示，恒大物业股权交易共开展了两轮投资人引入工作，累计接触超过160名潜在投资人并签署超30份保密协议。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[14]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;根据公开信息，恒大物业按照香港《收购守则》第3.7条相关要求，每月更新股权交易进展，从2025年9月11日至2026年9月30日，在正式签订股份买卖协议前已发布13份进展更新公告，披露了签订保密协议、提交非约束性意向要约、开展买方尽调、更新要约方案、与潜在投资人开展磋商、签署排他性谈判协议等情况。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[15]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;恒大物业股权出售启动后，经过层层遴选，一名潜在买方于2026年3月获选，有关方面随即开展了为期30个工作日的排他性谈判，但双方在排他期届满后未能签署正式协议，第一轮交易谈判终止。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[16]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;随后，恒大物业启动第二轮股权交易，并于2026年9月底与一名潜在买方签署排他性谈判协议，最终在10月28日签署了股份买卖协议，买家太盟投资也正式浮出水面。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[17]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;由此可见，在一年多的时间里，恒大物业股权交易遵循市场规则和国际惯例，依法合规有序披露信息，让市场清晰完整地看到了股权交易全过程。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[18]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;“去恒大化”后，恒大物业走向何方？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[19]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;在正式进行股权交割后，恒大物业将彻底与恒大“脱钩”，实现“去恒大化”。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[20]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;知情人士透露，太盟投资未来计划继续维持恒大物业现有的运营及管理模式、上市公司地位及独立运营状态，包括保持在管项目的长期经营，以及落实对市场广大业主客户所承诺的服务标准。在平稳过渡和稳定经营的前提下，支持恒大物业强化业务拓展能力，积极争取新的住宅及非住宅物业项目的管理合同，实现在管项目组合的内生增长。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[21]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;有业内人士分析认为，在控股权投资项目中，太盟投资通常会考虑保留核心高管或市场化引进外部高管，并推动资本运作或上下游整合，综合提高企业经营能力。如果太盟投资能够把过往项目积累的管理经验应用到恒大物业，一方面维护物业稳定运营，保证物业服务质量，保障广大业主权益；另一方面，加强市场外拓能力，并寻找物管与商管之间的业务协同机会，促成公司增量发展，将有利于提升恒大物业可持续经营能力，恢复市场信心，利好企业长远发展。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[22]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;kind&quot;: &quot;editor&quot;,
+        &quot;text&quot;: &quot;责任编辑：石秀珍 SF183&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[23]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;kind&quot;: &quot;promotion&quot;,
+        &quot;text&quot;: &quot;海量资讯、精准解读，尽在新浪财经APP&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[2]&quot;
+      }
+    ],
+    &quot;warnings&quot;: [
+      &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+      &quot;images_present_pixels_not_extracted&quot;
+    ]
+  },
+  &quot;after&quot;: {
+    &quot;title&quot;: &quot;恒大物业股权转让大结局，太盟投资将成新东家&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;10月30日，恒大物业（6666.HK）发布公告称，太盟投资集团（PAG，下称“太盟投资”）下属投资控股平台已与中国恒大集团（下称“中国恒大”，已退市）及其子公司CEG Holdings （BVI） Limited签署关于恒大物业股份买卖的正式交易文件。太盟投资将以0.8359港元/股收购中国恒大持有的恒大物业1.361%股份，以0.7271港元/股收购CEG Holdings （BVI） Limited持有的恒大物业49.655%股份并承担其税费等负债合计5亿元人民币，按每股折算，合计对价两者一致。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[2]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;公告表明，待协议约定的有关先决条件达成后，将正式进行股权交割，届时太盟投资将成为恒大物业新控股股东，并向恒大物业其他股东按照每股0.8359港元的价格发起全面要约收购。历时一年多，恒大物业股权转让尘埃落定。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[3]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;太盟为何决意接手恒大物业？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[4]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;根据公开信息，太盟投资是专注亚太地区的多资产品种基金管理和投资平台，业务包括私募股权、不动产、信贷及市场三大核心板块，截至2026年6月30日，合计资产管理规模超过600亿美元，可谓实力雄厚。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[5]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;太盟投资为何决意收购恒大物业？一位投资行业资深人士在接受21世纪经济报道记者采访时指出，恒大物业经营的改善自然是最关键的因素。并且，太盟的并购投资团队深耕中国20多年，在粤港澳大湾区、长三角地区等都有投资布局，代表性案例包括投资腾讯音乐、收购珠海万达商管集团等。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[6]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;2021年下半年恒大集团“爆雷”之时，恒大物业刚刚在香港联交所上市不足1年。由于多种因素叠加，恒大物业2021年底已资不抵债，股价严重下挫，面临严重的资本市场风险和在管物业项目丢盘风险，后因年报无法按时披露，股票于2022年3月停牌，持续稳定经营及维持上市公司地位面临极大挑战。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[7]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;在随后一年多的风险化解中，恒大物业完成了资金占用事项独立调查、涉事董事更换以及内部控制整改工作，提升管理层独立性和诚信度，并做好与大股东风险隔离工作，最终在2023年8月复牌，上市公司地位得以保全。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[8]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;据21世纪经济报道记者了解，恒大集团“爆雷”以来，恒大物业千方百计稳定经营、提升服务质量，全力保障业主合法权益。为稳盘护盘，恒大物业对于交付年限较久的老旧小区，在绿化保洁、公用设施更新维护、维保修等方面持续投入，改善居住环境，提升服务管理水平。与此同时，支持保交楼项目，推动解决业主户内维修、消防、电梯、水电等配套遗留问题，赢得市场和广大业主的认可。恒大物业在管面积从2021年底的4.73亿平方米增加到2026年6月底的6.03亿平方米，新增项目大部分来自恒大体系外，共管理项目3194个，覆盖全国30个省（区、市）。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[9]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;细观太盟投资近年来的布局，物管、商管行业已在版图之中。2026年7月，在方圆生活服务（9978.HK）2023—2025年连续三年净亏损的情况下，太盟投资旗下公司以顾问身份促成方圆生活服务50.01%股权交易案，并有权以每股0.5港元的价格认购方圆生活服务7700万股股份；2021年8月，太盟投资联合其他投资人向珠海万达商管投资约380亿元，并在珠海万达商管赴港上市失败后，又联合其他投资人追加投资约600亿元。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[10]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;“聚光灯”下的股权转让&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[11]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;恒大物业股权转让一直在“聚光灯”下。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[12]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;2025年8月12日，中国恒大清盘人发布首份清盘进展报告，提及中国恒大及CEG Holdings （BVI） Limited合计持有的恒大物业股权是债权人的重要偿债资源，并将恒大物业股权出售作为最高优先事项。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[13]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;2026年10月22日，中国恒大清盘人发布的第二份清盘进展报告显示，恒大物业股权交易共开展了两轮投资人引入工作，累计接触超过160名潜在投资人并签署超30份保密协议。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[14]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;根据公开信息，恒大物业按照香港《收购守则》第3.7条相关要求，每月更新股权交易进展，从2025年9月11日至2026年9月30日，在正式签订股份买卖协议前已发布13份进展更新公告，披露了签订保密协议、提交非约束性意向要约、开展买方尽调、更新要约方案、与潜在投资人开展磋商、签署排他性谈判协议等情况。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[15]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;恒大物业股权出售启动后，经过层层遴选，一名潜在买方于2026年3月获选，有关方面随即开展了为期30个工作日的排他性谈判，但双方在排他期届满后未能签署正式协议，第一轮交易谈判终止。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[16]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;随后，恒大物业启动第二轮股权交易，并于2026年9月底与一名潜在买方签署排他性谈判协议，最终在10月28日签署了股份买卖协议，买家太盟投资也正式浮出水面。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[17]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;由此可见，在一年多的时间里，恒大物业股权交易遵循市场规则和国际惯例，依法合规有序披露信息，让市场清晰完整地看到了股权交易全过程。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[18]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;“去恒大化”后，恒大物业走向何方？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[19]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;在正式进行股权交割后，恒大物业将彻底与恒大“脱钩”，实现“去恒大化”。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[20]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;知情人士透露，太盟投资未来计划继续维持恒大物业现有的运营及管理模式、上市公司地位及独立运营状态，包括保持在管项目的长期经营，以及落实对市场广大业主客户所承诺的服务标准。在平稳过渡和稳定经营的前提下，支持恒大物业强化业务拓展能力，积极争取新的住宅及非住宅物业项目的管理合同，实现在管项目组合的内生增长。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[21]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;有业内人士分析认为，在控股权投资项目中，太盟投资通常会考虑保留核心高管或市场化引进外部高管，并推动资本运作或上下游整合，综合提高企业经营能力。如果太盟投资能够把过往项目积累的管理经验应用到恒大物业，一方面维护物业稳定运营，保证物业服务质量，保障广大业主权益；另一方面，加强市场外拓能力，并寻找物管与商管之间的业务协同机会，促成公司增量发展，将有利于提升恒大物业可持续经营能力，恢复市场信心，利好企业长远发展。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[22]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;kind&quot;: &quot;author&quot;,
+        &quot;text&quot;: &quot;21世纪经济报道记者 程雪溶&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;editor&quot;,
+        &quot;text&quot;: &quot;责任编辑：石秀珍 SF183&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[23]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;kind&quot;: &quot;promotion&quot;,
+        &quot;text&quot;: &quot;海量资讯、精准解读，尽在新浪财经APP&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[2]&quot;
+      }
+    ],
+    &quot;warnings&quot;: [
+      &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+      &quot;images_present_pixels_not_extracted&quot;
+    ]
+  },
+  &quot;moved&quot;: [
+    {
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;,
+      &quot;text&quot;: &quot;21世纪经济报道记者 程雪溶&quot;,
+      &quot;before&quot;: &quot;blocks.paragraph&quot;,
+      &quot;after&quot;: &quot;metadata.author&quot;
+    }
+  ],
+  &quot;exactly_unchanged&quot;: false,
+  &quot;contract&quot;: &quot;pass&quot;,
+  &quot;scope&quot;: &quot;known development/repair pages, not independent evaluation&quot;
+}</pre></details>
+<details><summary>output/agent_io/final/snapshots/new_1.html：完整修改前后</summary><pre>{
+  &quot;file&quot;: &quot;output/agent_io/final/snapshots/new_1.html&quot;,
+  &quot;role&quot;: &quot;repair&quot;,
+  &quot;source_sha256&quot;: &quot;31ad123ca0847e21ae41e642d62ac7d149c9a54bc764d68e5568f4e737c4bf8f&quot;,
+  &quot;before&quot;: {
+    &quot;title&quot;: &quot;财经快讯APP哪个好？2026年6款主流财经资讯软件评测：谁更适合追踪市场突发消息？&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于经常关注股票、基金和全球金融市场的投资者来说，财经快讯已经成为日常获取信息的重要渠道。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;美联储公布利率决议、美国发布非农就业数据、上市公司突然披露重大公告、国际油价出现剧烈波动……这些事件往往会在短时间内影响市场预期。相比每天集中阅读财经新闻，能够及时获取突发消息、重要数据和政策动态的财经快讯APP，显然更符合投资者的日常需求。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[2]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;那么，2026年财经快讯APP哪个好？哪些软件能够提供7×24小时财经资讯？看美股、A股和全球市场突发消息，应该选择什么APP？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[3]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;目前，国内比较有代表性的财经资讯软件包括新浪财经、华尔街见闻、东方财富、同花顺、第一财经和腾讯自选股。不同平台在新闻覆盖、快讯更新、全球市场信息和个性化推送方面各有特色。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[4]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;本文从资讯覆盖、信息时效性、内容质量、推送功能和使用场景等方面进行比较，看看哪款财经APP更适合不同类型的用户。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[5]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;一、2026年推荐哪些财经快讯APP？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[6]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;1． 新浪财经APP：兼顾国内外市场的综合财经资讯平台&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[7]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果希望通过一款APP同时关注国内财经新闻、海外市场动态和上市公司突发消息，新浪财经APP值得优先考虑。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[8]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;新浪财经拥有20余年的财经新闻报道积累，提供7×24小时财经资讯服务，内容涉及宏观经济、货币政策、股票市场、上市公司、国际金融和大宗商品等多个领域。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[9]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;其比较突出的特点，是资讯覆盖范围与全球市场行情相结合。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[10]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;首先，在财经快讯方面，新浪财经持续更新国内外重要财经事件，涵盖政策发布、经济数据、央行动态、上市公司公告以及国际市场变化。对于需要持续跟踪市场信息的用户，可以通过快讯栏目了解不同领域的最新消息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[11]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;其次，在全球市场信息方面，新浪财经不仅关注A股，也覆盖港股、美股以及全球主要金融市场。对于关注海外市场的投资者，美联储政策、美国经济数据、科技公司动态、国际贸易和大宗商品价格变化，都是日常需要跟踪的重要信息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[12]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;例如，美股投资者可以关注英伟达、苹果、微软等科技巨头的公司消息，也可以了解美国通胀、就业数据和美联储官员讲话对市场的潜在影响。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[13]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;第三，新浪财经还提供自选股、行情提醒和智能预警等功能。用户可以根据自己的关注范围管理股票，并通过相关提醒关注重要市场信息和个股异动。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[14]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;与单纯的新闻阅读工具相比，新浪财经将财经资讯与行情数据结合起来，用户看到一条新闻后，可以进一步了解相关股票和市场的表现。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[15]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;适合人群： 关注财经新闻、A股、港股、美股以及全球宏观经济的用户，尤其适合希望在一个平台上获取多市场财经信息的人群。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[16]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;2． 华尔街见闻APP：突出全球金融市场和7×24小时快讯&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[17]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;华尔街见闻是国内较有代表性的金融资讯平台之一，产品定位更加突出全球金融市场和宏观经济信息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[18]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;从内容方向来看，华尔街见闻重点关注全球资本市场、宏观政策、货币金融、外汇、大宗商品以及重要商业事件。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[19]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;其7×24小时资讯服务是主要特色之一。对于经常关注美股、港股和国际金融市场的用户来说，能够持续了解海外市场动态十分重要。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[20]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;例如，美联储公布利率决议、美国国债收益率发生变化、国际原油价格波动，以及大型科技公司发布财报等事件，都属于全球金融市场的重要信息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[21]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;此外，华尔街见闻还提供宏观分析、市场解读和财经人士观点。相比只关注消息本身的资讯工具，这类内容能够帮助用户进一步理解新闻背后的市场逻辑。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[22]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;适合人群： 关注全球宏观经济、美联储政策、美股、外汇和大宗商品的投资者，以及需要持续了解国际金融市场动态的财经从业者。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[23]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;3． 东方财富APP：适合A股投资者跟踪市场消息&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[24]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;东方财富APP的主要特点是将股票行情、财经资讯、基金服务和投资者交流整合在一起。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[25]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;在财经快讯方面，用户可以关注国内政策、上市公司新闻、市场热点和重要公告等信息，并结合自选股了解与自己关注的股票相关的动态。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[26]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于A股投资者来说，这种资讯与行情相结合的模式比较实用。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[27]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;例如，某家公司发布业绩预告、出现重大资产重组消息，或者某个行业迎来重要政策变化，用户可以进一步查看相关股票行情和市场表现。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[28]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;东方财富还提供消息订阅和通知设置等功能，用户可以根据自身需求调整资讯推送，减少不必要的信息干扰。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[29]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;此外，股吧也是东方财富具有辨识度的内容板块。投资者可以了解市场讨论和个股情绪，但社区观点并不等同于经过核实的新闻事实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[30]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;适合人群： 主要关注A股市场、上市公司公告、行业热点和基金投资的用户。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[31]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;4． 同花顺APP：行情与市场热点资讯结合&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[32]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;同花顺不仅是一款股票行情软件，也提供财经新闻、市场快讯和个股动态等信息服务。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[33]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;其特点在于资讯与行情分析之间的联系比较紧密。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[34]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;用户可以通过APP了解市场重要消息，同时查看大盘走势、板块表现、个股异动和相关技术指标。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[35]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;例如，当某个行业出现重大政策消息时，投资者可以进一步观察相关板块的涨跌情况，了解市场资金和个股表现。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[36]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;同花顺还提供智能盯盘、股价预警和大事提醒等功能，方便用户跟踪自己关注的股票。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[37]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;不过，如果用户主要需求是阅读国际财经新闻、了解全球宏观经济和海外市场事件，那么还需要结合其他综合财经资讯平台使用。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[38]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;适合人群： 关注A股行情、热点板块、个股异动和技术分析的投资者。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[39]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;5． 第一财经APP：重视财经报道和专业解读&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[40]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;第一财经APP的优势在于专业财经媒体内容和多媒体报道。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[41]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;与主要围绕股票行情展开的工具型产品相比，第一财经更加重视财经新闻报道、宏观经济分析、商业事件和财经节目。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[42]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;用户可以通过APP获取国内外重要财经资讯，也可以观看财经直播和相关节目。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[43]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于一些复杂的经济政策、行业变化和企业经营事件，单纯阅读一条快讯可能无法全面理解背景，而第一财经的专题报道、记者采访和节目解读能够提供更多信息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[44]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;其内容形式也比较丰富，包括文字、视频、直播和广播等。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[45]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;适合人群： 重视财经新闻质量、宏观经济分析和专业财经节目，希望深入了解市场事件的用户。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[46]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;6． 腾讯自选股APP：适合日常关注股票和相关资讯&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[47]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;腾讯自选股APP主要围绕自选股管理、股票行情和相关财经资讯展开。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[48]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于普通投资者来说，日常最常见的需求之一，就是及时了解自己持有或关注的股票是否出现重要消息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[49]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;腾讯自选股可以帮助用户管理关注的股票，并结合行情和相关资讯了解市场变化。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[50]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;与一些功能比较丰富的专业财经平台相比，其使用场景更加偏向日常股票跟踪。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[51]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;适合人群： 主要关注少量股票、希望及时了解自选股行情和相关消息的普通投资者。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[52]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;二、财经快讯APP怎么比较？重点关注五个方面&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[53]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;财经快讯APP之间的差异，不仅仅是每天发布多少条新闻，更重要的是能否帮助用户及时、准确地了解真正重要的信息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[54]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;选择财经快讯软件，可以重点考察以下五个方面。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[55]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;第一，信息更新是否及时。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[56]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于财经快讯来说，时效性非常重要。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[57]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;例如，美联储公布利率决议、美国劳工部发布非农就业数据、上市公司发布重大公告，这些事件都有明确的发生时间。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[58]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;一款好的财经快讯APP，应该能够及时更新相关信息，让用户尽早了解事件进展。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[59]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;需要注意的是，不同平台可能采用不同的信息来源、审核流程和发布机制。没有统一的测试环境和时间戳对比，不能简单认定某款APP永远比其他平台快几秒。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[60]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;第二，新闻覆盖是否全面。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[61]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果只关注A股，国内政策、上市公司公告和行业动态可能已经能够满足大部分需求。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[62]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;但如果同时关注美股、港股和全球金融市场，资讯覆盖范围就显得更加重要。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[63]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;例如，美国经济数据、美联储官员讲话、欧洲央行政策、日本央行利率决议、国际原油价格以及全球科技行业动态，都可能影响投资者的判断。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[64]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;新浪财经和华尔街见闻在综合全球财经信息方面值得关注。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[65]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;第三，信息是否准确，来源是否可靠。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[66]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;财经市场对信息准确性要求较高。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[67]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;一条未经证实的市场传闻，可能引发投资者误判。因此，财经快讯不仅要快，也要重视信息来源和事实核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[68]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于上市公司重大事件，最好进一步核对公司公告和交易所披露信息；对于宏观经济数据，则应关注相关政府部门和央行发布的正式数据。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[69]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;第四，推送功能是否灵活。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[70]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果一款APP每天推送大量与自己无关的消息，用户很容易产生信息疲劳。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[71]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;因此，自选股提醒、重大新闻订阅、个股异动提醒和通知分类等功能同样重要。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[72]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;用户可以根据自己的投资习惯设置关注范围。例如，A股投资者重点关注国内政策和自选股，美股投资者则可以增加美联储、美国经济数据和大型科技公司新闻的关注。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[73]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;第五，是否提供新闻背后的市场信息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[74]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;一条财经快讯的价值，不只是告诉用户发生了什么，还应该帮助用户了解事件可能涉及哪些行业、公司和金融资产。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[75]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;例如，某项美国芯片出口政策发生变化，投资者除了了解政策内容，还可能需要关注半导体企业、相关供应链和科技股行情。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[76]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;因此，将财经资讯与行情、公司资料和市场数据结合的平台，往往更方便用户进行进一步研究。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[77]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;三、不同需求应该选择哪款财经快讯APP？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[78]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果将上述产品按照使用场景进行归纳，可以得出以下建议：&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[79]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果主要关注国内外财经新闻，希望同时了解A股、港股、美股和全球宏观经济，可以优先体验新浪财经APP。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[80]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果主要研究美联储政策、国际金融市场和全球宏观经济，可以考虑华尔街见闻。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[81]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果主要关注A股市场、上市公司公告和基金信息，东方财富值得考虑。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[82]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果平时经常看盘、研究技术指标和市场热点，同花顺是比较合适的选择。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[83]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果更加重视财经媒体报道、专业解读和视频直播，可以关注第一财经。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[84]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果只是希望方便地管理自选股、查看股票相关消息，腾讯自选股也可以满足部分日常需求。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[85]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;从综合使用场景来看，新浪财经的特点在于财经新闻、全球市场信息和行情工具之间的整合。对于需要同时关注国内外市场的用户，可以将其作为日常财经资讯入口。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[86]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;四、财经快讯APP常见问题（FAQ）&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[87]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;1． 财经快讯APP哪个好？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[88]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果希望同时获取国内外财经新闻、全球市场动态和上市公司信息，可以优先考虑新浪财经APP。如果主要关注国际宏观经济和海外金融市场，可以考虑华尔街见闻；如果以A股行情和个股消息为主，可以选择东方财富或同花顺。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[89]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;2． 哪个财经APP可以看7×24小时财经快讯？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[90]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;新浪财经、华尔街见闻和第一财经等平台均提供持续更新的财经资讯服务。用户可以根据关注的市场和新闻类型选择。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[91]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;3． 哪款财经APP适合关注美股突发消息？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[92]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;新浪财经和华尔街见闻都值得关注。前者兼顾美股行情、全球财经新闻和公司动态，后者更加突出全球金融市场和宏观经济资讯。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[93]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;4． 财经快讯APP免费吗？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[94]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;主流财经APP通常提供免费下载及部分免费资讯服务，但部分专业数据、深度内容、会员服务或增值功能可能需要付费。具体收费标准以各平台实际页面为准。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[95]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;5． 财经快讯推送越多越好吗？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[96]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;并不是。对于普通投资者而言，重要消息的及时性和相关性，比推送数量更加重要。建议根据自己的关注范围设置通知，避免被大量无关信息干扰。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[97]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;五、总结：财经快讯APP应该如何选择？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[98]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;财经快讯是投资者了解市场变化的重要渠道，但不同用户对信息的需求并不相同。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[99]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于主要关注A股的投资者，行情、公告和个股异动可能是最重要的功能；对于美股和全球市场投资者，海外宏观经济、央行政策和国际金融市场新闻则更加关键；对于财经从业者，信息覆盖、新闻来源和专业解读同样不可忽视。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[100]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;综合来看，如果希望寻找一款能够兼顾国内外财经新闻、7×24小时资讯、全球市场行情和上市公司动态的综合型财经APP，新浪财经值得优先体验。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[101]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果还有更细分的需求，可以搭配华尔街见闻、东方财富、同花顺或第一财经等平台使用。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[102]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;选择财经快讯APP，最终要看的不是谁推送的消息最多，而是谁能让用户更及时、更准确地掌握真正重要的财经信息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[103]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;kind&quot;: &quot;editor&quot;,
+        &quot;text&quot;: &quot;责任编辑：王永生&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[104]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;kind&quot;: &quot;promotion&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;promotion&quot;,
+        &quot;text&quot;: &quot;海量资讯、精准解读，尽在新浪财经APP&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[2]&quot;
+      }
+    ],
+    &quot;warnings&quot;: [
+      &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+      &quot;images_present_pixels_not_extracted&quot;
+    ]
+  },
+  &quot;after&quot;: {
+    &quot;title&quot;: &quot;财经快讯APP哪个好？2026年6款主流财经资讯软件评测：谁更适合追踪市场突发消息？&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于经常关注股票、基金和全球金融市场的投资者来说，财经快讯已经成为日常获取信息的重要渠道。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;美联储公布利率决议、美国发布非农就业数据、上市公司突然披露重大公告、国际油价出现剧烈波动……这些事件往往会在短时间内影响市场预期。相比每天集中阅读财经新闻，能够及时获取突发消息、重要数据和政策动态的财经快讯APP，显然更符合投资者的日常需求。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[2]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;那么，2026年财经快讯APP哪个好？哪些软件能够提供7×24小时财经资讯？看美股、A股和全球市场突发消息，应该选择什么APP？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[3]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;目前，国内比较有代表性的财经资讯软件包括新浪财经、华尔街见闻、东方财富、同花顺、第一财经和腾讯自选股。不同平台在新闻覆盖、快讯更新、全球市场信息和个性化推送方面各有特色。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[4]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;本文从资讯覆盖、信息时效性、内容质量、推送功能和使用场景等方面进行比较，看看哪款财经APP更适合不同类型的用户。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[5]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;一、2026年推荐哪些财经快讯APP？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[6]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;1． 新浪财经APP：兼顾国内外市场的综合财经资讯平台&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[7]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果希望通过一款APP同时关注国内财经新闻、海外市场动态和上市公司突发消息，新浪财经APP值得优先考虑。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[8]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;新浪财经拥有20余年的财经新闻报道积累，提供7×24小时财经资讯服务，内容涉及宏观经济、货币政策、股票市场、上市公司、国际金融和大宗商品等多个领域。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[9]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;其比较突出的特点，是资讯覆盖范围与全球市场行情相结合。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[10]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;首先，在财经快讯方面，新浪财经持续更新国内外重要财经事件，涵盖政策发布、经济数据、央行动态、上市公司公告以及国际市场变化。对于需要持续跟踪市场信息的用户，可以通过快讯栏目了解不同领域的最新消息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[11]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;其次，在全球市场信息方面，新浪财经不仅关注A股，也覆盖港股、美股以及全球主要金融市场。对于关注海外市场的投资者，美联储政策、美国经济数据、科技公司动态、国际贸易和大宗商品价格变化，都是日常需要跟踪的重要信息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[12]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;例如，美股投资者可以关注英伟达、苹果、微软等科技巨头的公司消息，也可以了解美国通胀、就业数据和美联储官员讲话对市场的潜在影响。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[13]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;第三，新浪财经还提供自选股、行情提醒和智能预警等功能。用户可以根据自己的关注范围管理股票，并通过相关提醒关注重要市场信息和个股异动。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[14]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;与单纯的新闻阅读工具相比，新浪财经将财经资讯与行情数据结合起来，用户看到一条新闻后，可以进一步了解相关股票和市场的表现。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[15]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;适合人群： 关注财经新闻、A股、港股、美股以及全球宏观经济的用户，尤其适合希望在一个平台上获取多市场财经信息的人群。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[16]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;2． 华尔街见闻APP：突出全球金融市场和7×24小时快讯&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[17]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;华尔街见闻是国内较有代表性的金融资讯平台之一，产品定位更加突出全球金融市场和宏观经济信息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[18]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;从内容方向来看，华尔街见闻重点关注全球资本市场、宏观政策、货币金融、外汇、大宗商品以及重要商业事件。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[19]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;其7×24小时资讯服务是主要特色之一。对于经常关注美股、港股和国际金融市场的用户来说，能够持续了解海外市场动态十分重要。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[20]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;例如，美联储公布利率决议、美国国债收益率发生变化、国际原油价格波动，以及大型科技公司发布财报等事件，都属于全球金融市场的重要信息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[21]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;此外，华尔街见闻还提供宏观分析、市场解读和财经人士观点。相比只关注消息本身的资讯工具，这类内容能够帮助用户进一步理解新闻背后的市场逻辑。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[22]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;适合人群： 关注全球宏观经济、美联储政策、美股、外汇和大宗商品的投资者，以及需要持续了解国际金融市场动态的财经从业者。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[23]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;3． 东方财富APP：适合A股投资者跟踪市场消息&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[24]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;东方财富APP的主要特点是将股票行情、财经资讯、基金服务和投资者交流整合在一起。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[25]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;在财经快讯方面，用户可以关注国内政策、上市公司新闻、市场热点和重要公告等信息，并结合自选股了解与自己关注的股票相关的动态。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[26]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于A股投资者来说，这种资讯与行情相结合的模式比较实用。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[27]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;例如，某家公司发布业绩预告、出现重大资产重组消息，或者某个行业迎来重要政策变化，用户可以进一步查看相关股票行情和市场表现。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[28]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;东方财富还提供消息订阅和通知设置等功能，用户可以根据自身需求调整资讯推送，减少不必要的信息干扰。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[29]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;此外，股吧也是东方财富具有辨识度的内容板块。投资者可以了解市场讨论和个股情绪，但社区观点并不等同于经过核实的新闻事实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[30]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;适合人群： 主要关注A股市场、上市公司公告、行业热点和基金投资的用户。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[31]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;4． 同花顺APP：行情与市场热点资讯结合&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[32]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;同花顺不仅是一款股票行情软件，也提供财经新闻、市场快讯和个股动态等信息服务。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[33]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;其特点在于资讯与行情分析之间的联系比较紧密。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[34]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;用户可以通过APP了解市场重要消息，同时查看大盘走势、板块表现、个股异动和相关技术指标。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[35]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;例如，当某个行业出现重大政策消息时，投资者可以进一步观察相关板块的涨跌情况，了解市场资金和个股表现。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[36]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;同花顺还提供智能盯盘、股价预警和大事提醒等功能，方便用户跟踪自己关注的股票。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[37]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;不过，如果用户主要需求是阅读国际财经新闻、了解全球宏观经济和海外市场事件，那么还需要结合其他综合财经资讯平台使用。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[38]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;适合人群： 关注A股行情、热点板块、个股异动和技术分析的投资者。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[39]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;5． 第一财经APP：重视财经报道和专业解读&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[40]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;第一财经APP的优势在于专业财经媒体内容和多媒体报道。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[41]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;与主要围绕股票行情展开的工具型产品相比，第一财经更加重视财经新闻报道、宏观经济分析、商业事件和财经节目。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[42]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;用户可以通过APP获取国内外重要财经资讯，也可以观看财经直播和相关节目。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[43]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于一些复杂的经济政策、行业变化和企业经营事件，单纯阅读一条快讯可能无法全面理解背景，而第一财经的专题报道、记者采访和节目解读能够提供更多信息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[44]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;其内容形式也比较丰富，包括文字、视频、直播和广播等。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[45]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;适合人群： 重视财经新闻质量、宏观经济分析和专业财经节目，希望深入了解市场事件的用户。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[46]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;6． 腾讯自选股APP：适合日常关注股票和相关资讯&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[47]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;腾讯自选股APP主要围绕自选股管理、股票行情和相关财经资讯展开。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[48]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于普通投资者来说，日常最常见的需求之一，就是及时了解自己持有或关注的股票是否出现重要消息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[49]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;腾讯自选股可以帮助用户管理关注的股票，并结合行情和相关资讯了解市场变化。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[50]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;与一些功能比较丰富的专业财经平台相比，其使用场景更加偏向日常股票跟踪。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[51]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;适合人群： 主要关注少量股票、希望及时了解自选股行情和相关消息的普通投资者。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[52]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;二、财经快讯APP怎么比较？重点关注五个方面&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[53]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;财经快讯APP之间的差异，不仅仅是每天发布多少条新闻，更重要的是能否帮助用户及时、准确地了解真正重要的信息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[54]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;选择财经快讯软件，可以重点考察以下五个方面。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[55]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;第一，信息更新是否及时。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[56]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于财经快讯来说，时效性非常重要。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[57]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;例如，美联储公布利率决议、美国劳工部发布非农就业数据、上市公司发布重大公告，这些事件都有明确的发生时间。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[58]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;一款好的财经快讯APP，应该能够及时更新相关信息，让用户尽早了解事件进展。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[59]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;需要注意的是，不同平台可能采用不同的信息来源、审核流程和发布机制。没有统一的测试环境和时间戳对比，不能简单认定某款APP永远比其他平台快几秒。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[60]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;第二，新闻覆盖是否全面。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[61]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果只关注A股，国内政策、上市公司公告和行业动态可能已经能够满足大部分需求。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[62]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;但如果同时关注美股、港股和全球金融市场，资讯覆盖范围就显得更加重要。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[63]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;例如，美国经济数据、美联储官员讲话、欧洲央行政策、日本央行利率决议、国际原油价格以及全球科技行业动态，都可能影响投资者的判断。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[64]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;新浪财经和华尔街见闻在综合全球财经信息方面值得关注。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[65]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;第三，信息是否准确，来源是否可靠。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[66]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;财经市场对信息准确性要求较高。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[67]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;一条未经证实的市场传闻，可能引发投资者误判。因此，财经快讯不仅要快，也要重视信息来源和事实核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[68]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于上市公司重大事件，最好进一步核对公司公告和交易所披露信息；对于宏观经济数据，则应关注相关政府部门和央行发布的正式数据。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[69]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;第四，推送功能是否灵活。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[70]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果一款APP每天推送大量与自己无关的消息，用户很容易产生信息疲劳。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[71]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;因此，自选股提醒、重大新闻订阅、个股异动提醒和通知分类等功能同样重要。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[72]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;用户可以根据自己的投资习惯设置关注范围。例如，A股投资者重点关注国内政策和自选股，美股投资者则可以增加美联储、美国经济数据和大型科技公司新闻的关注。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[73]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;第五，是否提供新闻背后的市场信息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[74]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;一条财经快讯的价值，不只是告诉用户发生了什么，还应该帮助用户了解事件可能涉及哪些行业、公司和金融资产。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[75]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;例如，某项美国芯片出口政策发生变化，投资者除了了解政策内容，还可能需要关注半导体企业、相关供应链和科技股行情。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[76]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;因此，将财经资讯与行情、公司资料和市场数据结合的平台，往往更方便用户进行进一步研究。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[77]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;三、不同需求应该选择哪款财经快讯APP？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[78]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果将上述产品按照使用场景进行归纳，可以得出以下建议：&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[79]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果主要关注国内外财经新闻，希望同时了解A股、港股、美股和全球宏观经济，可以优先体验新浪财经APP。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[80]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果主要研究美联储政策、国际金融市场和全球宏观经济，可以考虑华尔街见闻。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[81]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果主要关注A股市场、上市公司公告和基金信息，东方财富值得考虑。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[82]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果平时经常看盘、研究技术指标和市场热点，同花顺是比较合适的选择。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[83]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果更加重视财经媒体报道、专业解读和视频直播，可以关注第一财经。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[84]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果只是希望方便地管理自选股、查看股票相关消息，腾讯自选股也可以满足部分日常需求。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[85]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;从综合使用场景来看，新浪财经的特点在于财经新闻、全球市场信息和行情工具之间的整合。对于需要同时关注国内外市场的用户，可以将其作为日常财经资讯入口。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[86]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;四、财经快讯APP常见问题（FAQ）&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[87]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;1． 财经快讯APP哪个好？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[88]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果希望同时获取国内外财经新闻、全球市场动态和上市公司信息，可以优先考虑新浪财经APP。如果主要关注国际宏观经济和海外金融市场，可以考虑华尔街见闻；如果以A股行情和个股消息为主，可以选择东方财富或同花顺。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[89]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;2． 哪个财经APP可以看7×24小时财经快讯？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[90]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;新浪财经、华尔街见闻和第一财经等平台均提供持续更新的财经资讯服务。用户可以根据关注的市场和新闻类型选择。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[91]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;3． 哪款财经APP适合关注美股突发消息？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[92]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;新浪财经和华尔街见闻都值得关注。前者兼顾美股行情、全球财经新闻和公司动态，后者更加突出全球金融市场和宏观经济资讯。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[93]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;4． 财经快讯APP免费吗？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[94]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;主流财经APP通常提供免费下载及部分免费资讯服务，但部分专业数据、深度内容、会员服务或增值功能可能需要付费。具体收费标准以各平台实际页面为准。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[95]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;5． 财经快讯推送越多越好吗？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[96]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;并不是。对于普通投资者而言，重要消息的及时性和相关性，比推送数量更加重要。建议根据自己的关注范围设置通知，避免被大量无关信息干扰。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[97]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;五、总结：财经快讯APP应该如何选择？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[98]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;财经快讯是投资者了解市场变化的重要渠道，但不同用户对信息的需求并不相同。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[99]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于主要关注A股的投资者，行情、公告和个股异动可能是最重要的功能；对于美股和全球市场投资者，海外宏观经济、央行政策和国际金融市场新闻则更加关键；对于财经从业者，信息覆盖、新闻来源和专业解读同样不可忽视。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[100]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;综合来看，如果希望寻找一款能够兼顾国内外财经新闻、7×24小时资讯、全球市场行情和上市公司动态的综合型财经APP，新浪财经值得优先体验。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[101]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如果还有更细分的需求，可以搭配华尔街见闻、东方财富、同花顺或第一财经等平台使用。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[102]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;选择财经快讯APP，最终要看的不是谁推送的消息最多，而是谁能让用户更及时、更准确地掌握真正重要的财经信息。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[103]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;kind&quot;: &quot;editor&quot;,
+        &quot;text&quot;: &quot;责任编辑：王永生&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[104]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;kind&quot;: &quot;promotion&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;promotion&quot;,
+        &quot;text&quot;: &quot;海量资讯、精准解读，尽在新浪财经APP&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[2]&quot;
+      }
+    ],
+    &quot;warnings&quot;: [
+      &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+      &quot;images_present_pixels_not_extracted&quot;
+    ]
+  },
+  &quot;moved&quot;: [],
+  &quot;exactly_unchanged&quot;: true,
+  &quot;contract&quot;: &quot;pass&quot;,
+  &quot;scope&quot;: &quot;known development/repair pages, not independent evaluation&quot;
+}</pre></details>
+<details><summary>output/agent_io/final/snapshots/new_2.html：完整修改前后</summary><pre>{
+  &quot;file&quot;: &quot;output/agent_io/final/snapshots/new_2.html&quot;,
+  &quot;role&quot;: &quot;repair&quot;,
+  &quot;source_sha256&quot;: &quot;ca89961908ed43c07ab938c9015c6d809050c0345fbf6a79749fc726737a7ded&quot;,
+  &quot;before&quot;: {
+    &quot;title&quot;: &quot;股票涨停分析看哪个APP？四款工具对比&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;A股一天几十上百只股票涨停。涨停时间、封单量、炸板次数，哪家APP都给；真正拉开差距的是另一件事——这只股票为什么涨停，是政策催化、业绩超预期，还是游资接力。先把结论放在前面：以涨停分析为重点、每天要做复盘的短线投资者，新浪财经APP的分析链条更完整；只看技术指标做量化的，同花顺顺手；习惯泡在社区里听观点的，东方财富合适。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;光有涨停榜，看不出门道&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[2]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;打开任何一款炒股软件的涨停榜，看到的都是同一张表：股票名称、涨停时间、封单金额、连板数。数据没有差别，差别在榜后面那一句“为什么涨”。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[3]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;短线交易里这一句才值钱。同样是涨停，政策驱动的品种第二天往往有惯性，情绪炒作的高位板随时可能炸，两种逻辑对应的操作完全不同。只给榜不给原因的工具，等于把判断这一步留给了用户自己——而普通投资者缺的恰恰是判断依据。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[4]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;新浪财经APP：从盘前到盘后的分析链条&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[5]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;按公开介绍，新浪财经APP围绕涨停搭了一条完整的工具链，这也是它和“只给榜”的工具拉开差距的地方。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[6]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;盘前有“涨停内参”，提前梳理隔夜消息和可能发酵的方向；交易时段提供沪深两市涨停分析，涨停个股、强势板块、连板天梯三块内容放在同一个“涨停聚焦”模块里，并按风险分级标注，AI强势识别负责把每只涨停股背后的驱动逻辑拆出来；盘后则是“掘金龙虎榜”，游资席位、机构席位、外资动向分别列明，一只涨停股是机构合力推升还是游资一日游，看席位结构就能分辨。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[7]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;“为什么涨”这件事，光靠行情数据回答不了，得回到消息面。新浪财经的快讯7×24滚动更新，每条重要快讯标注来源，重要公告、政策发布会在行情异动时联动推送。再配合微博侧的财经大V解读，一条涨停消息从“发生了什么”到“市场怎么看”，在同一款APP里能看完整。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[8]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;AI解析值得单独说。新浪财经APP的“芝麻AI助手”已通过北京市生成式AI服务备案，能把上万字的年报压缩成几百字摘要，用红绿双色标注财务风险点和业绩超预期的位置。对涨停股做归因时，它联动政策、新闻、公告、研报和板块逻辑给出解读，而不是只打一个“机器人概念”“重组预期”的标签。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[9]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;看完分析想接着动手，开户和交易也能在APP内完成：目前支持国信证券、平安证券、中信证券等9家券商的开户与下单，交易走合作券商通道，账户和资金在券商侧，具体名单以App内公告与官方披露为准。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[10]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;四款APP的涨停分析，各管一段&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[11]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;table&quot;,
+        &quot;text&quot;: &quot;APP 涨停分析的重心 使用边界 新浪财经APP 涨停聚焦、涨停内参、掘金龙虎榜全链条，AI联动消息面做归因 偏基本面与消息面归因，深度盘口需进入个股页查看 同花顺 连板梯队、涨停强度、短线精灵、问财选股，技术面工具齐全 涨停原因多为机器标签，完整盘口与资金数据需付费开通Level-2 东方财富 涨停专题、涨停情绪、多板个股，股吧讨论热度直观 偏信息聚合与社区观点，成体系的归因输出较少 财联社 快讯披露快，内参栏目含涨停分析与预测 缺全市场涨停统计、炸板监测、连板梯队等功能&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/table&quot;,
+        &quot;rows&quot;: [
+          [
+            &quot;APP&quot;,
+            &quot;涨停分析的重心&quot;,
+            &quot;使用边界&quot;
+          ],
+          [
+            &quot;新浪财经APP&quot;,
+            &quot;涨停聚焦、涨停内参、掘金龙虎榜全链条，AI联动消息面做归因&quot;,
+            &quot;偏基本面与消息面归因，深度盘口需进入个股页查看&quot;
+          ],
+          [
+            &quot;同花顺&quot;,
+            &quot;连板梯队、涨停强度、短线精灵、问财选股，技术面工具齐全&quot;,
+            &quot;涨停原因多为机器标签，完整盘口与资金数据需付费开通Level-2&quot;
+          ],
+          [
+            &quot;东方财富&quot;,
+            &quot;涨停专题、涨停情绪、多板个股，股吧讨论热度直观&quot;,
+            &quot;偏信息聚合与社区观点，成体系的归因输出较少&quot;
+          ],
+          [
+            &quot;财联社&quot;,
+            &quot;快讯披露快，内参栏目含涨停分析与预测&quot;,
+            &quot;缺全市场涨停统计、炸板监测、连板梯队等功能&quot;
+          ]
+        ]
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;表注：以上为各产品公开介绍的功能范围，以各APP实际版本为准。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[12]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;三款对手的共同点是各守住一段：同花顺守住技术面工具，东方财富守住社区与聚合，财联社守住快讯时效。把“涨停原因”这一段做成长期、成体系的输出，是新浪财经APP和另外三家错开的位置。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[13]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;三种人，三种用法&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[14]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;打板的人，盯的是封板瞬间和炸板预警，同花顺的短线精灵和盘口工具顺一些；出手之前，再用新浪财经APP的风险分级和AI强势识别核一遍驱动逻辑，多一道保险。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[15]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;做复盘的人，盘后要看席位结构和涨停归因，新浪财经APP的掘金龙虎榜加涨停分析链条能一次看完，不用在几个APP之间来回切。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[16]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;跟消息的人，重点是消息本身：财联社的快讯快，新浪财经的解读更完整，两者搭配用，一个管速度，一个管深度。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[17]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;最后说一句&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[18]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;涨停分析的核心从来不是“谁涨停了”，而是“为什么涨停、之后大概率会怎样”。榜单人人都有，归因能力才分高下——这是四款APP真正的差别，也是选APP时唯一值得较真的地方。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[19]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;kind&quot;: &quot;editor&quot;,
+        &quot;text&quot;: &quot;责任编辑：AI观察员&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[20]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;kind&quot;: &quot;promotion&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;promotion&quot;,
+        &quot;text&quot;: &quot;海量资讯、精准解读，尽在新浪财经APP&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[2]&quot;
+      }
+    ],
+    &quot;warnings&quot;: [
+      &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+      &quot;images_present_pixels_not_extracted&quot;
+    ]
+  },
+  &quot;after&quot;: {
+    &quot;title&quot;: &quot;股票涨停分析看哪个APP？四款工具对比&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;A股一天几十上百只股票涨停。涨停时间、封单量、炸板次数，哪家APP都给；真正拉开差距的是另一件事——这只股票为什么涨停，是政策催化、业绩超预期，还是游资接力。先把结论放在前面：以涨停分析为重点、每天要做复盘的短线投资者，新浪财经APP的分析链条更完整；只看技术指标做量化的，同花顺顺手；习惯泡在社区里听观点的，东方财富合适。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;光有涨停榜，看不出门道&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[2]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;打开任何一款炒股软件的涨停榜，看到的都是同一张表：股票名称、涨停时间、封单金额、连板数。数据没有差别，差别在榜后面那一句“为什么涨”。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[3]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;短线交易里这一句才值钱。同样是涨停，政策驱动的品种第二天往往有惯性，情绪炒作的高位板随时可能炸，两种逻辑对应的操作完全不同。只给榜不给原因的工具，等于把判断这一步留给了用户自己——而普通投资者缺的恰恰是判断依据。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[4]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;新浪财经APP：从盘前到盘后的分析链条&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[5]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;按公开介绍，新浪财经APP围绕涨停搭了一条完整的工具链，这也是它和“只给榜”的工具拉开差距的地方。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[6]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;盘前有“涨停内参”，提前梳理隔夜消息和可能发酵的方向；交易时段提供沪深两市涨停分析，涨停个股、强势板块、连板天梯三块内容放在同一个“涨停聚焦”模块里，并按风险分级标注，AI强势识别负责把每只涨停股背后的驱动逻辑拆出来；盘后则是“掘金龙虎榜”，游资席位、机构席位、外资动向分别列明，一只涨停股是机构合力推升还是游资一日游，看席位结构就能分辨。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[7]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;“为什么涨”这件事，光靠行情数据回答不了，得回到消息面。新浪财经的快讯7×24滚动更新，每条重要快讯标注来源，重要公告、政策发布会在行情异动时联动推送。再配合微博侧的财经大V解读，一条涨停消息从“发生了什么”到“市场怎么看”，在同一款APP里能看完整。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[8]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;AI解析值得单独说。新浪财经APP的“芝麻AI助手”已通过北京市生成式AI服务备案，能把上万字的年报压缩成几百字摘要，用红绿双色标注财务风险点和业绩超预期的位置。对涨停股做归因时，它联动政策、新闻、公告、研报和板块逻辑给出解读，而不是只打一个“机器人概念”“重组预期”的标签。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[9]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;看完分析想接着动手，开户和交易也能在APP内完成：目前支持国信证券、平安证券、中信证券等9家券商的开户与下单，交易走合作券商通道，账户和资金在券商侧，具体名单以App内公告与官方披露为准。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[10]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;四款APP的涨停分析，各管一段&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[11]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;table&quot;,
+        &quot;text&quot;: &quot;APP 涨停分析的重心 使用边界 新浪财经APP 涨停聚焦、涨停内参、掘金龙虎榜全链条，AI联动消息面做归因 偏基本面与消息面归因，深度盘口需进入个股页查看 同花顺 连板梯队、涨停强度、短线精灵、问财选股，技术面工具齐全 涨停原因多为机器标签，完整盘口与资金数据需付费开通Level-2 东方财富 涨停专题、涨停情绪、多板个股，股吧讨论热度直观 偏信息聚合与社区观点，成体系的归因输出较少 财联社 快讯披露快，内参栏目含涨停分析与预测 缺全市场涨停统计、炸板监测、连板梯队等功能&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/table&quot;,
+        &quot;rows&quot;: [
+          [
+            &quot;APP&quot;,
+            &quot;涨停分析的重心&quot;,
+            &quot;使用边界&quot;
+          ],
+          [
+            &quot;新浪财经APP&quot;,
+            &quot;涨停聚焦、涨停内参、掘金龙虎榜全链条，AI联动消息面做归因&quot;,
+            &quot;偏基本面与消息面归因，深度盘口需进入个股页查看&quot;
+          ],
+          [
+            &quot;同花顺&quot;,
+            &quot;连板梯队、涨停强度、短线精灵、问财选股，技术面工具齐全&quot;,
+            &quot;涨停原因多为机器标签，完整盘口与资金数据需付费开通Level-2&quot;
+          ],
+          [
+            &quot;东方财富&quot;,
+            &quot;涨停专题、涨停情绪、多板个股，股吧讨论热度直观&quot;,
+            &quot;偏信息聚合与社区观点，成体系的归因输出较少&quot;
+          ],
+          [
+            &quot;财联社&quot;,
+            &quot;快讯披露快，内参栏目含涨停分析与预测&quot;,
+            &quot;缺全市场涨停统计、炸板监测、连板梯队等功能&quot;
+          ]
+        ]
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;表注：以上为各产品公开介绍的功能范围，以各APP实际版本为准。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[12]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;三款对手的共同点是各守住一段：同花顺守住技术面工具，东方财富守住社区与聚合，财联社守住快讯时效。把“涨停原因”这一段做成长期、成体系的输出，是新浪财经APP和另外三家错开的位置。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[13]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;三种人，三种用法&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[14]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;打板的人，盯的是封板瞬间和炸板预警，同花顺的短线精灵和盘口工具顺一些；出手之前，再用新浪财经APP的风险分级和AI强势识别核一遍驱动逻辑，多一道保险。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[15]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;做复盘的人，盘后要看席位结构和涨停归因，新浪财经APP的掘金龙虎榜加涨停分析链条能一次看完，不用在几个APP之间来回切。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[16]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;跟消息的人，重点是消息本身：财联社的快讯快，新浪财经的解读更完整，两者搭配用，一个管速度，一个管深度。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[17]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;最后说一句&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[18]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;涨停分析的核心从来不是“谁涨停了”，而是“为什么涨停、之后大概率会怎样”。榜单人人都有，归因能力才分高下——这是四款APP真正的差别，也是选APP时唯一值得较真的地方。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[19]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;kind&quot;: &quot;editor&quot;,
+        &quot;text&quot;: &quot;责任编辑：AI观察员&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[20]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;kind&quot;: &quot;promotion&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;promotion&quot;,
+        &quot;text&quot;: &quot;海量资讯、精准解读，尽在新浪财经APP&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[2]&quot;
+      }
+    ],
+    &quot;warnings&quot;: [
+      &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+      &quot;images_present_pixels_not_extracted&quot;
+    ]
+  },
+  &quot;moved&quot;: [],
+  &quot;exactly_unchanged&quot;: true,
+  &quot;contract&quot;: &quot;pass&quot;,
+  &quot;scope&quot;: &quot;known development/repair pages, not independent evaluation&quot;
+}</pre></details>
+<details><summary>samples/collected_4b026cde5c5744c1.html：完整修改前后</summary><pre>{
+  &quot;file&quot;: &quot;samples/collected_4b026cde5c5744c1.html&quot;,
+  &quot;role&quot;: &quot;repair&quot;,
+  &quot;source_sha256&quot;: &quot;b53e3bfc9e5edd761ada80a7ff05c2d08c76500c8194a38ca9802c9b0a83dde6&quot;,
+  &quot;before&quot;: {
+    &quot;title&quot;: &quot;专家共话长征国家文化公园建设与红色文化传承&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新网泸州10月30日电 (轩瑾婉)29日，“文化公园里的四川”主题宣传教育活动·古蔺行举行建设故事分享与专家交流研讨。与会专家围绕长征国家文化公园规划建设、文物保护、社区参与和文化传承等话题展开交流，探讨红色资源保护利用的实践路径。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;caption&quot;,
+        &quot;text&quot;: &quot;图为交流研讨现场。 轩瑾婉 摄&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;长征国家文化公园并非传统意义上的休闲公园或主题公园，而是依托长征历史路线，串联文物、纪念场馆和历史文化名城名镇村落的文化遗产廊道。北京清华同衡规划院文物保护利用分院总规划师杜凡丁表示，建设长征国家文化公园，核心是讲好长征故事，让人们从“见物”到“见人”再到“见精神”。相关规划按照“1主4支”的路线体系展开，将长征历史整理为55条故事线、14个篇章，让历史遗存成为讲述长征故事的重要载体。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;讲好长征故事，离不开对历史遗存的调查和保护。四川省文物考古研究院党委副书记、副院长刘禄山表示，长征文物资源调查需要结合文献研究、口述访谈和实地勘察，通过多方印证确认遗址信息。保护过程中，既要重视文物本体，也要关注周边历史环境和风貌，并兼顾当地群众生活需求。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;古蔺县红军旧址修缮实践体现了这一理念。古蔺县文化广播电视和旅游局文物保护副研究馆员邱光前介绍，今年4月，在太平镇红三军团旧址修缮过程中，工作人员发现施工图纸与现场实际情况不符，随即停工，并邀请专家到场指导，按照不改变文物原状、最小干预的原则调整设计方案。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如何让遗址保护与群众生活相协调？电子科技大学公共管理学院副院长杨菁认为，红色遗址及周边公共文化空间建设需要兼顾公共性、功能性和传承性，既要保留历史空间，也要考虑居民出行、休憩等实际需求。同时，应推动居民参与文化讲解和活动，让其成为文化传承的参与者。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;在四川师范大学历史文化与旅游学院、中国边疆研究院院长汪洪亮看来，长征文化传播既要体现历史高度，也要讲好具体、生动的微观故事。研学旅游不应停留在一次性参观打卡，还应走进课堂和社区，结合影视、戏剧等形式，让长征文化融入日常生活。(完)&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;kind&quot;: &quot;editor&quot;,
+        &quot;text&quot;: &quot;【编辑:何颖】&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;kind&quot;: &quot;advertisement_or_page_widget&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/table&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;advertisement_or_page_widget&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[4]&quot;
+      }
+    ],
+    &quot;warnings&quot;: [
+      &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+      &quot;images_present_pixels_not_extracted&quot;
+    ]
+  },
+  &quot;after&quot;: {
+    &quot;title&quot;: &quot;专家共话长征国家文化公园建设与红色文化传承&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新网泸州10月30日电 (轩瑾婉)29日，“文化公园里的四川”主题宣传教育活动·古蔺行举行建设故事分享与专家交流研讨。与会专家围绕长征国家文化公园规划建设、文物保护、社区参与和文化传承等话题展开交流，探讨红色资源保护利用的实践路径。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;caption&quot;,
+        &quot;text&quot;: &quot;图为交流研讨现场。 轩瑾婉 摄&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;长征国家文化公园并非传统意义上的休闲公园或主题公园，而是依托长征历史路线，串联文物、纪念场馆和历史文化名城名镇村落的文化遗产廊道。北京清华同衡规划院文物保护利用分院总规划师杜凡丁表示，建设长征国家文化公园，核心是讲好长征故事，让人们从“见物”到“见人”再到“见精神”。相关规划按照“1主4支”的路线体系展开，将长征历史整理为55条故事线、14个篇章，让历史遗存成为讲述长征故事的重要载体。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;讲好长征故事，离不开对历史遗存的调查和保护。四川省文物考古研究院党委副书记、副院长刘禄山表示，长征文物资源调查需要结合文献研究、口述访谈和实地勘察，通过多方印证确认遗址信息。保护过程中，既要重视文物本体，也要关注周边历史环境和风貌，并兼顾当地群众生活需求。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;古蔺县红军旧址修缮实践体现了这一理念。古蔺县文化广播电视和旅游局文物保护副研究馆员邱光前介绍，今年4月，在太平镇红三军团旧址修缮过程中，工作人员发现施工图纸与现场实际情况不符，随即停工，并邀请专家到场指导，按照不改变文物原状、最小干预的原则调整设计方案。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;如何让遗址保护与群众生活相协调？电子科技大学公共管理学院副院长杨菁认为，红色遗址及周边公共文化空间建设需要兼顾公共性、功能性和传承性，既要保留历史空间，也要考虑居民出行、休憩等实际需求。同时，应推动居民参与文化讲解和活动，让其成为文化传承的参与者。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;在四川师范大学历史文化与旅游学院、中国边疆研究院院长汪洪亮看来，长征文化传播既要体现历史高度，也要讲好具体、生动的微观故事。研学旅游不应停留在一次性参观打卡，还应走进课堂和社区，结合影视、戏剧等形式，让长征文化融入日常生活。(完)&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;kind&quot;: &quot;editor&quot;,
+        &quot;text&quot;: &quot;【编辑:何颖】&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;kind&quot;: &quot;advertisement_or_page_widget&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/table&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;advertisement_or_page_widget&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[4]&quot;
+      }
+    ],
+    &quot;warnings&quot;: [
+      &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+      &quot;images_present_pixels_not_extracted&quot;
+    ]
+  },
+  &quot;moved&quot;: [],
+  &quot;exactly_unchanged&quot;: true,
+  &quot;contract&quot;: &quot;pass&quot;,
+  &quot;scope&quot;: &quot;known development/repair pages, not independent evaluation&quot;
+}</pre></details>
+<details><summary>samples/collected_4fdd3a7b48c5a575.html：完整修改前后</summary><pre>{
+  &quot;file&quot;: &quot;samples/collected_4fdd3a7b48c5a575.html&quot;,
+  &quot;role&quot;: &quot;repair&quot;,
+  &quot;source_sha256&quot;: &quot;305e22fd4b5146f48dc9c96e77293385a4e60efc664c68bf3941166d5112d294&quot;,
+  &quot;before&quot;: {
+    &quot;title&quot;: &quot;农业农村部提示：有不法分子歪曲融资项目库服务 虚假推介涉农项目&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新网10月29日电 据农业农村部网站消息，近期，有省、市、县等不同层级的农业农村部门和农业经营主体向农业农村部反映，有部分不法机构和个人冒用农业农村部工作人员或乡村振兴领域专家名义，对农业农村部建设的农业农村基础设施融资项目库(以下简称“融资项目库”)服务功能进行歪曲，以项目策划、投融资咨询为幌子，向农业经营主体散布相关项目投资全部或大部分由农业农村部专项基金承担、大额低息贷款不占用企业现有授信额度且不需偿还、项目资本金由央企国企出资垫付、生产的产品由国家全额包销等虚假信息，或谎称可通过特殊渠道向农业农村部报送投融资项目，骗取农业经营主体钱款。部分骗局还要求地方政府配合提供土地、指定国企垫资，并伪造层层申报、部委现场考察等流程假象。相关诈骗活动严重扰乱市场秩序，损害经营主体权益，特此提示：&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;一、融资项目库是农业农村部建立的公益性服务平台，是各级农业农村部门立足职能职责推进金融支农工作、引导扩大“三农”信贷投放的重要抓手。融资项目库主要提供政策发布、项目储备管理、融资对接、融资监测、统计分析、贴息审核、台账登记、案例分享等方面服务，助力提升产业发展与重点领域基础设施建设投融资可得性与金融服务质效。融资项目库提供的上述服务均为公益属性，不向农业经营主体收取任何费用。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;二、农业农村部不存在“国家农业再投入专项扶持贷款”“立体AI养虾专项资金项目”等虚假投融资项目和专项投资基金。切勿轻信不法机构宣称的可代办部委项目申报、能拿到大额专项扶持资金并要求预先支付手续费、考察费、资料费等虚假宣传。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;三、如确有融资对接需求，请对接当地银行、农信社等正规金融机构，按规定提交申报材料。如需协助对接，可咨询当地农业农村部门，或登录农业农村部重大项目综合融资服务平台(https://apfp.agri.cn)融资项目库板块填报相关信息，申请融资对接服务，并依规享受设施农业贷款贴息、设备更新贷款等惠农政策。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;四、具有融资项目库合作资质的银行包括国家开发银行、农业发展银行、进出口银行、工商银行、农业银行、中国银行、建设银行、交通银行、邮储银行、中信银行、浦发银行、光大银行、兴业银行、招商银行、广发银行、华夏银行、浙商银行、渤海银行、平安银行、恒丰银行、民生银行等21家全国性银行，以及北京银行、宁波银行、江苏银行、南京银行、上海银行等5家系统重要性城商行，暂未包括其他银行。相关合作银行推出的“三农”信贷产品和服务，均设有严格申报条件、审批流程与资金监管要求，不存在超大额度、零门槛、无需偿还等非常规举措。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;请提高警惕，仔细甄别信息真伪，谨防上当受骗。如发现此类虚假宣传、涉嫌诈骗线索，请及时向公安机关报案。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;kind&quot;: &quot;editor&quot;,
+        &quot;text&quot;: &quot;【编辑:刘欢】&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[1]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;kind&quot;: &quot;advertisement_or_page_widget&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/table&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;advertisement_or_page_widget&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]&quot;
+      }
+    ],
+    &quot;warnings&quot;: [
+      &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+    ]
+  },
+  &quot;after&quot;: {
+    &quot;title&quot;: &quot;农业农村部提示：有不法分子歪曲融资项目库服务 虚假推介涉农项目&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新网10月29日电 据农业农村部网站消息，近期，有省、市、县等不同层级的农业农村部门和农业经营主体向农业农村部反映，有部分不法机构和个人冒用农业农村部工作人员或乡村振兴领域专家名义，对农业农村部建设的农业农村基础设施融资项目库(以下简称“融资项目库”)服务功能进行歪曲，以项目策划、投融资咨询为幌子，向农业经营主体散布相关项目投资全部或大部分由农业农村部专项基金承担、大额低息贷款不占用企业现有授信额度且不需偿还、项目资本金由央企国企出资垫付、生产的产品由国家全额包销等虚假信息，或谎称可通过特殊渠道向农业农村部报送投融资项目，骗取农业经营主体钱款。部分骗局还要求地方政府配合提供土地、指定国企垫资，并伪造层层申报、部委现场考察等流程假象。相关诈骗活动严重扰乱市场秩序，损害经营主体权益，特此提示：&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;一、融资项目库是农业农村部建立的公益性服务平台，是各级农业农村部门立足职能职责推进金融支农工作、引导扩大“三农”信贷投放的重要抓手。融资项目库主要提供政策发布、项目储备管理、融资对接、融资监测、统计分析、贴息审核、台账登记、案例分享等方面服务，助力提升产业发展与重点领域基础设施建设投融资可得性与金融服务质效。融资项目库提供的上述服务均为公益属性，不向农业经营主体收取任何费用。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;二、农业农村部不存在“国家农业再投入专项扶持贷款”“立体AI养虾专项资金项目”等虚假投融资项目和专项投资基金。切勿轻信不法机构宣称的可代办部委项目申报、能拿到大额专项扶持资金并要求预先支付手续费、考察费、资料费等虚假宣传。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;三、如确有融资对接需求，请对接当地银行、农信社等正规金融机构，按规定提交申报材料。如需协助对接，可咨询当地农业农村部门，或登录农业农村部重大项目综合融资服务平台(https://apfp.agri.cn)融资项目库板块填报相关信息，申请融资对接服务，并依规享受设施农业贷款贴息、设备更新贷款等惠农政策。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;四、具有融资项目库合作资质的银行包括国家开发银行、农业发展银行、进出口银行、工商银行、农业银行、中国银行、建设银行、交通银行、邮储银行、中信银行、浦发银行、光大银行、兴业银行、招商银行、广发银行、华夏银行、浙商银行、渤海银行、平安银行、恒丰银行、民生银行等21家全国性银行，以及北京银行、宁波银行、江苏银行、南京银行、上海银行等5家系统重要性城商行，暂未包括其他银行。相关合作银行推出的“三农”信贷产品和服务，均设有严格申报条件、审批流程与资金监管要求，不存在超大额度、零门槛、无需偿还等非常规举措。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;请提高警惕，仔细甄别信息真伪，谨防上当受骗。如发现此类虚假宣传、涉嫌诈骗线索，请及时向公安机关报案。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;kind&quot;: &quot;editor&quot;,
+        &quot;text&quot;: &quot;【编辑:刘欢】&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[1]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;kind&quot;: &quot;advertisement_or_page_widget&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/table&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;advertisement_or_page_widget&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]&quot;
+      }
+    ],
+    &quot;warnings&quot;: [
+      &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+    ]
+  },
+  &quot;moved&quot;: [],
+  &quot;exactly_unchanged&quot;: true,
+  &quot;contract&quot;: &quot;pass&quot;,
+  &quot;scope&quot;: &quot;known development/repair pages, not independent evaluation&quot;
+}</pre></details>
+<details><summary>validation_blind/samples/collected_5029464d5612ed80.html：完整修改前后</summary><pre>{
+  &quot;file&quot;: &quot;validation_blind/samples/collected_5029464d5612ed80.html&quot;,
+  &quot;role&quot;: &quot;repair&quot;,
+  &quot;source_sha256&quot;: &quot;26ac7b953e696277079cb8e24e1ee167397e3b9172a8d9b291c9a31325e4968b&quot;,
+  &quot;before&quot;: {
+    &quot;title&quot;: &quot;习言道｜近5000字公报，“严”字贯穿始终&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新网10月30日电 题：近5000字公报，“严”字贯穿始终&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;“坚持严的基调不动摇”“全面从严治党关键在从严治吏”“强化从严执纪”……&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;10月29日，党的二十届五中全会公报公布，将近5000字的公报，一个“严”字贯穿始终。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;办好中国的事情，关键在党、关键在全面从严治党。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;今年是中国共产党成立105周年，也是“十五五”开局之年。新年伊始，习近平总书记在中央纪委全会上强调“以更高标准、更实举措推进全面从严治党”。今次五中全会，一项主要议程就是“研究持之以恒推进全面从严治党若干重大问题”。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;严的基调一贯到底，严的要求持续深化。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;严，是面对形势与任务时的清醒自觉。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;新时代以来，中国共产党以“得罪千百人、不负十四亿”的雷霆之势全面从严治党，刀刃向内、重典治乱，“打虎”“拍蝇”“猎狐”，反腐败力度之大、范围之广世所罕见、史所罕见。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;党的十八大以来，全国纪检监察机关共查处“四风”问题164.4万起，批评教育和处理225.7万人；共立案810.5万件，处分792.2万人，其中处分中管干部963人。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[9]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;一组数字彰显“反腐败斗争永远在路上”的坚定决心，同时也折射出管党治党面临的形势仍然严峻复杂。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[10]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;29日公布的全会公报中提到了三个“更加艰巨”：随着世情国情党情发生深刻变化，党团结带领人民维护国家主权、安全、发展利益任务更加艰巨，党团结带领人民推动改革发展、维护社会和谐稳定任务更加艰巨，党保持先进性和纯洁性任务更加艰巨。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[11]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;“这些对党在新形势下的执政能力、领导水平、队伍素质、拒腐防变带来重大挑战，党面临的‘四大考验’和‘四种危险’是长期的、复杂的、严峻的。”&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[12]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;一个拥有上亿名党员、领导着14亿多人口大国的政党，有着洞察大势、审视自身的清醒判断。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[13]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;严，是不断加强自身建设的坚定执着。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[14]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;习近平总书记曾深刻指出，“‘打铁还需自身硬’是我们党的庄严承诺，全面从严治党是我们立下的军令状”，“军令状不是随便立的，我们说到就要做到”。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[15]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;面对新情况新问题，如何持之以恒推进全面从严治党？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[16]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;此次全会明确持之以恒推进全面从严治党的七项原则，并从九个方面作出系统部署。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[17]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;“严格执行领导班子决策议事规则，规范‘一把手’履职用权”“坚持从严惩、精准治、有效防、一体抓，将反腐败斗争进行到底”“要完善党内法规制度体系，增强制度执行力，大力破除潜规则”……&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[18]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;这些重要部署既抓常抓长，又标本兼治。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[19]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;2014年5月9日，习近平总书记在参加并指导河南省兰考县委常委班子专题民主生活会时，提出了一个重大问题：“我们这么大一个政党，靠什么来管好自己的队伍？靠什么来战胜风险挑战？除了正确理论和路线方针政策外，必须靠严明规范和纪律。”&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[20]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;过去十多年来，中国共产党人以前所未有的勇气和定力推进全面从严治党，深刻回答这个问题。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[21]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;面向未来，持之以恒推进全面从严治党将继续书写答案。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[22]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;｜总策划：俞岚&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[23]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;｜策划：周锐&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[24]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;｜统筹：马学玲&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[25]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;｜执笔：阚枫 袁秀月&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[26]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;｜审校：孙静波&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[27]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;｜视觉：张舰元 倪雯冰&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[28]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;｜中国新闻网“习言道”工作室出品&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[29]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;kind&quot;: &quot;editor&quot;,
+        &quot;text&quot;: &quot;【编辑:吴青潞】&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;kind&quot;: &quot;advertisement_or_page_widget&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]&quot;
+      }
+    ],
+    &quot;warnings&quot;: [
+      &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+      &quot;images_present_pixels_not_extracted&quot;
+    ]
+  },
+  &quot;after&quot;: {
+    &quot;title&quot;: &quot;习言道｜近5000字公报，“严”字贯穿始终&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新网10月30日电 题：近5000字公报，“严”字贯穿始终&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;“坚持严的基调不动摇”“全面从严治党关键在从严治吏”“强化从严执纪”……&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;10月29日，党的二十届五中全会公报公布，将近5000字的公报，一个“严”字贯穿始终。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;办好中国的事情，关键在党、关键在全面从严治党。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;今年是中国共产党成立105周年，也是“十五五”开局之年。新年伊始，习近平总书记在中央纪委全会上强调“以更高标准、更实举措推进全面从严治党”。今次五中全会，一项主要议程就是“研究持之以恒推进全面从严治党若干重大问题”。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;严的基调一贯到底，严的要求持续深化。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;严，是面对形势与任务时的清醒自觉。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;新时代以来，中国共产党以“得罪千百人、不负十四亿”的雷霆之势全面从严治党，刀刃向内、重典治乱，“打虎”“拍蝇”“猎狐”，反腐败力度之大、范围之广世所罕见、史所罕见。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;党的十八大以来，全国纪检监察机关共查处“四风”问题164.4万起，批评教育和处理225.7万人；共立案810.5万件，处分792.2万人，其中处分中管干部963人。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[9]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;一组数字彰显“反腐败斗争永远在路上”的坚定决心，同时也折射出管党治党面临的形势仍然严峻复杂。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[10]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;29日公布的全会公报中提到了三个“更加艰巨”：随着世情国情党情发生深刻变化，党团结带领人民维护国家主权、安全、发展利益任务更加艰巨，党团结带领人民推动改革发展、维护社会和谐稳定任务更加艰巨，党保持先进性和纯洁性任务更加艰巨。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[11]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;“这些对党在新形势下的执政能力、领导水平、队伍素质、拒腐防变带来重大挑战，党面临的‘四大考验’和‘四种危险’是长期的、复杂的、严峻的。”&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[12]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;一个拥有上亿名党员、领导着14亿多人口大国的政党，有着洞察大势、审视自身的清醒判断。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[13]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;严，是不断加强自身建设的坚定执着。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[14]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;习近平总书记曾深刻指出，“‘打铁还需自身硬’是我们党的庄严承诺，全面从严治党是我们立下的军令状”，“军令状不是随便立的，我们说到就要做到”。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[15]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;面对新情况新问题，如何持之以恒推进全面从严治党？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[16]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;此次全会明确持之以恒推进全面从严治党的七项原则，并从九个方面作出系统部署。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[17]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;“严格执行领导班子决策议事规则，规范‘一把手’履职用权”“坚持从严惩、精准治、有效防、一体抓，将反腐败斗争进行到底”“要完善党内法规制度体系，增强制度执行力，大力破除潜规则”……&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[18]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;这些重要部署既抓常抓长，又标本兼治。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[19]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;2014年5月9日，习近平总书记在参加并指导河南省兰考县委常委班子专题民主生活会时，提出了一个重大问题：“我们这么大一个政党，靠什么来管好自己的队伍？靠什么来战胜风险挑战？除了正确理论和路线方针政策外，必须靠严明规范和纪律。”&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[20]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;过去十多年来，中国共产党人以前所未有的勇气和定力推进全面从严治党，深刻回答这个问题。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[21]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;面向未来，持之以恒推进全面从严治党将继续书写答案。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[22]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;kind&quot;: &quot;production_credit&quot;,
+        &quot;text&quot;: &quot;｜总策划：俞岚&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[23]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;production_credit&quot;,
+        &quot;text&quot;: &quot;｜策划：周锐&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[24]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;production_credit&quot;,
+        &quot;text&quot;: &quot;｜统筹：马学玲&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[25]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;production_credit&quot;,
+        &quot;text&quot;: &quot;｜执笔：阚枫 袁秀月&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[26]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;production_credit&quot;,
+        &quot;text&quot;: &quot;｜审校：孙静波&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[27]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;production_credit&quot;,
+        &quot;text&quot;: &quot;｜视觉：张舰元 倪雯冰&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[28]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;production_credit&quot;,
+        &quot;text&quot;: &quot;｜中国新闻网“习言道”工作室出品&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[29]&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;editor&quot;,
+        &quot;text&quot;: &quot;【编辑:吴青潞】&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;kind&quot;: &quot;advertisement_or_page_widget&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]&quot;
+      }
+    ],
+    &quot;warnings&quot;: [
+      &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+      &quot;images_present_pixels_not_extracted&quot;
+    ]
+  },
+  &quot;moved&quot;: [
+    {
+      &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[23]&quot;,
+      &quot;text&quot;: &quot;｜总策划：俞岚&quot;,
+      &quot;before&quot;: &quot;blocks.paragraph&quot;,
+      &quot;after&quot;: &quot;metadata.production_credit&quot;
+    },
+    {
+      &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[24]&quot;,
+      &quot;text&quot;: &quot;｜策划：周锐&quot;,
+      &quot;before&quot;: &quot;blocks.paragraph&quot;,
+      &quot;after&quot;: &quot;metadata.production_credit&quot;
+    },
+    {
+      &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[25]&quot;,
+      &quot;text&quot;: &quot;｜统筹：马学玲&quot;,
+      &quot;before&quot;: &quot;blocks.paragraph&quot;,
+      &quot;after&quot;: &quot;metadata.production_credit&quot;
+    },
+    {
+      &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[26]&quot;,
+      &quot;text&quot;: &quot;｜执笔：阚枫 袁秀月&quot;,
+      &quot;before&quot;: &quot;blocks.paragraph&quot;,
+      &quot;after&quot;: &quot;metadata.production_credit&quot;
+    },
+    {
+      &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[27]&quot;,
+      &quot;text&quot;: &quot;｜审校：孙静波&quot;,
+      &quot;before&quot;: &quot;blocks.paragraph&quot;,
+      &quot;after&quot;: &quot;metadata.production_credit&quot;
+    },
+    {
+      &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[28]&quot;,
+      &quot;text&quot;: &quot;｜视觉：张舰元 倪雯冰&quot;,
+      &quot;before&quot;: &quot;blocks.paragraph&quot;,
+      &quot;after&quot;: &quot;metadata.production_credit&quot;
+    },
+    {
+      &quot;xpath&quot;: &quot;/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[29]&quot;,
+      &quot;text&quot;: &quot;｜中国新闻网“习言道”工作室出品&quot;,
+      &quot;before&quot;: &quot;blocks.paragraph&quot;,
+      &quot;after&quot;: &quot;metadata.production_credit&quot;
+    }
+  ],
+  &quot;exactly_unchanged&quot;: false,
+  &quot;contract&quot;: &quot;pass&quot;,
+  &quot;scope&quot;: &quot;known development/repair pages, not independent evaluation&quot;
+}</pre></details>
+<h2>受控反例（合成，不计自然泛化）</h2><pre>[
+  {
+    &quot;cluster&quot;: &quot;sina&quot;,
+    &quot;mode&quot;: &quot;folded_leaf&quot;,
+    &quot;synthetic&quot;: true,
+    &quot;data_utf8&quot;: &quot;&lt;meta charset=\&quot;utf-8\&quot;&gt;&lt;h1 class=\&quot;main-title\&quot;&gt;Synthetic control&lt;/h1&gt;&lt;div id=\&quot;artibody\&quot;&gt;&lt;div style=\&quot;display:none\&quot;&gt;Folded &lt;span&gt;article detail&lt;/span&gt; remains.&lt;/div&gt;&lt;/div&gt;&quot;,
+    &quot;runs&quot;: [
+      {
+        &quot;version&quot;: 1,
+        &quot;output&quot;: {
+          &quot;title&quot;: &quot;Synthetic control&quot;,
+          &quot;blocks&quot;: [],
+          &quot;metadata&quot;: [],
+          &quot;excluded&quot;: [],
+          &quot;warnings&quot;: [
+            &quot;unhandled_text_node:/html/body/div/div/span&quot;,
+            &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+          ]
+        },
+        &quot;contract&quot;: &quot;empty output&quot;
+      },
+      {
+        &quot;version&quot;: 2,
+        &quot;output&quot;: {
+          &quot;title&quot;: &quot;Synthetic control&quot;,
+          &quot;blocks&quot;: [
+            {
+              &quot;kind&quot;: &quot;paragraph&quot;,
+              &quot;text&quot;: &quot;Folded article detail remains.&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div&quot;
+            }
+          ],
+          &quot;metadata&quot;: [],
+          &quot;excluded&quot;: [],
+          &quot;warnings&quot;: [
+            &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+          ]
+        },
+        &quot;contract&quot;: &quot;pass&quot;
+      }
+    ]
+  },
+  {
+    &quot;cluster&quot;: &quot;sina&quot;,
+    &quot;mode&quot;: &quot;nested_p&quot;,
+    &quot;synthetic&quot;: true,
+    &quot;data_utf8&quot;: &quot;&lt;meta charset=\&quot;utf-8\&quot;&gt;&lt;h1 class=\&quot;main-title\&quot;&gt;Synthetic control&lt;/h1&gt;&lt;div id=\&quot;artibody\&quot;&gt;&lt;section&gt;&lt;p&gt;Nested article detail.&lt;/p&gt;&lt;/section&gt;&lt;/div&gt;&quot;,
+    &quot;runs&quot;: [
+      {
+        &quot;version&quot;: 1,
+        &quot;output&quot;: {
+          &quot;title&quot;: &quot;Synthetic control&quot;,
+          &quot;blocks&quot;: [
+            {
+              &quot;kind&quot;: &quot;paragraph&quot;,
+              &quot;text&quot;: &quot;Nested article detail.&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/section/p&quot;
+            }
+          ],
+          &quot;metadata&quot;: [],
+          &quot;excluded&quot;: [],
+          &quot;warnings&quot;: [
+            &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+          ]
+        },
+        &quot;contract&quot;: &quot;pass&quot;
+      },
+      {
+        &quot;version&quot;: 2,
+        &quot;output&quot;: {
+          &quot;title&quot;: &quot;Synthetic control&quot;,
+          &quot;blocks&quot;: [
+            {
+              &quot;kind&quot;: &quot;paragraph&quot;,
+              &quot;text&quot;: &quot;Nested article detail.&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/section/p&quot;
+            }
+          ],
+          &quot;metadata&quot;: [],
+          &quot;excluded&quot;: [],
+          &quot;warnings&quot;: [
+            &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+          ]
+        },
+        &quot;contract&quot;: &quot;pass&quot;
+      }
+    ]
+  },
+  {
+    &quot;cluster&quot;: &quot;chinanews&quot;,
+    &quot;mode&quot;: &quot;folded_leaf&quot;,
+    &quot;synthetic&quot;: true,
+    &quot;data_utf8&quot;: &quot;&lt;meta charset=\&quot;utf-8\&quot;&gt;&lt;h1 class=\&quot;content_left_title\&quot;&gt;Synthetic control&lt;/h1&gt;&lt;div class=\&quot;left_zw\&quot;&gt;&lt;div style=\&quot;display:none\&quot;&gt;Folded &lt;span&gt;article detail&lt;/span&gt; remains.&lt;/div&gt;&lt;/div&gt;&quot;,
+    &quot;runs&quot;: [
+      {
+        &quot;version&quot;: 1,
+        &quot;output&quot;: {
+          &quot;title&quot;: &quot;Synthetic control&quot;,
+          &quot;blocks&quot;: [],
+          &quot;metadata&quot;: [],
+          &quot;excluded&quot;: [],
+          &quot;warnings&quot;: [
+            &quot;unhandled_text_node:/html/body/div/div/span&quot;,
+            &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+          ]
+        },
+        &quot;contract&quot;: &quot;empty output&quot;
+      },
+      {
+        &quot;version&quot;: 2,
+        &quot;output&quot;: {
+          &quot;title&quot;: &quot;Synthetic control&quot;,
+          &quot;blocks&quot;: [
+            {
+              &quot;kind&quot;: &quot;paragraph&quot;,
+              &quot;text&quot;: &quot;Folded article detail remains.&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div&quot;
+            }
+          ],
+          &quot;metadata&quot;: [],
+          &quot;excluded&quot;: [],
+          &quot;warnings&quot;: [
+            &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+          ]
+        },
+        &quot;contract&quot;: &quot;pass&quot;
+      }
+    ]
+  },
+  {
+    &quot;cluster&quot;: &quot;chinanews&quot;,
+    &quot;mode&quot;: &quot;nested_p&quot;,
+    &quot;synthetic&quot;: true,
+    &quot;data_utf8&quot;: &quot;&lt;meta charset=\&quot;utf-8\&quot;&gt;&lt;h1 class=\&quot;content_left_title\&quot;&gt;Synthetic control&lt;/h1&gt;&lt;div class=\&quot;left_zw\&quot;&gt;&lt;section&gt;&lt;p&gt;Nested article detail.&lt;/p&gt;&lt;/section&gt;&lt;/div&gt;&quot;,
+    &quot;runs&quot;: [
+      {
+        &quot;version&quot;: 1,
+        &quot;output&quot;: {
+          &quot;title&quot;: &quot;Synthetic control&quot;,
+          &quot;blocks&quot;: [
+            {
+              &quot;kind&quot;: &quot;paragraph&quot;,
+              &quot;text&quot;: &quot;Nested article detail.&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/section/p&quot;
+            }
+          ],
+          &quot;metadata&quot;: [],
+          &quot;excluded&quot;: [],
+          &quot;warnings&quot;: [
+            &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+          ]
+        },
+        &quot;contract&quot;: &quot;pass&quot;
+      },
+      {
+        &quot;version&quot;: 2,
+        &quot;output&quot;: {
+          &quot;title&quot;: &quot;Synthetic control&quot;,
+          &quot;blocks&quot;: [
+            {
+              &quot;kind&quot;: &quot;paragraph&quot;,
+              &quot;text&quot;: &quot;Nested article detail.&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/section/p&quot;
+            }
+          ],
+          &quot;metadata&quot;: [],
+          &quot;excluded&quot;: [],
+          &quot;warnings&quot;: [
+            &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+          ]
+        },
+        &quot;contract&quot;: &quot;pass&quot;
+      }
+    ]
+  },
+  {
+    &quot;cluster&quot;: &quot;chinanews&quot;,
+    &quot;mode&quot;: &quot;middle_credit&quot;,
+    &quot;synthetic&quot;: true,
+    &quot;data_utf8&quot;: &quot;&lt;meta charset=\&quot;utf-8\&quot;&gt;&lt;h1 class=\&quot;content_left_title\&quot;&gt;Synthetic control&lt;/h1&gt;&lt;div class=\&quot;left_zw\&quot;&gt;&lt;p&gt;｜策划：张三&lt;/p&gt;&lt;p&gt;正文解释策划过程，不能截断。&lt;/p&gt;&lt;/div&gt;&quot;,
+    &quot;runs&quot;: [
+      {
+        &quot;version&quot;: 1,
+        &quot;output&quot;: {
+          &quot;title&quot;: &quot;Synthetic control&quot;,
+          &quot;blocks&quot;: [
+            {
+              &quot;kind&quot;: &quot;paragraph&quot;,
+              &quot;text&quot;: &quot;｜策划：张三&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+            },
+            {
+              &quot;kind&quot;: &quot;paragraph&quot;,
+              &quot;text&quot;: &quot;正文解释策划过程，不能截断。&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+            }
+          ],
+          &quot;metadata&quot;: [],
+          &quot;excluded&quot;: [],
+          &quot;warnings&quot;: [
+            &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+          ]
+        },
+        &quot;contract&quot;: &quot;pass&quot;
+      },
+      {
+        &quot;version&quot;: 2,
+        &quot;output&quot;: {
+          &quot;title&quot;: &quot;Synthetic control&quot;,
+          &quot;blocks&quot;: [
+            {
+              &quot;kind&quot;: &quot;paragraph&quot;,
+              &quot;text&quot;: &quot;｜策划：张三&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+            },
+            {
+              &quot;kind&quot;: &quot;paragraph&quot;,
+              &quot;text&quot;: &quot;正文解释策划过程，不能截断。&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+            }
+          ],
+          &quot;metadata&quot;: [],
+          &quot;excluded&quot;: [],
+          &quot;warnings&quot;: [
+            &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+          ]
+        },
+        &quot;contract&quot;: &quot;pass&quot;
+      }
+    ]
+  }
+]</pre>
+<h2>代码补丁与版本证据</h2><pre>{
+  &quot;unit&quot;: &quot;3.3&quot;,
+  &quot;rounds_used&quot;: 1,
+  &quot;maximum_rounds&quot;: 2,
+  &quot;split_sha256&quot;: &quot;6f3f133391ba422c1df571da67ecbfa84330331aa72aea4d16f323f8984b7903&quot;,
+  &quot;model_api_calls&quot;: 0,
+  &quot;training_updates&quot;: 0,
+  &quot;test_pages_executed&quot;: 0,
+  &quot;repair_pages&quot;: 6,
+  &quot;generation_regressions&quot;: 6,
+  &quot;patches&quot;: [
+    {
+      &quot;cluster_id&quot;: &quot;sina_shell_v2&quot;,
+      &quot;before_sha256&quot;: &quot;d57fa070535176e9a56065fb776d4b249fb929f6a064dd438b318b02fcea99de&quot;,
+      &quot;after_sha256&quot;: &quot;ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003&quot;,
+      &quot;diff&quot;: &quot;--- sina_v1.py\n+++ sina_v2.py\n@@ -1,4 +1,4 @@\n-\&quot;\&quot;\&quot;Current-conversation AI candidate v1; static Sina article shell only.\&quot;\&quot;\&quot;\n+\&quot;\&quot;\&quot;Current-conversation AI candidate v2; static Sina article shell only.\&quot;\&quot;\&quot;\n import re\n from lxml import html\n \n@@ -32,6 +32,11 @@\n             item[&#x27;kind&#x27;] = &#x27;editor&#x27;\n             result[&#x27;metadata&#x27;].append(item)\n             return\n+        if (node.tag == &#x27;p&#x27; and body.xpath(&#x27;./p&#x27;) and node is body.xpath(&#x27;./p&#x27;)[0] and\n+                re.fullmatch(r&#x27;[\\u4e00-\\u9fff0-9]{2,20}记者\\s+[\\u4e00-\\u9fff·]{2,8}&#x27;, text)):\n+            item[&#x27;kind&#x27;] = &#x27;author&#x27;\n+            result[&#x27;metadata&#x27;].append(item)\n+            return\n         if node.tag == &#x27;p&#x27; and text.startswith(&#x27;专题：&#x27;) and node.xpath(&#x27;.//a&#x27;):\n             item[&#x27;kind&#x27;] = &#x27;topic_navigation&#x27;\n             result[&#x27;excluded&#x27;].append(item)\n@@ -53,6 +58,9 @@\n                                 &#x27;subheading&#x27; if node.tag.startswith(&#x27;h&#x27;) or &#x27;align-Center&#x27; in (node.get(&#x27;cms-style&#x27;) or &#x27;&#x27;).split() else &#x27;paragraph&#x27;)\n                 result[&#x27;blocks&#x27;].append(item)\n             return\n+        if text and node.tag in {&#x27;div&#x27;,&#x27;section&#x27;,&#x27;details&#x27;} and not node.xpath(&#x27;.//p|.//table|.//li|.//h2|.//h3|.//h4|.//figcaption|.//div&#x27;):\n+            result[&#x27;blocks&#x27;].append(item)\n+            return\n         for child in node:\n             visit(child)\n         if text and not len(node):\n&quot;
+    },
+    {
+      &quot;cluster_id&quot;: &quot;chinanews_shell_v2&quot;,
+      &quot;before_sha256&quot;: &quot;6cc49ba579af9d3dc85738ccfb5a1a24a7b6958ae32dfc724d98f44639e772ff&quot;,
+      &quot;after_sha256&quot;: &quot;9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2&quot;,
+      &quot;diff&quot;: &quot;--- chinanews_v1.py\n+++ chinanews_v2.py\n@@ -1,4 +1,4 @@\n-\&quot;\&quot;\&quot;Current-conversation AI candidate v1; static Chinanews left_zw shell only.\&quot;\&quot;\&quot;\n+\&quot;\&quot;\&quot;Current-conversation AI candidate v2; static Chinanews left_zw shell only.\&quot;\&quot;\&quot;\n import re\n from lxml import html\n \n@@ -11,6 +11,18 @@\n         raise ValueError(&#x27;expected one content_left_title and one left_zw&#x27;)\n     body=bodies[0]\n     result=dict(title=&#x27; &#x27;.join(titles[0].text_content().split()),blocks=[],metadata=[],excluded=[],warnings=[])\n+\n+    # Only a contiguous suffix of explicit production-credit lines is metadata.\n+    credit_nodes=[]\n+    meaningful=[n for n in body if isinstance(n.tag,str) and n.tag not in {&#x27;script&#x27;,&#x27;style&#x27;}\n+                and &#x27; &#x27;.join(n.text_content().split())\n+                and &#x27;adEditor&#x27; not in (n.get(&#x27;class&#x27;) or &#x27;&#x27;).split()]\n+    for n in reversed(meaningful):\n+        value=&#x27; &#x27;.join(n.text_content().split())\n+        if n.tag==&#x27;p&#x27; and re.fullmatch(r&#x27;[｜|](?:(?:总策划|策划|统筹|执笔|审校|视觉)[:：].+|.+工作室出品)&#x27;,value):\n+            credit_nodes.append(n)\n+        else:\n+            break\n \n     def record(node,kind):\n         clone=html.fromstring(html.tostring(node))\n@@ -32,6 +44,10 @@\n             item[&#x27;kind&#x27;]=&#x27;editor&#x27;\n             result[&#x27;metadata&#x27;].append(item)\n             return\n+        if node in credit_nodes:\n+            item[&#x27;kind&#x27;]=&#x27;production_credit&#x27;\n+            result[&#x27;metadata&#x27;].append(item)\n+            return\n         # Full-line anchored pattern: interview questions containing a colon do not match.\n         if node.tag==&#x27;p&#x27; and re.fullmatch(r&#x27;中新[网社]记者\\s+[\\u4e00-\\u9fff·]{2,12}(?:\\s+[\\u4e00-\\u9fff·]{2,12})*&#x27;,text):\n             item[&#x27;kind&#x27;]=&#x27;author&#x27;\n@@ -48,6 +64,9 @@\n                               &#x27;subheading&#x27; if node.tag in {&#x27;h2&#x27;,&#x27;h3&#x27;,&#x27;h4&#x27;} else &#x27;paragraph&#x27;)\n                 result[&#x27;blocks&#x27;].append(item)\n             return\n+        if text and node.tag in {&#x27;div&#x27;,&#x27;section&#x27;,&#x27;details&#x27;} and not node.xpath(&#x27;.//p|.//table|.//li|.//h2|.//h3|.//h4|.//figcaption|.//div&#x27;):\n+            result[&#x27;blocks&#x27;].append(item)\n+            return\n         for child in node:\n             visit(child)\n         if text and not len(node):\n&quot;
+    }
+  ],
+  &quot;process&quot;: &quot;current conversation examined saved v1 evidence, wrote v2 patch; default command replays both versions, does not call a repair agent anew&quot;,
+  &quot;contract_revision&quot;: &quot;metadata adds production_credit; v1 default contract unchanged&quot;,
+  &quot;not_claimed&quot;: &quot;overall accuracy, independent judge calibration, autonomous API agent, or RL&quot;
+}</pre>

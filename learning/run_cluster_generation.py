@@ -56,7 +56,7 @@ def execute(source,data,timeout=8):
     return json.loads(proc.stdout)
 
 
-def validate(result,data):
+def validate(result,data,allow_production_credit=False):
     from lxml import html
     tree=html.document_fromstring(data)
     required={'title','blocks','metadata','excluded','warnings'}
@@ -66,7 +66,8 @@ def validate(result,data):
         raise ValueError('invalid warnings')
     positions={tree.getroottree().getpath(n):i for i,n in enumerate(tree.iter())}
     seen=set()
-    for group,kinds in [('blocks',{'paragraph','subheading','caption','table'}),('metadata',{'author','source','editor'}),('excluded',{'promotion','topic_navigation','advertisement_or_page_widget'})]:
+    metadata_kinds={'author','source','editor'} | ({'production_credit'} if allow_production_credit else set())
+    for group,kinds in [('blocks',{'paragraph','subheading','caption','table'}),('metadata',metadata_kinds),('excluded',{'promotion','topic_navigation','advertisement_or_page_widget'})]:
         if not isinstance(result[group],list):
             raise ValueError('invalid list')
         order=[]

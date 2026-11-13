@@ -1,5 +1,11 @@
 # Web Extract Demo
 
+**当前进度（2026-11-13）：第三阶段四单元工程完成。** 两簇少样本生成代码、反馈修复、封存新页评估及CPU成本报告已有可重放结果。12测试页：6候选通过、3纯净度失败、2信息完整性未知、1视频空正文契约错误；这些是当前对话AI静态任务判断，尚未独立校准。无外部模型API或RL参数训练。
+
+运行：.venv/Scripts/python.exe -X utf8 learning/run_cluster_evaluation.py；打开output/stage3/evaluation/index.html。详见[3.4操作与学习](docs/STAGE3_UNIT4.md)、[第三阶段总结](docs/STAGE3_SUMMARY.md)。下一步按固定计划进入第四阶段Rubrics校准。下方带日期的进度为历史记录，以本段为当前状态。
+
+2026-11-13最新：3.3一轮代码反馈修复已完成，按[3.3操作说明](docs/STAGE3_UNIT3.md)运行learning/run_cluster_repair.py，看output/stage3/repair/index.html。自然元数据8条归档、6生成页不变、合成折叠内联文本补漏；封存组尚未执行。
+
 2026-11-13当前学习：3.2代码候选v1及生成组执行，运行learning/run_cluster_generation.py，报告output/stage3/generation/index.html。按[3.2带教说明](docs/STAGE3_UNIT2.md)观察接口/标题/原文证据。仅生成组，未执行修复和测试组；无外部模型API和训练。
 
 最新进度：3.1样本协议工程完成，运行learning/prepare_cluster_protocol.py并打开output/stage3/protocol/index.html；当前冻结分工为split_v2.json。每簇3生成/3修复/6新测试，两个短文本风险页保留。详见[3.1更新操作](docs/STAGE3_UNIT1.md)，待用户运行解释后进入3.2。
@@ -17,6 +23,7 @@
 - [阶段回顾总索引](docs/LEARNING_STAGE_INDEX.md)：当前进程、阅读顺序和后续阶段归档约定。
 - [第一阶段总结](docs/STAGE1_SUMMARY.md)：六篇样例、DOM/XPath、字段分类、原始证据与回归操作。
 - [第二阶段总结](docs/STAGE2_SUMMARY.md)：任务协议、候选验证、审核反馈、新页漏表、质量判断题与计分边界。
+- [第三阶段总结](docs/STAGE3_SUMMARY.md)：两簇代码生成、v2修复、12页封存评估、CPU成本与失败边界。
 
 后续各阶段完成时分别新增总结并更新索引。已有采集、可视化及OCR辅助工具的存在，不代表动态网页、无人值守AI评审或RL训练已经完成。
 

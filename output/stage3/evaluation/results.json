@@ -1,0 +1,1135 @@
+{
+  "protocol_sha256": "ba70afeb9942950b8da0d9c30355bd6870d2879cf1d6c12eb3dcff78c5748d5a",
+  "pages": [
+    {
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_01.html",
+      "source_sha256": "a443101bbcd6da6c0fb7ebe46e65b4078ec9967c7e20051b951611c17f6e42a2",
+      "candidate_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "input_bytes": 95105,
+      "quality": "pending",
+      "output": {
+        "title": "视频 | MSCI中国指数最新调整! 东方电缆、安琪酵母等38股遭剔除",
+        "blocks": [],
+        "metadata": [
+          {
+            "kind": "editor",
+            "text": "责任编辑：孙同怀",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p"
+          }
+        ],
+        "excluded": [
+          {
+            "kind": "promotion",
+            "text": "海量资讯、精准解读，尽在新浪财经APP",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div[2]"
+          }
+        ],
+        "warnings": [
+          "static_dom_only_no_css_visibility_javascript_or_ocr",
+          "images_present_pixels_not_extracted"
+        ]
+      },
+      "execution": "error",
+      "error": "empty output"
+    },
+    {
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_02.html",
+      "source_sha256": "55a1a38a56895553dfe0104d386d43cacc6c1a313b48c6862cf13ca94a1b34d5",
+      "candidate_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "input_bytes": 96666,
+      "quality": "pending",
+      "output": {
+        "title": "协鑫能科联合宁德时代骐骥换电落地“风光换储充”示范站",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "11月12日消息，由宁德时代旗下骐骥换电与协鑫能源科技股份有限公司联合建设的“风光换储充”综合能源示范站今天在福建宁德投运。站点接入协鑫能科“聚星AIVP”虚拟电厂平台，通过AI算法可实现对重卡综合能源场景的智能调度。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "此次投运的示范站骐骥换电宁德北疏港路站，毗邻G15沈海高速，是东部沿海货运大通道的重要补能节点，单站换电量长期位居全国前列。站点周边风光资源丰富，为场站自建风光装机提供了条件。场站配建94kW风光、930kWh储能及5分钟极速换电、兆瓦级超充，年消纳绿电可达12万度、减碳72吨。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[2]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "不同于传统换电站，该站搭建源网荷储协同微电网：绿电优先补能、余电入储、高峰释放，平稳电网负荷、降低客户补能成本。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[3]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "本次骐骥换电与协鑫能科合作将钙钛矿叠层光伏技术引入该站，系全国首次用于重卡换充电负荷场景。场站同步接入协鑫能科聚星AIVP虚拟电厂平台，依托AI动态调度场站负荷资源，参与电力市场互动。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[4]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "据介绍，该站是福建省首座集风光、储能、换充电与智慧调度于一体的重卡综合能源示范站。协鑫能科副总裁牛曙斌表示，换电站、超充站等交通基础设施正成为新型电力系统中具有潜力的分布式灵活调节资源。通过协鑫能科“聚星AIVP”虚拟电厂平台聚合分散场站的储能、充换电负荷及分布式新能源，有助于提升交通能源网络的整体调节能力与市场参与价值。同时，协鑫能科将依托综合能源服务、AI虚拟电厂调控及电力市场化交易能力，与宁德时代深化协同，推动交通与能源产业融合发展。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[5]"
+          }
+        ],
+        "metadata": [
+          {
+            "kind": "editor",
+            "text": "责任编辑：孙同怀",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[6]"
+          }
+        ],
+        "excluded": [
+          {
+            "kind": "promotion",
+            "text": "海量资讯、精准解读，尽在新浪财经APP",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div"
+          }
+        ],
+        "warnings": [
+          "static_dom_only_no_css_visibility_javascript_or_ocr",
+          "images_present_pixels_not_extracted"
+        ]
+      },
+      "execution": "pass"
+    },
+    {
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_03.html",
+      "source_sha256": "e1874e56506d3a62eba36d2472eb8520e5c318589ddd20f20f861d1546c37e97",
+      "candidate_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "input_bytes": 100424,
+      "quality": "pending",
+      "output": {
+        "title": "新云龙头Nebius发财报：预计2026年资本开支增加、业绩指引偏弱",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "查看最新行情",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div[1]/div/div[2]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "周四，大型上市新型云厂商Nebius股价盘前下跌10%。该公司公布三季度营收高于分析师预期，但给出的业绩指引不及市场预期。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "以下是公司业绩与一致预期对比：",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[2]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "每股亏损：每股亏损13美分",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[3]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "营收：9.808亿美元，预期9.075亿美元",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[4]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "目前尚无法直接对比该每股亏损数据是否符合分析师此前预期的69美分。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[5]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "公司公告称，本季度营收同比大增571%；当期净亏损3750万美元，折合每股亏损13美分；去年同期净亏损1.196亿美元，每股亏损50美分。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[6]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "首席执行官阿尔卡季·沃洛日在致股东信中表示，公司预计2026财年营收落在30亿–34亿美元区间的下限，而FactSet一致预期全年营收为33.5亿美元。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[7]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Nebius同时给出2027年初步展望：营收目标120亿–130亿美元，称该目标“体现我们对扩产节奏持保守态度”。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[8]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "公司预计2026财年资本开支270亿美元，高于此前200–250亿美元的指引，也高于FactSet预期的238.5亿美元。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[9]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "在Nebius发布财报前，另外两家新型云厂商CoreWeave与IREN上周公布的财报均好于预期，带动股价回暖。此前几周市场担忧AI扩产周期可持续性，这类标的曾遭遇大幅抛售。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[10]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "上周CoreWeave债券收益率一度飙升至16%以上。在周二财报电话会上，CoreWeave向分析师表示，计划到2027年将母公司层面债务融资规模控制在50亿美元以内。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[11]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Nebius正与同行竞速新建数据中心，而政治环境进一步加剧市场波动。上周美国选民通过数十项公投提案，限制数据中心建设；民主党同时在国会两院大胜。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[12]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "此外还有英伟达带来的变量。在黄仁勋婚外情相关消息曝光后，媒体周三晚间报道，英伟达董事会计划罢免这位联合创始人。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[13]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "根据申报文件，英伟达通过投资扶持新型云赛道、为部分项目提供兜底支持；截至6月末，英伟达持有价值约3.29亿美元的Nebius股份。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[14]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Nebius披露，本季度完成57.5亿美元债务融资。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[15]"
+          }
+        ],
+        "metadata": [
+          {
+            "kind": "editor",
+            "text": "责任编辑：刘明亮",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[16]"
+          }
+        ],
+        "excluded": [
+          {
+            "kind": "promotion",
+            "text": "海量资讯、精准解读，尽在新浪财经APP",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div[2]"
+          }
+        ],
+        "warnings": [
+          "static_dom_only_no_css_visibility_javascript_or_ocr",
+          "images_present_pixels_not_extracted"
+        ]
+      },
+      "execution": "pass"
+    },
+    {
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_04.html",
+      "source_sha256": "9467e7047aafc1ab0d6d21e1402bfa8d24bc5df75aae9725b47b65b0e37930b2",
+      "candidate_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "input_bytes": 105759,
+      "quality": "pending",
+      "output": {
+        "title": "银行业2027年“开门红”没有统一的“开门”时间，首季战役正变成全年连轴",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "每经记者|刘嘉魁",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "原标题：“9月启动开门红，10月已进入考核期”：银行业2027年“开门红”没有统一的“开门”时间，首季战役正变成全年连轴",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[2]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "当下距离2027年，还有一个多月，银行新年“开门红”已经开打。“11月1日，隔壁股份制银行分行已经开始‘开门红’了，我们还没接到通知。”日前，四川某城商行的一位总行人士对《每日经济新闻》记者说出这句话时，带着几分观望。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[3]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "而另一家股份制银行个金条线客户经理，早已进入了另一种状态：该行2027年“开门红”，2026年9月就启动，10月正式进入考核期。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[4]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "西部地区某国有大行对公客户经理向记者透露，他们总行的方案，已不再使用“开门红”说法，改称“旺季营销”，分为两个阶段：2026年10月至12月为“收口及储备阶段”，2027年1月至3月为“攻坚阶段”。另一家城商行综合管理部人士则向记者直言，“还没有接到通知，我们一般制定（新年）‘开门红’方案都是在上年的12月”。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[5]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "事实上，银行针对2027年“开门红”已开启密集的公开动作。例如，今年10月25日，华夏银行太原分行已开完启动会并签下目标责任状；瑞丰银行提出把“明年一季度”做到“今年11月”；嘉兴银行把2027年“开门红”誓师大会提前到今年10月中旬举行，并把活动更名为“春季行动”。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[6]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "《每日经济新闻》记者注意到，银行新年“开门红”年年提前，早已不新鲜，但这个延续多年的全行业统一时点正在散开，启动时间从9月排到12月，称谓各行其是，首季一仗变成月月交账。仗还在年年打，“门”已经没有了。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[7]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "华夏银行太原分行公众号截图",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div[1]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "“散开”的时间表，淡化的名字",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[8]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "往年新年“开门红”的提前，是各家银行一起往上年12月前面挤，挤的仍是同一个门口；而2027年“开门红”的变化在于，门不止一扇，时间也不止一个。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[9]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "《每日经济新闻》记者了解到，一些股份行抢在9月，有国有大行按两阶段的自有节奏推进，部分城商行则照旧等到12月再定方案。对行业而言，这张对不上的“时间表”，传递出的信号值得琢磨：首季营销正在从全行业的同步动作，演变为各家银行依照自身资源禀赋和经营压力作出的分散决策。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[10]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "事实上，银行新年“开门红”在时间表“散开”的同时，称谓也在变化和“散开”。上述西部国有大行客户经理说得直接：总行方案叫“旺季营销”，不叫“开门红”。这与银行公开动向一致。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[11]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "《每日经济新闻》记者注意到，近期，中国银行山西省分行、贵州省分行、西藏自治区分行先后召开的是三季度经营形势分析暨旺季营销工作会议，吉林省分行召开的是个人金融条线岁末年初旺季营销活动启动大会。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[12]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "地方银行的名目更多：嘉兴银行叫“春季行动”，广宗农商银行办的是旺季营销蓄力培训班。仍在沿用“开门红”的，多为农商行和个别股份行分行。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[13]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "更名显然有呼应监管导向的考量。早在2023年，原重庆银保监局就在辖内绩效考评指导意见中明确，不得通过“开门红”劳动竞赛以及签署承诺等方式设置时点性规模考核指标。名字淡化了，考核任务便无法再借着“开门红”的名义层层下压。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[14]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "不过，银行一线员工对活动改名有着更朴素的体会。前述国有大行客户经理告诉记者，行里目前实行月度考核，月月有目标，“基本就是全年连轴转”。换句话说，名称的退出，改变的是动员的形式，并未减轻任务的总量，原来集中在一季度的冲刺强度，如今被均摊到了更长的经营周期里。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[15]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "“开门红”一词，原本对应着清晰的节奏：年末储备、首季冲刺、4月收口，此后有一段相对平缓的间歇。从记者采访的情况看，这段间歇正在消失。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[16]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "上述国有大行两阶段方案，最能说明这种节奏变化。10月至12月的“收口及储备”，意味着当年的经营尚未收官，来年的客户和项目储备就要同步铺开，来年1月至3月的“攻坚”，衔接的正是传统“开门红”的赛程。两个阶段首尾相连，中间没有空档，再叠加月度考核，全年12个月被安排得密不透风。上述股份制银行个金条线客户经理的处境更为典型：9月启动、10月考核，他今年的收官冲刺与明年的开局营销，在日历上已经完全重合。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[17]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "从经营逻辑看，银行这样安排有其合理性。优质客户和低成本资金供给有限，谁先摸排、谁先锁定，谁就掌握主动，将储备期前移是市场选择的结果。但代价同样清晰：一年一场的集中冲刺，变成了没有明确终点的常态消耗。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[18]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "瑞丰银行公众号截图",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div[2]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "沿用多年的时点规模，退居次要位置",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[19]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "《每日经济新闻》记者在采访中注意到一个细节，受访的银行一线人士谈起各自进度时语气都很平静，只有在谈到考核时才略有起伏。对他们而言，哪天开启动会早已无关紧要，真正压在肩上的是每个月都要“平的账”。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[20]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "这也向银行管理层提出了现实问题：当“开门红”化整为零、嵌入全年，员工的积极性与合规底线靠什么维系？如果指标分解只剩下“往前赶、往上加”两个动作，连轴转便容易转成疲态，长期经营所依赖的队伍稳定性也会受到侵蚀。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[21]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "嘉兴银行网站截图",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div[3]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "而与新年“开门红”时间表、称谓一同变化的，还有银行的考核标尺。综合各行部署，日均存款、活期占比、负债成本、AUM（资产管理规模）、代发户数等指标的权重明显上升，沿用多年的时点规模，正在退居次要位置。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[22]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "例如，桐乡农商银行在一体化行动启动会上明确，考核资源向有效客户、低成本资金、普惠涉农、资产质量倾斜，并实行清单化、销号制管理；晋城农商银行要求围绕AUM提质客户、授信储备客户推进储备，储备量直接挂钩明年考核得分；华夏银行太原分行则在启动会上公开表示，不做低质效规模，做有质量的增长。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[23]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "记者注意到，推动银行换考核标尺的硬约束是净息差。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[24]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "国家金融监督管理总局数据显示，2026年二季度商业银行净息差为1.41%，较一季度回升0.01个百分点，系2022年以来首次单季环比上升，但仍处于历史低位。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[25]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "某资深银行业研究人士向《每日经济新闻》记者分析称，息差收窄到目前水平，高成本负债做得越多，盈利账越难算平，考核重心从冲规模转向看日均、看成本，很大程度上是盈利压力倒逼的结果。各行年初真正着力争取的，是代发工资、养老金、社保公积金以及学校、医院等稳定性强、成本低的对公资金，再加上年底前完成尽调预审、开年即可投放的信贷项目。每年12月到次年1月是企业回款、年终奖发放和存款到期续作的集中期，谁提前锁定这些资源，谁的日均沉淀才有保障。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[26]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "桐乡农商银行微资讯公众号截图",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div[4]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "方向已然明确，但这位研究人士认为，仍有两个问题需要时间来回答。一是，日均、成本、资产质量若没有真正写进绩效合约并占住足够权重，换标尺会不会只停留在换说法的层面；二是，当“开门红”演变为全年常态经营，任务目标如何设定才算合理适度，让基层“跳起来够得着”，依靠常态化经营沉淀客户，而非依靠常态化冲刺消耗队伍。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[27]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "银行新年“开门红”仍会年复一年地打下去，只是它越来越不像一场有固定开门时间的战役。时间表散了，称谓变了，考核的标尺换了，赛程从一季度延伸到全年。当统一的时点不复存在，银行面前剩下的其实是一道更朴素的考题：没有时点可以抢跑，比拼的就是每一天的经营是否扎实。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[28]"
+          }
+        ],
+        "metadata": [
+          {
+            "kind": "editor",
+            "text": "责任编辑：曹睿潼",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[29]"
+          }
+        ],
+        "excluded": [
+          {
+            "kind": "promotion",
+            "text": "海量资讯、精准解读，尽在新浪财经APP",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div[5]"
+          }
+        ],
+        "warnings": [
+          "static_dom_only_no_css_visibility_javascript_or_ocr",
+          "images_present_pixels_not_extracted"
+        ]
+      },
+      "execution": "pass"
+    },
+    {
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_05.html",
+      "source_sha256": "bbbceeca33cccd3bdad273f9c344f5dda773fdb49b4c5e2ffd22f8655b58f61e",
+      "candidate_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "input_bytes": 100216,
+      "quality": "pending",
+      "output": {
+        "title": "英伟达CEO黄仁勋或被罢免 苹果硬件负责人是候选人之一",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "据知情人士透露，若英伟达创始人、首席执行官黄仁勋被罢免，董事会部分成员倾向于任命首席财务官科莱特·克雷斯担任这家深陷风波的芯片企业的临时CEO。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "董事会全体尚未作出最终决定。知情人士称，公司董事定于周三晚间召开会议。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[2]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "媒体此前证实，在媒体曝出黄仁勋存在第二段婚外情后，英伟达董事会最早将于周三启动罢免黄仁勋的流程。一名美国政府高级官员表示，英伟达董事会已就本次计划召开的会议向白宫进行通报。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[3]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "据报道，英伟达已聘请外部猎头公司物色下一任CEO人选。另一位知情人士称，苹果硬件负责人约翰尼·斯鲁吉是候选人选之一，他在2019年也曾是英特尔CEO的候选人。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[4]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "风波持续发酵",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[5]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "英伟达股价盘后大跌超8%，创下52周新低。公司发言人暂未置评。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[6]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "一旦黄仁勋被解职，这场风波将迎来高潮。作为全球AI浪潮的标志性人物，黄仁勋此前承认与婚外情。这家市值4万亿美元企业的资深董事会，已委托沃奇泰尔·利普顿律所开展调查。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[7]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "英伟达除了向各大云厂商供应大量高端芯片，还签署了价值数十亿美元的融资协议，为AI产业扩张提供资金支持。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[8]"
+          }
+        ],
+        "metadata": [
+          {
+            "kind": "editor",
+            "text": "责任编辑：刘明亮",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[9]"
+          }
+        ],
+        "excluded": [
+          {
+            "kind": "promotion",
+            "text": "海量资讯、精准解读，尽在新浪财经APP",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div[2]"
+          }
+        ],
+        "warnings": [
+          "static_dom_only_no_css_visibility_javascript_or_ocr",
+          "images_present_pixels_not_extracted"
+        ]
+      },
+      "execution": "pass"
+    },
+    {
+      "cluster_id": "sina_shell_v2",
+      "file": "output/stage3/protocol/sina/test_06.html",
+      "source_sha256": "cabecdca23c5805852e4af2ecdaf61d4c28fa6b2bd907aafe409f90562e29f00",
+      "candidate_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "input_bytes": 97400,
+      "quality": "pending",
+      "output": {
+        "title": "利好来了，“国家队”大手笔增持",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "11月12日晚，黔源电力发布公告称，公司于当日收到国新产业资本管理有限公司《关于增持贵州黔源电力股份有限公司的告知函》。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "国新产业资本于10月29日至11月11日通过深交所集中竞价交易方式增持公司股份427.57万股，占公司总股本的1%。本次权益变动前，国新产业资本持有黔源电力2137.80万股，占总股本的5%；变动后持有2565.37万股，占总股本的6%，全部为无限售条件股份。本次增持股份资金来源为自有资金。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[2]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "国新产业资本表示，增持是基于对公司经营理念、发展战略的认同及对其未来发展前景的看好。本次变动不会对公司治理结构、股权结构及持续性经营产生不利影响，不会导致公司控制权发生变更，也不会导致公司股权分布不符合上市条件。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[3]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "国新产业资本同步抛出后续增持计划：国新产业资本拟自公告披露之日起3个月内，通过深交所系统集中竞价方式增持公司股份，拟增持数量不少于600万股（含首次增持的股份）。本次拟增持未设置固定价格或价格区间，增持主体将基于对公司股票价值的合理判断，并根据公司股票价格波动情况及资本市场整体趋势择机实施。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[4]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "国新产业资本管理有限公司成立于2021年5月，由中国国新控股有限责任公司100%持股 。国资委网站曾报道，中国国新作为一支特殊的“国家队”，发挥着实体经济与资本运营的连接器作用，致力于当好服务实体经济的主力军和维护金融稳定的压舱石。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[5]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "7月19日晚，中国国新宣布，旗下国新投资有限公司相关主体已经使用股票回购增持专项再贷款及配套资金超500亿元，用于维护市场稳定，未来还将继续用好用足再贷款这一政策工具，同时配以自有资金继续增持中央企业股票，坚决维护资本市场核心资产战略价值，坚决维护资本市场平稳健康运行。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[6]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "二级市场上，截至11月12日，黔源电力最新股价18.36元/股，日内下跌0.16%，最新市值78.5亿元。",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[7]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "对于这波操作，你怎么看？",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[8]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "来评论区说说",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[9]"
+          }
+        ],
+        "metadata": [
+          {
+            "kind": "editor",
+            "text": "责任编辑：孙同怀",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[10]"
+          }
+        ],
+        "excluded": [
+          {
+            "kind": "promotion",
+            "text": "海量资讯、精准解读，尽在新浪财经APP",
+            "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div[3]"
+          }
+        ],
+        "warnings": [
+          "static_dom_only_no_css_visibility_javascript_or_ocr",
+          "images_present_pixels_not_extracted"
+        ]
+      },
+      "execution": "pass"
+    },
+    {
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_01.html",
+      "source_sha256": "b8c0ea7c2e71e167b8aff06d7769a6ab8de519a00118beda6b06d95774e4415a",
+      "candidate_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "input_bytes": 84547,
+      "quality": "pending",
+      "output": {
+        "title": "M87*黑洞存在“甜甜圈”结构吗？最新天文研究确认无误",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "中新网北京11月12日电 (记者 孙自法)作为人类首张黑洞照片，距地球约5500万光年、质量超太阳60亿倍的M87星系中心超大质量黑洞(M87*黑洞)被形象称为“甜甜圈”的图像，自7年多前发布以来广受关注，学界对其独特环状结构是否存在也有争议。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]"
+          },
+          {
+            "kind": "caption",
+            "text": "资料图：2019年4月，中国科学院上海天文台与全球同步发布事件视界望远镜 (EHT)拍摄的人类首张黑洞(M87*)图片。中新网记者 孙自法 摄",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "国际学术期刊《自然》北京时间11月12日凌晨在线发表一篇天文学论文称，一项研究独立验证了M87*黑洞经典重建图像中的独特环状结构，确认“甜甜圈”图像无误，最新的重建结果利用一款新开发的独立成像算法，其生成的新图像与原始图像高度重合。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "该论文介绍，事件视界望远镜合作组(EHTC)在2019年4月发布了人类首张黑洞(M87*黑洞)图像，照片中有一个环状结构和一个清晰可见的黑洞阴影。研究人员通过汇集世界各地分布的EHTC望远镜的全部数据重建出该形似“甜甜圈”图像。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "不过，由于这些望远镜在地理上相隔遥远，因此设备和环境误差会严重影响生成图像的准确度。其他研究人员使用业内公认的方法对这些数据进行了分析，但其生成的重建结果并没有环状结构。后来有研究指出，原始图像来自对多个图像处理过程结果的平均，M87*黑洞环状结构存在不确定性。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "在本项研究中，论文第一作者和通讯作者、澳大利亚联邦科学与工业研究组织Samuel Lai与同事合作，将M87*黑洞数据集输入一个成像算法，以验证之前的图像重建结果。该算法将望远镜按闭合三站而不是两两配对进行划分，再综合个体望远镜的测量结果，这么做能计算校准误差，最后得到了一组符合这些标准的重建图像。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]"
+          },
+          {
+            "kind": "caption",
+            "text": "本项研究根据事件视界望远镜 (EHT)公开数据集合成图像重建的M87*图像(图片来自论文作者)。施普林格·自然 供图",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[4]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "论文作者表示，这次研究新生成的图像再现了原始图中的环状结构，独立验证了7年多前发布的人类首张黑洞图片，对事件视界望远镜数据和形状的解读是正确的。(完)",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]"
+          }
+        ],
+        "metadata": [
+          {
+            "kind": "editor",
+            "text": "【编辑:王祎】",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[5]"
+          }
+        ],
+        "excluded": [
+          {
+            "kind": "advertisement_or_page_widget",
+            "text": "",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/table"
+          },
+          {
+            "kind": "advertisement_or_page_widget",
+            "text": "",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[6]"
+          }
+        ],
+        "warnings": [
+          "static_dom_only_no_css_visibility_javascript_or_ocr",
+          "images_present_pixels_not_extracted"
+        ]
+      },
+      "execution": "pass"
+    },
+    {
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_02.html",
+      "source_sha256": "16cd6a170e9b1022d5d0ff7c729af1b9d8628a61eda2358c536c7759b7acf44d",
+      "candidate_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "input_bytes": 83240,
+      "quality": "pending",
+      "output": {
+        "title": "专访孙中山家族后人孙雅丽：冀故乡的酸子树，让中山精神在宝岛再次扎根人心",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "中新网11月12日电(燕新台)“最好的纪念是传承，最好的传承就是实践。”",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "今年是孙中山先生诞辰160周年。近日，孙中山曾侄孙女、孙中山文化基金会会长孙雅丽接受中国新闻网“燕新台”工作室专访，从一棵酸子树种子讲起，道出中山精神时至今日依然影响着一代又一代中华儿女的缘由。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "1883年，孙中山从檀香山带回酸子树种子，亲手栽种在翠亨村故居庭院。2026年植树节，孙雅丽把酸子树种子精心装裱，跨越海峡赠予中国国民党主席郑丽文。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "正是这棵古树种子，成为孙雅丽近年推动两岸民间交流的重要载体。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]"
+          },
+          {
+            "kind": "caption",
+            "text": "中山市翠亨村孙中山故居门前的酸子树。中新网记者 朱延静 摄",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[1]/div[2]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "为了促成酸子树种子赴台和带动其他交流活动，她前后筹备近一年，其间8次赴台，最终将承载着两岸共同历史记忆的酸子树种子带到宝岛，在台北完成捐赠。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "孙雅丽感慨，宏大的理念有时不易传递，但一颗种子、一棵树，是看得见、能生长的信物。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]"
+          },
+          {
+            "kind": "caption",
+            "text": "孙雅丽向郑丽文赠送酸子树种子。受访者供图",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "她的足迹并未止步于台湾地区，今年也携了酸子树苗远赴马来西亚槟城与怡保，在当地华人社群的孙中山纪念馆栽下新苗，让中山精神在更广阔的天地间薪火相传。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]"
+          },
+          {
+            "kind": "caption",
+            "text": "资料图：孙雅丽在第十届台湾青年岭南行总闭营暨交流成果展示活动现场。 受访者供图",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[5]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "孙雅丽对岛内“去中国化”带来的隐忧感触很深。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "她坦言，如今不少岛内青少年对孙中山先生十分陌生，有的孩子见到他的雕像甚至都不知道是谁。每每看到这样的现状，孙雅丽既心疼又忧心，甚至有些愤怒。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[9]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "她表示，在两岸交流遭遇波折的当下，希望先从民间层面、面向青年群体的交流切入，逐步拓展到更广泛的民间人际往来。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[10]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "孙雅丽表示，孙中山先生毕生追求的“天下为公”“博爱大同”理念，是中华文化绵延千年的智慧内核，既是两岸同胞共同的精神财富，也能为当下世界变局提供有益启示。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[11]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "孙中山先生曾说：“要恢复民族的地位，便先要恢复民族的精神。”",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[12]"
+          },
+          {
+            "kind": "caption",
+            "text": "孙雅丽与孙中山雕像合影。受访者供图",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[7]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "在孙雅丽看来，中山精神是联结全球中华儿女的纽带之一，为此她发起创立了孙中山文化基金会。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[13]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "“孙中山先生毕生的心愿是民族复兴、国家统一，这也是所有中华儿女共同的追求。两岸同胞共享这一段历史、同承这份理想，这份共同记忆，不会被人为割裂。”",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[14]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "孙雅丽也期待更多民间人士主动参与，共同用好孙中山先生留下的这份宝贵遗产，持续深化两岸文教、民生领域的交流往来，逐步消融彼此隔阂、增进相互理解。",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[15]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "采访尾声，孙雅丽表示，一颗种子破土需要时间，站在孙中山先生诞辰160周年的节点上，她期许两岸同胞接续先生的遗志与精神，同心同行，共促民族复兴。(完)",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[16]"
+          }
+        ],
+        "metadata": [
+          {
+            "kind": "editor",
+            "text": "【编辑:黄嘉雯】",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[8]"
+          }
+        ],
+        "excluded": [
+          {
+            "kind": "advertisement_or_page_widget",
+            "text": "",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/table"
+          },
+          {
+            "kind": "advertisement_or_page_widget",
+            "text": "",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[9]"
+          }
+        ],
+        "warnings": [
+          "static_dom_only_no_css_visibility_javascript_or_ocr",
+          "images_present_pixels_not_extracted"
+        ]
+      },
+      "execution": "pass"
+    },
+    {
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_03.html",
+      "source_sha256": "019ef6b2bfbd3220e149e992afed145df7ad4012ce45a58b24950d53624c9c94",
+      "candidate_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "input_bytes": 83667,
+      "quality": "pending",
+      "output": {
+        "title": "【乌镇“网事”】习言道｜让更多国家和人民共享互联网发展成果",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "网络空间关乎人类命运，网络空间未来应由世界各国共同开创。习近平总书记多次深入阐述构建网络空间命运共同体的中国方案，强调“让互联网更好造福人民、造福世界”。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p"
+          }
+        ],
+        "metadata": [
+          {
+            "kind": "editor",
+            "text": "【编辑:刘阳禾】",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[12]"
+          }
+        ],
+        "excluded": [
+          {
+            "kind": "advertisement_or_page_widget",
+            "text": "",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[13]"
+          }
+        ],
+        "warnings": [
+          "static_dom_only_no_css_visibility_javascript_or_ocr",
+          "images_present_pixels_not_extracted"
+        ]
+      },
+      "execution": "pass"
+    },
+    {
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_04.html",
+      "source_sha256": "54fc27a679d4053108d39e680fc20dec136f8b995811cf9f72eaf1a942c49a97",
+      "candidate_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "input_bytes": 86682,
+      "quality": "pending",
+      "output": {
+        "title": "习言道｜30多年前，习近平给出一道“选择题”",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "中新网11月2日电 题：30多年前，习近平给出一道“选择题”",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "1988年6月，习近平同志赴任福建宁德地委书记。在调研中，不少群众反映一个突出问题：干部乱占地建房。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "这类“马路边的腐败”涉及干部人数众多，清房就要得罪人，但习近平同志态度很坚决。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "他请来时任宁德地区纪委副书记张经喜，问了三个问题：“老百姓意见大不大？”张经喜据实回答：“大。”“是不是当前影响积极性最大的问题？”“是。”“将近三百万人该得罪，还是这两三千人该得罪？”“那当然是宁肯得罪这两三千人。”",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "1989年1月，在宁德地委工作会议上，习近平同志指出：“这里有一个谁得罪谁的问题，你违纪违法占地盖房，为一己之私破坏了党的权威和形象，是你得罪了党，得罪了人民，得罪了党纪国法，而不是代表了党和人民利益查处你的干部得罪了你！”",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "此后，清房工作迅速推开，赢得百姓一片叫好。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "“谁得罪谁”的问题，是一笔再明白不过的政治账、人心向背的账。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "党的十八大以来，中国共产党以“得罪千百人、不负十四亿”的使命担当祛疴治乱，把全面从严治党作为党的长期战略、永恒课题，一步不退，一抓到底。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "“得罪千百人”昭示着决心。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[9]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "从制定和落实中央八项规定，到“打虎”“拍蝇”“猎狐”多管齐下，从一体推进不敢腐不能腐不想腐到风腐同查同治……新时代以来，党中央坚定不移推进全面从严治党，党风政风焕然一新。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[10]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "10月26日至29日，党的二十届五中全会举行，重点研究持之以恒推进全面从严治党问题。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[11]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "“坚持严的基调不动摇”“将反腐败斗争进行到底”“必须扭住管党治党责任制‘牛鼻子’”……全会对持之以恒推进全面从严治党作出系统部署。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[12]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "习近平总书记在会上强调，“面向未来，不管遇到什么难题，不管经受多大风浪考验，我们都要保持定力、坚定信心，一以贯之全面从严治党，不能有丝毫犹疑和退缩。”",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[13]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "“不负十四亿”彰显着立场。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[14]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "2014年12月，习近平总书记在江苏镇江考察时，一位老人紧紧握住他的手：“总书记，您好！您是腐败分子的克星，全国人民的福星！”",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[15]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "总书记回答：“不辜负全国人民的期望。”",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[16]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "正是在这次考察期间，习近平总书记首次提出“全面从严治党”。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[17]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "“坚持为中国人民谋幸福、为中华民族谋复兴”“保持党同人民群众的血肉联系”“必须牢记党除了工人阶级和最广大人民群众的利益没有自己特殊的利益、党同腐败水火不容”……翻开党的二十届五中全会公报，人民立场一以贯之。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[18]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "今年8月，在中共中央召开的党外人士座谈会上，习近平总书记指出，“解决党内存在的问题，首先要立足于中国共产党的自身力量，不断实现党的自我净化、自我完善、自我革新、自我提高；还要依靠人民的支持，主动接受人民监督，虚心听取群众批评，把人民群众的拥护和支持转化为持之以恒推进全面从严治党的强大动力。”",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[19]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "江山就是人民、人民就是江山。全面从严治党守的是人民的心。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[20]"
+          }
+        ],
+        "metadata": [
+          {
+            "kind": "production_credit",
+            "text": "｜总策划：俞岚",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[21]"
+          },
+          {
+            "kind": "production_credit",
+            "text": "｜策划：周锐",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[22]"
+          },
+          {
+            "kind": "production_credit",
+            "text": "｜统筹：马学玲 阚枫",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[23]"
+          },
+          {
+            "kind": "production_credit",
+            "text": "｜执笔：高萌",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[24]"
+          },
+          {
+            "kind": "production_credit",
+            "text": "｜审校：孙静波 李京统",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[25]"
+          },
+          {
+            "kind": "production_credit",
+            "text": "｜视觉：张舰元 倪雯冰",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[26]"
+          },
+          {
+            "kind": "production_credit",
+            "text": "｜中国新闻网“习言道”工作室出品",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[27]"
+          },
+          {
+            "kind": "editor",
+            "text": "【编辑:刘阳禾】",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]"
+          }
+        ],
+        "excluded": [
+          {
+            "kind": "advertisement_or_page_widget",
+            "text": "",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]"
+          }
+        ],
+        "warnings": [
+          "static_dom_only_no_css_visibility_javascript_or_ocr",
+          "images_present_pixels_not_extracted"
+        ]
+      },
+      "execution": "pass"
+    },
+    {
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_05.html",
+      "source_sha256": "6fe45864eeec753a19d2a72ae896d9d28e49475faad64fde576bb83dec743c17",
+      "candidate_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "input_bytes": 83617,
+      "quality": "pending",
+      "output": {
+        "title": "习言道｜全面从严治党关键在严",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "中国共产党第二十届中央委员会第五次全体会议，于2026年10月26日至29日在北京举行。全会听取和讨论了习近平受中央政治局委托所作的工作报告，审议通过了《中共中央关于持之以恒推进全面从严治党若干重大问题的决定》。习近平就《决定（讨论稿）》向全会作了说明。",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p"
+          }
+        ],
+        "metadata": [
+          {
+            "kind": "editor",
+            "text": "【编辑:吴青潞】",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[12]"
+          }
+        ],
+        "excluded": [
+          {
+            "kind": "advertisement_or_page_widget",
+            "text": "",
+            "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/div[13]"
+          }
+        ],
+        "warnings": [
+          "static_dom_only_no_css_visibility_javascript_or_ocr",
+          "images_present_pixels_not_extracted"
+        ]
+      },
+      "execution": "pass"
+    },
+    {
+      "cluster_id": "chinanews_shell_v2",
+      "file": "output/stage3/protocol/chinanews/test_06.html",
+      "source_sha256": "5dede0bcdf633e9320824d5cd747b59d360d08a3553daf19c40903bdbbeb4d9a",
+      "candidate_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "input_bytes": 79796,
+      "quality": "pending",
+      "output": {
+        "title": "人民空军，生日快乐！",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "2026年11月11日",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "人民空军成立77周年纪念日",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "在战火中诞生，在战斗中成长",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "人民空军的每一步足迹",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "都镌刻着艰辛与荣耀",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "从开国大典仅有17架战机飞过天安门",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "到如今成体系列阵长空的钢铁之翼",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "一代代空军官兵",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "将青春献给万里长空",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[9]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "用生命守护家国安宁",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[10]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "如今的人民空军",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[11]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "政治淬炼更加坚强",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[12]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "作战能力加速攀升",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[13]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "对外交流更加广泛",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[14]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "现代化建设水平不断跃升",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[15]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "仰望我们的天空",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[16]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "万里长空，和平安宁",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[17]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "感恩守护",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[18]"
+          },
+          {
+            "kind": "paragraph",
+            "text": "人民空军，生日快乐！",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/p[19]"
+          }
+        ],
+        "metadata": [
+          {
+            "kind": "editor",
+            "text": "【编辑:刘阳禾】",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[2]"
+          }
+        ],
+        "excluded": [
+          {
+            "kind": "advertisement_or_page_widget",
+            "text": "",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/table"
+          },
+          {
+            "kind": "advertisement_or_page_widget",
+            "text": "",
+            "xpath": "/html/body/div[7]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]"
+          }
+        ],
+        "warnings": [
+          "static_dom_only_no_css_visibility_javascript_or_ocr",
+          "images_present_pixels_not_extracted"
+        ]
+      },
+      "execution": "pass"
+    }
+  ],
+  "limits": "held-out relative to current frozen split; same dialogue context, not independent reviewer or broad-web accuracy"
+}

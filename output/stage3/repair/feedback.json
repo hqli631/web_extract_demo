@@ -1,0 +1,83 @@
+{
+  "reviewer": "current_conversation_ai",
+  "review_scope": "full static article DOM and v1 outputs of six fixed repair pages; not independent gold labels",
+  "findings": [
+    {
+      "code": "standalone_byline_in_body",
+      "file": "samples/collected_c5d4b9cdcf5b4c91.html",
+      "evidence": [
+        {
+          "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1]",
+          "text": "21世纪经济报道记者 程雪溶",
+          "before": "blocks.paragraph",
+          "after": "metadata.author"
+        }
+      ],
+      "requested": "first direct p, full-line media-reporter-name signature only; narrative mentions kept"
+    },
+    {
+      "code": "production_credits_in_body",
+      "file": "validation_blind/samples/collected_5029464d5612ed80.html",
+      "evidence": [
+        {
+          "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[23]",
+          "text": "｜总策划：俞岚",
+          "before": "blocks.paragraph",
+          "after": "metadata.production_credit"
+        },
+        {
+          "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[24]",
+          "text": "｜策划：周锐",
+          "before": "blocks.paragraph",
+          "after": "metadata.production_credit"
+        },
+        {
+          "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[25]",
+          "text": "｜统筹：马学玲",
+          "before": "blocks.paragraph",
+          "after": "metadata.production_credit"
+        },
+        {
+          "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[26]",
+          "text": "｜执笔：阚枫 袁秀月",
+          "before": "blocks.paragraph",
+          "after": "metadata.production_credit"
+        },
+        {
+          "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[27]",
+          "text": "｜审校：孙静波",
+          "before": "blocks.paragraph",
+          "after": "metadata.production_credit"
+        },
+        {
+          "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[28]",
+          "text": "｜视觉：张舰元 倪雯冰",
+          "before": "blocks.paragraph",
+          "after": "metadata.production_credit"
+        },
+        {
+          "xpath": "/html/body/div[6]/div[1]/div[2]/div[2]/div[4]/div[2]/p[29]",
+          "text": "｜中国新闻网“习言道”工作室出品",
+          "before": "blocks.paragraph",
+          "after": "metadata.production_credit"
+        }
+      ],
+      "requested": "contiguous suffix of explicit pipe-prefixed production-credit lines -> production_credit metadata; do not equate production staff with author"
+    },
+    {
+      "code": "wrapper_inline_text_omitted",
+      "evidence_scope": "synthetic folded_leaf controls only",
+      "requested": "preserve inline-only text-bearing wrapper as one paragraph, regardless of display:none; not blanket keep hidden navigation"
+    }
+  ],
+  "no_change_needed": [
+    "v1 already retains repair-page 5x3 table",
+    "nested p already supported; retain as control"
+  ],
+  "remaining_limits": [
+    "DOM/image content completeness not independently verified",
+    "new wrapper text heuristic could capture unfamiliar noise",
+    "mixed text/tail plus nested blocks not fully handled",
+    "production-credit schema new; downstream must support it"
+  ]
+}

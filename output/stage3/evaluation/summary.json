@@ -1,0 +1,85 @@
+{
+  "protocol_sha256": "ba70afeb9942950b8da0d9c30355bd6870d2879cf1d6c12eb3dcff78c5748d5a",
+  "pages": [
+    {
+      "file": "output/stage3/protocol/sina/test_01.html",
+      "execution": "error",
+      "status": "execution_error",
+      "score": null
+    },
+    {
+      "file": "output/stage3/protocol/sina/test_02.html",
+      "execution": "pass",
+      "status": "candidate_pass",
+      "score": 1.0
+    },
+    {
+      "file": "output/stage3/protocol/sina/test_03.html",
+      "execution": "pass",
+      "status": "quality_fail",
+      "score": 0.8
+    },
+    {
+      "file": "output/stage3/protocol/sina/test_04.html",
+      "execution": "pass",
+      "status": "quality_fail",
+      "score": 0.8
+    },
+    {
+      "file": "output/stage3/protocol/sina/test_05.html",
+      "execution": "pass",
+      "status": "candidate_pass",
+      "score": 1.0
+    },
+    {
+      "file": "output/stage3/protocol/sina/test_06.html",
+      "execution": "pass",
+      "status": "quality_fail",
+      "score": 0.8
+    },
+    {
+      "file": "output/stage3/protocol/chinanews/test_01.html",
+      "execution": "pass",
+      "status": "candidate_pass",
+      "score": 1.0
+    },
+    {
+      "file": "output/stage3/protocol/chinanews/test_02.html",
+      "execution": "pass",
+      "status": "candidate_pass",
+      "score": 1.0
+    },
+    {
+      "file": "output/stage3/protocol/chinanews/test_03.html",
+      "execution": "pass",
+      "status": "unknown",
+      "score": null
+    },
+    {
+      "file": "output/stage3/protocol/chinanews/test_04.html",
+      "execution": "pass",
+      "status": "candidate_pass",
+      "score": 1.0
+    },
+    {
+      "file": "output/stage3/protocol/chinanews/test_05.html",
+      "execution": "pass",
+      "status": "unknown",
+      "score": null
+    },
+    {
+      "file": "output/stage3/protocol/chinanews/test_06.html",
+      "execution": "pass",
+      "status": "candidate_pass",
+      "score": 1.0
+    }
+  ],
+  "counts": {
+    "candidate_pass": 6,
+    "quality_fail": 3,
+    "unknown": 2,
+    "pending": 0,
+    "execution_error": 1
+  },
+  "interpretation": "current-chat static task judgments, not human-calibrated accuracy; live/image gaps separate"
+}
