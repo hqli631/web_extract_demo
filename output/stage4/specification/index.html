@@ -1,0 +1,1546 @@
+<!doctype html><meta charset="utf-8"><title>4.1 评价依据与受控错例</title>
+<style>body{font:16px/1.8 sans-serif;max-width:1150px;margin:30px auto}pre{white-space:pre-wrap}td,th{border:1px solid #ccc;padding:8px}table{border-collapse:collapse}details{margin:15px 0}</style>
+<h1>4.1 评价依据与受控错例</h1><p>本页是构造错例及预先约定标签，不是AI新审核结果、准确率或reward。旧第三阶段评价和抽取器均未修改。</p>
+<p>用固定源内容，只改变候选输出中的一个因素，观察应该影响哪项判断。问句不等于噪声，隐藏不等于删除，含互动引导词也不等于互动组件。</p>
+<h2>源内容完整清单</h2><pre>{
+  &quot;byline&quot;: {
+    &quot;id&quot;: &quot;byline&quot;,
+    &quot;kind&quot;: &quot;paragraph&quot;,
+    &quot;text&quot;: &quot;记者 张三&quot;,
+    &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+  },
+  &quot;intro&quot;: {
+    &quot;id&quot;: &quot;intro&quot;,
+    &quot;kind&quot;: &quot;paragraph&quot;,
+    &quot;text&quot;: &quot;社区在三个服务站试用人工智能辅助咨询，详情见试点报告。&quot;,
+    &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+  },
+  &quot;question&quot;: {
+    &quot;id&quot;: &quot;question&quot;,
+    &quot;kind&quot;: &quot;paragraph&quot;,
+    &quot;text&quot;: &quot;中新社记者：您如何评价人工智能对社区服务的影响？&quot;,
+    &quot;xpath&quot;: &quot;/html/body/div/p[3]&quot;
+  },
+  &quot;answer&quot;: {
+    &quot;id&quot;: &quot;answer&quot;,
+    &quot;kind&quot;: &quot;paragraph&quot;,
+    &quot;text&quot;: &quot;受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。&quot;,
+    &quot;xpath&quot;: &quot;/html/body/div/p[4]&quot;
+  },
+  &quot;heading&quot;: {
+    &quot;id&quot;: &quot;heading&quot;,
+    &quot;kind&quot;: &quot;subheading&quot;,
+    &quot;text&quot;: &quot;试点结果&quot;,
+    &quot;xpath&quot;: &quot;/html/body/div/h2&quot;
+  },
+  &quot;list&quot;: {
+    &quot;id&quot;: &quot;list&quot;,
+    &quot;kind&quot;: &quot;list&quot;,
+    &quot;text&quot;: &quot;保留人工核实环节。定期检查服务效果。&quot;,
+    &quot;xpath&quot;: &quot;/html/body/div/ul&quot;
+  },
+  &quot;table&quot;: {
+    &quot;id&quot;: &quot;table&quot;,
+    &quot;kind&quot;: &quot;table&quot;,
+    &quot;text&quot;: &quot;项目数量服务站3&quot;,
+    &quot;xpath&quot;: &quot;/html/body/div/table&quot;,
+    &quot;rows&quot;: [
+      [
+        &quot;项目&quot;,
+        &quot;数量&quot;
+      ],
+      [
+        &quot;服务站&quot;,
+        &quot;3&quot;
+      ]
+    ]
+  },
+  &quot;caption&quot;: {
+    &quot;id&quot;: &quot;caption&quot;,
+    &quot;kind&quot;: &quot;caption&quot;,
+    &quot;text&quot;: &quot;图为社区服务站试点现场。&quot;,
+    &quot;xpath&quot;: &quot;/html/body/div/div[1]&quot;
+  },
+  &quot;folded&quot;: {
+    &quot;id&quot;: &quot;folded&quot;,
+    &quot;kind&quot;: &quot;paragraph&quot;,
+    &quot;text&quot;: &quot;补充说明：试点数据尚未覆盖所有居民。&quot;,
+    &quot;xpath&quot;: &quot;/html/body/div/div[2]&quot;
+  },
+  &quot;analysis&quot;: {
+    &quot;id&quot;: &quot;analysis&quot;,
+    &quot;kind&quot;: &quot;paragraph&quot;,
+    &quot;text&quot;: &quot;研究者指出，“来评论区说说”是一种常见互动引导语。&quot;,
+    &quot;xpath&quot;: &quot;/html/body/div/p[5]&quot;
+  },
+  &quot;menu&quot;: {
+    &quot;id&quot;: &quot;menu&quot;,
+    &quot;kind&quot;: &quot;paragraph&quot;,
+    &quot;text&quot;: &quot;返回首页&quot;,
+    &quot;xpath&quot;: &quot;/html/body/div/div[3]&quot;
+  },
+  &quot;cta&quot;: {
+    &quot;id&quot;: &quot;cta&quot;,
+    &quot;kind&quot;: &quot;paragraph&quot;,
+    &quot;text&quot;: &quot;对于这次试点，你怎么看？来评论区说说。&quot;,
+    &quot;xpath&quot;: &quot;/html/body/div/p[6]&quot;
+  },
+  &quot;promotion&quot;: {
+    &quot;id&quot;: &quot;promotion&quot;,
+    &quot;kind&quot;: &quot;paragraph&quot;,
+    &quot;text&quot;: &quot;扫码下载本平台APP，领取优惠券。&quot;,
+    &quot;xpath&quot;: &quot;/html/body/div/div[4]&quot;
+  }
+}</pre>
+<h2>错例与预期影响</h2><table><tr><th>案例</th><th>Q1—Q5预期</th><th>依据</th></tr>
+<tr><td>correct 符合任务范围</td><td>yes / yes / yes / yes / yes</td><td>访谈问句、折叠补充、图说表格保留；独立署名、菜单、互动和推广分流。analysis引用互动文案作分析，仍是正文。</td></tr>
+<tr><td>missing_paragraph 漏叙述段</td><td>yes / no / yes / yes / yes</td><td>缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/p[4]</td></tr>
+<tr><td>missing_table 漏信息表</td><td>yes / yes / no / yes / yes</td><td>缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/table</td></tr>
+<tr><td>missing_list 漏信息列表</td><td>yes / yes / no / yes / yes</td><td>缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/ul</td></tr>
+<tr><td>missing_caption 漏图说</td><td>yes / yes / no / yes / yes</td><td>缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/div[1]</td></tr>
+<tr><td>missing_folded 误删折叠叙述</td><td>yes / no / yes / yes / yes</td><td>缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/div[2]</td></tr>
+<tr><td>promotion_in_body 推广混入</td><td>yes / yes / yes / no / yes</td><td>记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/div[4]</td></tr>
+<tr><td>byline_in_body 独立署名混入</td><td>yes / yes / yes / no / yes</td><td>记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/p[1]</td></tr>
+<tr><td>cta_in_body 互动引导混入</td><td>yes / yes / yes / no / yes</td><td>记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/p[6]</td></tr>
+<tr><td>hidden_menu_in_body 隐藏菜单混入</td><td>yes / yes / yes / no / yes</td><td>记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/div[3]</td></tr>
+<tr><td>duplicate 正文重复</td><td>yes / yes / yes / yes / no</td><td>同一回答出现两次；篇幅增加不代表质量提高。</td></tr>
+<tr><td>reordered 问答乱序</td><td>yes / yes / yes / yes / no</td><td>原文均在但回答被放到问题前；完整性与顺序分别判断。</td></tr>
+<tr><td>wrong_title 标题不符</td><td>no / yes / yes / yes / yes</td><td>正文未变但主标题错误，由Q1主评。</td></tr>
+<tr><td>image_unknown 图解内容证据不足</td><td>yes / unknown / unknown / yes / yes</td><td>只有导语，图像可能承载主要信息；未提供图片像素，不虚构OCR也不把未知填yes或no。</td></tr>
+</table>
+<details><summary>correct：完整候选输出</summary><pre>{
+  &quot;case_id&quot;: &quot;correct&quot;,
+  &quot;label&quot;: &quot;符合任务范围&quot;,
+  &quot;synthetic&quot;: true,
+  &quot;output&quot;: {
+    &quot;title&quot;: &quot;访谈：社区如何使用人工智能&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;id&quot;: &quot;intro&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;社区在三个服务站试用人工智能辅助咨询，详情见试点报告。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;question&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新社记者：您如何评价人工智能对社区服务的影响？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;answer&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[4]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;heading&quot;,
+        &quot;kind&quot;: &quot;subheading&quot;,
+        &quot;text&quot;: &quot;试点结果&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/h2&quot;
+      },
+      {
+        &quot;id&quot;: &quot;list&quot;,
+        &quot;kind&quot;: &quot;list&quot;,
+        &quot;text&quot;: &quot;保留人工核实环节。定期检查服务效果。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/ul&quot;
+      },
+      {
+        &quot;id&quot;: &quot;table&quot;,
+        &quot;kind&quot;: &quot;table&quot;,
+        &quot;text&quot;: &quot;项目数量服务站3&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/table&quot;,
+        &quot;rows&quot;: [
+          [
+            &quot;项目&quot;,
+            &quot;数量&quot;
+          ],
+          [
+            &quot;服务站&quot;,
+            &quot;3&quot;
+          ]
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;caption&quot;,
+        &quot;kind&quot;: &quot;caption&quot;,
+        &quot;text&quot;: &quot;图为社区服务站试点现场。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[1]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;folded&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;补充说明：试点数据尚未覆盖所有居民。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;analysis&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;研究者指出，“来评论区说说”是一种常见互动引导语。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[5]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;id&quot;: &quot;byline&quot;,
+        &quot;kind&quot;: &quot;author&quot;,
+        &quot;text&quot;: &quot;记者 张三&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;id&quot;: &quot;menu&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;返回首页&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;cta&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于这次试点，你怎么看？来评论区说说。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[6]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;promotion&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;扫码下载本平台APP，领取优惠券。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[4]&quot;
+      }
+    ]
+  },
+  &quot;expected_answers&quot;: {
+    &quot;Q1&quot;: &quot;yes&quot;,
+    &quot;Q2&quot;: &quot;yes&quot;,
+    &quot;Q3&quot;: &quot;yes&quot;,
+    &quot;Q4&quot;: &quot;yes&quot;,
+    &quot;Q5&quot;: &quot;yes&quot;
+  },
+  &quot;reason&quot;: &quot;访谈问句、折叠补充、图说表格保留；独立署名、菜单、互动和推广分流。analysis引用互动文案作分析，仍是正文。&quot;,
+  &quot;origin&quot;: &quot;predefined controlled transformation; not model verdict&quot;
+}</pre></details>
+<details><summary>missing_paragraph：完整候选输出</summary><pre>{
+  &quot;case_id&quot;: &quot;missing_paragraph&quot;,
+  &quot;label&quot;: &quot;漏叙述段&quot;,
+  &quot;synthetic&quot;: true,
+  &quot;output&quot;: {
+    &quot;title&quot;: &quot;访谈：社区如何使用人工智能&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;id&quot;: &quot;intro&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;社区在三个服务站试用人工智能辅助咨询，详情见试点报告。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;question&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新社记者：您如何评价人工智能对社区服务的影响？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;heading&quot;,
+        &quot;kind&quot;: &quot;subheading&quot;,
+        &quot;text&quot;: &quot;试点结果&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/h2&quot;
+      },
+      {
+        &quot;id&quot;: &quot;list&quot;,
+        &quot;kind&quot;: &quot;list&quot;,
+        &quot;text&quot;: &quot;保留人工核实环节。定期检查服务效果。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/ul&quot;
+      },
+      {
+        &quot;id&quot;: &quot;table&quot;,
+        &quot;kind&quot;: &quot;table&quot;,
+        &quot;text&quot;: &quot;项目数量服务站3&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/table&quot;,
+        &quot;rows&quot;: [
+          [
+            &quot;项目&quot;,
+            &quot;数量&quot;
+          ],
+          [
+            &quot;服务站&quot;,
+            &quot;3&quot;
+          ]
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;caption&quot;,
+        &quot;kind&quot;: &quot;caption&quot;,
+        &quot;text&quot;: &quot;图为社区服务站试点现场。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[1]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;folded&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;补充说明：试点数据尚未覆盖所有居民。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;analysis&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;研究者指出，“来评论区说说”是一种常见互动引导语。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[5]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;id&quot;: &quot;byline&quot;,
+        &quot;kind&quot;: &quot;author&quot;,
+        &quot;text&quot;: &quot;记者 张三&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;id&quot;: &quot;menu&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;返回首页&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;cta&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于这次试点，你怎么看？来评论区说说。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[6]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;promotion&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;扫码下载本平台APP，领取优惠券。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[4]&quot;
+      }
+    ]
+  },
+  &quot;expected_answers&quot;: {
+    &quot;Q1&quot;: &quot;yes&quot;,
+    &quot;Q2&quot;: &quot;no&quot;,
+    &quot;Q3&quot;: &quot;yes&quot;,
+    &quot;Q4&quot;: &quot;yes&quot;,
+    &quot;Q5&quot;: &quot;yes&quot;
+  },
+  &quot;reason&quot;: &quot;缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/p[4]&quot;,
+  &quot;origin&quot;: &quot;predefined controlled transformation; not model verdict&quot;
+}</pre></details>
+<details><summary>missing_table：完整候选输出</summary><pre>{
+  &quot;case_id&quot;: &quot;missing_table&quot;,
+  &quot;label&quot;: &quot;漏信息表&quot;,
+  &quot;synthetic&quot;: true,
+  &quot;output&quot;: {
+    &quot;title&quot;: &quot;访谈：社区如何使用人工智能&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;id&quot;: &quot;intro&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;社区在三个服务站试用人工智能辅助咨询，详情见试点报告。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;question&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新社记者：您如何评价人工智能对社区服务的影响？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;answer&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[4]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;heading&quot;,
+        &quot;kind&quot;: &quot;subheading&quot;,
+        &quot;text&quot;: &quot;试点结果&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/h2&quot;
+      },
+      {
+        &quot;id&quot;: &quot;list&quot;,
+        &quot;kind&quot;: &quot;list&quot;,
+        &quot;text&quot;: &quot;保留人工核实环节。定期检查服务效果。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/ul&quot;
+      },
+      {
+        &quot;id&quot;: &quot;caption&quot;,
+        &quot;kind&quot;: &quot;caption&quot;,
+        &quot;text&quot;: &quot;图为社区服务站试点现场。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[1]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;folded&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;补充说明：试点数据尚未覆盖所有居民。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;analysis&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;研究者指出，“来评论区说说”是一种常见互动引导语。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[5]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;id&quot;: &quot;byline&quot;,
+        &quot;kind&quot;: &quot;author&quot;,
+        &quot;text&quot;: &quot;记者 张三&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;id&quot;: &quot;menu&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;返回首页&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;cta&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于这次试点，你怎么看？来评论区说说。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[6]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;promotion&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;扫码下载本平台APP，领取优惠券。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[4]&quot;
+      }
+    ]
+  },
+  &quot;expected_answers&quot;: {
+    &quot;Q1&quot;: &quot;yes&quot;,
+    &quot;Q2&quot;: &quot;yes&quot;,
+    &quot;Q3&quot;: &quot;no&quot;,
+    &quot;Q4&quot;: &quot;yes&quot;,
+    &quot;Q5&quot;: &quot;yes&quot;
+  },
+  &quot;reason&quot;: &quot;缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/table&quot;,
+  &quot;origin&quot;: &quot;predefined controlled transformation; not model verdict&quot;
+}</pre></details>
+<details><summary>missing_list：完整候选输出</summary><pre>{
+  &quot;case_id&quot;: &quot;missing_list&quot;,
+  &quot;label&quot;: &quot;漏信息列表&quot;,
+  &quot;synthetic&quot;: true,
+  &quot;output&quot;: {
+    &quot;title&quot;: &quot;访谈：社区如何使用人工智能&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;id&quot;: &quot;intro&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;社区在三个服务站试用人工智能辅助咨询，详情见试点报告。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;question&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新社记者：您如何评价人工智能对社区服务的影响？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;answer&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[4]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;heading&quot;,
+        &quot;kind&quot;: &quot;subheading&quot;,
+        &quot;text&quot;: &quot;试点结果&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/h2&quot;
+      },
+      {
+        &quot;id&quot;: &quot;table&quot;,
+        &quot;kind&quot;: &quot;table&quot;,
+        &quot;text&quot;: &quot;项目数量服务站3&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/table&quot;,
+        &quot;rows&quot;: [
+          [
+            &quot;项目&quot;,
+            &quot;数量&quot;
+          ],
+          [
+            &quot;服务站&quot;,
+            &quot;3&quot;
+          ]
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;caption&quot;,
+        &quot;kind&quot;: &quot;caption&quot;,
+        &quot;text&quot;: &quot;图为社区服务站试点现场。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[1]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;folded&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;补充说明：试点数据尚未覆盖所有居民。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;analysis&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;研究者指出，“来评论区说说”是一种常见互动引导语。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[5]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;id&quot;: &quot;byline&quot;,
+        &quot;kind&quot;: &quot;author&quot;,
+        &quot;text&quot;: &quot;记者 张三&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;id&quot;: &quot;menu&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;返回首页&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;cta&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于这次试点，你怎么看？来评论区说说。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[6]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;promotion&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;扫码下载本平台APP，领取优惠券。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[4]&quot;
+      }
+    ]
+  },
+  &quot;expected_answers&quot;: {
+    &quot;Q1&quot;: &quot;yes&quot;,
+    &quot;Q2&quot;: &quot;yes&quot;,
+    &quot;Q3&quot;: &quot;no&quot;,
+    &quot;Q4&quot;: &quot;yes&quot;,
+    &quot;Q5&quot;: &quot;yes&quot;
+  },
+  &quot;reason&quot;: &quot;缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/ul&quot;,
+  &quot;origin&quot;: &quot;predefined controlled transformation; not model verdict&quot;
+}</pre></details>
+<details><summary>missing_caption：完整候选输出</summary><pre>{
+  &quot;case_id&quot;: &quot;missing_caption&quot;,
+  &quot;label&quot;: &quot;漏图说&quot;,
+  &quot;synthetic&quot;: true,
+  &quot;output&quot;: {
+    &quot;title&quot;: &quot;访谈：社区如何使用人工智能&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;id&quot;: &quot;intro&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;社区在三个服务站试用人工智能辅助咨询，详情见试点报告。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;question&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新社记者：您如何评价人工智能对社区服务的影响？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;answer&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[4]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;heading&quot;,
+        &quot;kind&quot;: &quot;subheading&quot;,
+        &quot;text&quot;: &quot;试点结果&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/h2&quot;
+      },
+      {
+        &quot;id&quot;: &quot;list&quot;,
+        &quot;kind&quot;: &quot;list&quot;,
+        &quot;text&quot;: &quot;保留人工核实环节。定期检查服务效果。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/ul&quot;
+      },
+      {
+        &quot;id&quot;: &quot;table&quot;,
+        &quot;kind&quot;: &quot;table&quot;,
+        &quot;text&quot;: &quot;项目数量服务站3&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/table&quot;,
+        &quot;rows&quot;: [
+          [
+            &quot;项目&quot;,
+            &quot;数量&quot;
+          ],
+          [
+            &quot;服务站&quot;,
+            &quot;3&quot;
+          ]
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;folded&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;补充说明：试点数据尚未覆盖所有居民。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;analysis&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;研究者指出，“来评论区说说”是一种常见互动引导语。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[5]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;id&quot;: &quot;byline&quot;,
+        &quot;kind&quot;: &quot;author&quot;,
+        &quot;text&quot;: &quot;记者 张三&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;id&quot;: &quot;menu&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;返回首页&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;cta&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于这次试点，你怎么看？来评论区说说。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[6]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;promotion&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;扫码下载本平台APP，领取优惠券。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[4]&quot;
+      }
+    ]
+  },
+  &quot;expected_answers&quot;: {
+    &quot;Q1&quot;: &quot;yes&quot;,
+    &quot;Q2&quot;: &quot;yes&quot;,
+    &quot;Q3&quot;: &quot;no&quot;,
+    &quot;Q4&quot;: &quot;yes&quot;,
+    &quot;Q5&quot;: &quot;yes&quot;
+  },
+  &quot;reason&quot;: &quot;缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/div[1]&quot;,
+  &quot;origin&quot;: &quot;predefined controlled transformation; not model verdict&quot;
+}</pre></details>
+<details><summary>missing_folded：完整候选输出</summary><pre>{
+  &quot;case_id&quot;: &quot;missing_folded&quot;,
+  &quot;label&quot;: &quot;误删折叠叙述&quot;,
+  &quot;synthetic&quot;: true,
+  &quot;output&quot;: {
+    &quot;title&quot;: &quot;访谈：社区如何使用人工智能&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;id&quot;: &quot;intro&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;社区在三个服务站试用人工智能辅助咨询，详情见试点报告。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;question&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新社记者：您如何评价人工智能对社区服务的影响？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;answer&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[4]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;heading&quot;,
+        &quot;kind&quot;: &quot;subheading&quot;,
+        &quot;text&quot;: &quot;试点结果&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/h2&quot;
+      },
+      {
+        &quot;id&quot;: &quot;list&quot;,
+        &quot;kind&quot;: &quot;list&quot;,
+        &quot;text&quot;: &quot;保留人工核实环节。定期检查服务效果。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/ul&quot;
+      },
+      {
+        &quot;id&quot;: &quot;table&quot;,
+        &quot;kind&quot;: &quot;table&quot;,
+        &quot;text&quot;: &quot;项目数量服务站3&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/table&quot;,
+        &quot;rows&quot;: [
+          [
+            &quot;项目&quot;,
+            &quot;数量&quot;
+          ],
+          [
+            &quot;服务站&quot;,
+            &quot;3&quot;
+          ]
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;caption&quot;,
+        &quot;kind&quot;: &quot;caption&quot;,
+        &quot;text&quot;: &quot;图为社区服务站试点现场。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[1]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;analysis&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;研究者指出，“来评论区说说”是一种常见互动引导语。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[5]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;id&quot;: &quot;byline&quot;,
+        &quot;kind&quot;: &quot;author&quot;,
+        &quot;text&quot;: &quot;记者 张三&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;id&quot;: &quot;menu&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;返回首页&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;cta&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于这次试点，你怎么看？来评论区说说。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[6]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;promotion&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;扫码下载本平台APP，领取优惠券。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[4]&quot;
+      }
+    ]
+  },
+  &quot;expected_answers&quot;: {
+    &quot;Q1&quot;: &quot;yes&quot;,
+    &quot;Q2&quot;: &quot;no&quot;,
+    &quot;Q3&quot;: &quot;yes&quot;,
+    &quot;Q4&quot;: &quot;yes&quot;,
+    &quot;Q5&quot;: &quot;yes&quot;
+  },
+  &quot;reason&quot;: &quot;缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/div[2]&quot;,
+  &quot;origin&quot;: &quot;predefined controlled transformation; not model verdict&quot;
+}</pre></details>
+<details><summary>promotion_in_body：完整候选输出</summary><pre>{
+  &quot;case_id&quot;: &quot;promotion_in_body&quot;,
+  &quot;label&quot;: &quot;推广混入&quot;,
+  &quot;synthetic&quot;: true,
+  &quot;output&quot;: {
+    &quot;title&quot;: &quot;访谈：社区如何使用人工智能&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;id&quot;: &quot;intro&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;社区在三个服务站试用人工智能辅助咨询，详情见试点报告。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;question&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新社记者：您如何评价人工智能对社区服务的影响？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;answer&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[4]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;heading&quot;,
+        &quot;kind&quot;: &quot;subheading&quot;,
+        &quot;text&quot;: &quot;试点结果&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/h2&quot;
+      },
+      {
+        &quot;id&quot;: &quot;list&quot;,
+        &quot;kind&quot;: &quot;list&quot;,
+        &quot;text&quot;: &quot;保留人工核实环节。定期检查服务效果。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/ul&quot;
+      },
+      {
+        &quot;id&quot;: &quot;table&quot;,
+        &quot;kind&quot;: &quot;table&quot;,
+        &quot;text&quot;: &quot;项目数量服务站3&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/table&quot;,
+        &quot;rows&quot;: [
+          [
+            &quot;项目&quot;,
+            &quot;数量&quot;
+          ],
+          [
+            &quot;服务站&quot;,
+            &quot;3&quot;
+          ]
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;caption&quot;,
+        &quot;kind&quot;: &quot;caption&quot;,
+        &quot;text&quot;: &quot;图为社区服务站试点现场。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[1]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;folded&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;补充说明：试点数据尚未覆盖所有居民。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;analysis&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;研究者指出，“来评论区说说”是一种常见互动引导语。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[5]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;promotion&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;扫码下载本平台APP，领取优惠券。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[4]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;id&quot;: &quot;byline&quot;,
+        &quot;kind&quot;: &quot;author&quot;,
+        &quot;text&quot;: &quot;记者 张三&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;id&quot;: &quot;menu&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;返回首页&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;cta&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于这次试点，你怎么看？来评论区说说。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[6]&quot;
+      }
+    ]
+  },
+  &quot;expected_answers&quot;: {
+    &quot;Q1&quot;: &quot;yes&quot;,
+    &quot;Q2&quot;: &quot;yes&quot;,
+    &quot;Q3&quot;: &quot;yes&quot;,
+    &quot;Q4&quot;: &quot;no&quot;,
+    &quot;Q5&quot;: &quot;yes&quot;
+  },
+  &quot;reason&quot;: &quot;记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/div[4]&quot;,
+  &quot;origin&quot;: &quot;predefined controlled transformation; not model verdict&quot;
+}</pre></details>
+<details><summary>byline_in_body：完整候选输出</summary><pre>{
+  &quot;case_id&quot;: &quot;byline_in_body&quot;,
+  &quot;label&quot;: &quot;独立署名混入&quot;,
+  &quot;synthetic&quot;: true,
+  &quot;output&quot;: {
+    &quot;title&quot;: &quot;访谈：社区如何使用人工智能&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;id&quot;: &quot;byline&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;记者 张三&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;intro&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;社区在三个服务站试用人工智能辅助咨询，详情见试点报告。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;question&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新社记者：您如何评价人工智能对社区服务的影响？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;answer&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[4]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;heading&quot;,
+        &quot;kind&quot;: &quot;subheading&quot;,
+        &quot;text&quot;: &quot;试点结果&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/h2&quot;
+      },
+      {
+        &quot;id&quot;: &quot;list&quot;,
+        &quot;kind&quot;: &quot;list&quot;,
+        &quot;text&quot;: &quot;保留人工核实环节。定期检查服务效果。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/ul&quot;
+      },
+      {
+        &quot;id&quot;: &quot;table&quot;,
+        &quot;kind&quot;: &quot;table&quot;,
+        &quot;text&quot;: &quot;项目数量服务站3&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/table&quot;,
+        &quot;rows&quot;: [
+          [
+            &quot;项目&quot;,
+            &quot;数量&quot;
+          ],
+          [
+            &quot;服务站&quot;,
+            &quot;3&quot;
+          ]
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;caption&quot;,
+        &quot;kind&quot;: &quot;caption&quot;,
+        &quot;text&quot;: &quot;图为社区服务站试点现场。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[1]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;folded&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;补充说明：试点数据尚未覆盖所有居民。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;analysis&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;研究者指出，“来评论区说说”是一种常见互动引导语。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[5]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [],
+    &quot;excluded&quot;: [
+      {
+        &quot;id&quot;: &quot;menu&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;返回首页&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;cta&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于这次试点，你怎么看？来评论区说说。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[6]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;promotion&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;扫码下载本平台APP，领取优惠券。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[4]&quot;
+      }
+    ]
+  },
+  &quot;expected_answers&quot;: {
+    &quot;Q1&quot;: &quot;yes&quot;,
+    &quot;Q2&quot;: &quot;yes&quot;,
+    &quot;Q3&quot;: &quot;yes&quot;,
+    &quot;Q4&quot;: &quot;no&quot;,
+    &quot;Q5&quot;: &quot;yes&quot;
+  },
+  &quot;reason&quot;: &quot;记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/p[1]&quot;,
+  &quot;origin&quot;: &quot;predefined controlled transformation; not model verdict&quot;
+}</pre></details>
+<details><summary>cta_in_body：完整候选输出</summary><pre>{
+  &quot;case_id&quot;: &quot;cta_in_body&quot;,
+  &quot;label&quot;: &quot;互动引导混入&quot;,
+  &quot;synthetic&quot;: true,
+  &quot;output&quot;: {
+    &quot;title&quot;: &quot;访谈：社区如何使用人工智能&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;id&quot;: &quot;intro&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;社区在三个服务站试用人工智能辅助咨询，详情见试点报告。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;question&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新社记者：您如何评价人工智能对社区服务的影响？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;answer&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[4]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;heading&quot;,
+        &quot;kind&quot;: &quot;subheading&quot;,
+        &quot;text&quot;: &quot;试点结果&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/h2&quot;
+      },
+      {
+        &quot;id&quot;: &quot;list&quot;,
+        &quot;kind&quot;: &quot;list&quot;,
+        &quot;text&quot;: &quot;保留人工核实环节。定期检查服务效果。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/ul&quot;
+      },
+      {
+        &quot;id&quot;: &quot;table&quot;,
+        &quot;kind&quot;: &quot;table&quot;,
+        &quot;text&quot;: &quot;项目数量服务站3&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/table&quot;,
+        &quot;rows&quot;: [
+          [
+            &quot;项目&quot;,
+            &quot;数量&quot;
+          ],
+          [
+            &quot;服务站&quot;,
+            &quot;3&quot;
+          ]
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;caption&quot;,
+        &quot;kind&quot;: &quot;caption&quot;,
+        &quot;text&quot;: &quot;图为社区服务站试点现场。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[1]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;folded&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;补充说明：试点数据尚未覆盖所有居民。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;analysis&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;研究者指出，“来评论区说说”是一种常见互动引导语。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[5]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;cta&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于这次试点，你怎么看？来评论区说说。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[6]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;id&quot;: &quot;byline&quot;,
+        &quot;kind&quot;: &quot;author&quot;,
+        &quot;text&quot;: &quot;记者 张三&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;id&quot;: &quot;menu&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;返回首页&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;promotion&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;扫码下载本平台APP，领取优惠券。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[4]&quot;
+      }
+    ]
+  },
+  &quot;expected_answers&quot;: {
+    &quot;Q1&quot;: &quot;yes&quot;,
+    &quot;Q2&quot;: &quot;yes&quot;,
+    &quot;Q3&quot;: &quot;yes&quot;,
+    &quot;Q4&quot;: &quot;no&quot;,
+    &quot;Q5&quot;: &quot;yes&quot;
+  },
+  &quot;reason&quot;: &quot;记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/p[6]&quot;,
+  &quot;origin&quot;: &quot;predefined controlled transformation; not model verdict&quot;
+}</pre></details>
+<details><summary>hidden_menu_in_body：完整候选输出</summary><pre>{
+  &quot;case_id&quot;: &quot;hidden_menu_in_body&quot;,
+  &quot;label&quot;: &quot;隐藏菜单混入&quot;,
+  &quot;synthetic&quot;: true,
+  &quot;output&quot;: {
+    &quot;title&quot;: &quot;访谈：社区如何使用人工智能&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;id&quot;: &quot;intro&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;社区在三个服务站试用人工智能辅助咨询，详情见试点报告。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;question&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新社记者：您如何评价人工智能对社区服务的影响？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;answer&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[4]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;heading&quot;,
+        &quot;kind&quot;: &quot;subheading&quot;,
+        &quot;text&quot;: &quot;试点结果&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/h2&quot;
+      },
+      {
+        &quot;id&quot;: &quot;list&quot;,
+        &quot;kind&quot;: &quot;list&quot;,
+        &quot;text&quot;: &quot;保留人工核实环节。定期检查服务效果。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/ul&quot;
+      },
+      {
+        &quot;id&quot;: &quot;table&quot;,
+        &quot;kind&quot;: &quot;table&quot;,
+        &quot;text&quot;: &quot;项目数量服务站3&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/table&quot;,
+        &quot;rows&quot;: [
+          [
+            &quot;项目&quot;,
+            &quot;数量&quot;
+          ],
+          [
+            &quot;服务站&quot;,
+            &quot;3&quot;
+          ]
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;caption&quot;,
+        &quot;kind&quot;: &quot;caption&quot;,
+        &quot;text&quot;: &quot;图为社区服务站试点现场。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[1]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;folded&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;补充说明：试点数据尚未覆盖所有居民。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;analysis&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;研究者指出，“来评论区说说”是一种常见互动引导语。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[5]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;menu&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;返回首页&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[3]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;id&quot;: &quot;byline&quot;,
+        &quot;kind&quot;: &quot;author&quot;,
+        &quot;text&quot;: &quot;记者 张三&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;id&quot;: &quot;cta&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于这次试点，你怎么看？来评论区说说。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[6]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;promotion&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;扫码下载本平台APP，领取优惠券。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[4]&quot;
+      }
+    ]
+  },
+  &quot;expected_answers&quot;: {
+    &quot;Q1&quot;: &quot;yes&quot;,
+    &quot;Q2&quot;: &quot;yes&quot;,
+    &quot;Q3&quot;: &quot;yes&quot;,
+    &quot;Q4&quot;: &quot;no&quot;,
+    &quot;Q5&quot;: &quot;yes&quot;
+  },
+  &quot;reason&quot;: &quot;记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/div[3]&quot;,
+  &quot;origin&quot;: &quot;predefined controlled transformation; not model verdict&quot;
+}</pre></details>
+<details><summary>duplicate：完整候选输出</summary><pre>{
+  &quot;case_id&quot;: &quot;duplicate&quot;,
+  &quot;label&quot;: &quot;正文重复&quot;,
+  &quot;synthetic&quot;: true,
+  &quot;output&quot;: {
+    &quot;title&quot;: &quot;访谈：社区如何使用人工智能&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;id&quot;: &quot;intro&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;社区在三个服务站试用人工智能辅助咨询，详情见试点报告。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;question&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新社记者：您如何评价人工智能对社区服务的影响？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;answer&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[4]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;answer&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[4]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;heading&quot;,
+        &quot;kind&quot;: &quot;subheading&quot;,
+        &quot;text&quot;: &quot;试点结果&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/h2&quot;
+      },
+      {
+        &quot;id&quot;: &quot;list&quot;,
+        &quot;kind&quot;: &quot;list&quot;,
+        &quot;text&quot;: &quot;保留人工核实环节。定期检查服务效果。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/ul&quot;
+      },
+      {
+        &quot;id&quot;: &quot;table&quot;,
+        &quot;kind&quot;: &quot;table&quot;,
+        &quot;text&quot;: &quot;项目数量服务站3&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/table&quot;,
+        &quot;rows&quot;: [
+          [
+            &quot;项目&quot;,
+            &quot;数量&quot;
+          ],
+          [
+            &quot;服务站&quot;,
+            &quot;3&quot;
+          ]
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;caption&quot;,
+        &quot;kind&quot;: &quot;caption&quot;,
+        &quot;text&quot;: &quot;图为社区服务站试点现场。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[1]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;folded&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;补充说明：试点数据尚未覆盖所有居民。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;analysis&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;研究者指出，“来评论区说说”是一种常见互动引导语。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[5]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;id&quot;: &quot;byline&quot;,
+        &quot;kind&quot;: &quot;author&quot;,
+        &quot;text&quot;: &quot;记者 张三&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;id&quot;: &quot;menu&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;返回首页&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;cta&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于这次试点，你怎么看？来评论区说说。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[6]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;promotion&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;扫码下载本平台APP，领取优惠券。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[4]&quot;
+      }
+    ]
+  },
+  &quot;expected_answers&quot;: {
+    &quot;Q1&quot;: &quot;yes&quot;,
+    &quot;Q2&quot;: &quot;yes&quot;,
+    &quot;Q3&quot;: &quot;yes&quot;,
+    &quot;Q4&quot;: &quot;yes&quot;,
+    &quot;Q5&quot;: &quot;no&quot;
+  },
+  &quot;reason&quot;: &quot;同一回答出现两次；篇幅增加不代表质量提高。&quot;,
+  &quot;origin&quot;: &quot;predefined controlled transformation; not model verdict&quot;
+}</pre></details>
+<details><summary>reordered：完整候选输出</summary><pre>{
+  &quot;case_id&quot;: &quot;reordered&quot;,
+  &quot;label&quot;: &quot;问答乱序&quot;,
+  &quot;synthetic&quot;: true,
+  &quot;output&quot;: {
+    &quot;title&quot;: &quot;访谈：社区如何使用人工智能&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;id&quot;: &quot;intro&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;社区在三个服务站试用人工智能辅助咨询，详情见试点报告。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;answer&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[4]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;question&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新社记者：您如何评价人工智能对社区服务的影响？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;heading&quot;,
+        &quot;kind&quot;: &quot;subheading&quot;,
+        &quot;text&quot;: &quot;试点结果&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/h2&quot;
+      },
+      {
+        &quot;id&quot;: &quot;list&quot;,
+        &quot;kind&quot;: &quot;list&quot;,
+        &quot;text&quot;: &quot;保留人工核实环节。定期检查服务效果。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/ul&quot;
+      },
+      {
+        &quot;id&quot;: &quot;table&quot;,
+        &quot;kind&quot;: &quot;table&quot;,
+        &quot;text&quot;: &quot;项目数量服务站3&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/table&quot;,
+        &quot;rows&quot;: [
+          [
+            &quot;项目&quot;,
+            &quot;数量&quot;
+          ],
+          [
+            &quot;服务站&quot;,
+            &quot;3&quot;
+          ]
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;caption&quot;,
+        &quot;kind&quot;: &quot;caption&quot;,
+        &quot;text&quot;: &quot;图为社区服务站试点现场。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[1]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;folded&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;补充说明：试点数据尚未覆盖所有居民。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;analysis&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;研究者指出，“来评论区说说”是一种常见互动引导语。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[5]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;id&quot;: &quot;byline&quot;,
+        &quot;kind&quot;: &quot;author&quot;,
+        &quot;text&quot;: &quot;记者 张三&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;id&quot;: &quot;menu&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;返回首页&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;cta&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于这次试点，你怎么看？来评论区说说。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[6]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;promotion&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;扫码下载本平台APP，领取优惠券。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[4]&quot;
+      }
+    ]
+  },
+  &quot;expected_answers&quot;: {
+    &quot;Q1&quot;: &quot;yes&quot;,
+    &quot;Q2&quot;: &quot;yes&quot;,
+    &quot;Q3&quot;: &quot;yes&quot;,
+    &quot;Q4&quot;: &quot;yes&quot;,
+    &quot;Q5&quot;: &quot;no&quot;
+  },
+  &quot;reason&quot;: &quot;原文均在但回答被放到问题前；完整性与顺序分别判断。&quot;,
+  &quot;origin&quot;: &quot;predefined controlled transformation; not model verdict&quot;
+}</pre></details>
+<details><summary>wrong_title：完整候选输出</summary><pre>{
+  &quot;case_id&quot;: &quot;wrong_title&quot;,
+  &quot;label&quot;: &quot;标题不符&quot;,
+  &quot;synthetic&quot;: true,
+  &quot;output&quot;: {
+    &quot;title&quot;: &quot;另一篇无关新闻&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;id&quot;: &quot;intro&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;社区在三个服务站试用人工智能辅助咨询，详情见试点报告。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;question&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新社记者：您如何评价人工智能对社区服务的影响？&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;answer&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[4]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;heading&quot;,
+        &quot;kind&quot;: &quot;subheading&quot;,
+        &quot;text&quot;: &quot;试点结果&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/h2&quot;
+      },
+      {
+        &quot;id&quot;: &quot;list&quot;,
+        &quot;kind&quot;: &quot;list&quot;,
+        &quot;text&quot;: &quot;保留人工核实环节。定期检查服务效果。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/ul&quot;
+      },
+      {
+        &quot;id&quot;: &quot;table&quot;,
+        &quot;kind&quot;: &quot;table&quot;,
+        &quot;text&quot;: &quot;项目数量服务站3&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/table&quot;,
+        &quot;rows&quot;: [
+          [
+            &quot;项目&quot;,
+            &quot;数量&quot;
+          ],
+          [
+            &quot;服务站&quot;,
+            &quot;3&quot;
+          ]
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;caption&quot;,
+        &quot;kind&quot;: &quot;caption&quot;,
+        &quot;text&quot;: &quot;图为社区服务站试点现场。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[1]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;folded&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;补充说明：试点数据尚未覆盖所有居民。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[2]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;analysis&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;研究者指出，“来评论区说说”是一种常见互动引导语。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[5]&quot;
+      }
+    ],
+    &quot;metadata&quot;: [
+      {
+        &quot;id&quot;: &quot;byline&quot;,
+        &quot;kind&quot;: &quot;author&quot;,
+        &quot;text&quot;: &quot;记者 张三&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[1]&quot;
+      }
+    ],
+    &quot;excluded&quot;: [
+      {
+        &quot;id&quot;: &quot;menu&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;返回首页&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[3]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;cta&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;对于这次试点，你怎么看？来评论区说说。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p[6]&quot;
+      },
+      {
+        &quot;id&quot;: &quot;promotion&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;扫码下载本平台APP，领取优惠券。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/div[4]&quot;
+      }
+    ]
+  },
+  &quot;expected_answers&quot;: {
+    &quot;Q1&quot;: &quot;no&quot;,
+    &quot;Q2&quot;: &quot;yes&quot;,
+    &quot;Q3&quot;: &quot;yes&quot;,
+    &quot;Q4&quot;: &quot;yes&quot;,
+    &quot;Q5&quot;: &quot;yes&quot;
+  },
+  &quot;reason&quot;: &quot;正文未变但主标题错误，由Q1主评。&quot;,
+  &quot;origin&quot;: &quot;predefined controlled transformation; not model verdict&quot;
+}</pre></details>
+<details><summary>image_unknown：完整候选输出</summary><pre>{
+  &quot;case_id&quot;: &quot;image_unknown&quot;,
+  &quot;label&quot;: &quot;图解内容证据不足&quot;,
+  &quot;synthetic&quot;: true,
+  &quot;output&quot;: {
+    &quot;title&quot;: &quot;图解：社区试点&quot;,
+    &quot;blocks&quot;: [
+      {
+        &quot;id&quot;: &quot;lead&quot;,
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;请看试点图解。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div/p&quot;
+      }
+    ],
+    &quot;metadata&quot;: [],
+    &quot;excluded&quot;: []
+  },
+  &quot;expected_answers&quot;: {
+    &quot;Q1&quot;: &quot;yes&quot;,
+    &quot;Q2&quot;: &quot;unknown&quot;,
+    &quot;Q3&quot;: &quot;unknown&quot;,
+    &quot;Q4&quot;: &quot;yes&quot;,
+    &quot;Q5&quot;: &quot;yes&quot;
+  },
+  &quot;reason&quot;: &quot;只有导语，图像可能承载主要信息；未提供图片像素，不虚构OCR也不把未知填yes或no。&quot;,
+  &quot;origin&quot;: &quot;predefined controlled transformation; not model verdict&quot;,
+  &quot;source_html_override&quot;: &quot;&lt;meta charset=\&quot;utf-8\&quot;&gt;&lt;h1&gt;图解：社区试点&lt;/h1&gt;&lt;div id=\&quot;article\&quot;&gt;&lt;p id=\&quot;lead\&quot;&gt;请看试点图解。&lt;/p&gt;&lt;img src=\&quot;diagram.png\&quot; alt=\&quot;\&quot;&gt;&lt;/div&gt;&quot;
+}</pre></details>

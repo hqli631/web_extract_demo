@@ -1,0 +1,982 @@
+{
+  "site": "chinanews",
+  "index": 5,
+  "source": "output\\stage3\\protocol\\chinanews\\test_05.html",
+  "source_sha256": "6fe45864eeec753a19d2a72ae896d9d28e49475faad64fde576bb83dec743c17",
+  "original_url": "https://www.chinanews.com.cn/gn/2026/11-02/10724510.shtml",
+  "display_file": "output\\stage3\\display\\chinanews\\test_05\\test_05.html",
+  "assets": [
+    {
+      "url": "https://www.chinanews.com.cn/part/cns_public/138/base.css",
+      "kind": "css",
+      "status": 200,
+      "content_type": "text/css",
+      "bytes": 2245,
+      "sha256": "69f61001c336fd371d7460577214b8e6dee4def817ba41b8e6e22928ec005aea",
+      "local": "assets/69f61001c336fd371d74.css"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/part/cns_public/191/share.min.css",
+      "kind": "css",
+      "status": 200,
+      "content_type": "text/css",
+      "bytes": 3988,
+      "sha256": "4f74b2712c91304ead450c6d4c4d0f84f3c7c123af0826fa2de47bd1f9d8cd4c",
+      "local": "assets/4f74b2712c91304ead45.css"
+    },
+    {
+      "url": "https://image.cns.com.cn/default/113c4582/20250225/weibo.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 1715,
+      "sha256": "5b0594e20a4129328b1033b2b026261a8b976aac2c15b9a87c61c6df8e5eaec8",
+      "local": "assets/5b0594e20a4129328b10.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/05/2022-05-26/U719P4T47D50261F24534DT20220526161158.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 1327,
+      "sha256": "809f83f06dd63faa380c073d537335cc2021ca9db1ee80c51d441822ba96ad25",
+      "local": "assets/809f83f06dd63faa380c.png"
+    },
+    {
+      "url": "https://image.cns.com.cn/default/113c4582/20250225/weixin.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 1565,
+      "sha256": "8e9505b2fa5311c99f2b3a0587ed7e132610d1b6bd090619e6a388f111ef2b0c",
+      "local": "assets/8e9505b2fa5311c99f2b.png"
+    },
+    {
+      "url": "https://image.cns.com.cn/default/113c4582/20250225/app.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 1284,
+      "sha256": "861e6a6ca63cc7762d73619e2875faa9ca3994219b5a21c024794bd82081aa41",
+      "local": "assets/861e6a6ca63cc7762d73.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/part/cns_public/139/jquery.autocomplete.css",
+      "kind": "css",
+      "status": 200,
+      "content_type": "text/css",
+      "bytes": 838,
+      "sha256": "cf1e93dc9f446a32e80b92a63b3bf1bc390fbfdf26624db26fce1392cdac2390",
+      "local": "assets/cf1e93dc9f446a32e80b.css"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/part/cns_public/144/zw2022.css?v=20250609",
+      "kind": "css",
+      "status": 200,
+      "content_type": "text/css",
+      "bytes": 22187,
+      "sha256": "c70c73233c3d9887c0ff2d8a51a98a6c5a1b577ac74d1b6a0c2270db1a3551f1",
+      "local": "assets/c70c73233c3d9887c0ff.css"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/04/2022-04-20/U719P4T47D50049F24532DT20220420110502.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 1608,
+      "sha256": "6e502479c02306cacaa9df3cde556ff1077a3a56a3fdfbd8d38d9539357cc77e",
+      "local": "assets/6e502479c02306cacaa9.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/03/2022-03-31/U719P4T47D49987F24532DT20220331100658.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 3910,
+      "sha256": "7d7b13600dcacebc4530324d5b078856b98e6e27d82697a6ff1dfd4aac1a1179",
+      "local": "assets/7d7b13600dcacebc4530.png"
+    },
+    {
+      "url": "https://image.cns.com.cn/2022homepage/images/play.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 1983,
+      "sha256": "8380aa44de7dbf0a3b1b1d12db4ac9b05a94b68cdf502287130cf9023a478a1a",
+      "local": "assets/8380aa44de7dbf0a3b1b.png"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/2019/newzw2/images/bg1.jpg",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 1248,
+      "sha256": "cada8a4f1e79e73af5eaa78f0ec65aca411fcd4e6d2c0b55578713adab9f1cef",
+      "local": "assets/cada8a4f1e79e73af5ea.jpg"
+    },
+    {
+      "url": "https://image.cns.com.cn/default/5ddb9ec3/20210723/12.jpg",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 1229,
+      "sha256": "d107f97669fd039d02418818974e8ace1213771968ebe0a21f6973f00441e418",
+      "local": "assets/d107f97669fd039d0241.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/04/2022-04-27/U947P4T47D50090F24534DT20220428160433.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 931,
+      "sha256": "09a1c5b0aeced1f45a28fc412184c2f99f3b461744e68d7007c111e7f98bbba7",
+      "local": "assets/09a1c5b0aeced1f45a28.png"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/2013/home/images/dt_lh.jpg",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 777,
+      "sha256": "511e203f9130c04cfa01e2a16caf92e268ab7414127e254bc1f58f4151244cbe",
+      "local": "assets/511e203f9130c04cfa01.jpg"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/2013/home/images/dt_rh.jpg",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 777,
+      "sha256": "0512b25ece850f0e9b0b03b5133e7e48ade913ec9b4b11b3d5354949be93b241",
+      "local": "assets/0512b25ece850f0e9b0b.jpg"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/2013/home/images/dt_lsel.jpg",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 810,
+      "sha256": "e9ddee44d7cfd1304874f487e327f6c9e50989d16598a8c4bfdb71983bc8a822",
+      "local": "assets/e9ddee44d7cfd1304874.jpg"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/2013/home/images/dt_rsel.jpg",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 810,
+      "sha256": "13944afc1844dca912ea3b355a19369016a033fde3365f402cf6b9ef580089ec",
+      "local": "assets/13944afc1844dca912ea.jpg"
+    },
+    {
+      "url": "https://image.cns.com.cn/default/113c4582/20220531/line1.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 120,
+      "sha256": "a95bf5f175e90eeec8da57d01a1d090cf372d662539f424f3a4821d291430116",
+      "local": "assets/a95bf5f175e90eeec8da.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/03/2022-03-09/U947P4T47D49898F24532DT20220309102914.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 957,
+      "sha256": "4c613657cc1cbda85d59545d53a0c9b78a10512da1829f4533c85dcfe15cd6ed",
+      "local": "assets/4c613657cc1cbda85d59.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/03/2022-03-21/U435P4T47D49951F981DT20220321182114.jpg",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 786,
+      "sha256": "6d842608b264744c7d4a172207d07046e2cca0a2ab93765c9fea9e0788b5b3a0",
+      "local": "assets/6d842608b264744c7d4a.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/07/2022-07-08/U719P4T47D50532F24532DT20220708150124.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 2796,
+      "sha256": "3dd0e0a0d021efef6607dd04ce4872c6866a5d7e7bb34972c7d5d89f418f89d3",
+      "local": "assets/3dd0e0a0d021efef6607.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/04/2022-04-20/U719P4T47D50049F24534DT20220420172107.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 2739,
+      "sha256": "3aa42358c7d50a44e51bb9de8d161bc7157b40c30adccd559e5cc7f8bccf0004",
+      "local": "assets/3aa42358c7d50a44e51b.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/04/2022-04-20/U719P4T47D50052F24532DT20220420172301.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 3148,
+      "sha256": "1b4874eac3bfe2de23dd6812cf3a2b847f4d917db760f77702c7ca4e880d48de",
+      "local": "assets/1b4874eac3bfe2de23dd.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/05/2022-05-26/U719P4T47D50262F24532DT20220526162535.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 1378,
+      "sha256": "f30cb9e6f381cdac493cac873d66b2793da8fa6c70704f6df1a979fedf323660",
+      "local": "assets/f30cb9e6f381cdac493c.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/10/2022-10-14/U719P4T47D51095F24532DT20221014132854.png",
+      "kind": "css_asset",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 7807,
+      "sha256": "341ed6e1e23a8808b57b78f9615ed0c22e05b3529eab71154203547f6910226e",
+      "local": "assets/341ed6e1e23a8808b57b.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/m/part/cns_public/150/leaderstyle2022.css",
+      "kind": "css",
+      "status": 200,
+      "content_type": "text/css",
+      "bytes": 774,
+      "sha256": "5b42988ed743766d9979bb38a85e624965a0d974036ab28163c1654130b32ff4",
+      "local": "assets/5b42988ed743766d9979.css"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2025/07/2025-07-17/U947P4T47D55580F24532DT20250717134135.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 8182,
+      "sha256": "02badc509b4d63208dd8959363b3e6868920f5c735309845bcaf9be37760aea7",
+      "local": "assets/02badc509b4d63208dd8.png"
+    },
+    {
+      "url": "https://image.cns.com.cn/2022homepage/images/toparr.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 1103,
+      "sha256": "7906b922c3f12dedd0429b6cecf10231d5d50ef44ac3c3661ac1e06affd8ef5f",
+      "local": "assets/7906b922c3f12dedd042.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/05/2022-05-09/U435P4T47D50136F24533DT20220510101956.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 1299,
+      "sha256": "bc0875e023fc07cdd3e73941a49cb7a5afe3a162730d5cc7d605bae687b490b8",
+      "local": "assets/bc0875e023fc07cdd3e7.png"
+    },
+    {
+      "url": "https://image.cns.com.cn/default/5ddb9ec3/20210728/qw.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 6160,
+      "sha256": "b5495d17abf46224a284bdc06f5a26f68d85ddb4ad91e6c626ef68f638a4ce01",
+      "local": "assets/b5495d17abf46224a284.jpg"
+    },
+    {
+      "url": "https://image.cns.com.cn/default/5ddb9ec3/20210728/jw.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 7106,
+      "sha256": "b111a5673e1a1d382220bfdb36d524dad0ca810694bc61b7b50bd70a20d60450",
+      "local": "assets/b111a5673e1a1d382220.jpg"
+    },
+    {
+      "url": "https://image.cns.com.cn/default/5ddb9ec3/20210728/ecns1.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 5872,
+      "sha256": "ca223e2ccc7cd1f50debc400ffc1a2bbb8dfc247fb22a24b5dbba6ea1ec912a7",
+      "local": "assets/ca223e2ccc7cd1f50deb.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2021/11/2021-11-16/U947P4T47D49225F24534DT20211116135935.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 15411,
+      "sha256": "a36f8bc535c6b3952b720fc58b73e18ccf75460e9ed983c78e6b149c2a877c60",
+      "local": "assets/a36f8bc535c6b3952b72.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2026/07/2026-07-31/U719P4T47D56275F24532DT20260731102110.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 7271,
+      "sha256": "4a958c8205e2542b09ccc505530a26e74c26f0270a9038670a1c6183b3269c73",
+      "local": "assets/4a958c8205e2542b09cc.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/05/2022-05-10/U435P4T47D50141F24533DT20220511134121.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 9089,
+      "sha256": "4e9a7aab54950b373cc130bde41028c9d8bcc13450b9fed0e6a6e506baf1f8e2",
+      "local": "assets/4e9a7aab54950b373cc1.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/05/2022-05-10/U435P4T47D50141F24532DT20220511134121.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 12400,
+      "sha256": "4ac65ba8cbc76b6058574688849cba1e3af7e8dbc283e19572d0ad223b2aa9c5",
+      "local": "assets/4ac65ba8cbc76b605857.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2025/02/2025-02-24/U947P4T47D55186F24532DT20250225142256.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 40318,
+      "sha256": "10a36c1608c12770e0d708e49c04fa50abb3a011330b2f7d9f70fa66d5158652",
+      "local": "assets/10a36c1608c12770e0d7.png"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/cmshd/2026/11/01/355dee274c5745369b63edf688efd2fe.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 256370,
+      "sha256": "ecde3454b6f3109e15707c5e94ad8c562ae52c68cdd86064d18a9d19f248f6b3",
+      "local": "assets/ecde3454b6f3109e1570.jpg"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/cmshd/2026/11/01/a57a12ce704040ae9667ca1d65794761.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 459202,
+      "sha256": "c833f3e44814ee00a433fbda1d935097fec85cdd018095106e9814e3c16f762b",
+      "local": "assets/c833f3e44814ee00a433.jpg"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/cmshd/2026/11/01/2132a44bc9b64218a574df473ebd4ae6.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 454918,
+      "sha256": "503c9d2d0c9d456fe59d62636b9eb900970ad51c7adfdd0b61296cf08cc46fb9",
+      "local": "assets/503c9d2d0c9d456fe59d.jpg"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/cmshd/2026/11/01/3b82fe97c57149f99b59eef11b08c089.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 203218,
+      "sha256": "5ad544755aa1bf08691522457ac06363bb9301ee53cd08135cc892702988e3dc",
+      "local": "assets/5ad544755aa1bf086915.jpg"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/cmshd/2026/11/01/21700298dcae417e8952b24f6baac972.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 252057,
+      "sha256": "2b326a0734cb1cce8d40ea34cbe249a669b1b8303c38fe788d37a24a02c3d159",
+      "local": "assets/2b326a0734cb1cce8d40.jpg"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/cmshd/2026/11/01/49c8da3f21d04bb8b7905ee9c835bbc8.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 316516,
+      "sha256": "5ff886c14e489e743b5dda5cdb725f59e846f5a004578469a0c09c8253a4a88d",
+      "local": "assets/5ff886c14e489e743b5d.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/04/2022-04-20/U719P4T47D50049F24533DT20220420152844.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 105173,
+      "sha256": "86e018f865d721002d13756710809a9d4355ee5bb10eb2149004292e173b5b87",
+      "local": "assets/86e018f865d721002d13.png"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/ypt/2026/261112/5deaf09b-e0ea-4161-8872-a23bb98484b6_700x1000_zsite_sl.jpeg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 84299,
+      "sha256": "fd1989c443c5182fa9dd9613b7decce589d63a02a25ade6294b315912f55cb08",
+      "local": "assets/fd1989c443c5182fa9dd.jpeg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/gn/2026/11-12/U1101P4T8D10730834F19930DT20261112161647.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 32022,
+      "sha256": "0e84d58173efe4216f18b4dfb1e66c882e9316ea5e659a1e821cd6f9d29a77be",
+      "local": "assets/0e84d58173efe4216f18.jpg"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/ypt/2026/261112/9a44f839-ff8c-4031-b886-40317a1845ec_700x1000_zsite_sl.jpeg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 58560,
+      "sha256": "0d72b81ceebb40d7bad9e8b2d4f5c9287a711e6991d2644de0b6f2c6f4038393",
+      "local": "assets/0d72b81ceebb40d7bad9.jpeg"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/ypt/2026/261112/0df98227-ffc8-41f7-9105-a91c9ba1c785_700x1000_zsite_sl.jpeg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 30390,
+      "sha256": "d129231c4c2e45737a451059f09fb9d696ea68948fe13cb6449bcd9fc9b55413",
+      "local": "assets/d129231c4c2e45737a45.jpeg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/gn/2026/11-11/U1101P4T8D10730404F19930DT20261111203218.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 136147,
+      "sha256": "bbe15b145a7b644a66e30c094429ae0cf10013e9e7de913d2a21a032b0c3a676",
+      "local": "assets/bbe15b145a7b644a66e3.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/gn/2026/11-11/U1113P4T8D10729882F19930DT20261111070001.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 104756,
+      "sha256": "e78e3e5e4be90be3d6d83580123d77b63e63c904da51519772fbb18e51a1eaba",
+      "local": "assets/e78e3e5e4be90be3d6d8.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/gn/2026/11-10/U397P4T8D10729840F19930DT20261110220309.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 195995,
+      "sha256": "0dd5566160e434ceec8ba01c8d9284ebc9e3545f1342a9d3c447d6671e8846f6",
+      "local": "assets/0dd5566160e434ceec8b.png"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/ypt/2026/261110/f434b082-c4e9-414f-9979-c524228ede2d_zsite_sl.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 39435,
+      "sha256": "44b5cf03ea1f187e9fe6a040c39a98f8bdfec835ec46ccba28fb88a858d68ab0",
+      "local": "assets/44b5cf03ea1f187e9fe6.jpg"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/ypt/2026/261110/550094ab-9bcf-419a-a869-c099722d37c5_700x1000_zsite_sl.jpeg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 63931,
+      "sha256": "c4890eef5155d0bb6cf5a689e6f62a28b9a2ba6101d21d5df1b41e5f1acdacb8",
+      "local": "assets/c4890eef5155d0bb6cf5.jpeg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/gn/2026/11-10/U1118P4T8D10729206F19930DT20261110084547.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 203173,
+      "sha256": "085e2fa0d8dfbbfdee4a907715425144a40a967fd2f2b40f1925e1d4c74c6b81",
+      "local": "assets/085e2fa0d8dfbbfdee4a.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/cnspp/pp-xyd/U719P4T612D4F28385DT20220720162507.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 14194,
+      "sha256": "47a854dd86fdc529fdcb090df8d4310b89171e828e4202c9d808feeae254bfc1",
+      "local": "assets/47a854dd86fdc529fdcb.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/fileftp/2022/07/2022-07-19/U719P4T47D50578F24533DT20220720152039.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 1468,
+      "sha256": "55b2c2de334791cf21709e33ecc91c1cbeadd4b8311b2edc8b4740bf7dab19bf",
+      "local": "assets/55b2c2de334791cf2170.png"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/cmshd/2026/11/12/85770592e1bd466a920a7bf447e4d4d9.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 200871,
+      "sha256": "7b7fb04698472809976ef3d73b0ed4939699d1ccb9ec30dc515d8707dbea2c39",
+      "local": "assets/7b7fb04698472809976e.jpg"
+    },
+    {
+      "url": "https://image.chinanews.com/cspimp/2026/11-12/0514b61e-1af1-4b11-96a3-868b31f5bfa5_big.JPG",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 382023,
+      "sha256": "98bf1c52ffa031db3e74abe9e7540854eab37d21911d514dd8f2281a747411eb",
+      "local": "assets/98bf1c52ffa031db3e74.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/gn/shipin/2026/11-11/U992P883T4D1074501F158DT20261111150207.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 312660,
+      "sha256": "4e14f1f5ceb3ea0b687e290f8ca3284dfcb2eca99460e39be7f604533757455f",
+      "local": "assets/4e14f1f5ceb3ea0b687e.png"
+    },
+    {
+      "url": "https://image.chinanews.com/cspimp/2026/11-09/967df5a0-f24a-4d00-9f3b-6c42b4a8bb6f_big.JPG",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 686518,
+      "sha256": "12d23ba459987448ab0d59f01b9ed617cdb3442ebd0331620f94787bdffeee5e",
+      "local": "assets/12d23ba459987448ab0d.jpg"
+    },
+    {
+      "url": "https://image.chinanews.com/cspimp/2026/11-09/a634cbee-a2af-464e-bccd-9ad3712e8578_big.JPG",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 364298,
+      "sha256": "7f84b2486715057fae8e02f4160a3ae61575e19ccd8435662403b3882e8e2bb0",
+      "local": "assets/7f84b2486715057fae8e.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/cj/2026/11-12/U1101P4T8D10731139F19930DT20261112205823.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 43806,
+      "sha256": "3550620e41b5203ddd533690b286e4ffe6a481a03f7fb00e9c39b4ca106d3b2f",
+      "local": "assets/3550620e41b5203ddd53.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/dxw/2026/11-12/U1045P4T8D10730849F19930DT20261112173524.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 386722,
+      "sha256": "0b63cd35ccd9ff250d2a940c278df325e2e2df3cf29b4da8b6621239b5db1c27",
+      "local": "assets/0b63cd35ccd9ff250d2a.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/gn/2026/11-12/U1120P4T8D10730934F19930DT20261112171927.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 260190,
+      "sha256": "6532142b132fb94c8257bd97c53f90ff97cee70d38d93aff689d539c59175fa8",
+      "local": "assets/6532142b132fb94c8257.png"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/ypt/2026/261112/7e02ff41-f1c2-4c5c-ae2f-3c49b102e9e8_zsite_sl.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 11438,
+      "sha256": "da6137f91f97bdfdd520f2303480479a9be62051eed5b2a61ef1c02daa52ce78",
+      "local": "assets/da6137f91f97bdfdd520.jpg"
+    },
+    {
+      "url": "https://image.chinanews.com/cspimp/2026/11-12/2f928228-cac4-4852-9439-c7496244f9f9.JPG",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 15149,
+      "sha256": "9b202c126ac146ee101436899970d4a1a01f8262fcbd82fbeb163a33920004c0",
+      "local": "assets/9b202c126ac146ee1014.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/txy/2026/11-12/U1101P4T8D10730804F19930DT20261112152538.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 191893,
+      "sha256": "c214dd374f34095a3f34a078b533572f8ba67d8bc25fb7f32e494b173f8581db",
+      "local": "assets/c214dd374f34095a3f34.png"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/hd/2026/04/30/wcsmimg_67908277ef4949d78258b1d16fd16e9e.jpeg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 75875,
+      "sha256": "d18c33c4f66c4e591cdefb45a0feb7c18867778e9344de38c9a3cd4ac09bd49b",
+      "local": "assets/d18c33c4f66c4e591cde.jpeg"
+    },
+    {
+      "url": "https://i2.chinanews.com/simg/smimg/2017/08/02/8d311d8c34c647f7b6e576cb6ecc206a.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 10579,
+      "sha256": "5bb94e160ddcc3544017b3501513adb90f795eb8b2e03da3bc82c78f8e88c807",
+      "local": "assets/5bb94e160ddcc3544017.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/jk/2026/11-12/U892P4T8D10730631F19930DT20261112110955.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 4103,
+      "sha256": "f9e4bba1ea169c867c10ac00cf1fcc2d6cf6fd864a0de757039cf50fa1fe6dda",
+      "local": "assets/f9e4bba1ea169c867c10.jpg"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/smimg/2024/12/11/b99bc0d064ac42ab92e9a5166e7eeb2d.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 43160,
+      "sha256": "c88ecef98fffe1dba3a2d87b14f77894a7ab488a9e393f02c52671ea1f2be1b7",
+      "local": "assets/c88ecef98fffe1dba3a2.jpg"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/hd/2026/06/18/wcsmimg_6c31b592a35846789d76c28514e8a7ae.jpeg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 38677,
+      "sha256": "712d628508dcff1bb1b1568d47d28d4630bccc2ab77f0463467fec5be50d25f5",
+      "local": "assets/712d628508dcff1bb1b1.jpeg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/gj/2026/11-12/U892P4T8D10730583F19930DT20261112074957.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 17482,
+      "sha256": "a91fa052df66d99c398514c860dfef6b562f51adf0d1a09202b5d0a486f9e27b",
+      "local": "assets/a91fa052df66d99c3985.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/cj/2026/11-11/U1101P4T8D10730478F19930DT20261111203757.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 223083,
+      "sha256": "e2b904adfd4cbfd4536a45f854b8bdb18b7a651651d332eaa140c124ab4185f8",
+      "local": "assets/e2b904adfd4cbfd4536a.png"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/gj/2026/11-11/U1047P4T8D10730244F19930DT20261111160703.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 30597,
+      "sha256": "977aa99165783a20ef712980918ce7482fd9db94269a929091c5388e4236707d",
+      "local": "assets/977aa99165783a20ef71.jpg"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/ypt/2026/261111/ce8dcca5-ed64-4f4e-ba23-fe94873769ee_700x1000_zsite_sl.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 83499,
+      "sha256": "8cf55af3d1a7ca6a97273641283baac5f7beef906e6e4bac1f11720d15b376e5",
+      "local": "assets/8cf55af3d1a7ca6a9727.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/dxw/2026/11-11/U1119P4T8D10730171F19930DT20261111152250.png",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 292788,
+      "sha256": "6308761da075f726c610d61112a497cdabac55f39c8055398dbc61473552f032",
+      "local": "assets/6308761da075f726c610.png"
+    },
+    {
+      "url": "https://i2.chinanews.com.cn/simg/ypt/2026/261111/952d0692-33b8-4809-b91d-b001ba195197_zsite_sl.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 47104,
+      "sha256": "7f71fa8b3a229b4d319f369251c06ef8b9bdbceb4eb8d0435ac3393be3867631",
+      "local": "assets/7f71fa8b3a229b4d319f.jpg"
+    },
+    {
+      "url": "https://poss-videocloud.cns.com.cn/oss/2026/11/12/chinanews/MEIZI_YUNSHI/uploadImage/6af5837caaf4536dae1508df_small.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 39375,
+      "sha256": "db2aa3b70d1fe684c6d77585a83750391d4795da22331bc33aa946e27d1be74c",
+      "local": "assets/db2aa3b70d1fe684c6d7.jpg"
+    },
+    {
+      "url": "https://poss-videocloud.cns.com.cn/oss/2026/11/12/chinanews/MEIZI_YUNSHI/uploadImage/6af56f9faaf4536dae150814_small.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 36193,
+      "sha256": "941fdec2c05cf2b994aa71c0a57d628238298ef3615c26f793a394b2208f876e",
+      "local": "assets/941fdec2c05cf2b994aa.jpg"
+    },
+    {
+      "url": "https://poss-videocloud.cns.com.cn/oss/2026/11/12/chinanews/MEIZI_YUNSHI/uploadImage/6af41ab5b4f1fe18e2ea11bb_small.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 12780,
+      "sha256": "0e0a0e4b026f721ebb455ddb923bf490611971b41e830cdec7ab70c37ef6b8bb",
+      "local": "assets/0e0a0e4b026f721ebb45.jpg"
+    },
+    {
+      "url": "https://poss-videocloud.cns.com.cn/oss/2026/11/12/chinanews/MEIZI_YUNSHI/uploadImage/6af551c0aaf4536dae15072a_small.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 34469,
+      "sha256": "fb2455c524f82405e1fb62fe70e1b58a4e0d79e486b929e9bea0ee5e572c751e",
+      "local": "assets/fb2455c524f82405e1fb.jpg"
+    },
+    {
+      "url": "https://i9.cnsimg.net/app/cspvarlib/2026/11-11/q24mykmh.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 32923,
+      "sha256": "f8c818c4b22ab191d0b7f4da95cf04940c4b322d00cc888fa77acd0d9a52c1e4",
+      "local": "assets/f8c818c4b22ab191d0b7.jpg"
+    },
+    {
+      "url": "https://poss-videocloud.cns.com.cn/oss/2026/11/11/chinanews/MEIZI_YUNSHI/uploadImage/6af3e724b4f1fe18e2ea1000_small.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 25210,
+      "sha256": "5eeaaf242ea316d952472e0758162be181c57527300baa0e1e7f98be2ddb007f",
+      "local": "assets/5eeaaf242ea316d95247.jpg"
+    },
+    {
+      "url": "https://image.chinanews.com/globsme/2026/11-11/215e92b9-8e2e-488f-9a78-2287ef7d44e3_small.JPG",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 26137,
+      "sha256": "a94b1c39e8b645f0ba53a8035a498e003496888f0610ffbab186131dac810c0b",
+      "local": "assets/a94b1c39e8b645f0ba53.jpg"
+    },
+    {
+      "url": "https://poss-videocloud.cns.com.cn/oss/2026/11/11/chinanews/MEIZI_YUNSHI/uploadImage/6af42a40b4f1fe18e2ea1216_small.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 34154,
+      "sha256": "e87cf95410f1cf4c632cc2e3e5138240f998f0cfcbb4897d325196f2a51d9c7e",
+      "local": "assets/e87cf95410f1cf4c632c.jpg"
+    },
+    {
+      "url": "https://poss-videocloud.cns.com.cn/oss/2026/11/10/chinanews/MEIZI_YUNSHI/uploadImage/6af287edb4f1fe18e2ea0abf_small.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 21951,
+      "sha256": "70f9d917fca22e4c207033aa0ac1205f7272d3f0db670b6fa99957de97629a43",
+      "local": "assets/70f9d917fca22e4c2070.jpg"
+    },
+    {
+      "url": "https://poss-videocloud.cns.com.cn/oss/2026/11/09/chinanews/MEIZI_YUNSHI/uploadImage/6af16e327cb9721873a4eaa8_small.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 47210,
+      "sha256": "04ab133327f41e465e8abe721ee8790d81a0eca548fc63c8d1eeaf5a6c2bc64e",
+      "local": "assets/04ab133327f41e465e8a.jpg"
+    },
+    {
+      "url": "https://i9.cnsimg.net/app/cspvarlib/2026/11-09/ptjdvuuw.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 25632,
+      "sha256": "05a34a18e48fd023d0277f05d215811ad1ec7bd07e33b5daa0f460bca0c271fd",
+      "local": "assets/05a34a18e48fd023d027.jpg"
+    },
+    {
+      "url": "https://i9.cnsimg.net/app/cspvarlib/2026/11-08/pqperytu.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 28566,
+      "sha256": "22c39ca03b4b352e0d81cef49f38c8d794ec9ad83beb2d768dbd7c7f50b9ee97",
+      "local": "assets/22c39ca03b4b352e0d81.jpg"
+    },
+    {
+      "url": "https://i9.cnsimg.net/app/cspvarlib/2026/11-06/pjr6w6m5.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 26869,
+      "sha256": "8fe9e5449a26c3c7fd58209c3756ed6068b05141d8c021b4eb54dc51eaf47f8b",
+      "local": "assets/8fe9e5449a26c3c7fd58.jpg"
+    },
+    {
+      "url": "https://poss-videocloud.cns.com.cn/oss/2026/11/04/chinanews/MEIZI_YUNSHI/uploadImage/6aeaa76478f2f21b857ff43a_small.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 27245,
+      "sha256": "4fc669040687a6723cd22cb40ca7c816224d120157c7456c8d14bf822a6be3eb",
+      "local": "assets/4fc669040687a6723cd2.jpg"
+    },
+    {
+      "url": "https://poss-videocloud.cns.com.cn/oss/2026/11/04/chinanews/MEIZI_YUNSHI/uploadImage/6aea982a78f2f21b857ff3e4_small.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 26408,
+      "sha256": "31ab560df7ec6a8337b7df9915f0ea7338e2a05de48fae6a1b5cdb14467c09d6",
+      "local": "assets/31ab560df7ec6a8337b7.jpg"
+    },
+    {
+      "url": "https://poss-videocloud.cns.com.cn/oss/2026/11/04/chinanews/MEIZI_YUNSHI/uploadImage/6ae9d43e2cfdcd71384eb520_small.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 38457,
+      "sha256": "b41c73c663214fa03b30273e46c9d70be3308ea2fd83c218f0006880c07993e0",
+      "local": "assets/b41c73c663214fa03b30.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/shipin/spfts/20261112/U1111P4T309D6799F23915DT20261112183638.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 32055,
+      "sha256": "dde370a740ee857d9117f488d9048049f7affc7b5c85f8ba825c7ac13cc580dc",
+      "local": "assets/dde370a740ee857d9117.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/shipin/spfts/20261112/U1111P4T309D6798F23915DT20261112105158.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 34915,
+      "sha256": "f4131792d3e1078dcda716227c2b0411ec74f6252eeada2321a1057e82e9d213",
+      "local": "assets/f4131792d3e1078dcda7.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/shipin/spfts/20261110/U1080P4T309D6796F23915DT20261110170730.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 47478,
+      "sha256": "258e0aebfa975e2b11d8e442059451a39c26a5f83e27759672c2f165fbdfddf4",
+      "local": "assets/258e0aebfa975e2b11d8.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/2026/11-12/U574P4T8D10731077F5012DT20261112202235.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 69752,
+      "sha256": "04540717db4ac4fdcc058fcfe1fb734b4deb7eea0f462b66e5d974dc5d3550ba",
+      "local": "assets/04540717db4ac4fdcc05.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/2026/11-12/U1067P4T8D10730615F5012DT20261112092358.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 27142,
+      "sha256": "4b929cd0d6ca145067a48baf1be883735df86c2a3226149a396091f03404eb94",
+      "local": "assets/4b929cd0d6ca145067a4.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/2026/11-12/U992P4T8D10730605F5012DT20261112084132.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 72237,
+      "sha256": "4375b562db9f6f64763874b299b7e2788bdc14534558e4691846421ccd31fc80",
+      "local": "assets/4375b562db9f6f647638.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/2026/11-11/U574P4T8D10730509F5012DT20261111211308.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 30829,
+      "sha256": "a5696d2315f11c84ab898f5c666d598c047dee9072be67d11234cdac98821a73",
+      "local": "assets/a5696d2315f11c84ab89.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/https/www.chinanews.com.cn/tp/hd2011/2026/11-11/U1129P4T8D10730136F5012DT20261111162333.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 59520,
+      "sha256": "3b3145562804ac8fd3322599d4323b9388efa1c88f77484de3e33fc6e62fdb0b",
+      "local": "assets/3b3145562804ac8fd332.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/https/www.chinanews.com.cn/tp/hd2011/2026/11-06/U1066P4T8D10727134F5012DT20261106160146.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 117796,
+      "sha256": "bc7585c6022ff7e2f1c0fe5d318f0fc0ac406d9eca5267f0770c6a2ef38ed7f1",
+      "local": "assets/bc7585c6022ff7e2f1c0.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/2026/11-02/U1066P4T8D10724914F5012DT20261102205707.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 81977,
+      "sha256": "446401124eb2854ff679b3f53399238c121a1e80e39822bf4fa7aa106a0feda0",
+      "local": "assets/446401124eb2854ff679.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com.cn/tp/2026/11-02/U992P4T8D10724558F5012DT20261102092659.jpg",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 77695,
+      "sha256": "77e8dd92f6b35e8bfd586609f09f02aa5ebd224c7453e5d26bc868ef34f87311",
+      "local": "assets/77e8dd92f6b35e8bfd58.jpg"
+    },
+    {
+      "url": "https://www.chinanews.com/fileftp/2016/02/2016-02-29/ghs.png                                   ",
+      "kind": "media",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 19256,
+      "sha256": "a20583c81805fe64f7fa210851ce29754af9d25fd6aa5a3225a9557529602513",
+      "local": "assets/a20583c81805fe64f7fa.png"
+    }
+  ],
+  "errors": [
+    {
+      "url": "https://www.chinanews.com.cn/part/cns_public/139/indicator.gif",
+      "kind": "css_asset",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "scripts_disabled": true,
+  "evaluation_uses_source": true
+}

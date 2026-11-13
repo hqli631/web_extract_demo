@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/*ldr style start*/
+#dingtong,#ad_ym,.con_left_nav,.download_wrapper,#ad_left_jj1,.ad_recommended_top,#ad_left_wm,.change_font_size,.channel,.selected_news_wrapper,.con_right,#ad_ditong,#ad_shichuang,#ad_youbiao,#ad_duilian,#share_2,#appDownloadLDR{display:none;}
+.con_left,.main_content{width:1200px;}
+.content_maincontent_more{padding: 24px 65px;}
+.share3{
+    display:flex;
+    align-items: center;
+    position: relative;
+}
+/*.content_left_time,.content_left_title{text-align:center;}.con_left,.main_content{width:1000px;}*/
+.left_name{background:none;}
+#second-title .divnew .left{width:1280px;}
+#second-title .divnew .left h1{text-align:center;}
+/*ldr style end*/
+/*严正声明 2025.06.09*/
+.yanzhengshengmingwrapper {display: none;}

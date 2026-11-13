@@ -73,4 +73,19 @@ cost.json中G=10、固定J=2、CPU进程小时单价=1都是教学假设，不�
 |benchmark.json、cost.json|计时原始记录、硬件及成本口径|
 |index.html|统一阅读入口|
 
+## 原网页展示与评测文件的区别
+
+直接双击 output/stage3/protocol/sina/test_01.html 或 chinanews/test_01.html，浏览器会把 //域名/... 和 /part/... 当作本地文件引用，CSS和图片无法按原网站地址加载，于是出现默认列表、无布局或破图。这是展示资源问题，不是抽取器把网页改成了另一种结构。
+
+已经生成独立展示副本。启动本地静态服务器后打开：
+
+~~~powershell
+cd "D:\\codex project\\web_extract_demo"
+./.venv/Scripts/python.exe -m http.server 8775 --directory output/stage3/display
+~~~
+
+浏览器访问 http://127.0.0.1:8775/，选择新浪或中新网页面。展示副本按 selection.json 中的原URL解析并缓存了本地CSS、图片和CSS资源，页面顶部黄色提示说明了来源。12页共缓存1339项资源，仍有52项资源失败，清单在每页目录的 manifest.json；视频、JS动态内容、跨域iframe和未缓存资源不能据此声称恢复。
+
+展示副本只是视觉对照；正文提取、XPath、质量评审和哈希始终使用 output/stage3/protocol/.../test_XX.html 冻结源。脚本在展示副本中被停用，避免重写DOM、跳转或插入新广告。生成展示副本不会修改25份冻结快照，已逐一核验哈希不变。
+
 下一阶段来源：即使评分题已固定，模型也可能误判，需要用错例、独立抽查和分歧分析校准。第三阶段不以继续改测试页追求全通过结束。

@@ -12,3 +12,4 @@ output/stage3/protocol/**/*.json -text
 output/stage3/generation/*.json -text
 output/stage3/evaluation/*.json -text
 learning/run_cluster_generation.py -text
+output/stage4/specification/*.json -text

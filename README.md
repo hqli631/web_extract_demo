@@ -1,5 +1,9 @@
 # Web Extract Demo
 
+当前学习进入第四阶段4.1：运行learning/run_rubric_cases.py，打开output/stage4/specification/index.html。见[评价依据与受控错例操作](docs/STAGE4_UNIT1.md)。14个合成案例是预期标签实验，不是新模型评分；4.2实际评审尚未开始。第三阶段已归档，冻结代码和结果保留。
+
+查看第三阶段封存网页的原始布局，不要直接双击冻结HTML：在项目目录运行 .venv/Scripts/python.exe -m http.server 8775 --directory output/stage3/display，浏览器打开 http://127.0.0.1:8775/。这是缓存资源的视觉展示副本；抽取和评测仍使用 output/stage3/protocol 中的冻结源，详见 3.4 说明。
+
 **当前进度（2026-11-13）：第三阶段四单元工程完成。** 两簇少样本生成代码、反馈修复、封存新页评估及CPU成本报告已有可重放结果。12测试页：6候选通过、3纯净度失败、2信息完整性未知、1视频空正文契约错误；这些是当前对话AI静态任务判断，尚未独立校准。无外部模型API或RL参数训练。
 
 运行：.venv/Scripts/python.exe -X utf8 learning/run_cluster_evaluation.py；打开output/stage3/evaluation/index.html。详见[3.4操作与学习](docs/STAGE3_UNIT4.md)、[第三阶段总结](docs/STAGE3_SUMMARY.md)。下一步按固定计划进入第四阶段Rubrics校准。下方带日期的进度为历史记录，以本段为当前状态。

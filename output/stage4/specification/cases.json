@@ -1,0 +1,1537 @@
+{
+  "unit": "4.1",
+  "fixture_type": "synthetic controlled cases, not new natural pages",
+  "source_html": "<meta charset=\"utf-8\"><h1>访谈：社区如何使用人工智能</h1>\n<div id=\"article\">\n<p id=\"byline\">记者 张三</p>\n<p id=\"intro\">社区在三个服务站试用人工智能辅助咨询，详情见<a href=\"/report\">试点报告</a>。</p>\n<p id=\"question\">中新社记者：您如何评价人工智能对社区服务的影响？</p>\n<p id=\"answer\">受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。</p>\n<h2 id=\"heading\">试点结果</h2>\n<ul id=\"list\"><li>保留人工核实环节。</li><li>定期检查服务效果。</li></ul>\n<table id=\"table\"><tr><th>项目</th><th>数量</th></tr><tr><td>服务站</td><td>3</td></tr></table>\n<div id=\"caption\" class=\"pictext\">图为社区服务站试点现场。</div>\n<div id=\"folded\" style=\"display:none\">补充说明：试点数据尚未覆盖所有居民。</div>\n<p id=\"analysis\">研究者指出，“来评论区说说”是一种常见互动引导语。</p>\n<div id=\"menu\" style=\"display:none\"><a href=\"/\">返回首页</a></div>\n<p id=\"cta\">对于这次试点，你怎么看？来评论区说说。</p>\n<div id=\"promotion\">扫码下载本平台APP，领取优惠券。</div>\n</div>",
+  "source_records": {
+    "byline": {
+      "id": "byline",
+      "kind": "paragraph",
+      "text": "记者 张三",
+      "xpath": "/html/body/div/p[1]"
+    },
+    "intro": {
+      "id": "intro",
+      "kind": "paragraph",
+      "text": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。",
+      "xpath": "/html/body/div/p[2]"
+    },
+    "question": {
+      "id": "question",
+      "kind": "paragraph",
+      "text": "中新社记者：您如何评价人工智能对社区服务的影响？",
+      "xpath": "/html/body/div/p[3]"
+    },
+    "answer": {
+      "id": "answer",
+      "kind": "paragraph",
+      "text": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。",
+      "xpath": "/html/body/div/p[4]"
+    },
+    "heading": {
+      "id": "heading",
+      "kind": "subheading",
+      "text": "试点结果",
+      "xpath": "/html/body/div/h2"
+    },
+    "list": {
+      "id": "list",
+      "kind": "list",
+      "text": "保留人工核实环节。定期检查服务效果。",
+      "xpath": "/html/body/div/ul"
+    },
+    "table": {
+      "id": "table",
+      "kind": "table",
+      "text": "项目数量服务站3",
+      "xpath": "/html/body/div/table",
+      "rows": [
+        [
+          "项目",
+          "数量"
+        ],
+        [
+          "服务站",
+          "3"
+        ]
+      ]
+    },
+    "caption": {
+      "id": "caption",
+      "kind": "caption",
+      "text": "图为社区服务站试点现场。",
+      "xpath": "/html/body/div/div[1]"
+    },
+    "folded": {
+      "id": "folded",
+      "kind": "paragraph",
+      "text": "补充说明：试点数据尚未覆盖所有居民。",
+      "xpath": "/html/body/div/div[2]"
+    },
+    "analysis": {
+      "id": "analysis",
+      "kind": "paragraph",
+      "text": "研究者指出，“来评论区说说”是一种常见互动引导语。",
+      "xpath": "/html/body/div/p[5]"
+    },
+    "menu": {
+      "id": "menu",
+      "kind": "paragraph",
+      "text": "返回首页",
+      "xpath": "/html/body/div/div[3]"
+    },
+    "cta": {
+      "id": "cta",
+      "kind": "paragraph",
+      "text": "对于这次试点，你怎么看？来评论区说说。",
+      "xpath": "/html/body/div/p[6]"
+    },
+    "promotion": {
+      "id": "promotion",
+      "kind": "paragraph",
+      "text": "扫码下载本平台APP，领取优惠券。",
+      "xpath": "/html/body/div/div[4]"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "correct",
+      "label": "符合任务范围",
+      "synthetic": true,
+      "output": {
+        "title": "访谈：社区如何使用人工智能",
+        "blocks": [
+          {
+            "id": "intro",
+            "kind": "paragraph",
+            "text": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。",
+            "xpath": "/html/body/div/p[2]"
+          },
+          {
+            "id": "question",
+            "kind": "paragraph",
+            "text": "中新社记者：您如何评价人工智能对社区服务的影响？",
+            "xpath": "/html/body/div/p[3]"
+          },
+          {
+            "id": "answer",
+            "kind": "paragraph",
+            "text": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。",
+            "xpath": "/html/body/div/p[4]"
+          },
+          {
+            "id": "heading",
+            "kind": "subheading",
+            "text": "试点结果",
+            "xpath": "/html/body/div/h2"
+          },
+          {
+            "id": "list",
+            "kind": "list",
+            "text": "保留人工核实环节。定期检查服务效果。",
+            "xpath": "/html/body/div/ul"
+          },
+          {
+            "id": "table",
+            "kind": "table",
+            "text": "项目数量服务站3",
+            "xpath": "/html/body/div/table",
+            "rows": [
+              [
+                "项目",
+                "数量"
+              ],
+              [
+                "服务站",
+                "3"
+              ]
+            ]
+          },
+          {
+            "id": "caption",
+            "kind": "caption",
+            "text": "图为社区服务站试点现场。",
+            "xpath": "/html/body/div/div[1]"
+          },
+          {
+            "id": "folded",
+            "kind": "paragraph",
+            "text": "补充说明：试点数据尚未覆盖所有居民。",
+            "xpath": "/html/body/div/div[2]"
+          },
+          {
+            "id": "analysis",
+            "kind": "paragraph",
+            "text": "研究者指出，“来评论区说说”是一种常见互动引导语。",
+            "xpath": "/html/body/div/p[5]"
+          }
+        ],
+        "metadata": [
+          {
+            "id": "byline",
+            "kind": "author",
+            "text": "记者 张三",
+            "xpath": "/html/body/div/p[1]"
+          }
+        ],
+        "excluded": [
+          {
+            "id": "menu",
+            "kind": "paragraph",
+            "text": "返回首页",
+            "xpath": "/html/body/div/div[3]"
+          },
+          {
+            "id": "cta",
+            "kind": "paragraph",
+            "text": "对于这次试点，你怎么看？来评论区说说。",
+            "xpath": "/html/body/div/p[6]"
+          },
+          {
+            "id": "promotion",
+            "kind": "paragraph",
+            "text": "扫码下载本平台APP，领取优惠券。",
+            "xpath": "/html/body/div/div[4]"
+          }
+        ]
+      },
+      "expected_answers": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "reason": "访谈问句、折叠补充、图说表格保留；独立署名、菜单、互动和推广分流。analysis引用互动文案作分析，仍是正文。",
+      "origin": "predefined controlled transformation; not model verdict"
+    },
+    {
+      "case_id": "missing_paragraph",
+      "label": "漏叙述段",
+      "synthetic": true,
+      "output": {
+        "title": "访谈：社区如何使用人工智能",
+        "blocks": [
+          {
+            "id": "intro",
+            "kind": "paragraph",
+            "text": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。",
+            "xpath": "/html/body/div/p[2]"
+          },
+          {
+            "id": "question",
+            "kind": "paragraph",
+            "text": "中新社记者：您如何评价人工智能对社区服务的影响？",
+            "xpath": "/html/body/div/p[3]"
+          },
+          {
+            "id": "heading",
+            "kind": "subheading",
+            "text": "试点结果",
+            "xpath": "/html/body/div/h2"
+          },
+          {
+            "id": "list",
+            "kind": "list",
+            "text": "保留人工核实环节。定期检查服务效果。",
+            "xpath": "/html/body/div/ul"
+          },
+          {
+            "id": "table",
+            "kind": "table",
+            "text": "项目数量服务站3",
+            "xpath": "/html/body/div/table",
+            "rows": [
+              [
+                "项目",
+                "数量"
+              ],
+              [
+                "服务站",
+                "3"
+              ]
+            ]
+          },
+          {
+            "id": "caption",
+            "kind": "caption",
+            "text": "图为社区服务站试点现场。",
+            "xpath": "/html/body/div/div[1]"
+          },
+          {
+            "id": "folded",
+            "kind": "paragraph",
+            "text": "补充说明：试点数据尚未覆盖所有居民。",
+            "xpath": "/html/body/div/div[2]"
+          },
+          {
+            "id": "analysis",
+            "kind": "paragraph",
+            "text": "研究者指出，“来评论区说说”是一种常见互动引导语。",
+            "xpath": "/html/body/div/p[5]"
+          }
+        ],
+        "metadata": [
+          {
+            "id": "byline",
+            "kind": "author",
+            "text": "记者 张三",
+            "xpath": "/html/body/div/p[1]"
+          }
+        ],
+        "excluded": [
+          {
+            "id": "menu",
+            "kind": "paragraph",
+            "text": "返回首页",
+            "xpath": "/html/body/div/div[3]"
+          },
+          {
+            "id": "cta",
+            "kind": "paragraph",
+            "text": "对于这次试点，你怎么看？来评论区说说。",
+            "xpath": "/html/body/div/p[6]"
+          },
+          {
+            "id": "promotion",
+            "kind": "paragraph",
+            "text": "扫码下载本平台APP，领取优惠券。",
+            "xpath": "/html/body/div/div[4]"
+          }
+        ]
+      },
+      "expected_answers": {
+        "Q1": "yes",
+        "Q2": "no",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/p[4]",
+      "origin": "predefined controlled transformation; not model verdict"
+    },
+    {
+      "case_id": "missing_table",
+      "label": "漏信息表",
+      "synthetic": true,
+      "output": {
+        "title": "访谈：社区如何使用人工智能",
+        "blocks": [
+          {
+            "id": "intro",
+            "kind": "paragraph",
+            "text": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。",
+            "xpath": "/html/body/div/p[2]"
+          },
+          {
+            "id": "question",
+            "kind": "paragraph",
+            "text": "中新社记者：您如何评价人工智能对社区服务的影响？",
+            "xpath": "/html/body/div/p[3]"
+          },
+          {
+            "id": "answer",
+            "kind": "paragraph",
+            "text": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。",
+            "xpath": "/html/body/div/p[4]"
+          },
+          {
+            "id": "heading",
+            "kind": "subheading",
+            "text": "试点结果",
+            "xpath": "/html/body/div/h2"
+          },
+          {
+            "id": "list",
+            "kind": "list",
+            "text": "保留人工核实环节。定期检查服务效果。",
+            "xpath": "/html/body/div/ul"
+          },
+          {
+            "id": "caption",
+            "kind": "caption",
+            "text": "图为社区服务站试点现场。",
+            "xpath": "/html/body/div/div[1]"
+          },
+          {
+            "id": "folded",
+            "kind": "paragraph",
+            "text": "补充说明：试点数据尚未覆盖所有居民。",
+            "xpath": "/html/body/div/div[2]"
+          },
+          {
+            "id": "analysis",
+            "kind": "paragraph",
+            "text": "研究者指出，“来评论区说说”是一种常见互动引导语。",
+            "xpath": "/html/body/div/p[5]"
+          }
+        ],
+        "metadata": [
+          {
+            "id": "byline",
+            "kind": "author",
+            "text": "记者 张三",
+            "xpath": "/html/body/div/p[1]"
+          }
+        ],
+        "excluded": [
+          {
+            "id": "menu",
+            "kind": "paragraph",
+            "text": "返回首页",
+            "xpath": "/html/body/div/div[3]"
+          },
+          {
+            "id": "cta",
+            "kind": "paragraph",
+            "text": "对于这次试点，你怎么看？来评论区说说。",
+            "xpath": "/html/body/div/p[6]"
+          },
+          {
+            "id": "promotion",
+            "kind": "paragraph",
+            "text": "扫码下载本平台APP，领取优惠券。",
+            "xpath": "/html/body/div/div[4]"
+          }
+        ]
+      },
+      "expected_answers": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "no",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/table",
+      "origin": "predefined controlled transformation; not model verdict"
+    },
+    {
+      "case_id": "missing_list",
+      "label": "漏信息列表",
+      "synthetic": true,
+      "output": {
+        "title": "访谈：社区如何使用人工智能",
+        "blocks": [
+          {
+            "id": "intro",
+            "kind": "paragraph",
+            "text": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。",
+            "xpath": "/html/body/div/p[2]"
+          },
+          {
+            "id": "question",
+            "kind": "paragraph",
+            "text": "中新社记者：您如何评价人工智能对社区服务的影响？",
+            "xpath": "/html/body/div/p[3]"
+          },
+          {
+            "id": "answer",
+            "kind": "paragraph",
+            "text": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。",
+            "xpath": "/html/body/div/p[4]"
+          },
+          {
+            "id": "heading",
+            "kind": "subheading",
+            "text": "试点结果",
+            "xpath": "/html/body/div/h2"
+          },
+          {
+            "id": "table",
+            "kind": "table",
+            "text": "项目数量服务站3",
+            "xpath": "/html/body/div/table",
+            "rows": [
+              [
+                "项目",
+                "数量"
+              ],
+              [
+                "服务站",
+                "3"
+              ]
+            ]
+          },
+          {
+            "id": "caption",
+            "kind": "caption",
+            "text": "图为社区服务站试点现场。",
+            "xpath": "/html/body/div/div[1]"
+          },
+          {
+            "id": "folded",
+            "kind": "paragraph",
+            "text": "补充说明：试点数据尚未覆盖所有居民。",
+            "xpath": "/html/body/div/div[2]"
+          },
+          {
+            "id": "analysis",
+            "kind": "paragraph",
+            "text": "研究者指出，“来评论区说说”是一种常见互动引导语。",
+            "xpath": "/html/body/div/p[5]"
+          }
+        ],
+        "metadata": [
+          {
+            "id": "byline",
+            "kind": "author",
+            "text": "记者 张三",
+            "xpath": "/html/body/div/p[1]"
+          }
+        ],
+        "excluded": [
+          {
+            "id": "menu",
+            "kind": "paragraph",
+            "text": "返回首页",
+            "xpath": "/html/body/div/div[3]"
+          },
+          {
+            "id": "cta",
+            "kind": "paragraph",
+            "text": "对于这次试点，你怎么看？来评论区说说。",
+            "xpath": "/html/body/div/p[6]"
+          },
+          {
+            "id": "promotion",
+            "kind": "paragraph",
+            "text": "扫码下载本平台APP，领取优惠券。",
+            "xpath": "/html/body/div/div[4]"
+          }
+        ]
+      },
+      "expected_answers": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "no",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/ul",
+      "origin": "predefined controlled transformation; not model verdict"
+    },
+    {
+      "case_id": "missing_caption",
+      "label": "漏图说",
+      "synthetic": true,
+      "output": {
+        "title": "访谈：社区如何使用人工智能",
+        "blocks": [
+          {
+            "id": "intro",
+            "kind": "paragraph",
+            "text": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。",
+            "xpath": "/html/body/div/p[2]"
+          },
+          {
+            "id": "question",
+            "kind": "paragraph",
+            "text": "中新社记者：您如何评价人工智能对社区服务的影响？",
+            "xpath": "/html/body/div/p[3]"
+          },
+          {
+            "id": "answer",
+            "kind": "paragraph",
+            "text": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。",
+            "xpath": "/html/body/div/p[4]"
+          },
+          {
+            "id": "heading",
+            "kind": "subheading",
+            "text": "试点结果",
+            "xpath": "/html/body/div/h2"
+          },
+          {
+            "id": "list",
+            "kind": "list",
+            "text": "保留人工核实环节。定期检查服务效果。",
+            "xpath": "/html/body/div/ul"
+          },
+          {
+            "id": "table",
+            "kind": "table",
+            "text": "项目数量服务站3",
+            "xpath": "/html/body/div/table",
+            "rows": [
+              [
+                "项目",
+                "数量"
+              ],
+              [
+                "服务站",
+                "3"
+              ]
+            ]
+          },
+          {
+            "id": "folded",
+            "kind": "paragraph",
+            "text": "补充说明：试点数据尚未覆盖所有居民。",
+            "xpath": "/html/body/div/div[2]"
+          },
+          {
+            "id": "analysis",
+            "kind": "paragraph",
+            "text": "研究者指出，“来评论区说说”是一种常见互动引导语。",
+            "xpath": "/html/body/div/p[5]"
+          }
+        ],
+        "metadata": [
+          {
+            "id": "byline",
+            "kind": "author",
+            "text": "记者 张三",
+            "xpath": "/html/body/div/p[1]"
+          }
+        ],
+        "excluded": [
+          {
+            "id": "menu",
+            "kind": "paragraph",
+            "text": "返回首页",
+            "xpath": "/html/body/div/div[3]"
+          },
+          {
+            "id": "cta",
+            "kind": "paragraph",
+            "text": "对于这次试点，你怎么看？来评论区说说。",
+            "xpath": "/html/body/div/p[6]"
+          },
+          {
+            "id": "promotion",
+            "kind": "paragraph",
+            "text": "扫码下载本平台APP，领取优惠券。",
+            "xpath": "/html/body/div/div[4]"
+          }
+        ]
+      },
+      "expected_answers": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "no",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/div[1]",
+      "origin": "predefined controlled transformation; not model verdict"
+    },
+    {
+      "case_id": "missing_folded",
+      "label": "误删折叠叙述",
+      "synthetic": true,
+      "output": {
+        "title": "访谈：社区如何使用人工智能",
+        "blocks": [
+          {
+            "id": "intro",
+            "kind": "paragraph",
+            "text": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。",
+            "xpath": "/html/body/div/p[2]"
+          },
+          {
+            "id": "question",
+            "kind": "paragraph",
+            "text": "中新社记者：您如何评价人工智能对社区服务的影响？",
+            "xpath": "/html/body/div/p[3]"
+          },
+          {
+            "id": "answer",
+            "kind": "paragraph",
+            "text": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。",
+            "xpath": "/html/body/div/p[4]"
+          },
+          {
+            "id": "heading",
+            "kind": "subheading",
+            "text": "试点结果",
+            "xpath": "/html/body/div/h2"
+          },
+          {
+            "id": "list",
+            "kind": "list",
+            "text": "保留人工核实环节。定期检查服务效果。",
+            "xpath": "/html/body/div/ul"
+          },
+          {
+            "id": "table",
+            "kind": "table",
+            "text": "项目数量服务站3",
+            "xpath": "/html/body/div/table",
+            "rows": [
+              [
+                "项目",
+                "数量"
+              ],
+              [
+                "服务站",
+                "3"
+              ]
+            ]
+          },
+          {
+            "id": "caption",
+            "kind": "caption",
+            "text": "图为社区服务站试点现场。",
+            "xpath": "/html/body/div/div[1]"
+          },
+          {
+            "id": "analysis",
+            "kind": "paragraph",
+            "text": "研究者指出，“来评论区说说”是一种常见互动引导语。",
+            "xpath": "/html/body/div/p[5]"
+          }
+        ],
+        "metadata": [
+          {
+            "id": "byline",
+            "kind": "author",
+            "text": "记者 张三",
+            "xpath": "/html/body/div/p[1]"
+          }
+        ],
+        "excluded": [
+          {
+            "id": "menu",
+            "kind": "paragraph",
+            "text": "返回首页",
+            "xpath": "/html/body/div/div[3]"
+          },
+          {
+            "id": "cta",
+            "kind": "paragraph",
+            "text": "对于这次试点，你怎么看？来评论区说说。",
+            "xpath": "/html/body/div/p[6]"
+          },
+          {
+            "id": "promotion",
+            "kind": "paragraph",
+            "text": "扫码下载本平台APP，领取优惠券。",
+            "xpath": "/html/body/div/div[4]"
+          }
+        ]
+      },
+      "expected_answers": {
+        "Q1": "yes",
+        "Q2": "no",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "reason": "缺失由对应完整性题主评；不因同一缺失再扣Q5。源节点：/html/body/div/div[2]",
+      "origin": "predefined controlled transformation; not model verdict"
+    },
+    {
+      "case_id": "promotion_in_body",
+      "label": "推广混入",
+      "synthetic": true,
+      "output": {
+        "title": "访谈：社区如何使用人工智能",
+        "blocks": [
+          {
+            "id": "intro",
+            "kind": "paragraph",
+            "text": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。",
+            "xpath": "/html/body/div/p[2]"
+          },
+          {
+            "id": "question",
+            "kind": "paragraph",
+            "text": "中新社记者：您如何评价人工智能对社区服务的影响？",
+            "xpath": "/html/body/div/p[3]"
+          },
+          {
+            "id": "answer",
+            "kind": "paragraph",
+            "text": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。",
+            "xpath": "/html/body/div/p[4]"
+          },
+          {
+            "id": "heading",
+            "kind": "subheading",
+            "text": "试点结果",
+            "xpath": "/html/body/div/h2"
+          },
+          {
+            "id": "list",
+            "kind": "list",
+            "text": "保留人工核实环节。定期检查服务效果。",
+            "xpath": "/html/body/div/ul"
+          },
+          {
+            "id": "table",
+            "kind": "table",
+            "text": "项目数量服务站3",
+            "xpath": "/html/body/div/table",
+            "rows": [
+              [
+                "项目",
+                "数量"
+              ],
+              [
+                "服务站",
+                "3"
+              ]
+            ]
+          },
+          {
+            "id": "caption",
+            "kind": "caption",
+            "text": "图为社区服务站试点现场。",
+            "xpath": "/html/body/div/div[1]"
+          },
+          {
+            "id": "folded",
+            "kind": "paragraph",
+            "text": "补充说明：试点数据尚未覆盖所有居民。",
+            "xpath": "/html/body/div/div[2]"
+          },
+          {
+            "id": "analysis",
+            "kind": "paragraph",
+            "text": "研究者指出，“来评论区说说”是一种常见互动引导语。",
+            "xpath": "/html/body/div/p[5]"
+          },
+          {
+            "id": "promotion",
+            "kind": "paragraph",
+            "text": "扫码下载本平台APP，领取优惠券。",
+            "xpath": "/html/body/div/div[4]"
+          }
+        ],
+        "metadata": [
+          {
+            "id": "byline",
+            "kind": "author",
+            "text": "记者 张三",
+            "xpath": "/html/body/div/p[1]"
+          }
+        ],
+        "excluded": [
+          {
+            "id": "menu",
+            "kind": "paragraph",
+            "text": "返回首页",
+            "xpath": "/html/body/div/div[3]"
+          },
+          {
+            "id": "cta",
+            "kind": "paragraph",
+            "text": "对于这次试点，你怎么看？来评论区说说。",
+            "xpath": "/html/body/div/p[6]"
+          }
+        ]
+      },
+      "expected_answers": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "no",
+        "Q5": "yes"
+      },
+      "reason": "记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/div[4]",
+      "origin": "predefined controlled transformation; not model verdict"
+    },
+    {
+      "case_id": "byline_in_body",
+      "label": "独立署名混入",
+      "synthetic": true,
+      "output": {
+        "title": "访谈：社区如何使用人工智能",
+        "blocks": [
+          {
+            "id": "byline",
+            "kind": "paragraph",
+            "text": "记者 张三",
+            "xpath": "/html/body/div/p[1]"
+          },
+          {
+            "id": "intro",
+            "kind": "paragraph",
+            "text": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。",
+            "xpath": "/html/body/div/p[2]"
+          },
+          {
+            "id": "question",
+            "kind": "paragraph",
+            "text": "中新社记者：您如何评价人工智能对社区服务的影响？",
+            "xpath": "/html/body/div/p[3]"
+          },
+          {
+            "id": "answer",
+            "kind": "paragraph",
+            "text": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。",
+            "xpath": "/html/body/div/p[4]"
+          },
+          {
+            "id": "heading",
+            "kind": "subheading",
+            "text": "试点结果",
+            "xpath": "/html/body/div/h2"
+          },
+          {
+            "id": "list",
+            "kind": "list",
+            "text": "保留人工核实环节。定期检查服务效果。",
+            "xpath": "/html/body/div/ul"
+          },
+          {
+            "id": "table",
+            "kind": "table",
+            "text": "项目数量服务站3",
+            "xpath": "/html/body/div/table",
+            "rows": [
+              [
+                "项目",
+                "数量"
+              ],
+              [
+                "服务站",
+                "3"
+              ]
+            ]
+          },
+          {
+            "id": "caption",
+            "kind": "caption",
+            "text": "图为社区服务站试点现场。",
+            "xpath": "/html/body/div/div[1]"
+          },
+          {
+            "id": "folded",
+            "kind": "paragraph",
+            "text": "补充说明：试点数据尚未覆盖所有居民。",
+            "xpath": "/html/body/div/div[2]"
+          },
+          {
+            "id": "analysis",
+            "kind": "paragraph",
+            "text": "研究者指出，“来评论区说说”是一种常见互动引导语。",
+            "xpath": "/html/body/div/p[5]"
+          }
+        ],
+        "metadata": [],
+        "excluded": [
+          {
+            "id": "menu",
+            "kind": "paragraph",
+            "text": "返回首页",
+            "xpath": "/html/body/div/div[3]"
+          },
+          {
+            "id": "cta",
+            "kind": "paragraph",
+            "text": "对于这次试点，你怎么看？来评论区说说。",
+            "xpath": "/html/body/div/p[6]"
+          },
+          {
+            "id": "promotion",
+            "kind": "paragraph",
+            "text": "扫码下载本平台APP，领取优惠券。",
+            "xpath": "/html/body/div/div[4]"
+          }
+        ]
+      },
+      "expected_answers": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "no",
+        "Q5": "yes"
+      },
+      "reason": "记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/p[1]",
+      "origin": "predefined controlled transformation; not model verdict"
+    },
+    {
+      "case_id": "cta_in_body",
+      "label": "互动引导混入",
+      "synthetic": true,
+      "output": {
+        "title": "访谈：社区如何使用人工智能",
+        "blocks": [
+          {
+            "id": "intro",
+            "kind": "paragraph",
+            "text": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。",
+            "xpath": "/html/body/div/p[2]"
+          },
+          {
+            "id": "question",
+            "kind": "paragraph",
+            "text": "中新社记者：您如何评价人工智能对社区服务的影响？",
+            "xpath": "/html/body/div/p[3]"
+          },
+          {
+            "id": "answer",
+            "kind": "paragraph",
+            "text": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。",
+            "xpath": "/html/body/div/p[4]"
+          },
+          {
+            "id": "heading",
+            "kind": "subheading",
+            "text": "试点结果",
+            "xpath": "/html/body/div/h2"
+          },
+          {
+            "id": "list",
+            "kind": "list",
+            "text": "保留人工核实环节。定期检查服务效果。",
+            "xpath": "/html/body/div/ul"
+          },
+          {
+            "id": "table",
+            "kind": "table",
+            "text": "项目数量服务站3",
+            "xpath": "/html/body/div/table",
+            "rows": [
+              [
+                "项目",
+                "数量"
+              ],
+              [
+                "服务站",
+                "3"
+              ]
+            ]
+          },
+          {
+            "id": "caption",
+            "kind": "caption",
+            "text": "图为社区服务站试点现场。",
+            "xpath": "/html/body/div/div[1]"
+          },
+          {
+            "id": "folded",
+            "kind": "paragraph",
+            "text": "补充说明：试点数据尚未覆盖所有居民。",
+            "xpath": "/html/body/div/div[2]"
+          },
+          {
+            "id": "analysis",
+            "kind": "paragraph",
+            "text": "研究者指出，“来评论区说说”是一种常见互动引导语。",
+            "xpath": "/html/body/div/p[5]"
+          },
+          {
+            "id": "cta",
+            "kind": "paragraph",
+            "text": "对于这次试点，你怎么看？来评论区说说。",
+            "xpath": "/html/body/div/p[6]"
+          }
+        ],
+        "metadata": [
+          {
+            "id": "byline",
+            "kind": "author",
+            "text": "记者 张三",
+            "xpath": "/html/body/div/p[1]"
+          }
+        ],
+        "excluded": [
+          {
+            "id": "menu",
+            "kind": "paragraph",
+            "text": "返回首页",
+            "xpath": "/html/body/div/div[3]"
+          },
+          {
+            "id": "promotion",
+            "kind": "paragraph",
+            "text": "扫码下载本平台APP，领取优惠券。",
+            "xpath": "/html/body/div/div[4]"
+          }
+        ]
+      },
+      "expected_answers": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "no",
+        "Q5": "yes"
+      },
+      "reason": "记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/p[6]",
+      "origin": "predefined controlled transformation; not model verdict"
+    },
+    {
+      "case_id": "hidden_menu_in_body",
+      "label": "隐藏菜单混入",
+      "synthetic": true,
+      "output": {
+        "title": "访谈：社区如何使用人工智能",
+        "blocks": [
+          {
+            "id": "intro",
+            "kind": "paragraph",
+            "text": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。",
+            "xpath": "/html/body/div/p[2]"
+          },
+          {
+            "id": "question",
+            "kind": "paragraph",
+            "text": "中新社记者：您如何评价人工智能对社区服务的影响？",
+            "xpath": "/html/body/div/p[3]"
+          },
+          {
+            "id": "answer",
+            "kind": "paragraph",
+            "text": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。",
+            "xpath": "/html/body/div/p[4]"
+          },
+          {
+            "id": "heading",
+            "kind": "subheading",
+            "text": "试点结果",
+            "xpath": "/html/body/div/h2"
+          },
+          {
+            "id": "list",
+            "kind": "list",
+            "text": "保留人工核实环节。定期检查服务效果。",
+            "xpath": "/html/body/div/ul"
+          },
+          {
+            "id": "table",
+            "kind": "table",
+            "text": "项目数量服务站3",
+            "xpath": "/html/body/div/table",
+            "rows": [
+              [
+                "项目",
+                "数量"
+              ],
+              [
+                "服务站",
+                "3"
+              ]
+            ]
+          },
+          {
+            "id": "caption",
+            "kind": "caption",
+            "text": "图为社区服务站试点现场。",
+            "xpath": "/html/body/div/div[1]"
+          },
+          {
+            "id": "folded",
+            "kind": "paragraph",
+            "text": "补充说明：试点数据尚未覆盖所有居民。",
+            "xpath": "/html/body/div/div[2]"
+          },
+          {
+            "id": "analysis",
+            "kind": "paragraph",
+            "text": "研究者指出，“来评论区说说”是一种常见互动引导语。",
+            "xpath": "/html/body/div/p[5]"
+          },
+          {
+            "id": "menu",
+            "kind": "paragraph",
+            "text": "返回首页",
+            "xpath": "/html/body/div/div[3]"
+          }
+        ],
+        "metadata": [
+          {
+            "id": "byline",
+            "kind": "author",
+            "text": "记者 张三",
+            "xpath": "/html/body/div/p[1]"
+          }
+        ],
+        "excluded": [
+          {
+            "id": "cta",
+            "kind": "paragraph",
+            "text": "对于这次试点，你怎么看？来评论区说说。",
+            "xpath": "/html/body/div/p[6]"
+          },
+          {
+            "id": "promotion",
+            "kind": "paragraph",
+            "text": "扫码下载本平台APP，领取优惠券。",
+            "xpath": "/html/body/div/div[4]"
+          }
+        ]
+      },
+      "expected_answers": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "no",
+        "Q5": "yes"
+      },
+      "reason": "记录忠实且有序，问题是用途分类，不自动重复扣Q5。源节点：/html/body/div/div[3]",
+      "origin": "predefined controlled transformation; not model verdict"
+    },
+    {
+      "case_id": "duplicate",
+      "label": "正文重复",
+      "synthetic": true,
+      "output": {
+        "title": "访谈：社区如何使用人工智能",
+        "blocks": [
+          {
+            "id": "intro",
+            "kind": "paragraph",
+            "text": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。",
+            "xpath": "/html/body/div/p[2]"
+          },
+          {
+            "id": "question",
+            "kind": "paragraph",
+            "text": "中新社记者：您如何评价人工智能对社区服务的影响？",
+            "xpath": "/html/body/div/p[3]"
+          },
+          {
+            "id": "answer",
+            "kind": "paragraph",
+            "text": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。",
+            "xpath": "/html/body/div/p[4]"
+          },
+          {
+            "id": "answer",
+            "kind": "paragraph",
+            "text": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。",
+            "xpath": "/html/body/div/p[4]"
+          },
+          {
+            "id": "heading",
+            "kind": "subheading",
+            "text": "试点结果",
+            "xpath": "/html/body/div/h2"
+          },
+          {
+            "id": "list",
+            "kind": "list",
+            "text": "保留人工核实环节。定期检查服务效果。",
+            "xpath": "/html/body/div/ul"
+          },
+          {
+            "id": "table",
+            "kind": "table",
+            "text": "项目数量服务站3",
+            "xpath": "/html/body/div/table",
+            "rows": [
+              [
+                "项目",
+                "数量"
+              ],
+              [
+                "服务站",
+                "3"
+              ]
+            ]
+          },
+          {
+            "id": "caption",
+            "kind": "caption",
+            "text": "图为社区服务站试点现场。",
+            "xpath": "/html/body/div/div[1]"
+          },
+          {
+            "id": "folded",
+            "kind": "paragraph",
+            "text": "补充说明：试点数据尚未覆盖所有居民。",
+            "xpath": "/html/body/div/div[2]"
+          },
+          {
+            "id": "analysis",
+            "kind": "paragraph",
+            "text": "研究者指出，“来评论区说说”是一种常见互动引导语。",
+            "xpath": "/html/body/div/p[5]"
+          }
+        ],
+        "metadata": [
+          {
+            "id": "byline",
+            "kind": "author",
+            "text": "记者 张三",
+            "xpath": "/html/body/div/p[1]"
+          }
+        ],
+        "excluded": [
+          {
+            "id": "menu",
+            "kind": "paragraph",
+            "text": "返回首页",
+            "xpath": "/html/body/div/div[3]"
+          },
+          {
+            "id": "cta",
+            "kind": "paragraph",
+            "text": "对于这次试点，你怎么看？来评论区说说。",
+            "xpath": "/html/body/div/p[6]"
+          },
+          {
+            "id": "promotion",
+            "kind": "paragraph",
+            "text": "扫码下载本平台APP，领取优惠券。",
+            "xpath": "/html/body/div/div[4]"
+          }
+        ]
+      },
+      "expected_answers": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "no"
+      },
+      "reason": "同一回答出现两次；篇幅增加不代表质量提高。",
+      "origin": "predefined controlled transformation; not model verdict"
+    },
+    {
+      "case_id": "reordered",
+      "label": "问答乱序",
+      "synthetic": true,
+      "output": {
+        "title": "访谈：社区如何使用人工智能",
+        "blocks": [
+          {
+            "id": "intro",
+            "kind": "paragraph",
+            "text": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。",
+            "xpath": "/html/body/div/p[2]"
+          },
+          {
+            "id": "answer",
+            "kind": "paragraph",
+            "text": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。",
+            "xpath": "/html/body/div/p[4]"
+          },
+          {
+            "id": "question",
+            "kind": "paragraph",
+            "text": "中新社记者：您如何评价人工智能对社区服务的影响？",
+            "xpath": "/html/body/div/p[3]"
+          },
+          {
+            "id": "heading",
+            "kind": "subheading",
+            "text": "试点结果",
+            "xpath": "/html/body/div/h2"
+          },
+          {
+            "id": "list",
+            "kind": "list",
+            "text": "保留人工核实环节。定期检查服务效果。",
+            "xpath": "/html/body/div/ul"
+          },
+          {
+            "id": "table",
+            "kind": "table",
+            "text": "项目数量服务站3",
+            "xpath": "/html/body/div/table",
+            "rows": [
+              [
+                "项目",
+                "数量"
+              ],
+              [
+                "服务站",
+                "3"
+              ]
+            ]
+          },
+          {
+            "id": "caption",
+            "kind": "caption",
+            "text": "图为社区服务站试点现场。",
+            "xpath": "/html/body/div/div[1]"
+          },
+          {
+            "id": "folded",
+            "kind": "paragraph",
+            "text": "补充说明：试点数据尚未覆盖所有居民。",
+            "xpath": "/html/body/div/div[2]"
+          },
+          {
+            "id": "analysis",
+            "kind": "paragraph",
+            "text": "研究者指出，“来评论区说说”是一种常见互动引导语。",
+            "xpath": "/html/body/div/p[5]"
+          }
+        ],
+        "metadata": [
+          {
+            "id": "byline",
+            "kind": "author",
+            "text": "记者 张三",
+            "xpath": "/html/body/div/p[1]"
+          }
+        ],
+        "excluded": [
+          {
+            "id": "menu",
+            "kind": "paragraph",
+            "text": "返回首页",
+            "xpath": "/html/body/div/div[3]"
+          },
+          {
+            "id": "cta",
+            "kind": "paragraph",
+            "text": "对于这次试点，你怎么看？来评论区说说。",
+            "xpath": "/html/body/div/p[6]"
+          },
+          {
+            "id": "promotion",
+            "kind": "paragraph",
+            "text": "扫码下载本平台APP，领取优惠券。",
+            "xpath": "/html/body/div/div[4]"
+          }
+        ]
+      },
+      "expected_answers": {
+        "Q1": "yes",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "no"
+      },
+      "reason": "原文均在但回答被放到问题前；完整性与顺序分别判断。",
+      "origin": "predefined controlled transformation; not model verdict"
+    },
+    {
+      "case_id": "wrong_title",
+      "label": "标题不符",
+      "synthetic": true,
+      "output": {
+        "title": "另一篇无关新闻",
+        "blocks": [
+          {
+            "id": "intro",
+            "kind": "paragraph",
+            "text": "社区在三个服务站试用人工智能辅助咨询，详情见试点报告。",
+            "xpath": "/html/body/div/p[2]"
+          },
+          {
+            "id": "question",
+            "kind": "paragraph",
+            "text": "中新社记者：您如何评价人工智能对社区服务的影响？",
+            "xpath": "/html/body/div/p[3]"
+          },
+          {
+            "id": "answer",
+            "kind": "paragraph",
+            "text": "受访者：它可以辅助查找资料，但重要决定仍需工作人员核实。",
+            "xpath": "/html/body/div/p[4]"
+          },
+          {
+            "id": "heading",
+            "kind": "subheading",
+            "text": "试点结果",
+            "xpath": "/html/body/div/h2"
+          },
+          {
+            "id": "list",
+            "kind": "list",
+            "text": "保留人工核实环节。定期检查服务效果。",
+            "xpath": "/html/body/div/ul"
+          },
+          {
+            "id": "table",
+            "kind": "table",
+            "text": "项目数量服务站3",
+            "xpath": "/html/body/div/table",
+            "rows": [
+              [
+                "项目",
+                "数量"
+              ],
+              [
+                "服务站",
+                "3"
+              ]
+            ]
+          },
+          {
+            "id": "caption",
+            "kind": "caption",
+            "text": "图为社区服务站试点现场。",
+            "xpath": "/html/body/div/div[1]"
+          },
+          {
+            "id": "folded",
+            "kind": "paragraph",
+            "text": "补充说明：试点数据尚未覆盖所有居民。",
+            "xpath": "/html/body/div/div[2]"
+          },
+          {
+            "id": "analysis",
+            "kind": "paragraph",
+            "text": "研究者指出，“来评论区说说”是一种常见互动引导语。",
+            "xpath": "/html/body/div/p[5]"
+          }
+        ],
+        "metadata": [
+          {
+            "id": "byline",
+            "kind": "author",
+            "text": "记者 张三",
+            "xpath": "/html/body/div/p[1]"
+          }
+        ],
+        "excluded": [
+          {
+            "id": "menu",
+            "kind": "paragraph",
+            "text": "返回首页",
+            "xpath": "/html/body/div/div[3]"
+          },
+          {
+            "id": "cta",
+            "kind": "paragraph",
+            "text": "对于这次试点，你怎么看？来评论区说说。",
+            "xpath": "/html/body/div/p[6]"
+          },
+          {
+            "id": "promotion",
+            "kind": "paragraph",
+            "text": "扫码下载本平台APP，领取优惠券。",
+            "xpath": "/html/body/div/div[4]"
+          }
+        ]
+      },
+      "expected_answers": {
+        "Q1": "no",
+        "Q2": "yes",
+        "Q3": "yes",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "reason": "正文未变但主标题错误，由Q1主评。",
+      "origin": "predefined controlled transformation; not model verdict"
+    },
+    {
+      "case_id": "image_unknown",
+      "label": "图解内容证据不足",
+      "synthetic": true,
+      "output": {
+        "title": "图解：社区试点",
+        "blocks": [
+          {
+            "id": "lead",
+            "kind": "paragraph",
+            "text": "请看试点图解。",
+            "xpath": "/html/body/div/p"
+          }
+        ],
+        "metadata": [],
+        "excluded": []
+      },
+      "expected_answers": {
+        "Q1": "yes",
+        "Q2": "unknown",
+        "Q3": "unknown",
+        "Q4": "yes",
+        "Q5": "yes"
+      },
+      "reason": "只有导语，图像可能承载主要信息；未提供图片像素，不虚构OCR也不把未知填yes或no。",
+      "origin": "predefined controlled transformation; not model verdict",
+      "source_html_override": "<meta charset=\"utf-8\"><h1>图解：社区试点</h1><div id=\"article\"><p id=\"lead\">请看试点图解。</p><img src=\"diagram.png\" alt=\"\"></div>"
+    }
+  ],
+  "rubric_sha256": "8d3433382312093a6e3a833dfa599b03b0c9d5fc342ce0809d902eb4dcf890fa",
+  "review_status": "expected labels defined by construction, no model assessment run",
+  "model_api_calls": 0,
+  "training_updates": 0
+}
