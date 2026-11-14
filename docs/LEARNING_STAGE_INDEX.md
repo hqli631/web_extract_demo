@@ -1,5 +1,7 @@
 # 学习阶段回顾索引
 
+2026-11-14补充：5.2训练准备已形成独立交接文档[训练材料与租赁决策](STAGE5_SFT_PREPARATION.md)，报告output/stage5/unit2/sft_prep/index.html。两条历史任务仅用于管线验证，GPU训练未做、5.3未开始；本次停在租赁决定，不归档为第五阶段完成。
+
 更新日期：2026-11-12。这里是每一阶段结束后的固定回顾入口，不替代运行报告或个人学习验收。
 
 清单对照入口：[目标清单当前状态](GOAL_CHECKLIST_STATUS.md)。该文件将网页解析、Agent、Rubrics/RL、微调和实战项目分别标成已完成工程基础、已有原型或未开始。
@@ -12,7 +14,7 @@
 |第二阶段|任务协议、候选验证、Rubrics评审、反馈、复用与计分|四课及有限计分补齐完成；保留漏表失败和能力边界|[第二阶段总结](STAGE2_SUMMARY.md)|[四课回顾](STAGE2_COMPLETION.md)、[计分操作](RUBRICS_SCORING_GUIDE.md)|
 |第三阶段|布局簇、少样本代码生成、CPU执行、反馈修复和成本|固定四单元工程完成；12封存页6通过/3质量失败/2未知/1契约错误；个人理解待解释|[第三阶段总结](STAGE3_SUMMARY.md)|[固定计划](ROLE_ALIGNED_LEARNING_PLAN.md)、[3.1](STAGE3_UNIT1.md)、[3.2](STAGE3_UNIT2.md)、[3.3](STAGE3_UNIT3.md)、[3.4](STAGE3_UNIT4.md)|
 |第四阶段|Rubrics校准、批量评审与reward风险|有限工程和用户D1/D2确认已归档；规范应用示例1条原标题转元数据、4图说改caption；独立评审与校准仍未完成|[工程成果与校准缺口](STAGE4_SUMMARY.md)|[4.1](STAGE4_UNIT1.md)、[4.2纠正](STAGE4_UNIT2.md)、[4.3操作](STAGE4_UNIT3.md)、[真实网页复核](STAGE4_NATURAL_REVIEW.md)|
-|第五阶段|Agentic RL/GRPO与RSI闭环|5.1前半理解已确认；后半裁剪/KL/质量轮数成本实验已准备，待用户反馈C/D；5.2训练/5.3 RSI未开始|完成时单独归档|[5.1前半](STAGE5_UNIT1.md)、[5.1后半](STAGE5_UNIT1_FOLLOWUP.md)，固定三单元|
+|第五阶段|Agentic RL/GRPO与RSI闭环|5.1数值实操及A/B/C/D理解已确认；5.2资源检查完成、训练条件未齐/真实训练未完成；5.3 RSI未开始|完成时单独归档|[5.1前半](STAGE5_UNIT1.md)、[后半](STAGE5_UNIT1_FOLLOWUP.md)、[5.2检查](STAGE5_UNIT2.md)，固定三单元|
 
 工程完成不等于个人已掌握。用户通过亲手运行、观察证据、解释结果确认学习情况；项目不以增加文件、课数或测试数量代表学习进度。
 

@@ -1,0 +1,163 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>5.2 SFT训练准备</title>
+<style>body{font:16px/1.8 sans-serif;max-width:1050px;margin:32px auto;padding:0 22px;color:#223}pre{white-space:pre-wrap;background:#f2f5f8;padding:18px}a{color:#1759ad}td,th{padding:8px;border:1px solid #ccc}table{border-collapse:collapse}</style>
+<h1>5.2：SFT训练材料已准备，等待租赁决策</h1>
+<p>岗位任务：同簇少量DOM → Actor生成Python/XPath → CPU复用。训练目标是代码生成模型的LoRA参数。</p>
+<p><strong>1条train＋1条dev、6篇历史页，只用于训练管线冒烟。没有未见测试，没有训练更新，也没有质量提升结论。</strong></p>
+<p><a href="../../../../docs/STAGE5_SFT_PREPARATION.md">操作与知识说明</a> · <a href="train.jsonl">train.jsonl</a> · <a href="dev.jsonl">dev.jsonl</a> · <a href="manifest.json">来源与数据分工</a></p>
+<table><tr><th>集合</th><th>提示token</th><th>监督token</th><th>总token</th></tr>
+<tr><td>train</td><td>6920</td><td>848</td><td>7768</td></tr>
+<tr><td>dev</td><td>4324</td><td>916</td><td>5240</td></tr>
+</table><p>8192窗口保留完整输入与目标；prompt labels=-100，assistant和结束标记参与loss。字符数不是token数。</p>
+<p>下一步才确定短租机器、实际空闲显存、CUDA镜像、费用上限和停止规则。未购买、未创建实例。GPU路径尚待实测。</p>
+<details><summary>状态与边界</summary><pre>{
+  &quot;materials&quot;: &quot;ready_for_rental_decision&quot;,
+  &quot;train_tasks&quot;: 1,
+  &quot;dev_tasks&quot;: 1,
+  &quot;independent_test&quot;: false,
+  &quot;historical_pages&quot;: 6,
+  &quot;reference_checks&quot;: 6,
+  &quot;tokenizer_preflight&quot;: &quot;passed_real_tokenizer&quot;,
+  &quot;max_seq_length&quot;: 8192,
+  &quot;gpu_training&quot;: &quot;not_started&quot;,
+  &quot;quality_improvement&quot;: &quot;not_proven&quot;,
+  &quot;independent_reward_calibration&quot;: &quot;unfinished&quot;,
+  &quot;paid_instances_started&quot;: 0,
+  &quot;next_action&quot;: &quot;Confirm actual rental specification, image, trial budget and shutdown rules&quot;
+}</pre></details>
+<details><summary>真实分词与loss屏蔽证据</summary><pre>{
+  &quot;fingerprint&quot;: {
+    &quot;config_sha256&quot;: &quot;ae02e13fc1969fc8ee4b4c064c98b3f1a1fc7b967321787be815110085c66e44&quot;,
+    &quot;data_sha256&quot;: {
+      &quot;train&quot;: &quot;973e2ee3b329ee14c4381f1b5bb0af1f0438385b2d579fc41e0570cd3ded3e61&quot;,
+      &quot;dev&quot;: &quot;bff9ed158ff2663e28e015b7e053411b2df86dd2f1a86c4dd9219f83f4e81eba&quot;
+    }
+  },
+  &quot;model_id&quot;: &quot;Qwen/Qwen2.5-Coder-0.5B-Instruct&quot;,
+  &quot;revision&quot;: &quot;ea3f2471cf1b1f0db85067f1ef93848e38e88c25&quot;,
+  &quot;revision_source&quot;: &quot;https://huggingface.co/api/models/Qwen/Qwen2.5-Coder-0.5B-Instruct&quot;,
+  &quot;observed_date&quot;: &quot;2026-11-14&quot;,
+  &quot;tokenizer_class&quot;: &quot;Qwen2TokenizerFast&quot;,
+  &quot;packages&quot;: {
+    &quot;transformers&quot;: &quot;4.46.3&quot;,
+    &quot;tokenizers&quot;: &quot;0.20.3&quot;,
+    &quot;jinja2&quot;: &quot;3.1.4&quot;
+  },
+  &quot;lengths&quot;: [
+    {
+      &quot;split&quot;: &quot;train&quot;,
+      &quot;row&quot;: 0,
+      &quot;total_tokens&quot;: 7768,
+      &quot;prompt_tokens&quot;: 6920,
+      &quot;supervised_tokens&quot;: 848,
+      &quot;prompt_mask_verified&quot;: true,
+      &quot;full_assistant_retained&quot;: true
+    },
+    {
+      &quot;split&quot;: &quot;dev&quot;,
+      &quot;row&quot;: 0,
+      &quot;total_tokens&quot;: 5240,
+      &quot;prompt_tokens&quot;: 4324,
+      &quot;supervised_tokens&quot;: 916,
+      &quot;prompt_mask_verified&quot;: true,
+      &quot;full_assistant_retained&quot;: true
+    }
+  ],
+  &quot;max_seq_length&quot;: 8192,
+  &quot;model_weights_downloaded&quot;: false,
+  &quot;optimizer_steps&quot;: 0,
+  &quot;gpu_tested&quot;: false
+}</pre></details>
+<details><summary>可信历史参考复验</summary><pre>{
+  &quot;purpose&quot;: &quot;historical reference engineering checks; NOT independent semantic gold&quot;,
+  &quot;model_calls&quot;: 0,
+  &quot;optimizer_steps&quot;: 0,
+  &quot;pages&quot;: [
+    {
+      &quot;cluster_id&quot;: &quot;sina_shell_v2&quot;,
+      &quot;file&quot;: &quot;samples/blog_01.html&quot;,
+      &quot;source_sha256&quot;: &quot;d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84&quot;,
+      &quot;reference&quot;: &quot;learning/generated/sina_v2.py&quot;,
+      &quot;reference_sha256&quot;: &quot;ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003&quot;,
+      &quot;contract_quote_order&quot;: &quot;pass&quot;,
+      &quot;semantic_gold&quot;: false,
+      &quot;blocks&quot;: 43,
+      &quot;metadata&quot;: 1,
+      &quot;excluded&quot;: 3,
+      &quot;output_sha256&quot;: &quot;535d45156a9abf4138de9fd1acf5bb07d64ad352c784f0d9d7726f5329b7261b&quot;
+    },
+    {
+      &quot;cluster_id&quot;: &quot;sina_shell_v2&quot;,
+      &quot;file&quot;: &quot;samples/collected_14a028de299edfab.html&quot;,
+      &quot;source_sha256&quot;: &quot;c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327&quot;,
+      &quot;reference&quot;: &quot;learning/generated/sina_v2.py&quot;,
+      &quot;reference_sha256&quot;: &quot;ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003&quot;,
+      &quot;contract_quote_order&quot;: &quot;pass&quot;,
+      &quot;semantic_gold&quot;: false,
+      &quot;blocks&quot;: 23,
+      &quot;metadata&quot;: 0,
+      &quot;excluded&quot;: 1,
+      &quot;output_sha256&quot;: &quot;afcc4ef358ccb5ac7dca25763eceb5e834893fa2d8ea254bf98b30ccaa0c76ba&quot;
+    },
+    {
+      &quot;cluster_id&quot;: &quot;sina_shell_v2&quot;,
+      &quot;file&quot;: &quot;samples/collected_af5904c15d1deebc.html&quot;,
+      &quot;source_sha256&quot;: &quot;c6348f97447c665018d507e3ed78a99a2d0989b13bc60087bb075bc8680ce4c4&quot;,
+      &quot;reference&quot;: &quot;learning/generated/sina_v2.py&quot;,
+      &quot;reference_sha256&quot;: &quot;ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003&quot;,
+      &quot;contract_quote_order&quot;: &quot;pass&quot;,
+      &quot;semantic_gold&quot;: false,
+      &quot;blocks&quot;: 16,
+      &quot;metadata&quot;: 1,
+      &quot;excluded&quot;: 1,
+      &quot;output_sha256&quot;: &quot;c64a3015fc8aa07fc9331cb5eb6de8aed55e6892994d2269435e557dfbb353fb&quot;
+    },
+    {
+      &quot;cluster_id&quot;: &quot;chinanews_shell_v2&quot;,
+      &quot;file&quot;: &quot;samples/xpath_practice.html&quot;,
+      &quot;source_sha256&quot;: &quot;ce107f27354964c4f31b06b5a7731963e8b7edab9c228e07f23fbfd2c9a82c5d&quot;,
+      &quot;reference&quot;: &quot;learning/generated/chinanews_v2.py&quot;,
+      &quot;reference_sha256&quot;: &quot;9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2&quot;,
+      &quot;contract_quote_order&quot;: &quot;pass&quot;,
+      &quot;semantic_gold&quot;: false,
+      &quot;blocks&quot;: 7,
+      &quot;metadata&quot;: 1,
+      &quot;excluded&quot;: 2,
+      &quot;output_sha256&quot;: &quot;8562e160c0520eeccb57b39713b3c496c0de3f0dff2eb48a96c4f152bc2560cf&quot;
+    },
+    {
+      &quot;cluster_id&quot;: &quot;chinanews_shell_v2&quot;,
+      &quot;file&quot;: &quot;samples/xpath_practice_02.html&quot;,
+      &quot;source_sha256&quot;: &quot;601ced823ca9912cacac2d0ddc3ae0e94f43f4b8b63a541f917d3e32a122aae5&quot;,
+      &quot;reference&quot;: &quot;learning/generated/chinanews_v2.py&quot;,
+      &quot;reference_sha256&quot;: &quot;9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2&quot;,
+      &quot;contract_quote_order&quot;: &quot;pass&quot;,
+      &quot;semantic_gold&quot;: false,
+      &quot;blocks&quot;: 26,
+      &quot;metadata&quot;: 2,
+      &quot;excluded&quot;: 2,
+      &quot;output_sha256&quot;: &quot;18b7f0660e2c68424b0c17d36cbf9af64bed671676a81ceccea743abbe8d3d68&quot;
+    },
+    {
+      &quot;cluster_id&quot;: &quot;chinanews_shell_v2&quot;,
+      &quot;file&quot;: &quot;samples/xpath_practice_03.html&quot;,
+      &quot;source_sha256&quot;: &quot;1c9dea419228915c7358d39dbbdadb9771cf26d93e65887e4949ad21d4b09bb6&quot;,
+      &quot;reference&quot;: &quot;learning/generated/chinanews_v2.py&quot;,
+      &quot;reference_sha256&quot;: &quot;9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2&quot;,
+      &quot;contract_quote_order&quot;: &quot;pass&quot;,
+      &quot;semantic_gold&quot;: false,
+      &quot;blocks&quot;: 33,
+      &quot;metadata&quot;: 2,
+      &quot;excluded&quot;: 2,
+      &quot;output_sha256&quot;: &quot;bbd3f6e6ce2230fd049f0575926494fb679840024733d4d3cd0cd8d219c3e1cd&quot;
+    }
+  ],
+  &quot;limits&quot;: [
+    &quot;Only reviewed repository references execute in this command.&quot;,
+    &quot;AST checks are not an OS sandbox; never pass generated candidates here.&quot;,
+    &quot;All six source pages are historical/exposed, not unseen evaluation.&quot;,
+    &quot;Original-title/caption policy v2 was a later postprocessor, not these targets.&quot;,
+    &quot;Contract/quote/order success does not prove complete or pure body extraction.&quot;,
+    &quot;Image pixels, JavaScript-loaded content and OCR are outside this contract.&quot;
+  ]
+}</pre></details>
+</html>

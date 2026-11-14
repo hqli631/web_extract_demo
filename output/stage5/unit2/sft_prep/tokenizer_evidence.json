@@ -1,0 +1,43 @@
+{
+  "fingerprint": {
+    "config_sha256": "ae02e13fc1969fc8ee4b4c064c98b3f1a1fc7b967321787be815110085c66e44",
+    "data_sha256": {
+      "train": "973e2ee3b329ee14c4381f1b5bb0af1f0438385b2d579fc41e0570cd3ded3e61",
+      "dev": "bff9ed158ff2663e28e015b7e053411b2df86dd2f1a86c4dd9219f83f4e81eba"
+    }
+  },
+  "model_id": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+  "revision": "ea3f2471cf1b1f0db85067f1ef93848e38e88c25",
+  "revision_source": "https://huggingface.co/api/models/Qwen/Qwen2.5-Coder-0.5B-Instruct",
+  "observed_date": "2026-11-14",
+  "tokenizer_class": "Qwen2TokenizerFast",
+  "packages": {
+    "transformers": "4.46.3",
+    "tokenizers": "0.20.3",
+    "jinja2": "3.1.4"
+  },
+  "lengths": [
+    {
+      "split": "train",
+      "row": 0,
+      "total_tokens": 7768,
+      "prompt_tokens": 6920,
+      "supervised_tokens": 848,
+      "prompt_mask_verified": true,
+      "full_assistant_retained": true
+    },
+    {
+      "split": "dev",
+      "row": 0,
+      "total_tokens": 5240,
+      "prompt_tokens": 4324,
+      "supervised_tokens": 916,
+      "prompt_mask_verified": true,
+      "full_assistant_retained": true
+    }
+  ],
+  "max_seq_length": 8192,
+  "model_weights_downloaded": false,
+  "optimizer_steps": 0,
+  "gpu_tested": false
+}

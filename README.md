@@ -1,5 +1,9 @@
 # Web Extract Demo
 
+2026-11-14 当前交接：5.2 SFT准备包完成，等待租赁配置决定。1条train＋1条dev来自两个历史簇/6篇页；真实tokenizer验证7768/5240 token，采用8192窗口，完整目标和loss屏蔽通过。仅下载tokenizer/config，未下载模型权重、未训练、未租服务器。操作见[训练准备与租赁交接](docs/STAGE5_SFT_PREPARATION.md)，报告output/stage5/unit2/sft_prep/index.html。以下旧进度按日期保留。
+
+当前学习：5.1 A/B/C/D理解已确认，进入5.2资源与条件检查。运行 learning/check_training_readiness.py，打开 output/stage5/unit2/index.html；详见[5.2训练准备操作](docs/STAGE5_UNIT2.md)。当前项目训练环境未准备、LLM训练后端未验证，reward独立校准未完成；没有安装包、下载模型或启动训练。
+
 当前操作：5.1的Actor/同分优势已由用户正确解释；继续运行 learning/grpo_update_signals.py，打开 output/stage5/unit1/update_signals/index.html，观察概率比裁剪、KL与同任务质量/轮数/总成本。详见[5.1后半操作](docs/STAGE5_UNIT1_FOLLOWUP.md)。数据是假设，没有参数更新。
 
 当前学习已开始5.1：运行 learning/grpo_basics.py，打开 output/stage5/unit1/index.html。先看真实代码修复轨迹，再计算假设reward的组相对优势；没有模型参数更新。详见[5.1操作与讲解](docs/STAGE5_UNIT1.md)。第四阶段独立校准缺口保留。
@@ -599,4 +603,3 @@ Start-Process .\output\project1\index.html
     .\.venv\Scripts\python.exe -X utf8 .\xpath_transfer.py .\samples\your_page.html
 
 报告写入 output/xpath_transfer/，同时生成 HTML 与 JSON。它会显示标题、容器数、块顺序、XPath、结构检查和 SHA256。若该快照已存在历史 AI 审核记录，会额外比较段落并明确标成回溯兼容性结果；历史页面不能算未见盲测。没有匹配的历史审核时，语义状态保持“尚未审核”，结构检查也不等于准确率。运行前先将新页面复制到隔离目录，并记录其 URL、模板和来源。
-

@@ -1,0 +1,6 @@
+{
+  "source": "read-only elevated Get-CimInstance Win32_VideoController executed by current assistant on 2026-11-13",
+  "query_succeeded": true,
+  "devices": [{"Name":"AMD Radeon 780M Graphics","AdapterRAM":4293918720,"DriverVersion":"31.0.22028.3001"}],
+  "limitations": ["AdapterRAM is not validated dedicated/free VRAM, especially for integrated graphics.","This is an observed system listing, not proof of training backend compatibility or an exhaustive hardware inventory.","The default sandbox denied WMI access; the elevated read-only query succeeded."]
+}

@@ -1,0 +1,26 @@
+{
+  "format_version": 1,
+  "purpose": "Historical code-generation LoRA SFT pipeline smoke only",
+  "split_unit": "DOM layout cluster/task; never random prompt variants",
+  "files": {
+    "train.jsonl": "973e2ee3b329ee14c4381f1b5bb0af1f0438385b2d579fc41e0570cd3ded3e61",
+    "dev.jsonl": "bff9ed158ff2663e28e015b7e053411b2df86dd2f1a86c4dd9219f83f4e81eba"
+  },
+  "target_review": "historical demonstration targets; not gold or policy-v2-complete",
+  "formal_experiment_gate": [
+    "Collect additional independent cluster tasks",
+    "Review target code against complete source DOM and policy",
+    "Freeze untouched natural test clusters before code tuning",
+    "Run exact tokenizer preflight with no silent truncation"
+  ],
+  "limits": [
+    "Only two historical cluster tasks: one train task and one dev task; not a useful training corpus.",
+    "All six source pages and both code targets have been exposed during previous development.",
+    "Dev is a separate layout cluster but historical; no independent natural test set is supplied.",
+    "Targets are existing reviewed-for-demonstration v2 code, not independently certified gold code.",
+    "Known scope gaps include some byline/CTA variants, image-only content, caption typing and policy-v2 original-title handling.",
+    "This package checks pipeline integrity, not extraction quality, learned generalization or reward validity.",
+    "DOM inputs are article-container excerpts selected earlier, not whole-site discovery inputs; container discovery remains out of scope.",
+    "Compressed text and removed executable nodes are explicitly reported; tokenizer lengths require the selected model tokenizer."
+  ]
+}

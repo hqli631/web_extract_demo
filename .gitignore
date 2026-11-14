@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 samples/*_files/
 .vs/
+.training-prep-deps/
+.training-prep-cache/
+output/stage5/unit2/cloud_sft/

@@ -1,0 +1,93 @@
+{
+  "purpose": "historical reference engineering checks; NOT independent semantic gold",
+  "model_calls": 0,
+  "optimizer_steps": 0,
+  "pages": [
+    {
+      "cluster_id": "sina_shell_v2",
+      "file": "samples/blog_01.html",
+      "source_sha256": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "reference": "learning/generated/sina_v2.py",
+      "reference_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "contract_quote_order": "pass",
+      "semantic_gold": false,
+      "blocks": 43,
+      "metadata": 1,
+      "excluded": 3,
+      "output_sha256": "535d45156a9abf4138de9fd1acf5bb07d64ad352c784f0d9d7726f5329b7261b"
+    },
+    {
+      "cluster_id": "sina_shell_v2",
+      "file": "samples/collected_14a028de299edfab.html",
+      "source_sha256": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327",
+      "reference": "learning/generated/sina_v2.py",
+      "reference_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "contract_quote_order": "pass",
+      "semantic_gold": false,
+      "blocks": 23,
+      "metadata": 0,
+      "excluded": 1,
+      "output_sha256": "afcc4ef358ccb5ac7dca25763eceb5e834893fa2d8ea254bf98b30ccaa0c76ba"
+    },
+    {
+      "cluster_id": "sina_shell_v2",
+      "file": "samples/collected_af5904c15d1deebc.html",
+      "source_sha256": "c6348f97447c665018d507e3ed78a99a2d0989b13bc60087bb075bc8680ce4c4",
+      "reference": "learning/generated/sina_v2.py",
+      "reference_sha256": "ea331e94719c99e2bd46653f0292adc9bea1386624d96b8d340bf529d2139003",
+      "contract_quote_order": "pass",
+      "semantic_gold": false,
+      "blocks": 16,
+      "metadata": 1,
+      "excluded": 1,
+      "output_sha256": "c64a3015fc8aa07fc9331cb5eb6de8aed55e6892994d2269435e557dfbb353fb"
+    },
+    {
+      "cluster_id": "chinanews_shell_v2",
+      "file": "samples/xpath_practice.html",
+      "source_sha256": "ce107f27354964c4f31b06b5a7731963e8b7edab9c228e07f23fbfd2c9a82c5d",
+      "reference": "learning/generated/chinanews_v2.py",
+      "reference_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "contract_quote_order": "pass",
+      "semantic_gold": false,
+      "blocks": 7,
+      "metadata": 1,
+      "excluded": 2,
+      "output_sha256": "8562e160c0520eeccb57b39713b3c496c0de3f0dff2eb48a96c4f152bc2560cf"
+    },
+    {
+      "cluster_id": "chinanews_shell_v2",
+      "file": "samples/xpath_practice_02.html",
+      "source_sha256": "601ced823ca9912cacac2d0ddc3ae0e94f43f4b8b63a541f917d3e32a122aae5",
+      "reference": "learning/generated/chinanews_v2.py",
+      "reference_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "contract_quote_order": "pass",
+      "semantic_gold": false,
+      "blocks": 26,
+      "metadata": 2,
+      "excluded": 2,
+      "output_sha256": "18b7f0660e2c68424b0c17d36cbf9af64bed671676a81ceccea743abbe8d3d68"
+    },
+    {
+      "cluster_id": "chinanews_shell_v2",
+      "file": "samples/xpath_practice_03.html",
+      "source_sha256": "1c9dea419228915c7358d39dbbdadb9771cf26d93e65887e4949ad21d4b09bb6",
+      "reference": "learning/generated/chinanews_v2.py",
+      "reference_sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2",
+      "contract_quote_order": "pass",
+      "semantic_gold": false,
+      "blocks": 33,
+      "metadata": 2,
+      "excluded": 2,
+      "output_sha256": "bbd3f6e6ce2230fd049f0575926494fb679840024733d4d3cd0cd8d219c3e1cd"
+    }
+  ],
+  "limits": [
+    "Only reviewed repository references execute in this command.",
+    "AST checks are not an OS sandbox; never pass generated candidates here.",
+    "All six source pages are historical/exposed, not unseen evaluation.",
+    "Original-title/caption policy v2 was a later postprocessor, not these targets.",
+    "Contract/quote/order success does not prove complete or pure body extraction.",
+    "Image pixels, JavaScript-loaded content and OCR are outside this contract."
+  ]
+}

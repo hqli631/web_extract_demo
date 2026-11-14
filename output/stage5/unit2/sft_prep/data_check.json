@@ -1,0 +1,85 @@
+{
+  "status": "PASS_PIPELINE_INTEGRITY_ONLY",
+  "independent_test": false,
+  "train_tasks": 1,
+  "dev_tasks": 1,
+  "historical_source_pages": 6,
+  "executed_candidate_code": false,
+  "tokenizer_preflight": "pending_selected_model_tokenizer",
+  "exact_token_lengths": null,
+  "target_text_similarity": 0.6118798043326346,
+  "exact_source_overlap_across_splits": 0,
+  "exact_prompt_overlap_across_splits": 0,
+  "exact_target_ast_overlap_across_splits": 0,
+  "similarity_note": "Shared extraction scaffolding is expected; no independent generalization claim is supported.",
+  "records": [
+    {
+      "id": "historical-sina_shell_v2",
+      "split": "train",
+      "group_id": "sina_shell_v2",
+      "prompt_characters": 16982,
+      "target_characters": 3421,
+      "compression": [
+        {
+          "text_slots_clipped": 30,
+          "attributes_clipped": 0,
+          "comments_removed": 23,
+          "executable_nodes_removed": 0
+        },
+        {
+          "text_slots_clipped": 20,
+          "attributes_clipped": 0,
+          "comments_removed": 21,
+          "executable_nodes_removed": 0
+        },
+        {
+          "text_slots_clipped": 12,
+          "attributes_clipped": 0,
+          "comments_removed": 21,
+          "executable_nodes_removed": 0
+        }
+      ]
+    },
+    {
+      "id": "historical-chinanews_shell_v2",
+      "split": "dev",
+      "group_id": "chinanews_shell_v2",
+      "prompt_characters": 9978,
+      "target_characters": 3734,
+      "compression": [
+        {
+          "text_slots_clipped": 3,
+          "attributes_clipped": 0,
+          "comments_removed": 6,
+          "executable_nodes_removed": 0
+        },
+        {
+          "text_slots_clipped": 18,
+          "attributes_clipped": 0,
+          "comments_removed": 6,
+          "executable_nodes_removed": 0
+        },
+        {
+          "text_slots_clipped": 23,
+          "attributes_clipped": 0,
+          "comments_removed": 6,
+          "executable_nodes_removed": 0
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Only two historical cluster tasks: one train task and one dev task; not a useful training corpus.",
+    "All six source pages and both code targets have been exposed during previous development.",
+    "Dev is a separate layout cluster but historical; no independent natural test set is supplied.",
+    "Targets are existing reviewed-for-demonstration v2 code, not independently certified gold code.",
+    "Known scope gaps include some byline/CTA variants, image-only content, caption typing and policy-v2 original-title handling.",
+    "This package checks pipeline integrity, not extraction quality, learned generalization or reward validity.",
+    "DOM inputs are article-container excerpts selected earlier, not whole-site discovery inputs; container discovery remains out of scope.",
+    "Compressed text and removed executable nodes are explicitly reported; tokenizer lengths require the selected model tokenizer."
+  ],
+  "files": {
+    "train.jsonl": "973e2ee3b329ee14c4381f1b5bb0af1f0438385b2d579fc41e0570cd3ded3e61",
+    "dev.jsonl": "bff9ed158ff2663e28e015b7e053411b2df86dd2f1a86c4dd9219f83f4e81eba"
+  }
+}

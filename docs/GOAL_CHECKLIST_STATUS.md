@@ -1,5 +1,9 @@
 # 离线搜索网页正文提取岗学习清单：当前状态对照
 
+2026-11-14：5.2训练材料已准备，1 train＋1 dev历史簇任务，6来源页/参考复验、真实tokenizer长度与masking检查通过，8192窗口，默认LoRA SFT单步；训练本身/GPU联调/未见测试仍未完成。独立reward校准未完成，GRPO未启动。停在租赁配置、短租预算与停止规则确认点，未购买实例。见STAGE5_SFT_PREPARATION.md。
+
+2026-11-13进入5.2：用户C/D理解已确认，5.1数值学习已完成。check_training_readiness.py检查当前Python/依赖/硬件：Python3.12.14，无torch等训练包；先前只读系统查询列出AMD Radeon 780M，AdapterRAM不是可靠专用训练显存，本机LLM训练后端未验证。模型/数据训练协议/预算未选，reward独立校准未做，真实训练未完成。操作STAGE5_UNIT2.md，待E/F理解后做有限训练数据准备学习，无安装/模型下载/付费计算。
+
 2026-11-13推进5.1后半：用户已正确说明Actor权重更新与全同分优势0。新增learning/grpo_update_signals.py演示标量裁剪、两动作KL与同4任务轮数/成本假设对照；不把效率改善称准确率提高，fail/unknown成本全计。原话已保存，待用户C/D反馈后按5.2资源检查；无模型参数更新。操作STAGE5_UNIT1_FOLLOWUP.md。
 
 2026-11-13开始5.1：learning/grpo_basics.py读取真实历史署名修复轨迹，另算假设同任务reward的组相对优势、全同分及概率比裁剪。历史reward=null、没有新rollout/参数更新；用户待解释Actor训练对象和全同分。5.2资源训练与5.3 RSI未开始，独立校准仍待补。操作见STAGE5_UNIT1.md。

@@ -1,0 +1,114 @@
+<!doctype html><html lang=zh-CN><meta charset=utf-8><title>5.2训练条件检查</title>
+<style>body{font:16px/1.8 system-ui;max-width:1100px;margin:30px auto;padding:12px}pre{white-space:pre-wrap;overflow-wrap:anywhere}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:9px}</style>
+<h1>5.2第一步：训练条件检查</h1>
+<p>这是本地只读检查，不安装训练包、不下载模型、不启动训练。权限不足的探测记为unknown/error，不能当作没有硬件。</p>
+<h2>当前Python与依赖</h2><pre>{
+  &quot;interpreter&quot;: {
+    &quot;executable&quot;: &quot;D:\\codex project\\web_extract_demo\\.venv\\Scripts\\python.exe&quot;,
+    &quot;version&quot;: &quot;3.12.14&quot;,
+    &quot;platform&quot;: &quot;Windows-11-10.0.26200-SP0&quot;,
+    &quot;logical_cpus&quot;: 16
+  },
+  &quot;packages&quot;: {
+    &quot;torch&quot;: {
+      &quot;status&quot;: &quot;not_installed_in_this_interpreter&quot;
+    },
+    &quot;transformers&quot;: {
+      &quot;status&quot;: &quot;not_installed_in_this_interpreter&quot;
+    },
+    &quot;peft&quot;: {
+      &quot;status&quot;: &quot;not_installed_in_this_interpreter&quot;
+    },
+    &quot;trl&quot;: {
+      &quot;status&quot;: &quot;not_installed_in_this_interpreter&quot;
+    },
+    &quot;accelerate&quot;: {
+      &quot;status&quot;: &quot;not_installed_in_this_interpreter&quot;
+    },
+    &quot;ms-swift&quot;: {
+      &quot;status&quot;: &quot;not_installed_in_this_interpreter&quot;
+    },
+    &quot;bitsandbytes&quot;: {
+      &quot;status&quot;: &quot;not_installed_in_this_interpreter&quot;
+    }
+  }
+}</pre>
+<h2>显卡、内存与后端</h2><pre>{
+  &quot;system_ram&quot;: {
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;total_bytes&quot;: 29734326272,
+    &quot;available_bytes&quot;: 9545666560,
+    &quot;meaning&quot;: &quot;system RAM, not dedicated GPU VRAM&quot;
+  },
+  &quot;workspace_disk&quot;: {
+    &quot;total_bytes&quot;: 807072165888,
+    &quot;free_bytes&quot;: 526484164608
+  },
+  &quot;nvidia_smi&quot;: {
+    &quot;status&quot;: &quot;not_found_on_path&quot;,
+    &quot;meaning&quot;: &quot;Not proof that no GPU exists; other vendors/backends require their own checks.&quot;
+  },
+  &quot;display_probe&quot;: {
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;returncode&quot;: 0,
+    &quot;stdout&quot;: &quot;{\&quot;Name\&quot;:\&quot;AMD Radeon 780M Graphics\&quot;,\&quot;AdapterRAM\&quot;:4293918720,\&quot;DriverVersion\&quot;:\&quot;31.0.22028.3001\&quot;}&quot;,
+    &quot;stderr&quot;: &quot;&quot;,
+    &quot;devices&quot;: {
+      &quot;Name&quot;: &quot;AMD Radeon 780M Graphics&quot;,
+      &quot;AdapterRAM&quot;: 4293918720,
+      &quot;DriverVersion&quot;: &quot;31.0.22028.3001&quot;
+    }
+  },
+  &quot;torch_backend&quot;: {
+    &quot;status&quot;: &quot;not_run&quot;,
+    &quot;reason&quot;: &quot;torch is not installed in this Python environment&quot;
+  },
+  &quot;display_memory_warning&quot;: &quot;Win32_VideoController.AdapterRAM can be inaccurate/truncated/shared for integrated graphics; it does not establish dedicated/free training VRAM.&quot;
+}</pre>
+<h3>当前对话先前授权的只读显卡查询记录</h3><pre>{
+  &quot;source&quot;: &quot;read-only elevated Get-CimInstance Win32_VideoController executed by current assistant on 2026-11-13&quot;,
+  &quot;query_succeeded&quot;: true,
+  &quot;devices&quot;: [
+    {
+      &quot;Name&quot;: &quot;AMD Radeon 780M Graphics&quot;,
+      &quot;AdapterRAM&quot;: 4293918720,
+      &quot;DriverVersion&quot;: &quot;31.0.22028.3001&quot;
+    }
+  ],
+  &quot;limitations&quot;: [
+    &quot;AdapterRAM is not validated dedicated/free VRAM, especially for integrated graphics.&quot;,
+    &quot;This is an observed system listing, not proof of training backend compatibility or an exhaustive hardware inventory.&quot;,
+    &quot;The default sandbox denied WMI access; the elevated read-only query succeeded.&quot;
+  ]
+}</pre><p>该记录不是每次重跑后的实时显卡探测，也不证明后端兼容。</p>
+<h2>训练准备清单</h2><pre>{
+  &quot;training_environment&quot;: &quot;not_ready&quot;,
+  &quot;llm_training_backend&quot;: &quot;not_verified&quot;,
+  &quot;model&quot;: {
+    &quot;status&quot;: &quot;not_selected&quot;,
+    &quot;checks&quot;: [
+      &quot;model size and license&quot;,
+      &quot;local/backend compatibility&quot;,
+      &quot;memory budget including activations, optimizer and rollout workers&quot;
+    ]
+  },
+  &quot;data&quot;: {
+    &quot;status&quot;: &quot;requires_new_protocol&quot;,
+    &quot;reason&quot;: &quot;Existing development and previously exposed test pages are historical evidence; define new train/dev/test assignments before a real training experiment.&quot;
+  },
+  &quot;reward&quot;: {
+    &quot;status&quot;: &quot;not_independently_calibrated&quot;,
+    &quot;reason&quot;: &quot;Stage4 citation validity and same-context agreement do not establish reliable training reward.&quot;
+  },
+  &quot;budget&quot;: {
+    &quot;status&quot;: &quot;not_selected&quot;,
+    &quot;reason&quot;: &quot;No paid compute, model download or training authorized/started in this resource check.&quot;
+  },
+  &quot;actual_llm_training_completed&quot;: false,
+  &quot;next_local_action&quot;: &quot;Read the report and distinguish SFT examples, reward feedback and actual optimizer updates; select a training route only after resource and reward requirements are explicit.&quot;
+}</pre>
+<h2>三件不同的事</h2><table><tr><th>方式</th><th>输入信号</th><th>实际更新什么</th></tr><tr><td>提示/代码迭代</td><td>当前上下文、错误反馈</td><td>修改上下文或代码产物，模型权重不变</td></tr><tr><td>SFT</td><td>任务与目标输出示例</td><td>优化器更新模型可训练参数</td></tr><tr><td>GRPO等RL</td><td>同任务采样轨迹、执行与奖励</td><td>根据策略目标更新Actor可训练参数</td></tr></table>
+<p>LoRA是参数高效微调方式：通常冻结基础权重、训练低秩适配器。它不是reward算法，可与合适的SFT/RL流程结合。只看权重大小不能估计训练总显存，还需激活、梯度、优化器和rollout等内存。</p>
+<h2>下一步如何选择</h2><p>当前未验证本机可用的LLM训练后端，训练依赖、模型与新数据协议未准备，reward独立校准未完成。先完成训练数据与流程学习；如选择外部GPU，再确定设备、预算和后端。资源不足时按原计划明确训练未完成，继续5.3有限RSI工程，不将规则补丁冒充RL。</p>
+<h2>本轮请解释</h2><p>E：显卡被检测到、磁盘空间充足，为什么仍不能直接宣布可以训练Qwen？<br>F：SFT使用目标示例，GRPO使用采样轨迹与奖励，这两种训练信号有什么区别？</p>
+<p><a href=resource_report.json>本次资源报告</a> · <a href=observed_display.json>已观察显卡记录</a></p></html>

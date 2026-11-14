@@ -22,3 +22,6 @@ learning/agent_io/score_body_quality.py -text
 learning/run_rubric_calibration.py -text
 output/stage5/unit1/**/*.json -text
 output/stage5/unit1/*.json -text
+output/stage5/unit2/*.json -text
+output/stage5/unit2/sft_prep/*.json -text
+output/stage5/unit2/sft_prep/*.jsonl -text

@@ -1,0 +1,15 @@
+{
+  "materials": "ready_for_rental_decision",
+  "train_tasks": 1,
+  "dev_tasks": 1,
+  "independent_test": false,
+  "historical_pages": 6,
+  "reference_checks": 6,
+  "tokenizer_preflight": "passed_real_tokenizer",
+  "max_seq_length": 8192,
+  "gpu_training": "not_started",
+  "quality_improvement": "not_proven",
+  "independent_reward_calibration": "unfinished",
+  "paid_instances_started": 0,
+  "next_action": "Confirm actual rental specification, image, trial budget and shutdown rules"
+}

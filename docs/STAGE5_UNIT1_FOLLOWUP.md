@@ -1,5 +1,7 @@
 # 5.1后半：更新信号、KL与质量开销对照
 
+后续：用户已正确回答C/D，原话保存在output/stage5/unit1/learning_feedback_followup.json。5.1约定数值操作及关键理解已完成，下一步见[5.2资源检查](STAGE5_UNIT2.md)。下文C/D保留为学习回顾，无需重复作答。
+
 前置反馈已收到：你正确区分Actor模型权重与XPath产物，也正确解释全同分优势为0。原话保存output/stage5/unit1/learning_feedback.json。本步骤仍属于固定5.1，来源是岗位“提高代码生成质量，减少搜索与修复步数”；不启动5.2真实训练。
 
 ## 1．运行

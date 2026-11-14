@@ -1,0 +1,18 @@
+{
+  "model_id": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+  "model_revision": "ea3f2471cf1b1f0db85067f1ef93848e38e88c25",
+  "train_file": "output/stage5/unit2/sft_prep/train.jsonl",
+  "dev_file": "output/stage5/unit2/sft_prep/dev.jsonl",
+  "output_dir": "output/stage5/unit2/cloud_sft",
+  "max_seq_length": 8192,
+  "max_steps": 1,
+  "gradient_accumulation_steps": 1,
+  "learning_rate": 0.0001,
+  "lora_r": 8,
+  "lora_alpha": 16,
+  "lora_dropout": 0.0,
+  "lora_target_modules": ["q_proj", "v_proj"],
+  "seed": 42,
+  "max_new_tokens": 2048,
+  "note": "Historical tiny-data smoke only. Revision resolved via model API 2026-11-14. Real tokenizer checked: train=7768 dev=5240 tokens; 8192 window. SDPA GPU path not yet tested."
+}

@@ -1,0 +1,10 @@
+{
+  "source":"explicit user reply in current conversation",
+  "answers":[
+    {"id":"C","answer":"实验的裁剪区间为 [0.8, 1.2]，当 ratio 已经超过 1.2，继续增大它，也不会增加这个标量项的收益","assessment":"correct for the positive-advantage scalar example, not a claim about the full model gradient"},
+    {"id":"D","answer":"只能说明：在该假设批次质量状态相同的情况下，第二种策略减少了尝试轮数和成本。不能据此说准确率提高。","assessment":"correct distinction between efficiency and quality gains"}
+  ],
+  "unit5_1_status":"planned numerical exercises completed; A/B/C/D understanding confirmed; no real training",
+  "next":"fixed unit5.2 resource readiness check",
+  "parameter_updates":0
+}

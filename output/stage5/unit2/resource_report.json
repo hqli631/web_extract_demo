@@ -1,0 +1,95 @@
+{
+  "unit": "5.2",
+  "checked_at_utc": "2026-11-13T12:58:46.775719+00:00",
+  "interpreter": {
+    "executable": "D:\\codex project\\web_extract_demo\\.venv\\Scripts\\python.exe",
+    "version": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16
+  },
+  "system_ram": {
+    "status": "ok",
+    "total_bytes": 29734326272,
+    "available_bytes": 9545666560,
+    "meaning": "system RAM, not dedicated GPU VRAM"
+  },
+  "workspace_disk": {
+    "total_bytes": 807072165888,
+    "free_bytes": 526484164608
+  },
+  "packages": {
+    "torch": {
+      "status": "not_installed_in_this_interpreter"
+    },
+    "transformers": {
+      "status": "not_installed_in_this_interpreter"
+    },
+    "peft": {
+      "status": "not_installed_in_this_interpreter"
+    },
+    "trl": {
+      "status": "not_installed_in_this_interpreter"
+    },
+    "accelerate": {
+      "status": "not_installed_in_this_interpreter"
+    },
+    "ms-swift": {
+      "status": "not_installed_in_this_interpreter"
+    },
+    "bitsandbytes": {
+      "status": "not_installed_in_this_interpreter"
+    }
+  },
+  "nvidia_smi": {
+    "status": "not_found_on_path",
+    "meaning": "Not proof that no GPU exists; other vendors/backends require their own checks."
+  },
+  "display_probe": {
+    "status": "ok",
+    "returncode": 0,
+    "stdout": "{\"Name\":\"AMD Radeon 780M Graphics\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"31.0.22028.3001\"}",
+    "stderr": "",
+    "devices": {
+      "Name": "AMD Radeon 780M Graphics",
+      "AdapterRAM": 4293918720,
+      "DriverVersion": "31.0.22028.3001"
+    }
+  },
+  "display_memory_warning": "Win32_VideoController.AdapterRAM can be inaccurate/truncated/shared for integrated graphics; it does not establish dedicated/free training VRAM.",
+  "torch_backend": {
+    "status": "not_run",
+    "reason": "torch is not installed in this Python environment"
+  },
+  "readiness": {
+    "training_environment": "not_ready",
+    "llm_training_backend": "not_verified",
+    "model": {
+      "status": "not_selected",
+      "checks": [
+        "model size and license",
+        "local/backend compatibility",
+        "memory budget including activations, optimizer and rollout workers"
+      ]
+    },
+    "data": {
+      "status": "requires_new_protocol",
+      "reason": "Existing development and previously exposed test pages are historical evidence; define new train/dev/test assignments before a real training experiment."
+    },
+    "reward": {
+      "status": "not_independently_calibrated",
+      "reason": "Stage4 citation validity and same-context agreement do not establish reliable training reward."
+    },
+    "budget": {
+      "status": "not_selected",
+      "reason": "No paid compute, model download or training authorized/started in this resource check."
+    },
+    "actual_llm_training_completed": false,
+    "next_local_action": "Read the report and distinguish SFT examples, reward feedback and actual optimizer updates; select a training route only after resource and reward requirements are explicit."
+  },
+  "side_effects": {
+    "packages_installed": 0,
+    "models_downloaded": 0,
+    "network_calls": 0,
+    "training_updates": 0
+  }
+}
