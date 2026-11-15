@@ -1,5 +1,7 @@
 # 当前协作约定
 
+2026-11-15：新增Rubrics独立校准准备包learning/run_independent_rubric_calibration.py。task含14个历史受控案例但无expected标签，来源证据/候选输出保留，2份评审模板待真实独立上下文填写；5项测试通过。当前accuracy=null、reward未冻结、GRPO不可启动，详见docs/STAGE5_RUBRICS_CALIBRATION.md。
+
 最新2026-11-15：用户确认服务器按天租用，保留实例不关机。完成训练效果展示页output/stage5/unit2/showcase/index.html：六网页分train/dev、完整静态快照/容器绿框、参考输出与模型前后代码分开；模型仍有契约错误，没有可采用提取结果。真实训练＋本轮达到8e6f9f9后2/2，按约定推送，成功后归零。浏览器工具禁止file协议，未绕过，用户可自行打开本地HTML。
 
 2026-11-15：已在用户提供的Ubuntu22.04＋RTX3090服务器完成首次真实单步LoRA SFT；540672可训练参数、非零参数变化、保存和新进程重载通过。峰值allocated14.47GiB/reserved17.02GiB。两条历史任务生成仍有契约错误，不可采用、无质量提升结论。报告output/stage5/unit2/cloud_run_20261115/index.html，操作docs/STAGE5_CLOUD_SMOKE.md；真实GRPO/新测试/RSI仍未做。GPU任务结束、实例未关闭，结果已下载备份。 上次8e6f9f9已成功推送，本轮为其后1/2项目修改，不到常规同步轮次；用户旧脚本/报告不动，密码未落盘。

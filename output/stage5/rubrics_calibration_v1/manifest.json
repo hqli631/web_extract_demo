@@ -1,0 +1,15 @@
+{
+  "task_sha256": "0710f2da01af30052fda9e23a5da6ea38a3a8552009f272c57b832dab8c5c085",
+  "source_task_sha256": "ac664ba174ea57044c4b4b230f898526c1b21faabbf3011757b9e0ea9783041d",
+  "cases": 14,
+  "labels_in_task": false,
+  "reviewers_required": 2,
+  "api_calls": 0,
+  "training_updates": 0,
+  "status": "PENDING_TWO_INDEPENDENT_REVIEWS",
+  "limitations": [
+    "Historical controlled fixtures, not new natural pages.",
+    "No accuracy without an independent gold review.",
+    "Current conversation knows old fixture and cannot serve as independent reviewer."
+  ]
+}

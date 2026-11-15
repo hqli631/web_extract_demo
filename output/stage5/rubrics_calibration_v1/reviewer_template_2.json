@@ -1,0 +1,582 @@
+{
+  "task_id": "blind-018e9a999da6b817",
+  "reviewer": "fill_reviewer_2",
+  "independent_review": null,
+  "review_context": "TODO: specify isolated review context",
+  "cases": [
+    {
+      "task_id": "blind-018e9a999da6b817",
+      "case_id": "blind_01",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q4",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q5",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        }
+      ]
+    },
+    {
+      "task_id": "blind-018e9a999da6b817",
+      "case_id": "blind_02",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q4",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q5",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        }
+      ]
+    },
+    {
+      "task_id": "blind-018e9a999da6b817",
+      "case_id": "blind_03",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q4",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q5",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        }
+      ]
+    },
+    {
+      "task_id": "blind-018e9a999da6b817",
+      "case_id": "blind_04",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q4",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q5",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        }
+      ]
+    },
+    {
+      "task_id": "blind-018e9a999da6b817",
+      "case_id": "blind_05",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q4",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q5",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        }
+      ]
+    },
+    {
+      "task_id": "blind-018e9a999da6b817",
+      "case_id": "blind_06",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q4",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q5",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        }
+      ]
+    },
+    {
+      "task_id": "blind-018e9a999da6b817",
+      "case_id": "blind_07",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q4",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q5",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        }
+      ]
+    },
+    {
+      "task_id": "blind-018e9a999da6b817",
+      "case_id": "blind_08",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q4",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q5",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        }
+      ]
+    },
+    {
+      "task_id": "blind-018e9a999da6b817",
+      "case_id": "blind_09",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q4",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q5",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        }
+      ]
+    },
+    {
+      "task_id": "blind-018e9a999da6b817",
+      "case_id": "blind_10",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q4",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q5",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        }
+      ]
+    },
+    {
+      "task_id": "blind-018e9a999da6b817",
+      "case_id": "blind_11",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q4",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q5",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        }
+      ]
+    },
+    {
+      "task_id": "blind-018e9a999da6b817",
+      "case_id": "blind_12",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q4",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q5",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        }
+      ]
+    },
+    {
+      "task_id": "blind-018e9a999da6b817",
+      "case_id": "blind_13",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q4",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q5",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        }
+      ]
+    },
+    {
+      "task_id": "blind-018e9a999da6b817",
+      "case_id": "blind_14",
+      "answers": [
+        {
+          "id": "Q1",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q2",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q3",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q4",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        },
+        {
+          "id": "Q5",
+          "verdict": "unknown",
+          "reason": "TODO: reviewer decision",
+          "source_evidence": [],
+          "output_evidence": []
+        }
+      ]
+    }
+  ]
+}

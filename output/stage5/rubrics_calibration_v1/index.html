@@ -1,0 +1,15 @@
+<!doctype html><meta charset='utf-8'><title>独立Rubrics校准准备</title>\n<style>body{font:16px/1.7 sans-serif;max-width:1100px;margin:30px auto}pre{white-space:pre-wrap;background:#f3f5f8;padding:15px}</style>\n<h1>独立 Rubrics 校准：等待两份盲评</h1>\n<p>任务不含expected标签、不计算分数、不调用模型。14个案例来自历史受控fixture，不能当作自然网页准确率。</p>\n<p>请把task.json交给两个彼此隔离的评审上下文，分别填写reviewer_template_1.json和reviewer_template_2.json。</p>\n<pre>{
+  &quot;task_sha256&quot;: &quot;0710f2da01af30052fda9e23a5da6ea38a3a8552009f272c57b832dab8c5c085&quot;,
+  &quot;source_task_sha256&quot;: &quot;ac664ba174ea57044c4b4b230f898526c1b21faabbf3011757b9e0ea9783041d&quot;,
+  &quot;cases&quot;: 14,
+  &quot;labels_in_task&quot;: false,
+  &quot;reviewers_required&quot;: 2,
+  &quot;api_calls&quot;: 0,
+  &quot;training_updates&quot;: 0,
+  &quot;status&quot;: &quot;PENDING_TWO_INDEPENDENT_REVIEWS&quot;,
+  &quot;limitations&quot;: [
+    &quot;Historical controlled fixtures, not new natural pages.&quot;,
+    &quot;No accuracy without an independent gold review.&quot;,
+    &quot;Current conversation knows old fixture and cannot serve as independent reviewer.&quot;
+  ]
+}</pre>
