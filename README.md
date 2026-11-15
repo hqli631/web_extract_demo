@@ -1,5 +1,7 @@
 # Web Extract Demo
 
+后续固定执行计划见[后续执行计划](docs/NEXT_PHASE_PLAN.md)。当前从A“模型输出契约修正与安全审计”开始；先修正可验证性，再扩充布局数据和独立Rubrics，不能在两条历史任务上反复训练来宣称泛化提升。
+
 2026-11-15：已在用户提供的Ubuntu22.04＋RTX3090服务器完成首次真实单步LoRA SFT；540672可训练参数、非零参数变化、保存和新进程重载通过。峰值allocated14.47GiB/reserved17.02GiB。两条历史任务生成仍有契约错误，不可采用、无质量提升结论。报告output/stage5/unit2/cloud_run_20261115/index.html，操作docs/STAGE5_CLOUD_SMOKE.md；真实GRPO/新测试/RSI仍未做。GPU任务结束、实例未关闭，结果已下载备份。
 
 2026-11-14 当前交接：5.2 SFT准备包完成，等待租赁配置决定。1条train＋1条dev来自两个历史簇/6篇页；真实tokenizer验证7768/5240 token，采用8192窗口，完整目标和loss屏蔽通过。仅下载tokenizer/config，未下载模型权重、未训练、未租服务器。操作见[训练准备与租赁交接](docs/STAGE5_SFT_PREPARATION.md)，报告output/stage5/unit2/sft_prep/index.html。以下旧进度按日期保留。
