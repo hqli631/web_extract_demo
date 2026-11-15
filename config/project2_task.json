@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "task_id": "sina-project2-v1",
+  "prompt": "Given two same-layout Sina HTML pages, generate a reusable extract(bytes) Python/lxml function. Return title, ordered blocks, metadata, excluded and warnings with XPath evidence. Do not hard-code article text or filenames.",
+  "pages": [
+    {"id": "train_sina", "role": "generation", "path": "samples/blog_01.html", "sha256": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84"},
+    {"id": "dev_sina", "role": "development_feedback", "path": "samples/collected_14a028de299edfab.html", "sha256": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327"},
+    {"id": "test_sina", "role": "final_holdout", "path": "samples/collected_af5904c15d1deebc.html", "sha256": "c6348f97447c665018d507e3ed78a99a2d0989b13bc60087bb075bc8680ce4c4"}
+  ]
+}

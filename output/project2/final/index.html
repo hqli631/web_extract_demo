@@ -1,0 +1,100 @@
+<!doctype html><meta charset="utf-8"><title>Project 2 Agent run</title><style>body{font:16px/1.6 sans-serif;max-width:1000px;margin:30px auto}pre{white-space:pre-wrap}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:6px}</style>
+<h1>Project 2: single-agent extraction run</h1>
+<p>provider=mock; rounds=2; API calls=0; final=pass</p>
+<p>Contract and source-evidence checks are not semantic accuracy. Mock results prove the loop only.</p>
+<pre>{
+  "schema_version": 1,
+  "provider": "mock",
+  "model": "mock-sina-v1",
+  "task_id": "sina-project2-v1",
+  "max_rounds": 1,
+  "api_calls": 0,
+  "rounds": [
+    {
+      "round": 0,
+      "candidate": "candidate_round_0.py",
+      "candidate_sha256": "db3e8e44fc902c7192fafda039ea55d8078cf0564b30a9f32a08cfe3185dd7fa",
+      "pages": [
+        {
+          "id": "train_sina",
+          "status": "pass",
+          "blocks": 43,
+          "metadata": 1,
+          "excluded": 3
+        },
+        {
+          "id": "dev_sina",
+          "status": "pass",
+          "blocks": 23,
+          "metadata": 0,
+          "excluded": 1
+        }
+      ],
+      "errors": []
+    },
+    {
+      "round": 1,
+      "candidate": "candidate_round_1.py",
+      "candidate_sha256": "7a78b9a611ad2ecb5ed8871492c1389a561e085055ff20a98b0a5be6a1788231",
+      "pages": [
+        {
+          "id": "train_sina",
+          "status": "pass",
+          "blocks": 43,
+          "metadata": 1,
+          "excluded": 3
+        },
+        {
+          "id": "dev_sina",
+          "status": "pass",
+          "blocks": 23,
+          "metadata": 0,
+          "excluded": 1
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "input_pages": [
+    {
+      "id": "train_sina",
+      "role": "generation",
+      "path": "samples/blog_01.html",
+      "sha256": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84"
+    },
+    {
+      "id": "dev_sina",
+      "role": "development_feedback",
+      "path": "samples/collected_14a028de299edfab.html",
+      "sha256": "c655ca0fa14a9f65c87531dc4d1ede032149a796f4631b87cb0885c748e8e327"
+    },
+    {
+      "id": "test_sina",
+      "role": "final_holdout",
+      "path": "samples/collected_af5904c15d1deebc.html",
+      "sha256": "c6348f97447c665018d507e3ed78a99a2d0989b13bc60087bb075bc8680ce4c4"
+    }
+  ],
+  "semantic_accuracy": "unknown",
+  "unseen_evaluation": false,
+  "holdout_policy": "final_holdout is executed only after the repair loop; its result is never fed back.",
+  "usage": [
+    {}
+  ],
+  "feedback": {
+    "kind": "quality_feedback",
+    "message": "Review the first direct byline and preserve all narrative blocks."
+  },
+  "holdout": [
+    {
+      "id": "test_sina",
+      "status": "pass",
+      "blocks": 16,
+      "metadata": 1,
+      "excluded": 1
+    }
+  ],
+  "elapsed_seconds": 0.5959,
+  "final_candidate": "candidate_round_1.py",
+  "final_status": "pass"
+}</pre>
