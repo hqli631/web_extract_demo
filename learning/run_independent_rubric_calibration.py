@@ -67,7 +67,7 @@ def prepare():
             "<p>任务不含expected标签、不计算分数、不调用模型。14个案例来自历史受控fixture，不能当作自然网页准确率。</p>",
             "<p>请把task.json交给两个彼此隔离的评审上下文，分别填写reviewer_template_1.json和reviewer_template_2.json。</p>",
             "<pre>" + escape(json.dumps(manifest, ensure_ascii=False, indent=2)) + "</pre>"]
-    (OUT / "index.html").write_text("\\n".join(page), encoding="utf-8")
+    (OUT / "index.html").write_text("\n".join(page), encoding="utf-8")
     print(f"PREPARED: {len(cases)} blinded cases; expected labels absent; reviewers=2; API calls=0")
     print(OUT / "index.html")
 
@@ -149,7 +149,7 @@ def compare():
             "<h1>Rubrics 双评一致性</h1><p><strong>一致性不是准确率；当前仍不是可信reward。</strong></p>",
             "<pre>" + escape(json.dumps(report, ensure_ascii=False, indent=2)) + "</pre>",
             "<p>需要独立金标/第三方复核，才能讨论准确性和冻结reward。</p>"]
-    (OUT / "index.html").write_text("\\n".join(page), encoding="utf-8")
+    (OUT / "index.html").write_text("\n".join(page), encoding="utf-8")
     print("COMPARE PASS: pair agreement computed; accuracy=None; reward_frozen=False; grpo_ready=False")
     print(OUT / "index.html")
 

@@ -1,0 +1,103 @@
+{
+  "purpose": "static audit only; never imported/executed",
+  "contract_keys": [
+    "blocks",
+    "excluded",
+    "metadata",
+    "title",
+    "warnings"
+  ],
+  "accepted_count": 0,
+  "total_count": 4,
+  "results": [
+    {
+      "stage": "before",
+      "split": "train",
+      "python_parse": true,
+      "imports": [
+        "re"
+      ],
+      "issues": [
+        "markdown_fence",
+        "metadata_dict_assignment",
+        "missing_sina_artibody_container",
+        "no_xpath_evidence_field",
+        "return_keys_not_contract",
+        "returns_input_summary_fields",
+        "string_regex_pattern_used_on_bytes_input",
+        "wrong_article_container"
+      ],
+      "executed": false,
+      "accepted": false,
+      "quality_evaluation": "not_run"
+    },
+    {
+      "stage": "before",
+      "split": "dev",
+      "python_parse": true,
+      "imports": [
+        "lxml",
+        "re"
+      ],
+      "issues": [
+        "element_find_does_not_support_xpath_text_function",
+        "excluded_dict_assignment",
+        "markdown_fence",
+        "metadata_dict_assignment",
+        "reads_xpath_attribute_instead_of_computing_dom_path",
+        "warnings_dict_assignment",
+        "xml_parser_for_html_not_robust"
+      ],
+      "executed": false,
+      "accepted": false,
+      "quality_evaluation": "not_run"
+    },
+    {
+      "stage": "after",
+      "split": "train",
+      "python_parse": true,
+      "imports": [
+        "re"
+      ],
+      "issues": [
+        "markdown_fence",
+        "metadata_dict_assignment",
+        "missing_sina_artibody_container",
+        "no_xpath_evidence_field",
+        "return_keys_not_contract",
+        "returns_input_summary_fields",
+        "string_regex_pattern_used_on_bytes_input",
+        "wrong_article_container"
+      ],
+      "executed": false,
+      "accepted": false,
+      "quality_evaluation": "not_run"
+    },
+    {
+      "stage": "after",
+      "split": "dev",
+      "python_parse": true,
+      "imports": [
+        "lxml",
+        "re"
+      ],
+      "issues": [
+        "excluded_dict_assignment",
+        "markdown_fence",
+        "metadata_dict_assignment",
+        "no_xpath_evidence_field",
+        "warnings_dict_assignment",
+        "xml_parser_for_html_not_robust"
+      ],
+      "executed": false,
+      "accepted": false,
+      "quality_evaluation": "not_run"
+    }
+  ],
+  "limits": [
+    "static findings are not semantic scores",
+    "no candidate executed",
+    "reference outputs are separate evidence",
+    "this finite pattern audit is not a safety sandbox or proof of successful execution"
+  ]
+}

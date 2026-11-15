@@ -1,0 +1,37 @@
+[
+  {
+    "split": "train",
+    "row": 0,
+    "total_tokens": 2983,
+    "prompt_tokens": 2592,
+    "supervised_tokens": 391
+  },
+  {
+    "split": "train",
+    "row": 1,
+    "total_tokens": 3138,
+    "prompt_tokens": 2716,
+    "supervised_tokens": 422
+  },
+  {
+    "split": "train",
+    "row": 2,
+    "total_tokens": 2582,
+    "prompt_tokens": 2185,
+    "supervised_tokens": 397
+  },
+  {
+    "split": "train",
+    "row": 3,
+    "total_tokens": 7768,
+    "prompt_tokens": 6920,
+    "supervised_tokens": 848
+  },
+  {
+    "split": "dev",
+    "row": 0,
+    "total_tokens": 5240,
+    "prompt_tokens": 4324,
+    "supervised_tokens": 916
+  }
+]

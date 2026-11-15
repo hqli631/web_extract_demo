@@ -121,3 +121,6 @@
 ## 当前不应写进简历
 
 不能写成已搭建完整多Agent、完成Qwen API代码生成、完成Agentic RL/GRPO训练、完成LoRA微调、实现团队规模RSI或验证千亿级降本。可以准确表述为：完成静态网页XPath抽取Demo、可追溯质量审核与Rubrics计分原型，正在实现布局簇级复用方案。
+
+
+2026-11-15: See [PROJECT_DELIVERY.md](PROJECT_DELIVERY.md) and [STAGE5_SUMMARY.md](STAGE5_SUMMARY.md) for current delivery. Multi-layout data, real LoRA, isolated execution, sealed page test, paired review and finite RSI replay completed. Natural independent semantic gold and real GRPO remain research work; previous dated status is historical.

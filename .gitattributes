@@ -26,3 +26,8 @@ output/stage5/unit2/*.json -text
 output/stage5/unit2/sft_prep/*.json -text
 output/stage5/unit2/sft_prep/*.jsonl -text
 output/stage5/unit2/cloud_run_*/*.json -text
+
+data/natural_v1/**/*.html -text
+output/stage5/multitask/** -text
+output/stage5/rubrics_calibration_v1/*.json -text
+output/stage5/rsi_delivery/*.json -text

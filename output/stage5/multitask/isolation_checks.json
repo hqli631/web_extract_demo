@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "control": "non_root",
+      "passed": true,
+      "outcome": {
+        "status": "success",
+        "result": {
+          "uid": 65534
+        },
+        "seconds": 0.032538149999709276,
+        "stderr": ""
+      }
+    },
+    {
+      "control": "network_denied",
+      "passed": true,
+      "outcome": {
+        "status": "success",
+        "result": {
+          "denied": true
+        },
+        "seconds": 0.03181714399943303,
+        "stderr": ""
+      }
+    },
+    {
+      "control": "host_home_hidden",
+      "passed": true,
+      "outcome": {
+        "status": "success",
+        "result": {
+          "hidden": true
+        },
+        "seconds": 0.03190831099982461,
+        "stderr": ""
+      }
+    },
+    {
+      "control": "input_read_only",
+      "passed": true,
+      "outcome": {
+        "status": "success",
+        "result": {
+          "denied": true
+        },
+        "seconds": 0.0318315309996251,
+        "stderr": ""
+      }
+    },
+    {
+      "control": "cpu_limit",
+      "passed": true,
+      "outcome": {
+        "status": "execution_error",
+        "returncode": 137,
+        "stderr": "",
+        "seconds": 8.037786357000186
+      }
+    }
+  ],
+  "passed": true,
+  "limits": "Denial controls do not establish protection against kernel escapes."
+}

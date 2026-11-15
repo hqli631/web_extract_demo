@@ -1,0 +1,48 @@
+--- learning/generated/chinanews_v1.py
++++ learning/generated/chinanews_v2.py
+@@ -1,4 +1,4 @@
+-"""Current-conversation AI candidate v1; static Chinanews left_zw shell only."""
++"""Current-conversation AI candidate v2; static Chinanews left_zw shell only."""
+ import re
+ from lxml import html
+ 
+@@ -11,6 +11,18 @@
+         raise ValueError('expected one content_left_title and one left_zw')
+     body=bodies[0]
+     result=dict(title=' '.join(titles[0].text_content().split()),blocks=[],metadata=[],excluded=[],warnings=[])
++
++    # Only a contiguous suffix of explicit production-credit lines is metadata.
++    credit_nodes=[]
++    meaningful=[n for n in body if isinstance(n.tag,str) and n.tag not in {'script','style'}
++                and ' '.join(n.text_content().split())
++                and 'adEditor' not in (n.get('class') or '').split()]
++    for n in reversed(meaningful):
++        value=' '.join(n.text_content().split())
++        if n.tag=='p' and re.fullmatch(r'[｜|](?:(?:总策划|策划|统筹|执笔|审校|视觉)[:：].+|.+工作室出品)',value):
++            credit_nodes.append(n)
++        else:
++            break
+ 
+     def record(node,kind):
+         clone=html.fromstring(html.tostring(node))
+@@ -32,6 +44,10 @@
+             item['kind']='editor'
+             result['metadata'].append(item)
+             return
++        if node in credit_nodes:
++            item['kind']='production_credit'
++            result['metadata'].append(item)
++            return
+         # Full-line anchored pattern: interview questions containing a colon do not match.
+         if node.tag=='p' and re.fullmatch(r'中新[网社]记者\s+[\u4e00-\u9fff·]{2,12}(?:\s+[\u4e00-\u9fff·]{2,12})*',text):
+             item['kind']='author'
+@@ -48,6 +64,9 @@
+                               'subheading' if node.tag in {'h2','h3','h4'} else 'paragraph')
+                 result['blocks'].append(item)
+             return
++        if text and node.tag in {'div','section','details'} and not node.xpath('.//p|.//table|.//li|.//h2|.//h3|.//h4|.//figcaption|.//div'):
++            result['blocks'].append(item)
++            return
+         for child in node:
+             visit(child)
+         if text and not len(node):

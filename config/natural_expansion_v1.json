@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "registered_at": "2026-11-15",
+  "purpose": "Bounded natural static-document layout expansion; roles fixed before fetch. Test bytes are stored but not inspected during rule development.",
+  "clusters": [
+    {"task_id": "python_sphinx_v1", "layout_family": "Sphinx documentation", "pages": [
+      {"role": "train", "url": "https://docs.python.org/3.12/tutorial/introduction.html"},
+      {"role": "train", "url": "https://docs.python.org/3.12/tutorial/controlflow.html"},
+      {"role": "dev", "url": "https://docs.python.org/3.12/tutorial/datastructures.html"},
+      {"role": "test", "url": "https://docs.python.org/3.12/tutorial/inputoutput.html"}
+    ]},
+    {"task_id": "sqlite_document_v1", "layout_family": "SQLite technical document", "pages": [
+      {"role": "train", "url": "https://www.sqlite.org/whentouse.html"},
+      {"role": "train", "url": "https://www.sqlite.org/atomiccommit.html"},
+      {"role": "dev", "url": "https://www.sqlite.org/datatype3.html"},
+      {"role": "test", "url": "https://www.sqlite.org/lockingv3.html"}
+    ]},
+    {"task_id": "pg_essay_v1", "layout_family": "Legacy table/font essay", "pages": [
+      {"role": "train", "url": "https://www.paulgraham.com/avg.html"},
+      {"role": "train", "url": "https://www.paulgraham.com/wealth.html"},
+      {"role": "dev", "url": "https://www.paulgraham.com/essay.html"},
+      {"role": "test", "url": "https://www.paulgraham.com/greatwork.html"}
+    ]}
+  ]
+}

@@ -1,0 +1,87 @@
+<!doctype html><meta charset="utf-8"><title>模型输出审计</title>
+<style>body{font:16px/1.7 sans-serif;max-width:1000px;margin:30px auto}pre{white-space:pre-wrap;background:#f4f6f8;padding:14px}</style>
+<h1>模型生成抽取代码：静态契约审计</h1>
+<p><b>没有导入或执行模型生成代码。</b>只检查接口和明显结构问题，不是正文质量评估。</p>
+<h2>before / train</h2><pre>{
+  &quot;stage&quot;: &quot;before&quot;,
+  &quot;split&quot;: &quot;train&quot;,
+  &quot;python_parse&quot;: true,
+  &quot;imports&quot;: [
+    &quot;re&quot;
+  ],
+  &quot;issues&quot;: [
+    &quot;markdown_fence&quot;,
+    &quot;metadata_dict_assignment&quot;,
+    &quot;missing_sina_artibody_container&quot;,
+    &quot;no_xpath_evidence_field&quot;,
+    &quot;return_keys_not_contract&quot;,
+    &quot;returns_input_summary_fields&quot;,
+    &quot;string_regex_pattern_used_on_bytes_input&quot;,
+    &quot;wrong_article_container&quot;
+  ],
+  &quot;executed&quot;: false,
+  &quot;accepted&quot;: false,
+  &quot;quality_evaluation&quot;: &quot;not_run&quot;
+}</pre>
+<h2>before / dev</h2><pre>{
+  &quot;stage&quot;: &quot;before&quot;,
+  &quot;split&quot;: &quot;dev&quot;,
+  &quot;python_parse&quot;: true,
+  &quot;imports&quot;: [
+    &quot;lxml&quot;,
+    &quot;re&quot;
+  ],
+  &quot;issues&quot;: [
+    &quot;element_find_does_not_support_xpath_text_function&quot;,
+    &quot;excluded_dict_assignment&quot;,
+    &quot;markdown_fence&quot;,
+    &quot;metadata_dict_assignment&quot;,
+    &quot;reads_xpath_attribute_instead_of_computing_dom_path&quot;,
+    &quot;warnings_dict_assignment&quot;,
+    &quot;xml_parser_for_html_not_robust&quot;
+  ],
+  &quot;executed&quot;: false,
+  &quot;accepted&quot;: false,
+  &quot;quality_evaluation&quot;: &quot;not_run&quot;
+}</pre>
+<h2>after / train</h2><pre>{
+  &quot;stage&quot;: &quot;after&quot;,
+  &quot;split&quot;: &quot;train&quot;,
+  &quot;python_parse&quot;: true,
+  &quot;imports&quot;: [
+    &quot;re&quot;
+  ],
+  &quot;issues&quot;: [
+    &quot;markdown_fence&quot;,
+    &quot;metadata_dict_assignment&quot;,
+    &quot;missing_sina_artibody_container&quot;,
+    &quot;no_xpath_evidence_field&quot;,
+    &quot;return_keys_not_contract&quot;,
+    &quot;returns_input_summary_fields&quot;,
+    &quot;string_regex_pattern_used_on_bytes_input&quot;,
+    &quot;wrong_article_container&quot;
+  ],
+  &quot;executed&quot;: false,
+  &quot;accepted&quot;: false,
+  &quot;quality_evaluation&quot;: &quot;not_run&quot;
+}</pre>
+<h2>after / dev</h2><pre>{
+  &quot;stage&quot;: &quot;after&quot;,
+  &quot;split&quot;: &quot;dev&quot;,
+  &quot;python_parse&quot;: true,
+  &quot;imports&quot;: [
+    &quot;lxml&quot;,
+    &quot;re&quot;
+  ],
+  &quot;issues&quot;: [
+    &quot;excluded_dict_assignment&quot;,
+    &quot;markdown_fence&quot;,
+    &quot;metadata_dict_assignment&quot;,
+    &quot;no_xpath_evidence_field&quot;,
+    &quot;warnings_dict_assignment&quot;,
+    &quot;xml_parser_for_html_not_robust&quot;
+  ],
+  &quot;executed&quot;: false,
+  &quot;accepted&quot;: false,
+  &quot;quality_evaluation&quot;: &quot;not_run&quot;
+}</pre>

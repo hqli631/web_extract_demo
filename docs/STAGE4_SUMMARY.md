@@ -71,3 +71,6 @@ Start-Process "./output/stage4/policy_v2/index.html"
 外部模型API调用0，训练参数更新0；对话推理实际成本及独立评审成本没有测量，费用保持null，不称零成本。独立模型/人工复核未完成，没有独立准确率、真实重复稳定性或可靠reward结论。
 
 下一阶段来源是固定5.1：使用已有“任务→代码→执行→反馈→修补”轨迹理解Actor、状态、动作、环境与奖励，再手算GRPO组相对优势。可先开展算法学习；5.2真实训练还需资源检查及可靠reward，5.3 RSI按有限修补回归闭环推进，不以提示重试冒充强化学习。
+
+
+2026-11-15: See [PROJECT_DELIVERY.md](PROJECT_DELIVERY.md) and [STAGE5_SUMMARY.md](STAGE5_SUMMARY.md) for current delivery. Multi-layout data, real LoRA, isolated execution, sealed page test, paired review and finite RSI replay completed. Natural independent semantic gold and real GRPO remain research work; previous dated status is historical.

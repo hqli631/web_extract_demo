@@ -54,3 +54,6 @@ GitHub：从本轮起，每完成 **2 轮包含项目修改的问答**，提交�
 本轮“第一、第二阶段总结归档”为上次9796400同步后的第1轮项目修改，计数1 / 2；未到常规推送轮次。原有用户脚本、报告和预览修改继续保留。
 
 文件整理后，学习脚本入口为 `learning/xpath/`，学习文档为 `docs/`，新浪配置为 `config/xpath_sina.json`。样本、标注、冻结基准和回归依赖数据保留。
+
+
+2026-11-15: See [PROJECT_DELIVERY.md](PROJECT_DELIVERY.md) and [STAGE5_SUMMARY.md](STAGE5_SUMMARY.md) for current delivery. Multi-layout data, real LoRA, isolated execution, sealed page test, paired review and finite RSI replay completed. Natural independent semantic gold and real GRPO remain research work; previous dated status is historical.

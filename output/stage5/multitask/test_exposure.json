@@ -1,0 +1,44 @@
+{
+  "status": "final_evaluation_complete",
+  "plan_sha256": "1e81b3885c8918150e94085a2e3ef2271ed3d4046ec45e2bf237bb14dbc81e78",
+  "pages": [
+    {
+      "role": "test",
+      "url": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+      "path": "data/natural_v1/python_sphinx_v1/test_4.html",
+      "sha256": "bd064c24cd5fdc74cc50b0d96cf4ff0bc713ac99b4e4d6a4c0cee3d7b24f92b3",
+      "bytes": 76076,
+      "final_url": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+      "content_type": "text/html",
+      "exposure": "new",
+      "fetched_at": "2026-11-15T05:51:42Z",
+      "status": "downloaded"
+    },
+    {
+      "role": "test",
+      "url": "https://www.sqlite.org/lockingv3.html",
+      "path": "data/natural_v1/sqlite_document_v1/test_4.html",
+      "sha256": "fa67031159fc0658b6e3fcfa4e446c140838c75cb813ff9fafd47fdae927936f",
+      "bytes": 29892,
+      "final_url": "https://www.sqlite.org/lockingv3.html",
+      "content_type": "text/html",
+      "exposure": "new",
+      "fetched_at": "2026-11-15T05:51:50Z",
+      "status": "downloaded"
+    },
+    {
+      "role": "test",
+      "url": "https://www.paulgraham.com/greatwork.html",
+      "path": "data/natural_v1/pg_essay_v1/test_4.html",
+      "sha256": "5991806c7c899e9adb70199dd101edfe65d58e97a09ab38abc6b693d43b2e60d",
+      "bytes": 79767,
+      "final_url": "https://www.paulgraham.com/greatwork.html",
+      "content_type": "text/html",
+      "exposure": "new",
+      "fetched_at": "2026-11-15T05:52:06Z",
+      "status": "downloaded"
+    }
+  ],
+  "forbidden_to_reuse_as_unseen": true,
+  "results_sha256": "1a775c6b3d2832b127d5e06ea1a59ee0b1de83007a2d0f3824729065bcc53b8b"
+}

@@ -1,0 +1,21 @@
+{
+  "candidates": {
+    "python_sphinx_v1": {
+      "path": "output/stage5/multitask/candidates/lora120/python_sphinx_v1.py",
+      "sha256": "d6fd61e34726339c74fd4926e7ba5b4a924efeb73764ae4089171985fda9003d",
+      "review": "AST identical to reviewed reference; successful dev evidence and final test failures preserved"
+    },
+    "sqlite_document_v1": {
+      "path": "output/stage5/multitask/candidates/lora120/sqlite_document_v1.py",
+      "sha256": "75ed905b540e50fc12b4a0ab2c7beeb78174684b978b73d7154443b58d178679",
+      "review": "AST identical to reviewed reference; successful dev evidence and final test failures preserved"
+    },
+    "pg_essay_v1": {
+      "path": "output/stage5/multitask/candidates/lora120/pg_essay_v1.py",
+      "sha256": "8caec67c432b539dcf9e1c7ce3e31b4917c6fbf663c9061d8554f958a6a46e63",
+      "review": "AST identical to reviewed reference; successful dev evidence and final test failures preserved"
+    }
+  },
+  "model": "lora120",
+  "policy": "Only these reviewed fixed hashes may replay locally; new generated code requires isolation"
+}

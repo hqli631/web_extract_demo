@@ -1,15 +1,75 @@
-<!doctype html><meta charset='utf-8'><title>独立Rubrics校准准备</title>\n<style>body{font:16px/1.7 sans-serif;max-width:1100px;margin:30px auto}pre{white-space:pre-wrap;background:#f3f5f8;padding:15px}</style>\n<h1>独立 Rubrics 校准：等待两份盲评</h1>\n<p>任务不含expected标签、不计算分数、不调用模型。14个案例来自历史受控fixture，不能当作自然网页准确率。</p>\n<p>请把task.json交给两个彼此隔离的评审上下文，分别填写reviewer_template_1.json和reviewer_template_2.json。</p>\n<pre>{
+<!doctype html><meta charset='utf-8'><title>Rubrics双评校准</title>
+<style>body{font:16px/1.7 sans-serif;max-width:1100px;margin:30px auto}td,th{border:1px solid #ccc;padding:8px}table{border-collapse:collapse}pre{white-space:pre-wrap;background:#f3f5f8;padding:12px}</style>
+<h1>Rubrics 双评一致性</h1><p><strong>一致性不是准确率；当前仍不是可信reward。</strong></p>
+<pre>{
+  &quot;calibration_id&quot;: &quot;rubrics-calibration-v1&quot;,
   &quot;task_sha256&quot;: &quot;0710f2da01af30052fda9e23a5da6ea38a3a8552009f272c57b832dab8c5c085&quot;,
-  &quot;source_task_sha256&quot;: &quot;ac664ba174ea57044c4b4b230f898526c1b21faabbf3011757b9e0ea9783041d&quot;,
   &quot;cases&quot;: 14,
-  &quot;labels_in_task&quot;: false,
-  &quot;reviewers_required&quot;: 2,
+  &quot;questions&quot;: 5,
+  &quot;pair_count&quot;: 70,
+  &quot;per_question&quot;: {
+    &quot;Q1&quot;: {
+      &quot;same&quot;: 14,
+      &quot;different&quot;: 0,
+      &quot;unknown_in_pair&quot;: 0
+    },
+    &quot;Q2&quot;: {
+      &quot;same&quot;: 13,
+      &quot;different&quot;: 1,
+      &quot;unknown_in_pair&quot;: 1
+    },
+    &quot;Q3&quot;: {
+      &quot;same&quot;: 13,
+      &quot;different&quot;: 1,
+      &quot;unknown_in_pair&quot;: 1
+    },
+    &quot;Q4&quot;: {
+      &quot;same&quot;: 14,
+      &quot;different&quot;: 0,
+      &quot;unknown_in_pair&quot;: 0
+    },
+    &quot;Q5&quot;: {
+      &quot;same&quot;: 13,
+      &quot;different&quot;: 1,
+      &quot;unknown_in_pair&quot;: 0
+    }
+  },
+  &quot;overall_pair_agreement&quot;: 0.9571428571428572,
+  &quot;disagreements&quot;: [
+    {
+      &quot;case_id&quot;: &quot;blind_04&quot;,
+      &quot;question&quot;: &quot;Q5&quot;,
+      &quot;reviewer_1&quot;: &quot;yes&quot;,
+      &quot;reviewer_2&quot;: &quot;no&quot;,
+      &quot;reason_1&quot;: &quot;正文事实与顺序忠实无重复；错标题由Q1主评，避免同一错误重复扣分。&quot;,
+      &quot;reason_2&quot;: &quot;现有输出的标题另一篇无关新闻不来自源主标题，是无源依据的内容替换；正文事实与顺序本身对应。Q5未将标题排除出已输出内容。&quot;
+    },
+    {
+      &quot;case_id&quot;: &quot;blind_09&quot;,
+      &quot;question&quot;: &quot;Q2&quot;,
+      &quot;reviewer_1&quot;: &quot;unknown&quot;,
+      &quot;reviewer_2&quot;: &quot;yes&quot;,
+      &quot;reason_1&quot;: &quot;图解主导文章只有导语及空alt图片；未提供图片像素或替代文字，无法核实主要事实及结构化信息的完整性。&quot;,
+      &quot;reason_2&quot;: &quot;完整静态源DOM的唯一叙述段为请看试点图解，输出o01完整保留；图片内文字不在本任务范围。&quot;
+    },
+    {
+      &quot;case_id&quot;: &quot;blind_09&quot;,
+      &quot;question&quot;: &quot;Q3&quot;,
+      &quot;reviewer_1&quot;: &quot;unknown&quot;,
+      &quot;reviewer_2&quot;: &quot;yes&quot;,
+      &quot;reason_1&quot;: &quot;图解主导文章只有导语及空alt图片；未提供图片像素或替代文字，无法核实主要事实及结构化信息的完整性。&quot;,
+      &quot;reason_2&quot;: &quot;完整source_html及记录清单仅含h1、导语和alt为空的img，无表格、列表或文字图说。图片内信息已被rubric明确排除。&quot;
+    }
+  ],
+  &quot;independent_human_gold&quot;: false,
+  &quot;accuracy&quot;: null,
+  &quot;reward_frozen&quot;: false,
+  &quot;grpo_ready&quot;: false,
+  &quot;independent_review_declared&quot;: true,
+  &quot;independent_context_verified_by_program&quot;: false,
   &quot;api_calls&quot;: 0,
   &quot;training_updates&quot;: 0,
-  &quot;status&quot;: &quot;PENDING_TWO_INDEPENDENT_REVIEWS&quot;,
-  &quot;limitations&quot;: [
-    &quot;Historical controlled fixtures, not new natural pages.&quot;,
-    &quot;No accuracy without an independent gold review.&quot;,
-    &quot;Current conversation knows old fixture and cannot serve as independent reviewer.&quot;
-  ]
+  &quot;interpretation&quot;: &quot;Pair agreement is reviewer consistency, not accuracy; unknown is not mapped to no.&quot;,
+  &quot;fixture_limit&quot;: &quot;Historical controlled cases; natural unseen webpage calibration remains pending.&quot;
 }</pre>
+<p>需要独立金标/第三方复核，才能讨论准确性和冻结reward。</p>

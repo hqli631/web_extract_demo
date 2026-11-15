@@ -1,0 +1,247 @@
+<!doctype html><meta charset="utf-8"><title>有限修复与回滚</title>
+<style>body{font:16px/1.8 sans-serif;max-width:1050px;margin:30px auto}pre{white-space:pre-wrap;background:#f4f6f8;padding:18px}strong{color:#08744e}</style>
+<h1>RSI 工程演示：接受修复，拒绝退化</h1>
+<p>复用已有对话 AI 编写并审核的 v1→v2 补丁，自动重放质量门禁。没有宣称云端模型已自主修复，也没有执行新模型生成代码。</p>
+<p><strong>接受：</strong>修复折叠容器中的正文漏提，3 篇历史开发回归不变，访谈问题保留。</p>
+<p><strong>拒绝并回滚：</strong>删掉首段和访谈问题的破坏性控制被门禁拒绝，活动版本仍为 v2。</p>
+<p>来源是已暴露历史页和明确合成控制；新封存测试页未读取。一次候选尝试一个门禁，不用质量换取更低轮数。</p>
+<pre>{
+  &quot;schema_version&quot;: 1,
+  &quot;status&quot;: &quot;finite_repair_and_rollback_verified&quot;,
+  &quot;cluster&quot;: &quot;chinanews_shell_v2&quot;,
+  &quot;source_scope&quot;: &quot;three historical exposed generation pages plus synthetic controls; no sealed natural test read&quot;,
+  &quot;candidate_author&quot;: &quot;current_conversation_coding_agent&quot;,
+  &quot;candidate_generation&quot;: &quot;reviewed historical v1-to-v2 patch; destructive candidate is an explicit output-mutation control&quot;,
+  &quot;autonomous_new_patch_generation&quot;: false,
+  &quot;cloud_model_candidates_executed&quot;: false,
+  &quot;synthetic_quality_controls&quot;: true,
+  &quot;maximum_attempts_per_case&quot;: 2,
+  &quot;rounds&quot;: [
+    {
+      &quot;case&quot;: &quot;folded_inline_body_missing&quot;,
+      &quot;attempt&quot;: 1,
+      &quot;before_version&quot;: &quot;learning/generated/chinanews_v1.py&quot;,
+      &quot;candidate_version&quot;: &quot;learning/generated/chinanews_v2.py&quot;,
+      &quot;before_gate&quot;: {
+        &quot;adopt&quot;: false,
+        &quot;checks&quot;: [
+          {
+            &quot;check&quot;: &quot;folded_leaf&quot;,
+            &quot;pass_check&quot;: false,
+            &quot;expected&quot;: [
+              &quot;Folded article detail remains.&quot;
+            ],
+            &quot;actual&quot;: []
+          },
+          {
+            &quot;check&quot;: &quot;interview&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected&quot;: [
+              &quot;中新社记者：您如何评价人工智能合作？&quot;,
+              &quot;受访者：应当加强交流。&quot;
+            ],
+            &quot;actual&quot;: [
+              &quot;中新社记者：您如何评价人工智能合作？&quot;,
+              &quot;受访者：应当加强交流。&quot;
+            ]
+          },
+          {
+            &quot;check&quot;: &quot;nested_p&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected&quot;: [
+              &quot;Nested detail stays.&quot;
+            ],
+            &quot;actual&quot;: [
+              &quot;Nested detail stays.&quot;
+            ]
+          },
+          {
+            &quot;check&quot;: &quot;samples/xpath_practice.html&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected_sha256&quot;: &quot;8562e160c0520eeccb57b39713b3c496c0de3f0dff2eb48a96c4f152bc2560cf&quot;,
+            &quot;actual_sha256&quot;: &quot;8562e160c0520eeccb57b39713b3c496c0de3f0dff2eb48a96c4f152bc2560cf&quot;
+          },
+          {
+            &quot;check&quot;: &quot;samples/xpath_practice_02.html&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected_sha256&quot;: &quot;18b7f0660e2c68424b0c17d36cbf9af64bed671676a81ceccea743abbe8d3d68&quot;,
+            &quot;actual_sha256&quot;: &quot;18b7f0660e2c68424b0c17d36cbf9af64bed671676a81ceccea743abbe8d3d68&quot;
+          },
+          {
+            &quot;check&quot;: &quot;samples/xpath_practice_03.html&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected_sha256&quot;: &quot;bbd3f6e6ce2230fd049f0575926494fb679840024733d4d3cd0cd8d219c3e1cd&quot;,
+            &quot;actual_sha256&quot;: &quot;bbd3f6e6ce2230fd049f0575926494fb679840024733d4d3cd0cd8d219c3e1cd&quot;
+          }
+        ]
+      },
+      &quot;candidate_gate&quot;: {
+        &quot;adopt&quot;: true,
+        &quot;checks&quot;: [
+          {
+            &quot;check&quot;: &quot;folded_leaf&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected&quot;: [
+              &quot;Folded article detail remains.&quot;
+            ],
+            &quot;actual&quot;: [
+              &quot;Folded article detail remains.&quot;
+            ]
+          },
+          {
+            &quot;check&quot;: &quot;interview&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected&quot;: [
+              &quot;中新社记者：您如何评价人工智能合作？&quot;,
+              &quot;受访者：应当加强交流。&quot;
+            ],
+            &quot;actual&quot;: [
+              &quot;中新社记者：您如何评价人工智能合作？&quot;,
+              &quot;受访者：应当加强交流。&quot;
+            ]
+          },
+          {
+            &quot;check&quot;: &quot;nested_p&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected&quot;: [
+              &quot;Nested detail stays.&quot;
+            ],
+            &quot;actual&quot;: [
+              &quot;Nested detail stays.&quot;
+            ]
+          },
+          {
+            &quot;check&quot;: &quot;samples/xpath_practice.html&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected_sha256&quot;: &quot;8562e160c0520eeccb57b39713b3c496c0de3f0dff2eb48a96c4f152bc2560cf&quot;,
+            &quot;actual_sha256&quot;: &quot;8562e160c0520eeccb57b39713b3c496c0de3f0dff2eb48a96c4f152bc2560cf&quot;
+          },
+          {
+            &quot;check&quot;: &quot;samples/xpath_practice_02.html&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected_sha256&quot;: &quot;18b7f0660e2c68424b0c17d36cbf9af64bed671676a81ceccea743abbe8d3d68&quot;,
+            &quot;actual_sha256&quot;: &quot;18b7f0660e2c68424b0c17d36cbf9af64bed671676a81ceccea743abbe8d3d68&quot;
+          },
+          {
+            &quot;check&quot;: &quot;samples/xpath_practice_03.html&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected_sha256&quot;: &quot;bbd3f6e6ce2230fd049f0575926494fb679840024733d4d3cd0cd8d219c3e1cd&quot;,
+            &quot;actual_sha256&quot;: &quot;bbd3f6e6ce2230fd049f0575926494fb679840024733d4d3cd0cd8d219c3e1cd&quot;
+          }
+        ]
+      },
+      &quot;action&quot;: &quot;adopt&quot;,
+      &quot;active_after&quot;: {
+        &quot;version&quot;: &quot;chinanews_v2&quot;,
+        &quot;sha256&quot;: &quot;9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2&quot;
+      },
+      &quot;rationale&quot;: &quot;Keep meaningful inline-only hidden body wrapper; existing three pages, interview question and nested paragraph must remain unchanged.&quot;
+    },
+    {
+      &quot;case&quot;: &quot;destructive_deletion_candidate&quot;,
+      &quot;attempt&quot;: 1,
+      &quot;candidate_kind&quot;: &quot;deterministic output mutation: remove first natural paragraph and interview question&quot;,
+      &quot;removed_interview_question&quot;: &quot;中新社记者：您如何评价人工智能合作？&quot;,
+      &quot;removed_natural_block&quot;: {
+        &quot;kind&quot;: &quot;paragraph&quot;,
+        &quot;text&quot;: &quot;中新网10月30日电 公安部30日在官网发布公告称，为贯彻落实修订后的治安管理处罚法、行政处罚法等法律法规，进一步规范公安行政执法，提高公安机关行政案件办理质量和执法水平，经充分调研论证，公安部起草了《公安机关办理行政案件程序规定(修订征求意见稿)》，向社会公开征求意见。&quot;,
+        &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]&quot;
+      },
+      &quot;candidate_gate&quot;: {
+        &quot;adopt&quot;: false,
+        &quot;checks&quot;: [
+          {
+            &quot;check&quot;: &quot;samples/xpath_practice.html&quot;,
+            &quot;pass_check&quot;: false,
+            &quot;expected_sha256&quot;: &quot;8562e160c0520eeccb57b39713b3c496c0de3f0dff2eb48a96c4f152bc2560cf&quot;,
+            &quot;actual_sha256&quot;: &quot;e5601c25ce2fda28e1414efb1cec2c7dcdc017fc6ce48db8e8a4307e1ab59c05&quot;
+          },
+          {
+            &quot;check&quot;: &quot;samples/xpath_practice_02.html&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected_sha256&quot;: &quot;18b7f0660e2c68424b0c17d36cbf9af64bed671676a81ceccea743abbe8d3d68&quot;,
+            &quot;actual_sha256&quot;: &quot;18b7f0660e2c68424b0c17d36cbf9af64bed671676a81ceccea743abbe8d3d68&quot;
+          },
+          {
+            &quot;check&quot;: &quot;samples/xpath_practice_03.html&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected_sha256&quot;: &quot;bbd3f6e6ce2230fd049f0575926494fb679840024733d4d3cd0cd8d219c3e1cd&quot;,
+            &quot;actual_sha256&quot;: &quot;bbd3f6e6ce2230fd049f0575926494fb679840024733d4d3cd0cd8d219c3e1cd&quot;
+          },
+          {
+            &quot;check&quot;: &quot;folded_leaf&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected_sha256&quot;: &quot;a2f56c4608d903582644fe5ff124947ae5e42c9e3ae9f743860f82d46c7716c9&quot;,
+            &quot;actual_sha256&quot;: &quot;a2f56c4608d903582644fe5ff124947ae5e42c9e3ae9f743860f82d46c7716c9&quot;
+          },
+          {
+            &quot;check&quot;: &quot;interview&quot;,
+            &quot;pass_check&quot;: false,
+            &quot;expected_sha256&quot;: &quot;df43cd616dc4a3deeb39988583c536e00dfe547ac50544c9dc32179dc56f93b5&quot;,
+            &quot;actual_sha256&quot;: &quot;e06f9da720fe4256c7e7285c458fc3a99102224bcd0f33840dd1d8dfa8568a5d&quot;
+          },
+          {
+            &quot;check&quot;: &quot;nested_p&quot;,
+            &quot;pass_check&quot;: true,
+            &quot;expected_sha256&quot;: &quot;793f801cead7b3f6b0dda7391bab64efa250dbbb3ab31c0b6e09ceb547a651e7&quot;,
+            &quot;actual_sha256&quot;: &quot;793f801cead7b3f6b0dda7391bab64efa250dbbb3ab31c0b6e09ceb547a651e7&quot;
+          }
+        ]
+      },
+      &quot;action&quot;: &quot;reject_and_rollback&quot;,
+      &quot;active_after&quot;: {
+        &quot;version&quot;: &quot;chinanews_v2&quot;,
+        &quot;sha256&quot;: &quot;9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2&quot;
+      },
+      &quot;rationale&quot;: &quot;Regression gate detects removed content. Keep the accepted code hash; candidate is never activated.&quot;
+    }
+  ],
+  &quot;sources&quot;: [
+    {
+      &quot;path&quot;: &quot;samples/xpath_practice.html&quot;,
+      &quot;sha256&quot;: &quot;ce107f27354964c4f31b06b5a7731963e8b7edab9c228e07f23fbfd2c9a82c5d&quot;,
+      &quot;exposure&quot;: &quot;historical_exposed&quot;
+    },
+    {
+      &quot;path&quot;: &quot;samples/xpath_practice_02.html&quot;,
+      &quot;sha256&quot;: &quot;601ced823ca9912cacac2d0ddc3ae0e94f43f4b8b63a541f917d3e32a122aae5&quot;,
+      &quot;exposure&quot;: &quot;historical_exposed&quot;
+    },
+    {
+      &quot;path&quot;: &quot;samples/xpath_practice_03.html&quot;,
+      &quot;sha256&quot;: &quot;1c9dea419228915c7358d39dbbdadb9771cf26d93e65887e4949ad21d4b09bb6&quot;,
+      &quot;exposure&quot;: &quot;historical_exposed&quot;
+    }
+  ],
+  &quot;versions&quot;: [
+    {
+      &quot;version&quot;: 1,
+      &quot;path&quot;: &quot;learning/generated/chinanews_v1.py&quot;,
+      &quot;sha256&quot;: &quot;6cc49ba579af9d3dc85738ccfb5a1a24a7b6958ae32dfc724d98f44639e772ff&quot;
+    },
+    {
+      &quot;version&quot;: 2,
+      &quot;path&quot;: &quot;learning/generated/chinanews_v2.py&quot;,
+      &quot;sha256&quot;: &quot;9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2&quot;
+    }
+  ],
+  &quot;final_active&quot;: {
+    &quot;version&quot;: &quot;chinanews_v2&quot;,
+    &quot;sha256&quot;: &quot;9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2&quot;
+  },
+  &quot;costs&quot;: {
+    &quot;model_api_calls&quot;: 0,
+    &quot;gpu_training_steps&quot;: 0,
+    &quot;attempts&quot;: 2,
+    &quot;reference_extractions&quot;: 18
+  },
+  &quot;elapsed_seconds&quot;: 0.0779999999795109,
+  &quot;quality_interpretation&quot;: &quot;Deterministic regression evidence for this replay, not natural-page semantic accuracy or learned self-improvement.&quot;,
+  &quot;limitations&quot;: [
+    &quot;Uses existing reviewed patch, does not call an autonomous repair model.&quot;,
+    &quot;Rollback is a version/activation decision, not a claim of production deployment.&quot;,
+    &quot;Synthetic folded content control cannot establish hidden-node recall on all websites.&quot;,
+    &quot;Image pixels and JavaScript-generated content remain unverified.&quot;
+  ],
+  &quot;accepted_patch_sha256&quot;: &quot;d52fc9efd4ff693e8a9f8bbaeec00b7f2f5a6254e7468c4b3887588517685f53&quot;
+}</pre>

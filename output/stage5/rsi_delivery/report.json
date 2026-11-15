@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "status": "finite_repair_and_rollback_verified",
+  "cluster": "chinanews_shell_v2",
+  "source_scope": "three historical exposed generation pages plus synthetic controls; no sealed natural test read",
+  "candidate_author": "current_conversation_coding_agent",
+  "candidate_generation": "reviewed historical v1-to-v2 patch; destructive candidate is an explicit output-mutation control",
+  "autonomous_new_patch_generation": false,
+  "cloud_model_candidates_executed": false,
+  "synthetic_quality_controls": true,
+  "maximum_attempts_per_case": 2,
+  "rounds": [
+    {
+      "case": "folded_inline_body_missing",
+      "attempt": 1,
+      "before_version": "learning/generated/chinanews_v1.py",
+      "candidate_version": "learning/generated/chinanews_v2.py",
+      "before_gate": {
+        "adopt": false,
+        "checks": [
+          {
+            "check": "folded_leaf",
+            "pass_check": false,
+            "expected": [
+              "Folded article detail remains."
+            ],
+            "actual": []
+          },
+          {
+            "check": "interview",
+            "pass_check": true,
+            "expected": [
+              "中新社记者：您如何评价人工智能合作？",
+              "受访者：应当加强交流。"
+            ],
+            "actual": [
+              "中新社记者：您如何评价人工智能合作？",
+              "受访者：应当加强交流。"
+            ]
+          },
+          {
+            "check": "nested_p",
+            "pass_check": true,
+            "expected": [
+              "Nested detail stays."
+            ],
+            "actual": [
+              "Nested detail stays."
+            ]
+          },
+          {
+            "check": "samples/xpath_practice.html",
+            "pass_check": true,
+            "expected_sha256": "8562e160c0520eeccb57b39713b3c496c0de3f0dff2eb48a96c4f152bc2560cf",
+            "actual_sha256": "8562e160c0520eeccb57b39713b3c496c0de3f0dff2eb48a96c4f152bc2560cf"
+          },
+          {
+            "check": "samples/xpath_practice_02.html",
+            "pass_check": true,
+            "expected_sha256": "18b7f0660e2c68424b0c17d36cbf9af64bed671676a81ceccea743abbe8d3d68",
+            "actual_sha256": "18b7f0660e2c68424b0c17d36cbf9af64bed671676a81ceccea743abbe8d3d68"
+          },
+          {
+            "check": "samples/xpath_practice_03.html",
+            "pass_check": true,
+            "expected_sha256": "bbd3f6e6ce2230fd049f0575926494fb679840024733d4d3cd0cd8d219c3e1cd",
+            "actual_sha256": "bbd3f6e6ce2230fd049f0575926494fb679840024733d4d3cd0cd8d219c3e1cd"
+          }
+        ]
+      },
+      "candidate_gate": {
+        "adopt": true,
+        "checks": [
+          {
+            "check": "folded_leaf",
+            "pass_check": true,
+            "expected": [
+              "Folded article detail remains."
+            ],
+            "actual": [
+              "Folded article detail remains."
+            ]
+          },
+          {
+            "check": "interview",
+            "pass_check": true,
+            "expected": [
+              "中新社记者：您如何评价人工智能合作？",
+              "受访者：应当加强交流。"
+            ],
+            "actual": [
+              "中新社记者：您如何评价人工智能合作？",
+              "受访者：应当加强交流。"
+            ]
+          },
+          {
+            "check": "nested_p",
+            "pass_check": true,
+            "expected": [
+              "Nested detail stays."
+            ],
+            "actual": [
+              "Nested detail stays."
+            ]
+          },
+          {
+            "check": "samples/xpath_practice.html",
+            "pass_check": true,
+            "expected_sha256": "8562e160c0520eeccb57b39713b3c496c0de3f0dff2eb48a96c4f152bc2560cf",
+            "actual_sha256": "8562e160c0520eeccb57b39713b3c496c0de3f0dff2eb48a96c4f152bc2560cf"
+          },
+          {
+            "check": "samples/xpath_practice_02.html",
+            "pass_check": true,
+            "expected_sha256": "18b7f0660e2c68424b0c17d36cbf9af64bed671676a81ceccea743abbe8d3d68",
+            "actual_sha256": "18b7f0660e2c68424b0c17d36cbf9af64bed671676a81ceccea743abbe8d3d68"
+          },
+          {
+            "check": "samples/xpath_practice_03.html",
+            "pass_check": true,
+            "expected_sha256": "bbd3f6e6ce2230fd049f0575926494fb679840024733d4d3cd0cd8d219c3e1cd",
+            "actual_sha256": "bbd3f6e6ce2230fd049f0575926494fb679840024733d4d3cd0cd8d219c3e1cd"
+          }
+        ]
+      },
+      "action": "adopt",
+      "active_after": {
+        "version": "chinanews_v2",
+        "sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2"
+      },
+      "rationale": "Keep meaningful inline-only hidden body wrapper; existing three pages, interview question and nested paragraph must remain unchanged."
+    },
+    {
+      "case": "destructive_deletion_candidate",
+      "attempt": 1,
+      "candidate_kind": "deterministic output mutation: remove first natural paragraph and interview question",
+      "removed_interview_question": "中新社记者：您如何评价人工智能合作？",
+      "removed_natural_block": {
+        "kind": "paragraph",
+        "text": "中新网10月30日电 公安部30日在官网发布公告称，为贯彻落实修订后的治安管理处罚法、行政处罚法等法律法规，进一步规范公安行政执法，提高公安机关行政案件办理质量和执法水平，经充分调研论证，公安部起草了《公安机关办理行政案件程序规定(修订征求意见稿)》，向社会公开征求意见。",
+        "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]"
+      },
+      "candidate_gate": {
+        "adopt": false,
+        "checks": [
+          {
+            "check": "samples/xpath_practice.html",
+            "pass_check": false,
+            "expected_sha256": "8562e160c0520eeccb57b39713b3c496c0de3f0dff2eb48a96c4f152bc2560cf",
+            "actual_sha256": "e5601c25ce2fda28e1414efb1cec2c7dcdc017fc6ce48db8e8a4307e1ab59c05"
+          },
+          {
+            "check": "samples/xpath_practice_02.html",
+            "pass_check": true,
+            "expected_sha256": "18b7f0660e2c68424b0c17d36cbf9af64bed671676a81ceccea743abbe8d3d68",
+            "actual_sha256": "18b7f0660e2c68424b0c17d36cbf9af64bed671676a81ceccea743abbe8d3d68"
+          },
+          {
+            "check": "samples/xpath_practice_03.html",
+            "pass_check": true,
+            "expected_sha256": "bbd3f6e6ce2230fd049f0575926494fb679840024733d4d3cd0cd8d219c3e1cd",
+            "actual_sha256": "bbd3f6e6ce2230fd049f0575926494fb679840024733d4d3cd0cd8d219c3e1cd"
+          },
+          {
+            "check": "folded_leaf",
+            "pass_check": true,
+            "expected_sha256": "a2f56c4608d903582644fe5ff124947ae5e42c9e3ae9f743860f82d46c7716c9",
+            "actual_sha256": "a2f56c4608d903582644fe5ff124947ae5e42c9e3ae9f743860f82d46c7716c9"
+          },
+          {
+            "check": "interview",
+            "pass_check": false,
+            "expected_sha256": "df43cd616dc4a3deeb39988583c536e00dfe547ac50544c9dc32179dc56f93b5",
+            "actual_sha256": "e06f9da720fe4256c7e7285c458fc3a99102224bcd0f33840dd1d8dfa8568a5d"
+          },
+          {
+            "check": "nested_p",
+            "pass_check": true,
+            "expected_sha256": "793f801cead7b3f6b0dda7391bab64efa250dbbb3ab31c0b6e09ceb547a651e7",
+            "actual_sha256": "793f801cead7b3f6b0dda7391bab64efa250dbbb3ab31c0b6e09ceb547a651e7"
+          }
+        ]
+      },
+      "action": "reject_and_rollback",
+      "active_after": {
+        "version": "chinanews_v2",
+        "sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2"
+      },
+      "rationale": "Regression gate detects removed content. Keep the accepted code hash; candidate is never activated."
+    }
+  ],
+  "sources": [
+    {
+      "path": "samples/xpath_practice.html",
+      "sha256": "ce107f27354964c4f31b06b5a7731963e8b7edab9c228e07f23fbfd2c9a82c5d",
+      "exposure": "historical_exposed"
+    },
+    {
+      "path": "samples/xpath_practice_02.html",
+      "sha256": "601ced823ca9912cacac2d0ddc3ae0e94f43f4b8b63a541f917d3e32a122aae5",
+      "exposure": "historical_exposed"
+    },
+    {
+      "path": "samples/xpath_practice_03.html",
+      "sha256": "1c9dea419228915c7358d39dbbdadb9771cf26d93e65887e4949ad21d4b09bb6",
+      "exposure": "historical_exposed"
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "path": "learning/generated/chinanews_v1.py",
+      "sha256": "6cc49ba579af9d3dc85738ccfb5a1a24a7b6958ae32dfc724d98f44639e772ff"
+    },
+    {
+      "version": 2,
+      "path": "learning/generated/chinanews_v2.py",
+      "sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2"
+    }
+  ],
+  "final_active": {
+    "version": "chinanews_v2",
+    "sha256": "9b2f47fd572bbb103b910a01292a43ccabebdc30a7e62bdbc42fa3177aa43ff2"
+  },
+  "costs": {
+    "model_api_calls": 0,
+    "gpu_training_steps": 0,
+    "attempts": 2,
+    "reference_extractions": 18
+  },
+  "elapsed_seconds": 0.0779999999795109,
+  "quality_interpretation": "Deterministic regression evidence for this replay, not natural-page semantic accuracy or learned self-improvement.",
+  "limitations": [
+    "Uses existing reviewed patch, does not call an autonomous repair model.",
+    "Rollback is a version/activation decision, not a claim of production deployment.",
+    "Synthetic folded content control cannot establish hidden-node recall on all websites.",
+    "Image pixels and JavaScript-generated content remain unverified."
+  ],
+  "accepted_patch_sha256": "d52fc9efd4ff693e8a9f8bbaeec00b7f2f5a6254e7468c4b3887588517685f53"
+}

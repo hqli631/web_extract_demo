@@ -1,0 +1,71 @@
+{
+  "calibration_id": "rubrics-calibration-v1",
+  "task_sha256": "0710f2da01af30052fda9e23a5da6ea38a3a8552009f272c57b832dab8c5c085",
+  "cases": 14,
+  "questions": 5,
+  "pair_count": 70,
+  "per_question": {
+    "Q1": {
+      "same": 14,
+      "different": 0,
+      "unknown_in_pair": 0
+    },
+    "Q2": {
+      "same": 13,
+      "different": 1,
+      "unknown_in_pair": 1
+    },
+    "Q3": {
+      "same": 13,
+      "different": 1,
+      "unknown_in_pair": 1
+    },
+    "Q4": {
+      "same": 14,
+      "different": 0,
+      "unknown_in_pair": 0
+    },
+    "Q5": {
+      "same": 13,
+      "different": 1,
+      "unknown_in_pair": 0
+    }
+  },
+  "overall_pair_agreement": 0.9571428571428572,
+  "disagreements": [
+    {
+      "case_id": "blind_04",
+      "question": "Q5",
+      "reviewer_1": "yes",
+      "reviewer_2": "no",
+      "reason_1": "正文事实与顺序忠实无重复；错标题由Q1主评，避免同一错误重复扣分。",
+      "reason_2": "现有输出的标题另一篇无关新闻不来自源主标题，是无源依据的内容替换；正文事实与顺序本身对应。Q5未将标题排除出已输出内容。"
+    },
+    {
+      "case_id": "blind_09",
+      "question": "Q2",
+      "reviewer_1": "unknown",
+      "reviewer_2": "yes",
+      "reason_1": "图解主导文章只有导语及空alt图片；未提供图片像素或替代文字，无法核实主要事实及结构化信息的完整性。",
+      "reason_2": "完整静态源DOM的唯一叙述段为请看试点图解，输出o01完整保留；图片内文字不在本任务范围。"
+    },
+    {
+      "case_id": "blind_09",
+      "question": "Q3",
+      "reviewer_1": "unknown",
+      "reviewer_2": "yes",
+      "reason_1": "图解主导文章只有导语及空alt图片；未提供图片像素或替代文字，无法核实主要事实及结构化信息的完整性。",
+      "reason_2": "完整source_html及记录清单仅含h1、导语和alt为空的img，无表格、列表或文字图说。图片内信息已被rubric明确排除。"
+    }
+  ],
+  "independent_human_gold": false,
+  "accuracy": null,
+  "reward_frozen": false,
+  "grpo_ready": false,
+  "independent_review_declared": true,
+  "independent_context_verified_by_program": false,
+  "api_calls": 0,
+  "training_updates": 0,
+  "interpretation": "Pair agreement is reviewer consistency, not accuracy; unknown is not mapped to no.",
+  "fixture_limit": "Historical controlled cases; natural unseen webpage calibration remains pending."
+}

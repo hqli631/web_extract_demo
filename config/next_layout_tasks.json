@@ -1,0 +1,149 @@
+{
+  "format_version": 1,
+  "status": "registered",
+  "purpose": "Preregistered natural same-layout page holdouts; not whole-layout holdouts",
+  "known_exposed_task_ids": [
+    "sina_shell_v2",
+    "chinanews_shell_v2"
+  ],
+  "clusters": [
+    {
+      "task_id": "python_sphinx_v1",
+      "layout_family": "Sphinx documentation",
+      "status": "ready",
+      "pages": [
+        {
+          "path": "data/natural_v1/python_sphinx_v1/train_1.html",
+          "url": "https://docs.python.org/3.12/tutorial/introduction.html",
+          "sha256": "44f030b58bc1c0521c688457450a3f8ca14b20848e4221827fd205fb680eb5db",
+          "role": "train",
+          "exposure": "new",
+          "development_inspected": true
+        },
+        {
+          "path": "data/natural_v1/python_sphinx_v1/train_2.html",
+          "url": "https://docs.python.org/3.12/tutorial/controlflow.html",
+          "sha256": "71794fe4d941f7dd1ba7b1b125d5bc371cf77b06f250bbf07673f89f6a6d0a31",
+          "role": "train",
+          "exposure": "new",
+          "development_inspected": true
+        },
+        {
+          "path": "data/natural_v1/python_sphinx_v1/dev_3.html",
+          "url": "https://docs.python.org/3.12/tutorial/datastructures.html",
+          "sha256": "3f75467774125149c1d97995193f18332043f666c711dd33b81a4fcb719a3920",
+          "role": "dev",
+          "exposure": "new",
+          "development_inspected": true
+        },
+        {
+          "path": "data/natural_v1/python_sphinx_v1/test_4.html",
+          "url": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+          "sha256": "bd064c24cd5fdc74cc50b0d96cf4ff0bc713ac99b4e4d6a4c0cee3d7b24f92b3",
+          "role": "test",
+          "exposure": "new",
+          "development_inspected": false
+        }
+      ],
+      "target_code": {
+        "path": "learning/generated/python_sphinx_v1.py",
+        "sha256": "af090591168ab1deba594c43902f3793947b1d19216a5754c6423f8277840f03",
+        "reviewed_by": "current_conversation_subagent",
+        "review_scope": "train/dev source evidence and contract; no test inspection"
+      },
+      "notes": "2 training pages are one code-generation task; development inspected, test bytes stored but DOM not inspected. Not a cross-layout test."
+    },
+    {
+      "task_id": "sqlite_document_v1",
+      "layout_family": "SQLite technical document",
+      "status": "ready",
+      "pages": [
+        {
+          "path": "data/natural_v1/sqlite_document_v1/train_1.html",
+          "url": "https://www.sqlite.org/whentouse.html",
+          "sha256": "d0850096c26e9c888acaf2d6e2ac029e86f66f51a87461b77b94f1639d309b79",
+          "role": "train",
+          "exposure": "new",
+          "development_inspected": true
+        },
+        {
+          "path": "data/natural_v1/sqlite_document_v1/train_2.html",
+          "url": "https://www.sqlite.org/atomiccommit.html",
+          "sha256": "5a5be7b660217c9408c8a81eaf2faa2d08832ed3790f895a0a713916ad856ea1",
+          "role": "train",
+          "exposure": "new",
+          "development_inspected": true
+        },
+        {
+          "path": "data/natural_v1/sqlite_document_v1/dev_3.html",
+          "url": "https://www.sqlite.org/datatype3.html",
+          "sha256": "4eaab766411136c123d392b2a931c69106a60a616f5a52536eacc79729816fe1",
+          "role": "dev",
+          "exposure": "new",
+          "development_inspected": true
+        },
+        {
+          "path": "data/natural_v1/sqlite_document_v1/test_4.html",
+          "url": "https://www.sqlite.org/lockingv3.html",
+          "sha256": "fa67031159fc0658b6e3fcfa4e446c140838c75cb813ff9fafd47fdae927936f",
+          "role": "test",
+          "exposure": "new",
+          "development_inspected": false
+        }
+      ],
+      "target_code": {
+        "path": "learning/generated/sqlite_document_v1.py",
+        "sha256": "6bb5b9c4761a601cb72595396994315e17ffe2fd989e4ddf3c57da66f9c2850b",
+        "reviewed_by": "current_conversation_subagent",
+        "review_scope": "train/dev source evidence and contract; no test inspection"
+      },
+      "notes": "2 training pages are one code-generation task; development inspected, test bytes stored but DOM not inspected. Not a cross-layout test."
+    },
+    {
+      "task_id": "pg_essay_v1",
+      "layout_family": "Legacy table/font essay",
+      "status": "ready",
+      "pages": [
+        {
+          "path": "data/natural_v1/pg_essay_v1/train_1.html",
+          "url": "https://www.paulgraham.com/avg.html",
+          "sha256": "beb172c328102098dfd5fda91dc86e8899e563f34cccb4bce285f6b0ff0d809b",
+          "role": "train",
+          "exposure": "new",
+          "development_inspected": true
+        },
+        {
+          "path": "data/natural_v1/pg_essay_v1/train_2.html",
+          "url": "https://www.paulgraham.com/wealth.html",
+          "sha256": "a5f0d6cd7f29d2724af1bfbe1efc66f1de79d16d7bd6ada9c2cb79f16cef51f3",
+          "role": "train",
+          "exposure": "new",
+          "development_inspected": true
+        },
+        {
+          "path": "data/natural_v1/pg_essay_v1/dev_3.html",
+          "url": "https://www.paulgraham.com/essay.html",
+          "sha256": "db1035122e22995ec251242bed7f89696f162ac8b6863cee0f220f367b2cd7b3",
+          "role": "dev",
+          "exposure": "new",
+          "development_inspected": true
+        },
+        {
+          "path": "data/natural_v1/pg_essay_v1/test_4.html",
+          "url": "https://www.paulgraham.com/greatwork.html",
+          "sha256": "5991806c7c899e9adb70199dd101edfe65d58e97a09ab38abc6b693d43b2e60d",
+          "role": "test",
+          "exposure": "new",
+          "development_inspected": false
+        }
+      ],
+      "target_code": {
+        "path": "learning/generated/pg_essay_v1.py",
+        "sha256": "def383a785ea755a8fb3ef97f7ce68a6f0c6b4bef4ef336db6a648285e9bcc6c",
+        "reviewed_by": "current_conversation_subagent",
+        "review_scope": "train/dev source evidence and contract; no test inspection"
+      },
+      "notes": "2 training pages are one code-generation task; development inspected, test bytes stored but DOM not inspected. Not a cross-layout test."
+    }
+  ]
+}

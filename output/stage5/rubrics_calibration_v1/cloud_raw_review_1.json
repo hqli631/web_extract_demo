@@ -1,0 +1,122 @@
+{
+  "reviewer": "isolated_base_qwen_context_1",
+  "model_id": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+  "revision": "ea3f2471cf1b1f0db85067f1ef93848e38e88c25",
+  "independent_contexts": true,
+  "independent_model_family": false,
+  "seconds": 15.628467803000603,
+  "cases": [
+    {
+      "case_id": "blind_01",
+      "text": "{\n  \"id\": \"Q1\",\n  \"verdict\": \"yes\",\n  \"reason\": \"标题是忠实的，但原文中并没有提供具体的信息。\",\n  \"source_evidence\": [],\n  \"output_evidence\": \"标题是忠实的，但原文中并没有提供具体的信息。\"\n}",
+      "prompt_sha256": "b34413a61382e517f95073fe2965e4963ed956fe5ab5fda9a2190b377afd3eef",
+      "prompt_tokens": 3840,
+      "output_tokens": 65,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_02",
+      "text": "{\n  \"id\": \"Q1\",\n  \"verdict\": \"yes\",\n  \"reason\": \"标题是忠实的，但没有提供原文事实。\",\n  \"source_evidence\": [],\n  \"output_evidence\": \"标题是忠实的，但没有提供原文事实。\"\n}",
+      "prompt_sha256": "4226087d5a9916cadda70e6050cef332a0dd8919a1a462b304eb6124652f9944",
+      "prompt_tokens": 3836,
+      "output_tokens": 61,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_03",
+      "text": "{\n  \"Q1\": \"no\",\n  \"Q2\": \"yes\",\n  \"Q3\": \"yes\",\n  \"Q4\": \"yes\",\n  \"Q5\": \"yes\"\n}",
+      "prompt_sha256": "90bc6b43a868b01dfa43aa7b6a1b7cf2303ff84e0f3c1d7b66e0193720ad4b41",
+      "prompt_tokens": 3921,
+      "output_tokens": 43,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_04",
+      "text": "```json\n{\n  \"id\": \"Q1\",\n  \"verdict\": \"yes\",\n  \"reason\": \"The extracted title '访谈：社区如何使用人工智能' is consistent with the source article's main title.\",\n  \"source_evidence\": \"The extracted title is directly stated in the source text.\",\n  \"output_evidence\": \"The extracted title is consistent with the source article's main title.\"\n}\n```",
+      "prompt_sha256": "e21abb1148a170d02f2a88c09de55548fb937db79d7fa013e3e59413b6028f2c",
+      "prompt_tokens": 3917,
+      "output_tokens": 87,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_05",
+      "text": "{\n  \"id\": \"Q1\",\n  \"verdict\": \"yes\",\n  \"reason\": \"The extracted title '访谈：社区如何使用人工智能' is consistent with the source text.\",\n  \"source_evidence\": \"The extracted title is directly stated in the source text.\",\n  \"output_evidence\": \"The extracted title is consistent with the source text.\"\n}",
+      "prompt_sha256": "7060f02c48b75b17c162dadd208779e44b94b316e60d72548da6d4f62bbcc449",
+      "prompt_tokens": 4016,
+      "output_tokens": 77,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_06",
+      "text": "```json\n{\n  \"Q1\": \"yes\",\n  \"Q2\": \"yes\",\n  \"Q3\": \"yes\",\n  \"Q4\": \"yes\",\n  \"Q5\": \"yes\"\n}\n```",
+      "prompt_sha256": "053c3fd68bd8c01f3398b493595eec37fc9c2388d9352dd315add6058e421c28",
+      "prompt_tokens": 3959,
+      "output_tokens": 47,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_07",
+      "text": "```json\n{\n  \"Q1\": \"yes\",\n  \"Q2\": \"yes\",\n  \"Q3\": \"yes\",\n  \"Q4\": \"yes\",\n  \"Q5\": \"yes\"\n}\n```",
+      "prompt_sha256": "093459c4099050ea53b8074bb9bee90465e10508cba9a1cefc851dbb8129ca9f",
+      "prompt_tokens": 3967,
+      "output_tokens": 47,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_08",
+      "text": "```json\n{\n  \"Q1\": \"yes\",\n  \"Q2\": \"yes\",\n  \"Q3\": \"yes\",\n  \"Q4\": \"yes\",\n  \"Q5\": \"yes\"\n}\n```",
+      "prompt_sha256": "cbbaf01f7f978b22485e9022b2493bb477dc2fe8b8c198d14e741d35d72b1263",
+      "prompt_tokens": 3960,
+      "output_tokens": 47,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_09",
+      "text": "{\n  \"Q1\": \"no\",\n  \"Q2\": \"yes\",\n  \"Q3\": \"yes\",\n  \"Q4\": \"yes\",\n  \"Q5\": \"yes\"\n}",
+      "prompt_sha256": "ec2e611dd38d812848de7d1d584db2eb2b9c5d25481755cda91df62f1d84b13f",
+      "prompt_tokens": 1101,
+      "output_tokens": 43,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_10",
+      "text": "{\n  \"id\": \"Q1\",\n  \"verdict\": \"yes\",\n  \"reason\": \"标题是忠实的，但没有提供原文事实。\",\n  \"source_evidence\": [],\n  \"output_evidence\": \"标题是忠实的，但没有提供原文事实。\"\n}",
+      "prompt_sha256": "b95073dfbe6c5a9832c56023511ca1f1d6bbe5ff6d1458418032623db765d7f8",
+      "prompt_tokens": 3921,
+      "output_tokens": 61,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_11",
+      "text": "```json\n{\n  \"Q1\": \"yes\",\n  \"Q2\": \"yes\",\n  \"Q3\": \"yes\",\n  \"Q4\": \"yes\",\n  \"Q5\": \"yes\"\n}\n```",
+      "prompt_sha256": "1aefc0b342b939ee036ffe7d674429f0117bab7ce1bc945f0dbf641dcb89bf33",
+      "prompt_tokens": 3826,
+      "output_tokens": 47,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_12",
+      "text": "```json\n{\n  \"id\": \"Q1\",\n  \"verdict\": \"yes\",\n  \"reason\": \"The extracted title '访谈：社区如何使用人工智能' is consistent with the source text.\",\n  \"source_evidence\": [],\n  \"output_evidence\": \"The extracted title '访谈：社区如何使用人工智能' is consistent with the source text.\"\n}\n```",
+      "prompt_sha256": "c88bb7d545b82380839a33efd17decf4e090be93318c778af35993289e860bff",
+      "prompt_tokens": 3815,
+      "output_tokens": 78,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_13",
+      "text": "{\n  \"id\": \"Q1\",\n  \"verdict\": \"yes\",\n  \"reason\": \"标题是忠实的，但原文中并没有提供具体的信息。\",\n  \"source_evidence\": [],\n  \"output_evidence\": \"标题是忠实的，但原文中并没有提供具体的信息。\"\n}",
+      "prompt_sha256": "6dc1e5a634ca355ccc1508b7e9ca89a927adc1b8d142de80ba39d9d31ade51f6",
+      "prompt_tokens": 3842,
+      "output_tokens": 65,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_14",
+      "text": "{\n  \"Q1\": \"no\",\n  \"Q2\": \"yes\",\n  \"Q3\": \"yes\",\n  \"Q4\": \"yes\",\n  \"Q5\": \"yes\"\n}",
+      "prompt_sha256": "37bbae3f130ef64eebc7b3412c0b74a7447bdbbdbd12f395a0b591fc43922e2b",
+      "prompt_tokens": 3970,
+      "output_tokens": 43,
+      "truncated": false
+    }
+  ]
+}

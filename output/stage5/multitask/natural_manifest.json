@@ -1,0 +1,171 @@
+{
+  "format_version": 1,
+  "preregistration_path": "config/natural_expansion_v1.json",
+  "preregistration_sha256": "de3ab760450bb74af747f56806d042dd9ec97b8529b045728165ad29cd792a32",
+  "test_dom_inspected": false,
+  "clusters": [
+    {
+      "task_id": "python_sphinx_v1",
+      "layout_family": "Sphinx documentation",
+      "pages": [
+        {
+          "role": "train",
+          "url": "https://docs.python.org/3.12/tutorial/introduction.html",
+          "path": "data/natural_v1/python_sphinx_v1/train_1.html",
+          "sha256": "44f030b58bc1c0521c688457450a3f8ca14b20848e4221827fd205fb680eb5db",
+          "bytes": 70328,
+          "final_url": "https://docs.python.org/3.12/tutorial/introduction.html",
+          "content_type": "text/html",
+          "exposure": "development_exposed",
+          "fetched_at": "2026-11-15T05:51:39Z",
+          "status": "downloaded"
+        },
+        {
+          "role": "train",
+          "url": "https://docs.python.org/3.12/tutorial/controlflow.html",
+          "path": "data/natural_v1/python_sphinx_v1/train_2.html",
+          "sha256": "71794fe4d941f7dd1ba7b1b125d5bc371cf77b06f250bbf07673f89f6a6d0a31",
+          "bytes": 137694,
+          "final_url": "https://docs.python.org/3.12/tutorial/controlflow.html",
+          "content_type": "text/html",
+          "exposure": "development_exposed",
+          "fetched_at": "2026-11-15T05:51:40Z",
+          "status": "downloaded"
+        },
+        {
+          "role": "dev",
+          "url": "https://docs.python.org/3.12/tutorial/datastructures.html",
+          "path": "data/natural_v1/python_sphinx_v1/dev_3.html",
+          "sha256": "3f75467774125149c1d97995193f18332043f666c711dd33b81a4fcb719a3920",
+          "bytes": 96503,
+          "final_url": "https://docs.python.org/3.12/tutorial/datastructures.html",
+          "content_type": "text/html",
+          "exposure": "development_exposed",
+          "fetched_at": "2026-11-15T05:51:41Z",
+          "status": "downloaded"
+        },
+        {
+          "role": "test",
+          "url": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+          "path": "data/natural_v1/python_sphinx_v1/test_4.html",
+          "sha256": "bd064c24cd5fdc74cc50b0d96cf4ff0bc713ac99b4e4d6a4c0cee3d7b24f92b3",
+          "bytes": 76076,
+          "final_url": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+          "content_type": "text/html",
+          "exposure": "new",
+          "fetched_at": "2026-11-15T05:51:42Z",
+          "status": "downloaded"
+        }
+      ]
+    },
+    {
+      "task_id": "sqlite_document_v1",
+      "layout_family": "SQLite technical document",
+      "pages": [
+        {
+          "role": "train",
+          "url": "https://www.sqlite.org/whentouse.html",
+          "path": "data/natural_v1/sqlite_document_v1/train_1.html",
+          "sha256": "d0850096c26e9c888acaf2d6e2ac029e86f66f51a87461b77b94f1639d309b79",
+          "bytes": 21223,
+          "final_url": "https://www.sqlite.org/whentouse.html",
+          "content_type": "text/html",
+          "exposure": "development_exposed",
+          "fetched_at": "2026-11-15T05:51:45Z",
+          "status": "downloaded"
+        },
+        {
+          "role": "train",
+          "url": "https://www.sqlite.org/atomiccommit.html",
+          "path": "data/natural_v1/sqlite_document_v1/train_2.html",
+          "sha256": "5a5be7b660217c9408c8a81eaf2faa2d08832ed3790f895a0a713916ad856ea1",
+          "bytes": 77968,
+          "final_url": "https://www.sqlite.org/atomiccommit.html",
+          "content_type": "text/html",
+          "exposure": "development_exposed",
+          "fetched_at": "2026-11-15T05:51:47Z",
+          "status": "downloaded"
+        },
+        {
+          "role": "dev",
+          "url": "https://www.sqlite.org/datatype3.html",
+          "path": "data/natural_v1/sqlite_document_v1/dev_3.html",
+          "sha256": "4eaab766411136c123d392b2a931c69106a60a616f5a52536eacc79729816fe1",
+          "bytes": 38701,
+          "final_url": "https://www.sqlite.org/datatype3.html",
+          "content_type": "text/html",
+          "exposure": "development_exposed",
+          "fetched_at": "2026-11-15T05:51:48Z",
+          "status": "downloaded"
+        },
+        {
+          "role": "test",
+          "url": "https://www.sqlite.org/lockingv3.html",
+          "path": "data/natural_v1/sqlite_document_v1/test_4.html",
+          "sha256": "fa67031159fc0658b6e3fcfa4e446c140838c75cb813ff9fafd47fdae927936f",
+          "bytes": 29892,
+          "final_url": "https://www.sqlite.org/lockingv3.html",
+          "content_type": "text/html",
+          "exposure": "new",
+          "fetched_at": "2026-11-15T05:51:50Z",
+          "status": "downloaded"
+        }
+      ]
+    },
+    {
+      "task_id": "pg_essay_v1",
+      "layout_family": "Legacy table/font essay",
+      "pages": [
+        {
+          "role": "train",
+          "url": "https://www.paulgraham.com/avg.html",
+          "path": "data/natural_v1/pg_essay_v1/train_1.html",
+          "sha256": "beb172c328102098dfd5fda91dc86e8899e563f34cccb4bce285f6b0ff0d809b",
+          "bytes": 38778,
+          "final_url": "https://www.paulgraham.com/avg.html",
+          "content_type": "text/html",
+          "exposure": "development_exposed",
+          "fetched_at": "2026-11-15T05:51:53Z",
+          "status": "downloaded"
+        },
+        {
+          "role": "train",
+          "url": "https://www.paulgraham.com/wealth.html",
+          "path": "data/natural_v1/pg_essay_v1/train_2.html",
+          "sha256": "a5f0d6cd7f29d2724af1bfbe1efc66f1de79d16d7bd6ada9c2cb79f16cef51f3",
+          "bytes": 63058,
+          "final_url": "https://www.paulgraham.com/wealth.html",
+          "content_type": "text/html",
+          "exposure": "development_exposed",
+          "fetched_at": "2026-11-15T05:51:55Z",
+          "status": "downloaded"
+        },
+        {
+          "role": "dev",
+          "url": "https://www.paulgraham.com/essay.html",
+          "path": "data/natural_v1/pg_essay_v1/dev_3.html",
+          "sha256": "db1035122e22995ec251242bed7f89696f162ac8b6863cee0f220f367b2cd7b3",
+          "bytes": 38145,
+          "final_url": "https://www.paulgraham.com/essay.html",
+          "content_type": "text/html",
+          "exposure": "development_exposed",
+          "fetched_at": "2026-11-15T05:51:57Z",
+          "status": "downloaded"
+        },
+        {
+          "role": "test",
+          "url": "https://www.paulgraham.com/greatwork.html",
+          "path": "data/natural_v1/pg_essay_v1/test_4.html",
+          "sha256": "5991806c7c899e9adb70199dd101edfe65d58e97a09ab38abc6b693d43b2e60d",
+          "bytes": 79767,
+          "final_url": "https://www.paulgraham.com/greatwork.html",
+          "content_type": "text/html",
+          "exposure": "new",
+          "fetched_at": "2026-11-15T05:52:06Z",
+          "status": "downloaded"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,122 @@
+{
+  "reviewer": "isolated_base_qwen_context_2",
+  "model_id": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+  "revision": "ea3f2471cf1b1f0db85067f1ef93848e38e88c25",
+  "independent_contexts": true,
+  "independent_model_family": false,
+  "seconds": 69.13235271400026,
+  "cases": [
+    {
+      "case_id": "blind_14",
+      "text": "```json\n{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The title '访谈：社区如何使用人工智能' is consistent with the source text.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q2\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The main narrative and conclusion are preserved in the source text.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q3\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The table and list are preserved in the source text.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q4\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The content of the article is preserved in the source text.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q5\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The output is consistent with the source text.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    }\n  ]\n}\n```",
+      "prompt_sha256": "bbdb9353e161ed7b6a2f2e8f1f9a3295642dd19808d6bae927502817533b5a37",
+      "prompt_tokens": 4013,
+      "output_tokens": 270,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_13",
+      "text": "```json\n{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The title is consistent with the source article's main title.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q2\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The main narrative, conclusion, and paragraphs are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q3\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The table, list, and graph are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q4\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The content is not excluded from the analysis.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q5\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The output is consistent with the source article's content.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    }\n  ]\n}\n```",
+      "prompt_sha256": "15633f38837f40d5a3722b73723f7d831a249b0c49a5d4cfd1fd03c514d6c5ed",
+      "prompt_tokens": 3885,
+      "output_tokens": 270,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_12",
+      "text": "```json\n{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The title is consistent with the source article's main title.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q2\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The main narrative, conclusion, and paragraphs are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q3\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The table, list, and graph are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q4\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The content is not excluded from the analysis.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q5\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The output is consistent with the source article's content.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    }\n  ]\n}\n```",
+      "prompt_sha256": "a9225ec5d8f280ae1e796fb8f2c7b77f8baa6b65a7b384062d5a227526c54407",
+      "prompt_tokens": 3858,
+      "output_tokens": 270,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_11",
+      "text": "```json\n{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The title is consistent with the source article's main title.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q2\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The main narrative, conclusion, and paragraphs are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q3\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The table, list, and graph are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q4\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The content of the article is not excluded from the output.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q5\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The output is consistent with the source article's content.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    }\n  ]\n}\n```",
+      "prompt_sha256": "da66a4bc505d509fb84c19474d676dc7242748d7fe68d2d6a6c5a1e8f077bf04",
+      "prompt_tokens": 3869,
+      "output_tokens": 273,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_10",
+      "text": "```json\n{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The title '访谈：社区如何使用人工智能' is indeed consistent with the source article's main title.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q2\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The main narrative, conclusion, and paragraph in the source article are preserved accurately.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q3\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The table, list, and graph in the source article are preserved correctly.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q4\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The content of the source article is preserved without any errors.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q5\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The output content is consistent with the source article's overall quality.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    }\n  ]\n}\n```",
+      "prompt_sha256": "afa341044a973da525f0b367c80434fd5e11580d630c8603818406aa13dca6bf",
+      "prompt_tokens": 3964,
+      "output_tokens": 286,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_09",
+      "text": "```json\n{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"verdict\": \"yes\",\n      \"reason\": \"标题 '图解：社区试点' 是忠实的，与源文章主标题一致。\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q2\",\n      \"verdict\": \"yes\",\n      \"reason\": \"主要叙述、结论和段落中的关键事实是保留完整，与源段落一致。\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q3\",\n      \"verdict\": \"yes\",\n      \"reason\": \"承载信息的表格、列表和图说等按任务约定保留，与源段落一致。\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q4\",\n      \"verdict\": \"yes\",\n      \"reason\": \"可读正文排除了导航、独立推广和编辑元数据等杂质，与源正文一致。\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q5\",\n      \"verdict\": \"yes\",\n      \"reason\": \"已输出的内容是否忠实保留原文事实与顺序，没有杜撰、失真或重复，与源正文一致。\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    }\n  ]\n}\n```",
+      "prompt_sha256": "e38375f54b155016a0a5fe7ff80c419e28914f68bbe07293ba0d75ce09769265",
+      "prompt_tokens": 1144,
+      "output_tokens": 315,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_08",
+      "text": "```json\n{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The title '访谈：社区如何使用人工智能' is consistent with the source article's main title.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q2\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The main narrative, conclusion, and paragraph are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q3\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The table, list, and graph are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q4\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The content is not excluded from the analysis.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q5\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The output is consistent with the source article's content.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    }\n  ]\n}\n```",
+      "prompt_sha256": "962e0510341dba4d7b8b24b6b75f26cc9d663d17c878a7dc7b3f467ef03cad44",
+      "prompt_tokens": 4003,
+      "output_tokens": 278,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_07",
+      "text": "```json\n{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The title '访谈：社区如何使用人工智能' is consistent with the source article's main title.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q2\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The main narrative, conclusion, and paragraph are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q3\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The table, list, and graph are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q4\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The content of the article is preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q5\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The output is consistent with the source article's content.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    }\n  ]\n}\n```",
+      "prompt_sha256": "1ef0c76509067908b9dcb74c09e3794ecdaf3ac7514831262b23ceb7260731c1",
+      "prompt_tokens": 4010,
+      "output_tokens": 281,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_06",
+      "text": "```json\n{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The title '访谈：社区如何使用人工智能' is consistent with the source article's main title.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q2\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The main narrative, conclusion, and paragraph are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q3\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The table, list, and graph are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q4\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The content is not excluded from the analysis.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q5\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The output is consistent with the source article's content.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    }\n  ]\n}\n```",
+      "prompt_sha256": "8ae6565c053e2cf6ea76db495ebc6c96b4c9cc2f7c41ed3e58a4151f6b239db6",
+      "prompt_tokens": 4002,
+      "output_tokens": 278,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_05",
+      "text": "```json\n{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The title '访谈：社区如何使用人工智能' is consistent with the source article's main title.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q2\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The main narrative, conclusion, and paragraph are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q3\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The table, list, and graph are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q4\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The content is not excluded from the output.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q5\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The output is consistent with the source article's content.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    }\n  ]\n}\n```",
+      "prompt_sha256": "fccd732baafde1255a6e9c96e7ac1846d099caf56410186a37e50de8e75a6cd1",
+      "prompt_tokens": 4059,
+      "output_tokens": 278,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_04",
+      "text": "```json\n{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The title '访谈：社区如何使用人工智能' is indeed consistent with the source article's main title.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q2\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The main narrative, conclusion, and paragraph are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q3\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The table, list, and graph are correctly retained in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q4\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The content of the article is preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q5\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The output content is consistent with the source article's overall tone and structure.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    }\n  ]\n}\n```",
+      "prompt_sha256": "c792084ae518717dbb2ca42bf56841ee5dae2124b240f2450b8f6d00d177f583",
+      "prompt_tokens": 3960,
+      "output_tokens": 287,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_03",
+      "text": "```json\n{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The title '访谈：社区如何使用人工智能' is indeed consistent with the source article's main title.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q2\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The main narrative, conclusion, and paragraph in the source article are preserved accurately.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q3\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The table, list, and graph in the source article are preserved correctly.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q4\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The content of the source article is preserved without any errors.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q5\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The output content is consistent with the source article's overall quality.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    }\n  ]\n}\n```",
+      "prompt_sha256": "d666714292a9b73e23b9592b25c051aa963f92ddddf6a802610b97c4b0e3007f",
+      "prompt_tokens": 3964,
+      "output_tokens": 286,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_02",
+      "text": "```json\n{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The title is consistent with the source article's main title.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q2\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The main narrative, conclusion, and paragraphs are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q3\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The table, list, and graph are preserved in the source article.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q4\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The content of the article is not excluded from the output.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q5\",\n      \"verdict\": \"yes\",\n      \"reason\": \"The output is consistent with the source article's content.\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    }\n  ]\n}\n```",
+      "prompt_sha256": "2f103380a00bee7a935d3e7beea0f54e861715349805392c57311c08ed43e8df",
+      "prompt_tokens": 3879,
+      "output_tokens": 273,
+      "truncated": false
+    },
+    {
+      "case_id": "blind_01",
+      "text": "```json\n{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"verdict\": \"yes\",\n      \"reason\": \"标题是忠实的，但原文中并没有提供具体的信息。\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q2\",\n      \"verdict\": \"yes\",\n      \"reason\": \"主要叙述、结论和段落中的关键事实是保留完整，但原文中并没有提供具体的信息。\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q3\",\n      \"verdict\": \"yes\",\n      \"reason\": \"承载信息的表格、列表和图说等按任务约定保留，但原文中并没有提供具体的信息。\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q4\",\n      \"verdict\": \"yes\",\n      \"reason\": \"可读正文是否排除了导航、独立推广和编辑元数据等杂质，但原文中并没有提供具体的信息。\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    },\n    {\n      \"id\": \"Q5\",\n      \"verdict\": \"yes\",\n      \"reason\": \"已输出的内容是否忠实保留原文事实与顺序，没有杜撰、失真或重复。\",\n      \"source_evidence\": [],\n      \"output_evidence\": []\n    }\n  ]\n}\n```",
+      "prompt_sha256": "78627e6254b2e478cfe41591dbbc48556ce575ccd590ea35ddc3385fde3cc928",
+      "prompt_tokens": 3883,
+      "output_tokens": 312,
+      "truncated": false
+    }
+  ]
+}

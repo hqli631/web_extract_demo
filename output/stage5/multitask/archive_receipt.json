@@ -1,0 +1,7 @@
+{
+  "sha256": "07612e8515465e1ed66453fb7d5a915c245cf78952b3b93903f646faa10a1e26",
+  "local_path": ".training-prep-cache\\final_adapters.tar.gz",
+  "verified": true,
+  "adapter_location": ".training-prep-cache/final_receipt/output/stage5/multitask/cloud_capacity120/adapter",
+  "not_committed_binary": true
+}

@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "task_id": "python_sphinx_v1",
+      "path": "data/natural_v1/python_sphinx_v1/train_1.html",
+      "role": "train",
+      "title": "3. An Informal Introduction to Python",
+      "blocks": 103,
+      "metadata": 0,
+      "excluded": 0,
+      "contract_and_source_evidence_pass": true
+    },
+    {
+      "task_id": "python_sphinx_v1",
+      "path": "data/natural_v1/python_sphinx_v1/train_2.html",
+      "role": "train",
+      "title": "4. More Control Flow Tools",
+      "blocks": 184,
+      "metadata": 0,
+      "excluded": 0,
+      "contract_and_source_evidence_pass": true
+    },
+    {
+      "task_id": "python_sphinx_v1",
+      "path": "data/natural_v1/python_sphinx_v1/dev_3.html",
+      "role": "dev",
+      "title": "5. Data Structures",
+      "blocks": 123,
+      "metadata": 0,
+      "excluded": 0,
+      "contract_and_source_evidence_pass": true
+    },
+    {
+      "task_id": "sqlite_document_v1",
+      "path": "data/natural_v1/sqlite_document_v1/train_1.html",
+      "role": "train",
+      "title": "Appropriate Uses For SQLite",
+      "blocks": 9,
+      "metadata": 1,
+      "excluded": 0,
+      "contract_and_source_evidence_pass": true
+    },
+    {
+      "task_id": "sqlite_document_v1",
+      "path": "data/natural_v1/sqlite_document_v1/train_2.html",
+      "role": "train",
+      "title": "Atomic Commit In SQLite",
+      "blocks": 172,
+      "metadata": 1,
+      "excluded": 0,
+      "contract_and_source_evidence_pass": true
+    },
+    {
+      "task_id": "sqlite_document_v1",
+      "path": "data/natural_v1/sqlite_document_v1/dev_3.html",
+      "role": "dev",
+      "title": "Datatypes In SQLite",
+      "blocks": 88,
+      "metadata": 0,
+      "excluded": 0,
+      "contract_and_source_evidence_pass": true
+    },
+    {
+      "task_id": "pg_essay_v1",
+      "path": "data/natural_v1/pg_essay_v1/train_1.html",
+      "role": "train",
+      "title": "Beating the Averages",
+      "blocks": 67,
+      "metadata": 0,
+      "excluded": 1,
+      "contract_and_source_evidence_pass": true
+    },
+    {
+      "task_id": "pg_essay_v1",
+      "path": "data/natural_v1/pg_essay_v1/train_2.html",
+      "role": "train",
+      "title": "How to Make Wealth",
+      "blocks": 141,
+      "metadata": 0,
+      "excluded": 1,
+      "contract_and_source_evidence_pass": true
+    },
+    {
+      "task_id": "pg_essay_v1",
+      "path": "data/natural_v1/pg_essay_v1/dev_3.html",
+      "role": "dev",
+      "title": "The Age of the Essay",
+      "blocks": 79,
+      "metadata": 0,
+      "excluded": 0,
+      "contract_and_source_evidence_pass": true
+    }
+  ],
+  "test_dom_inspected": false,
+  "semantic_gold_certified": false
+}

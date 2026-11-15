@@ -19,3 +19,11 @@ task只包含rubric、源证据和候选输出，不含旧expected标签。14个
 ~~~
 
 脚本检查任务身份、案例顺序、五题、合法verdict、理由和证据结构，再统计每题一致/分歧/unknown。没有独立金标时accuracy=null、reward_frozen=false、grpo_ready=false。一致性不是准确率；unknown不映射为no。Q3承接漏表/列表/图说，Q4承接广告/导航/评论引导，图片无法核实时保留unknown。
+
+## 2026-11-15 双评结果与边界
+
+两份隔离上下文评审完成，引用校验通过：67/70一致（95.7%），来自相同模型家族，非人类独立金标。原始判断与三个分歧保留。第二份原先只引用记录ID，机械展开全文quote，原件reviewer_2_original.json保留，未更改verdict或reason。
+
+未来规范澄清（不倒改本轮盲评）：Q1评标题，Q5评保留正文的事实/顺序，错标题不自动重复扣Q5；图片像素未获取时，最多判断静态文字完整，不能升级为文章整体完整，相关Q2/Q3保持unknown。自然页独立语义校准待完成，reward_frozen=false、grpo_ready=false。
+
+额外尝试原始Qwen0.5B作为Judge，两种提示共28次生成，多数缺题或证据为空；cloud_raw_review原文保留，不将无效输出用于奖励。

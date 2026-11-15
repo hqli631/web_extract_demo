@@ -45,3 +45,6 @@
 8. 用户学习验收与下一阶段交接：需要能解释什么、还有哪些能力边界；不自动扩展任务。
 
 若阶段未达原定结束条件，标为进行中或部分完成，不为赶进度宣称完成。工程完成、用户掌握和生产可靠性分别记录。
+
+
+2026-11-15: See [PROJECT_DELIVERY.md](PROJECT_DELIVERY.md) and [STAGE5_SUMMARY.md](STAGE5_SUMMARY.md) for current delivery. Multi-layout data, real LoRA, isolated execution, sealed page test, paired review and finite RSI replay completed. Natural independent semantic gold and real GRPO remain research work; previous dated status is historical.

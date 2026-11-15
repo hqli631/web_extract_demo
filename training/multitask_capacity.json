@@ -1,0 +1,26 @@
+{
+  "model_id": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+  "model_revision": "ea3f2471cf1b1f0db85067f1ef93848e38e88c25",
+  "train_file": "output/stage5/multitask/train.jsonl",
+  "dev_file": "output/stage5/multitask/dev.jsonl",
+  "output_dir": "output/stage5/multitask/cloud_capacity120",
+  "max_seq_length": 8192,
+  "max_steps": 120,
+  "gradient_accumulation_steps": 1,
+  "learning_rate": 0.0005,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.0,
+  "lora_target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "seed": 42,
+  "max_new_tokens": 2400,
+  "note": "One prespecified capacity follow-up after 40-step outputs failed on development: r16 all linear projections, lr5e-4, 120 steps. Four tasks only; known-layout learning test, not broad generalization. No further tuning."
+}

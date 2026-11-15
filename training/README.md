@@ -76,3 +76,11 @@ CUDA_VISIBLE_DEVICES=0 python training/minimal_sft.py generate --adapter output/
 ## 执行候选代码
 
 本脚本绝不 exec 模型输出。AST 检查与超时不是操作系统沙箱。后续应先审查，再在隔离容器执行：无网络、只读输入、非 root、无宿主 secrets、限制 CPU/内存/进程/时间，然后按输出协议验证。训练实例不能直接执行未经隔离的未知候选代码。
+
+## 2026-11-15 已实测更新
+
+原有准备步骤为历史材料。用户提供Ubuntu22.04+RTX3090后，已完成1步smoke以及4任务40/120步LoRA对照。使用服务器现有Python3.12、torch2.8.0+cu128、transformers4.46.3、peft0.13.2、accelerate1.1.1。不要按旧示例重复重装驱动或PyTorch。
+
+当前配置multitask_sft.json、multitask_capacity.json；结果与范围见../docs/PROJECT_DELIVERY.md。新输出不自动执行，isolate_extract.py依赖Linux bubblewrap与prlimit及隔离lxml运行时。
+
+实例按用户要求保留，不关闭。适配器已本地核验备份，GPU进程已结束。真实GRPO未运行，Rubrics reward未冻结。
