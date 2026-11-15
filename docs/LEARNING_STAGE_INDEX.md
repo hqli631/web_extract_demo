@@ -1,5 +1,7 @@
 # 学习阶段回顾索引
 
+2026-11-15：已在用户提供的Ubuntu22.04＋RTX3090服务器完成首次真实单步LoRA SFT；540672可训练参数、非零参数变化、保存和新进程重载通过。峰值allocated14.47GiB/reserved17.02GiB。两条历史任务生成仍有契约错误，不可采用、无质量提升结论。报告output/stage5/unit2/cloud_run_20261115/index.html，操作docs/STAGE5_CLOUD_SMOKE.md；真实GRPO/新测试/RSI仍未做。GPU任务结束、实例未关闭，结果已下载备份。
+
 2026-11-14补充：5.2训练准备已形成独立交接文档[训练材料与租赁决策](STAGE5_SFT_PREPARATION.md)，报告output/stage5/unit2/sft_prep/index.html。两条历史任务仅用于管线验证，GPU训练未做、5.3未开始；本次停在租赁决定，不归档为第五阶段完成。
 
 更新日期：2026-11-12。这里是每一阶段结束后的固定回顾入口，不替代运行报告或个人学习验收。

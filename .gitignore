@@ -7,3 +7,5 @@ samples/*_files/
 .training-prep-deps/
 .training-prep-cache/
 output/stage5/unit2/cloud_sft/
+output/stage5/unit2/cloud_run_*/training_receipt.tar.gz
+output/stage5/unit2/cloud_run_*/receipt/

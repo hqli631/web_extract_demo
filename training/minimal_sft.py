@@ -165,6 +165,8 @@ def train(cfg, tokenizer, encoded, lengths, paths, run_dir):
     trainer.save_model(str(adapter))
     tokenizer.save_pretrained(str(adapter))
     dev = trainer.evaluate()
+    if not math.isfinite(dev.get("eval_loss", float("nan"))):
+        raise RuntimeError("non-finite dev loss; evaluation failed, do not accept this smoke run")
     proof = {"status": "optimizer_update_observed", "model_id": cfg["model_id"],
         "model_revision": cfg["model_revision"], "optimizer_steps": trainer.state.global_step,
         "trainable_parameters": sum(p.numel() for p in trainable.values()), "parameter_max_abs_delta": changed,

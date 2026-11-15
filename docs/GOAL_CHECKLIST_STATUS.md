@@ -1,5 +1,7 @@
 # 离线搜索网页正文提取岗学习清单：当前状态对照
 
+2026-11-15：已在用户提供的Ubuntu22.04＋RTX3090服务器完成首次真实单步LoRA SFT；540672可训练参数、非零参数变化、保存和新进程重载通过。峰值allocated14.47GiB/reserved17.02GiB。两条历史任务生成仍有契约错误，不可采用、无质量提升结论。报告output/stage5/unit2/cloud_run_20261115/index.html，操作docs/STAGE5_CLOUD_SMOKE.md；真实GRPO/新测试/RSI仍未做。GPU任务结束、实例未关闭，结果已下载备份。
+
 2026-11-14：5.2训练材料已准备，1 train＋1 dev历史簇任务，6来源页/参考复验、真实tokenizer长度与masking检查通过，8192窗口，默认LoRA SFT单步；训练本身/GPU联调/未见测试仍未完成。独立reward校准未完成，GRPO未启动。停在租赁配置、短租预算与停止规则确认点，未购买实例。见STAGE5_SFT_PREPARATION.md。
 
 2026-11-13进入5.2：用户C/D理解已确认，5.1数值学习已完成。check_training_readiness.py检查当前Python/依赖/硬件：Python3.12.14，无torch等训练包；先前只读系统查询列出AMD Radeon 780M，AdapterRAM不是可靠专用训练显存，本机LLM训练后端未验证。模型/数据训练协议/预算未选，reward独立校准未做，真实训练未完成。操作STAGE5_UNIT2.md，待E/F理解后做有限训练数据准备学习，无安装/模型下载/付费计算。

@@ -1,0 +1,19 @@
+{
+  "os": "Linux-6.8.0-90-generic-x86_64-with-glibc2.35",
+  "python": "3.12.12",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "torch": "2.8.0+cu128",
+  "torch_cuda": "12.8",
+  "cuda_available": true,
+  "bf16": true,
+  "gpu_memory_bytes": 25296044032,
+  "disk_free_bytes": 26703581184,
+  "packages": {
+    "transformers": "4.46.3",
+    "peft": "0.13.2",
+    "accelerate": "1.1.1",
+    "safetensors": "0.4.5"
+  },
+  "date": "2026-11-15",
+  "purpose": "single-step SFT smoke, no quality claim"
+}

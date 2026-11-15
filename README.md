@@ -1,5 +1,7 @@
 # Web Extract Demo
 
+2026-11-15：已在用户提供的Ubuntu22.04＋RTX3090服务器完成首次真实单步LoRA SFT；540672可训练参数、非零参数变化、保存和新进程重载通过。峰值allocated14.47GiB/reserved17.02GiB。两条历史任务生成仍有契约错误，不可采用、无质量提升结论。报告output/stage5/unit2/cloud_run_20261115/index.html，操作docs/STAGE5_CLOUD_SMOKE.md；真实GRPO/新测试/RSI仍未做。GPU任务结束、实例未关闭，结果已下载备份。
+
 2026-11-14 当前交接：5.2 SFT准备包完成，等待租赁配置决定。1条train＋1条dev来自两个历史簇/6篇页；真实tokenizer验证7768/5240 token，采用8192窗口，完整目标和loss屏蔽通过。仅下载tokenizer/config，未下载模型权重、未训练、未租服务器。操作见[训练准备与租赁交接](docs/STAGE5_SFT_PREPARATION.md)，报告output/stage5/unit2/sft_prep/index.html。以下旧进度按日期保留。
 
 当前学习：5.1 A/B/C/D理解已确认，进入5.2资源与条件检查。运行 learning/check_training_readiness.py，打开 output/stage5/unit2/index.html；详见[5.2训练准备操作](docs/STAGE5_UNIT2.md)。当前项目训练环境未准备、LLM训练后端未验证，reward独立校准未完成；没有安装包、下载模型或启动训练。

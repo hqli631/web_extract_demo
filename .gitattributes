@@ -25,3 +25,4 @@ output/stage5/unit1/*.json -text
 output/stage5/unit2/*.json -text
 output/stage5/unit2/sft_prep/*.json -text
 output/stage5/unit2/sft_prep/*.jsonl -text
+output/stage5/unit2/cloud_run_*/*.json -text

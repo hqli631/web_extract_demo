@@ -1,0 +1,27 @@
+{
+  "model_revision": "ea3f2471cf1b1f0db85067f1ef93848e38e88c25",
+  "adapter": "output/stage5/unit2/cloud_sft/adapter",
+  "config_sha256": "ae02e13fc1969fc8ee4b4c064c98b3f1a1fc7b967321787be815110085c66e44",
+  "outputs": [
+    {
+      "split": "train",
+      "row": 0,
+      "task_id": "historical-sina_shell_v2",
+      "input_sha256": "f724300cf9498b25aef0be2c98930656c86a236a71f6dee633f57fb2af9d08c6",
+      "text": "```python\nimport re\n\ndef extract(data: bytes) -> dict:\n    # Parse the XML data\n    root = re.search(r'<article>', data).group()\n    \n    # Extract title\n    title = re.search(r'<h1 class=\"main-title\">(.+?)</h1>', root).group(1)\n    \n    # Extract blocks\n    blocks = []\n    for block in re.findall(r'<p>(.+?)</p>', root):\n        blocks.append(block.strip())\n    \n    # Extract metadata\n    metadata = {}\n    for meta in re.findall(r'<meta name=\"([^\"]+)\" content=\"([^\"]+)\">', root):\n        metadata[meta[0]] = meta[1]\n    \n    # Extract excluded\n    excluded = re.findall(r'<span class=\"exclude\">(.+?)</span>', root)\n    \n    # Extract warnings\n    warnings = re.findall(r'<span class=\"warning\">(.+?)</span>', root)\n    \n    return {\n        \"title_candidates\": [title],\n        \"article_dom\": root,\n        \"compression\": {\n            \"text_slots_clipped\": 30,\n            \"attributes_clipped\": 0,\n            \"comments_removed\": 23,\n            \"executable_nodes_removed\": 0\n        },\n        \"metadata\": metadata,\n        \"excluded\": excluded,\n        \"warnings\": warnings\n    }\n```",
+      "new_tokens": 285,
+      "may_be_truncated": false,
+      "automatically_executed": false
+    },
+    {
+      "split": "dev",
+      "row": 0,
+      "task_id": "historical-chinanews_shell_v2",
+      "input_sha256": "b8b017c4cdb03500767d5631f2a0687626b92e3bfd09d743548f9280e958eeaa",
+      "text": "```python\nimport re\nfrom lxml import etree\n\ndef extract(data: bytes) -> dict:\n    # Parse the XML data\n    root = etree.fromstring(data)\n    \n    # Extract title\n    title = root.find('.//h1').text.strip()\n    \n    # Extract blocks\n    blocks = []\n    for child in root.findall('.//div[@class=\"left_zw\"]'):\n        block = {}\n        block['kind'] = child.find('.//span[@class=\"content_left_title\"]').text.strip()\n        block['text'] = child.text.strip()\n        blocks.append(block)\n    \n    # Extract metadata\n    metadata = {}\n    for child in root.findall('.//div[@class=\"adInContent\"]'):\n        metadata[child.find('.//span[@class=\"right_name\"]').text.strip()] = child.find('.//span[@class=\"right\"]').text.strip()\n    \n    # Extract excluded\n    excluded = {}\n    for child in root.findall('.//div[@class=\"adEditor\"]'):\n        excluded[child.find('.//span[@class=\"left_name\"]').text.strip()] = child.find('.//span[@class=\"left\"]').text.strip()\n    \n    # Extract warnings\n    warnings = {}\n    for child in root.findall('.//div[@class=\"adEditor\"]'):\n        warnings[child.find('.//span[@class=\"left_name\"]').text.strip()] = child.find('.//span[@class=\"left\"]').text.strip()\n    \n    return {\n        'title': title,\n        'blocks': blocks,\n        'metadata': metadata,\n        'excluded': excluded,\n        'warnings': warnings\n    }\n```\n\nThis function parses the XML data, extracts the required information, and returns it in a dictionary format.",
+      "new_tokens": 350,
+      "may_be_truncated": false,
+      "automatically_executed": false
+    }
+  ]
+}

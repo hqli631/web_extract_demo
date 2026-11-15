@@ -1,0 +1,253 @@
+{
+  "date": "2026-11-15",
+  "scope": "single-step historical SFT pipeline smoke",
+  "archive_sha256": "961f00e0226320ac43b23b1549043681771fe77ab738f8bca89bbc1359f2cfc0",
+  "environment": {
+    "os": "Linux-6.8.0-90-generic-x86_64-with-glibc2.35",
+    "python": "3.12.12",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "torch": "2.8.0+cu128",
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "bf16": true,
+    "gpu_memory_bytes": 25296044032,
+    "disk_free_bytes": 26703581184,
+    "packages": {
+      "transformers": "4.46.3",
+      "peft": "0.13.2",
+      "accelerate": "1.1.1",
+      "safetensors": "0.4.5"
+    },
+    "date": "2026-11-15",
+    "purpose": "single-step SFT smoke, no quality claim"
+  },
+  "proof": {
+    "status": "optimizer_update_observed",
+    "model_id": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+    "model_revision": "ea3f2471cf1b1f0db85067f1ef93848e38e88c25",
+    "optimizer_steps": 1,
+    "trainable_parameters": 540672,
+    "parameter_max_abs_delta": {
+      "base_model.model.model.layers.0.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight": 9.999949543271214e-05,
+      "base_model.model.model.layers.0.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.0.self_attn.v_proj.lora_B.default.weight": 9.999997564591467e-05,
+      "base_model.model.model.layers.1.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.1.self_attn.q_proj.lora_B.default.weight": 9.999969915952533e-05,
+      "base_model.model.model.layers.1.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.1.self_attn.v_proj.lora_B.default.weight": 9.999996836995706e-05,
+      "base_model.model.model.layers.2.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.2.self_attn.q_proj.lora_B.default.weight": 9.999986650655046e-05,
+      "base_model.model.model.layers.2.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.2.self_attn.v_proj.lora_B.default.weight": 9.999996836995706e-05,
+      "base_model.model.model.layers.3.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.3.self_attn.q_proj.lora_B.default.weight": 9.999991743825376e-05,
+      "base_model.model.model.layers.3.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.3.self_attn.v_proj.lora_B.default.weight": 9.999996836995706e-05,
+      "base_model.model.model.layers.4.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.4.self_attn.q_proj.lora_B.default.weight": 9.999980829888955e-05,
+      "base_model.model.model.layers.4.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.4.self_attn.v_proj.lora_B.default.weight": 9.999999747378752e-05,
+      "base_model.model.model.layers.5.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.5.self_attn.q_proj.lora_B.default.weight": 9.999985923059285e-05,
+      "base_model.model.model.layers.5.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.5.self_attn.v_proj.lora_B.default.weight": 9.999997564591467e-05,
+      "base_model.model.model.layers.6.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.6.self_attn.q_proj.lora_B.default.weight": 9.999975009122863e-05,
+      "base_model.model.model.layers.6.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.6.self_attn.v_proj.lora_B.default.weight": 9.999997564591467e-05,
+      "base_model.model.model.layers.7.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.7.self_attn.q_proj.lora_B.default.weight": 9.999991743825376e-05,
+      "base_model.model.model.layers.7.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.7.self_attn.v_proj.lora_B.default.weight": 9.99999392661266e-05,
+      "base_model.model.model.layers.8.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.8.self_attn.q_proj.lora_B.default.weight": 9.999975736718625e-05,
+      "base_model.model.model.layers.8.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.8.self_attn.v_proj.lora_B.default.weight": 9.999996109399945e-05,
+      "base_model.model.model.layers.9.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.9.self_attn.q_proj.lora_B.default.weight": 9.999991743825376e-05,
+      "base_model.model.model.layers.9.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.9.self_attn.v_proj.lora_B.default.weight": 9.999995381804183e-05,
+      "base_model.model.model.layers.10.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.10.self_attn.q_proj.lora_B.default.weight": 9.999989561038092e-05,
+      "base_model.model.model.layers.10.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.10.self_attn.v_proj.lora_B.default.weight": 9.999995381804183e-05,
+      "base_model.model.model.layers.11.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.11.self_attn.q_proj.lora_B.default.weight": 9.999994654208422e-05,
+      "base_model.model.model.layers.11.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.11.self_attn.v_proj.lora_B.default.weight": 9.999996836995706e-05,
+      "base_model.model.model.layers.12.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.12.self_attn.q_proj.lora_B.default.weight": 9.999983012676239e-05,
+      "base_model.model.model.layers.12.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.12.self_attn.v_proj.lora_B.default.weight": 9.999997564591467e-05,
+      "base_model.model.model.layers.13.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.13.self_attn.q_proj.lora_B.default.weight": 9.99999392661266e-05,
+      "base_model.model.model.layers.13.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.13.self_attn.v_proj.lora_B.default.weight": 9.99999392661266e-05,
+      "base_model.model.model.layers.14.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.14.self_attn.q_proj.lora_B.default.weight": 9.999990288633853e-05,
+      "base_model.model.model.layers.14.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.14.self_attn.v_proj.lora_B.default.weight": 9.999994654208422e-05,
+      "base_model.model.model.layers.15.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.15.self_attn.q_proj.lora_B.default.weight": 9.999983740272e-05,
+      "base_model.model.model.layers.15.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.15.self_attn.v_proj.lora_B.default.weight": 9.999993199016899e-05,
+      "base_model.model.model.layers.16.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.16.self_attn.q_proj.lora_B.default.weight": 9.999983740272e-05,
+      "base_model.model.model.layers.16.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.16.self_attn.v_proj.lora_B.default.weight": 9.999996109399945e-05,
+      "base_model.model.model.layers.17.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.17.self_attn.q_proj.lora_B.default.weight": 9.999971371144056e-05,
+      "base_model.model.model.layers.17.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.17.self_attn.v_proj.lora_B.default.weight": 9.999996109399945e-05,
+      "base_model.model.model.layers.18.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.18.self_attn.q_proj.lora_B.default.weight": 9.999996836995706e-05,
+      "base_model.model.model.layers.18.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.18.self_attn.v_proj.lora_B.default.weight": 9.999995381804183e-05,
+      "base_model.model.model.layers.19.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.19.self_attn.q_proj.lora_B.default.weight": 9.999995381804183e-05,
+      "base_model.model.model.layers.19.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.19.self_attn.v_proj.lora_B.default.weight": 9.999996109399945e-05,
+      "base_model.model.model.layers.20.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.20.self_attn.q_proj.lora_B.default.weight": 9.999986650655046e-05,
+      "base_model.model.model.layers.20.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.20.self_attn.v_proj.lora_B.default.weight": 9.999991016229615e-05,
+      "base_model.model.model.layers.21.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.21.self_attn.q_proj.lora_B.default.weight": 9.999969915952533e-05,
+      "base_model.model.model.layers.21.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.21.self_attn.v_proj.lora_B.default.weight": 9.999991016229615e-05,
+      "base_model.model.model.layers.22.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.22.self_attn.q_proj.lora_B.default.weight": 9.999984467867762e-05,
+      "base_model.model.model.layers.22.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.22.self_attn.v_proj.lora_B.default.weight": 9.999977919505909e-05,
+      "base_model.model.model.layers.23.self_attn.q_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.23.self_attn.q_proj.lora_B.default.weight": 9.999983740272e-05,
+      "base_model.model.model.layers.23.self_attn.v_proj.lora_A.default.weight": 0.0,
+      "base_model.model.model.layers.23.self_attn.v_proj.lora_B.default.weight": 9.999985923059285e-05
+    },
+    "train_metrics": {
+      "train_runtime": 3.1059,
+      "train_samples_per_second": 0.322,
+      "train_steps_per_second": 0.322,
+      "total_flos": 16706114844672.0,
+      "train_loss": 1.626846194267273,
+      "epoch": 1.0
+    },
+    "dev_loss_historical_only": {
+      "eval_loss": 1.8304951190948486,
+      "eval_runtime": 0.1719,
+      "eval_samples_per_second": 5.816,
+      "eval_steps_per_second": 5.816,
+      "epoch": 1.0
+    },
+    "token_lengths": [
+      {
+        "split": "train",
+        "row": 0,
+        "total_tokens": 7768,
+        "prompt_tokens": 6920,
+        "supervised_tokens": 848
+      },
+      {
+        "split": "dev",
+        "row": 0,
+        "total_tokens": 5240,
+        "prompt_tokens": 4324,
+        "supervised_tokens": 916
+      }
+    ],
+    "data_sha256": {
+      "train": "973e2ee3b329ee14c4381f1b5bb0af1f0438385b2d579fc41e0570cd3ded3e61",
+      "dev": "bff9ed158ff2663e28e015b7e053411b2df86dd2f1a86c4dd9219f83f4e81eba"
+    },
+    "cuda_device": "NVIDIA GeForce RTX 3090",
+    "cuda_version": "12.8",
+    "peak_allocated_bytes": 15535220736,
+    "peak_reserved_bytes": 18272485376,
+    "free_total_bytes_after_eval": [
+      6662127616,
+      25296044032
+    ],
+    "packages": {
+      "torch": "2.8.0+cu128",
+      "transformers": "4.46.3",
+      "peft": "0.13.2",
+      "accelerate": "1.1.1"
+    },
+    "quality_improvement_proven": false,
+    "adapter_reload_verified": true,
+    "adapter_serialization_verified": true
+  },
+  "comparison": [
+    {
+      "split": "train",
+      "same_text": true,
+      "before_tokens": 285,
+      "after_tokens": 285,
+      "before_static": {
+        "python_parse": true,
+        "issues": [
+          "Markdown fence violates Python-source-only instruction",
+          "literal return keys differ from output contract",
+          "metadata is dict; contract requires list"
+        ],
+        "executed": false,
+        "quality": "not_accepted_static_contract_defects",
+        "semantic_evaluation": false
+      },
+      "after_static": {
+        "python_parse": true,
+        "issues": [
+          "Markdown fence violates Python-source-only instruction",
+          "literal return keys differ from output contract",
+          "metadata is dict; contract requires list"
+        ],
+        "executed": false,
+        "quality": "not_accepted_static_contract_defects",
+        "semantic_evaluation": false
+      }
+    },
+    {
+      "split": "dev",
+      "same_text": false,
+      "before_tokens": 375,
+      "after_tokens": 350,
+      "before_static": {
+        "python_parse": true,
+        "issues": [
+          "Markdown fence violates Python-source-only instruction",
+          "excluded is dict; contract requires list",
+          "metadata is dict; contract requires list",
+          "warnings is dict; contract requires list"
+        ],
+        "executed": false,
+        "quality": "not_accepted_static_contract_defects",
+        "semantic_evaluation": false
+      },
+      "after_static": {
+        "python_parse": true,
+        "issues": [
+          "Markdown fence violates Python-source-only instruction",
+          "excluded is dict; contract requires list",
+          "metadata is dict; contract requires list",
+          "warnings is dict; contract requires list"
+        ],
+        "executed": false,
+        "quality": "not_accepted_static_contract_defects",
+        "semantic_evaluation": false
+      }
+    }
+  ],
+  "quality_improvement_proven": false,
+  "known_result": "Generated code has static output-contract defects before and after; not accepted.",
+  "processes_finished": true,
+  "rental_instance_stopped": false,
+  "billing": "unknown; ending SSH/GPU processes does not stop platform billing",
+  "limits": [
+    "one historical train task and one historical dev task; no unseen test",
+    "No generated candidate executed; SFT with LoRA, not GRPO",
+    "1.6268 is one-step loss, not a measured loss-decrease curve",
+    "Independent reward calibration unfinished",
+    "Remote executed script retained; differs only in dev finite-loss error wording"
+  ]
+}
