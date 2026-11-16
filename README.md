@@ -4,6 +4,15 @@
 
 当前已达到**可运行、可复验、可展示的工程Demo**。已使用真实云GPU完成LoRA训练；尚未完成生产级泛化、自然网页独立语义校准或真实GRPO。
 
+项目二已完成真实千问API生成、实际反馈修复与CPU批量复用。先看 [真实生成与逐页正文](output/project2/live_flash_final/index.html)、[受控漏提后的真实修复](output/project2/live_repair_v4/index.html)、[完成记录](docs/PROJECT2_COMPLETION.md) 和 [使用指南](docs/PROJECT2_GUIDE.md)。
+
+~~~powershell
+Set-Location 'D:/codex project/web_extract_demo'
+./.venv/Scripts/python.exe -X utf8 project2_agent.py --provider mock --max-repairs 2 --output output/project2/my_mock_01
+~~~
+
+mock不调用千问。正式实验使用qwen3.8-flash：2篇生成/1篇开发/2篇最终测试，正文块分别21/19/19/21/33，每页另存作者和日期。真实接口读取QWEN_API_KEY或DASHSCOPE_API_KEY。模型生成受限XPath JSON，可信Python模板导出模块，固定子进程运行。结构检查通过不是语义准确率。已有输出不能覆盖，请换新名称。
+
 ## 先看效果
 
 ~~~powershell

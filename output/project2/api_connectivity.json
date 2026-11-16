@@ -1,0 +1,25 @@
+{
+  "date_local": "2026-11-16",
+  "timezone": "Asia/Shanghai",
+  "endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+  "credential_source": "QWEN_API_KEY process environment; value not recorded",
+  "request_scope": "One tiny Return only OK request per model; max_tokens=16; no HTML sent; no returned code executed",
+  "results": [
+    {"model": "qwen3.8-27b", "http_status": 200, "content_characters": 2, "total_tokens": 74},
+    {"model": "qwen4-max", "http_status": 200, "content_characters": 2, "total_tokens": 38},
+    {"model": "qwen3.8-flash", "http_status": 200, "content_characters": 2, "total_tokens": 80}
+  ],
+  "total_requests": 3,
+  "total_tokens": 192,
+  "extraction_quality_evaluated": false,
+  "money_cost": null,
+  "subsequent_generation_attempt": {
+    "model": "qwen3.8-flash",
+    "status": "client_read_timeout",
+    "timeout_seconds": 60,
+    "candidate_received": false,
+    "generated_code_executed": false,
+    "usage": null,
+    "note": "Server-side processing or billing is unknown after a client timeout; not an extraction-quality result. No automatic retry."
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "task_id": "python-blog-project2-v1",
+  "scope": "Newly retrieved natural pages, same known site layout; held-out from this Agent prompt and repair, not a claim about model pretraining.",
+  "retrieved_at_utc": "2026-11-16T00:46:14.271607+08:00",
+  "pages": [
+    {
+      "id": "python_blog_1",
+      "path": "data/project2/python_blog/page_1.html",
+      "url": "https://blog.python.org/2026/11/python-3160-alpha-2-is-now-available/",
+      "role": "generation",
+      "sha256": "74c7fd1ad049c8b117fd5e6f89f8f438998244310852eb8b3da6ff905ef02a66",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 43654
+    },
+    {
+      "id": "python_blog_2",
+      "path": "data/project2/python_blog/page_2.html",
+      "url": "https://blog.python.org/2026/10/python-3152-31410-31318-31216-31118/",
+      "role": "generation",
+      "sha256": "0515a5c70b68a8087ce80ddff53ae2778db5292bc40867a2f9096dcfd1ace384",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 50000
+    },
+    {
+      "id": "python_blog_3",
+      "path": "data/project2/python_blog/page_3.html",
+      "url": "https://blog.python.org/2026/10/python-3151-3149-31317/",
+      "role": "development_feedback",
+      "sha256": "a516478a1e3d4ad6dfcfdf4f10a4364c9195d841d1bf09ddc8f32ac38257c1fe",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 35735
+    },
+    {
+      "id": "python_blog_4",
+      "path": "data/project2/python_blog/page_4.html",
+      "url": "https://blog.python.org/2026/10/python-3160-alpha-1-is-now-available/",
+      "role": "final_holdout",
+      "sha256": "6dc465d13b06670df23381a9124b0d415bd574ca9f1fac231fef915cc55af23f",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 34165
+    },
+    {
+      "id": "python_blog_5",
+      "path": "data/project2/python_blog/page_5.html",
+      "url": "https://blog.python.org/2026/10/python-3150-final-is-here/",
+      "role": "final_holdout",
+      "sha256": "77cf6077bad85d54f0ed1d21d827fa1a6974d6f8e268436cb2e3a937b7c80bf5",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 67588
+    }
+  ],
+  "prompt": "Extract the editorial title, ordered body blocks, separate author and publication date. Reuse one rule set across this layout."
+}

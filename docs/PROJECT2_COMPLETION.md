@@ -1,32 +1,40 @@
-# Project 2 completion record
+# 项目二完成记录
 
-## Delivered loop
+本轮按 PROJECT2_PLAN.md 的 A—E 顺序完成协议、单Agent、验证、交付和同步。目标为可运行可复验的入门项目，非通用工业正文提取器。
 
-`project2_agent.py` now provides one reproducible entry point for:
+## 实际完成
 
-1. loading a hashed task with generation, development and final holdout roles;
-2. obtaining a candidate from a pluggable `mock` or DashScope-compatible Qwen provider;
-3. checking and executing the candidate with the existing AST and timeout boundary;
-4. converting execution/quality findings into feedback;
-5. repairing at most `--max-rounds` times; and
-6. running the holdout only after the candidate is frozen, without feeding its result back.
+- 真实千问API：qwen3.8-flash读取2篇网页DOM摘要，输出五字段XPath规则，可信Python模板导出extractor.py。
+- CPU执行：同一份规则执行5篇页面，分别输出标题、有序正文、作者、日期、原文XPath和警告。
+- 有限修复：将实际异常/结构遗漏反馈模型，最多指定次数；网络失败记录并停止。另用人为只取段落的初始规则，完成一次真实API修复。
+- 测试隔离：2篇生成、1篇开发、2篇最终测试。初次实验的测试正文未进入提示/修复；重复运行明确属于复验。
+- 可回顾证据：原始网页URL/哈希、提示、API响应、各轮规则/Python、执行结果、token/耗时、候选与执行器哈希。
+- 代码边界：解释XPath数据，不执行模型Python；子进程每页8秒；保存当次引擎副本以复用。
 
-The trace stores candidate hashes, page roles and hashes, per-round outputs, feedback, holdout status, API-call count and returned usage. `DASHSCOPE_API_KEY` is read only from the process environment.
+## 真实生成结果
 
-## Reproduce the offline demonstration
+| 页面 | 角色 | 正文块 | 元数据 |
+|---|---|---:|---:|
+| Python 3.16.0 alpha 2 | 生成 | 21 | 2 |
+| Python 3.15.2 / 3.14.10 / 3.13.18 / 3.12.16 / 3.11.18 | 生成 | 19 | 2 |
+| Python 3.15.1 / 3.14.9 / 3.13.17 | 开发反馈 | 19 | 2 |
+| Python 3.16.0 alpha 1 | 最终测试 | 21 | 2 |
+| Python 3.15.0 final | 最终测试 | 33 | 2 |
 
-```powershell
-Set-Location 'D:/codex project/web_extract_demo'
-& './.venv/Scripts/python.exe' -E -X utf8 './project2_agent.py' `
-  --provider mock --max-rounds 1 --output output/project2/final
-```
+正式留存复验：output/project2/live_flash_final/，1次API、1个候选、6331输入tokens+122输出tokens=6453，API约2.786秒、全流程约3.377秒。首次 live_flash_v3 的相同任务结果作为早期证据保留，不能把两次相同任务合并扩大测试样本数。
 
-Expected evidence is two mock rounds, zero API calls, a passing final holdout contract check and `output/project2/final/trace.json`. This proves the control flow only; it is not a Qwen quality result.
+受控修复：output/project2/live_repair_v4/，初始代码来自人为设置，1次真实API修复、2轮候选。10232输入+111输出=10343 tokens。修复前存在标题/列表遗漏，修复后检查通过。复用同一任务，不能计作新增泛化成绩。
 
-## Fresh evaluation material
+CPU复用：output/project2/cpu_reuse_final/，5篇得到相同21/19/19/21/33块，无API调用。
 
-`data/project2/python_blog/manifest.json` records five newly retrieved Python Insider pages: two generation pages, one development page and two final holdouts. Their URLs and SHA-256 values are frozen. Fresh retrieval means they were not used in this local debugging session; it does not prove that a model has never seen the site during pretraining. The current Sina mock candidate is not claimed to solve the Python Insider layout.
+## 验证与结论边界
 
-## Honest boundary
+12项项目二测试通过；全仓226项工程测试通过。覆盖有限修复、holdout不进入提示、预算耗尽跳过测试、API失败不重试、密钥/端点边界、XPath标量/越界/重复选择、空标题、排除待审核、隐藏正文、图片说明、表格及导出代码回放。
 
-The repository does not claim a live Qwen run unless a user supplies a key and executes `--provider dashscope`. The Windows AST check plus temporary subprocess is a defensive capability boundary, not an operating-system sandbox for hostile code. For untrusted live candidates use the Linux `bubblewrap + prlimit` path before production-style execution. Contract pass is not semantic completeness or purity accuracy.
+通过表示本任务结构定位、非空与节点覆盖检查通过。没有独立逐段语义gold，语义准确率仍为unknown；没有做OCR或任意站点泛化。正文块数受列表合并粒度影响，不等于自然段数量。API token可核查，未配置价格时不虚构人民币费用。
+
+## 与目标的对应
+
+项目二基本目标已经实现：少量同布局样本 → 真实千问生成 → Python/XPath复用 → 实际反馈自修复 → 留出页验证 → 可视化证据。此次模型生成的是受限XPath配置，Python模块由固定模板产生；不宣称模型生成并安全执行任意Python。
+
+下一步可选改进为多布局任务、更可靠的语义Rubrics、已审核排除规则和成本基准。这些不再作为本轮停止前的新增任务。

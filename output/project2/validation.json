@@ -1,0 +1,10 @@
+{
+  "project2_tests": 12,
+  "repository_tests": 226,
+  "result": "pass",
+  "report_links": "pass",
+  "artifact_byte_hashes": "pass",
+  "live_provider": "dashscope",
+  "live_model": "qwen3.8-flash",
+  "semantic_accuracy": "unknown"
+}

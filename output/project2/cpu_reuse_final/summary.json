@@ -1,0 +1,62 @@
+[
+  {
+    "id": "page_1",
+    "role": "batch_reuse",
+    "url": "",
+    "source_path": "D:\\codex project\\web_extract_demo\\data\\project2\\python_blog\\page_1.html",
+    "status": "pass",
+    "blocks": 21,
+    "metadata": 2,
+    "issues": [],
+    "result": "extract_page_1.json",
+    "input": "D:\\codex project\\web_extract_demo\\data\\project2\\python_blog\\page_1.html"
+  },
+  {
+    "id": "page_2",
+    "role": "batch_reuse",
+    "url": "",
+    "source_path": "D:\\codex project\\web_extract_demo\\data\\project2\\python_blog\\page_2.html",
+    "status": "pass",
+    "blocks": 19,
+    "metadata": 2,
+    "issues": [],
+    "result": "extract_page_2.json",
+    "input": "D:\\codex project\\web_extract_demo\\data\\project2\\python_blog\\page_2.html"
+  },
+  {
+    "id": "page_3",
+    "role": "batch_reuse",
+    "url": "",
+    "source_path": "D:\\codex project\\web_extract_demo\\data\\project2\\python_blog\\page_3.html",
+    "status": "pass",
+    "blocks": 19,
+    "metadata": 2,
+    "issues": [],
+    "result": "extract_page_3.json",
+    "input": "D:\\codex project\\web_extract_demo\\data\\project2\\python_blog\\page_3.html"
+  },
+  {
+    "id": "page_4",
+    "role": "batch_reuse",
+    "url": "",
+    "source_path": "D:\\codex project\\web_extract_demo\\data\\project2\\python_blog\\page_4.html",
+    "status": "pass",
+    "blocks": 21,
+    "metadata": 2,
+    "issues": [],
+    "result": "extract_page_4.json",
+    "input": "D:\\codex project\\web_extract_demo\\data\\project2\\python_blog\\page_4.html"
+  },
+  {
+    "id": "page_5",
+    "role": "batch_reuse",
+    "url": "",
+    "source_path": "D:\\codex project\\web_extract_demo\\data\\project2\\python_blog\\page_5.html",
+    "status": "pass",
+    "blocks": 33,
+    "metadata": 2,
+    "issues": [],
+    "result": "extract_page_5.json",
+    "input": "D:\\codex project\\web_extract_demo\\data\\project2\\python_blog\\page_5.html"
+  }
+]

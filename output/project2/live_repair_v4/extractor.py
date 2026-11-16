@@ -1,0 +1,6 @@
+"""Generated reusable XPath extractor; trusted engine interprets data."""
+import json
+from project2_engine import extract as _engine
+RULES = json.loads('{"title_xpath": "//article/header//h1", "container_xpath": "//article/div[contains(@class, \'animate-fade-up\')]", "block_xpath": "./*[self::p or self::h2 or self::h3 or self::ul or self::ol or self::blockquote or self::pre or self::table]", "exclude_xpath": "", "metadata_xpath": "//article/header//time | //article/header//a[contains(@href, \'/authors/\')]"}')
+def extract(data):
+    return _engine(RULES, data)

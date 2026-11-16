@@ -1,0 +1,146 @@
+{
+  "task_id": "python-blog-project2-v1",
+  "provider": "dashscope",
+  "model": "qwen3.8-flash",
+  "input_pages": [
+    {
+      "id": "python_blog_1",
+      "path": "data/project2/python_blog/page_1.html",
+      "url": "https://blog.python.org/2026/11/python-3160-alpha-2-is-now-available/",
+      "role": "generation",
+      "sha256": "74c7fd1ad049c8b117fd5e6f89f8f438998244310852eb8b3da6ff905ef02a66",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 43654
+    },
+    {
+      "id": "python_blog_2",
+      "path": "data/project2/python_blog/page_2.html",
+      "url": "https://blog.python.org/2026/10/python-3152-31410-31318-31216-31118/",
+      "role": "generation",
+      "sha256": "0515a5c70b68a8087ce80ddff53ae2778db5292bc40867a2f9096dcfd1ace384",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 50000
+    },
+    {
+      "id": "python_blog_3",
+      "path": "data/project2/python_blog/page_3.html",
+      "url": "https://blog.python.org/2026/10/python-3151-3149-31317/",
+      "role": "development_feedback",
+      "sha256": "a516478a1e3d4ad6dfcfdf4f10a4364c9195d841d1bf09ddc8f32ac38257c1fe",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 35735
+    },
+    {
+      "id": "python_blog_4",
+      "path": "data/project2/python_blog/page_4.html",
+      "url": "https://blog.python.org/2026/10/python-3160-alpha-1-is-now-available/",
+      "role": "final_holdout",
+      "sha256": "6dc465d13b06670df23381a9124b0d415bd574ca9f1fac231fef915cc55af23f",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 34165
+    },
+    {
+      "id": "python_blog_5",
+      "path": "data/project2/python_blog/page_5.html",
+      "url": "https://blog.python.org/2026/10/python-3150-final-is-here/",
+      "role": "final_holdout",
+      "sha256": "77cf6077bad85d54f0ed1d21d827fa1a6974d6f8e268436cb2e3a937b7c80bf5",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 67588
+    }
+  ],
+  "rounds": [
+    {
+      "round": 0,
+      "pages": [
+        {
+          "id": "python_blog_1",
+          "role": "generation",
+          "url": "https://blog.python.org/2026/11/python-3160-alpha-2-is-now-available/",
+          "source_path": "data/project2/python_blog/page_1.html",
+          "status": "pass",
+          "blocks": 21,
+          "metadata": 2,
+          "issues": [],
+          "result": "round_0_python_blog_1.json"
+        },
+        {
+          "id": "python_blog_2",
+          "role": "generation",
+          "url": "https://blog.python.org/2026/10/python-3152-31410-31318-31216-31118/",
+          "source_path": "data/project2/python_blog/page_2.html",
+          "status": "pass",
+          "blocks": 19,
+          "metadata": 2,
+          "issues": [],
+          "result": "round_0_python_blog_2.json"
+        },
+        {
+          "id": "python_blog_3",
+          "role": "development_feedback",
+          "url": "https://blog.python.org/2026/10/python-3151-3149-31317/",
+          "source_path": "data/project2/python_blog/page_3.html",
+          "status": "pass",
+          "blocks": 19,
+          "metadata": 2,
+          "issues": [],
+          "result": "round_0_python_blog_3.json"
+        }
+      ],
+      "issues": [],
+      "candidate_sha256": "378f9e7c3f1cc6e63ac48d9210827a1333cf88b33a183aa25adaa727a4b32459"
+    }
+  ],
+  "api_attempts": [
+    {
+      "round": 0,
+      "status": "succeeded",
+      "usage": {
+        "prompt_tokens": 6331,
+        "total_tokens": 6453,
+        "completion_tokens": 122,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 6331
+        }
+      },
+      "seconds": 2.994
+    }
+  ],
+  "holdout": [
+    {
+      "id": "python_blog_4",
+      "role": "final_holdout",
+      "url": "https://blog.python.org/2026/10/python-3160-alpha-1-is-now-available/",
+      "source_path": "data/project2/python_blog/page_4.html",
+      "status": "pass",
+      "blocks": 21,
+      "metadata": 2,
+      "issues": [],
+      "result": "holdout_python_blog_4.json"
+    },
+    {
+      "id": "python_blog_5",
+      "role": "final_holdout",
+      "url": "https://blog.python.org/2026/10/python-3150-final-is-here/",
+      "source_path": "data/project2/python_blog/page_5.html",
+      "status": "pass",
+      "blocks": 33,
+      "metadata": 2,
+      "issues": [],
+      "result": "holdout_python_blog_5.json"
+    }
+  ],
+  "semantic_accuracy": "unknown",
+  "holdout_policy": "Executed only after candidate freeze; never sent to generation or repair.",
+  "max_repairs": 2,
+  "final_status": "pass",
+  "elapsed_seconds": 3.071,
+  "frozen_candidate_sha256": "378f9e7c3f1cc6e63ac48d9210827a1333cf88b33a183aa25adaa727a4b32459",
+  "frozen_before_holdout": true,
+  "candidate_hash_scheme": "SHA256 of canonical UTF-8 LF source; historical Windows artifact bytes hashed separately",
+  "artifact_byte_hashes": {
+    "candidate_round_0.py": "dab9a6dfcf7173d5110ad66b73fd60953089a1ef594fbcb8bf4f7fa6397ea862",
+    "extractor.py": "dab9a6dfcf7173d5110ad66b73fd60953089a1ef594fbcb8bf4f7fa6397ea862"
+  }
+}

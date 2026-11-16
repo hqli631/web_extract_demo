@@ -31,3 +31,7 @@ data/natural_v1/**/*.html -text
 output/stage5/multitask/** -text
 output/stage5/rubrics_calibration_v1/*.json -text
 output/stage5/rsi_delivery/*.json -text
+data/project2/**/*.html -text
+project2_engine.py -text
+project2_worker.py -text
+output/project2/**/*.py -text
