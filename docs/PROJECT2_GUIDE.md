@@ -1,12 +1,14 @@
 # 项目二：单 Agent 代码生成提取器
 
+报告已改为“提取结果 / 生成与修复 / 规则与代码 / 调用记录”四个视图，支持文章搜索、角色筛选和候选版本切换。阅读与离线重建见 [报告指南](PROJECT2_REPORT_GUIDE.md)。
+
 2026-11-17新增：[参考项目一的底层改进说明](PROJECT2_FOUNDATION_UPGRADE.md)。当前协议兼容五个必填字段，并增加metadata_fields和block_mode两个可选字段；新增独立summary/evaluation scope、原始DOM证据验证及丰富正文类型。旧报告保留旧引擎，当前参考对照见output/project2/foundation_v2_final/index.html。
 
 本项目实现岗位 V6 思路的小型闭环：2篇同布局网页 → 千问生成 XPath → 固定 Python 执行器生成可复用模块 → CPU批量执行 → 根据实际检查反馈有限修复 → 冻结后验证。
 
 ## 先看已经完成的真实效果
 
-- [正常生成报告](../output/project2/live_flash_final/index.html)：真实 qwen3.8-flash 调用，首轮规则通过。
+- [正常生成报告](../output/project2/live_flash_foundation_v2/index.html)：当前底层执行器的真实 qwen3.8-flash 复验与新版阅读界面。
 - [真实修复报告](../output/project2/live_repair_v4/index.html)：人为设置仅取段落的漏提规则，程序发现小标题/列表遗漏，千问依据反馈修复。受控实验，不计作新泛化结果。
 - [完成记录与限制](PROJECT2_COMPLETION.md)。GitHub通常显示HTML源码，克隆后用浏览器打开本地报告。
 

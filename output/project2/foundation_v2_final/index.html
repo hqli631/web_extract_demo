@@ -1,12 +1,285 @@
-<!doctype html><meta charset="utf-8"><title>项目一基础迁移对照</title><style>body{font:16px/1.6 system-ui;max-width:1050px;margin:30px auto}pre{white-space:pre-wrap}section{border:1px solid #ccd;padding:18px;margin:18px 0}</style><h1>项目一 → 项目二：固定执行层回归对照</h1><p>已曝光样例、人工参考规则、0次API。不代表模型生成成绩或独立准确率。分类/排除仍有待语义审核的项目会明确保留。</p>
-<section><h2>sina_01</h2><a href="sina_01.json">完整提取结果</a><pre>{
-  &quot;id&quot;: &quot;sina_01&quot;,
-  &quot;layout&quot;: &quot;sina&quot;,
-  &quot;reference_blocks&quot;: 43,
-  &quot;current_blocks&quot;: 43,
-  &quot;body_sequence_equal&quot;: true,
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>项目二 · 单 Agent 正文提取报告</title><style>
+:root{--ink:#18314a;--muted:#61748a;--line:#dce5ee;--blue:#235fba;--paper:#fff;--bg:#f3f6fa}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.75 "Segoe UI","Microsoft YaHei",sans-serif}a{color:var(--blue);text-underline-offset:3px}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #e6a635;outline-offset:3px}[hidden]{display:none!important}.wrap{max-width:1440px;margin:auto;padding:30px 32px 64px}.hero{background:linear-gradient(115deg,#153952,#245d75);color:#fff;padding:28px 32px;border-radius:18px}.eyebrow{font-size:12px;letter-spacing:2px;color:#b8dce8}.hero h1{font-size:30px;line-height:1.4;margin:8px 0}.hero p{margin:8px 0;color:#d7e7ef}.hero .badge{margin-left:8px}.toplinks{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px}.toplinks a{color:#dfedff}.metrics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:18px 0}.metric{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px}.metric small{display:block;color:var(--muted)}.metric strong{font-size:24px;display:block;overflow-wrap:anywhere}.metric .model{font-size:17px;line-height:42px}.metric span{font-size:12px;color:var(--muted)}.notice{border-left:3px solid #d2a453;background:#fff9ed;padding:12px 16px;margin:16px 0;border-radius:4px}.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:22px}.tab{border:1px solid var(--line);background:#fff;padding:9px 20px;border-radius:9px;color:var(--muted)}.tab[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:white}.panel{background:white;border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:20px}.panel h2{font-size:22px;margin:0 0 14px}h3{font-size:18px;margin:20px 0 10px}h4{margin:14px 0 8px}.muted{color:var(--muted)}.small{font-size:13px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;text-align:left;margin:12px 0}th{color:var(--muted);font-size:13px;background:#f4f7fa}td,th{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}td{overflow-wrap:anywhere}td details{min-width:90px;margin:0}td pre{max-width:400px}.badge,.kind{display:inline-block;padding:2px 9px;border-radius:5px;font-size:12px;font-weight:600;white-space:nowrap}.kind{color:#46627e;background:#edf3f9}.good{background:#e2f3ed;color:#196b50}.warn{background:#fff0d4;color:#89600a}.bad{background:#fde8e7;color:#ac3434}.workspace{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}.sidebar{position:sticky;top:16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}.sidebar h3{margin:0 0 10px}.sidebar input,.sidebar select,.round-select{border:1px solid #c9d6e4;background:#fff;border-radius:7px;padding:8px;width:100%;margin-bottom:10px}.page-nav{display:grid;gap:8px;margin-top:6px;max-height:58vh;overflow:auto}.page-button{text-align:left;border:1px solid var(--line);background:#fff;border-radius:8px;padding:10px 12px;color:var(--ink);width:100%}.page-button[aria-pressed=true]{border-color:var(--blue);background:#edf4ff;box-shadow:inset 3px 0 var(--blue)}.page-button small{display:block;color:var(--muted);margin-top:3px}.article{scroll-margin-top:16px}.article h2{font-size:26px;line-height:1.45}.article-links{display:flex;gap:15px;flex-wrap:wrap;margin:12px 0}.article-meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13px}.content-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:26px;border-top:1px solid var(--line);padding-top:20px}.content-title h3{margin:0}.body-list{list-style:none;margin:16px 0;padding:0}.body-block{padding:18px 0;border-bottom:1px solid #edf1f5}.block-label{display:flex;gap:8px;align-items:center}.block-number{font-size:12px;color:#7c8da0;min-width:22px}.body-block p{font-size:16px;line-height:1.95;margin:10px 0;color:#243c51}.body-block h3{font-size:20px;line-height:1.6}.body-block details{font-size:12px}.body-table td{border:1px solid var(--line)}details{margin:12px 0}summary{cursor:pointer;color:var(--blue);overflow-wrap:anywhere}pre{background:#f3f6fa;border:1px solid #e5ebf2;padding:14px;border-radius:8px;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.7 Consolas,monospace;color:#29435d;max-height:540px;overflow:auto}.body-code{white-space:pre;overflow:auto;overflow-wrap:normal}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.quiet{background:#f3f6fa;color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:5px 10px;font-size:12px}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.rule-row{padding:14px 0;border-bottom:1px solid var(--line)}.rule-row p{margin:0}.rule-row pre{margin:8px 0}.step{border-left:3px solid #b8cadf;padding-left:18px;margin:20px 0}.step h3{margin-bottom:6px}.issues li{padding:8px 0}.issues p{margin:2px 0}.comparison{background:#f7faff;border:1px solid #dce8f8;border-radius:8px;padding:14px}.empty{padding:24px;color:var(--muted)}.foot{font-size:12px;color:var(--muted);margin-top:24px}.count-note{font-size:12px;line-height:1.5}.round-select{max-width:280px}.nojs{background:#fff0d4;padding:10px}.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:8px;background:#fff;padding:10px;z-index:10}
+@media(max-width:980px){.metrics{grid-template-columns:repeat(3,1fr)}.workspace{grid-template-columns:220px minmax(0,1fr)}.wrap{padding:20px}.hero{padding:22px}.split{grid-template-columns:1fr}}
+@media(max-width:680px){.wrap{padding:12px}.hero h1{font-size:23px}.metrics{grid-template-columns:1fr 1fr}.metric{padding:12px}.workspace{display:block}.sidebar{position:static;margin-bottom:16px}.page-nav{max-height:220px}.panel{padding:17px}.article h2{font-size:22px}.tab{padding:8px 13px}.content-title{align-items:start}.toplinks{gap:10px}}
+@media print{body{background:white}.wrap{padding:0}.hero{background:white;color:#18314a}.hero p,.hero a{color:#18314a}.tabs,.sidebar,.quiet{display:none}.workspace{display:block}.panel{break-inside:auto}.article[hidden]{display:block!important}pre{max-height:none}.view[hidden]{display:none!important}}
+</style></head><body><a class="skip" href="#report-content">跳到报告内容</a><div class="wrap"><header class="hero"><div class="eyebrow">PROJECT 02 / EXTRACTION AGENT</div><h1>单 Agent 网页正文提取报告</h1><p>人工参考回归 <span class="badge warn">待审核</span></p><p>从少量同布局样本生成规则，在 CPU 上复用；把提取结果与生成证据放在一起。</p><div class="toplinks"><span class="muted">完整运行记录（未生成）</span> · <span class="muted">冻结规则（未生成）</span> · <span class="muted">Python 提取器（未生成）</span></div></header>
+<div class="metrics"><div class="metric"><small>模型</small><strong class="model">不适用（人工参考规则）</strong><span>本次记录中的模型</span></div><div class="metric"><small>API 尝试</small><strong>0</strong><span>0 次返回成功</span></div><div class="metric"><small>参考配方</small><strong>3</strong><span>人工登记，非模型生成</span></div><div class="metric"><small>网页数量</small><strong>3</strong><span>历史参考回归 3</span></div><div class="metric"><small>总 tokens</small><strong>0</strong><span>仅统计已返回用量</span></div></div>
+<div class="notice small">人工配方与已曝光样例，只验证固定执行层；模型生成成绩不适用。 图片像素和动态内容未评估；HTML 快照不保证原站视觉还原。</div>
+<nav class="tabs" role="tablist" aria-label="报告视图"><button type="button" role="tab" id="tab-results" aria-controls="view-results" aria-selected="true" class="tab" data-tab="results">提取结果</button><button type="button" role="tab" id="tab-process" aria-controls="view-process" aria-selected="false" class="tab" data-tab="process">生成与修复</button><button type="button" role="tab" id="tab-rules" aria-controls="view-rules" aria-selected="false" class="tab" data-tab="rules">规则与代码</button><button type="button" role="tab" id="tab-calls" aria-controls="view-calls" aria-selected="false" class="tab" data-tab="calls">调用记录</button></nav>
+<noscript><p class="nojs">JavaScript 已禁用。所有报告内容仍可阅读，筛选和切换不可用。</p></noscript><main id="report-content"><section class="view" role="tabpanel" aria-labelledby="tab-results" id="view-results" data-view="results">
+<div class="panel"><h2>样本与结果汇总</h2><p class="muted small">点击标题进入正文。生成页可影响规则；开发页可提供修复反馈；最终测试页只在冻结候选后执行。</p><div class="table-wrap"><table><thead><tr><th>文章 / 样本</th><th>角色</th><th>状态</th><th>正文块</th><th>页面信息</th><th>排除项</th></tr></thead><tbody>
+<tr><td><button class="quiet" data-jump="page-0">宇树科技股价连续暴涨，分析师忙翻了！物理AI受益股梳理</button><br><span class="muted small">sina_01</span></td><td>历史参考回归</td><td><span class="badge warn">待审核</span></td><td>43</td><td>4</td><td>3</td></tr>
+<tr><td><button class="quiet" data-jump="page-1">东西问丨伊扎特·萨阿德：全球南方现代化如何抓住AI机遇？</button><br><span class="muted small">chinanews_03</span></td><td>历史参考回归</td><td><span class="badge warn">待审核</span></td><td>33</td><td>4</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-2">2. 使用 Python 的解释器</button><br><span class="muted small">pydoc_interpreter</span></td><td>历史参考回归</td><td><span class="badge good">检查通过</span></td><td>32</td><td>0</td><td>0</td></tr>
+</tbody></table></div></div><div class="workspace"><aside class="sidebar"><h3>浏览文章</h3><label class="small" for="page-search">搜索标题或样本</label><input id="page-search" type="search" placeholder="输入关键词…"><label class="small" for="role-filter">样本角色</label><select id="role-filter"><option value="">全部角色</option><option value="historical_exposed_regression">历史参考回归</option></select><p class="muted small" id="nav-count">3 篇</p><div class="page-nav"><button class="page-button" data-target="page-0" data-role="historical_exposed_regression" aria-pressed="false">宇树科技股价连续暴涨，分析师忙翻了！物理AI受益股梳理<small>历史参考回归 · 43 块</small></button><button class="page-button" data-target="page-1" data-role="historical_exposed_regression" aria-pressed="false">东西问丨伊扎特·萨阿德：全球南方现代化如何抓住AI机遇？<small>历史参考回归 · 33 块</small></button><button class="page-button" data-target="page-2" data-role="historical_exposed_regression" aria-pressed="false">2. 使用 Python 的解释器<small>历史参考回归 · 32 块</small></button></div><p id="no-pages" class="muted small" hidden>没有匹配的文章，请更换关键词或角色。</p></aside><div><article class="panel article" id="page-0"><div class="article-meta"><span>历史参考回归</span><span>sina_01</span><span class="badge warn">待审核</span></div><h2>宇树科技股价连续暴涨，分析师忙翻了！物理AI受益股梳理</h2><div class="article-links"><a href="https://finance.sina.com.cn/stock/bxjj/2026-10-27/doc-iniwrkkw2082967.shtml" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/foundation_reference/sina_01.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div class="comparison small">项目一参考 43 块 → 当前 43 块；文字与顺序一致。<details><summary>查看差异记录</summary><pre>{
   &quot;missing&quot;: [],
-  &quot;added&quot;: [],
+  &quot;added&quot;: []
+}</pre></details></div><div data-version="r0"><h3>页面信息 <span class="muted small">与正文分离</span></h3><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">作者</span></td><td>21世纪经济报道</td><td><details><summary>查看 XPath</summary><pre>/html/head/meta[28]</pre>属性：content</details></td></tr><tr><td><span class="kind">发布时间</span></td><td>2026年10月27日 07:27</td><td><details><summary>查看 XPath</summary><pre>/html/body/div[2]/div[3]/div/div/div[2]/span</pre></details></td></tr><tr><td><span class="kind">来源</span></td><td>21世纪经济报道</td><td><details><summary>查看 XPath</summary><pre>/html/body/div[2]/div[3]/div/div/div[2]/a</pre></details></td></tr><tr><td><span class="kind">责任编辑</span></td><td>责任编辑：石秀珍 SF183</td><td><details><summary>查看 XPath</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[45]</pre></details></td></tr></tbody></table></div><div class="content-title"><h3>提取正文 <span class="muted small">43 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>10月26日，物理AI概念延续强势，宇树科技（688836.SH）收盘涨7.69%报672元，总市值达2718亿元。自10月16日盘中低点407.01元至26日收盘，宇树科技在7个交易日内累计上涨65.1%。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>行情的触发点在10月下旬的两场会议。10月21日，英伟达CEO黄仁勋在柏林GTC大会上称“下一波浪潮是物理AI”，并宣布扩容Isaac机器人开发平台；10月22日，2026世界物理AI大会暨宇树合作伙伴生态大会在杭州举行，宇树科技创始人王兴兴在演讲中表示，随着GPT-6发布，“物理AI已经看到被击穿的苗头，很可能最近1到2年或者2到3年”。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">段落</span></div><p>这个周末，卖方分析师比往常更忙。21世纪经济报道记者根据Wind收录的电话会议纪要统计，10月19日至25日一周内，可查到纪要的物理AI及人形机器人相关电话会至少18场，覆盖16家券商研究所，其中14场挤在10月24日、25日两天。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>物理AI概念究竟指什么、能不能撑起一条新主线、卡点又在何处等问题，在这批路演里被反复讨论。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[5]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>券商分析师路演忙</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[6]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">段落</span></div><p>今天市场广泛流传的一个说法是，卖方分析师周末集体加班，“44场物理AI的电话会议刷屏”。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[7]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">7</span><span class="kind">段落</span></div><p>21世纪经济报道记者根据Wind收录的电话会议纪要统计，10月19日至25日这一周内，可查到纪要的物理AI及人形机器人相关电话会至少有18场，覆盖16家券商研究所，东吴证券更是有计算机、传媒互联网行业两场电话会。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[8]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">8</span><span class="kind">段落</span></div><p>从时间分布看，18场中有14场集中在10月24日至25日这个周末，其余4场分散在10月19日晚至22日。密度最高的10月25日，一天内有12家机构发布纪要。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[9]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">9</span><span class="kind">段落</span></div><p>从研究团队来看，以往机器人行情是机械、汽车、电新行业分析师的主场。这一次，传媒互联网、计算机、中小盘策略团队大批加入，讨论重心也从减速器、丝杠这些执行部件，转向数据采集、仿真平台、数字孪生这些偏软件与数据侧的环节。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[10]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">10</span><span class="kind">段落</span></div><p>从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以海天瑞声（688787.SH）为对象的有三场，涉及国泰海通计算机、东吴计算机、华创计算机，均由公司董秘出席；开源证券计算机团队请到当虹科技（688039.SH）代表；国海证券的具身智能研究团队请到慈星股份（维权）（300307.SZ）董秘与数采专家同场；国联民生计算机则把仙工智能（06106.HK）相关人员请上会议。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[11]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">11</span><span class="kind">段落</span></div><p>第二类是物理AI有关专家交流，如东吴传媒互联网张良卫团队连做两场，分别是“物理AI产业专家交流”和“物理AI系列3：具身大脑专家交流”；第三类是团队内部的深度观点汇报。国泰海通机械首席肖群稀的“物理AI、具身智能与人形机器人”、中金公司汽车团队的“物理AI进展与4Q26板块投资机会”均属此类。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[12]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">12</span><span class="kind">段落</span></div><p>什么是物理AI？</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[13]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">13</span><span class="kind">段落</span></div><p>物理AI这一概念最早见于2020年《Nature Machine Intelligence》的一篇学术论文，作者为瑞士联邦材料科学与技术实验室的Aslan Miriyev与伦敦帝国理工学院的Mirko Kovač，论文首次系统定义了物理AI。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[14]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">14</span><span class="kind">段落</span></div><p>按中国信通院《具身智能发展报告（2026年）》的定义，物理AI指通过把物理规律嵌入感知、推理、生成和行动全过程，使人工智能具备更强的真实性、可靠性与可部署性。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[15]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">15</span><span class="kind">段落</span></div><p>英伟达是把这一概念推向产业界的主要推手——在2024年6月的Computex上，黄仁勋称物理AI是“下一波AI浪潮”；在2025年1月CES上，英伟达发布了Cosmos世界基础模型；在2025年3月的GTC上，进一步将其列为继感知AI、生成式AI、代理AI之后的第四阶段。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[16]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">16</span><span class="kind">段落</span></div><p>各家券商研究所对物理AI的表述不尽相同，但内核指向一处：让AI学会物理世界的因果。华福证券的框架相对完整，该团队在行业报告中提出，物理AI是指使人工智能具备理解并作用于物理世界的能力体系，其核心是世界模型，即对物理状态在动作干预下如何演化的预测能力。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[17]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">17</span><span class="kind">段落</span></div><p>机器人被视为物理AI最好的载体，理由有三：其一，机器人同时具备感知、决策、执行与反馈闭环，动作后果可被观测、被度量、被标注；其二，机器人在真实物理世界中持续产生交互数据，是训练与校验世界模型的来源；其三，模型能力最终必须经由本体作用于物理世界，才能产生经济价值。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[18]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">18</span><span class="kind">段落</span></div><p>东北证券在其产业观察中提示，按英伟达的说法，物理AI覆盖机器人、自动驾驶与智能空间，相关基础设施由模型训练、仿真测试与端侧运行三部分组成。这意味着它更像一个横跨多个既有行业的技术体系，而非一个全新赛道。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[19]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">19</span><span class="kind">段落</span></div><p>物理AI成AI新主线？</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[20]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">20</span><span class="kind">段落</span></div><p>物理AI为何被视作AI投资的新主线？卖方分析师们的论述大致落在三个层面：</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[21]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">21</span><span class="kind">段落</span></div><p>需求端的落差是第一层。开源证券的判断是，物理AI有望成为编码之后需求空间最大的市场。其据以推演的现实是：OpenAI的年度经常性收入（ARR）在2026年2月至6月出现约五个月的平台期，增长动能已从消费者订阅转向企业智能体与编码工具，C端订阅见顶的结构性问题暴露出来。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[22]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">22</span><span class="kind">段落</span></div><p>作为对照，黄仁勋给出的口径是物理AI对应超过50万亿美元的产业机会，而编码赛道即便是Claude Code这样年化收入超25亿美元、彼时占据约54%编程市场份额的头部产品，其体量与物理AI相比仍相去甚远。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[23]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">23</span><span class="kind">段落</span></div><p>商业模式的变化是第二层，也最容易被忽略。机器人智能系统可以与本体销售分离定价：本体作为硬件一次性购买，大脑则按API调用量、Token消耗量计费，或收取平台订阅费。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[24]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">24</span><span class="kind">段落</span></div><p>开源证券据此判断，物理世界可能成为AI能力规模化变现的出口，具身智能公司的收入结构将由一次性硬件销售转为贯穿机器人全生命周期的持续性收入，估值逻辑也随之从制造估值转向平台估值。这解释了本轮资金为何优先给数据与模型端溢价，而非本体与零部件。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[25]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">25</span><span class="kind">段落</span></div><p>算力叙事的接续是第三层。黄仁勋在柏林GTC上称“下一轮计算浪潮是理解并作用于物理世界的AI”。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[26]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">26</span><span class="kind">段落</span></div><p>国联民生海外团队的解读是：物理AI横跨自动驾驶、人形机器人与工业制造，且训练、仿真、端侧三类计算需求叠加，有望成为继Agent之后AI的下一个快速增长场景，为算力需求打开新的增量维度。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[27]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">27</span><span class="kind">段落</span></div><p>换言之，这一叙事直接回应了市场对海外算力资本开支见顶的担忧——物理AI若成立，受益的不仅仅是机器人，更是整条AI产业链。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[28]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">28</span><span class="kind">段落</span></div><p>物理AI的卡点落在哪？</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[29]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">29</span><span class="kind">段落</span></div><p>此次卖方多场路演的主题词高度重合：数据采集是物理AI的一大瓶颈。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[30]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">30</span><span class="kind">段落</span></div><p>例如，国海机械团队把第89期路演整期给了“人形机器人数采深度”；华源传媒互联网团队直接用了“卖铲子”这个说法，标题是“物理AI的卖铲子环节——数据采集”；国金证券具身智能团队的路演主题更直接，叫“数采：物理AI最大短板，数据基建即将爆发”。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[31]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">31</span><span class="kind">段落</span></div><p>国金证券的判断是，当前人形机器人大脑与物理AI模型的行业卡点“并非算力，而是数据量”：国内行业整体数据量仅万小时级，而大脑突破需要千万至亿小时级。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[32]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">32</span><span class="kind">段落</span></div><p>东吴计算机首席王紫敬给出的结论更具体：物理AI最具投资价值的核心环节是真机数据平台，理由是“算法优势会逐月衰减，而数据优势以年为单位持续累积”。他同时估算，单个具身大脑基座模型达到GPT-3水平需1亿小时以上有效数据，而当前全球可用高质量真机数据不足70万小时。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[33]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">33</span><span class="kind">段落</span></div><p>供给缺口有多大？数量级达到百万小时。国泰海通机械团队援引中国信通院今年6月发布的《具身智能训练场地研究报告》：截至2026年6月30日，全球人形机器人真机数据量约100万小时，按当前资本开支趋势估算，2026年将达300万小时，国内领先厂商已设定每年100万小时的采集目标。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[34]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">34</span><span class="kind">段落</span></div><p>卖方对数据的定价也已经具体到小时。东吴传媒互联网在专家交流中给出的行业平均水平是每小时200元至400元，其中第一人称自我中心（Ego）数据200至300元、无本体采集（UMI）数据200至400元；客户定制场景的数据在标品基础上翻倍，可达600元；仿真合成数据最便宜，约50至60元；动作捕捉数据最贵，约1000元。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[35]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">35</span><span class="kind">段落</span></div><p>共识并不牢固，宇树提示风险</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[36]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">36</span><span class="kind">段落</span></div><p>不过，卖方对于物理AI的密集路演，并不等于共识已经牢固。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[37]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">37</span><span class="kind">段落</span></div><p>关于物理AI的进展，华泰证券机械设备团队把当前阶段概括为“从概念走向落地”，认为OpenAI等模型企业自研人形机器人有望加速这一进程；国金证券机器人与具身智能团队在纪要中提示，行业目前“仅缺少这一突破的触发信号”，一旦某家头部企业积累数千万至亿个小时数据并实现大脑泛化，全行业将快速跟进布局数据赛道，路径与ChatGPT突破后全行业加码算力相似。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[38]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">38</span><span class="kind">段落</span></div><p>哪些公司或将受益？国投证券把受益标的分为三类：国产物理AI平台、数据采集设备、世界模型与真机数据供应商；华福证券则把受益环节归为两条链条：一是数据采集，涵盖本体与垂类场景、触觉与力传感、机器视觉、IMU与数采手套、数采服务与数据平台；二是以特斯拉为核心的零部件供应链，包括丝杠、减速器、轴承等。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[39]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">39</span><span class="kind">段落</span></div><p>与卖方推荐同时出现的，是上市公司自己的风险提示。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[40]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">40</span><span class="kind">段落</span></div><p>10月26日晚间，宇树科技公告称，公司股票连续三个交易日收盘价格涨幅偏离值累计超过30%，属于股票交易异常波动情形；截至2026年10月26日，公司滚动市盈率为465.22倍，显著高于通用设备制造业行业平均滚动市盈率38.54倍。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[41]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">41</span><span class="kind">段落</span></div><p>公告指出，人形机器人行业尚处于商业化早期，技术成熟度、下游市场需求培育、产业链配套能力均存在不确定性。同时，物理AI技术从实验室演示走向真实场景的规模化落地仍面临感知精度、运动控制稳定性、数据积累及软硬件协同等多重挑战，相关技术路径与商业模式的成熟尚需时间验证。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[42]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">42</span><span class="kind">段落</span></div><p>公告还称，若行业大规模商业化落地进度不及预期，公司未来营收扩张及业绩释放可能受到不利影响，存在估值回归的投资风险。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[43]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">43</span><span class="kind">段落</span></div><p>（声明：文章内容仅供参考，不构成投资建议。投资者据此操作，风险自担。）</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[44]</pre></details></li></ol><details><summary>排除记录 · 3 项</summary><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">排除项</span></td><td>专题：A股已体现性价比 长期配置价值凸显</td><td><details><summary>查看 XPath</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[1]</pre></details></td></tr><tr><td><span class="kind">排除项</span></td><td>MACD金叉信号形成，这些股涨势不错！</td><td><details><summary>查看 XPath</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/div[2]</pre></details></td></tr><tr><td><span class="kind">排除项</span></td><td>海量资讯、精准解读，尽在新浪财经APP</td><td><details><summary>查看 XPath</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/div[3]</pre></details></td></tr></tbody></table></div></details><details><summary>检查问题 · 4 项</summary><ul class="issues"><li><strong>metadata_requires_review</strong><p>Body metadata classification requires semantic review, not automatic coverage credit</p><details><summary>查看位置</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[45]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/p[1]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/div[2]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div[2]/div[4]/div[1]/div[2]/div[3]</pre></details></li></ul></details><details><summary>局限与警告 · 3 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li><li>images_present_pixels_not_extracted_completeness_unknown</li></ul></details><details><summary>完整原始结果</summary><a href="sina_01.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;宇树科技股价连续暴涨，分析师忙翻了！物理AI受益股梳理&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/div[2]/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;10月26日，物理AI概念延续强势，宇树科技（688836.SH）收盘涨7.69%报672元，总市值达2718亿元。自10月16日盘中低点407.01元至26日收盘，宇树科技在7个交易日内累计上涨65.1%。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;行情的触发点在10月下旬的两场会议。10月21日，英伟达CEO黄仁勋在柏林GTC大会上称“下一波浪潮是物理AI”，并宣布扩容Isaac机器人开发平台；10月22日，2026世界物理AI大会暨宇树合作伙伴生态大会在杭州举行，宇树科技创始人王兴兴在演讲中表示，随着GPT-6发布，“物理AI已经看到被击穿的苗头，很可能最近1到2年或者2到3年”。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;这个周末，卖方分析师比往常更忙。21世纪经济报道记者根据Wind收录的电话会议纪要统计，10月19日至25日一周内，可查到纪要的物理AI及人形机器人相关电话会至少18场，覆盖16家券商研究所，其中14场挤在10月24日、25日两天。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;物理AI概念究竟指什么、能不能撑起一条新主线、卡点又在何处等问题，在这批路演里被反复讨论。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[5]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;券商分析师路演忙&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[6]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;今天市场广泛流传的一个说法是，卖方分析师周末集体加班，“44场物理AI的电话会议刷屏”。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[7]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;21世纪经济报道记者根据Wind收录的电话会议纪要统计，10月19日至25日这一周内，可查到纪要的物理AI及人形机器人相关电话会至少有18场，覆盖16家券商研究所，东吴证券更是有计算机、传媒互联网行业两场电话会。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[8]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;从时间分布看，18场中有14场集中在10月24日至25日这个周末，其余4场分散在10月19日晚至22日。密度最高的10月25日，一天内有12家机构发布纪要。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[9]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;从研究团队来看，以往机器人行情是机械、汽车、电新行业分析师的主场。这一次，传媒互联网、计算机、中小盘策略团队大批加入，讨论重心也从减速器、丝杠这些执行部件，转向数据采集、仿真平台、数字孪生这些偏软件与数据侧的环节。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[10]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;从参会阵容看，这轮路演大致分为三类。一类是对话产业方，直接请上市公司或数据服务商高管上会。以海天瑞声（688787.SH）为对象的有三场，涉及国泰海通计算机、东吴计算机、华创计算机，均由公司董秘出席；开源证券计算机团队请到当虹科技（688039.SH）代表；国海证券的具身智能研究团队请到慈星股份（维权）（300307.SZ）董秘与数采专家同场；国联民生计算机则把仙工智能（06106.HK）相关人员请上会议。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[11]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;第二类是物理AI有关专家交流，如东吴传媒互联网张良卫团队连做两场，分别是“物理AI产业专家交流”和“物理AI系列3：具身大脑专家交流”；第三类是团队内部的深度观点汇报。国泰海通机械首席肖群稀的“物理AI、具身智能与人形机器人”、中金公司汽车团队的“物理AI进展与4Q26板块投资机会”均属此类。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[12]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;什么是物理AI？&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[13]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;物理AI这一概念最早见于2020年《Nature Machine Intelligence》的一篇学术论文，作者为瑞士联邦材料科学与技术实验室的Aslan Miriyev与伦敦帝国理工学院的Mirko Kovač，论文首次系统定义了物理AI。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[14]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;按中国信通院《具身智能发展报告（2026年）》的定义，物理AI指通过把物理规律嵌入感知、推理、生成和行动全过程，使人工智能具备更强的真实性、可靠性与可部署性。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[15]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;英伟达是把这一概念推向产业界的主要推手——在2024年6月的Computex上，黄仁勋称物理AI是“下一波AI浪潮”；在2025年1月CES上，英伟达发布了Cosmos世界基础模型；在2025年3月的GTC上，进一步将其列为继感知AI、生成式AI、代理AI之后的第四阶段。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[16]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;各家券商研究所对物理AI的表述不尽相同，但内核指向一处：让AI学会物理世界的因果。华福证券的框架相对完整，该团队在行业报告中提出，物理AI是指使人工智能具备理解并作用于物理世界的能力体系，其核心是世界模型，即对物理状态在动作干预下如何演化的预测能力。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[17]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;机器人被视为物理AI最好的载体，理由有三：其一，机器人同时具备感知、决策、执行与反馈闭环，动作后果可被观测、被度量、被标注；其二，机器人在真实物理世界中持续产生交互数据，是训练与校验世界模型的来源；其三，模型能力最终必须经由本体作用于物理世界，才能产生经济价值。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[18]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;东北证券在其产业观察中提示，按英伟达的说法，物理AI覆盖机器人、自动驾驶与智能空间，相关基础设施由模型训练、仿真测试与端侧运行三部分组成。这意味着它更像一个横跨多个既有行业的技术体系，而非一个全新赛道。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[19]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;物理AI成AI新主线？&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[20]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;物理AI为何被视作AI投资的新主线？卖方分析师们的论述大致落在三个层面：&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[21]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;需求端的落差是第一层。开源证券的判断是，物理AI有望成为编码之后需求空间最大的市场。其据以推演的现实是：OpenAI的年度经常性收入（ARR）在2026年2月至6月出现约五个月的平台期，增长动能已从消费者订阅转向企业智能体与编码工具，C端订阅见顶的结构性问题暴露出来。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[22]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;作为对照，黄仁勋给出的口径是物理AI对应超过50万亿美元的产业机会，而编码赛道即便是Claude Code这样年化收入超25亿美元、彼时占据约54%编程市场份额的头部产品，其体量与物理AI相比仍相去甚远。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[23]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;商业模式的变化是第二层，也最容易被忽略。机器人智能系统可以与本体销售分离定价：本体作为硬件一次性购买，大脑则按API调用量、Token消耗量计费，或收取平台订阅费。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[24]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;开源证券据此判断，物理世界可能成为AI能力规模化变现的出口，具身智能公司的收入结构将由一次性硬件销售转为贯穿机器人全生命周期的持续性收入，估值逻辑也随之从制造估值转向平台估值。这解释了本轮资金为何优先给数据与模型端溢价，而非本体与零部件。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[25]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;算力叙事的接续是第三层。黄仁勋在柏林GTC上称“下一轮计算浪潮是理解并作用于物理世界的AI”。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[26]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;国联民生海外团队的解读是：物理AI横跨自动驾驶、人形机器人与工业制造，且训练、仿真、端侧三类计算需求叠加，有望成为继Agent之后AI的下一个快速增长场景，为算力需求打开新的增量维度。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[27]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;换言之，这一叙事直接回应了市场对海外算力资本开支见顶的担忧——物理AI若成立，受益的不仅仅是机器人，更是整条AI产业链。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[28]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;物理AI的卡点落在哪？&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[29]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;此次卖方多场路演的主题词高度重合：数据采集是物理AI的一大瓶颈。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[30]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;例如，国海机械团队把第89期路演整期给了“人形机器人数采深度”；华源传媒互联网团队直接用了“卖铲子”这个说法，标题是“物理AI的卖铲子环节——数据采集”；国金证券具身智能团队的路演主题更直接，叫“数采：物理AI最大短板，数据基建即将爆发”。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[31]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;国金证券的判断是，当前人形机器人大脑与物理AI模型的行业卡点“并非算力，而是数据量”：国内行业整体数据量仅万小时级，而大脑突破需要千万至亿小时级。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[32]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;东吴计算机首席王紫敬给出的结论更具体：物理AI最具投资价值的核心环节是真机数据平台，理由是“算法优势会逐月衰减，而数据优势以年为单位持续累积”。他同时估算，单个具身大脑基座模型达到GPT-3水平需1亿小时以上有效数据，而当前全球可用高质量真机数据不足70万小时。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[33]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;供给缺口有多大？数量级达到百万小时。国泰海通机械团队援引中国信通院今年6月发布的《具身智能训练场地研究报告》：截至2026年6月30日，全球人形机器人真机数据量约100万小时，按当前资本开支趋势估算，2026年将达300万小时，国内领先厂商已设定每年100万小时的采集目标。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[34]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;卖方对数据的定价也已经具体到小时。东吴传媒互联网在专家交流中给出的行业平均水平是每小时200元至400元，其中第一人称自我中心（Ego）数据200至300元、无本体采集（UMI）数据200至400元；客户定制场景的数据在标品基础上翻倍，可达600元；仿真合成数据最便宜，约50至60元；动作捕捉数据最贵，约1000元。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[35]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;共识并不牢固，宇树提示风险&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[36]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;不过，卖方对于物理AI的密集路演，并不等于共识已经牢固。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[37]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;关于物理AI的进展，华泰证券机械设备团队把当前阶段概括为“从概念走向落地”，认为OpenAI等模型企业自研人形机器人有望加速这一进程；国金证券机器人与具身智能团队在纪要中提示，行业目前“仅缺少这一突破的触发信号”，一旦某家头部企业积累数千万至亿个小时数据并实现大脑泛化，全行业将快速跟进布局数据赛道，路径与ChatGPT突破后全行业加码算力相似。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[38]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;哪些公司或将受益？国投证券把受益标的分为三类：国产物理AI平台、数据采集设备、世界模型与真机数据供应商；华福证券则把受益环节归为两条链条：一是数据采集，涵盖本体与垂类场景、触觉与力传感、机器视觉、IMU与数采手套、数采服务与数据平台；二是以特斯拉为核心的零部件供应链，包括丝杠、减速器、轴承等。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[39]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;与卖方推荐同时出现的，是上市公司自己的风险提示。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[40]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;10月26日晚间，宇树科技公告称，公司股票连续三个交易日收盘价格涨幅偏离值累计超过30%，属于股票交易异常波动情形；截至2026年10月26日，公司滚动市盈率为465.22倍，显著高于通用设备制造业行业平均滚动市盈率38.54倍。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[41]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;公告指出，人形机器人行业尚处于商业化早期，技术成熟度、下游市场需求培育、产业链配套能力均存在不确定性。同时，物理AI技术从实验室演示走向真实场景的规模化落地仍面临感知精度、运动控制稳定性、数据积累及软硬件协同等多重挑战，相关技术路径与商业模式的成熟尚需时间验证。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[42]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;公告还称，若行业大规模商业化落地进度不及预期，公司未来营收扩张及业绩释放可能受到不利影响，存在估值回归的投资风险。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[43]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;（声明：文章内容仅供参考，不构成投资建议。投资者据此操作，风险自担。）&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[44]&quot;
+    }
+  ],
   &quot;metadata&quot;: [
     {
       &quot;type&quot;: &quot;author&quot;,
@@ -34,37 +307,238 @@
       &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[45]&quot;
     }
   ],
-  &quot;issues&quot;: [
+  &quot;excluded&quot;: [
     {
-      &quot;kind&quot;: &quot;metadata_requires_review&quot;,
-      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[45]&quot;,
-      &quot;message&quot;: &quot;Body metadata classification requires semantic review, not automatic coverage credit&quot;
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;专题：A股已体现性价比 长期配置价值凸显&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;
     },
     {
-      &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
-      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;,
-      &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;MACD金叉信号形成，这些股涨势不错！&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[2]&quot;
     },
     {
-      &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
-      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[2]&quot;,
-      &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
-    },
-    {
-      &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
-      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[3]&quot;,
-      &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;海量资讯、精准解读，尽在新浪财经APP&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[3]&quot;
     }
+  ],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+    &quot;images_present_pixels_not_extracted_completeness_unknown&quot;
   ]
-}</pre></section>
-<section><h2>chinanews_03</h2><a href="chinanews_03.json">完整提取结果</a><pre>{
-  &quot;id&quot;: &quot;chinanews_03&quot;,
-  &quot;layout&quot;: &quot;chinanews&quot;,
-  &quot;reference_blocks&quot;: 33,
-  &quot;current_blocks&quot;: 33,
-  &quot;body_sequence_equal&quot;: true,
+}</pre></details></div></article><article class="panel article" id="page-1"><div class="article-meta"><span>历史参考回归</span><span>chinanews_03</span><span class="badge warn">待审核</span></div><h2>东西问丨伊扎特·萨阿德：全球南方现代化如何抓住AI机遇？</h2><div class="article-links"><a href="https://www.chinanews.com.cn/dxw/2026/11-03/10725312.shtml" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/foundation_reference/chinanews_03.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div class="comparison small">项目一参考 33 块 → 当前 33 块；文字与顺序一致。<details><summary>查看差异记录</summary><pre>{
   &quot;missing&quot;: [],
-  &quot;added&quot;: [],
+  &quot;added&quot;: []
+}</pre></details></div><div data-version="r0"><h3>页面信息 <span class="muted small">与正文分离</span></h3><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">发布时间</span></td><td>2026-11-03 15:05:01</td><td><details><summary>查看 XPath</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[1]/span[1]</pre></details></td></tr><tr><td><span class="kind">来源</span></td><td>中国新闻网</td><td><details><summary>查看 XPath</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[2]/a</pre></details></td></tr><tr><td><span class="kind">作者</span></td><td>中新社记者 孙翔</td><td><details><summary>查看 XPath</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]</pre></details></td></tr><tr><td><span class="kind">责任编辑</span></td><td>【编辑:付子豪】</td><td><details><summary>查看 XPath</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[10]</pre></details></td></tr></tbody></table></div><div class="content-title"><h3>提取正文 <span class="muted small">33 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>中新社约翰内斯堡11月3日电 题：全球南方现代化如何抓住AI机遇？</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>——专访埃及外交事务委员会主任伊扎特·萨阿德</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">段落</span></div><p>在全球南方群体性崛起、共同迈向现代化的进程中，中国走出了立足本国国情、重视本土经验的现代化道路——中国式现代化。进入人工智能(AI)时代，中国推进“人工智能+”行动，人工智能核心产业规模已超万亿元人民币，推动人工智能更好赋能发展。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>全球南方应如何抓住人工智能机遇，使其为全球南方现代化注入新动能？中国的理念与实践又能带来哪些启示？中新社“东西问”日前在开罗就此专访埃及外交事务委员会主任伊扎特·萨阿德(Ezzat Saad)。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>现将采访实录摘要如下：</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">段落</span></div><p>中新社记者：您如何看待人工智能在目前全球南方现代化中的作用？</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">7</span><span class="kind">段落</span></div><p>伊扎特·萨阿德：当前，人工智能正在经历一场革命。人工智能能够改善世界各地数以百万计民众的生活，尤其是全球南方国家民众的生活。无论是在医疗卫生、农业、环境保护，还是生活中的许多其他领域，人工智能都蕴藏着巨大潜力。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">8</span><span class="kind">段落</span></div><p>同时，我们也看到在人工智能问题上，全球正出现一道鸿沟，这既涉及技术，也涉及治理。这项技术不应该被少数几个国家垄断。作为全球南方国家，我们应该共享这一领域的最新发展成果，从而改善人民生活，推动世界各国实现可持续发展。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[9]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">9</span><span class="kind">图说</span></div><p>哈萨克斯坦，阿斯塔纳世博园区的“Alem.AI”国际人工智能中心。展示的多款人形机器人。 (资料图)中新社记者 单璐 摄</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">10</span><span class="kind">段落</span></div><p>中新社记者：您如何评价中国在推动人工智能惠及全球南方、促进更加公平包容的全球人工智能治理方面发挥的作用？</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[10]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">11</span><span class="kind">段落</span></div><p>伊扎特·萨阿德：在2026世界人工智能大会暨人工智能全球治理高级别会议上，中方宣布系列举措，包括未来5年将面向发展中国家提供专题研修培训；面向阿拉伯国家联盟、非洲联盟、上海合作组织、金砖国家等建设国际人工智能应用合作中心等。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[11]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">12</span><span class="kind">段落</span></div><p>我们赞赏中国在金砖国家、上合组织等平台上提出的有关倡议，并推动在人工智能领域加强与全球南方国家的合作。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[12]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">13</span><span class="kind">段落</span></div><p>我们同样赞赏，中国强调应当在多边机构框架下推进人工智能治理，无论是在联合国，还是在非盟、阿盟等区域组织，以及中非合作论坛、中阿合作论坛等机制。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[13]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">14</span><span class="kind">段落</span></div><p>这意味着，所有相关国家都有机会参与其中，与其他志同道合的国家一道塑造人工智能的未来。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[14]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">15</span><span class="kind">段落</span></div><p>全球人工智能治理应为所有文明、所有语言提供充分的参与空间，使它们都能够共同参与塑造人工智能的未来，这一点至关重要。这实际上关系到文明之间的对话。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[15]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">16</span><span class="kind">段落</span></div><p>人工智能不应该被某一种文明或某一种语言所垄断，而应该由所有语言、所有文明共同分享。正因为如此，我们高度赞赏中国提出的有关倡议，以及此前在中国举行的相关会议。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[16]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">17</span><span class="kind">段落</span></div><p>我们应当加强协调与合作，同时交流彼此在人工智能领域的经验。我认为，这也是中方在许多场合所强调的核心理念，即我们应该以公平、开放的方式处理人工智能问题，使每一个国家都能够从这场新的技术革命中受益。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[17]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">18</span><span class="kind">图说</span></div><p>2026年7月20日，上海，中国—金砖国家人工智能发展与合作中心‌吸引参观者。中新社发 陈玉宇 摄</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[5]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">19</span><span class="kind">段落</span></div><p>中新社记者：今年是中埃建交70周年。两国应如何进一步深化人工智能应用、人才培养和技术合作？这种合作能为其他全球南方国家现代化建设提供哪些经验？</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[18]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">20</span><span class="kind">段落</span></div><p>伊扎特·萨阿德：谈到埃及和中国之间的合作，实际上存在很多机遇。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[19]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">21</span><span class="kind">段落</span></div><p>首先，中国同包括埃及在内的多个阿拉伯国家建立了全面战略伙伴关系。这意味着双方的合作领域非常广泛，而我认为人工智能将成为其中一个非常重要的领域。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[20]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">22</span><span class="kind">段落</span></div><p>其次，除了中国与阿拉伯国家之间的双边合作之外，我们还拥有一个可以推动基础设施、人工智能以及其他众多领域合作的制度性框架，那就是中阿合作论坛。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[21]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">23</span><span class="kind">段落</span></div><p>中阿合作论坛可以作为一个多边机制，共同确定人工智能领域的诸多合作方向，并探索如何通过这些合作实现互利共赢。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[22]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">24</span><span class="kind">段落</span></div><p>中国已经是埃及以及整个阿拉伯世界最重要的贸易和经济伙伴之一，这本身就为双方进一步深化合作提供了良好基础。尤其是在我们讨论作为全球南方组成部分的阿拉伯国家如何推进现代化时，中国能够发挥重要作用。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[23]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">25</span><span class="kind">图说</span></div><p>当地时间9月30日，2026全球南方现代化论坛在埃及开罗举行，本次论坛主题是“人工智能浪潮：全球南方现代化的机遇与挑战”。图为“全球南方青年说”嘉宾分享人工智能助力发展案例。 中新社记者 孙翔 摄</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[7]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">26</span><span class="kind">段落</span></div><p>在人工智能领域，我们非常重视同中国开展能力建设合作。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[24]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">27</span><span class="kind">段落</span></div><p>2025年，埃及发布第二版《国家人工智能战略(2025—2030年)》，确立了治理、技术、数据、基础设施、创新生态系统和人才六大支柱，并规划开发国家人工智能模型、生成高质量的阿拉伯语数据集等。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[25]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">28</span><span class="kind">段落</span></div><p>按照规划，到2030年，埃及人工智能专业人员和专家数量将翻一番，达到3万人；信息通信技术产业对国内生产总值(GDP)的贡献率将提高至7.7%。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[26]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">29</span><span class="kind">段落</span></div><p>我相信，中国也将在这一过程中给予我们支持。未来五年，我们将开展许多共同或联合项目。通过这些项目，中国将帮助我们进一步了解和掌握人工智能技术，并为埃及培养相关人才，使他们接受人工智能这场新技术革命不同技术领域的专业培训。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[27]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">30</span><span class="kind">段落</span></div><p>此外，两国合作并不仅限于人工智能，还包括航天产业等许多领域，而这对埃及实现现代化都十分重要。(完)</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[28]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">31</span><span class="kind">段落</span></div><p>受访者简介：</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[29]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">32</span><span class="kind">图说</span></div><p>埃及外交事务委员会主任伊扎特·萨阿德接受中新社“东西问”专访。中新社记者 孙翔 摄</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[9]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">33</span><span class="kind">段落</span></div><p>伊扎特·萨阿德(Ezzat Saad)，现任埃及外交事务委员会主任，是埃及前外交部部长助理、埃及前驻俄罗斯大使、中国非洲研究院顾问，2026全球南方现代化论坛嘉宾。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[30]</pre></details></li></ol><details><summary>排除记录 · 0 项</summary><p class="muted">本次未提取独立页面信息。</p></details><details><summary>检查问题 · 2 项</summary><ul class="issues"><li><strong>metadata_requires_review</strong><p>Body metadata classification requires semantic review, not automatic coverage credit</p><details><summary>查看位置</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]</pre></details></li><li><strong>metadata_requires_review</strong><p>Body metadata classification requires semantic review, not automatic coverage credit</p><details><summary>查看位置</summary><pre>/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[10]</pre></details></li></ul></details><details><summary>局限与警告 · 3 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li><li>images_present_pixels_not_extracted_completeness_unknown</li></ul></details><details><summary>完整原始结果</summary><a href="chinanews_03.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;东西问丨伊扎特·萨阿德：全球南方现代化如何抓住AI机遇？&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;中新社约翰内斯堡11月3日电 题：全球南方现代化如何抓住AI机遇？&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;——专访埃及外交事务委员会主任伊扎特·萨阿德&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;在全球南方群体性崛起、共同迈向现代化的进程中，中国走出了立足本国国情、重视本土经验的现代化道路——中国式现代化。进入人工智能(AI)时代，中国推进“人工智能+”行动，人工智能核心产业规模已超万亿元人民币，推动人工智能更好赋能发展。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;全球南方应如何抓住人工智能机遇，使其为全球南方现代化注入新动能？中国的理念与实践又能带来哪些启示？中新社“东西问”日前在开罗就此专访埃及外交事务委员会主任伊扎特·萨阿德(Ezzat Saad)。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;现将采访实录摘要如下：&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;中新社记者：您如何看待人工智能在目前全球南方现代化中的作用？&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;伊扎特·萨阿德：当前，人工智能正在经历一场革命。人工智能能够改善世界各地数以百万计民众的生活，尤其是全球南方国家民众的生活。无论是在医疗卫生、农业、环境保护，还是生活中的许多其他领域，人工智能都蕴藏着巨大潜力。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;同时，我们也看到在人工智能问题上，全球正出现一道鸿沟，这既涉及技术，也涉及治理。这项技术不应该被少数几个国家垄断。作为全球南方国家，我们应该共享这一领域的最新发展成果，从而改善人民生活，推动世界各国实现可持续发展。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[9]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;caption&quot;,
+      &quot;kind&quot;: &quot;caption&quot;,
+      &quot;text&quot;: &quot;哈萨克斯坦，阿斯塔纳世博园区的“Alem.AI”国际人工智能中心。展示的多款人形机器人。 (资料图)中新社记者 单璐 摄&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;中新社记者：您如何评价中国在推动人工智能惠及全球南方、促进更加公平包容的全球人工智能治理方面发挥的作用？&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[10]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;伊扎特·萨阿德：在2026世界人工智能大会暨人工智能全球治理高级别会议上，中方宣布系列举措，包括未来5年将面向发展中国家提供专题研修培训；面向阿拉伯国家联盟、非洲联盟、上海合作组织、金砖国家等建设国际人工智能应用合作中心等。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[11]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;我们赞赏中国在金砖国家、上合组织等平台上提出的有关倡议，并推动在人工智能领域加强与全球南方国家的合作。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[12]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;我们同样赞赏，中国强调应当在多边机构框架下推进人工智能治理，无论是在联合国，还是在非盟、阿盟等区域组织，以及中非合作论坛、中阿合作论坛等机制。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[13]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;这意味着，所有相关国家都有机会参与其中，与其他志同道合的国家一道塑造人工智能的未来。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[14]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;全球人工智能治理应为所有文明、所有语言提供充分的参与空间，使它们都能够共同参与塑造人工智能的未来，这一点至关重要。这实际上关系到文明之间的对话。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[15]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;人工智能不应该被某一种文明或某一种语言所垄断，而应该由所有语言、所有文明共同分享。正因为如此，我们高度赞赏中国提出的有关倡议，以及此前在中国举行的相关会议。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[16]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;我们应当加强协调与合作，同时交流彼此在人工智能领域的经验。我认为，这也是中方在许多场合所强调的核心理念，即我们应该以公平、开放的方式处理人工智能问题，使每一个国家都能够从这场新的技术革命中受益。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[17]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;caption&quot;,
+      &quot;kind&quot;: &quot;caption&quot;,
+      &quot;text&quot;: &quot;2026年7月20日，上海，中国—金砖国家人工智能发展与合作中心‌吸引参观者。中新社发 陈玉宇 摄&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[5]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;中新社记者：今年是中埃建交70周年。两国应如何进一步深化人工智能应用、人才培养和技术合作？这种合作能为其他全球南方国家现代化建设提供哪些经验？&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[18]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;伊扎特·萨阿德：谈到埃及和中国之间的合作，实际上存在很多机遇。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[19]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;首先，中国同包括埃及在内的多个阿拉伯国家建立了全面战略伙伴关系。这意味着双方的合作领域非常广泛，而我认为人工智能将成为其中一个非常重要的领域。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[20]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;其次，除了中国与阿拉伯国家之间的双边合作之外，我们还拥有一个可以推动基础设施、人工智能以及其他众多领域合作的制度性框架，那就是中阿合作论坛。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[21]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;中阿合作论坛可以作为一个多边机制，共同确定人工智能领域的诸多合作方向，并探索如何通过这些合作实现互利共赢。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[22]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;中国已经是埃及以及整个阿拉伯世界最重要的贸易和经济伙伴之一，这本身就为双方进一步深化合作提供了良好基础。尤其是在我们讨论作为全球南方组成部分的阿拉伯国家如何推进现代化时，中国能够发挥重要作用。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[23]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;caption&quot;,
+      &quot;kind&quot;: &quot;caption&quot;,
+      &quot;text&quot;: &quot;当地时间9月30日，2026全球南方现代化论坛在埃及开罗举行，本次论坛主题是“人工智能浪潮：全球南方现代化的机遇与挑战”。图为“全球南方青年说”嘉宾分享人工智能助力发展案例。 中新社记者 孙翔 摄&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[7]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;在人工智能领域，我们非常重视同中国开展能力建设合作。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[24]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;2025年，埃及发布第二版《国家人工智能战略(2025—2030年)》，确立了治理、技术、数据、基础设施、创新生态系统和人才六大支柱，并规划开发国家人工智能模型、生成高质量的阿拉伯语数据集等。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[25]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;按照规划，到2030年，埃及人工智能专业人员和专家数量将翻一番，达到3万人；信息通信技术产业对国内生产总值(GDP)的贡献率将提高至7.7%。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[26]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;我相信，中国也将在这一过程中给予我们支持。未来五年，我们将开展许多共同或联合项目。通过这些项目，中国将帮助我们进一步了解和掌握人工智能技术，并为埃及培养相关人才，使他们接受人工智能这场新技术革命不同技术领域的专业培训。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[27]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;此外，两国合作并不仅限于人工智能，还包括航天产业等许多领域，而这对埃及实现现代化都十分重要。(完)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[28]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;受访者简介：&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[29]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;caption&quot;,
+      &quot;kind&quot;: &quot;caption&quot;,
+      &quot;text&quot;: &quot;埃及外交事务委员会主任伊扎特·萨阿德接受中新社“东西问”专访。中新社记者 孙翔 摄&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[9]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;伊扎特·萨阿德(Ezzat Saad)，现任埃及外交事务委员会主任，是埃及前外交部部长助理、埃及前驻俄罗斯大使、中国非洲研究院顾问，2026全球南方现代化论坛嘉宾。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[30]&quot;
+    }
+  ],
   &quot;metadata&quot;: [
     {
       &quot;type&quot;: &quot;published_at&quot;,
@@ -91,27 +565,415 @@
       &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[10]&quot;
     }
   ],
-  &quot;issues&quot;: [
+  &quot;excluded&quot;: [],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+    &quot;images_present_pixels_not_extracted_completeness_unknown&quot;
+  ]
+}</pre></details></div></article><article class="panel article" id="page-2"><div class="article-meta"><span>历史参考回归</span><span>pydoc_interpreter</span><span class="badge good">检查通过</span></div><h2>2. 使用 Python 的解释器</h2><div class="article-links"><a href="https://docs.python.org/zh-cn/3/tutorial/interpreter.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/foundation_reference/pydoc_interpreter.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div class="comparison small">项目一参考 32 块 → 当前 32 块；文字与顺序一致。<details><summary>查看差异记录</summary><pre>{
+  &quot;missing&quot;: [],
+  &quot;added&quot;: []
+}</pre></details></div><div data-version="r0"><h3>页面信息 <span class="muted small">与正文分离</span></h3><p class="muted">本次未提取独立页面信息。</p><div class="content-title"><h3>提取正文 <span class="muted small">32 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">小标题</span></div><h3>2.1. 唤出解释器</h3><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/h2</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>在可用的机器上 Python 解释器通常被安装为 /usr/local/bin/python3.15；将 /usr/local/bin 加入你的 Unix shell 搜索路径就可以通过键入以下命令来启动它：</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">代码块</span></div><pre class="body-code">python3.15</pre><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/div/div/pre</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>这样，就可以在 shell 中运行 Python 了 [1] 。因为可以选择安装目录，解释器也有可能安装在别的位置；如果还不明白，就去问问身边的 Python 大神或系统管理员。（例如，常见备选路径还有 /usr/local/python。）</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>在 Windows 机器上当你从 Microsoft Store 安装 Python 之后，python3.15 命令将可使用。 如果你安装了 py.exe 启动器，你将可以使用 py 命令。 请参阅 Python 安装管理器 了解其他启动 Python 的方式。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/p[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">段落</span></div><p>在主提示符中，输入文件结束符 (Unix 里是 Control-D，Windows 里是 Control-Z)，就会退出解释器，退出状态码为 0。 如果不能退出，还可以输入这个命令: quit()。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/p[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">7</span><span class="kind">段落</span></div><p>在大多数系统上解释器的行编辑特性包括交互式编辑、历史替换和代码补全等。 检测命令行编辑是否受支持的最快速的方式是在 Python 提示符下键入一个单词，然后按左方向键 (或 Control-b)。 如果光标移动了，说明你可进行命令行编辑；请参阅附录 交互式编辑和编辑历史 了解相关功能键的介绍。 如果没有任何反应，或者显示 ^[[D 或 ^B 之类的字符序列，则说明命令行编辑不可用；你只能使用退格键删除当前行的字符。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/p[5]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">8</span><span class="kind">段落</span></div><p>解释器的操作方式类似 Unix Shell：用与 tty 设备关联的标准输入调用时，可以交互式地读取和执行命令；以文件名参数，或标准输入文件调用时，则读取并执行文件中的 脚本。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/p[6]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">9</span><span class="kind">段落</span></div><p>另一种启动解释器的方式是 python -c command [arg] ...，这将执行 command 中的语句，相当于 shell 的 -c 选项。 由于 Python 语句经常包含空格或其他会被 shell 特殊对待的字符，通常建议用引号将整个 command 括起来。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/p[7]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">10</span><span class="kind">段落</span></div><p>Python 模块也可以当作脚本使用。输入：python -m module [arg] ...，会执行 module 的源文件，这跟在命令行把路径写全了一样。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/p[8]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">11</span><span class="kind">段落</span></div><p>在交互模式下运行脚本文件，只要在脚本名称参数前，加上选项 -i 就可以了。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/p[9]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">12</span><span class="kind">段落</span></div><p>命令行的所有选项详见 命令行与环境。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/p[10]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">13</span><span class="kind">小标题</span></div><h3>2.1.1. 传入参数</h3><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/section[1]/h3</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">14</span><span class="kind">段落</span></div><p>解释器读取命令行参数，把脚本名与其他参数转化为字符串列表存到 sys 模块的 argv 变量里。执行 import sys，可以导入这个模块，并访问该列表。该列表最少有一个元素；未给定输入参数时，sys.argv[0] 是空字符串。给定脚本名是 &#x27;-&#x27; （标准输入）时，sys.argv[0] 是 &#x27;-&#x27;。使用 -c command 时，sys.argv[0] 是 &#x27;-c&#x27;。如果使用选项 -m module，sys.argv[0] 就是包含目录的模块全名。解释器不处理 -c command 或 -m module 之后的选项，而是直接留在 sys.argv 中由命令或模块来处理。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/section[1]/p</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">15</span><span class="kind">小标题</span></div><h3>2.1.2. 交互模式</h3><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/section[2]/h3</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">16</span><span class="kind">段落</span></div><p>在终端输入并执行指令时，解释器在 交互模式 中运行。在这种模式中，会显示 主提示符，提示输入下一条指令，主提示符通常用三个大于号 (&gt;&gt;&gt;) 表示；输入连续行时，显示 次要提示符，默认是三个点 (...)。 进入解释器时，首先显示欢迎信息、版本信息、版权声明，然后才是提示符：</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/section[2]/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">17</span><span class="kind">代码块</span></div><pre class="body-code">$ python3.15
+Python 3.15 (default, May 7 2025, 15:46:04)
+[GCC 10.2.0] on linux
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt;</pre><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/section[2]/div[1]/div/pre</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">18</span><span class="kind">段落</span></div><p>输入多行结构的语句时，要用连续行。以 if 为例：</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/section[2]/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">19</span><span class="kind">代码块</span></div><pre class="body-code">&gt;&gt;&gt; the_world_is_flat = True
+&gt;&gt;&gt; if the_world_is_flat:
+...     print(&quot;Be careful not to fall off!&quot;)
+...
+Be careful not to fall off!</pre><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/section[2]/div[2]/div/pre</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">20</span><span class="kind">段落</span></div><p>交互模式的内容详见 交互模式。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[1]/section[2]/p[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">21</span><span class="kind">小标题</span></div><h3>2.2. 解释器的运行环境</h3><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[2]/h2</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">22</span><span class="kind">小标题</span></div><h3>2.2.1. 源文件的字符编码</h3><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[2]/section/h3</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">23</span><span class="kind">段落</span></div><p>默认情况下，Python 源码文件的编码是 UTF-8。这种编码支持世界上大多数语言的字符，可以用于字符串字面值、变量、函数名及注释 —— 尽管标准库只用常规的 ASCII 字符作为变量名或函数名，可移植代码都应遵守此约定。要正确显示这些字符，编辑器必须能识别 UTF-8 编码，而且必须使用支持文件中所有字符的字体。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[2]/section/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">24</span><span class="kind">段落</span></div><p>如果不使用默认编码，则要声明文件的编码，文件的 第一 行要写成特殊注释。句法如下：</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[2]/section/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">25</span><span class="kind">代码块</span></div><pre class="body-code"># -*- coding: encoding -*-</pre><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[2]/section/div[1]/div/pre</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">26</span><span class="kind">段落</span></div><p>其中，encoding 可以是 Python 支持的任意一种 codecs。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[2]/section/p[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">27</span><span class="kind">段落</span></div><p>比如，声明使用 Windows-1252 编码，源码文件要写成：</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[2]/section/p[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">28</span><span class="kind">代码块</span></div><pre class="body-code"># -*- coding: cp1252 -*-</pre><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[2]/section/div[2]/div/pre</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">29</span><span class="kind">段落</span></div><p>第一行 的规则也有一种例外情况，源码以 UNIX &quot;shebang&quot; 行 开头。此时，编码声明要写在文件的第二行。例如：</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[2]/section/p[5]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">30</span><span class="kind">代码块</span></div><pre class="body-code">#!/usr/bin/env python3
+# -*- coding: cp1252 -*-</pre><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[2]/section/div[3]/div/pre</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">31</span><span class="kind">段落</span></div><p>备注</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[2]/section/p[6]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">32</span><span class="kind">脚注</span></div><p>[1] Unix 系统中，为了不与同时安装的 Python 2.x 冲突，Python 3.x 解释器默认安装的执行文件名不是 python。</p><details><summary>XPath 原文定位</summary><pre>/html/body/div[3]/div[1]/div/div/section/section[2]/section/aside/aside</pre></details></li></ol><details><summary>排除记录 · 0 项</summary><p class="muted">本次未提取独立页面信息。</p></details><details><summary>检查问题 · 0 项</summary><p class="muted">未记录结构检查问题。语义完整性仍需单独评估。</p></details><details><summary>局限与警告 · 2 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li></ul></details><details><summary>完整原始结果</summary><a href="pydoc_interpreter.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;2. 使用 Python 的解释器&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/h1&quot;,
+  &quot;blocks&quot;: [
     {
-      &quot;kind&quot;: &quot;metadata_requires_review&quot;,
-      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]&quot;,
-      &quot;message&quot;: &quot;Body metadata classification requires semantic review, not automatic coverage credit&quot;
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;2.1. 唤出解释器&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/h2&quot;
     },
     {
-      &quot;kind&quot;: &quot;metadata_requires_review&quot;,
-      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[10]&quot;,
-      &quot;message&quot;: &quot;Body metadata classification requires semantic review, not automatic coverage credit&quot;
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;在可用的机器上 Python 解释器通常被安装为 /usr/local/bin/python3.15；将 /usr/local/bin 加入你的 Unix shell 搜索路径就可以通过键入以下命令来启动它：&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;code_block&quot;,
+      &quot;kind&quot;: &quot;code_block&quot;,
+      &quot;text&quot;: &quot;python3.15&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/div/div/pre&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;这样，就可以在 shell 中运行 Python 了 [1] 。因为可以选择安装目录，解释器也有可能安装在别的位置；如果还不明白，就去问问身边的 Python 大神或系统管理员。（例如，常见备选路径还有 /usr/local/python。）&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;在 Windows 机器上当你从 Microsoft Store 安装 Python 之后，python3.15 命令将可使用。 如果你安装了 py.exe 启动器，你将可以使用 py 命令。 请参阅 Python 安装管理器 了解其他启动 Python 的方式。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/p[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;在主提示符中，输入文件结束符 (Unix 里是 Control-D，Windows 里是 Control-Z)，就会退出解释器，退出状态码为 0。 如果不能退出，还可以输入这个命令: quit()。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/p[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;在大多数系统上解释器的行编辑特性包括交互式编辑、历史替换和代码补全等。 检测命令行编辑是否受支持的最快速的方式是在 Python 提示符下键入一个单词，然后按左方向键 (或 Control-b)。 如果光标移动了，说明你可进行命令行编辑；请参阅附录 交互式编辑和编辑历史 了解相关功能键的介绍。 如果没有任何反应，或者显示 ^[[D 或 ^B 之类的字符序列，则说明命令行编辑不可用；你只能使用退格键删除当前行的字符。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/p[5]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;解释器的操作方式类似 Unix Shell：用与 tty 设备关联的标准输入调用时，可以交互式地读取和执行命令；以文件名参数，或标准输入文件调用时，则读取并执行文件中的 脚本。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/p[6]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;另一种启动解释器的方式是 python -c command [arg] ...，这将执行 command 中的语句，相当于 shell 的 -c 选项。 由于 Python 语句经常包含空格或其他会被 shell 特殊对待的字符，通常建议用引号将整个 command 括起来。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/p[7]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Python 模块也可以当作脚本使用。输入：python -m module [arg] ...，会执行 module 的源文件，这跟在命令行把路径写全了一样。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/p[8]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;在交互模式下运行脚本文件，只要在脚本名称参数前，加上选项 -i 就可以了。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/p[9]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;命令行的所有选项详见 命令行与环境。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/p[10]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;2.1.1. 传入参数&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/section[1]/h3&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;解释器读取命令行参数，把脚本名与其他参数转化为字符串列表存到 sys 模块的 argv 变量里。执行 import sys，可以导入这个模块，并访问该列表。该列表最少有一个元素；未给定输入参数时，sys.argv[0] 是空字符串。给定脚本名是 &#x27;-&#x27; （标准输入）时，sys.argv[0] 是 &#x27;-&#x27;。使用 -c command 时，sys.argv[0] 是 &#x27;-c&#x27;。如果使用选项 -m module，sys.argv[0] 就是包含目录的模块全名。解释器不处理 -c command 或 -m module 之后的选项，而是直接留在 sys.argv 中由命令或模块来处理。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/section[1]/p&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;2.1.2. 交互模式&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/section[2]/h3&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;在终端输入并执行指令时，解释器在 交互模式 中运行。在这种模式中，会显示 主提示符，提示输入下一条指令，主提示符通常用三个大于号 (&gt;&gt;&gt;) 表示；输入连续行时，显示 次要提示符，默认是三个点 (...)。 进入解释器时，首先显示欢迎信息、版本信息、版权声明，然后才是提示符：&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/section[2]/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;code_block&quot;,
+      &quot;kind&quot;: &quot;code_block&quot;,
+      &quot;text&quot;: &quot;$ python3.15\nPython 3.15 (default, May 7 2025, 15:46:04)\n[GCC 10.2.0] on linux\nType \&quot;help\&quot;, \&quot;copyright\&quot;, \&quot;credits\&quot; or \&quot;license\&quot; for more information.\n&gt;&gt;&gt;&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/section[2]/div[1]/div/pre&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;输入多行结构的语句时，要用连续行。以 if 为例：&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/section[2]/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;code_block&quot;,
+      &quot;kind&quot;: &quot;code_block&quot;,
+      &quot;text&quot;: &quot;&gt;&gt;&gt; the_world_is_flat = True\n&gt;&gt;&gt; if the_world_is_flat:\n...     print(\&quot;Be careful not to fall off!\&quot;)\n...\nBe careful not to fall off!&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/section[2]/div[2]/div/pre&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;交互模式的内容详见 交互模式。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[1]/section[2]/p[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;2.2. 解释器的运行环境&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[2]/h2&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;2.2.1. 源文件的字符编码&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[2]/section/h3&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;默认情况下，Python 源码文件的编码是 UTF-8。这种编码支持世界上大多数语言的字符，可以用于字符串字面值、变量、函数名及注释 —— 尽管标准库只用常规的 ASCII 字符作为变量名或函数名，可移植代码都应遵守此约定。要正确显示这些字符，编辑器必须能识别 UTF-8 编码，而且必须使用支持文件中所有字符的字体。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[2]/section/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;如果不使用默认编码，则要声明文件的编码，文件的 第一 行要写成特殊注释。句法如下：&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[2]/section/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;code_block&quot;,
+      &quot;kind&quot;: &quot;code_block&quot;,
+      &quot;text&quot;: &quot;# -*- coding: encoding -*-&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[2]/section/div[1]/div/pre&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;其中，encoding 可以是 Python 支持的任意一种 codecs。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[2]/section/p[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;比如，声明使用 Windows-1252 编码，源码文件要写成：&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[2]/section/p[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;code_block&quot;,
+      &quot;kind&quot;: &quot;code_block&quot;,
+      &quot;text&quot;: &quot;# -*- coding: cp1252 -*-&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[2]/section/div[2]/div/pre&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;第一行 的规则也有一种例外情况，源码以 UNIX \&quot;shebang\&quot; 行 开头。此时，编码声明要写在文件的第二行。例如：&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[2]/section/p[5]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;code_block&quot;,
+      &quot;kind&quot;: &quot;code_block&quot;,
+      &quot;text&quot;: &quot;#!/usr/bin/env python3\n# -*- coding: cp1252 -*-&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[2]/section/div[3]/div/pre&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;备注&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[2]/section/p[6]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;footnote&quot;,
+      &quot;kind&quot;: &quot;footnote&quot;,
+      &quot;text&quot;: &quot;[1] Unix 系统中，为了不与同时安装的 Python 2.x 冲突，Python 3.x 解释器默认安装的执行文件名不是 python。&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[3]/div[1]/div/div/section/section[2]/section/aside/aside&quot;
     }
-  ]
-}</pre></section>
-<section><h2>pydoc_interpreter</h2><a href="pydoc_interpreter.json">完整提取结果</a><pre>{
-  &quot;id&quot;: &quot;pydoc_interpreter&quot;,
-  &quot;layout&quot;: &quot;pydoc&quot;,
-  &quot;reference_blocks&quot;: 32,
-  &quot;current_blocks&quot;: 32,
-  &quot;body_sequence_equal&quot;: true,
-  &quot;missing&quot;: [],
-  &quot;added&quot;: [],
+  ],
   &quot;metadata&quot;: [],
-  &quot;issues&quot;: []
-}</pre></section>
+  &quot;excluded&quot;: [],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+  ]
+}</pre></details></div></article></div></div></section>
+<section class="view" role="tabpanel" aria-labelledby="tab-process" id="view-process" data-view="process"><div class="panel"><h2>参考回归对照</h2><p class="muted">本次未生成或修复模型规则。对比项目一已确认输出与项目二固定执行层结果。</p><div class="table-wrap"><table><thead><tr><th>样本</th><th>参考正文块</th><th>当前正文块</th><th>文字与顺序</th><th>待审核项</th></tr></thead><tbody><tr><td>sina_01</td><td>43</td><td>43</td><td>一致</td><td>4</td></tr><tr><td>chinanews_03</td><td>33</td><td>33</td><td>一致</td><td>2</td></tr><tr><td>pydoc_interpreter</td><td>32</td><td>32</td><td>一致</td><td>0</td></tr></tbody></table></div><p>正文一致和语义待审核分别记录；分类与排除未确认时不计作语义验收。</p></div></section>
+<section class="view" role="tabpanel" aria-labelledby="tab-rules" id="view-rules" data-view="rules"><div class="panel"><h2>生成规则与复用代码</h2><p class="muted">本报告使用人工参考配方，未调用模型生成。</p><div class="step"><h3>sina_01 · 人工参考配方</h3><pre>{
+  &quot;title_xpath&quot;: &quot;//h1[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; main-title \&quot;)]&quot;,
+  &quot;container_xpath&quot;: &quot;//div[@id=\&quot;artibody\&quot;]&quot;,
+  &quot;block_xpath&quot;: &quot;./p | .//h2 | .//h3 | .//table | .//div[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; pictext \&quot;)]&quot;,
+  &quot;exclude_xpath&quot;: &quot;.//*[@id=\&quot;app-kaihu-stock\&quot;] | .//*[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; appendQr_wrap \&quot;)] | ./p[starts-with(normalize-space(.),\&quot;专题：\&quot;) and .//a]&quot;,
+  &quot;metadata_xpath&quot;: &quot;&quot;,
+  &quot;metadata_fields&quot;: {
+    &quot;author&quot;: &quot;//meta[@property=\&quot;article:author\&quot;] | //div[@id=\&quot;artibody\&quot;]/p[1][not(contains(.,\&quot;：\&quot;)) and contains(.,\&quot;记者\&quot;)]&quot;,
+    &quot;editor&quot;: &quot;//*[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; article-editor \&quot;)]&quot;,
+    &quot;published_at&quot;: &quot;//*[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; date-source \&quot;)]//*[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; date \&quot;)]&quot;,
+    &quot;source&quot;: &quot;//*[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; date-source \&quot;)]//*[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; source \&quot;)]&quot;
+  }
+}</pre></div><div class="step"><h3>chinanews_03 · 人工参考配方</h3><pre>{
+  &quot;title_xpath&quot;: &quot;//h1[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; content_left_title \&quot;)]&quot;,
+  &quot;container_xpath&quot;: &quot;//div[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; left_zw \&quot;)]&quot;,
+  &quot;block_xpath&quot;: &quot;./p | ./div[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; pictext \&quot;)]&quot;,
+  &quot;exclude_xpath&quot;: &quot;.//*[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; adInContent \&quot;)]&quot;,
+  &quot;metadata_xpath&quot;: &quot;&quot;,
+  &quot;metadata_fields&quot;: {
+    &quot;author&quot;: &quot;//div[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; left_zw \&quot;)]/p[starts-with(normalize-space(translate(.,\&quot;　 \&quot;,\&quot;  \&quot;)),\&quot;中新社记者 \&quot;) and not(contains(.,\&quot;：\&quot;))]&quot;,
+    &quot;editor&quot;: &quot;//*[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; adEditor \&quot;)]&quot;,
+    &quot;source&quot;: &quot;//*[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; content_left_time \&quot;)]//a[contains(concat(\&quot; \&quot;,normalize-space(@class),\&quot; \&quot;),\&quot; source \&quot;)]&quot;,
+    &quot;published_at&quot;: &quot;//*[@id=\&quot;pubtime_baidu\&quot;]&quot;
+  }
+}</pre></div><div class="step"><h3>pydoc_interpreter · 人工参考配方</h3><pre>{
+  &quot;title_xpath&quot;: &quot;//*[@role=\&quot;main\&quot;]//h1&quot;,
+  &quot;container_xpath&quot;: &quot;//*[@role=\&quot;main\&quot;]&quot;,
+  &quot;block_xpath&quot;: &quot;.//*[@role=\&quot;doc-footnote\&quot;] | .//*[self::p or self::pre or self::li or self::dt or self::dd or self::table or self::h2 or self::h3 or self::h4][not(ancestor::p or ancestor::pre or ancestor::li or ancestor::dt or ancestor::dd or ancestor::table or ancestor::*[@role=\&quot;doc-footnote\&quot;])]&quot;,
+  &quot;exclude_xpath&quot;: &quot;&quot;,
+  &quot;metadata_xpath&quot;: &quot;&quot;
+}</pre></div></div></section>
+<section class="view" role="tabpanel" aria-labelledby="tab-calls" id="view-calls" data-view="calls"><div class="panel"><h2>API 调用与运行证据</h2><p>模型：<strong>不适用（人工参考规则）</strong> · 提供方：human_reference · API 尝试：0</p><p class="muted">全流程耗时：未记录 秒 · 修复预算：不适用 次</p><div class="table-wrap"><table><thead><tr><th>候选轮次</th><th>状态</th><th>输入 tokens</th><th>输出 tokens</th><th>合计 tokens</th><th>耗时</th></tr></thead><tbody></tbody></table></div><p class="muted">本记录没有 API 请求；模拟演示或参考回归不代表真实模型调用。</p><p class="muted">用量仅汇总服务端已返回的记录；失败请求可能没有返回用量。未配置价格，不计算金额。耗时为单次运行记录，不是性能基准。</p><details><summary>任务与执行器版本</summary><pre>{
+  &quot;task_id&quot;: &quot;foundation-reference&quot;,
+  &quot;evaluation_scope&quot;: &quot;Project one human-authored reference recipes; NOT Agent generation or unseen evaluation&quot;
+}</pre></details><details><summary>完整参考回归记录</summary><a href="report.json" target="_blank" rel="noopener">打开 report.json</a><pre>{
+  &quot;task_id&quot;: &quot;foundation-reference&quot;,
+  &quot;provider&quot;: &quot;human_reference&quot;,
+  &quot;model&quot;: &quot;不适用（人工参考规则）&quot;,
+  &quot;api_attempts&quot;: [],
+  &quot;input_pages&quot;: [
+    {
+      &quot;id&quot;: &quot;sina_01&quot;,
+      &quot;role&quot;: &quot;historical_exposed_regression&quot;,
+      &quot;status&quot;: &quot;needs_review&quot;,
+      &quot;url&quot;: &quot;https://finance.sina.com.cn/stock/bxjj/2026-10-27/doc-iniwrkkw2082967.shtml&quot;,
+      &quot;source_path&quot;: &quot;data/project2/foundation_reference/sina_01.html&quot;,
+      &quot;result&quot;: &quot;sina_01.json&quot;,
+      &quot;issues&quot;: [
+        {
+          &quot;kind&quot;: &quot;metadata_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[45]&quot;,
+          &quot;message&quot;: &quot;Body metadata classification requires semantic review, not automatic coverage credit&quot;
+        },
+        {
+          &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;,
+          &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+        },
+        {
+          &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[2]&quot;,
+          &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+        },
+        {
+          &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[3]&quot;,
+          &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;chinanews_03&quot;,
+      &quot;role&quot;: &quot;historical_exposed_regression&quot;,
+      &quot;status&quot;: &quot;needs_review&quot;,
+      &quot;url&quot;: &quot;https://www.chinanews.com.cn/dxw/2026/11-03/10725312.shtml&quot;,
+      &quot;source_path&quot;: &quot;data/project2/foundation_reference/chinanews_03.html&quot;,
+      &quot;result&quot;: &quot;chinanews_03.json&quot;,
+      &quot;issues&quot;: [
+        {
+          &quot;kind&quot;: &quot;metadata_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]&quot;,
+          &quot;message&quot;: &quot;Body metadata classification requires semantic review, not automatic coverage credit&quot;
+        },
+        {
+          &quot;kind&quot;: &quot;metadata_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[10]&quot;,
+          &quot;message&quot;: &quot;Body metadata classification requires semantic review, not automatic coverage credit&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;pydoc_interpreter&quot;,
+      &quot;role&quot;: &quot;historical_exposed_regression&quot;,
+      &quot;status&quot;: &quot;pass&quot;,
+      &quot;url&quot;: &quot;https://docs.python.org/zh-cn/3/tutorial/interpreter.html&quot;,
+      &quot;source_path&quot;: &quot;data/project2/foundation_reference/pydoc_interpreter.html&quot;,
+      &quot;result&quot;: &quot;pydoc_interpreter.json&quot;,
+      &quot;issues&quot;: []
+    }
+  ],
+  &quot;rounds&quot;: [
+    {
+      &quot;round&quot;: 0,
+      &quot;pages&quot;: [
+        {
+          &quot;id&quot;: &quot;sina_01&quot;,
+          &quot;role&quot;: &quot;historical_exposed_regression&quot;,
+          &quot;status&quot;: &quot;needs_review&quot;,
+          &quot;url&quot;: &quot;https://finance.sina.com.cn/stock/bxjj/2026-10-27/doc-iniwrkkw2082967.shtml&quot;,
+          &quot;source_path&quot;: &quot;data/project2/foundation_reference/sina_01.html&quot;,
+          &quot;result&quot;: &quot;sina_01.json&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;metadata_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[45]&quot;,
+              &quot;message&quot;: &quot;Body metadata classification requires semantic review, not automatic coverage credit&quot;
+            },
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            },
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[2]&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            },
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[3]&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;chinanews_03&quot;,
+          &quot;role&quot;: &quot;historical_exposed_regression&quot;,
+          &quot;status&quot;: &quot;needs_review&quot;,
+          &quot;url&quot;: &quot;https://www.chinanews.com.cn/dxw/2026/11-03/10725312.shtml&quot;,
+          &quot;source_path&quot;: &quot;data/project2/foundation_reference/chinanews_03.html&quot;,
+          &quot;result&quot;: &quot;chinanews_03.json&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;metadata_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]&quot;,
+              &quot;message&quot;: &quot;Body metadata classification requires semantic review, not automatic coverage credit&quot;
+            },
+            {
+              &quot;kind&quot;: &quot;metadata_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[10]&quot;,
+              &quot;message&quot;: &quot;Body metadata classification requires semantic review, not automatic coverage credit&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;pydoc_interpreter&quot;,
+          &quot;role&quot;: &quot;historical_exposed_regression&quot;,
+          &quot;status&quot;: &quot;pass&quot;,
+          &quot;url&quot;: &quot;https://docs.python.org/zh-cn/3/tutorial/interpreter.html&quot;,
+          &quot;source_path&quot;: &quot;data/project2/foundation_reference/pydoc_interpreter.html&quot;,
+          &quot;result&quot;: &quot;pydoc_interpreter.json&quot;,
+          &quot;issues&quot;: []
+        }
+      ],
+      &quot;issues&quot;: []
+    }
+  ],
+  &quot;holdout&quot;: [],
+  &quot;final_status&quot;: &quot;needs_review&quot;,
+  &quot;initial_candidate&quot;: &quot;human_reference&quot;,
+  &quot;evaluation_scope&quot;: &quot;Project one human-authored reference recipes; NOT Agent generation or unseen evaluation&quot;
+}</pre></details></div></section></main><footer class="foot">此页面仅展示已保存的实验记录。筛选、切换与展开不会发起 API 请求，也不会修改标注或提取结果。</footer></div><script>
+(()=>{
+const tabs=[...document.querySelectorAll('[data-tab]')], views=[...document.querySelectorAll('[data-view]')];
+function showTab(name){tabs.forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===name)));views.forEach(v=>v.hidden=v.dataset.view!==name)}
+tabs.forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));
+const nav=[...document.querySelectorAll('.page-button')], articles=[...document.querySelectorAll('.article')];
+const input=document.getElementById('page-search'),role=document.getElementById('role-filter');
+function selectPage(id,scroll=false){articles.forEach(a=>a.hidden=a.id!==id);nav.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.target===id)));if(scroll)document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'})}
+nav.forEach(b=>b.addEventListener('click',()=>selectPage(b.dataset.target)));
+function filter(){const q=input.value.trim().toLowerCase();nav.forEach(b=>b.hidden=!(b.textContent.toLowerCase().includes(q)&&(!role.value||b.dataset.role===role.value)));const visible=nav.filter(b=>!b.hidden);document.getElementById('nav-count').textContent=visible.length+' / '+nav.length+' 篇';document.getElementById('no-pages').hidden=visible.length>0;if(!visible.some(b=>b.getAttribute('aria-pressed')==='true')){if(visible.length)selectPage(visible[0].dataset.target);else articles.forEach(a=>a.hidden=true)}}
+input.addEventListener('input',filter);role.addEventListener('change',filter);
+document.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>{showTab('results');input.value='';role.value='';filter();selectPage(b.dataset.jump,true)}));
+document.querySelectorAll('[data-round-picker]').forEach(s=>{function choose(){const a=s.closest('.article');a.querySelectorAll('[data-version]').forEach(v=>v.hidden=v.dataset.version!==s.value)}s.addEventListener('change',choose);choose()});
+document.querySelectorAll('[data-evidence-toggle]').forEach(b=>b.addEventListener('click',()=>{const a=b.closest('[data-version]'),ds=[...a.querySelectorAll('.body-block details')],open=ds.some(d=>!d.open);ds.forEach(d=>d.open=open);b.textContent=open?'收起全部原文定位':'展开全部原文定位'}));
+showTab('results');if(nav.length)selectPage(nav[0].dataset.target);filter();
+})();
+</script></body></html>

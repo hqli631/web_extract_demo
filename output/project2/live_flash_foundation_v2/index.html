@@ -1,282 +1,1046 @@
-<!doctype html><meta charset="utf-8"><title>Project 2 live Agent report</title>
-<style>body{font:16px/1.6 system-ui;max-width:1100px;margin:32px auto;padding:0 20px;background:#f5f7fb;color:#17233a}section{background:white;padding:20px;margin:18px 0;border-radius:12px}pre{white-space:pre-wrap;overflow-wrap:anywhere}a{color:#225dc7}.block{border-left:3px solid #739ee9;padding:8px 14px;margin:12px 0}small{color:#56647a}</style>
-<h1>项目二：千问单 Agent 生成与复用抽取代码</h1>
-<section><p>状态：pass；模型：qwen3.8-flash；API尝试：1；候选轮次：1</p>
-<p>实验类型：model_generated。controlled_ablation 表示人为设置漏提规则的修复实验，不能当作新测试成绩。</p>
-<p>2篇生成样本 → 1篇开发反馈 → 冻结代码 → 2篇最终测试。同一份XPath代码在CPU上批量提取。</p>
-<p>通过表示本任务的结构覆盖、定位和非空检查通过；语义准确率、图片完整性仍为 unknown。HTML快照不保证离线样式还原。</p>
-<p><a href="trace.json">完整轨迹及用量</a> · <a href="extractor.py">冻结的Python模块</a> · <a href="rules.json">XPath规则</a></p></section>
-<section><h2>候选轮次 0</h2><p><a href="candidate_round_0.json">本轮规则</a> · <a href="candidate_round_0.py">本轮代码</a></p><pre>{
-  &quot;round&quot;: 0,
-  &quot;pages&quot;: [
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>项目二 · 单 Agent 正文提取报告</title><style>
+:root{--ink:#18314a;--muted:#61748a;--line:#dce5ee;--blue:#235fba;--paper:#fff;--bg:#f3f6fa}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.75 "Segoe UI","Microsoft YaHei",sans-serif}a{color:var(--blue);text-underline-offset:3px}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #e6a635;outline-offset:3px}[hidden]{display:none!important}.wrap{max-width:1440px;margin:auto;padding:30px 32px 64px}.hero{background:linear-gradient(115deg,#153952,#245d75);color:#fff;padding:28px 32px;border-radius:18px}.eyebrow{font-size:12px;letter-spacing:2px;color:#b8dce8}.hero h1{font-size:30px;line-height:1.4;margin:8px 0}.hero p{margin:8px 0;color:#d7e7ef}.hero .badge{margin-left:8px}.toplinks{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px}.toplinks a{color:#dfedff}.metrics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:18px 0}.metric{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px}.metric small{display:block;color:var(--muted)}.metric strong{font-size:24px;display:block;overflow-wrap:anywhere}.metric .model{font-size:17px;line-height:42px}.metric span{font-size:12px;color:var(--muted)}.notice{border-left:3px solid #d2a453;background:#fff9ed;padding:12px 16px;margin:16px 0;border-radius:4px}.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:22px}.tab{border:1px solid var(--line);background:#fff;padding:9px 20px;border-radius:9px;color:var(--muted)}.tab[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:white}.panel{background:white;border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:20px}.panel h2{font-size:22px;margin:0 0 14px}h3{font-size:18px;margin:20px 0 10px}h4{margin:14px 0 8px}.muted{color:var(--muted)}.small{font-size:13px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;text-align:left;margin:12px 0}th{color:var(--muted);font-size:13px;background:#f4f7fa}td,th{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}td{overflow-wrap:anywhere}td details{min-width:90px;margin:0}td pre{max-width:400px}.badge,.kind{display:inline-block;padding:2px 9px;border-radius:5px;font-size:12px;font-weight:600;white-space:nowrap}.kind{color:#46627e;background:#edf3f9}.good{background:#e2f3ed;color:#196b50}.warn{background:#fff0d4;color:#89600a}.bad{background:#fde8e7;color:#ac3434}.workspace{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}.sidebar{position:sticky;top:16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}.sidebar h3{margin:0 0 10px}.sidebar input,.sidebar select,.round-select{border:1px solid #c9d6e4;background:#fff;border-radius:7px;padding:8px;width:100%;margin-bottom:10px}.page-nav{display:grid;gap:8px;margin-top:6px;max-height:58vh;overflow:auto}.page-button{text-align:left;border:1px solid var(--line);background:#fff;border-radius:8px;padding:10px 12px;color:var(--ink);width:100%}.page-button[aria-pressed=true]{border-color:var(--blue);background:#edf4ff;box-shadow:inset 3px 0 var(--blue)}.page-button small{display:block;color:var(--muted);margin-top:3px}.article{scroll-margin-top:16px}.article h2{font-size:26px;line-height:1.45}.article-links{display:flex;gap:15px;flex-wrap:wrap;margin:12px 0}.article-meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13px}.content-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:26px;border-top:1px solid var(--line);padding-top:20px}.content-title h3{margin:0}.body-list{list-style:none;margin:16px 0;padding:0}.body-block{padding:18px 0;border-bottom:1px solid #edf1f5}.block-label{display:flex;gap:8px;align-items:center}.block-number{font-size:12px;color:#7c8da0;min-width:22px}.body-block p{font-size:16px;line-height:1.95;margin:10px 0;color:#243c51}.body-block h3{font-size:20px;line-height:1.6}.body-block details{font-size:12px}.body-table td{border:1px solid var(--line)}details{margin:12px 0}summary{cursor:pointer;color:var(--blue);overflow-wrap:anywhere}pre{background:#f3f6fa;border:1px solid #e5ebf2;padding:14px;border-radius:8px;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.7 Consolas,monospace;color:#29435d;max-height:540px;overflow:auto}.body-code{white-space:pre;overflow:auto;overflow-wrap:normal}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.quiet{background:#f3f6fa;color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:5px 10px;font-size:12px}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.rule-row{padding:14px 0;border-bottom:1px solid var(--line)}.rule-row p{margin:0}.rule-row pre{margin:8px 0}.step{border-left:3px solid #b8cadf;padding-left:18px;margin:20px 0}.step h3{margin-bottom:6px}.issues li{padding:8px 0}.issues p{margin:2px 0}.comparison{background:#f7faff;border:1px solid #dce8f8;border-radius:8px;padding:14px}.empty{padding:24px;color:var(--muted)}.foot{font-size:12px;color:var(--muted);margin-top:24px}.count-note{font-size:12px;line-height:1.5}.round-select{max-width:280px}.nojs{background:#fff0d4;padding:10px}.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:8px;background:#fff;padding:10px;z-index:10}
+@media(max-width:980px){.metrics{grid-template-columns:repeat(3,1fr)}.workspace{grid-template-columns:220px minmax(0,1fr)}.wrap{padding:20px}.hero{padding:22px}.split{grid-template-columns:1fr}}
+@media(max-width:680px){.wrap{padding:12px}.hero h1{font-size:23px}.metrics{grid-template-columns:1fr 1fr}.metric{padding:12px}.workspace{display:block}.sidebar{position:static;margin-bottom:16px}.page-nav{max-height:220px}.panel{padding:17px}.article h2{font-size:22px}.tab{padding:8px 13px}.content-title{align-items:start}.toplinks{gap:10px}}
+@media print{body{background:white}.wrap{padding:0}.hero{background:white;color:#18314a}.hero p,.hero a{color:#18314a}.tabs,.sidebar,.quiet{display:none}.workspace{display:block}.panel{break-inside:auto}.article[hidden]{display:block!important}pre{max-height:none}.view[hidden]{display:none!important}}
+</style></head><body><a class="skip" href="#report-content">跳到报告内容</a><div class="wrap"><header class="hero"><div class="eyebrow">PROJECT 02 / EXTRACTION AGENT</div><h1>单 Agent 网页正文提取报告</h1><p>真实 API 实验 <span class="badge good">检查通过</span></p><p>从少量同布局样本生成规则，在 CPU 上复用；把提取结果与生成证据放在一起。</p><div class="toplinks"><a href="trace.json" target="_blank" rel="noopener">完整运行记录</a> · <a href="rules.json" target="_blank" rel="noopener">冻结规则</a> · <a href="extractor.py" target="_blank" rel="noopener">Python 提取器</a></div></header>
+<div class="metrics"><div class="metric"><small>模型</small><strong class="model">qwen3.8-flash</strong><span>本次记录中的模型</span></div><div class="metric"><small>API 尝试</small><strong>1</strong><span>1 次返回成功</span></div><div class="metric"><small>候选轮次</small><strong>1</strong><span>含首轮，不等于 API 次数</span></div><div class="metric"><small>网页数量</small><strong>5</strong><span>生成样本 2 · 开发反馈 1 · 最终测试 2</span></div><div class="metric"><small>总 tokens</small><strong>7,126</strong><span>仅统计已返回用量</span></div></div>
+<div class="notice small">检查通过表示本任务的结构与执行检查通过，不等于正文语义准确率。 图片像素和动态内容未评估；HTML 快照不保证原站视觉还原。</div>
+<nav class="tabs" role="tablist" aria-label="报告视图"><button type="button" role="tab" id="tab-results" aria-controls="view-results" aria-selected="true" class="tab" data-tab="results">提取结果</button><button type="button" role="tab" id="tab-process" aria-controls="view-process" aria-selected="false" class="tab" data-tab="process">生成与修复</button><button type="button" role="tab" id="tab-rules" aria-controls="view-rules" aria-selected="false" class="tab" data-tab="rules">规则与代码</button><button type="button" role="tab" id="tab-calls" aria-controls="view-calls" aria-selected="false" class="tab" data-tab="calls">调用记录</button></nav>
+<noscript><p class="nojs">JavaScript 已禁用。所有报告内容仍可阅读，筛选和切换不可用。</p></noscript><main id="report-content"><section class="view" role="tabpanel" aria-labelledby="tab-results" id="view-results" data-view="results">
+<div class="panel"><h2>样本与结果汇总</h2><p class="muted small">点击标题进入正文。生成页可影响规则；开发页可提供修复反馈；最终测试页只在冻结候选后执行。</p><div class="table-wrap"><table><thead><tr><th>文章 / 样本</th><th>角色</th><th>状态</th><th>正文块</th><th>页面信息</th><th>排除项</th></tr></thead><tbody>
+<tr><td><button class="quiet" data-jump="page-0">Python 3.16.0 alpha 2 is now available</button><br><span class="muted small">python_blog_1</span></td><td>生成样本</td><td><span class="badge good">检查通过</span></td><td>21</td><td>3</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-1">Python 3.15.2, 3.14.10, 3.13.18, 3.12.16 and 3.11.18 are out</button><br><span class="muted small">python_blog_2</span></td><td>生成样本</td><td><span class="badge good">检查通过</span></td><td>19</td><td>3</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-2">Python 3.15.1, 3.14.9 and 3.13.17 are out</button><br><span class="muted small">python_blog_3</span></td><td>开发反馈</td><td><span class="badge good">检查通过</span></td><td>19</td><td>3</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-3">Python 3.16.0 alpha 1 is now available</button><br><span class="muted small">python_blog_4</span></td><td>最终测试</td><td><span class="badge good">检查通过</span></td><td>21</td><td>3</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-4">Python 3.15.0 (final) is here!</button><br><span class="muted small">python_blog_5</span></td><td>最终测试</td><td><span class="badge good">检查通过</span></td><td>33</td><td>3</td><td>0</td></tr>
+</tbody></table></div></div><div class="workspace"><aside class="sidebar"><h3>浏览文章</h3><label class="small" for="page-search">搜索标题或样本</label><input id="page-search" type="search" placeholder="输入关键词…"><label class="small" for="role-filter">样本角色</label><select id="role-filter"><option value="">全部角色</option><option value="generation">生成样本</option><option value="development_feedback">开发反馈</option><option value="final_holdout">最终测试</option></select><p class="muted small" id="nav-count">5 篇</p><div class="page-nav"><button class="page-button" data-target="page-0" data-role="generation" aria-pressed="false">Python 3.16.0 alpha 2 is now available<small>生成样本 · 21 块</small></button><button class="page-button" data-target="page-1" data-role="generation" aria-pressed="false">Python 3.15.2, 3.14.10, 3.13.18, 3.12.16 and 3.11.18 are out<small>生成样本 · 19 块</small></button><button class="page-button" data-target="page-2" data-role="development_feedback" aria-pressed="false">Python 3.15.1, 3.14.9 and 3.13.17 are out<small>开发反馈 · 19 块</small></button><button class="page-button" data-target="page-3" data-role="final_holdout" aria-pressed="false">Python 3.16.0 alpha 1 is now available<small>最终测试 · 21 块</small></button><button class="page-button" data-target="page-4" data-role="final_holdout" aria-pressed="false">Python 3.15.0 (final) is here!<small>最终测试 · 33 块</small></button></div><p id="no-pages" class="muted small" hidden>没有匹配的文章，请更换关键词或角色。</p></aside><div><article class="panel article" id="page-0"><div class="article-meta"><span>生成样本</span><span>python_blog_1</span><span class="badge good">检查通过</span></div><h2>Python 3.16.0 alpha 2 is now available</h2><div class="article-links"><a href="https://blog.python.org/2026/11/python-3160-alpha-2-is-now-available/" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/python_blog/page_1.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="r0"><h3>页面信息 <span class="muted small">与正文分离</span></h3><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">其他页面信息</span></td><td>Savannah Ostrowski/November 10, 2026</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]</pre></details></td></tr><tr><td><span class="kind">作者</span></td><td>Savannah Ostrowski</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]/a</pre></details></td></tr><tr><td><span class="kind">发布时间</span></td><td>November 10, 2026</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]/time</pre></details></td></tr></tbody></table></div><div class="content-title"><h3>提取正文 <span class="muted small">21 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>This is an early developer preview of Python 3.16</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>python.org/downloads/release/python-3160a2/</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">小标题</span></div><h3>What’s new in Python 3.16?</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>Python 3.16.0a2 is ready to try! This is the second of seven planned alpha releases, with new features, bug fixes, and performance improvements to test.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>Python 3.16 is still in development. Features can be added until beta 1 on May 4, 2027, and may be modified or removed until the first release candidate on July 27, 2027. The final release is planned for October 5, 2027. This preview is intended for testing and is not recommended for production use.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">段落</span></div><p>Here are a few highlights from Python 3.16 so far, compared with 3.15.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[5]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">7</span><span class="kind">列表</span></div><p>More expressive regular expressions. The re module now supports nested character sets, set operations such as intersection and difference, and matching characters by Unicode properties, such as uppercase letters. Faster startup. Python starts faster, and several common operations have been optimized, including garbage collection and the construction of built-in objects. Faster UUID generation. uuid4() and uuid7() now have C implementations, making generation about 15-30x faster than the pure Python implementations in microbenchmarks. Improved error messages Encrypted Client Hello. The ssl module adds support for ECH when built with OpenSSL 4.0 or later. Build support for more Apple platforms. CPython can now be built for tvOS, watchOS, and visionOS. These platforms are not yet part of the supported platform tiers in PEP 11.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">8</span><span class="kind">段落</span></div><p>See What’s new in Python 3.16 for more changes.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[6]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">9</span><span class="kind">段落</span></div><p>(Hey, fellow core team member, if there’s a feature you’d like highlighted in a future announcement, let Savannah know.)</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[7]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">10</span><span class="kind">段落</span></div><p>Please try this alpha with your libraries and applications and report Python bugs on the CPython issue tracker.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[8]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">11</span><span class="kind">段落</span></div><p>The next alpha, Python 3.16.0a3, is scheduled for December 15, 2026. The full schedule is in PEP 826.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[9]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">12</span><span class="kind">小标题</span></div><h3>More resources</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">13</span><span class="kind">列表</span></div><p>Python 3.16 documentation Changelog Support Python through the Python Software Foundation</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">14</span><span class="kind">小标题</span></div><h3>And now for something completely different</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">15</span><span class="kind">段落</span></div><p>Next up in the Python 3.16 Film Festival is The Martian (2015). Stranded on Mars, Mark Watney has to keep himself alive with what he has on hand. The plan to bring him home takes shape much like CPython does, with people around the world bringing different skills to a shared effort.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[10]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">16</span><span class="kind">段落</span></div><p>So we do this together or not at all. — Commander Melissa Lewis, The Martian (2015)</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/blockquote</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">17</span><span class="kind">小标题</span></div><h3>Enjoy the new release</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">18</span><span class="kind">段落</span></div><p>Thanks to everyone who contributed to this alpha and to everyone giving it a try. Please consider volunteering your time or asking your organisation to support the Python Software Foundation.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[11]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">19</span><span class="kind">段落</span></div><p>Happy testing!</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[12]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">20</span><span class="kind">段落</span></div><p>Regards from Washington state,</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[13]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">21</span><span class="kind">段落</span></div><p>Your release team, Savannah Ostrowski Ned Deily Steve Dower Julien Palard</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[14]</pre></details></li></ol><details><summary>排除记录 · 0 项</summary><p class="muted">本次未提取独立页面信息。</p></details><details><summary>检查问题 · 0 项</summary><p class="muted">未记录结构检查问题。语义完整性仍需单独评估。</p></details><details><summary>局限与警告 · 2 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li></ul></details><details><summary>完整原始结果</summary><a href="round_0_python_blog_1.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;Python 3.16.0 alpha 2 is now available&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/main/div/article/div&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/main/div/article/header/div[1]/div/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;This is an early developer preview of Python 3.16&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;python.org/downloads/release/python-3160a2/&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;What’s new in Python 3.16?&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Python 3.16.0a2 is ready to try! This is the second of seven planned alpha releases, with new features, bug fixes, and performance improvements to test.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Python 3.16 is still in development. Features can be added until beta 1 on May 4, 2027, and may be modified or removed until the first release candidate on July 27, 2027. The final release is planned for October 5, 2027. This preview is intended for testing and is not recommended for production use.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Here are a few highlights from Python 3.16 so far, compared with 3.15.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[5]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;More expressive regular expressions. The re module now supports nested character sets, set operations such as intersection and difference, and matching characters by Unicode properties, such as uppercase letters. Faster startup. Python starts faster, and several common operations have been optimized, including garbage collection and the construction of built-in objects. Faster UUID generation. uuid4() and uuid7() now have C implementations, making generation about 15-30x faster than the pure Python implementations in microbenchmarks. Improved error messages Encrypted Client Hello. The ssl module adds support for ECH when built with OpenSSL 4.0 or later. Build support for more Apple platforms. CPython can now be built for tvOS, watchOS, and visionOS. These platforms are not yet part of the supported platform tiers in PEP 11.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;See What’s new in Python 3.16 for more changes.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[6]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;(Hey, fellow core team member, if there’s a feature you’d like highlighted in a future announcement, let Savannah know.)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[7]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Please try this alpha with your libraries and applications and report Python bugs on the CPython issue tracker.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[8]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;The next alpha, Python 3.16.0a3, is scheduled for December 15, 2026. The full schedule is in PEP 826.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[9]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;More resources&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;Python 3.16 documentation Changelog Support Python through the Python Software Foundation&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;And now for something completely different&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Next up in the Python 3.16 Film Festival is The Martian (2015). Stranded on Mars, Mark Watney has to keep himself alive with what he has on hand. The plan to bring him home takes shape much like CPython does, with people around the world bringing different skills to a shared effort.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[10]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;So we do this together or not at all. — Commander Melissa Lewis, The Martian (2015)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/blockquote&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Enjoy the new release&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Thanks to everyone who contributed to this alpha and to everyone giving it a try. Please consider volunteering your time or asking your organisation to support the Python Software Foundation.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[11]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Happy testing!&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[12]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Regards from Washington state,&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[13]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Your release team, Savannah Ostrowski Ned Deily Steve Dower Julien Palard&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[14]&quot;
+    }
+  ],
+  &quot;metadata&quot;: [
+    {
+      &quot;type&quot;: &quot;metadata&quot;,
+      &quot;kind&quot;: &quot;metadata&quot;,
+      &quot;text&quot;: &quot;Savannah Ostrowski/November 10, 2026&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;author&quot;,
+      &quot;kind&quot;: &quot;author&quot;,
+      &quot;text&quot;: &quot;Savannah Ostrowski&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/a&quot;
+    },
+    {
+      &quot;type&quot;: &quot;published_at&quot;,
+      &quot;kind&quot;: &quot;published_at&quot;,
+      &quot;text&quot;: &quot;November 10, 2026&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/time&quot;
+    }
+  ],
+  &quot;excluded&quot;: [],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+  ]
+}</pre></details></div></article><article class="panel article" id="page-1"><div class="article-meta"><span>生成样本</span><span>python_blog_2</span><span class="badge good">检查通过</span></div><h2>Python 3.15.2, 3.14.10, 3.13.18, 3.12.16 and 3.11.18 are out</h2><div class="article-links"><a href="https://blog.python.org/2026/10/python-3152-31410-31318-31216-31118/" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/python_blog/page_2.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="r0"><h3>页面信息 <span class="muted small">与正文分离</span></h3><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">其他页面信息</span></td><td>Hugo van Kemenade/October 26, 2026</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]</pre></details></td></tr><tr><td><span class="kind">作者</span></td><td>Hugo van Kemenade</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]/a</pre></details></td></tr><tr><td><span class="kind">发布时间</span></td><td>October 26, 2026</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]/time</pre></details></td></tr></tbody></table></div><div class="content-title"><h3>提取正文 <span class="muted small">19 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>Here are expedited security releases of Python 3.15, 3.14, 3.13, 3.12 and 3.11.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">列表</span></div><p>Python 3.15.2 Python 3.14.10 Python 3.13.18 Python 3.12.16 Python 3.11.18</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">段落</span></div><p>They address the compromised eMudhra intermediate CA keys. These keys are now blocked by the ssl module as a last resort against their use. Normal uses of pip, including to upgrade pip itself, are now safe from attacks based on those compromised keys, even if pip hasn’t been updated yet.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>Python 3.15.2 and 3.14.10 come with binary installers. Python 3.13.18, 3.12.16 and 3.11.18 are source-only security releases.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">小标题</span></div><h3>Security content in all five releases</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">列表</span></div><p>CVE-2026-115557 — gh-160040: Distrust compromised eMudhra intermediate CA keys CVE-2026-114583 — gh-160097: Reject links replacing the destination in tarfile.tar_filter gh-160300: Reject cookies with a negative version in http.cookiejar</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">7</span><span class="kind">小标题</span></div><h3>Additional security content by version</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">8</span><span class="kind">小标题</span></div><h3>Python 3.13.18, 3.12.16 and 3.11.18</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h3[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">9</span><span class="kind">段落</span></div><p>These fixes were already included in Python 3.15.1 and 3.14.9.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">10</span><span class="kind">列表</span></div><p>CVE-2026-77214 and CVE-2026-102633 — gh-158876: Update bundled Expat to 2.9.0 CVE-2024-3220 — gh-159428: Don’t read mimetypes.knownfiles by default on Windows gh-87720: Fix additional header refolding-quoting edge case</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">11</span><span class="kind">小标题</span></div><h3>Python 3.13.18 and 3.12.16</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h3[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">12</span><span class="kind">段落</span></div><p>This fix was already included in Python 3.15.0 and 3.14.9.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[5]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">13</span><span class="kind">列表</span></div><p>gh-157579: Fix race condition in the cleanup of tempfile.TemporaryDirectory</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">14</span><span class="kind">段落</span></div><p>For the full details, see the 3.15.2 changelog, 3.14.10 changelog, 3.13.18 changelog, 3.12.16 changelog and 3.11.18 changelog.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[6]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">15</span><span class="kind">小标题</span></div><h3>Stay safe and upgrade!</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">16</span><span class="kind">段落</span></div><p>As always, upgrading is highly recommended to all users of affected versions.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[7]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">17</span><span class="kind">小标题</span></div><h3>Enjoy the new releases</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">18</span><span class="kind">段落</span></div><p>Thanks to all of the many volunteers who help make Python development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[8]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">19</span><span class="kind">段落</span></div><p>Your certified release team, Hugo van Kemenade Thomas Wouters Pablo Galindo Salgado Ned Deily Steve Dower</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[9]</pre></details></li></ol><details><summary>排除记录 · 0 项</summary><p class="muted">本次未提取独立页面信息。</p></details><details><summary>检查问题 · 0 项</summary><p class="muted">未记录结构检查问题。语义完整性仍需单独评估。</p></details><details><summary>局限与警告 · 2 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li></ul></details><details><summary>完整原始结果</summary><a href="round_0_python_blog_2.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;Python 3.15.2, 3.14.10, 3.13.18, 3.12.16 and 3.11.18 are out&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/main/div/article/div&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/main/div/article/header/div[1]/div/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Here are expedited security releases of Python 3.15, 3.14, 3.13, 3.12 and 3.11.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;Python 3.15.2 Python 3.14.10 Python 3.13.18 Python 3.12.16 Python 3.11.18&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;They address the compromised eMudhra intermediate CA keys. These keys are now blocked by the ssl module as a last resort against their use. Normal uses of pip, including to upgrade pip itself, are now safe from attacks based on those compromised keys, even if pip hasn’t been updated yet.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Python 3.15.2 and 3.14.10 come with binary installers. Python 3.13.18, 3.12.16 and 3.11.18 are source-only security releases.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Security content in all five releases&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;CVE-2026-115557 — gh-160040: Distrust compromised eMudhra intermediate CA keys CVE-2026-114583 — gh-160097: Reject links replacing the destination in tarfile.tar_filter gh-160300: Reject cookies with a negative version in http.cookiejar&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Additional security content by version&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Python 3.13.18, 3.12.16 and 3.11.18&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h3[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;These fixes were already included in Python 3.15.1 and 3.14.9.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;CVE-2026-77214 and CVE-2026-102633 — gh-158876: Update bundled Expat to 2.9.0 CVE-2024-3220 — gh-159428: Don’t read mimetypes.knownfiles by default on Windows gh-87720: Fix additional header refolding-quoting edge case&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Python 3.13.18 and 3.12.16&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h3[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;This fix was already included in Python 3.15.0 and 3.14.9.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[5]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;gh-157579: Fix race condition in the cleanup of tempfile.TemporaryDirectory&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;For the full details, see the 3.15.2 changelog, 3.14.10 changelog, 3.13.18 changelog, 3.12.16 changelog and 3.11.18 changelog.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[6]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Stay safe and upgrade!&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;As always, upgrading is highly recommended to all users of affected versions.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[7]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Enjoy the new releases&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Thanks to all of the many volunteers who help make Python development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[8]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Your certified release team, Hugo van Kemenade Thomas Wouters Pablo Galindo Salgado Ned Deily Steve Dower&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[9]&quot;
+    }
+  ],
+  &quot;metadata&quot;: [
+    {
+      &quot;type&quot;: &quot;metadata&quot;,
+      &quot;kind&quot;: &quot;metadata&quot;,
+      &quot;text&quot;: &quot;Hugo van Kemenade/October 26, 2026&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;author&quot;,
+      &quot;kind&quot;: &quot;author&quot;,
+      &quot;text&quot;: &quot;Hugo van Kemenade&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/a&quot;
+    },
+    {
+      &quot;type&quot;: &quot;published_at&quot;,
+      &quot;kind&quot;: &quot;published_at&quot;,
+      &quot;text&quot;: &quot;October 26, 2026&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/time&quot;
+    }
+  ],
+  &quot;excluded&quot;: [],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+  ]
+}</pre></details></div></article><article class="panel article" id="page-2"><div class="article-meta"><span>开发反馈</span><span>python_blog_3</span><span class="badge good">检查通过</span></div><h2>Python 3.15.1, 3.14.9 and 3.13.17 are out</h2><div class="article-links"><a href="https://blog.python.org/2026/10/python-3151-3149-31317/" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/python_blog/page_3.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="r0"><h3>页面信息 <span class="muted small">与正文分离</span></h3><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">其他页面信息</span></td><td>Hugo van Kemenade/October 21, 2026</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]</pre></details></td></tr><tr><td><span class="kind">作者</span></td><td>Hugo van Kemenade</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]/a</pre></details></td></tr><tr><td><span class="kind">发布时间</span></td><td>October 21, 2026</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]/time</pre></details></td></tr></tbody></table></div><div class="content-title"><h3>提取正文 <span class="muted small">19 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>Here are expedited security releases of Python 3.15 and 3.14, and a special security release of 3.13.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">列表</span></div><p>Python 3.15.1 Python 3.14.9 Python 3.13.17</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">段落</span></div><p>They all upgrade the bundled pip to version 26.2.2, which includes certifi 2026.10.19 to address the eMudhra / emSign CA certificate security incident.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>We don’t normally update pip for security releases like Python 3.13 because of backward compatibility concerns, but since 3.13 only just entered security-only mode, doing a special release with installers seemed prudent.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>See the Discourse announcement for more information.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">段落</span></div><p>For all existing virtual environments on your system, please upgrade pip and uv to the latest versions.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[5]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">7</span><span class="kind">段落</span></div><p>To upgrade pip securely within a virtualenv:</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[6]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">8</span><span class="kind">代码块</span></div><pre class="body-code">python -m pip install &quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70&quot;</pre><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/pre[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">9</span><span class="kind">段落</span></div><p>If you cannot immediately upgrade to this release, you can upgrade certificates for a Python 3.15 macOS installation and pip itself via:</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[7]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">10</span><span class="kind">代码块</span></div><pre class="body-code">/Library/Frameworks/Python.framework/Versions/3.15/bin/python3.15 -m pip install &quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70&quot;
+/Library/Frameworks/Python.framework/Versions/3.15/bin/python3.15 -m pip install --upgrade certifi
+/Library/Frameworks/PythonT.framework/Versions/3.15/bin/python3.15t -m pip install &quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70&quot;</pre><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/pre[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">11</span><span class="kind">段落</span></div><p>For 3.14:</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[8]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">12</span><span class="kind">代码块</span></div><pre class="body-code">/Library/Frameworks/Python.framework/Versions/3.14/bin/python3.14 -m pip install &quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70&quot;
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3.14 -m pip install --upgrade certifi
+/Library/Frameworks/PythonT.framework/Versions/3.14/bin/python3.14t -m pip install &quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70&quot;</pre><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/pre[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">13</span><span class="kind">段落</span></div><p>For 3.13:</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[9]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">14</span><span class="kind">代码块</span></div><pre class="body-code">/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -m pip install &quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70&quot;
+/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -m pip install --upgrade certifi
+/Library/Frameworks/PythonT.framework/Versions/3.13/bin/python3.13t -m pip install &quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70&quot;</pre><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/pre[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">15</span><span class="kind">小标题</span></div><h3>macOS 27.0 IDLE and tkinter</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">16</span><span class="kind">段落</span></div><p>Additionally, the macOS installer for this release is built with a pre-release of Tk, fixing a possible hang on macOS 27.0 in applications using tkinter, like IDLE, in older releases.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[10]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">17</span><span class="kind">小标题</span></div><h3>Enjoy the new release</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">18</span><span class="kind">段落</span></div><p>Thanks to all of the many volunteers who help make Python development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[11]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">19</span><span class="kind">段落</span></div><p>Your certified release team, Hugo van Kemenade Thomas Wouters Ned Deily Steve Dower</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[12]</pre></details></li></ol><details><summary>排除记录 · 0 项</summary><p class="muted">本次未提取独立页面信息。</p></details><details><summary>检查问题 · 0 项</summary><p class="muted">未记录结构检查问题。语义完整性仍需单独评估。</p></details><details><summary>局限与警告 · 2 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li></ul></details><details><summary>完整原始结果</summary><a href="round_0_python_blog_3.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;Python 3.15.1, 3.14.9 and 3.13.17 are out&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/main/div/article/div&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/main/div/article/header/div[1]/div/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Here are expedited security releases of Python 3.15 and 3.14, and a special security release of 3.13.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;Python 3.15.1 Python 3.14.9 Python 3.13.17&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;They all upgrade the bundled pip to version 26.2.2, which includes certifi 2026.10.19 to address the eMudhra / emSign CA certificate security incident.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;We don’t normally update pip for security releases like Python 3.13 because of backward compatibility concerns, but since 3.13 only just entered security-only mode, doing a special release with installers seemed prudent.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;See the Discourse announcement for more information.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;For all existing virtual environments on your system, please upgrade pip and uv to the latest versions.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[5]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;To upgrade pip securely within a virtualenv:&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[6]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;code_block&quot;,
+      &quot;kind&quot;: &quot;code_block&quot;,
+      &quot;text&quot;: &quot;python -m pip install \&quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70\&quot;&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/pre[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;If you cannot immediately upgrade to this release, you can upgrade certificates for a Python 3.15 macOS installation and pip itself via:&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[7]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;code_block&quot;,
+      &quot;kind&quot;: &quot;code_block&quot;,
+      &quot;text&quot;: &quot;/Library/Frameworks/Python.framework/Versions/3.15/bin/python3.15 -m pip install \&quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70\&quot;\n/Library/Frameworks/Python.framework/Versions/3.15/bin/python3.15 -m pip install --upgrade certifi\n/Library/Frameworks/PythonT.framework/Versions/3.15/bin/python3.15t -m pip install \&quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70\&quot;&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/pre[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;For 3.14:&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[8]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;code_block&quot;,
+      &quot;kind&quot;: &quot;code_block&quot;,
+      &quot;text&quot;: &quot;/Library/Frameworks/Python.framework/Versions/3.14/bin/python3.14 -m pip install \&quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70\&quot;\n/Library/Frameworks/Python.framework/Versions/3.14/bin/python3.14 -m pip install --upgrade certifi\n/Library/Frameworks/PythonT.framework/Versions/3.14/bin/python3.14t -m pip install \&quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70\&quot;&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/pre[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;For 3.13:&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[9]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;code_block&quot;,
+      &quot;kind&quot;: &quot;code_block&quot;,
+      &quot;text&quot;: &quot;/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -m pip install \&quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70\&quot;\n/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -m pip install --upgrade certifi\n/Library/Frameworks/PythonT.framework/Versions/3.13/bin/python3.13t -m pip install \&quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70\&quot;&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/pre[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;macOS 27.0 IDLE and tkinter&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Additionally, the macOS installer for this release is built with a pre-release of Tk, fixing a possible hang on macOS 27.0 in applications using tkinter, like IDLE, in older releases.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[10]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Enjoy the new release&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Thanks to all of the many volunteers who help make Python development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[11]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Your certified release team, Hugo van Kemenade Thomas Wouters Ned Deily Steve Dower&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[12]&quot;
+    }
+  ],
+  &quot;metadata&quot;: [
+    {
+      &quot;type&quot;: &quot;metadata&quot;,
+      &quot;kind&quot;: &quot;metadata&quot;,
+      &quot;text&quot;: &quot;Hugo van Kemenade/October 21, 2026&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;author&quot;,
+      &quot;kind&quot;: &quot;author&quot;,
+      &quot;text&quot;: &quot;Hugo van Kemenade&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/a&quot;
+    },
+    {
+      &quot;type&quot;: &quot;published_at&quot;,
+      &quot;kind&quot;: &quot;published_at&quot;,
+      &quot;text&quot;: &quot;October 21, 2026&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/time&quot;
+    }
+  ],
+  &quot;excluded&quot;: [],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+  ]
+}</pre></details></div></article><article class="panel article" id="page-3"><div class="article-meta"><span>最终测试</span><span>python_blog_4</span><span class="badge good">检查通过</span></div><h2>Python 3.16.0 alpha 1 is now available</h2><div class="article-links"><a href="https://blog.python.org/2026/10/python-3160-alpha-1-is-now-available/" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/python_blog/page_4.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="holdout"><h3>页面信息 <span class="muted small">与正文分离</span></h3><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">其他页面信息</span></td><td>Savannah Ostrowski/October 13, 2026</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]</pre></details></td></tr><tr><td><span class="kind">作者</span></td><td>Savannah Ostrowski</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]/a</pre></details></td></tr><tr><td><span class="kind">发布时间</span></td><td>October 13, 2026</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]/time</pre></details></td></tr></tbody></table></div><div class="content-title"><h3>提取正文 <span class="muted small">21 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>This is an early developer preview of Python 3.16</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>python.org/downloads/release/python-3160a1/</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">小标题</span></div><h3>What’s new in Python 3.16?</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>There’s plenty still to come in Python 3.16, but its first alpha is ready to try! Python 3.16.0a1 is the first of seven planned alpha releases.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>During the alpha phase, features may be added up until the start of the beta phase (May 4, 2027) and, if necessary, may be modified or deleted up until the release candidate phase (July 27, 2027). The final release is planned for October 5, 2027. Please keep in mind that this is a preview release and its use is not recommended for production environments.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">段落</span></div><p>See What’s new in Python 3.16 for changes so far.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[5]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">7</span><span class="kind">段落</span></div><p>(Hey, fellow core team member, if there’s a feature you’d like highlighted in a future announcement, let Savannah know.)</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[6]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">8</span><span class="kind">段落</span></div><p>If you maintain a library or application, please try it with this alpha and let us know how it goes. Please report Python bugs on the CPython issue tracker.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[7]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">9</span><span class="kind">段落</span></div><p>The next alpha, Python 3.16.0a2, is scheduled for November 10, 2026. The full schedule is in PEP 826.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[8]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">10</span><span class="kind">小标题</span></div><h3>More resources</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">11</span><span class="kind">列表</span></div><p>Python 3.16 documentation Changelog Support Python through the Python Software Foundation</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">12</span><span class="kind">小标题</span></div><h3>And now for something completely different</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">13</span><span class="kind">段落</span></div><p>For Python 3.16, this section will host the Python 3.16 Film Festival: one film pairing for each release, from the first alpha to the final version.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[9]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">14</span><span class="kind">段落</span></div><p>Building CPython is a team sport. Every release reflects the time, skill, and dedication of a community that cares deeply about Python and the people who use it. In that spirit, the festival will celebrate collaboration and craftsmanship: the care people put into their work, and what they can make together.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[10]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">15</span><span class="kind">段落</span></div><p>The Python 3.16 Film Festival opens with Ratatouille (2007). Remy’s passion for cooking and his partnership with Linguini make it a fitting place to begin.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[11]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">16</span><span class="kind">段落</span></div><p>Great cooking is not for the faint of heart. You must be imaginative. Strong-hearted. You must try things that may not work. And you must not let anyone define your limits because of where you come from. Your only limit is your soul. What I say is true: anyone can cook, but only the fearless can be great. — Auguste Gusteau, Ratatouille (2007)</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/blockquote</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">17</span><span class="kind">小标题</span></div><h3>Enjoy the new release</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">18</span><span class="kind">段落</span></div><p>Thank you to everyone who has contributed code, reviewed changes, written documentation, tested builds, and reported bugs. All of that work helps make Python and its releases possible. Please consider supporting Python by volunteering your time or encouraging your organisation to support the Python Software Foundation.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[12]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">19</span><span class="kind">段落</span></div><p>Happy testing!</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[13]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">20</span><span class="kind">段落</span></div><p>Regards from beautiful Washington state,</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[14]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">21</span><span class="kind">段落</span></div><p>Your release team, Savannah Ostrowski Ned Deily Steve Dower Julien Palard</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[15]</pre></details></li></ol><details><summary>排除记录 · 0 项</summary><p class="muted">本次未提取独立页面信息。</p></details><details><summary>检查问题 · 0 项</summary><p class="muted">未记录结构检查问题。语义完整性仍需单独评估。</p></details><details><summary>局限与警告 · 2 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li></ul></details><details><summary>完整原始结果</summary><a href="holdout_python_blog_4.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;Python 3.16.0 alpha 1 is now available&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/main/div/article/div&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/main/div/article/header/div[1]/div/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;This is an early developer preview of Python 3.16&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;python.org/downloads/release/python-3160a1/&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;What’s new in Python 3.16?&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;There’s plenty still to come in Python 3.16, but its first alpha is ready to try! Python 3.16.0a1 is the first of seven planned alpha releases.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;During the alpha phase, features may be added up until the start of the beta phase (May 4, 2027) and, if necessary, may be modified or deleted up until the release candidate phase (July 27, 2027). The final release is planned for October 5, 2027. Please keep in mind that this is a preview release and its use is not recommended for production environments.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;See What’s new in Python 3.16 for changes so far.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[5]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;(Hey, fellow core team member, if there’s a feature you’d like highlighted in a future announcement, let Savannah know.)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[6]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;If you maintain a library or application, please try it with this alpha and let us know how it goes. Please report Python bugs on the CPython issue tracker.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[7]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;The next alpha, Python 3.16.0a2, is scheduled for November 10, 2026. The full schedule is in PEP 826.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[8]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;More resources&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;Python 3.16 documentation Changelog Support Python through the Python Software Foundation&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;And now for something completely different&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;For Python 3.16, this section will host the Python 3.16 Film Festival: one film pairing for each release, from the first alpha to the final version.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[9]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Building CPython is a team sport. Every release reflects the time, skill, and dedication of a community that cares deeply about Python and the people who use it. In that spirit, the festival will celebrate collaboration and craftsmanship: the care people put into their work, and what they can make together.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[10]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;The Python 3.16 Film Festival opens with Ratatouille (2007). Remy’s passion for cooking and his partnership with Linguini make it a fitting place to begin.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[11]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Great cooking is not for the faint of heart. You must be imaginative. Strong-hearted. You must try things that may not work. And you must not let anyone define your limits because of where you come from. Your only limit is your soul. What I say is true: anyone can cook, but only the fearless can be great. — Auguste Gusteau, Ratatouille (2007)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/blockquote&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Enjoy the new release&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Thank you to everyone who has contributed code, reviewed changes, written documentation, tested builds, and reported bugs. All of that work helps make Python and its releases possible. Please consider supporting Python by volunteering your time or encouraging your organisation to support the Python Software Foundation.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[12]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Happy testing!&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[13]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Regards from beautiful Washington state,&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[14]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Your release team, Savannah Ostrowski Ned Deily Steve Dower Julien Palard&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[15]&quot;
+    }
+  ],
+  &quot;metadata&quot;: [
+    {
+      &quot;type&quot;: &quot;metadata&quot;,
+      &quot;kind&quot;: &quot;metadata&quot;,
+      &quot;text&quot;: &quot;Savannah Ostrowski/October 13, 2026&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;author&quot;,
+      &quot;kind&quot;: &quot;author&quot;,
+      &quot;text&quot;: &quot;Savannah Ostrowski&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/a&quot;
+    },
+    {
+      &quot;type&quot;: &quot;published_at&quot;,
+      &quot;kind&quot;: &quot;published_at&quot;,
+      &quot;text&quot;: &quot;October 13, 2026&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/time&quot;
+    }
+  ],
+  &quot;excluded&quot;: [],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;
+  ]
+}</pre></details></div></article><article class="panel article" id="page-4"><div class="article-meta"><span>最终测试</span><span>python_blog_5</span><span class="badge good">检查通过</span></div><h2>Python 3.15.0 (final) is here!</h2><div class="article-links"><a href="https://blog.python.org/2026/10/python-3150-final-is-here/" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/python_blog/page_5.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="holdout"><h3>页面信息 <span class="muted small">与正文分离</span></h3><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">其他页面信息</span></td><td>Hugo van Kemenade/October 9, 2026</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]</pre></details></td></tr><tr><td><span class="kind">作者</span></td><td>Hugo van Kemenade</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]/a</pre></details></td></tr><tr><td><span class="kind">发布时间</span></td><td>October 9, 2026</td><td><details><summary>查看 XPath</summary><pre>/html/body/main/div/article/header/div[2]/time</pre></details></td></tr></tbody></table></div><div class="content-title"><h3>提取正文 <span class="muted small">33 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">小标题</span></div><h3>Python 3.15.0 is now available</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>python.org/downloads/release/python-3150/</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">小标题</span></div><h3>This is the stable release of Python 3.15.0</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>Python 3.15.0 is the newest major release of the Python programming language, and it contains many new features and optimisations compared to Python 3.14, in 5,643 commits from 1,012 contributors.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">小标题</span></div><h3>Major new features of the 3.15 series, compared to 3.14</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">段落</span></div><p>Some of the major new features and changes in Python 3.15 are:</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">7</span><span class="kind">小标题</span></div><h3>Interpreter improvements</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h3[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">8</span><span class="kind">列表</span></div><p>PEP 661: Add sentinel built-in type PEP 686: Python now uses UTF-8 as the default encoding PEP 798: Unpacking in comprehensions PEP 810: Explicit lazy imports for faster startup times PEP 814: Add frozendict built-in type PEP 829: Package startup configuration files The experimental JIT compiler has been significantly upgraded, with 7-8% geometric mean performance improvement on x86-64 Linux over the standard interpreter, and 11-12% speedup on AArch64 macOS over the tail-calling interpreter Improved error messages</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">9</span><span class="kind">小标题</span></div><h3>Significant improvements in the standard library</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h3[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">10</span><span class="kind">列表</span></div><p>PEP 799: A dedicated profiling package for organizing Python profiling tools PEP 799: Tachyon: High frequency statistical sampling profiler More color</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">11</span><span class="kind">小标题</span></div><h3>New typing features</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h3[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">12</span><span class="kind">列表</span></div><p>PEP 728: TypedDict with typed extra items PEP 747: Annotating type forms with TypeForm PEP 800: Disjoint bases in the type system</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">13</span><span class="kind">小标题</span></div><h3>C API improvements</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h3[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">14</span><span class="kind">列表</span></div><p>PEP 782: A new PyBytesWriter C API to create a Python bytes object PEP 788: Protection against finalization in the C API PEP 803, 820, 793: Stable ABI for free-threaded builds and related C API</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">15</span><span class="kind">小标题</span></div><h3>Build changes</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h3[5]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">16</span><span class="kind">列表</span></div><p>PEP 831: Frame pointers are enabled by default for improved system-level observability</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul[5]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">17</span><span class="kind">小标题</span></div><h3>Release changes</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h3[6]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">18</span><span class="kind">列表</span></div><p>The official Windows 64-bit binaries now use the tail-calling interpreter The official macOS binaries now install free-threading support by default</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul[6]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">19</span><span class="kind">段落</span></div><p>For more details on the changes to Python 3.15, see What’s new in Python 3.15.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[5]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">20</span><span class="kind">小标题</span></div><h3>Attention macOS 27.0 IDLE or tkinter users</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h3[7]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">21</span><span class="kind">段落</span></div><p>When running IDLE or other GUI applications that use the tkinter module, these applications may hang when using an application’s menu command that opens a dialog (for example, IDLE’s About IDLE, Settings, and Open Module commands) resulting in a spinning beach ball with Force Quit needed.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[6]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">22</span><span class="kind">段落</span></div><p>This problem is due to an operating system behavior change in macOS 27.0 that is believed to affect all current versions of the Tk graphics toolkit and thus the tkinter module in all current Python versions.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[7]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">23</span><span class="kind">段落</span></div><p>If you depend on Tk-based applications (like IDLE) on macOS, you may want to consider deferring installing macOS 27.0 until a Tk or macOS workaround is available or testing that your application workflow is not affected. Follow issue #158053 for updates.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[8]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">24</span><span class="kind">小标题</span></div><h3>More resources</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[4]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">25</span><span class="kind">列表</span></div><p>Online documentation PEP 790, 3.15 release schedule Report bugs at github.com/python/cpython/issues Help fund Python directly (or via GitHub Sponsors) and support the Python community</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/ul[7]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">26</span><span class="kind">段落</span></div><p>To celebrate the new 3.15, Barry Warsaw has a present for us!</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[9]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">27</span><span class="kind">段落</span></div><p>I had this idea to whip up a little TUI adventure game that takes you through a What’s New in Python 3.15. I present to you “whatsnewt”: From the README: A TUI text adventure through what’s new in Python 3.15. You wake up in the Startup Foyer, somewhere inside the interpreter, and work your way to the Release Gate. Along the way there are eighteen puzzles, and every one of them is a real 3.15 feature you have to actually use. You’re not just answering boring questions, you’re actually writing and running code, in a Python 3.15 interpreter. Some puzzles require a type checker, and in those cases, answers are verified by pyrefly, which is a dependency for exactly that reason, and the verdict quotes what it says back. The easiest way to play it is to run: uvx --python 3.15 whatsnewt And yes, there are easter eggs</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/blockquote</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">28</span><span class="kind">小标题</span></div><h3>Enjoy the new release</h3><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/h2[5]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">29</span><span class="kind">段落</span></div><p>Thanks to all of the many volunteers who help make Python development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[10]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">30</span><span class="kind">段落</span></div><p>Huge thanks to Georgi Ker and Marie Nordin for the Python 3.15 logo!</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[11]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">31</span><span class="kind">段落</span></div><p>And also huge thanks to the Sovereign Tech Agency for supporting my work as release manager for Python 3.14 and 3.15 through the Sovereign Tech Fellowship.</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[12]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">32</span><span class="kind">段落</span></div><p>Salutations de Rennes,</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[13]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">33</span><span class="kind">段落</span></div><p>Your release team, Hugo van Kemenade Ned Deily Steve Dower</p><details><summary>XPath 原文定位</summary><pre>/html/body/main/div/article/div/p[14]</pre></details></li></ol><details><summary>排除记录 · 0 项</summary><p class="muted">本次未提取独立页面信息。</p></details><details><summary>检查问题 · 0 项</summary><p class="muted">未记录结构检查问题。语义完整性仍需单独评估。</p></details><details><summary>局限与警告 · 3 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li><li>images_present_pixels_not_extracted_completeness_unknown</li></ul></details><details><summary>完整原始结果</summary><a href="holdout_python_blog_5.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;Python 3.15.0 (final) is here!&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/main/div/article/div&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/main/div/article/header/div[1]/div/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Python 3.15.0 is now available&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;python.org/downloads/release/python-3150/&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;This is the stable release of Python 3.15.0&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Python 3.15.0 is the newest major release of the Python programming language, and it contains many new features and optimisations compared to Python 3.14, in 5,643 commits from 1,012 contributors.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Major new features of the 3.15 series, compared to 3.14&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Some of the major new features and changes in Python 3.15 are:&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Interpreter improvements&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h3[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;PEP 661: Add sentinel built-in type PEP 686: Python now uses UTF-8 as the default encoding PEP 798: Unpacking in comprehensions PEP 810: Explicit lazy imports for faster startup times PEP 814: Add frozendict built-in type PEP 829: Package startup configuration files The experimental JIT compiler has been significantly upgraded, with 7-8% geometric mean performance improvement on x86-64 Linux over the standard interpreter, and 11-12% speedup on AArch64 macOS over the tail-calling interpreter Improved error messages&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Significant improvements in the standard library&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h3[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;PEP 799: A dedicated profiling package for organizing Python profiling tools PEP 799: Tachyon: High frequency statistical sampling profiler More color&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;New typing features&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h3[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;PEP 728: TypedDict with typed extra items PEP 747: Annotating type forms with TypeForm PEP 800: Disjoint bases in the type system&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;C API improvements&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h3[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;PEP 782: A new PyBytesWriter C API to create a Python bytes object PEP 788: Protection against finalization in the C API PEP 803, 820, 793: Stable ABI for free-threaded builds and related C API&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Build changes&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h3[5]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;PEP 831: Frame pointers are enabled by default for improved system-level observability&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul[5]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Release changes&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h3[6]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;The official Windows 64-bit binaries now use the tail-calling interpreter The official macOS binaries now install free-threading support by default&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul[6]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;For more details on the changes to Python 3.15, see What’s new in Python 3.15.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[5]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Attention macOS 27.0 IDLE or tkinter users&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h3[7]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;When running IDLE or other GUI applications that use the tkinter module, these applications may hang when using an application’s menu command that opens a dialog (for example, IDLE’s About IDLE, Settings, and Open Module commands) resulting in a spinning beach ball with Force Quit needed.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[6]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;This problem is due to an operating system behavior change in macOS 27.0 that is believed to affect all current versions of the Tk graphics toolkit and thus the tkinter module in all current Python versions.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[7]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;If you depend on Tk-based applications (like IDLE) on macOS, you may want to consider deferring installing macOS 27.0 until a Tk or macOS workaround is available or testing that your application workflow is not affected. Follow issue #158053 for updates.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[8]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;More resources&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;list&quot;,
+      &quot;kind&quot;: &quot;list&quot;,
+      &quot;text&quot;: &quot;Online documentation PEP 790, 3.15 release schedule Report bugs at github.com/python/cpython/issues Help fund Python directly (or via GitHub Sponsors) and support the Python community&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/ul[7]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;To celebrate the new 3.15, Barry Warsaw has a present for us!&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[9]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;I had this idea to whip up a little TUI adventure game that takes you through a What’s New in Python 3.15. I present to you “whatsnewt”: From the README: A TUI text adventure through what’s new in Python 3.15. You wake up in the Startup Foyer, somewhere inside the interpreter, and work your way to the Release Gate. Along the way there are eighteen puzzles, and every one of them is a real 3.15 feature you have to actually use. You’re not just answering boring questions, you’re actually writing and running code, in a Python 3.15 interpreter. Some puzzles require a type checker, and in those cases, answers are verified by pyrefly, which is a dependency for exactly that reason, and the verdict quotes what it says back. The easiest way to play it is to run: uvx --python 3.15 whatsnewt And yes, there are easter eggs&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/blockquote&quot;
+    },
+    {
+      &quot;type&quot;: &quot;subheading&quot;,
+      &quot;kind&quot;: &quot;subheading&quot;,
+      &quot;text&quot;: &quot;Enjoy the new release&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/h2[5]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Thanks to all of the many volunteers who help make Python development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[10]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Huge thanks to Georgi Ker and Marie Nordin for the Python 3.15 logo!&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[11]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;And also huge thanks to the Sovereign Tech Agency for supporting my work as release manager for Python 3.14 and 3.15 through the Sovereign Tech Fellowship.&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[12]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Salutations de Rennes,&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[13]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Your release team, Hugo van Kemenade Ned Deily Steve Dower&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/div/p[14]&quot;
+    }
+  ],
+  &quot;metadata&quot;: [
+    {
+      &quot;type&quot;: &quot;metadata&quot;,
+      &quot;kind&quot;: &quot;metadata&quot;,
+      &quot;text&quot;: &quot;Hugo van Kemenade/October 9, 2026&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;author&quot;,
+      &quot;kind&quot;: &quot;author&quot;,
+      &quot;text&quot;: &quot;Hugo van Kemenade&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/a&quot;
+    },
+    {
+      &quot;type&quot;: &quot;published_at&quot;,
+      &quot;kind&quot;: &quot;published_at&quot;,
+      &quot;text&quot;: &quot;October 9, 2026&quot;,
+      &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/time&quot;
+    }
+  ],
+  &quot;excluded&quot;: [],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+    &quot;images_present_pixels_not_extracted_completeness_unknown&quot;
+  ]
+}</pre></details></div></article></div></div></section>
+<section class="view" role="tabpanel" aria-labelledby="tab-process" id="view-process" data-view="process"><div class="panel"><h2>生成与修复过程</h2><p class="muted">首轮执行 → 收集实际问题 → 在预算内修复 → 冻结候选 → 执行最终测试。最终测试反馈不回传模型。</p><div class="step"><h3>首轮候选</h3><p>执行 3 篇；检查通过 3 篇；反馈记录 0 组。</p><div class="table-wrap"><table><thead><tr><th>页面</th><th>角色</th><th>正文块</th><th>检查状态</th><th>问题数</th></tr></thead><tbody><tr><td>python_blog_1</td><td>生成样本</td><td>21</td><td><span class="badge good">检查通过</span></td><td>0</td></tr><tr><td>python_blog_2</td><td>生成样本</td><td>19</td><td><span class="badge good">检查通过</span></td><td>0</td></tr><tr><td>python_blog_3</td><td>开发反馈</td><td>19</td><td><span class="badge good">检查通过</span></td><td>0</td></tr></tbody></table></div><p><a href="prompt_round_0.json" target="_blank" rel="noopener">本轮模型输入</a> · <a href="response_round_0.txt" target="_blank" rel="noopener">本轮模型响应</a></p></div><div class="step"><h3>冻结候选后测试</h3><p>最终测试 2 篇。冻结哈希：</p><pre>9df463db0e21e7fee9a9e6380e577a8282b17761bcf92b1219f3eeeeb78f2170</pre></div></div></section>
+<section class="view" role="tabpanel" aria-labelledby="tab-rules" id="view-rules" data-view="rules"><div class="panel"><h2>生成规则与复用代码</h2><p class="muted">模型生成 XPath 配置，固定模板导出 Python 模块，随后在 CPU 上复用。</p><div class="step"><h3>首轮规则</h3><div class="rule-row"><strong>标题定位</strong> <span class="muted small">title_xpath</span><pre>/html/body/main/div/article/header/div[1]/div/h1</pre></div><div class="rule-row"><strong>正文容器</strong> <span class="muted small">container_xpath</span><pre>/html/body/main/div/article/div[@class=&#x27;animate-fade-up stagger-1&#x27;]</pre></div><div class="rule-row"><strong>正文块选择</strong> <span class="muted small">block_xpath</span><pre>./p | ./h2 | ./h3 | ./ul | ./ol | ./blockquote | ./pre | ./table | ./figure</pre></div><div class="rule-row"><strong>排除规则</strong> <span class="muted small">exclude_xpath</span><pre>（空：本轮未设置）</pre></div><div class="rule-row"><strong>页面信息定位</strong> <span class="muted small">metadata_xpath</span><pre>/html/body/main/div/article/header/div[2]</pre></div><div class="rule-row"><strong>细分页面信息</strong> <span class="muted small">metadata_fields</span><pre>{
+  &quot;author&quot;: &quot;/html/body/main/div/article/header/div[2]/a&quot;,
+  &quot;published_at&quot;: &quot;/html/body/main/div/article/header/div[2]/time&quot;
+}</pre></div><p><a href="candidate_round_0.json" target="_blank" rel="noopener">下载规则 JSON</a> · <a href="candidate_round_0.py" target="_blank" rel="noopener">打开本轮 Python</a></p><details><summary>查看 Python 模块</summary><pre>&quot;&quot;&quot;Generated reusable XPath extractor; trusted engine interprets data.&quot;&quot;&quot;
+import json
+from project2_engine import extract as _engine
+RULES = json.loads(&#x27;{&quot;title_xpath&quot;: &quot;/html/body/main/div/article/header/div[1]/div/h1&quot;, &quot;container_xpath&quot;: &quot;/html/body/main/div/article/div[@class=\&#x27;animate-fade-up stagger-1\&#x27;]&quot;, &quot;block_xpath&quot;: &quot;./p | ./h2 | ./h3 | ./ul | ./ol | ./blockquote | ./pre | ./table | ./figure&quot;, &quot;exclude_xpath&quot;: &quot;&quot;, &quot;metadata_xpath&quot;: &quot;/html/body/main/div/article/header/div[2]&quot;, &quot;metadata_fields&quot;: {&quot;author&quot;: &quot;/html/body/main/div/article/header/div[2]/a&quot;, &quot;published_at&quot;: &quot;/html/body/main/div/article/header/div[2]/time&quot;}}&#x27;)
+def extract(data):
+    return _engine(RULES, data)
+</pre></details></div><p><a href="extractor.py" target="_blank" rel="noopener">冻结的 Python 模块</a> · <a href="rules.json" target="_blank" rel="noopener">冻结的规则</a></p></div></section>
+<section class="view" role="tabpanel" aria-labelledby="tab-calls" id="view-calls" data-view="calls"><div class="panel"><h2>API 调用与运行证据</h2><p>模型：<strong>qwen3.8-flash</strong> · 提供方：dashscope · API 尝试：1</p><p class="muted">全流程耗时：7.768 秒 · 修复预算：2 次</p><div class="table-wrap"><table><thead><tr><th>候选轮次</th><th>状态</th><th>输入 tokens</th><th>输出 tokens</th><th>合计 tokens</th><th>耗时</th></tr></thead><tbody><tr><td>0</td><td><span class="badge good">成功</span></td><td>6972</td><td>154</td><td>7126</td><td>7.066 s</td></tr></tbody></table></div><p class="muted">用量仅汇总服务端已返回的记录；失败请求可能没有返回用量。未配置价格，不计算金额。耗时为单次运行记录，不是性能基准。</p><details><summary>任务与执行器版本</summary><pre>{
+  &quot;task_id&quot;: &quot;python-blog-project2-v1&quot;,
+  &quot;engine_protocol&quot;: &quot;v2: original DOM evidence, typed metadata, scoped summaries, rich blocks&quot;,
+  &quot;engine_sha256&quot;: &quot;d4da45d29efad17afc67ff798125cdbbb696c8a2848739d559ccc8100b2933f7&quot;,
+  &quot;worker_sha256&quot;: &quot;9d9418800e9461a3758f02209cbbc022dcb2c7d32029b4fe74eb2469cd217364&quot;,
+  &quot;frozen_candidate_sha256&quot;: &quot;9df463db0e21e7fee9a9e6380e577a8282b17761bcf92b1219f3eeeeb78f2170&quot;,
+  &quot;evaluation_scope&quot;: &quot;Newly retrieved natural pages, same known site layout; held-out from this Agent prompt and repair, not a claim about model pretraining.&quot;,
+  &quot;holdout_policy&quot;: &quot;Executed only after candidate freeze; never sent to generation or repair.&quot;,
+  &quot;candidate_hash_scheme&quot;: &quot;SHA256 of canonical UTF-8 LF source&quot;
+}</pre></details><details><summary>完整运行轨迹</summary><a href="trace.json" target="_blank" rel="noopener">打开 trace.json</a><pre>{
+  &quot;task_id&quot;: &quot;python-blog-project2-v1&quot;,
+  &quot;provider&quot;: &quot;dashscope&quot;,
+  &quot;model&quot;: &quot;qwen3.8-flash&quot;,
+  &quot;input_pages&quot;: [
     {
       &quot;id&quot;: &quot;python_blog_1&quot;,
-      &quot;role&quot;: &quot;generation&quot;,
+      &quot;path&quot;: &quot;data/project2/python_blog/page_1.html&quot;,
       &quot;url&quot;: &quot;https://blog.python.org/2026/11/python-3160-alpha-2-is-now-available/&quot;,
-      &quot;source_path&quot;: &quot;data/project2/python_blog/page_1.html&quot;,
+      &quot;role&quot;: &quot;generation&quot;,
+      &quot;sha256&quot;: &quot;74c7fd1ad049c8b117fd5e6f89f8f438998244310852eb8b3da6ff905ef02a66&quot;,
+      &quot;source_exposure&quot;: &quot;freshly_collected_for_project2&quot;,
+      &quot;bytes&quot;: 43654
+    },
+    {
+      &quot;id&quot;: &quot;python_blog_2&quot;,
+      &quot;path&quot;: &quot;data/project2/python_blog/page_2.html&quot;,
+      &quot;url&quot;: &quot;https://blog.python.org/2026/10/python-3152-31410-31318-31216-31118/&quot;,
+      &quot;role&quot;: &quot;generation&quot;,
+      &quot;sha256&quot;: &quot;0515a5c70b68a8087ce80ddff53ae2778db5292bc40867a2f9096dcfd1ace384&quot;,
+      &quot;source_exposure&quot;: &quot;freshly_collected_for_project2&quot;,
+      &quot;bytes&quot;: 50000
+    },
+    {
+      &quot;id&quot;: &quot;python_blog_3&quot;,
+      &quot;path&quot;: &quot;data/project2/python_blog/page_3.html&quot;,
+      &quot;url&quot;: &quot;https://blog.python.org/2026/10/python-3151-3149-31317/&quot;,
+      &quot;role&quot;: &quot;development_feedback&quot;,
+      &quot;sha256&quot;: &quot;a516478a1e3d4ad6dfcfdf4f10a4364c9195d841d1bf09ddc8f32ac38257c1fe&quot;,
+      &quot;source_exposure&quot;: &quot;freshly_collected_for_project2&quot;,
+      &quot;bytes&quot;: 35735
+    },
+    {
+      &quot;id&quot;: &quot;python_blog_4&quot;,
+      &quot;path&quot;: &quot;data/project2/python_blog/page_4.html&quot;,
+      &quot;url&quot;: &quot;https://blog.python.org/2026/10/python-3160-alpha-1-is-now-available/&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;sha256&quot;: &quot;6dc465d13b06670df23381a9124b0d415bd574ca9f1fac231fef915cc55af23f&quot;,
+      &quot;source_exposure&quot;: &quot;freshly_collected_for_project2&quot;,
+      &quot;bytes&quot;: 34165
+    },
+    {
+      &quot;id&quot;: &quot;python_blog_5&quot;,
+      &quot;path&quot;: &quot;data/project2/python_blog/page_5.html&quot;,
+      &quot;url&quot;: &quot;https://blog.python.org/2026/10/python-3150-final-is-here/&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;sha256&quot;: &quot;77cf6077bad85d54f0ed1d21d827fa1a6974d6f8e268436cb2e3a937b7c80bf5&quot;,
+      &quot;source_exposure&quot;: &quot;freshly_collected_for_project2&quot;,
+      &quot;bytes&quot;: 67588
+    }
+  ],
+  &quot;rounds&quot;: [
+    {
+      &quot;round&quot;: 0,
+      &quot;pages&quot;: [
+        {
+          &quot;id&quot;: &quot;python_blog_1&quot;,
+          &quot;role&quot;: &quot;generation&quot;,
+          &quot;url&quot;: &quot;https://blog.python.org/2026/11/python-3160-alpha-2-is-now-available/&quot;,
+          &quot;source_path&quot;: &quot;data/project2/python_blog/page_1.html&quot;,
+          &quot;status&quot;: &quot;pass&quot;,
+          &quot;blocks&quot;: 21,
+          &quot;metadata&quot;: 3,
+          &quot;issues&quot;: [],
+          &quot;result&quot;: &quot;round_0_python_blog_1.json&quot;
+        },
+        {
+          &quot;id&quot;: &quot;python_blog_2&quot;,
+          &quot;role&quot;: &quot;generation&quot;,
+          &quot;url&quot;: &quot;https://blog.python.org/2026/10/python-3152-31410-31318-31216-31118/&quot;,
+          &quot;source_path&quot;: &quot;data/project2/python_blog/page_2.html&quot;,
+          &quot;status&quot;: &quot;pass&quot;,
+          &quot;blocks&quot;: 19,
+          &quot;metadata&quot;: 3,
+          &quot;issues&quot;: [],
+          &quot;result&quot;: &quot;round_0_python_blog_2.json&quot;
+        },
+        {
+          &quot;id&quot;: &quot;python_blog_3&quot;,
+          &quot;role&quot;: &quot;development_feedback&quot;,
+          &quot;url&quot;: &quot;https://blog.python.org/2026/10/python-3151-3149-31317/&quot;,
+          &quot;source_path&quot;: &quot;data/project2/python_blog/page_3.html&quot;,
+          &quot;status&quot;: &quot;pass&quot;,
+          &quot;blocks&quot;: 19,
+          &quot;metadata&quot;: 3,
+          &quot;issues&quot;: [],
+          &quot;result&quot;: &quot;round_0_python_blog_3.json&quot;
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;candidate_sha256&quot;: &quot;9df463db0e21e7fee9a9e6380e577a8282b17761bcf92b1219f3eeeeb78f2170&quot;
+    }
+  ],
+  &quot;api_attempts&quot;: [
+    {
+      &quot;round&quot;: 0,
+      &quot;status&quot;: &quot;succeeded&quot;,
+      &quot;usage&quot;: {
+        &quot;prompt_tokens&quot;: 6972,
+        &quot;total_tokens&quot;: 7126,
+        &quot;completion_tokens&quot;: 154,
+        &quot;prompt_tokens_details&quot;: {
+          &quot;cached_tokens&quot;: 0,
+          &quot;text_tokens&quot;: 6972
+        }
+      },
+      &quot;seconds&quot;: 7.066
+    }
+  ],
+  &quot;holdout&quot;: [
+    {
+      &quot;id&quot;: &quot;python_blog_4&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;url&quot;: &quot;https://blog.python.org/2026/10/python-3160-alpha-1-is-now-available/&quot;,
+      &quot;source_path&quot;: &quot;data/project2/python_blog/page_4.html&quot;,
       &quot;status&quot;: &quot;pass&quot;,
       &quot;blocks&quot;: 21,
       &quot;metadata&quot;: 3,
       &quot;issues&quot;: [],
-      &quot;result&quot;: &quot;round_0_python_blog_1.json&quot;
+      &quot;result&quot;: &quot;holdout_python_blog_4.json&quot;
     },
     {
-      &quot;id&quot;: &quot;python_blog_2&quot;,
-      &quot;role&quot;: &quot;generation&quot;,
-      &quot;url&quot;: &quot;https://blog.python.org/2026/10/python-3152-31410-31318-31216-31118/&quot;,
-      &quot;source_path&quot;: &quot;data/project2/python_blog/page_2.html&quot;,
+      &quot;id&quot;: &quot;python_blog_5&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;url&quot;: &quot;https://blog.python.org/2026/10/python-3150-final-is-here/&quot;,
+      &quot;source_path&quot;: &quot;data/project2/python_blog/page_5.html&quot;,
       &quot;status&quot;: &quot;pass&quot;,
-      &quot;blocks&quot;: 19,
+      &quot;blocks&quot;: 33,
       &quot;metadata&quot;: 3,
       &quot;issues&quot;: [],
-      &quot;result&quot;: &quot;round_0_python_blog_2.json&quot;
-    },
-    {
-      &quot;id&quot;: &quot;python_blog_3&quot;,
-      &quot;role&quot;: &quot;development_feedback&quot;,
-      &quot;url&quot;: &quot;https://blog.python.org/2026/10/python-3151-3149-31317/&quot;,
-      &quot;source_path&quot;: &quot;data/project2/python_blog/page_3.html&quot;,
-      &quot;status&quot;: &quot;pass&quot;,
-      &quot;blocks&quot;: 19,
-      &quot;metadata&quot;: 3,
-      &quot;issues&quot;: [],
-      &quot;result&quot;: &quot;round_0_python_blog_3.json&quot;
+      &quot;result&quot;: &quot;holdout_python_blog_5.json&quot;
     }
   ],
-  &quot;issues&quot;: [],
-  &quot;candidate_sha256&quot;: &quot;9df463db0e21e7fee9a9e6380e577a8282b17761bcf92b1219f3eeeeb78f2170&quot;
-}</pre></section>
-<section><h2>python_blog_1 — pass</h2>
-<p>generation · <a href="https://blog.python.org/2026/11/python-3160-alpha-2-is-now-available/">原网站</a> · <a href="../../../data/project2/python_blog/page_1.html">本地HTML快照</a> · <a href="round_0_python_blog_1.json">结果JSON</a></p><h3>Python 3.16.0 alpha 2 is now available</h3>
-<pre>元数据：[
-  {
-    &quot;type&quot;: &quot;metadata&quot;,
-    &quot;kind&quot;: &quot;metadata&quot;,
-    &quot;text&quot;: &quot;Savannah Ostrowski/November 10, 2026&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]&quot;
+  &quot;semantic_accuracy&quot;: &quot;unknown&quot;,
+  &quot;holdout_policy&quot;: &quot;Executed only after candidate freeze; never sent to generation or repair.&quot;,
+  &quot;max_repairs&quot;: 2,
+  &quot;final_status&quot;: &quot;pass&quot;,
+  &quot;engine_sha256&quot;: &quot;d4da45d29efad17afc67ff798125cdbbb696c8a2848739d559ccc8100b2933f7&quot;,
+  &quot;worker_sha256&quot;: &quot;9d9418800e9461a3758f02209cbbc022dcb2c7d32029b4fe74eb2469cd217364&quot;,
+  &quot;initial_candidate&quot;: &quot;model_generated&quot;,
+  &quot;evaluation_scope&quot;: &quot;Newly retrieved natural pages, same known site layout; held-out from this Agent prompt and repair, not a claim about model pretraining.&quot;,
+  &quot;candidate_hash_scheme&quot;: &quot;SHA256 of canonical UTF-8 LF source&quot;,
+  &quot;engine_protocol&quot;: &quot;v2: original DOM evidence, typed metadata, scoped summaries, rich blocks&quot;,
+  &quot;elapsed_seconds&quot;: 7.768,
+  &quot;frozen_candidate_sha256&quot;: &quot;9df463db0e21e7fee9a9e6380e577a8282b17761bcf92b1219f3eeeeb78f2170&quot;,
+  &quot;artifact_byte_hashes&quot;: {
+    &quot;candidate_round_0.py&quot;: &quot;9df463db0e21e7fee9a9e6380e577a8282b17761bcf92b1219f3eeeeb78f2170&quot;,
+    &quot;extractor.py&quot;: &quot;9df463db0e21e7fee9a9e6380e577a8282b17761bcf92b1219f3eeeeb78f2170&quot;,
+    &quot;project2_engine.py&quot;: &quot;d4da45d29efad17afc67ff798125cdbbb696c8a2848739d559ccc8100b2933f7&quot;
   },
-  {
-    &quot;type&quot;: &quot;author&quot;,
-    &quot;kind&quot;: &quot;author&quot;,
-    &quot;text&quot;: &quot;Savannah Ostrowski&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/a&quot;
-  },
-  {
-    &quot;type&quot;: &quot;published_at&quot;,
-    &quot;kind&quot;: &quot;published_at&quot;,
-    &quot;text&quot;: &quot;November 10, 2026&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/time&quot;
-  }
-]</pre>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[1]</small><p>This is an early developer preview of Python 3.16</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[2]</small><p>python.org/downloads/release/python-3160a2/</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[1]</small><p>What’s new in Python 3.16?</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[3]</small><p>Python 3.16.0a2 is ready to try! This is the second of seven planned alpha releases, with new features, bug fixes, and performance improvements to test.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[4]</small><p>Python 3.16 is still in development. Features can be added until beta 1 on May 4, 2027, and may be modified or removed until the first release candidate on July 27, 2027. The final release is planned for October 5, 2027. This preview is intended for testing and is not recommended for production use.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[5]</small><p>Here are a few highlights from Python 3.16 so far, compared with 3.15.</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul[1]</small><p>More expressive regular expressions. The re module now supports nested character sets, set operations such as intersection and difference, and matching characters by Unicode properties, such as uppercase letters. Faster startup. Python starts faster, and several common operations have been optimized, including garbage collection and the construction of built-in objects. Faster UUID generation. uuid4() and uuid7() now have C implementations, making generation about 15-30x faster than the pure Python implementations in microbenchmarks. Improved error messages Encrypted Client Hello. The ssl module adds support for ECH when built with OpenSSL 4.0 or later. Build support for more Apple platforms. CPython can now be built for tvOS, watchOS, and visionOS. These platforms are not yet part of the supported platform tiers in PEP 11.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[6]</small><p>See What’s new in Python 3.16 for more changes.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[7]</small><p>(Hey, fellow core team member, if there’s a feature you’d like highlighted in a future announcement, let Savannah know.)</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[8]</small><p>Please try this alpha with your libraries and applications and report Python bugs on the CPython issue tracker.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[9]</small><p>The next alpha, Python 3.16.0a3, is scheduled for December 15, 2026. The full schedule is in PEP 826.</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[2]</small><p>More resources</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul[2]</small><p>Python 3.16 documentation Changelog Support Python through the Python Software Foundation</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[3]</small><p>And now for something completely different</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[10]</small><p>Next up in the Python 3.16 Film Festival is The Martian (2015). Stranded on Mars, Mark Watney has to keep himself alive with what he has on hand. The plan to bring him home takes shape much like CPython does, with people around the world bringing different skills to a shared effort.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/blockquote</small><p>So we do this together or not at all. — Commander Melissa Lewis, The Martian (2015)</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[4]</small><p>Enjoy the new release</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[11]</small><p>Thanks to everyone who contributed to this alpha and to everyone giving it a try. Please consider volunteering your time or asking your organisation to support the Python Software Foundation.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[12]</small><p>Happy testing!</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[13]</small><p>Regards from Washington state,</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[14]</small><p>Your release team, Savannah Ostrowski Ned Deily Steve Dower Julien Palard</p></div>
-</section>
-<section><h2>python_blog_2 — pass</h2>
-<p>generation · <a href="https://blog.python.org/2026/10/python-3152-31410-31318-31216-31118/">原网站</a> · <a href="../../../data/project2/python_blog/page_2.html">本地HTML快照</a> · <a href="round_0_python_blog_2.json">结果JSON</a></p><h3>Python 3.15.2, 3.14.10, 3.13.18, 3.12.16 and 3.11.18 are out</h3>
-<pre>元数据：[
-  {
-    &quot;type&quot;: &quot;metadata&quot;,
-    &quot;kind&quot;: &quot;metadata&quot;,
-    &quot;text&quot;: &quot;Hugo van Kemenade/October 26, 2026&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]&quot;
-  },
-  {
-    &quot;type&quot;: &quot;author&quot;,
-    &quot;kind&quot;: &quot;author&quot;,
-    &quot;text&quot;: &quot;Hugo van Kemenade&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/a&quot;
-  },
-  {
-    &quot;type&quot;: &quot;published_at&quot;,
-    &quot;kind&quot;: &quot;published_at&quot;,
-    &quot;text&quot;: &quot;October 26, 2026&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/time&quot;
-  }
-]</pre>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[1]</small><p>Here are expedited security releases of Python 3.15, 3.14, 3.13, 3.12 and 3.11.</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul[1]</small><p>Python 3.15.2 Python 3.14.10 Python 3.13.18 Python 3.12.16 Python 3.11.18</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[2]</small><p>They address the compromised eMudhra intermediate CA keys. These keys are now blocked by the ssl module as a last resort against their use. Normal uses of pip, including to upgrade pip itself, are now safe from attacks based on those compromised keys, even if pip hasn’t been updated yet.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[3]</small><p>Python 3.15.2 and 3.14.10 come with binary installers. Python 3.13.18, 3.12.16 and 3.11.18 are source-only security releases.</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[1]</small><p>Security content in all five releases</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul[2]</small><p>CVE-2026-115557 — gh-160040: Distrust compromised eMudhra intermediate CA keys CVE-2026-114583 — gh-160097: Reject links replacing the destination in tarfile.tar_filter gh-160300: Reject cookies with a negative version in http.cookiejar</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[2]</small><p>Additional security content by version</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h3[1]</small><p>Python 3.13.18, 3.12.16 and 3.11.18</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[4]</small><p>These fixes were already included in Python 3.15.1 and 3.14.9.</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul[3]</small><p>CVE-2026-77214 and CVE-2026-102633 — gh-158876: Update bundled Expat to 2.9.0 CVE-2024-3220 — gh-159428: Don’t read mimetypes.knownfiles by default on Windows gh-87720: Fix additional header refolding-quoting edge case</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h3[2]</small><p>Python 3.13.18 and 3.12.16</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[5]</small><p>This fix was already included in Python 3.15.0 and 3.14.9.</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul[4]</small><p>gh-157579: Fix race condition in the cleanup of tempfile.TemporaryDirectory</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[6]</small><p>For the full details, see the 3.15.2 changelog, 3.14.10 changelog, 3.13.18 changelog, 3.12.16 changelog and 3.11.18 changelog.</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[3]</small><p>Stay safe and upgrade!</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[7]</small><p>As always, upgrading is highly recommended to all users of affected versions.</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[4]</small><p>Enjoy the new releases</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[8]</small><p>Thanks to all of the many volunteers who help make Python development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[9]</small><p>Your certified release team, Hugo van Kemenade Thomas Wouters Pablo Galindo Salgado Ned Deily Steve Dower</p></div>
-</section>
-<section><h2>python_blog_3 — pass</h2>
-<p>development_feedback · <a href="https://blog.python.org/2026/10/python-3151-3149-31317/">原网站</a> · <a href="../../../data/project2/python_blog/page_3.html">本地HTML快照</a> · <a href="round_0_python_blog_3.json">结果JSON</a></p><h3>Python 3.15.1, 3.14.9 and 3.13.17 are out</h3>
-<pre>元数据：[
-  {
-    &quot;type&quot;: &quot;metadata&quot;,
-    &quot;kind&quot;: &quot;metadata&quot;,
-    &quot;text&quot;: &quot;Hugo van Kemenade/October 21, 2026&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]&quot;
-  },
-  {
-    &quot;type&quot;: &quot;author&quot;,
-    &quot;kind&quot;: &quot;author&quot;,
-    &quot;text&quot;: &quot;Hugo van Kemenade&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/a&quot;
-  },
-  {
-    &quot;type&quot;: &quot;published_at&quot;,
-    &quot;kind&quot;: &quot;published_at&quot;,
-    &quot;text&quot;: &quot;October 21, 2026&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/time&quot;
-  }
-]</pre>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[1]</small><p>Here are expedited security releases of Python 3.15 and 3.14, and a special security release of 3.13.</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul</small><p>Python 3.15.1 Python 3.14.9 Python 3.13.17</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[2]</small><p>They all upgrade the bundled pip to version 26.2.2, which includes certifi 2026.10.19 to address the eMudhra / emSign CA certificate security incident.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[3]</small><p>We don’t normally update pip for security releases like Python 3.13 because of backward compatibility concerns, but since 3.13 only just entered security-only mode, doing a special release with installers seemed prudent.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[4]</small><p>See the Discourse announcement for more information.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[5]</small><p>For all existing virtual environments on your system, please upgrade pip and uv to the latest versions.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[6]</small><p>To upgrade pip securely within a virtualenv:</p></div>
-<div class="block"><small>code_block | /html/body/main/div/article/div/pre[1]</small><pre>python -m pip install &quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70&quot;</pre></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[7]</small><p>If you cannot immediately upgrade to this release, you can upgrade certificates for a Python 3.15 macOS installation and pip itself via:</p></div>
-<div class="block"><small>code_block | /html/body/main/div/article/div/pre[2]</small><pre>/Library/Frameworks/Python.framework/Versions/3.15/bin/python3.15 -m pip install &quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70&quot;
-/Library/Frameworks/Python.framework/Versions/3.15/bin/python3.15 -m pip install --upgrade certifi
-/Library/Frameworks/PythonT.framework/Versions/3.15/bin/python3.15t -m pip install &quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70&quot;</pre></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[8]</small><p>For 3.14:</p></div>
-<div class="block"><small>code_block | /html/body/main/div/article/div/pre[3]</small><pre>/Library/Frameworks/Python.framework/Versions/3.14/bin/python3.14 -m pip install &quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70&quot;
-/Library/Frameworks/Python.framework/Versions/3.14/bin/python3.14 -m pip install --upgrade certifi
-/Library/Frameworks/PythonT.framework/Versions/3.14/bin/python3.14t -m pip install &quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70&quot;</pre></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[9]</small><p>For 3.13:</p></div>
-<div class="block"><small>code_block | /html/body/main/div/article/div/pre[4]</small><pre>/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -m pip install &quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70&quot;
-/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -m pip install --upgrade certifi
-/Library/Frameworks/PythonT.framework/Versions/3.13/bin/python3.13t -m pip install &quot;pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70&quot;</pre></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[1]</small><p>macOS 27.0 IDLE and tkinter</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[10]</small><p>Additionally, the macOS installer for this release is built with a pre-release of Tk, fixing a possible hang on macOS 27.0 in applications using tkinter, like IDLE, in older releases.</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[2]</small><p>Enjoy the new release</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[11]</small><p>Thanks to all of the many volunteers who help make Python development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[12]</small><p>Your certified release team, Hugo van Kemenade Thomas Wouters Ned Deily Steve Dower</p></div>
-</section>
-<section><h2>python_blog_4 — pass</h2>
-<p>final_holdout · <a href="https://blog.python.org/2026/10/python-3160-alpha-1-is-now-available/">原网站</a> · <a href="../../../data/project2/python_blog/page_4.html">本地HTML快照</a> · <a href="holdout_python_blog_4.json">结果JSON</a></p><h3>Python 3.16.0 alpha 1 is now available</h3>
-<pre>元数据：[
-  {
-    &quot;type&quot;: &quot;metadata&quot;,
-    &quot;kind&quot;: &quot;metadata&quot;,
-    &quot;text&quot;: &quot;Savannah Ostrowski/October 13, 2026&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]&quot;
-  },
-  {
-    &quot;type&quot;: &quot;author&quot;,
-    &quot;kind&quot;: &quot;author&quot;,
-    &quot;text&quot;: &quot;Savannah Ostrowski&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/a&quot;
-  },
-  {
-    &quot;type&quot;: &quot;published_at&quot;,
-    &quot;kind&quot;: &quot;published_at&quot;,
-    &quot;text&quot;: &quot;October 13, 2026&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/time&quot;
-  }
-]</pre>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[1]</small><p>This is an early developer preview of Python 3.16</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[2]</small><p>python.org/downloads/release/python-3160a1/</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[1]</small><p>What’s new in Python 3.16?</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[3]</small><p>There’s plenty still to come in Python 3.16, but its first alpha is ready to try! Python 3.16.0a1 is the first of seven planned alpha releases.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[4]</small><p>During the alpha phase, features may be added up until the start of the beta phase (May 4, 2027) and, if necessary, may be modified or deleted up until the release candidate phase (July 27, 2027). The final release is planned for October 5, 2027. Please keep in mind that this is a preview release and its use is not recommended for production environments.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[5]</small><p>See What’s new in Python 3.16 for changes so far.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[6]</small><p>(Hey, fellow core team member, if there’s a feature you’d like highlighted in a future announcement, let Savannah know.)</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[7]</small><p>If you maintain a library or application, please try it with this alpha and let us know how it goes. Please report Python bugs on the CPython issue tracker.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[8]</small><p>The next alpha, Python 3.16.0a2, is scheduled for November 10, 2026. The full schedule is in PEP 826.</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[2]</small><p>More resources</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul</small><p>Python 3.16 documentation Changelog Support Python through the Python Software Foundation</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[3]</small><p>And now for something completely different</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[9]</small><p>For Python 3.16, this section will host the Python 3.16 Film Festival: one film pairing for each release, from the first alpha to the final version.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[10]</small><p>Building CPython is a team sport. Every release reflects the time, skill, and dedication of a community that cares deeply about Python and the people who use it. In that spirit, the festival will celebrate collaboration and craftsmanship: the care people put into their work, and what they can make together.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[11]</small><p>The Python 3.16 Film Festival opens with Ratatouille (2007). Remy’s passion for cooking and his partnership with Linguini make it a fitting place to begin.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/blockquote</small><p>Great cooking is not for the faint of heart. You must be imaginative. Strong-hearted. You must try things that may not work. And you must not let anyone define your limits because of where you come from. Your only limit is your soul. What I say is true: anyone can cook, but only the fearless can be great. — Auguste Gusteau, Ratatouille (2007)</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[4]</small><p>Enjoy the new release</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[12]</small><p>Thank you to everyone who has contributed code, reviewed changes, written documentation, tested builds, and reported bugs. All of that work helps make Python and its releases possible. Please consider supporting Python by volunteering your time or encouraging your organisation to support the Python Software Foundation.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[13]</small><p>Happy testing!</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[14]</small><p>Regards from beautiful Washington state,</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[15]</small><p>Your release team, Savannah Ostrowski Ned Deily Steve Dower Julien Palard</p></div>
-</section>
-<section><h2>python_blog_5 — pass</h2>
-<p>final_holdout · <a href="https://blog.python.org/2026/10/python-3150-final-is-here/">原网站</a> · <a href="../../../data/project2/python_blog/page_5.html">本地HTML快照</a> · <a href="holdout_python_blog_5.json">结果JSON</a></p><h3>Python 3.15.0 (final) is here!</h3>
-<pre>元数据：[
-  {
-    &quot;type&quot;: &quot;metadata&quot;,
-    &quot;kind&quot;: &quot;metadata&quot;,
-    &quot;text&quot;: &quot;Hugo van Kemenade/October 9, 2026&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]&quot;
-  },
-  {
-    &quot;type&quot;: &quot;author&quot;,
-    &quot;kind&quot;: &quot;author&quot;,
-    &quot;text&quot;: &quot;Hugo van Kemenade&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/a&quot;
-  },
-  {
-    &quot;type&quot;: &quot;published_at&quot;,
-    &quot;kind&quot;: &quot;published_at&quot;,
-    &quot;text&quot;: &quot;October 9, 2026&quot;,
-    &quot;xpath&quot;: &quot;/html/body/main/div/article/header/div[2]/time&quot;
-  }
-]</pre>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[1]</small><p>Python 3.15.0 is now available</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[2]</small><p>python.org/downloads/release/python-3150/</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[2]</small><p>This is the stable release of Python 3.15.0</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[3]</small><p>Python 3.15.0 is the newest major release of the Python programming language, and it contains many new features and optimisations compared to Python 3.14, in 5,643 commits from 1,012 contributors.</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[3]</small><p>Major new features of the 3.15 series, compared to 3.14</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[4]</small><p>Some of the major new features and changes in Python 3.15 are:</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h3[1]</small><p>Interpreter improvements</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul[1]</small><p>PEP 661: Add sentinel built-in type PEP 686: Python now uses UTF-8 as the default encoding PEP 798: Unpacking in comprehensions PEP 810: Explicit lazy imports for faster startup times PEP 814: Add frozendict built-in type PEP 829: Package startup configuration files The experimental JIT compiler has been significantly upgraded, with 7-8% geometric mean performance improvement on x86-64 Linux over the standard interpreter, and 11-12% speedup on AArch64 macOS over the tail-calling interpreter Improved error messages</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h3[2]</small><p>Significant improvements in the standard library</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul[2]</small><p>PEP 799: A dedicated profiling package for organizing Python profiling tools PEP 799: Tachyon: High frequency statistical sampling profiler More color</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h3[3]</small><p>New typing features</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul[3]</small><p>PEP 728: TypedDict with typed extra items PEP 747: Annotating type forms with TypeForm PEP 800: Disjoint bases in the type system</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h3[4]</small><p>C API improvements</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul[4]</small><p>PEP 782: A new PyBytesWriter C API to create a Python bytes object PEP 788: Protection against finalization in the C API PEP 803, 820, 793: Stable ABI for free-threaded builds and related C API</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h3[5]</small><p>Build changes</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul[5]</small><p>PEP 831: Frame pointers are enabled by default for improved system-level observability</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h3[6]</small><p>Release changes</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul[6]</small><p>The official Windows 64-bit binaries now use the tail-calling interpreter The official macOS binaries now install free-threading support by default</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[5]</small><p>For more details on the changes to Python 3.15, see What’s new in Python 3.15.</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h3[7]</small><p>Attention macOS 27.0 IDLE or tkinter users</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[6]</small><p>When running IDLE or other GUI applications that use the tkinter module, these applications may hang when using an application’s menu command that opens a dialog (for example, IDLE’s About IDLE, Settings, and Open Module commands) resulting in a spinning beach ball with Force Quit needed.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[7]</small><p>This problem is due to an operating system behavior change in macOS 27.0 that is believed to affect all current versions of the Tk graphics toolkit and thus the tkinter module in all current Python versions.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[8]</small><p>If you depend on Tk-based applications (like IDLE) on macOS, you may want to consider deferring installing macOS 27.0 until a Tk or macOS workaround is available or testing that your application workflow is not affected. Follow issue #158053 for updates.</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[4]</small><p>More resources</p></div>
-<div class="block"><small>list | /html/body/main/div/article/div/ul[7]</small><p>Online documentation PEP 790, 3.15 release schedule Report bugs at github.com/python/cpython/issues Help fund Python directly (or via GitHub Sponsors) and support the Python community</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[9]</small><p>To celebrate the new 3.15, Barry Warsaw has a present for us!</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/blockquote</small><p>I had this idea to whip up a little TUI adventure game that takes you through a What’s New in Python 3.15. I present to you “whatsnewt”: From the README: A TUI text adventure through what’s new in Python 3.15. You wake up in the Startup Foyer, somewhere inside the interpreter, and work your way to the Release Gate. Along the way there are eighteen puzzles, and every one of them is a real 3.15 feature you have to actually use. You’re not just answering boring questions, you’re actually writing and running code, in a Python 3.15 interpreter. Some puzzles require a type checker, and in those cases, answers are verified by pyrefly, which is a dependency for exactly that reason, and the verdict quotes what it says back. The easiest way to play it is to run: uvx --python 3.15 whatsnewt And yes, there are easter eggs</p></div>
-<div class="block"><small>subheading | /html/body/main/div/article/div/h2[5]</small><p>Enjoy the new release</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[10]</small><p>Thanks to all of the many volunteers who help make Python development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[11]</small><p>Huge thanks to Georgi Ker and Marie Nordin for the Python 3.15 logo!</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[12]</small><p>And also huge thanks to the Sovereign Tech Agency for supporting my work as release manager for Python 3.14 and 3.15 through the Sovereign Tech Fellowship.</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[13]</small><p>Salutations de Rennes,</p></div>
-<div class="block"><small>paragraph | /html/body/main/div/article/div/p[14]</small><p>Your release team, Hugo van Kemenade Ned Deily Steve Dower</p></div>
-</section>
+  &quot;frozen_before_holdout&quot;: true
+}</pre></details></div></section></main><footer class="foot">此页面仅展示已保存的实验记录。筛选、切换与展开不会发起 API 请求，也不会修改标注或提取结果。</footer></div><script>
+(()=>{
+const tabs=[...document.querySelectorAll('[data-tab]')], views=[...document.querySelectorAll('[data-view]')];
+function showTab(name){tabs.forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===name)));views.forEach(v=>v.hidden=v.dataset.view!==name)}
+tabs.forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));
+const nav=[...document.querySelectorAll('.page-button')], articles=[...document.querySelectorAll('.article')];
+const input=document.getElementById('page-search'),role=document.getElementById('role-filter');
+function selectPage(id,scroll=false){articles.forEach(a=>a.hidden=a.id!==id);nav.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.target===id)));if(scroll)document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'})}
+nav.forEach(b=>b.addEventListener('click',()=>selectPage(b.dataset.target)));
+function filter(){const q=input.value.trim().toLowerCase();nav.forEach(b=>b.hidden=!(b.textContent.toLowerCase().includes(q)&&(!role.value||b.dataset.role===role.value)));const visible=nav.filter(b=>!b.hidden);document.getElementById('nav-count').textContent=visible.length+' / '+nav.length+' 篇';document.getElementById('no-pages').hidden=visible.length>0;if(!visible.some(b=>b.getAttribute('aria-pressed')==='true')){if(visible.length)selectPage(visible[0].dataset.target);else articles.forEach(a=>a.hidden=true)}}
+input.addEventListener('input',filter);role.addEventListener('change',filter);
+document.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>{showTab('results');input.value='';role.value='';filter();selectPage(b.dataset.jump,true)}));
+document.querySelectorAll('[data-round-picker]').forEach(s=>{function choose(){const a=s.closest('.article');a.querySelectorAll('[data-version]').forEach(v=>v.hidden=v.dataset.version!==s.value)}s.addEventListener('change',choose);choose()});
+document.querySelectorAll('[data-evidence-toggle]').forEach(b=>b.addEventListener('click',()=>{const a=b.closest('[data-version]'),ds=[...a.querySelectorAll('.body-block details')],open=ds.some(d=>!d.open);ds.forEach(d=>d.open=open);b.textContent=open?'收起全部原文定位':'展开全部原文定位'}));
+showTab('results');if(nav.length)selectPage(nav[0].dataset.target);filter();
+})();
+</script></body></html>

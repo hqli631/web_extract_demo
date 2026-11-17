@@ -1,7 +1,6 @@
 """Single Qwen Agent: bounded generation, evidence feedback, frozen holdout."""
 import argparse
 import base64
-import html as html_escape
 import json
 import os
 from pathlib import Path
@@ -100,35 +99,9 @@ def evaluate(item, rules, out, prefix):
                 'issues':[{'kind':'execution_error', 'message':type(exc).__name__ + ': ' + str(exc)[:400]}]}
 
 def report(out, trace):
-    esc = html_escape.escape
-    lines = ['<!doctype html><meta charset="utf-8"><title>Project 2 live Agent report</title>',
-        '<style>body{font:16px/1.6 system-ui;max-width:1100px;margin:32px auto;padding:0 20px;background:#f5f7fb;color:#17233a}section{background:white;padding:20px;margin:18px 0;border-radius:12px}pre{white-space:pre-wrap;overflow-wrap:anywhere}a{color:#225dc7}.block{border-left:3px solid #739ee9;padding:8px 14px;margin:12px 0}small{color:#56647a}</style>',
-        '<h1>项目二：千问单 Agent 生成与复用抽取代码</h1>',
-        '<section><p>状态：' + esc(trace['final_status']) + '；模型：' + esc(trace['model']) + '；API尝试：' + str(len(trace['api_attempts'])) + '；候选轮次：' + str(len(trace['rounds'])) + '</p>',
-        '<p>实验类型：' + esc(trace.get('initial_candidate','historical')) + '。controlled_ablation 表示人为设置漏提规则的修复实验，不能当作新测试成绩。</p>',
-        '<p>2篇生成样本 → 1篇开发反馈 → 冻结代码 → 2篇最终测试。同一份XPath代码在CPU上批量提取。</p>',
-        '<p>通过表示本任务的结构覆盖、定位和非空检查通过；语义准确率、图片完整性仍为 unknown。HTML快照不保证离线样式还原。</p>',
-        '<p><a href="trace.json">完整轨迹及用量</a> · <a href="extractor.py">冻结的Python模块</a> · <a href="rules.json">XPath规则</a></p></section>']
-    for entry in trace['rounds']:
-        lines.append('<section><h2>候选轮次 ' + str(entry['round']) + '</h2><p><a href="candidate_round_' + str(entry['round']) + '.json">本轮规则</a> · <a href="candidate_round_' + str(entry['round']) + '.py">本轮代码</a></p><pre>' + esc(json.dumps(entry,ensure_ascii=False,indent=2)) + '</pre></section>')
-    if trace.get('error'):
-        lines.append('<section><h2>失败信息</h2><pre>' + esc(trace['error']) + '</pre></section>')
-    pages = (trace['rounds'][-1].get('pages',[]) if trace['rounds'] else []) + trace.get('holdout',[])
-    for page in pages:
-        lines.append('<section><h2>' + esc(page['id']) + ' — ' + esc(page['status']) + '</h2>')
-        if page.get('result'):
-            result = json.loads((out/page['result']).read_text(encoding='utf8'))
-            try:
-                source = os.path.relpath(ROOT/page['source_path'], out).replace(chr(92),'/')
-            except ValueError:  # Windows output directory on a different drive.
-                source = (ROOT/page['source_path']).as_uri()
-            lines.append('<p>' + esc(page['role']) + ' · <a href="' + esc(page['url'],quote=True) + '">原网站</a> · <a href="' + esc(source,quote=True) + '">本地HTML快照</a> · <a href="' + esc(page['result']) + '">结果JSON</a></p><h3>' + esc(result['title']) + '</h3>')
-            lines.append('<pre>元数据：' + esc(json.dumps(result['metadata'],ensure_ascii=False,indent=2)) + '</pre>')
-            for block in result['blocks']:
-                tag = 'pre' if block['type'] == 'code_block' else 'p'
-                lines.append('<div class="block"><small>' + esc(block['type'] + ' | ' + block['xpath']) + '</small><' + tag + '>' + esc(block['text']) + '</' + tag + '></div>')
-        lines.append('</section>')
-    (out/'index.html').write_text('\n'.join(lines), encoding='utf8')
+    from project2_report import render_report
+    render_report(out, trace)
+
 
 def run(task, out, provider='mock', model=DEFAULT_MODEL, max_repairs=2, timeout=90, initial_rules=None):
     out = Path(out)
