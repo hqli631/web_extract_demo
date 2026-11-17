@@ -1,0 +1,117 @@
+<!doctype html><meta charset="utf-8"><title>项目一基础迁移对照</title><style>body{font:16px/1.6 system-ui;max-width:1050px;margin:30px auto}pre{white-space:pre-wrap}section{border:1px solid #ccd;padding:18px;margin:18px 0}</style><h1>项目一 → 项目二：固定执行层回归对照</h1><p>已曝光样例、人工参考规则、0次API。不代表模型生成成绩或独立准确率。分类/排除仍有待语义审核的项目会明确保留。</p>
+<section><h2>sina_01</h2><a href="sina_01.json">完整提取结果</a><pre>{
+  &quot;id&quot;: &quot;sina_01&quot;,
+  &quot;layout&quot;: &quot;sina&quot;,
+  &quot;reference_blocks&quot;: 43,
+  &quot;current_blocks&quot;: 43,
+  &quot;body_sequence_equal&quot;: true,
+  &quot;missing&quot;: [],
+  &quot;added&quot;: [],
+  &quot;metadata&quot;: [
+    {
+      &quot;type&quot;: &quot;author&quot;,
+      &quot;kind&quot;: &quot;author&quot;,
+      &quot;text&quot;: &quot;21世纪经济报道&quot;,
+      &quot;xpath&quot;: &quot;/html/head/meta[28]&quot;,
+      &quot;attribute&quot;: &quot;content&quot;
+    },
+    {
+      &quot;type&quot;: &quot;published_at&quot;,
+      &quot;kind&quot;: &quot;published_at&quot;,
+      &quot;text&quot;: &quot;2026年10月27日 07:27&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[3]/div/div/div[2]/span&quot;
+    },
+    {
+      &quot;type&quot;: &quot;source&quot;,
+      &quot;kind&quot;: &quot;source&quot;,
+      &quot;text&quot;: &quot;21世纪经济报道&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[3]/div/div/div[2]/a&quot;
+    },
+    {
+      &quot;type&quot;: &quot;editor&quot;,
+      &quot;kind&quot;: &quot;editor&quot;,
+      &quot;text&quot;: &quot;责任编辑：石秀珍 SF183&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[45]&quot;
+    }
+  ],
+  &quot;issues&quot;: [
+    {
+      &quot;kind&quot;: &quot;metadata_requires_review&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[45]&quot;,
+      &quot;message&quot;: &quot;Body metadata classification requires semantic review, not automatic coverage credit&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/p[1]&quot;,
+      &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[2]&quot;,
+      &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[2]/div[4]/div[1]/div[2]/div[3]&quot;,
+      &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+    }
+  ]
+}</pre></section>
+<section><h2>chinanews_03</h2><a href="chinanews_03.json">完整提取结果</a><pre>{
+  &quot;id&quot;: &quot;chinanews_03&quot;,
+  &quot;layout&quot;: &quot;chinanews&quot;,
+  &quot;reference_blocks&quot;: 33,
+  &quot;current_blocks&quot;: 33,
+  &quot;body_sequence_equal&quot;: true,
+  &quot;missing&quot;: [],
+  &quot;added&quot;: [],
+  &quot;metadata&quot;: [
+    {
+      &quot;type&quot;: &quot;published_at&quot;,
+      &quot;kind&quot;: &quot;published_at&quot;,
+      &quot;text&quot;: &quot;2026-11-03 15:05:01&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[1]/span[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;source&quot;,
+      &quot;kind&quot;: &quot;source&quot;,
+      &quot;text&quot;: &quot;中国新闻网&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[2]/a&quot;
+    },
+    {
+      &quot;type&quot;: &quot;author&quot;,
+      &quot;kind&quot;: &quot;author&quot;,
+      &quot;text&quot;: &quot;中新社记者 孙翔&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;editor&quot;,
+      &quot;kind&quot;: &quot;editor&quot;,
+      &quot;text&quot;: &quot;【编辑:付子豪】&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[10]&quot;
+    }
+  ],
+  &quot;issues&quot;: [
+    {
+      &quot;kind&quot;: &quot;metadata_requires_review&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]&quot;,
+      &quot;message&quot;: &quot;Body metadata classification requires semantic review, not automatic coverage credit&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;metadata_requires_review&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[10]&quot;,
+      &quot;message&quot;: &quot;Body metadata classification requires semantic review, not automatic coverage credit&quot;
+    }
+  ]
+}</pre></section>
+<section><h2>pydoc_interpreter</h2><a href="pydoc_interpreter.json">完整提取结果</a><pre>{
+  &quot;id&quot;: &quot;pydoc_interpreter&quot;,
+  &quot;layout&quot;: &quot;pydoc&quot;,
+  &quot;reference_blocks&quot;: 32,
+  &quot;current_blocks&quot;: 32,
+  &quot;body_sequence_equal&quot;: true,
+  &quot;missing&quot;: [],
+  &quot;added&quot;: [],
+  &quot;metadata&quot;: [],
+  &quot;issues&quot;: []
+}</pre></section>

@@ -1,0 +1,76 @@
+{
+  "scope": "Project one human-authored reference recipes; NOT Agent generation or unseen evaluation",
+  "reference_source_hashes": {
+    "extractor.py": "b5897d86c1440bd1f1dbd6438c6a4f03f2c96e4e013604a9703e5d01aec17dd8",
+    "rules/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rules/chinanews.py": "bd0286c88c8135ce009f5afa05b13891eb9e70fd9aea111be1c92cb293b63ce8",
+    "rules/pg_essay.py": "def383a785ea755a8fb3ef97f7ce68a6f0c6b4bef4ef336db6a648285e9bcc6c",
+    "rules/pydoc.py": "5830b9d10830ef7aef2f9207c3f011a6ece3efdebb20ba88103038c68d6687d9",
+    "rules/sina.py": "0ce47c4067e8871caa0e5309b465a31be8a25f563202f5ceb62c0452d328fa4a"
+  },
+  "pages": [
+    {
+      "id": "sina_01",
+      "path": "data/project2/foundation_reference/sina_01.html",
+      "reference": "data/project2/foundation_reference/sina_01.reference.json",
+      "rules": {
+        "title_xpath": "//h1[contains(concat(\" \",normalize-space(@class),\" \"),\" main-title \")]",
+        "container_xpath": "//div[@id=\"artibody\"]",
+        "block_xpath": "./p | .//h2 | .//h3 | .//table | .//div[contains(concat(\" \",normalize-space(@class),\" \"),\" pictext \")]",
+        "exclude_xpath": ".//*[@id=\"app-kaihu-stock\"] | .//*[contains(concat(\" \",normalize-space(@class),\" \"),\" appendQr_wrap \")] | ./p[starts-with(normalize-space(.),\"专题：\") and .//a]",
+        "metadata_xpath": "",
+        "metadata_fields": {
+          "author": "//meta[@property=\"article:author\"] | //div[@id=\"artibody\"]/p[1][not(contains(.,\"：\")) and contains(.,\"记者\")]",
+          "editor": "//*[contains(concat(\" \",normalize-space(@class),\" \"),\" article-editor \")]",
+          "published_at": "//*[contains(concat(\" \",normalize-space(@class),\" \"),\" date-source \")]//*[contains(concat(\" \",normalize-space(@class),\" \"),\" date \")]",
+          "source": "//*[contains(concat(\" \",normalize-space(@class),\" \"),\" date-source \")]//*[contains(concat(\" \",normalize-space(@class),\" \"),\" source \")]"
+        }
+      },
+      "url": "https://finance.sina.com.cn/stock/bxjj/2026-10-27/doc-iniwrkkw2082967.shtml",
+      "sha256": "d2c40b3ca659fd59f83f427079f4ea6264b559f2b938d94014bd154cade22f84",
+      "layout": "sina",
+      "role": "historical_exposed_regression",
+      "evaluation_scope_xpath": "//div[@id=\"artibody\"]"
+    },
+    {
+      "id": "chinanews_03",
+      "path": "data/project2/foundation_reference/chinanews_03.html",
+      "reference": "data/project2/foundation_reference/chinanews_03.reference.json",
+      "rules": {
+        "title_xpath": "//h1[contains(concat(\" \",normalize-space(@class),\" \"),\" content_left_title \")]",
+        "container_xpath": "//div[contains(concat(\" \",normalize-space(@class),\" \"),\" left_zw \")]",
+        "block_xpath": "./p | ./div[contains(concat(\" \",normalize-space(@class),\" \"),\" pictext \")]",
+        "exclude_xpath": ".//*[contains(concat(\" \",normalize-space(@class),\" \"),\" adInContent \")]",
+        "metadata_xpath": "",
+        "metadata_fields": {
+          "author": "//div[contains(concat(\" \",normalize-space(@class),\" \"),\" left_zw \")]/p[starts-with(normalize-space(translate(.,\"　 \",\"  \")),\"中新社记者 \") and not(contains(.,\"：\"))]",
+          "editor": "//*[contains(concat(\" \",normalize-space(@class),\" \"),\" adEditor \")]",
+          "source": "//*[contains(concat(\" \",normalize-space(@class),\" \"),\" content_left_time \")]//a[contains(concat(\" \",normalize-space(@class),\" \"),\" source \")]",
+          "published_at": "//*[@id=\"pubtime_baidu\"]"
+        }
+      },
+      "url": "https://www.chinanews.com.cn/dxw/2026/11-03/10725312.shtml",
+      "sha256": "1c9dea419228915c7358d39dbbdadb9771cf26d93e65887e4949ad21d4b09bb6",
+      "layout": "chinanews",
+      "role": "historical_exposed_regression",
+      "evaluation_scope_xpath": "//div[contains(concat(\" \",normalize-space(@class),\" \"),\" left_zw \")]"
+    },
+    {
+      "id": "pydoc_interpreter",
+      "path": "data/project2/foundation_reference/pydoc_interpreter.html",
+      "reference": "data/project2/foundation_reference/pydoc_interpreter.reference.json",
+      "rules": {
+        "title_xpath": "//*[@role=\"main\"]//h1",
+        "container_xpath": "//*[@role=\"main\"]",
+        "block_xpath": ".//*[@role=\"doc-footnote\"] | .//*[self::p or self::pre or self::li or self::dt or self::dd or self::table or self::h2 or self::h3 or self::h4][not(ancestor::p or ancestor::pre or ancestor::li or ancestor::dt or ancestor::dd or ancestor::table or ancestor::*[@role=\"doc-footnote\"])]",
+        "exclude_xpath": "",
+        "metadata_xpath": ""
+      },
+      "url": "https://docs.python.org/zh-cn/3/tutorial/interpreter.html",
+      "sha256": "6b642cd0f2f0eb4d8d72b300434415fde357331d9ec5059e4b67c6b2580f56d5",
+      "layout": "pydoc",
+      "role": "historical_exposed_regression",
+      "evaluation_scope_xpath": "//*[@role=\"main\"]"
+    }
+  ]
+}

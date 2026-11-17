@@ -9,6 +9,7 @@ def main():
     parser.add_argument('pages', nargs='+', help='HTML paths or quoted glob patterns')
     parser.add_argument('--rules', default='output/project2/live_flash_final/rules.json')
     parser.add_argument('--output', default='output/project2/my_batch')
+    parser.add_argument('--scope-xpath', help='Independent task-owned evaluation scope for non-article layouts')
     args=parser.parse_args()
     from glob import glob
     paths=[]
@@ -26,7 +27,8 @@ def main():
     rules=json.loads(Path(args.rules).read_text(encoding='utf8'))
     rows=[]
     for index,path in enumerate(paths,1):
-        row=evaluate({'id':f'page_{index}', 'role':'batch_reuse', 'path':str(path),'url':''}, rules,out,'extract')
+        row=evaluate({'id':f'page_{index}', 'role':'batch_reuse', 'path':str(path),'url':'',
+                      'evaluation_scope_xpath':args.scope_xpath}, rules,out,'extract')
         row['input']=str(path)
         rows.append(row)
         print(f'{path.name}: {row["status"]}; blocks={row.get("blocks",0)}')

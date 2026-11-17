@@ -8,7 +8,7 @@ def main():
     request = json.load(sys.stdin)
     data = base64.b64decode(request['html_base64'], validate=True)
     result = extract(request['rules'], data)
-    print(json.dumps({'result':result, 'issues':structural_feedback(result,data)},ensure_ascii=False))
+    print(json.dumps({'result':result, 'issues':structural_feedback(result,data,request.get('scope_xpath'))},ensure_ascii=False))
 
 if __name__ == '__main__':
     main()

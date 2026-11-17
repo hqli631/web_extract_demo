@@ -1,0 +1,208 @@
+{
+  "title": "东西问丨伊扎特·萨阿德：全球南方现代化如何抓住AI机遇？",
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "text": "中新社约翰内斯堡11月3日电 题：全球南方现代化如何抓住AI机遇？",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[1]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "——专访埃及外交事务委员会主任伊扎特·萨阿德",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[2]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "在全球南方群体性崛起、共同迈向现代化的进程中，中国走出了立足本国国情、重视本土经验的现代化道路——中国式现代化。进入人工智能(AI)时代，中国推进“人工智能+”行动，人工智能核心产业规模已超万亿元人民币，推动人工智能更好赋能发展。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[4]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "全球南方应如何抓住人工智能机遇，使其为全球南方现代化注入新动能？中国的理念与实践又能带来哪些启示？中新社“东西问”日前在开罗就此专访埃及外交事务委员会主任伊扎特·萨阿德(Ezzat Saad)。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[5]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "现将采访实录摘要如下：",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[6]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "中新社记者：您如何看待人工智能在目前全球南方现代化中的作用？",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[7]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "伊扎特·萨阿德：当前，人工智能正在经历一场革命。人工智能能够改善世界各地数以百万计民众的生活，尤其是全球南方国家民众的生活。无论是在医疗卫生、农业、环境保护，还是生活中的许多其他领域，人工智能都蕴藏着巨大潜力。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[8]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "同时，我们也看到在人工智能问题上，全球正出现一道鸿沟，这既涉及技术，也涉及治理。这项技术不应该被少数几个国家垄断。作为全球南方国家，我们应该共享这一领域的最新发展成果，从而改善人民生活，推动世界各国实现可持续发展。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[9]"
+    },
+    {
+      "kind": "caption",
+      "text": "哈萨克斯坦，阿斯塔纳世博园区的“Alem.AI”国际人工智能中心。展示的多款人形机器人。 (资料图)中新社记者 单璐 摄",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[3]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "中新社记者：您如何评价中国在推动人工智能惠及全球南方、促进更加公平包容的全球人工智能治理方面发挥的作用？",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[10]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "伊扎特·萨阿德：在2026世界人工智能大会暨人工智能全球治理高级别会议上，中方宣布系列举措，包括未来5年将面向发展中国家提供专题研修培训；面向阿拉伯国家联盟、非洲联盟、上海合作组织、金砖国家等建设国际人工智能应用合作中心等。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[11]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "我们赞赏中国在金砖国家、上合组织等平台上提出的有关倡议，并推动在人工智能领域加强与全球南方国家的合作。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[12]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "我们同样赞赏，中国强调应当在多边机构框架下推进人工智能治理，无论是在联合国，还是在非盟、阿盟等区域组织，以及中非合作论坛、中阿合作论坛等机制。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[13]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "这意味着，所有相关国家都有机会参与其中，与其他志同道合的国家一道塑造人工智能的未来。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[14]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "全球人工智能治理应为所有文明、所有语言提供充分的参与空间，使它们都能够共同参与塑造人工智能的未来，这一点至关重要。这实际上关系到文明之间的对话。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[15]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "人工智能不应该被某一种文明或某一种语言所垄断，而应该由所有语言、所有文明共同分享。正因为如此，我们高度赞赏中国提出的有关倡议，以及此前在中国举行的相关会议。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[16]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "我们应当加强协调与合作，同时交流彼此在人工智能领域的经验。我认为，这也是中方在许多场合所强调的核心理念，即我们应该以公平、开放的方式处理人工智能问题，使每一个国家都能够从这场新的技术革命中受益。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[17]"
+    },
+    {
+      "kind": "caption",
+      "text": "2026年7月20日，上海，中国—金砖国家人工智能发展与合作中心‌吸引参观者。中新社发 陈玉宇 摄",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[5]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "中新社记者：今年是中埃建交70周年。两国应如何进一步深化人工智能应用、人才培养和技术合作？这种合作能为其他全球南方国家现代化建设提供哪些经验？",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[18]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "伊扎特·萨阿德：谈到埃及和中国之间的合作，实际上存在很多机遇。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[19]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "首先，中国同包括埃及在内的多个阿拉伯国家建立了全面战略伙伴关系。这意味着双方的合作领域非常广泛，而我认为人工智能将成为其中一个非常重要的领域。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[20]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "其次，除了中国与阿拉伯国家之间的双边合作之外，我们还拥有一个可以推动基础设施、人工智能以及其他众多领域合作的制度性框架，那就是中阿合作论坛。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[21]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "中阿合作论坛可以作为一个多边机制，共同确定人工智能领域的诸多合作方向，并探索如何通过这些合作实现互利共赢。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[22]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "中国已经是埃及以及整个阿拉伯世界最重要的贸易和经济伙伴之一，这本身就为双方进一步深化合作提供了良好基础。尤其是在我们讨论作为全球南方组成部分的阿拉伯国家如何推进现代化时，中国能够发挥重要作用。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[23]"
+    },
+    {
+      "kind": "caption",
+      "text": "当地时间9月30日，2026全球南方现代化论坛在埃及开罗举行，本次论坛主题是“人工智能浪潮：全球南方现代化的机遇与挑战”。图为“全球南方青年说”嘉宾分享人工智能助力发展案例。 中新社记者 孙翔 摄",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[7]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "在人工智能领域，我们非常重视同中国开展能力建设合作。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[24]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "2025年，埃及发布第二版《国家人工智能战略(2025—2030年)》，确立了治理、技术、数据、基础设施、创新生态系统和人才六大支柱，并规划开发国家人工智能模型、生成高质量的阿拉伯语数据集等。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[25]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "按照规划，到2030年，埃及人工智能专业人员和专家数量将翻一番，达到3万人；信息通信技术产业对国内生产总值(GDP)的贡献率将提高至7.7%。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[26]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "我相信，中国也将在这一过程中给予我们支持。未来五年，我们将开展许多共同或联合项目。通过这些项目，中国将帮助我们进一步了解和掌握人工智能技术，并为埃及培养相关人才，使他们接受人工智能这场新技术革命不同技术领域的专业培训。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[27]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "此外，两国合作并不仅限于人工智能，还包括航天产业等许多领域，而这对埃及实现现代化都十分重要。(完)",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[28]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "受访者简介：",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[29]"
+    },
+    {
+      "kind": "caption",
+      "text": "埃及外交事务委员会主任伊扎特·萨阿德接受中新社“东西问”专访。中新社记者 孙翔 摄",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[9]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "伊扎特·萨阿德(Ezzat Saad)，现任埃及外交事务委员会主任，是埃及前外交部部长助理、埃及前驻俄罗斯大使、中国非洲研究院顾问，2026全球南方现代化论坛嘉宾。",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[30]"
+    }
+  ],
+  "metadata": [
+    {
+      "kind": "published_at",
+      "text": "2026年11月03日 15:05",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[2]"
+    },
+    {
+      "kind": "source",
+      "text": "中国新闻网",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[2]/a"
+    },
+    {
+      "kind": "author",
+      "text": "中新社记者 孙翔",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]"
+    },
+    {
+      "kind": "editor",
+      "text": "【编辑:付子豪】",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[10]"
+    }
+  ],
+  "excluded": [
+    {
+      "kind": "advertisement_or_page_widget",
+      "text": "",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/table"
+    },
+    {
+      "kind": "advertisement_or_page_widget",
+      "text": "",
+      "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[11]"
+    }
+  ],
+  "warnings": [
+    "static_dom_only_no_css_visibility_javascript_or_ocr",
+    "images_present_pixels_not_extracted"
+  ]
+}

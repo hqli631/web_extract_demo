@@ -1,0 +1,123 @@
+{
+  "scope": "Project one human-authored reference recipes; NOT Agent generation or unseen evaluation",
+  "api_calls": 0,
+  "semantic_accuracy": "unknown",
+  "pages": [
+    {
+      "id": "sina_01",
+      "layout": "sina",
+      "reference_blocks": 43,
+      "current_blocks": 43,
+      "body_sequence_equal": true,
+      "missing": [],
+      "added": [],
+      "metadata": [
+        {
+          "type": "author",
+          "kind": "author",
+          "text": "21世纪经济报道",
+          "xpath": "/html/head/meta[28]",
+          "attribute": "content"
+        },
+        {
+          "type": "published_at",
+          "kind": "published_at",
+          "text": "2026年10月27日 07:27",
+          "xpath": "/html/body/div[2]/div[3]/div/div/div[2]/span"
+        },
+        {
+          "type": "source",
+          "kind": "source",
+          "text": "21世纪经济报道",
+          "xpath": "/html/body/div[2]/div[3]/div/div/div[2]/a"
+        },
+        {
+          "type": "editor",
+          "kind": "editor",
+          "text": "责任编辑：石秀珍 SF183",
+          "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[45]"
+        }
+      ],
+      "issues": [
+        {
+          "kind": "metadata_requires_review",
+          "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[45]",
+          "message": "Body metadata classification requires semantic review, not automatic coverage credit"
+        },
+        {
+          "kind": "exclusion_requires_review",
+          "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/p[1]",
+          "message": "This structure-only probe cannot certify exclusion semantics"
+        },
+        {
+          "kind": "exclusion_requires_review",
+          "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div[2]",
+          "message": "This structure-only probe cannot certify exclusion semantics"
+        },
+        {
+          "kind": "exclusion_requires_review",
+          "xpath": "/html/body/div[2]/div[4]/div[1]/div[2]/div[3]",
+          "message": "This structure-only probe cannot certify exclusion semantics"
+        }
+      ]
+    },
+    {
+      "id": "chinanews_03",
+      "layout": "chinanews",
+      "reference_blocks": 33,
+      "current_blocks": 33,
+      "body_sequence_equal": true,
+      "missing": [],
+      "added": [],
+      "metadata": [
+        {
+          "type": "published_at",
+          "kind": "published_at",
+          "text": "2026-11-03 15:05:01",
+          "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[1]/span[1]"
+        },
+        {
+          "type": "source",
+          "kind": "source",
+          "text": "中国新闻网",
+          "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[2]/a"
+        },
+        {
+          "type": "author",
+          "kind": "author",
+          "text": "中新社记者 孙翔",
+          "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]"
+        },
+        {
+          "type": "editor",
+          "kind": "editor",
+          "text": "【编辑:付子豪】",
+          "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[10]"
+        }
+      ],
+      "issues": [
+        {
+          "kind": "metadata_requires_review",
+          "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/p[3]",
+          "message": "Body metadata classification requires semantic review, not automatic coverage credit"
+        },
+        {
+          "kind": "metadata_requires_review",
+          "xpath": "/html/body/div[8]/div[1]/div[2]/div[2]/div[4]/div[2]/div[10]",
+          "message": "Body metadata classification requires semantic review, not automatic coverage credit"
+        }
+      ]
+    },
+    {
+      "id": "pydoc_interpreter",
+      "layout": "pydoc",
+      "reference_blocks": 32,
+      "current_blocks": 32,
+      "body_sequence_equal": true,
+      "missing": [],
+      "added": [],
+      "metadata": [],
+      "issues": []
+    }
+  ]
+}

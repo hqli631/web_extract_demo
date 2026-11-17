@@ -1,0 +1,597 @@
+{
+  "task_id": "python-blog-project2-v1",
+  "provider": "mock",
+  "model": "mock-controlled-ablation",
+  "input_pages": [
+    {
+      "id": "python_blog_1",
+      "path": "data/project2/python_blog/page_1.html",
+      "url": "https://blog.python.org/2026/11/python-3160-alpha-2-is-now-available/",
+      "role": "generation",
+      "sha256": "74c7fd1ad049c8b117fd5e6f89f8f438998244310852eb8b3da6ff905ef02a66",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 43654
+    },
+    {
+      "id": "python_blog_2",
+      "path": "data/project2/python_blog/page_2.html",
+      "url": "https://blog.python.org/2026/10/python-3152-31410-31318-31216-31118/",
+      "role": "generation",
+      "sha256": "0515a5c70b68a8087ce80ddff53ae2778db5292bc40867a2f9096dcfd1ace384",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 50000
+    },
+    {
+      "id": "python_blog_3",
+      "path": "data/project2/python_blog/page_3.html",
+      "url": "https://blog.python.org/2026/10/python-3151-3149-31317/",
+      "role": "development_feedback",
+      "sha256": "a516478a1e3d4ad6dfcfdf4f10a4364c9195d841d1bf09ddc8f32ac38257c1fe",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 35735
+    },
+    {
+      "id": "python_blog_4",
+      "path": "data/project2/python_blog/page_4.html",
+      "url": "https://blog.python.org/2026/10/python-3160-alpha-1-is-now-available/",
+      "role": "final_holdout",
+      "sha256": "6dc465d13b06670df23381a9124b0d415bd574ca9f1fac231fef915cc55af23f",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 34165
+    },
+    {
+      "id": "python_blog_5",
+      "path": "data/project2/python_blog/page_5.html",
+      "url": "https://blog.python.org/2026/10/python-3150-final-is-here/",
+      "role": "final_holdout",
+      "sha256": "77cf6077bad85d54f0ed1d21d827fa1a6974d6f8e268436cb2e3a937b7c80bf5",
+      "source_exposure": "freshly_collected_for_project2",
+      "bytes": 67588
+    }
+  ],
+  "rounds": [
+    {
+      "round": 0,
+      "pages": [
+        {
+          "id": "python_blog_1",
+          "role": "generation",
+          "url": "https://blog.python.org/2026/11/python-3160-alpha-2-is-now-available/",
+          "source_path": "data/project2/python_blog/page_1.html",
+          "status": "failed",
+          "blocks": 16,
+          "metadata": 2,
+          "issues": [
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[1]",
+              "preview": "What’s new in Python 3.16?"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[1]",
+              "preview": "More expressive regular expressions. The re module now supports nested character sets, set operation"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[2]",
+              "preview": "Faster startup. Python starts faster, and several common operations have been optimized, including g"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[3]",
+              "preview": "Faster UUID generation. uuid4() and uuid7() now have C implementations, making generation about 15-3"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[4]",
+              "preview": "Improved error messages"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[5]",
+              "preview": "Encrypted Client Hello. The ssl module adds support for ECH when built with OpenSSL 4.0 or later."
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[6]",
+              "preview": "Build support for more Apple platforms. CPython can now be built for tvOS, watchOS, and visionOS. Th"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[2]",
+              "preview": "More resources"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[2]/li[1]",
+              "preview": "Python 3.16 documentation"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[2]/li[2]",
+              "preview": "Changelog"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[2]/li[3]",
+              "preview": "Support Python through the Python Software Foundation"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[3]",
+              "preview": "And now for something completely different"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[4]",
+              "preview": "Enjoy the new release"
+            }
+          ],
+          "result": "round_0_python_blog_1.json"
+        },
+        {
+          "id": "python_blog_2",
+          "role": "generation",
+          "url": "https://blog.python.org/2026/10/python-3152-31410-31318-31216-31118/",
+          "source_path": "data/project2/python_blog/page_2.html",
+          "status": "failed",
+          "blocks": 9,
+          "metadata": 2,
+          "issues": [
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[1]",
+              "preview": "Python 3.15.2"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[2]",
+              "preview": "Python 3.14.10"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[3]",
+              "preview": "Python 3.13.18"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[4]",
+              "preview": "Python 3.12.16"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[5]",
+              "preview": "Python 3.11.18"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[1]",
+              "preview": "Security content in all five releases"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[2]/li[1]",
+              "preview": "CVE-2026-115557 — gh-160040: Distrust compromised eMudhra intermediate CA keys"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[2]/li[2]",
+              "preview": "CVE-2026-114583 — gh-160097: Reject links replacing the destination in tarfile.tar_filter"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[2]/li[3]",
+              "preview": "gh-160300: Reject cookies with a negative version in http.cookiejar"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[2]",
+              "preview": "Additional security content by version"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h3[1]",
+              "preview": "Python 3.13.18, 3.12.16 and 3.11.18"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[3]/li[1]",
+              "preview": "CVE-2026-77214 and CVE-2026-102633 — gh-158876: Update bundled Expat to 2.9.0"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[3]/li[2]",
+              "preview": "CVE-2024-3220 — gh-159428: Don’t read mimetypes.knownfiles by default on Windows"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[3]/li[3]",
+              "preview": "gh-87720: Fix additional header refolding-quoting edge case"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h3[2]",
+              "preview": "Python 3.13.18 and 3.12.16"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[4]/li",
+              "preview": "gh-157579: Fix race condition in the cleanup of tempfile.TemporaryDirectory"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[3]",
+              "preview": "Stay safe and upgrade!"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[4]",
+              "preview": "Enjoy the new releases"
+            }
+          ],
+          "result": "round_0_python_blog_2.json"
+        },
+        {
+          "id": "python_blog_3",
+          "role": "development_feedback",
+          "url": "https://blog.python.org/2026/10/python-3151-3149-31317/",
+          "source_path": "data/project2/python_blog/page_3.html",
+          "status": "failed",
+          "blocks": 12,
+          "metadata": 2,
+          "issues": [
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul/li[1]",
+              "preview": "Python 3.15.1"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul/li[2]",
+              "preview": "Python 3.14.9"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul/li[3]",
+              "preview": "Python 3.13.17"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/pre[1]",
+              "preview": "python -m pip install \"pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/pre[2]",
+              "preview": "/Library/Frameworks/Python.framework/Versions/3.15/bin/python3.15 -m pip install \"pip @ https://file"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/pre[3]",
+              "preview": "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3.14 -m pip install \"pip @ https://file"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/pre[4]",
+              "preview": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -m pip install \"pip @ https://file"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[1]",
+              "preview": "macOS 27.0 IDLE and tkinter"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[2]",
+              "preview": "Enjoy the new release"
+            }
+          ],
+          "result": "round_0_python_blog_3.json"
+        }
+      ],
+      "issues": [
+        {
+          "id": "python_blog_1",
+          "issues": [
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[1]",
+              "preview": "What’s new in Python 3.16?"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[1]",
+              "preview": "More expressive regular expressions. The re module now supports nested character sets, set operation"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[2]",
+              "preview": "Faster startup. Python starts faster, and several common operations have been optimized, including g"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[3]",
+              "preview": "Faster UUID generation. uuid4() and uuid7() now have C implementations, making generation about 15-3"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[4]",
+              "preview": "Improved error messages"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[5]",
+              "preview": "Encrypted Client Hello. The ssl module adds support for ECH when built with OpenSSL 4.0 or later."
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[6]",
+              "preview": "Build support for more Apple platforms. CPython can now be built for tvOS, watchOS, and visionOS. Th"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[2]",
+              "preview": "More resources"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[2]/li[1]",
+              "preview": "Python 3.16 documentation"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[2]/li[2]",
+              "preview": "Changelog"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[2]/li[3]",
+              "preview": "Support Python through the Python Software Foundation"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[3]",
+              "preview": "And now for something completely different"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[4]",
+              "preview": "Enjoy the new release"
+            }
+          ]
+        },
+        {
+          "id": "python_blog_2",
+          "issues": [
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[1]",
+              "preview": "Python 3.15.2"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[2]",
+              "preview": "Python 3.14.10"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[3]",
+              "preview": "Python 3.13.18"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[4]",
+              "preview": "Python 3.12.16"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[1]/li[5]",
+              "preview": "Python 3.11.18"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[1]",
+              "preview": "Security content in all five releases"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[2]/li[1]",
+              "preview": "CVE-2026-115557 — gh-160040: Distrust compromised eMudhra intermediate CA keys"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[2]/li[2]",
+              "preview": "CVE-2026-114583 — gh-160097: Reject links replacing the destination in tarfile.tar_filter"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[2]/li[3]",
+              "preview": "gh-160300: Reject cookies with a negative version in http.cookiejar"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[2]",
+              "preview": "Additional security content by version"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h3[1]",
+              "preview": "Python 3.13.18, 3.12.16 and 3.11.18"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[3]/li[1]",
+              "preview": "CVE-2026-77214 and CVE-2026-102633 — gh-158876: Update bundled Expat to 2.9.0"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[3]/li[2]",
+              "preview": "CVE-2024-3220 — gh-159428: Don’t read mimetypes.knownfiles by default on Windows"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[3]/li[3]",
+              "preview": "gh-87720: Fix additional header refolding-quoting edge case"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h3[2]",
+              "preview": "Python 3.13.18 and 3.12.16"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul[4]/li",
+              "preview": "gh-157579: Fix race condition in the cleanup of tempfile.TemporaryDirectory"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[3]",
+              "preview": "Stay safe and upgrade!"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[4]",
+              "preview": "Enjoy the new releases"
+            }
+          ]
+        },
+        {
+          "id": "python_blog_3",
+          "issues": [
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul/li[1]",
+              "preview": "Python 3.15.1"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul/li[2]",
+              "preview": "Python 3.14.9"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/ul/li[3]",
+              "preview": "Python 3.13.17"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/pre[1]",
+              "preview": "python -m pip install \"pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/pre[2]",
+              "preview": "/Library/Frameworks/Python.framework/Versions/3.15/bin/python3.15 -m pip install \"pip @ https://file"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/pre[3]",
+              "preview": "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3.14 -m pip install \"pip @ https://file"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/pre[4]",
+              "preview": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -m pip install \"pip @ https://file"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[1]",
+              "preview": "macOS 27.0 IDLE and tkinter"
+            },
+            {
+              "kind": "uncovered_article_node",
+              "xpath": "/html/body/main/div/article/div/h2[2]",
+              "preview": "Enjoy the new release"
+            }
+          ]
+        }
+      ],
+      "candidate_sha256": "d3a2273b0efceb0748b287c4b9df0b376d428efe380a512a38d0abe3712ddeab"
+    },
+    {
+      "round": 1,
+      "pages": [
+        {
+          "id": "python_blog_1",
+          "role": "generation",
+          "url": "https://blog.python.org/2026/11/python-3160-alpha-2-is-now-available/",
+          "source_path": "data/project2/python_blog/page_1.html",
+          "status": "pass",
+          "blocks": 29,
+          "metadata": 2,
+          "issues": [],
+          "result": "round_1_python_blog_1.json"
+        },
+        {
+          "id": "python_blog_2",
+          "role": "generation",
+          "url": "https://blog.python.org/2026/10/python-3152-31410-31318-31216-31118/",
+          "source_path": "data/project2/python_blog/page_2.html",
+          "status": "pass",
+          "blocks": 27,
+          "metadata": 2,
+          "issues": [],
+          "result": "round_1_python_blog_2.json"
+        },
+        {
+          "id": "python_blog_3",
+          "role": "development_feedback",
+          "url": "https://blog.python.org/2026/10/python-3151-3149-31317/",
+          "source_path": "data/project2/python_blog/page_3.html",
+          "status": "pass",
+          "blocks": 21,
+          "metadata": 2,
+          "issues": [],
+          "result": "round_1_python_blog_3.json"
+        }
+      ],
+      "issues": [],
+      "candidate_sha256": "a981e4014d4a664c6e80351354326e82ca5a4c025fbe714c3fcdac4d4a4329e7"
+    }
+  ],
+  "api_attempts": [],
+  "holdout": [
+    {
+      "id": "python_blog_4",
+      "role": "final_holdout",
+      "url": "https://blog.python.org/2026/10/python-3160-alpha-1-is-now-available/",
+      "source_path": "data/project2/python_blog/page_4.html",
+      "status": "pass",
+      "blocks": 24,
+      "metadata": 2,
+      "issues": [],
+      "result": "holdout_python_blog_4.json"
+    },
+    {
+      "id": "python_blog_5",
+      "role": "final_holdout",
+      "url": "https://blog.python.org/2026/10/python-3150-final-is-here/",
+      "source_path": "data/project2/python_blog/page_5.html",
+      "status": "pass",
+      "blocks": 57,
+      "metadata": 2,
+      "issues": [],
+      "result": "holdout_python_blog_5.json"
+    }
+  ],
+  "semantic_accuracy": "unknown",
+  "holdout_policy": "Executed only after candidate freeze; never sent to generation or repair.",
+  "max_repairs": 2,
+  "final_status": "pass",
+  "engine_sha256": "d4da45d29efad17afc67ff798125cdbbb696c8a2848739d559ccc8100b2933f7",
+  "worker_sha256": "9d9418800e9461a3758f02209cbbc022dcb2c7d32029b4fe74eb2469cd217364",
+  "initial_candidate": "model_generated",
+  "evaluation_scope": "Newly retrieved natural pages, same known site layout; held-out from this Agent prompt and repair, not a claim about model pretraining.",
+  "candidate_hash_scheme": "SHA256 of canonical UTF-8 LF source",
+  "engine_protocol": "v2: original DOM evidence, typed metadata, scoped summaries, rich blocks",
+  "elapsed_seconds": 1.126,
+  "frozen_candidate_sha256": "a981e4014d4a664c6e80351354326e82ca5a4c025fbe714c3fcdac4d4a4329e7",
+  "artifact_byte_hashes": {
+    "candidate_round_0.py": "d3a2273b0efceb0748b287c4b9df0b376d428efe380a512a38d0abe3712ddeab",
+    "candidate_round_1.py": "a981e4014d4a664c6e80351354326e82ca5a4c025fbe714c3fcdac4d4a4329e7",
+    "extractor.py": "a981e4014d4a664c6e80351354326e82ca5a4c025fbe714c3fcdac4d4a4329e7",
+    "project2_engine.py": "d4da45d29efad17afc67ff798125cdbbb696c8a2848739d559ccc8100b2933f7"
+  },
+  "frozen_before_holdout": true
+}

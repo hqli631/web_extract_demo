@@ -1,5 +1,7 @@
 # Web Extract Demo
 
+2026-11-17：[参考项目一改进固定执行层](docs/PROJECT2_FOUNDATION_UPGRADE.md)，新增原始DOM证据验证、细分元数据、代码/列表/定义项与旧博客分段，并支持任务自有摘要/评测范围。查看[三个已曝光样例的对照报告](output/project2/foundation_v2_final/index.html)。这是底层回归，不是新增模型泛化成绩；本轮全仓236项测试通过。
+
 面向离线搜索正文提取岗位的学习项目：网页布局聚簇 → 少样本生成Python/XPath代码 → CPU批量复用 → 质量评估与有限修复。
 
 当前已达到**可运行、可复验、可展示的工程Demo**。已使用真实云GPU完成LoRA训练；尚未完成生产级泛化、自然网页独立语义校准或真实GRPO。

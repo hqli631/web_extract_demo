@@ -1,5 +1,7 @@
 # 项目二：单 Agent 代码生成提取器
 
+2026-11-17新增：[参考项目一的底层改进说明](PROJECT2_FOUNDATION_UPGRADE.md)。当前协议兼容五个必填字段，并增加metadata_fields和block_mode两个可选字段；新增独立summary/evaluation scope、原始DOM证据验证及丰富正文类型。旧报告保留旧引擎，当前参考对照见output/project2/foundation_v2_final/index.html。
+
 本项目实现岗位 V6 思路的小型闭环：2篇同布局网页 → 千问生成 XPath → 固定 Python 执行器生成可复用模块 → CPU批量执行 → 根据实际检查反馈有限修复 → 冻结后验证。
 
 ## 先看已经完成的真实效果

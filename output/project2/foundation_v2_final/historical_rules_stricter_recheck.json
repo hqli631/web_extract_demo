@@ -1,0 +1,50 @@
+{
+  "scope": "Existing frozen rules replay under expanded checks; not new Agent or unseen test",
+  "pages": [
+    {
+      "page": "page_1.html",
+      "blocks": 21,
+      "metadata_types": [
+        "author",
+        "published_at"
+      ],
+      "issues": []
+    },
+    {
+      "page": "page_2.html",
+      "blocks": 19,
+      "metadata_types": [
+        "author",
+        "published_at"
+      ],
+      "issues": []
+    },
+    {
+      "page": "page_3.html",
+      "blocks": 19,
+      "metadata_types": [
+        "author",
+        "published_at"
+      ],
+      "issues": []
+    },
+    {
+      "page": "page_4.html",
+      "blocks": 21,
+      "metadata_types": [
+        "author",
+        "published_at"
+      ],
+      "issues": []
+    },
+    {
+      "page": "page_5.html",
+      "blocks": 33,
+      "metadata_types": [
+        "author",
+        "published_at"
+      ],
+      "issues": []
+    }
+  ]
+}

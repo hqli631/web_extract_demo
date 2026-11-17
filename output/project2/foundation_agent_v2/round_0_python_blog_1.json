@@ -1,0 +1,122 @@
+{
+  "title": "Python 3.16.0 alpha 2 is now available",
+  "container_xpath": "/html/body/main/div/article/div",
+  "title_xpath": "/html/body/main/div/article/header/div[1]/div/h1",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "This is an early developer preview of Python 3.16",
+      "xpath": "/html/body/main/div/article/div/p[1]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "python.org/downloads/release/python-3160a2/",
+      "xpath": "/html/body/main/div/article/div/p[2]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Python 3.16.0a2 is ready to try! This is the second of seven planned alpha releases, with new features, bug fixes, and performance improvements to test.",
+      "xpath": "/html/body/main/div/article/div/p[3]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Python 3.16 is still in development. Features can be added until beta 1 on May 4, 2027, and may be modified or removed until the first release candidate on July 27, 2027. The final release is planned for October 5, 2027. This preview is intended for testing and is not recommended for production use.",
+      "xpath": "/html/body/main/div/article/div/p[4]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Here are a few highlights from Python 3.16 so far, compared with 3.15.",
+      "xpath": "/html/body/main/div/article/div/p[5]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "See What’s new in Python 3.16 for more changes.",
+      "xpath": "/html/body/main/div/article/div/p[6]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "(Hey, fellow core team member, if there’s a feature you’d like highlighted in a future announcement, let Savannah know.)",
+      "xpath": "/html/body/main/div/article/div/p[7]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Please try this alpha with your libraries and applications and report Python bugs on the CPython issue tracker.",
+      "xpath": "/html/body/main/div/article/div/p[8]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "The next alpha, Python 3.16.0a3, is scheduled for December 15, 2026. The full schedule is in PEP 826.",
+      "xpath": "/html/body/main/div/article/div/p[9]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Next up in the Python 3.16 Film Festival is The Martian (2015). Stranded on Mars, Mark Watney has to keep himself alive with what he has on hand. The plan to bring him home takes shape much like CPython does, with people around the world bringing different skills to a shared effort.",
+      "xpath": "/html/body/main/div/article/div/p[10]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "So we do this together or not at all.",
+      "xpath": "/html/body/main/div/article/div/blockquote/p[1]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "— Commander Melissa Lewis, The Martian (2015)",
+      "xpath": "/html/body/main/div/article/div/blockquote/p[2]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Thanks to everyone who contributed to this alpha and to everyone giving it a try. Please consider volunteering your time or asking your organisation to support the Python Software Foundation.",
+      "xpath": "/html/body/main/div/article/div/p[11]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Happy testing!",
+      "xpath": "/html/body/main/div/article/div/p[12]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Regards from Washington state,",
+      "xpath": "/html/body/main/div/article/div/p[13]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Your release team, Savannah Ostrowski Ned Deily Steve Dower Julien Palard",
+      "xpath": "/html/body/main/div/article/div/p[14]"
+    }
+  ],
+  "metadata": [
+    {
+      "type": "author",
+      "kind": "author",
+      "text": "Savannah Ostrowski",
+      "xpath": "/html/body/main/div/article/header/div[2]/a"
+    },
+    {
+      "type": "published_at",
+      "kind": "published_at",
+      "text": "November 10, 2026",
+      "xpath": "/html/body/main/div/article/header/div[2]/time"
+    }
+  ],
+  "excluded": [],
+  "warnings": [
+    "Text-only extraction; image pixels and semantic completeness are not evaluated.",
+    "static_dom_only_no_css_visibility_javascript_or_ocr"
+  ]
+}
