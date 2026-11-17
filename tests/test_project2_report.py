@@ -58,6 +58,18 @@ class ReportTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 render_report(Path(tmp),trace)
 
+    def test_post_freeze_review_is_separate_and_escaped(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp)
+            trace=self.trace()
+            (p/'review.json').write_text(json.dumps(dict(summary='<script>review</script>',scope='post-freeze')))
+            render_report(p,trace)
+            dom=html.fromstring((p/'index.html').read_bytes())
+            self.assertIn('冻结后专项复核',dom.text_content())
+            self.assertIn('<script>review</script>',dom.text_content())
+            self.assertEqual(len(dom.xpath('//script')),1)
+            self.assertEqual(trace['final_status'],'pass')
+
     def test_failed_latest_candidate_is_not_shown_as_latest_success(self):
         with tempfile.TemporaryDirectory() as tmp:
             p=Path(tmp); trace=self.trace()

@@ -1,0 +1,566 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>项目二 · 单 Agent 正文提取报告</title><style>
+:root{--ink:#18314a;--muted:#61748a;--line:#dce5ee;--blue:#235fba;--paper:#fff;--bg:#f3f6fa}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.75 "Segoe UI","Microsoft YaHei",sans-serif}a{color:var(--blue);text-underline-offset:3px}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #e6a635;outline-offset:3px}[hidden]{display:none!important}.wrap{max-width:1440px;margin:auto;padding:30px 32px 64px}.hero{background:linear-gradient(115deg,#153952,#245d75);color:#fff;padding:28px 32px;border-radius:18px}.eyebrow{font-size:12px;letter-spacing:2px;color:#b8dce8}.hero h1{font-size:30px;line-height:1.4;margin:8px 0}.hero p{margin:8px 0;color:#d7e7ef}.hero .badge{margin-left:8px}.toplinks{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px}.toplinks a{color:#dfedff}.metrics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:18px 0}.metric{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px}.metric small{display:block;color:var(--muted)}.metric strong{font-size:24px;display:block;overflow-wrap:anywhere}.metric .model{font-size:17px;line-height:42px}.metric span{font-size:12px;color:var(--muted)}.notice{border-left:3px solid #d2a453;background:#fff9ed;padding:12px 16px;margin:16px 0;border-radius:4px}.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:22px}.tab{border:1px solid var(--line);background:#fff;padding:9px 20px;border-radius:9px;color:var(--muted)}.tab[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:white}.panel{background:white;border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:20px}.panel h2{font-size:22px;margin:0 0 14px}h3{font-size:18px;margin:20px 0 10px}h4{margin:14px 0 8px}.muted{color:var(--muted)}.small{font-size:13px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;text-align:left;margin:12px 0}th{color:var(--muted);font-size:13px;background:#f4f7fa}td,th{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}td{overflow-wrap:anywhere}td details{min-width:90px;margin:0}td pre{max-width:400px}.badge,.kind{display:inline-block;padding:2px 9px;border-radius:5px;font-size:12px;font-weight:600;white-space:nowrap}.kind{color:#46627e;background:#edf3f9}.good{background:#e2f3ed;color:#196b50}.warn{background:#fff0d4;color:#89600a}.bad{background:#fde8e7;color:#ac3434}.workspace{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}.sidebar{position:sticky;top:16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}.sidebar h3{margin:0 0 10px}.sidebar input,.sidebar select,.round-select{border:1px solid #c9d6e4;background:#fff;border-radius:7px;padding:8px;width:100%;margin-bottom:10px}.page-nav{display:grid;gap:8px;margin-top:6px;max-height:58vh;overflow:auto}.page-button{text-align:left;border:1px solid var(--line);background:#fff;border-radius:8px;padding:10px 12px;color:var(--ink);width:100%}.page-button[aria-pressed=true]{border-color:var(--blue);background:#edf4ff;box-shadow:inset 3px 0 var(--blue)}.page-button small{display:block;color:var(--muted);margin-top:3px}.article{scroll-margin-top:16px}.article h2{font-size:26px;line-height:1.45}.article-links{display:flex;gap:15px;flex-wrap:wrap;margin:12px 0}.article-meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13px}.content-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:26px;border-top:1px solid var(--line);padding-top:20px}.content-title h3{margin:0}.body-list{list-style:none;margin:16px 0;padding:0}.body-block{padding:18px 0;border-bottom:1px solid #edf1f5}.block-label{display:flex;gap:8px;align-items:center}.block-number{font-size:12px;color:#7c8da0;min-width:22px}.body-block p{font-size:16px;line-height:1.95;margin:10px 0;color:#243c51}.body-block h3{font-size:20px;line-height:1.6}.body-block details{font-size:12px}.body-table td{border:1px solid var(--line)}details{margin:12px 0}summary{cursor:pointer;color:var(--blue);overflow-wrap:anywhere}pre{background:#f3f6fa;border:1px solid #e5ebf2;padding:14px;border-radius:8px;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.7 Consolas,monospace;color:#29435d;max-height:540px;overflow:auto}.body-code{white-space:pre;overflow:auto;overflow-wrap:normal}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.quiet{background:#f3f6fa;color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:5px 10px;font-size:12px}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.rule-row{padding:14px 0;border-bottom:1px solid var(--line)}.rule-row p{margin:0}.rule-row pre{margin:8px 0}.step{border-left:3px solid #b8cadf;padding-left:18px;margin:20px 0}.step h3{margin-bottom:6px}.issues li{padding:8px 0}.issues p{margin:2px 0}.comparison{background:#f7faff;border:1px solid #dce8f8;border-radius:8px;padding:14px}.empty{padding:24px;color:var(--muted)}.foot{font-size:12px;color:var(--muted);margin-top:24px}.count-note{font-size:12px;line-height:1.5}.round-select{max-width:280px}.nojs{background:#fff0d4;padding:10px}.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:8px;background:#fff;padding:10px;z-index:10}
+@media(max-width:980px){.metrics{grid-template-columns:repeat(3,1fr)}.workspace{grid-template-columns:220px minmax(0,1fr)}.wrap{padding:20px}.hero{padding:22px}.split{grid-template-columns:1fr}}
+@media(max-width:680px){.wrap{padding:12px}.hero h1{font-size:23px}.metrics{grid-template-columns:1fr 1fr}.metric{padding:12px}.workspace{display:block}.sidebar{position:static;margin-bottom:16px}.page-nav{max-height:220px}.panel{padding:17px}.article h2{font-size:22px}.tab{padding:8px 13px}.content-title{align-items:start}.toplinks{gap:10px}}
+@media print{body{background:white}.wrap{padding:0}.hero{background:white;color:#18314a}.hero p,.hero a{color:#18314a}.tabs,.sidebar,.quiet{display:none}.workspace{display:block}.panel{break-inside:auto}.article[hidden]{display:block!important}pre{max-height:none}.view[hidden]{display:none!important}}
+</style></head><body><a class="skip" href="#report-content">跳到报告内容</a><div class="wrap"><header class="hero"><div class="eyebrow">PROJECT 02 / EXTRACTION AGENT</div><h1>单 Agent 网页正文提取报告</h1><p>真实 API 实验 <span class="badge bad">开发检查未通过</span></p><p>从少量同布局样本生成规则，在 CPU 上复用；把提取结果与生成证据放在一起。</p><div class="toplinks"><a href="trace.json" target="_blank" rel="noopener">完整运行记录</a> · <span class="muted">冻结规则（未生成）</span> · <span class="muted">Python 提取器（未生成）</span></div></header>
+<div class="metrics"><div class="metric"><small>模型</small><strong class="model">qwen3.8-flash</strong><span>本次记录中的模型</span></div><div class="metric"><small>API 尝试</small><strong>3</strong><span>3 次返回成功</span></div><div class="metric"><small>候选轮次</small><strong>3</strong><span>含首轮，不等于 API 次数</span></div><div class="metric"><small>网页数量</small><strong>10</strong><span>生成样本 3 · 开发反馈 2 · 最终测试 5</span></div><div class="metric"><small>总 tokens</small><strong>81,177</strong><span>仅统计已返回用量</span></div></div>
+<div class="notice small">检查通过表示本任务的结构与执行检查通过，不等于正文语义准确率。 图片像素和动态内容未评估；HTML 快照不保证原站视觉还原。</div>
+<nav class="tabs" role="tablist" aria-label="报告视图"><button type="button" role="tab" id="tab-results" aria-controls="view-results" aria-selected="true" class="tab" data-tab="results">提取结果</button><button type="button" role="tab" id="tab-process" aria-controls="view-process" aria-selected="false" class="tab" data-tab="process">生成与修复</button><button type="button" role="tab" id="tab-rules" aria-controls="view-rules" aria-selected="false" class="tab" data-tab="rules">规则与代码</button><button type="button" role="tab" id="tab-calls" aria-controls="view-calls" aria-selected="false" class="tab" data-tab="calls">调用记录</button></nav>
+<noscript><p class="nojs">JavaScript 已禁用。所有报告内容仍可阅读，筛选和切换不可用。</p></noscript><main id="report-content"><section class="view" role="tabpanel" aria-labelledby="tab-results" id="view-results" data-view="results">
+<div class="panel"><h2>样本与结果汇总</h2><p class="muted small">点击标题进入正文。生成页可影响规则；开发页可提供修复反馈；最终测试页只在冻结候选后执行。</p><div class="table-wrap"><table><thead><tr><th>文章 / 样本</th><th>角色</th><th>状态</th><th>正文块</th><th>页面信息</th><th>排除项</th></tr></thead><tbody>
+<tr><td><button class="quiet" data-jump="page-0">book_product_01</button><br><span class="muted small">book_product_01</span></td><td>生成样本</td><td><span class="badge bad">检查失败</span></td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-1">book_product_03</button><br><span class="muted small">book_product_03</span></td><td>开发反馈</td><td><span class="badge bad">检查失败</span></td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-2">book_product_05</button><br><span class="muted small">book_product_05</span></td><td>生成样本</td><td><span class="badge bad">检查失败</span></td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-3">book_product_07</button><br><span class="muted small">book_product_07</span></td><td>开发反馈</td><td><span class="badge bad">检查失败</span></td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-4">book_product_09</button><br><span class="muted small">book_product_09</span></td><td>生成样本</td><td><span class="badge bad">检查失败</span></td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-5">book_product_02</button><br><span class="muted small">book_product_02</span></td><td>最终测试</td><td><span class="badge warn">未执行</span></td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-6">book_product_04</button><br><span class="muted small">book_product_04</span></td><td>最终测试</td><td><span class="badge warn">未执行</span></td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-7">book_product_06</button><br><span class="muted small">book_product_06</span></td><td>最终测试</td><td><span class="badge warn">未执行</span></td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-8">book_product_08</button><br><span class="muted small">book_product_08</span></td><td>最终测试</td><td><span class="badge warn">未执行</span></td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-9">book_product_10</button><br><span class="muted small">book_product_10</span></td><td>最终测试</td><td><span class="badge warn">未执行</span></td><td>0</td><td>0</td><td>0</td></tr>
+</tbody></table></div></div><div class="workspace"><aside class="sidebar"><h3>浏览文章</h3><label class="small" for="page-search">搜索标题或样本</label><input id="page-search" type="search" placeholder="输入关键词…"><label class="small" for="role-filter">样本角色</label><select id="role-filter"><option value="">全部角色</option><option value="generation">生成样本</option><option value="development_feedback">开发反馈</option><option value="final_holdout">最终测试</option></select><p class="muted small" id="nav-count">10 篇</p><div class="page-nav"><button class="page-button" data-target="page-0" data-role="generation" aria-pressed="false">book_product_01<small>生成样本 · 0 块</small></button><button class="page-button" data-target="page-1" data-role="development_feedback" aria-pressed="false">book_product_03<small>开发反馈 · 0 块</small></button><button class="page-button" data-target="page-2" data-role="generation" aria-pressed="false">book_product_05<small>生成样本 · 0 块</small></button><button class="page-button" data-target="page-3" data-role="development_feedback" aria-pressed="false">book_product_07<small>开发反馈 · 0 块</small></button><button class="page-button" data-target="page-4" data-role="generation" aria-pressed="false">book_product_09<small>生成样本 · 0 块</small></button><button class="page-button" data-target="page-5" data-role="final_holdout" aria-pressed="false">book_product_02<small>最终测试 · 0 块</small></button><button class="page-button" data-target="page-6" data-role="final_holdout" aria-pressed="false">book_product_04<small>最终测试 · 0 块</small></button><button class="page-button" data-target="page-7" data-role="final_holdout" aria-pressed="false">book_product_06<small>最终测试 · 0 块</small></button><button class="page-button" data-target="page-8" data-role="final_holdout" aria-pressed="false">book_product_08<small>最终测试 · 0 块</small></button><button class="page-button" data-target="page-9" data-role="final_holdout" aria-pressed="false">book_product_10<small>最终测试 · 0 块</small></button></div><p id="no-pages" class="muted small" hidden>没有匹配的文章，请更换关键词或角色。</p></aside><div><article class="panel article" id="page-0"><div class="article-meta"><span>生成样本</span><span>book_product_01</span><span class="badge bad">检查失败</span></div><h2>book_product_01</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/a-light-in-the-attic_1000/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div class="notice">本次没有可展示的提取结果。请查看生成过程或调用记录。</div><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></article><article class="panel article" id="page-1"><div class="article-meta"><span>开发反馈</span><span>book_product_03</span><span class="badge bad">检查失败</span></div><h2>book_product_03</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/soumission_998/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/soumission_998/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div class="notice">本次没有可展示的提取结果。请查看生成过程或调用记录。</div><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></article><article class="panel article" id="page-2"><div class="article-meta"><span>生成样本</span><span>book_product_05</span><span class="badge bad">检查失败</span></div><h2>book_product_05</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/sapiens-a-brief-history-of-humankind_996/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div class="notice">本次没有可展示的提取结果。请查看生成过程或调用记录。</div><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></article><article class="panel article" id="page-3"><div class="article-meta"><span>开发反馈</span><span>book_product_07</span><span class="badge bad">检查失败</span></div><h2>book_product_07</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div class="notice">本次没有可展示的提取结果。请查看生成过程或调用记录。</div><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></article><article class="panel article" id="page-4"><div class="article-meta"><span>生成样本</span><span>book_product_09</span><span class="badge bad">检查失败</span></div><h2>book_product_09</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div class="notice">本次没有可展示的提取结果。请查看生成过程或调用记录。</div><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></article><article class="panel article" id="page-5"><div class="article-meta"><span>最终测试</span><span>book_product_02</span><span class="badge warn">未执行</span></div><h2>book_product_02</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/tipping-the-velvet_999/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div class="notice">本次没有可展示的提取结果。候选未达到开发检查要求，最终测试未执行。</div><p class="muted">未记录结构检查问题。语义完整性仍需单独评估。</p></article><article class="panel article" id="page-6"><div class="article-meta"><span>最终测试</span><span>book_product_04</span><span class="badge warn">未执行</span></div><h2>book_product_04</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/sharp-objects_997/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/sharp-objects_997/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div class="notice">本次没有可展示的提取结果。候选未达到开发检查要求，最终测试未执行。</div><p class="muted">未记录结构检查问题。语义完整性仍需单独评估。</p></article><article class="panel article" id="page-7"><div class="article-meta"><span>最终测试</span><span>book_product_06</span><span class="badge warn">未执行</span></div><h2>book_product_06</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/the-requiem-red_995/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/the-requiem-red_995/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div class="notice">本次没有可展示的提取结果。候选未达到开发检查要求，最终测试未执行。</div><p class="muted">未记录结构检查问题。语义完整性仍需单独评估。</p></article><article class="panel article" id="page-8"><div class="article-meta"><span>最终测试</span><span>book_product_08</span><span class="badge warn">未执行</span></div><h2>book_product_08</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div class="notice">本次没有可展示的提取结果。候选未达到开发检查要求，最终测试未执行。</div><p class="muted">未记录结构检查问题。语义完整性仍需单独评估。</p></article><article class="panel article" id="page-9"><div class="article-meta"><span>最终测试</span><span>book_product_10</span><span class="badge warn">未执行</span></div><h2>book_product_10</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/the-black-maria_991/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/the-black-maria_991/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div class="notice">本次没有可展示的提取结果。候选未达到开发检查要求，最终测试未执行。</div><p class="muted">未记录结构检查问题。语义完整性仍需单独评估。</p></article></div></div></section>
+<section class="view" role="tabpanel" aria-labelledby="tab-process" id="view-process" data-view="process"><div class="panel"><h2>生成与修复过程</h2><p class="muted">首轮执行 → 收集实际问题 → 在预算内修复 → 冻结候选 → 执行最终测试。最终测试反馈不回传模型。</p><div class="step"><h3>首轮候选</h3><p>执行 5 篇；检查通过 0 篇；反馈记录 5 组。</p><div class="table-wrap"><table><thead><tr><th>页面</th><th>角色</th><th>正文块</th><th>检查状态</th><th>问题数</th></tr></thead><tbody><tr><td>book_product_01</td><td>生成样本</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr><tr><td>book_product_03</td><td>开发反馈</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr><tr><td>book_product_05</td><td>生成样本</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr><tr><td>book_product_07</td><td>开发反馈</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr><tr><td>book_product_09</td><td>生成样本</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr></tbody></table></div><details><summary>反馈证据 · book_product_01</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><details><summary>反馈证据 · book_product_03</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><details><summary>反馈证据 · book_product_05</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><details><summary>反馈证据 · book_product_07</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><details><summary>反馈证据 · book_product_09</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><p><a href="prompt_round_0.json" target="_blank" rel="noopener">本轮模型输入</a> · <a href="response_round_0.txt" target="_blank" rel="noopener">本轮模型响应</a></p></div><div class="step"><h3>修复候选 · 轮次 1</h3><p>执行 5 篇；检查通过 0 篇；反馈记录 5 组。</p><div class="table-wrap"><table><thead><tr><th>页面</th><th>角色</th><th>正文块</th><th>检查状态</th><th>问题数</th></tr></thead><tbody><tr><td>book_product_01</td><td>生成样本</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr><tr><td>book_product_03</td><td>开发反馈</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr><tr><td>book_product_05</td><td>生成样本</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr><tr><td>book_product_07</td><td>开发反馈</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr><tr><td>book_product_09</td><td>生成样本</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr></tbody></table></div><details><summary>反馈证据 · book_product_01</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><details><summary>反馈证据 · book_product_03</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><details><summary>反馈证据 · book_product_05</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><details><summary>反馈证据 · book_product_07</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><details><summary>反馈证据 · book_product_09</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><p><a href="prompt_round_1.json" target="_blank" rel="noopener">本轮模型输入</a> · <a href="response_round_1.txt" target="_blank" rel="noopener">本轮模型响应</a></p><details><summary>规则变化对比</summary><pre>规则未变化</pre></details></div><div class="step"><h3>修复候选 · 轮次 2</h3><p>执行 5 篇；检查通过 0 篇；反馈记录 5 组。</p><div class="table-wrap"><table><thead><tr><th>页面</th><th>角色</th><th>正文块</th><th>检查状态</th><th>问题数</th></tr></thead><tbody><tr><td>book_product_01</td><td>生成样本</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr><tr><td>book_product_03</td><td>开发反馈</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr><tr><td>book_product_05</td><td>生成样本</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr><tr><td>book_product_07</td><td>开发反馈</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr><tr><td>book_product_09</td><td>生成样本</td><td>—</td><td><span class="badge bad">检查失败</span></td><td>1</td></tr></tbody></table></div><details><summary>反馈证据 · book_product_01</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><details><summary>反馈证据 · book_product_03</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><details><summary>反馈证据 · book_product_05</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><details><summary>反馈证据 · book_product_07</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><details><summary>反馈证据 · book_product_09</summary><ul class="issues"><li><strong>execution_error</strong><p>ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks</p></li></ul></details><p><a href="prompt_round_2.json" target="_blank" rel="noopener">本轮模型输入</a> · <a href="response_round_2.txt" target="_blank" rel="noopener">本轮模型响应</a></p><details><summary>规则变化对比</summary><pre>规则未变化</pre></details></div><div class="notice">本记录未确认候选在最终测试前冻结；未执行的页面在结果中明确标注。</div></div></section>
+<section class="view" role="tabpanel" aria-labelledby="tab-rules" id="view-rules" data-view="rules"><div class="panel"><h2>生成规则与复用代码</h2><p class="muted">模型生成 XPath 配置，固定模板导出 Python 模块，随后在 CPU 上复用。</p><div class="step"><h3>首轮规则</h3><div class="rule-row"><strong>标题定位</strong> <span class="muted small">title_xpath</span><pre>//article[@class=&#x27;product_page&#x27;]//h1</pre></div><div class="rule-row"><strong>正文容器</strong> <span class="muted small">container_xpath</span><pre>//article[@class=&#x27;product_page&#x27;]</pre></div><div class="rule-row"><strong>正文块选择</strong> <span class="muted small">block_xpath</span><pre>.//div[contains(@class, &#x27;row&#x27;)] | .//div[@id=&#x27;product_description&#x27;] | .//p[not(contains(@class, &#x27;price_color&#x27;)) and not(contains(@class, &#x27;instock availability&#x27;)) and not(contains(@class, &#x27;star-rating&#x27;))] | .//div[@class=&#x27;sub-header&#x27; and not(@id)] | .//table | .//section</pre></div><div class="rule-row"><strong>排除规则</strong> <span class="muted small">exclude_xpath</span><pre>.//div[contains(@class, &#x27;alert-warning&#x27;)] | .//div[@class=&#x27;sub-header&#x27;][.//h2[contains(text(), &#x27;Products you recently viewed&#x27;)]] | .//ul[@class=&#x27;row&#x27;] | .//div[@id=&#x27;product_gallery&#x27;] | .//p[contains(@class, &#x27;price_color&#x27;)] | .//p[contains(@class, &#x27;instock availability&#x27;)] | .//p[contains(@class, &#x27;star-rating&#x27;)]</pre></div><div class="rule-row"><strong>页面信息定位</strong> <span class="muted small">metadata_xpath</span><pre>（空：本轮未设置）</pre></div><div class="rule-row"><strong>细分页面信息</strong> <span class="muted small">metadata_fields</span><pre>{}</pre></div><p><a href="candidate_round_0.json" target="_blank" rel="noopener">下载规则 JSON</a> · <a href="candidate_round_0.py" target="_blank" rel="noopener">打开本轮 Python</a></p><details><summary>查看 Python 模块</summary><pre>&quot;&quot;&quot;Generated reusable XPath extractor; trusted engine interprets data.&quot;&quot;&quot;
+import json
+from project2_engine import extract as _engine
+RULES = json.loads(&#x27;{&quot;title_xpath&quot;: &quot;//article[@class=\&#x27;product_page\&#x27;]//h1&quot;, &quot;container_xpath&quot;: &quot;//article[@class=\&#x27;product_page\&#x27;]&quot;, &quot;block_xpath&quot;: &quot;.//div[contains(@class, \&#x27;row\&#x27;)] | .//div[@id=\&#x27;product_description\&#x27;] | .//p[not(contains(@class, \&#x27;price_color\&#x27;)) and not(contains(@class, \&#x27;instock availability\&#x27;)) and not(contains(@class, \&#x27;star-rating\&#x27;))] | .//div[@class=\&#x27;sub-header\&#x27; and not(@id)] | .//table | .//section&quot;, &quot;exclude_xpath&quot;: &quot;.//div[contains(@class, \&#x27;alert-warning\&#x27;)] | .//div[@class=\&#x27;sub-header\&#x27;][.//h2[contains(text(), \&#x27;Products you recently viewed\&#x27;)]] | .//ul[@class=\&#x27;row\&#x27;] | .//div[@id=\&#x27;product_gallery\&#x27;] | .//p[contains(@class, \&#x27;price_color\&#x27;)] | .//p[contains(@class, \&#x27;instock availability\&#x27;)] | .//p[contains(@class, \&#x27;star-rating\&#x27;)]&quot;, &quot;metadata_xpath&quot;: &quot;&quot;, &quot;metadata_fields&quot;: {}}&#x27;)
+def extract(data):
+    return _engine(RULES, data)
+</pre></details></div><div class="step"><h3>修复后规则 · 轮次 1</h3><div class="rule-row"><strong>标题定位</strong> <span class="muted small">title_xpath</span><pre>//article[@class=&#x27;product_page&#x27;]//h1</pre></div><div class="rule-row"><strong>正文容器</strong> <span class="muted small">container_xpath</span><pre>//article[@class=&#x27;product_page&#x27;]</pre></div><div class="rule-row"><strong>正文块选择</strong> <span class="muted small">block_xpath</span><pre>.//div[contains(@class, &#x27;row&#x27;)] | .//div[@id=&#x27;product_description&#x27;] | .//p[not(contains(@class, &#x27;price_color&#x27;)) and not(contains(@class, &#x27;instock availability&#x27;)) and not(contains(@class, &#x27;star-rating&#x27;))] | .//div[@class=&#x27;sub-header&#x27; and not(@id)] | .//table | .//section</pre></div><div class="rule-row"><strong>排除规则</strong> <span class="muted small">exclude_xpath</span><pre>.//div[contains(@class, &#x27;alert-warning&#x27;)] | .//div[@class=&#x27;sub-header&#x27;][.//h2[contains(text(), &#x27;Products you recently viewed&#x27;)]] | .//ul[@class=&#x27;row&#x27;] | .//div[@id=&#x27;product_gallery&#x27;] | .//p[contains(@class, &#x27;price_color&#x27;)] | .//p[contains(@class, &#x27;instock availability&#x27;)] | .//p[contains(@class, &#x27;star-rating&#x27;)]</pre></div><div class="rule-row"><strong>页面信息定位</strong> <span class="muted small">metadata_xpath</span><pre>（空：本轮未设置）</pre></div><div class="rule-row"><strong>细分页面信息</strong> <span class="muted small">metadata_fields</span><pre>{}</pre></div><p><a href="candidate_round_1.json" target="_blank" rel="noopener">下载规则 JSON</a> · <a href="candidate_round_1.py" target="_blank" rel="noopener">打开本轮 Python</a></p><details><summary>查看 Python 模块</summary><pre>&quot;&quot;&quot;Generated reusable XPath extractor; trusted engine interprets data.&quot;&quot;&quot;
+import json
+from project2_engine import extract as _engine
+RULES = json.loads(&#x27;{&quot;title_xpath&quot;: &quot;//article[@class=\&#x27;product_page\&#x27;]//h1&quot;, &quot;container_xpath&quot;: &quot;//article[@class=\&#x27;product_page\&#x27;]&quot;, &quot;block_xpath&quot;: &quot;.//div[contains(@class, \&#x27;row\&#x27;)] | .//div[@id=\&#x27;product_description\&#x27;] | .//p[not(contains(@class, \&#x27;price_color\&#x27;)) and not(contains(@class, \&#x27;instock availability\&#x27;)) and not(contains(@class, \&#x27;star-rating\&#x27;))] | .//div[@class=\&#x27;sub-header\&#x27; and not(@id)] | .//table | .//section&quot;, &quot;exclude_xpath&quot;: &quot;.//div[contains(@class, \&#x27;alert-warning\&#x27;)] | .//div[@class=\&#x27;sub-header\&#x27;][.//h2[contains(text(), \&#x27;Products you recently viewed\&#x27;)]] | .//ul[@class=\&#x27;row\&#x27;] | .//div[@id=\&#x27;product_gallery\&#x27;] | .//p[contains(@class, \&#x27;price_color\&#x27;)] | .//p[contains(@class, \&#x27;instock availability\&#x27;)] | .//p[contains(@class, \&#x27;star-rating\&#x27;)]&quot;, &quot;metadata_xpath&quot;: &quot;&quot;, &quot;metadata_fields&quot;: {}}&#x27;)
+def extract(data):
+    return _engine(RULES, data)
+</pre></details></div><div class="step"><h3>修复后规则 · 轮次 2</h3><div class="rule-row"><strong>标题定位</strong> <span class="muted small">title_xpath</span><pre>//article[@class=&#x27;product_page&#x27;]//h1</pre></div><div class="rule-row"><strong>正文容器</strong> <span class="muted small">container_xpath</span><pre>//article[@class=&#x27;product_page&#x27;]</pre></div><div class="rule-row"><strong>正文块选择</strong> <span class="muted small">block_xpath</span><pre>.//div[contains(@class, &#x27;row&#x27;)] | .//div[@id=&#x27;product_description&#x27;] | .//p[not(contains(@class, &#x27;price_color&#x27;)) and not(contains(@class, &#x27;instock availability&#x27;)) and not(contains(@class, &#x27;star-rating&#x27;))] | .//div[@class=&#x27;sub-header&#x27; and not(@id)] | .//table | .//section</pre></div><div class="rule-row"><strong>排除规则</strong> <span class="muted small">exclude_xpath</span><pre>.//div[contains(@class, &#x27;alert-warning&#x27;)] | .//div[@class=&#x27;sub-header&#x27;][.//h2[contains(text(), &#x27;Products you recently viewed&#x27;)]] | .//ul[@class=&#x27;row&#x27;] | .//div[@id=&#x27;product_gallery&#x27;] | .//p[contains(@class, &#x27;price_color&#x27;)] | .//p[contains(@class, &#x27;instock availability&#x27;)] | .//p[contains(@class, &#x27;star-rating&#x27;)]</pre></div><div class="rule-row"><strong>页面信息定位</strong> <span class="muted small">metadata_xpath</span><pre>（空：本轮未设置）</pre></div><div class="rule-row"><strong>细分页面信息</strong> <span class="muted small">metadata_fields</span><pre>{}</pre></div><p><a href="candidate_round_2.json" target="_blank" rel="noopener">下载规则 JSON</a> · <a href="candidate_round_2.py" target="_blank" rel="noopener">打开本轮 Python</a></p><details><summary>查看 Python 模块</summary><pre>&quot;&quot;&quot;Generated reusable XPath extractor; trusted engine interprets data.&quot;&quot;&quot;
+import json
+from project2_engine import extract as _engine
+RULES = json.loads(&#x27;{&quot;title_xpath&quot;: &quot;//article[@class=\&#x27;product_page\&#x27;]//h1&quot;, &quot;container_xpath&quot;: &quot;//article[@class=\&#x27;product_page\&#x27;]&quot;, &quot;block_xpath&quot;: &quot;.//div[contains(@class, \&#x27;row\&#x27;)] | .//div[@id=\&#x27;product_description\&#x27;] | .//p[not(contains(@class, \&#x27;price_color\&#x27;)) and not(contains(@class, \&#x27;instock availability\&#x27;)) and not(contains(@class, \&#x27;star-rating\&#x27;))] | .//div[@class=\&#x27;sub-header\&#x27; and not(@id)] | .//table | .//section&quot;, &quot;exclude_xpath&quot;: &quot;.//div[contains(@class, \&#x27;alert-warning\&#x27;)] | .//div[@class=\&#x27;sub-header\&#x27;][.//h2[contains(text(), \&#x27;Products you recently viewed\&#x27;)]] | .//ul[@class=\&#x27;row\&#x27;] | .//div[@id=\&#x27;product_gallery\&#x27;] | .//p[contains(@class, \&#x27;price_color\&#x27;)] | .//p[contains(@class, \&#x27;instock availability\&#x27;)] | .//p[contains(@class, \&#x27;star-rating\&#x27;)]&quot;, &quot;metadata_xpath&quot;: &quot;&quot;, &quot;metadata_fields&quot;: {}}&#x27;)
+def extract(data):
+    return _engine(RULES, data)
+</pre></details></div><p><span class="muted">冻结的 Python 模块（未生成）</span> · <span class="muted">冻结的规则（未生成）</span></p></div></section>
+<section class="view" role="tabpanel" aria-labelledby="tab-calls" id="view-calls" data-view="calls"><div class="panel"><h2>API 调用与运行证据</h2><p>模型：<strong>qwen3.8-flash</strong> · 提供方：dashscope · API 尝试：3</p><p class="muted">全流程耗时：15.101 秒 · 修复预算：2 次</p><div class="table-wrap"><table><thead><tr><th>候选轮次</th><th>状态</th><th>输入 tokens</th><th>输出 tokens</th><th>合计 tokens</th><th>耗时</th></tr></thead><tbody><tr><td>0</td><td><span class="badge good">成功</span></td><td>15391</td><td>236</td><td>15627</td><td>4.886 s</td></tr><tr><td>1</td><td><span class="badge good">成功</span></td><td>26823</td><td>236</td><td>27059</td><td>4.17 s</td></tr><tr><td>2</td><td><span class="badge good">成功</span></td><td>38255</td><td>236</td><td>38491</td><td>4.32 s</td></tr></tbody></table></div><p class="muted">用量仅汇总服务端已返回的记录；失败请求可能没有返回用量。未配置价格，不计算金额。耗时为单次运行记录，不是性能基准。</p><details><summary>任务与执行器版本</summary><pre>{
+  &quot;task_id&quot;: &quot;books-product-v2&quot;,
+  &quot;engine_protocol&quot;: &quot;v2: original DOM evidence, typed metadata, scoped summaries, rich blocks&quot;,
+  &quot;engine_sha256&quot;: &quot;d4da45d29efad17afc67ff798125cdbbb696c8a2848739d559ccc8100b2933f7&quot;,
+  &quot;worker_sha256&quot;: &quot;9d9418800e9461a3758f02209cbbc022dcb2c7d32029b4fe74eb2469cd217364&quot;,
+  &quot;evaluation_scope&quot;: &quot;10 new book product detail pages; 3 generation, 2 development, 5 final holdout; same product layout, different from Python release blogs.&quot;,
+  &quot;holdout_policy&quot;: &quot;Executed only after candidate freeze; never sent to generation or repair.&quot;,
+  &quot;candidate_hash_scheme&quot;: &quot;SHA256 of canonical UTF-8 LF source&quot;
+}</pre></details><details><summary>完整运行轨迹</summary><a href="trace.json" target="_blank" rel="noopener">打开 trace.json</a><pre>{
+  &quot;task_id&quot;: &quot;books-product-v2&quot;,
+  &quot;provider&quot;: &quot;dashscope&quot;,
+  &quot;model&quot;: &quot;qwen3.8-flash&quot;,
+  &quot;input_pages&quot;: [
+    {
+      &quot;id&quot;: &quot;book_product_01&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/a-light-in-the-attic_1000/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html&quot;,
+      &quot;role&quot;: &quot;generation&quot;,
+      &quot;sha256&quot;: &quot;a6e572bec156bf80ff3149b89b6d218cdcf8866ccc26ccf69a5431db8e142c6a&quot;,
+      &quot;bytes&quot;: 9279,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_02&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/tipping-the-velvet_999/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;sha256&quot;: &quot;3ebbc9a6c904a9f3420fd770b24a4c2ff9958fdb1359108fe37b951452f3d8da&quot;,
+      &quot;bytes&quot;: 10918,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_03&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/soumission_998/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/soumission_998/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/soumission_998/index.html&quot;,
+      &quot;role&quot;: &quot;development_feedback&quot;,
+      &quot;sha256&quot;: &quot;62b7d234ea2ef1052553914ad1c17f2ae984449c7325e753d07963adf5c4cbe1&quot;,
+      &quot;bytes&quot;: 12431,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_04&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/sharp-objects_997/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/sharp-objects_997/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/sharp-objects_997/index.html&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;sha256&quot;: &quot;41ae9ef1bc17c9984b8e452c61f3370fc6e1868e9b699c803c7336136f57c0ef&quot;,
+      &quot;bytes&quot;: 14847,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_05&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/sapiens-a-brief-history-of-humankind_996/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html&quot;,
+      &quot;role&quot;: &quot;generation&quot;,
+      &quot;sha256&quot;: &quot;7cc763d13e3645f3f2aa981971c6442fe9b1a7dc85372799d2e3e5acb64fc223&quot;,
+      &quot;bytes&quot;: 17026,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_06&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-requiem-red_995/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-requiem-red_995/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/the-requiem-red_995/index.html&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;sha256&quot;: &quot;0d5b5198aa904b2a6fac14544d70d27cf4a723a710b8745caaaad9bdc8c358a1&quot;,
+      &quot;bytes&quot;: 16468,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_07&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html&quot;,
+      &quot;role&quot;: &quot;development_feedback&quot;,
+      &quot;sha256&quot;: &quot;7659ec0efd845c6c2cc207ac0ea29051885de9e12b216f2e28181c61560c42d8&quot;,
+      &quot;bytes&quot;: 19806,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_08&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;sha256&quot;: &quot;42db4e6ee661bcdd66958ceda5444386a44253bdf6b8581ef73c273ceff32bf8&quot;,
+      &quot;bytes&quot;: 23375,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_09&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html&quot;,
+      &quot;role&quot;: &quot;generation&quot;,
+      &quot;sha256&quot;: &quot;72258efc46a720c185038658c744f8f78234970e4344c77a25fc0a610a5c5245&quot;,
+      &quot;bytes&quot;: 20872,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_10&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-black-maria_991/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-black-maria_991/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/the-black-maria_991/index.html&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;sha256&quot;: &quot;fc563bec423f34054e5ca6440cd131c095e9eea00e7a01c06da6bae7dcd7bb48&quot;,
+      &quot;bytes&quot;: 22698,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    }
+  ],
+  &quot;rounds&quot;: [
+    {
+      &quot;round&quot;: 0,
+      &quot;pages&quot;: [
+        {
+          &quot;id&quot;: &quot;book_product_01&quot;,
+          &quot;role&quot;: &quot;generation&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_03&quot;,
+          &quot;role&quot;: &quot;development_feedback&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_05&quot;,
+          &quot;role&quot;: &quot;generation&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_07&quot;,
+          &quot;role&quot;: &quot;development_feedback&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_09&quot;,
+          &quot;role&quot;: &quot;generation&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        }
+      ],
+      &quot;issues&quot;: [
+        {
+          &quot;id&quot;: &quot;book_product_01&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_03&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_05&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_07&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_09&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        }
+      ],
+      &quot;candidate_sha256&quot;: &quot;681c6eee19b3c84ec839f4da49c5cd35a2da3dda5f940132541483e350cecc1b&quot;
+    },
+    {
+      &quot;round&quot;: 1,
+      &quot;pages&quot;: [
+        {
+          &quot;id&quot;: &quot;book_product_01&quot;,
+          &quot;role&quot;: &quot;generation&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_03&quot;,
+          &quot;role&quot;: &quot;development_feedback&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_05&quot;,
+          &quot;role&quot;: &quot;generation&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_07&quot;,
+          &quot;role&quot;: &quot;development_feedback&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_09&quot;,
+          &quot;role&quot;: &quot;generation&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        }
+      ],
+      &quot;issues&quot;: [
+        {
+          &quot;id&quot;: &quot;book_product_01&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_03&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_05&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_07&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_09&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        }
+      ],
+      &quot;candidate_sha256&quot;: &quot;681c6eee19b3c84ec839f4da49c5cd35a2da3dda5f940132541483e350cecc1b&quot;
+    },
+    {
+      &quot;round&quot;: 2,
+      &quot;pages&quot;: [
+        {
+          &quot;id&quot;: &quot;book_product_01&quot;,
+          &quot;role&quot;: &quot;generation&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_03&quot;,
+          &quot;role&quot;: &quot;development_feedback&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_05&quot;,
+          &quot;role&quot;: &quot;generation&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_07&quot;,
+          &quot;role&quot;: &quot;development_feedback&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_09&quot;,
+          &quot;role&quot;: &quot;generation&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        }
+      ],
+      &quot;issues&quot;: [
+        {
+          &quot;id&quot;: &quot;book_product_01&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_03&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_05&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_07&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_09&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;execution_error&quot;,
+              &quot;message&quot;: &quot;ValueError: ValueError: Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks&quot;
+            }
+          ]
+        }
+      ],
+      &quot;candidate_sha256&quot;: &quot;681c6eee19b3c84ec839f4da49c5cd35a2da3dda5f940132541483e350cecc1b&quot;
+    }
+  ],
+  &quot;api_attempts&quot;: [
+    {
+      &quot;round&quot;: 0,
+      &quot;status&quot;: &quot;succeeded&quot;,
+      &quot;usage&quot;: {
+        &quot;prompt_tokens&quot;: 15391,
+        &quot;total_tokens&quot;: 15627,
+        &quot;completion_tokens&quot;: 236,
+        &quot;prompt_tokens_details&quot;: {
+          &quot;cached_tokens&quot;: 0,
+          &quot;text_tokens&quot;: 15391
+        }
+      },
+      &quot;seconds&quot;: 4.886
+    },
+    {
+      &quot;round&quot;: 1,
+      &quot;status&quot;: &quot;succeeded&quot;,
+      &quot;usage&quot;: {
+        &quot;prompt_tokens&quot;: 26823,
+        &quot;total_tokens&quot;: 27059,
+        &quot;completion_tokens&quot;: 236,
+        &quot;prompt_tokens_details&quot;: {
+          &quot;cached_tokens&quot;: 15360,
+          &quot;text_tokens&quot;: 26823
+        }
+      },
+      &quot;seconds&quot;: 4.17
+    },
+    {
+      &quot;round&quot;: 2,
+      &quot;status&quot;: &quot;succeeded&quot;,
+      &quot;usage&quot;: {
+        &quot;prompt_tokens&quot;: 38255,
+        &quot;total_tokens&quot;: 38491,
+        &quot;completion_tokens&quot;: 236,
+        &quot;prompt_tokens_details&quot;: {
+          &quot;cached_tokens&quot;: 26624,
+          &quot;text_tokens&quot;: 38255
+        }
+      },
+      &quot;seconds&quot;: 4.32
+    }
+  ],
+  &quot;holdout&quot;: [],
+  &quot;semantic_accuracy&quot;: &quot;unknown&quot;,
+  &quot;holdout_policy&quot;: &quot;Executed only after candidate freeze; never sent to generation or repair.&quot;,
+  &quot;max_repairs&quot;: 2,
+  &quot;final_status&quot;: &quot;development_failed&quot;,
+  &quot;engine_sha256&quot;: &quot;d4da45d29efad17afc67ff798125cdbbb696c8a2848739d559ccc8100b2933f7&quot;,
+  &quot;worker_sha256&quot;: &quot;9d9418800e9461a3758f02209cbbc022dcb2c7d32029b4fe74eb2469cd217364&quot;,
+  &quot;initial_candidate&quot;: &quot;model_generated&quot;,
+  &quot;evaluation_scope&quot;: &quot;10 new book product detail pages; 3 generation, 2 development, 5 final holdout; same product layout, different from Python release blogs.&quot;,
+  &quot;candidate_hash_scheme&quot;: &quot;SHA256 of canonical UTF-8 LF source&quot;,
+  &quot;engine_protocol&quot;: &quot;v2: original DOM evidence, typed metadata, scoped summaries, rich blocks&quot;,
+  &quot;elapsed_seconds&quot;: 15.101
+}</pre></details></div></section></main><footer class="foot">此页面仅展示已保存的实验记录。筛选、切换与展开不会发起 API 请求，也不会修改标注或提取结果。</footer></div><script>
+(()=>{
+const tabs=[...document.querySelectorAll('[data-tab]')], views=[...document.querySelectorAll('[data-view]')];
+function showTab(name){tabs.forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===name)));views.forEach(v=>v.hidden=v.dataset.view!==name)}
+tabs.forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));
+const nav=[...document.querySelectorAll('.page-button')], articles=[...document.querySelectorAll('.article')];
+const input=document.getElementById('page-search'),role=document.getElementById('role-filter');
+function selectPage(id,scroll=false){articles.forEach(a=>a.hidden=a.id!==id);nav.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.target===id)));if(scroll)document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'})}
+nav.forEach(b=>b.addEventListener('click',()=>selectPage(b.dataset.target)));
+function filter(){const q=input.value.trim().toLowerCase();nav.forEach(b=>b.hidden=!(b.textContent.toLowerCase().includes(q)&&(!role.value||b.dataset.role===role.value)));const visible=nav.filter(b=>!b.hidden);document.getElementById('nav-count').textContent=visible.length+' / '+nav.length+' 篇';document.getElementById('no-pages').hidden=visible.length>0;if(!visible.some(b=>b.getAttribute('aria-pressed')==='true')){if(visible.length)selectPage(visible[0].dataset.target);else articles.forEach(a=>a.hidden=true)}}
+input.addEventListener('input',filter);role.addEventListener('change',filter);
+document.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>{showTab('results');input.value='';role.value='';filter();selectPage(b.dataset.jump,true)}));
+document.querySelectorAll('[data-round-picker]').forEach(s=>{function choose(){const a=s.closest('.article');a.querySelectorAll('[data-version]').forEach(v=>v.hidden=v.dataset.version!==s.value)}s.addEventListener('change',choose);choose()});
+document.querySelectorAll('[data-evidence-toggle]').forEach(b=>b.addEventListener('click',()=>{const a=b.closest('[data-version]'),ds=[...a.querySelectorAll('.body-block details')],open=ds.some(d=>!d.open);ds.forEach(d=>d.open=open);b.textContent=open?'收起全部原文定位':'展开全部原文定位'}));
+showTab('results');if(nav.length)selectPage(nav[0].dataset.target);filter();
+})();
+</script></body></html>

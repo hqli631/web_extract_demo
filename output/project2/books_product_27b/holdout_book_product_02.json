@@ -1,0 +1,93 @@
+{
+  "title": "Tipping the Velvet",
+  "container_xpath": "/html/body/div/div/div[2]/div[2]/article",
+  "title_xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "£53.74",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "In stock (20 available)",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Product Description",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[2]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "\"Erotic and absorbing...Written with starling power.\"--\"The New York Times Book Review \" Nan King, an oyster girl, is captivated by the music hall phenomenon Kitty Butler, a male impersonator extraordinaire treading the boards in Canterbury. Through a friend at the box office, Nan manages to visit all her shows and finally meet her heroine. Soon after, she becomes Kitty's \"Erotic and absorbing...Written with starling power.\"--\"The New York Times Book Review \" Nan King, an oyster girl, is captivated by the music hall phenomenon Kitty Butler, a male impersonator extraordinaire treading the boards in Canterbury. Through a friend at the box office, Nan manages to visit all her shows and finally meet her heroine. Soon after, she becomes Kitty's dresser and the two head for the bright lights of Leicester Square where they begin a glittering career as music-hall stars in an all-singing and dancing double act. At the same time, behind closed doors, they admit their attraction to each other and their affair begins. ...more",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/p"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Product Information",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[3]"
+    },
+    {
+      "type": "table",
+      "kind": "table",
+      "text": "UPC90fa61229261140a Product TypeBooks Price (excl. tax)£53.74 Price (incl. tax)£53.74 Tax£0.00 Availability In stock (20 available) Number of reviews 0",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/table",
+      "rows": [
+        [
+          "UPC",
+          "90fa61229261140a"
+        ],
+        [
+          "Product Type",
+          "Books"
+        ],
+        [
+          "Price (excl. tax)",
+          "£53.74"
+        ],
+        [
+          "Price (incl. tax)",
+          "£53.74"
+        ],
+        [
+          "Tax",
+          "£0.00"
+        ],
+        [
+          "Availability",
+          "In stock (20 available)"
+        ],
+        [
+          "Number of reviews",
+          "0"
+        ]
+      ]
+    }
+  ],
+  "metadata": [],
+  "excluded": [
+    {
+      "type": "excluded",
+      "kind": "excluded",
+      "text": "Products you recently viewed",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[4]"
+    },
+    {
+      "type": "excluded",
+      "kind": "excluded",
+      "text": "A Light in the ... £51.77 In stock Add to basket",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/ul"
+    }
+  ],
+  "warnings": [
+    "Text-only extraction; image pixels and semantic completeness are not evaluated.",
+    "static_dom_only_no_css_visibility_javascript_or_ocr",
+    "images_present_pixels_not_extracted_completeness_unknown"
+  ]
+}

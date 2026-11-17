@@ -244,6 +244,9 @@ def render_report(out,trace,reference=False):
            '<nav class="tabs" role="tablist" aria-label="报告视图">'+''.join('<button type="button" role="tab" id="tab-'+key+'" aria-controls="view-'+key+'" aria-selected="'+str(key=='results').lower()+'" class="tab" data-tab="'+key+'">'+name+'</button>' for key,name in [('results','提取结果'),('process','生成与修复'),('rules','规则与代码'),('calls','调用记录')])+'</nav>',
            '<noscript><p class="nojs">JavaScript 已禁用。所有报告内容仍可阅读，筛选和切换不可用。</p></noscript><main id="report-content"><section class="view" role="tabpanel" aria-labelledby="tab-results" id="view-results" data-view="results">',
            '<div class="panel"><h2>样本与结果汇总</h2><p class="muted small">点击标题进入正文。生成页可影响规则；开发页可提供修复反馈；最终测试页只在冻结候选后执行。</p><div class="table-wrap"><table><thead><tr><th>文章 / 样本</th><th>角色</th><th>状态</th><th>正文块</th><th>页面信息</th><th>排除项</th></tr></thead><tbody>']
+    review = read_json(out/'review.json')
+    if review:
+        parts.insert(len(parts)-1, '<div class="panel"><h2>冻结后专项复核</h2><p>'+e(review.get('summary',''))+'</p><p class="muted small">'+e(review.get('scope',''))+'</p>'+details('逐页检查与限制',json_view(review))+'</div>')
     nav=[]; articles=[]
     for i,page in enumerate(pages):
         ident='page-'+str(i); versions=[v for v in page['versions'] if v['data'] is not None]; last=versions[-1]['data'] if versions else {}

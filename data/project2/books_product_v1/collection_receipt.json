@@ -1,0 +1,140 @@
+{
+  "site": "http://books.toscrape.com/",
+  "retrieved_at_utc": "2026-11-17T09:58:46.874458+00:00",
+  "assets": [
+    {
+      "url": "http://books.toscrape.com/media/cache/08/e9/08e94f3731d7d6b760dfbfbc02ca5c62.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/08/e9/08e94f3731d7d6b760dfbfbc02ca5c62.jpg",
+      "bytes": 18504,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/26/0c/260c6ae16bce31c8f8c95daddd9f4a1c.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/26/0c/260c6ae16bce31c8f8c95daddd9f4a1c.jpg",
+      "bytes": 7095,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/2c/da/2cdad67c44b002e7ead0cc35693c0e8b.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/2c/da/2cdad67c44b002e7ead0cc35693c0e8b.jpg",
+      "bytes": 9876,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/32/51/3251cf3a3412f53f339e42cac2134093.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/32/51/3251cf3a3412f53f339e42cac2134093.jpg",
+      "bytes": 8442,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/3d/54/3d54940e57e662c4dd1f3ff00c78cc64.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/3d/54/3d54940e57e662c4dd1f3ff00c78cc64.jpg",
+      "bytes": 9693,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/3e/ef/3eef99c9d9adef34639f510662022830.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/3e/ef/3eef99c9d9adef34639f510662022830.jpg",
+      "bytes": 4062,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/66/88/66883b91f6804b2323c8369331cb7dd1.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/66/88/66883b91f6804b2323c8369331cb7dd1.jpg",
+      "bytes": 8783,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/68/33/68339b4c9bc034267e1da611ab3b34f8.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/68/33/68339b4c9bc034267e1da611ab3b34f8.jpg",
+      "bytes": 9798,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/6b/07/6b07b77236b7c80f42bd90bf325e69f6.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/6b/07/6b07b77236b7c80f42bd90bf325e69f6.jpg",
+      "bytes": 47528,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/92/27/92274a95b7c251fea59a2b8a78275ab4.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/92/27/92274a95b7c251fea59a2b8a78275ab4.jpg",
+      "bytes": 10740,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/97/36/9736132a43b8e6e3989932218ef309ed.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/97/36/9736132a43b8e6e3989932218ef309ed.jpg",
+      "bytes": 30984,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/be/a5/bea5697f2534a2f86a3ef27b5a8c12a6.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/be/a5/bea5697f2534a2f86a3ef27b5a8c12a6.jpg",
+      "bytes": 7986,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/c0/59/c05972805aa7201171b8fc71a5b00292.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/c0/59/c05972805aa7201171b8fc71a5b00292.jpg",
+      "bytes": 30784,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/ce/5f/ce5f052c65cc963cf4422be096e915c9.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/ce/5f/ce5f052c65cc963cf4422be096e915c9.jpg",
+      "bytes": 14449,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/d1/2d/d12d26739b5369a6b5b3024e4d08f907.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/d1/2d/d12d26739b5369a6b5b3024e4d08f907.jpg",
+      "bytes": 41864,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/d1/7a/d17a3e313e52e1be5651719e4fba1d16.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/d1/7a/d17a3e313e52e1be5651719e4fba1d16.jpg",
+      "bytes": 19032,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/e1/1b/e11bea016d0ae1d7e2dd46fb3cb870b7.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/e1/1b/e11bea016d0ae1d7e2dd46fb3cb870b7.jpg",
+      "bytes": 47830,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/ee/cf/eecfe998905e455df12064dba399c075.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/ee/cf/eecfe998905e455df12064dba399c075.jpg",
+      "bytes": 9403,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/media/cache/fe/72/fe72f0532301ec28892ae79a629a293c.jpg",
+      "path": "data/project2/books_product_v1/site/media/cache/fe/72/fe72f0532301ec28892ae79a629a293c.jpg",
+      "bytes": 31047,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/static/oscar/css/datetimepicker.css",
+      "path": "data/project2/books_product_v1/site/static/oscar/css/datetimepicker.css",
+      "bytes": 352,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/static/oscar/css/styles.css",
+      "path": "data/project2/books_product_v1/site/static/oscar/css/styles.css",
+      "bytes": 215100,
+      "status": 200
+    },
+    {
+      "url": "http://books.toscrape.com/static/oscar/js/bootstrap-datetimepicker/bootstrap-datetimepicker.css",
+      "path": "data/project2/books_product_v1/site/static/oscar/js/bootstrap-datetimepicker/bootstrap-datetimepicker.css",
+      "bytes": 12351,
+      "status": 200
+    }
+  ],
+  "robots_status": 404,
+  "robots_policy": "No robots.txt returned; public scraping practice site; low-rate fixed 10-page batch"
+}

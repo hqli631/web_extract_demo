@@ -1,0 +1,87 @@
+{
+  "title": "Soumission",
+  "container_xpath": "/html/body/div/div/div[2]/div[2]/article",
+  "title_xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Product Description",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[2]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Dans une France assez proche de la nôtre, un homme s’engage dans la carrière universitaire. Peu motivé par l’enseignement, il s’attend à une vie ennuyeuse mais calme, protégée des grands drames historiques. Cependant les forces en jeu dans le pays ont fissuré le système politique jusqu’à provoquer son effondrement. Cette implosion sans soubresauts, sans vraie révolution, s Dans une France assez proche de la nôtre, un homme s’engage dans la carrière universitaire. Peu motivé par l’enseignement, il s’attend à une vie ennuyeuse mais calme, protégée des grands drames historiques. Cependant les forces en jeu dans le pays ont fissuré le système politique jusqu’à provoquer son effondrement. Cette implosion sans soubresauts, sans vraie révolution, se développe comme un mauvais rêve.Le talent de l’auteur, sa force visionnaire nous entraînent sur un terrain ambigu et glissant ; son regard sur notre civilisation vieillissante fait coexister dans ce roman les intuitions poétiques, les effets comiques, une mélancolie fataliste.Ce livre est une saisissante fable politique et morale. ...more",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/p"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Product Information",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[3]"
+    },
+    {
+      "type": "table",
+      "kind": "table",
+      "text": "UPC6957f44c3847a760 Product TypeBooks Price (excl. tax)£50.10 Price (incl. tax)£50.10 Tax£0.00 Availability In stock (20 available) Number of reviews 0",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/table",
+      "rows": [
+        [
+          "UPC",
+          "6957f44c3847a760"
+        ],
+        [
+          "Product Type",
+          "Books"
+        ],
+        [
+          "Price (excl. tax)",
+          "£50.10"
+        ],
+        [
+          "Price (incl. tax)",
+          "£50.10"
+        ],
+        [
+          "Tax",
+          "£0.00"
+        ],
+        [
+          "Availability",
+          "In stock (20 available)"
+        ],
+        [
+          "Number of reviews",
+          "0"
+        ]
+      ]
+    }
+  ],
+  "metadata": [],
+  "excluded": [
+    {
+      "type": "excluded",
+      "kind": "excluded",
+      "text": "Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no real meaning.",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/div"
+    },
+    {
+      "type": "excluded",
+      "kind": "excluded",
+      "text": "Products you recently viewed",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[4]"
+    },
+    {
+      "type": "excluded",
+      "kind": "excluded",
+      "text": "Tipping the Velvet £53.74 In stock Add to basket A Light in the ... £51.77 In stock Add to basket",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/ul"
+    }
+  ],
+  "warnings": [
+    "Text-only extraction; image pixels and semantic completeness are not evaluated.",
+    "static_dom_only_no_css_visibility_javascript_or_ocr",
+    "images_present_pixels_not_extracted_completeness_unknown"
+  ]
+}

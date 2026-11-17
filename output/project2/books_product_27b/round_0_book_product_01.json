@@ -1,0 +1,80 @@
+{
+  "title": "A Light in the Attic",
+  "container_xpath": "/html/body/div/div/div[2]/div[2]/article",
+  "title_xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "£51.77",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "In stock (22 available)",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Product Description",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[2]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "It's hard to imagine a world without A Light in the Attic. This now-classic collection of poetry and drawings from Shel Silverstein celebrates its 20th anniversary with this special edition. Silverstein's humorous and creative verse can amuse the dowdiest of readers. Lemon-faced adults and fidgety kids sit still and read these rhythmic words and laugh and smile and love th It's hard to imagine a world without A Light in the Attic. This now-classic collection of poetry and drawings from Shel Silverstein celebrates its 20th anniversary with this special edition. Silverstein's humorous and creative verse can amuse the dowdiest of readers. Lemon-faced adults and fidgety kids sit still and read these rhythmic words and laugh and smile and love that Silverstein. Need proof of his genius? RockabyeRockabye baby, in the treetopDon't you know a treetopIs no safe place to rock?And who put you up there,And your cradle, too?Baby, I think someone down here'sGot it in for you. Shel, you never sounded so good. ...more",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/p"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Product Information",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[3]"
+    },
+    {
+      "type": "table",
+      "kind": "table",
+      "text": "UPCa897fe39b1053632 Product TypeBooks Price (excl. tax)£51.77 Price (incl. tax)£51.77 Tax£0.00 Availability In stock (22 available) Number of reviews 0",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/table",
+      "rows": [
+        [
+          "UPC",
+          "a897fe39b1053632"
+        ],
+        [
+          "Product Type",
+          "Books"
+        ],
+        [
+          "Price (excl. tax)",
+          "£51.77"
+        ],
+        [
+          "Price (incl. tax)",
+          "£51.77"
+        ],
+        [
+          "Tax",
+          "£0.00"
+        ],
+        [
+          "Availability",
+          "In stock (22 available)"
+        ],
+        [
+          "Number of reviews",
+          "0"
+        ]
+      ]
+    }
+  ],
+  "metadata": [],
+  "excluded": [],
+  "warnings": [
+    "Text-only extraction; image pixels and semantic completeness are not evaluated.",
+    "static_dom_only_no_css_visibility_javascript_or_ocr",
+    "images_present_pixels_not_extracted_completeness_unknown"
+  ]
+}

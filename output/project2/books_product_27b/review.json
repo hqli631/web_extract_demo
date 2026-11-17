@@ -1,0 +1,368 @@
+{
+  "scope": "Post-freeze checks against downloaded DOM, plus current-chat AI review of exclusion semantics. Not human gold or independent accuracy.",
+  "model": "qwen3.8-27b",
+  "pages": [
+    {
+      "id": "book_product_01",
+      "role": "generation",
+      "title": "A Light in the Attic",
+      "url": "http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html",
+      "checks": {
+        "title_matches": true,
+        "description_matches": true,
+        "price_matches": true,
+        "stock_matches": true,
+        "table_cells_match": true,
+        "evidence_and_order_valid": true,
+        "cart_or_recommendations_in_body": false,
+        "heading_text_retained": true,
+        "heading_types_correct": false
+      },
+      "blocks": 6,
+      "table_rows": 7,
+      "excluded_review": [],
+      "remaining": [
+        "Product headings retained as paragraph, not subheading.",
+        "Position-based div selectors are fragile under layout changes.",
+        "Cover pixels not extracted; overall image completeness unknown."
+      ]
+    },
+    {
+      "id": "book_product_03",
+      "role": "development_feedback",
+      "title": "Soumission",
+      "url": "http://books.toscrape.com/catalogue/soumission_998/index.html",
+      "checks": {
+        "title_matches": true,
+        "description_matches": true,
+        "price_matches": true,
+        "stock_matches": true,
+        "table_cells_match": true,
+        "evidence_and_order_valid": true,
+        "cart_or_recommendations_in_body": false,
+        "heading_text_retained": true,
+        "heading_types_correct": false
+      },
+      "blocks": 6,
+      "table_rows": 7,
+      "excluded_review": [
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/div[4]",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        },
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/ul",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        }
+      ],
+      "remaining": [
+        "Product headings retained as paragraph, not subheading.",
+        "Position-based div selectors are fragile under layout changes.",
+        "Cover pixels not extracted; overall image completeness unknown."
+      ]
+    },
+    {
+      "id": "book_product_05",
+      "role": "generation",
+      "title": "Sapiens: A Brief History of Humankind",
+      "url": "http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html",
+      "checks": {
+        "title_matches": true,
+        "description_matches": true,
+        "price_matches": true,
+        "stock_matches": true,
+        "table_cells_match": true,
+        "evidence_and_order_valid": true,
+        "cart_or_recommendations_in_body": false,
+        "heading_text_retained": true,
+        "heading_types_correct": false
+      },
+      "blocks": 6,
+      "table_rows": 7,
+      "excluded_review": [
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/div[4]",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        },
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/ul",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        }
+      ],
+      "remaining": [
+        "Product headings retained as paragraph, not subheading.",
+        "Position-based div selectors are fragile under layout changes.",
+        "Cover pixels not extracted; overall image completeness unknown."
+      ]
+    },
+    {
+      "id": "book_product_07",
+      "role": "development_feedback",
+      "title": "The Dirty Little Secrets of Getting Your Dream Job",
+      "url": "http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html",
+      "checks": {
+        "title_matches": true,
+        "description_matches": true,
+        "price_matches": true,
+        "stock_matches": true,
+        "table_cells_match": true,
+        "evidence_and_order_valid": true,
+        "cart_or_recommendations_in_body": false,
+        "heading_text_retained": true,
+        "heading_types_correct": false
+      },
+      "blocks": 6,
+      "table_rows": 7,
+      "excluded_review": [
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/div[4]",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        },
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/ul",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        }
+      ],
+      "remaining": [
+        "Product headings retained as paragraph, not subheading.",
+        "Position-based div selectors are fragile under layout changes.",
+        "Cover pixels not extracted; overall image completeness unknown."
+      ]
+    },
+    {
+      "id": "book_product_09",
+      "role": "generation",
+      "title": "The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics",
+      "url": "http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html",
+      "checks": {
+        "title_matches": true,
+        "description_matches": true,
+        "price_matches": true,
+        "stock_matches": true,
+        "table_cells_match": true,
+        "evidence_and_order_valid": true,
+        "cart_or_recommendations_in_body": false,
+        "heading_text_retained": true,
+        "heading_types_correct": false
+      },
+      "blocks": 6,
+      "table_rows": 7,
+      "excluded_review": [
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/div[4]",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        },
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/ul",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        }
+      ],
+      "remaining": [
+        "Product headings retained as paragraph, not subheading.",
+        "Position-based div selectors are fragile under layout changes.",
+        "Cover pixels not extracted; overall image completeness unknown."
+      ]
+    },
+    {
+      "id": "book_product_02",
+      "role": "final_holdout",
+      "title": "Tipping the Velvet",
+      "url": "http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html",
+      "checks": {
+        "title_matches": true,
+        "description_matches": true,
+        "price_matches": true,
+        "stock_matches": true,
+        "table_cells_match": true,
+        "evidence_and_order_valid": true,
+        "cart_or_recommendations_in_body": false,
+        "heading_text_retained": true,
+        "heading_types_correct": false
+      },
+      "blocks": 6,
+      "table_rows": 7,
+      "excluded_review": [
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/div[4]",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        },
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/ul",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        }
+      ],
+      "remaining": [
+        "Product headings retained as paragraph, not subheading.",
+        "Position-based div selectors are fragile under layout changes.",
+        "Cover pixels not extracted; overall image completeness unknown."
+      ]
+    },
+    {
+      "id": "book_product_04",
+      "role": "final_holdout",
+      "title": "Sharp Objects",
+      "url": "http://books.toscrape.com/catalogue/sharp-objects_997/index.html",
+      "checks": {
+        "title_matches": true,
+        "description_matches": true,
+        "price_matches": true,
+        "stock_matches": true,
+        "table_cells_match": true,
+        "evidence_and_order_valid": true,
+        "cart_or_recommendations_in_body": false,
+        "heading_text_retained": true,
+        "heading_types_correct": false
+      },
+      "blocks": 6,
+      "table_rows": 7,
+      "excluded_review": [
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/div[4]",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        },
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/ul",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        }
+      ],
+      "remaining": [
+        "Product headings retained as paragraph, not subheading.",
+        "Position-based div selectors are fragile under layout changes.",
+        "Cover pixels not extracted; overall image completeness unknown."
+      ]
+    },
+    {
+      "id": "book_product_06",
+      "role": "final_holdout",
+      "title": "The Requiem Red",
+      "url": "http://books.toscrape.com/catalogue/the-requiem-red_995/index.html",
+      "checks": {
+        "title_matches": true,
+        "description_matches": true,
+        "price_matches": true,
+        "stock_matches": true,
+        "table_cells_match": true,
+        "evidence_and_order_valid": true,
+        "cart_or_recommendations_in_body": false,
+        "heading_text_retained": true,
+        "heading_types_correct": false
+      },
+      "blocks": 6,
+      "table_rows": 7,
+      "excluded_review": [
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/div[4]",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        },
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/ul",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        }
+      ],
+      "remaining": [
+        "Product headings retained as paragraph, not subheading.",
+        "Position-based div selectors are fragile under layout changes.",
+        "Cover pixels not extracted; overall image completeness unknown."
+      ]
+    },
+    {
+      "id": "book_product_08",
+      "role": "final_holdout",
+      "title": "The Coming Woman: A Novel Based on the Life of the Infamous Feminist, Victoria Woodhull",
+      "url": "http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html",
+      "checks": {
+        "title_matches": true,
+        "description_matches": true,
+        "price_matches": true,
+        "stock_matches": true,
+        "table_cells_match": true,
+        "evidence_and_order_valid": true,
+        "cart_or_recommendations_in_body": false,
+        "heading_text_retained": true,
+        "heading_types_correct": false
+      },
+      "blocks": 6,
+      "table_rows": 7,
+      "excluded_review": [
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/div[4]",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        },
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/ul",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        }
+      ],
+      "remaining": [
+        "Product headings retained as paragraph, not subheading.",
+        "Position-based div selectors are fragile under layout changes.",
+        "Cover pixels not extracted; overall image completeness unknown."
+      ]
+    },
+    {
+      "id": "book_product_10",
+      "role": "final_holdout",
+      "title": "The Black Maria",
+      "url": "http://books.toscrape.com/catalogue/the-black-maria_991/index.html",
+      "checks": {
+        "title_matches": true,
+        "description_matches": true,
+        "price_matches": true,
+        "stock_matches": true,
+        "table_cells_match": true,
+        "evidence_and_order_valid": true,
+        "cart_or_recommendations_in_body": false,
+        "heading_text_retained": true,
+        "heading_types_correct": false
+      },
+      "blocks": 6,
+      "table_rows": 7,
+      "excluded_review": [
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/div[4]",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        },
+        {
+          "xpath": "/html/body/div/div/div[2]/div[2]/article/ul",
+          "assessment": "Appropriate exclusion: recently viewed products are recommendations, not current book content."
+        }
+      ],
+      "remaining": [
+        "Product headings retained as paragraph, not subheading.",
+        "Position-based div selectors are fragile under layout changes.",
+        "Cover pixels not extracted; overall image completeness unknown."
+      ]
+    }
+  ],
+  "holdout_target_documents_in_prompt": false,
+  "related_target_links_in_generation": [
+    {
+      "generation_page": "book_product_05",
+      "related_target": "book_product_02"
+    },
+    {
+      "generation_page": "book_product_05",
+      "related_target": "book_product_04"
+    },
+    {
+      "generation_page": "book_product_09",
+      "related_target": "book_product_04"
+    },
+    {
+      "generation_page": "book_product_09",
+      "related_target": "book_product_06"
+    },
+    {
+      "generation_page": "book_product_09",
+      "related_target": "book_product_08"
+    }
+  ],
+  "limitations": [
+    "Same-site, same-template sample only; no cross-layout accuracy claim.",
+    "Recently-viewed widgets expose some other target titles/prices in generation input. Target descriptions/tables were not separately supplied as holdout documents.",
+    "XPath data interpreted by trusted lxml engine; not arbitrary Python generation or model weight training."
+  ],
+  "cpu_replay_seconds": 0.054,
+  "cpu_timing_scope": "In-process re-extraction plus source checks; includes file reads and parsing, not an industrial throughput benchmark.",
+  "summary": "10/10 页的标题、描述、价格、库存及 7 行表格与原始 DOM 对应；正文未混入购物按钮或最近浏览推荐。10/10 页的小标题仍被标为 paragraph，图片完整性 unknown。自动检查状态保留 needs_review。"
+}

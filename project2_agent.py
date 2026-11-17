@@ -76,6 +76,14 @@ def mock_candidate(round_number):
         'block_xpath':'.//p' if round_number == 0 else './/p | .//h2 | .//h3 | .//li[not(.//p)] | .//table | .//figcaption | .//pre',
         'exclude_xpath':'', 'metadata_xpath':'//article/header//time | //article/header//a[contains(@href, "/authors/")]'})
 
+REVIEW_KINDS = {'exclusion_requires_review', 'metadata_requires_review'}
+
+def blocking_issues(issues):
+    return [i for i in issues if i.get('kind') not in REVIEW_KINDS]
+
+def quality_status(issues):
+    return 'failed' if blocking_issues(issues) else 'needs_review' if issues else 'pass'
+
 def evaluate(item, rules, out, prefix):
     data = (ROOT/item['path']).read_bytes()
     try:
@@ -92,7 +100,7 @@ def evaluate(item, rules, out, prefix):
         filename = prefix + '_' + item['id'] + '.json'
         write_json(out/filename, result)
         return {'id':item['id'], 'role':item['role'], 'url':item.get('url',''), 'source_path':item['path'],
-                'status':'pass' if not issues else 'failed', 'blocks':len(result['blocks']),
+                'status':quality_status(issues), 'blocks':len(result['blocks']),
                 'metadata':len(result['metadata']), 'issues':issues, 'result':filename}
     except Exception as exc:
         return {'id':item['id'], 'role':item['role'], 'status':'failed',
@@ -159,7 +167,7 @@ def run(task, out, provider='mock', model=DEFAULT_MODEL, max_repairs=2, timeout=
             except Exception as exc:
                 entry['issues'] = [{'kind':'candidate_error','message':type(exc).__name__ + ': ' + str(exc)[:400]}]
             save()
-            if not entry['issues']:
+            if not blocking_issues([i for page in entry['issues'] for i in page.get('issues', [page])]):
                 accepted = True
                 break
             if round_number == max_repairs:
@@ -179,7 +187,12 @@ def run(task, out, provider='mock', model=DEFAULT_MODEL, max_repairs=2, timeout=
             for item in task['pages']:
                 if item['role']=='final_holdout':
                     trace['holdout'].append(evaluate(dict(item,evaluation_scope_xpath=task.get('evaluation_scope_xpath')),rules,out,'holdout'))
-            trace['final_status'] = 'pass' if all(p['status']=='pass' for p in trace['holdout']) else 'holdout_failed'
+            if any(p['status']=='failed' for p in trace['holdout']):
+                trace['final_status'] = 'holdout_failed'
+            elif any(p['status']=='needs_review' for p in entry['pages'] + trace['holdout']):
+                trace['final_status'] = 'needs_review'
+            else:
+                trace['final_status'] = 'pass'
         else:
             trace['final_status'] = 'development_failed'
     except Exception as exc:

@@ -1,0 +1,8 @@
+{
+  "title_xpath": "//article[@class='product_page']//h1",
+  "container_xpath": "//article[@class='product_page']",
+  "block_xpath": ".//div[contains(@class, 'row')] | .//div[@id='product_description'] | .//p[not(contains(@class, 'price_color')) and not(contains(@class, 'instock availability')) and not(contains(@class, 'star-rating'))] | .//div[@class='sub-header' and not(@id)] | .//table | .//section",
+  "exclude_xpath": ".//div[contains(@class, 'alert-warning')] | .//div[@class='sub-header'][.//h2[contains(text(), 'Products you recently viewed')]] | .//ul[@class='row'] | .//div[@id='product_gallery'] | .//p[contains(@class, 'price_color')] | .//p[contains(@class, 'instock availability')] | .//p[contains(@class, 'star-rating')]",
+  "metadata_xpath": "",
+  "metadata_fields": {}
+}

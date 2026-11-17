@@ -1,0 +1,1764 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>项目二 · 单 Agent 正文提取报告</title><style>
+:root{--ink:#18314a;--muted:#61748a;--line:#dce5ee;--blue:#235fba;--paper:#fff;--bg:#f3f6fa}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.75 "Segoe UI","Microsoft YaHei",sans-serif}a{color:var(--blue);text-underline-offset:3px}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #e6a635;outline-offset:3px}[hidden]{display:none!important}.wrap{max-width:1440px;margin:auto;padding:30px 32px 64px}.hero{background:linear-gradient(115deg,#153952,#245d75);color:#fff;padding:28px 32px;border-radius:18px}.eyebrow{font-size:12px;letter-spacing:2px;color:#b8dce8}.hero h1{font-size:30px;line-height:1.4;margin:8px 0}.hero p{margin:8px 0;color:#d7e7ef}.hero .badge{margin-left:8px}.toplinks{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px}.toplinks a{color:#dfedff}.metrics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:18px 0}.metric{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px}.metric small{display:block;color:var(--muted)}.metric strong{font-size:24px;display:block;overflow-wrap:anywhere}.metric .model{font-size:17px;line-height:42px}.metric span{font-size:12px;color:var(--muted)}.notice{border-left:3px solid #d2a453;background:#fff9ed;padding:12px 16px;margin:16px 0;border-radius:4px}.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:22px}.tab{border:1px solid var(--line);background:#fff;padding:9px 20px;border-radius:9px;color:var(--muted)}.tab[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:white}.panel{background:white;border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:20px}.panel h2{font-size:22px;margin:0 0 14px}h3{font-size:18px;margin:20px 0 10px}h4{margin:14px 0 8px}.muted{color:var(--muted)}.small{font-size:13px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;text-align:left;margin:12px 0}th{color:var(--muted);font-size:13px;background:#f4f7fa}td,th{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}td{overflow-wrap:anywhere}td details{min-width:90px;margin:0}td pre{max-width:400px}.badge,.kind{display:inline-block;padding:2px 9px;border-radius:5px;font-size:12px;font-weight:600;white-space:nowrap}.kind{color:#46627e;background:#edf3f9}.good{background:#e2f3ed;color:#196b50}.warn{background:#fff0d4;color:#89600a}.bad{background:#fde8e7;color:#ac3434}.workspace{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}.sidebar{position:sticky;top:16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}.sidebar h3{margin:0 0 10px}.sidebar input,.sidebar select,.round-select{border:1px solid #c9d6e4;background:#fff;border-radius:7px;padding:8px;width:100%;margin-bottom:10px}.page-nav{display:grid;gap:8px;margin-top:6px;max-height:58vh;overflow:auto}.page-button{text-align:left;border:1px solid var(--line);background:#fff;border-radius:8px;padding:10px 12px;color:var(--ink);width:100%}.page-button[aria-pressed=true]{border-color:var(--blue);background:#edf4ff;box-shadow:inset 3px 0 var(--blue)}.page-button small{display:block;color:var(--muted);margin-top:3px}.article{scroll-margin-top:16px}.article h2{font-size:26px;line-height:1.45}.article-links{display:flex;gap:15px;flex-wrap:wrap;margin:12px 0}.article-meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13px}.content-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:26px;border-top:1px solid var(--line);padding-top:20px}.content-title h3{margin:0}.body-list{list-style:none;margin:16px 0;padding:0}.body-block{padding:18px 0;border-bottom:1px solid #edf1f5}.block-label{display:flex;gap:8px;align-items:center}.block-number{font-size:12px;color:#7c8da0;min-width:22px}.body-block p{font-size:16px;line-height:1.95;margin:10px 0;color:#243c51}.body-block h3{font-size:20px;line-height:1.6}.body-block details{font-size:12px}.body-table td{border:1px solid var(--line)}details{margin:12px 0}summary{cursor:pointer;color:var(--blue);overflow-wrap:anywhere}pre{background:#f3f6fa;border:1px solid #e5ebf2;padding:14px;border-radius:8px;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.7 Consolas,monospace;color:#29435d;max-height:540px;overflow:auto}.body-code{white-space:pre;overflow:auto;overflow-wrap:normal}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.quiet{background:#f3f6fa;color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:5px 10px;font-size:12px}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.rule-row{padding:14px 0;border-bottom:1px solid var(--line)}.rule-row p{margin:0}.rule-row pre{margin:8px 0}.step{border-left:3px solid #b8cadf;padding-left:18px;margin:20px 0}.step h3{margin-bottom:6px}.issues li{padding:8px 0}.issues p{margin:2px 0}.comparison{background:#f7faff;border:1px solid #dce8f8;border-radius:8px;padding:14px}.empty{padding:24px;color:var(--muted)}.foot{font-size:12px;color:var(--muted);margin-top:24px}.count-note{font-size:12px;line-height:1.5}.round-select{max-width:280px}.nojs{background:#fff0d4;padding:10px}.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:8px;background:#fff;padding:10px;z-index:10}
+@media(max-width:980px){.metrics{grid-template-columns:repeat(3,1fr)}.workspace{grid-template-columns:220px minmax(0,1fr)}.wrap{padding:20px}.hero{padding:22px}.split{grid-template-columns:1fr}}
+@media(max-width:680px){.wrap{padding:12px}.hero h1{font-size:23px}.metrics{grid-template-columns:1fr 1fr}.metric{padding:12px}.workspace{display:block}.sidebar{position:static;margin-bottom:16px}.page-nav{max-height:220px}.panel{padding:17px}.article h2{font-size:22px}.tab{padding:8px 13px}.content-title{align-items:start}.toplinks{gap:10px}}
+@media print{body{background:white}.wrap{padding:0}.hero{background:white;color:#18314a}.hero p,.hero a{color:#18314a}.tabs,.sidebar,.quiet{display:none}.workspace{display:block}.panel{break-inside:auto}.article[hidden]{display:block!important}pre{max-height:none}.view[hidden]{display:none!important}}
+</style></head><body><a class="skip" href="#report-content">跳到报告内容</a><div class="wrap"><header class="hero"><div class="eyebrow">PROJECT 02 / EXTRACTION AGENT</div><h1>单 Agent 网页正文提取报告</h1><p>真实 API 实验 <span class="badge warn">待审核</span></p><p>从少量同布局样本生成规则，在 CPU 上复用；把提取结果与生成证据放在一起。</p><div class="toplinks"><a href="trace.json" target="_blank" rel="noopener">完整运行记录</a> · <a href="rules.json" target="_blank" rel="noopener">冻结规则</a> · <a href="extractor.py" target="_blank" rel="noopener">Python 提取器</a></div></header>
+<div class="metrics"><div class="metric"><small>模型</small><strong class="model">qwen3.8-27b</strong><span>本次记录中的模型</span></div><div class="metric"><small>API 尝试</small><strong>1</strong><span>1 次返回成功</span></div><div class="metric"><small>候选轮次</small><strong>1</strong><span>含首轮，不等于 API 次数</span></div><div class="metric"><small>网页数量</small><strong>10</strong><span>生成样本 3 · 开发反馈 2 · 最终测试 5</span></div><div class="metric"><small>总 tokens</small><strong>15,509</strong><span>仅统计已返回用量</span></div></div>
+<div class="notice small">检查通过表示本任务的结构与执行检查通过，不等于正文语义准确率。 图片像素和动态内容未评估；HTML 快照不保证原站视觉还原。</div>
+<nav class="tabs" role="tablist" aria-label="报告视图"><button type="button" role="tab" id="tab-results" aria-controls="view-results" aria-selected="true" class="tab" data-tab="results">提取结果</button><button type="button" role="tab" id="tab-process" aria-controls="view-process" aria-selected="false" class="tab" data-tab="process">生成与修复</button><button type="button" role="tab" id="tab-rules" aria-controls="view-rules" aria-selected="false" class="tab" data-tab="rules">规则与代码</button><button type="button" role="tab" id="tab-calls" aria-controls="view-calls" aria-selected="false" class="tab" data-tab="calls">调用记录</button></nav>
+<noscript><p class="nojs">JavaScript 已禁用。所有报告内容仍可阅读，筛选和切换不可用。</p></noscript><main id="report-content"><section class="view" role="tabpanel" aria-labelledby="tab-results" id="view-results" data-view="results">
+<div class="panel"><h2>冻结后专项复核</h2><p>10/10 页的标题、描述、价格、库存及 7 行表格与原始 DOM 对应；正文未混入购物按钮或最近浏览推荐。10/10 页的小标题仍被标为 paragraph，图片完整性 unknown。自动检查状态保留 needs_review。</p><p class="muted small">Post-freeze checks against downloaded DOM, plus current-chat AI review of exclusion semantics. Not human gold or independent accuracy.</p><details><summary>逐页检查与限制</summary><pre>{
+  &quot;scope&quot;: &quot;Post-freeze checks against downloaded DOM, plus current-chat AI review of exclusion semantics. Not human gold or independent accuracy.&quot;,
+  &quot;model&quot;: &quot;qwen3.8-27b&quot;,
+  &quot;pages&quot;: [
+    {
+      &quot;id&quot;: &quot;book_product_01&quot;,
+      &quot;role&quot;: &quot;generation&quot;,
+      &quot;title&quot;: &quot;A Light in the Attic&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html&quot;,
+      &quot;checks&quot;: {
+        &quot;title_matches&quot;: true,
+        &quot;description_matches&quot;: true,
+        &quot;price_matches&quot;: true,
+        &quot;stock_matches&quot;: true,
+        &quot;table_cells_match&quot;: true,
+        &quot;evidence_and_order_valid&quot;: true,
+        &quot;cart_or_recommendations_in_body&quot;: false,
+        &quot;heading_text_retained&quot;: true,
+        &quot;heading_types_correct&quot;: false
+      },
+      &quot;blocks&quot;: 6,
+      &quot;table_rows&quot;: 7,
+      &quot;excluded_review&quot;: [],
+      &quot;remaining&quot;: [
+        &quot;Product headings retained as paragraph, not subheading.&quot;,
+        &quot;Position-based div selectors are fragile under layout changes.&quot;,
+        &quot;Cover pixels not extracted; overall image completeness unknown.&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;book_product_03&quot;,
+      &quot;role&quot;: &quot;development_feedback&quot;,
+      &quot;title&quot;: &quot;Soumission&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/soumission_998/index.html&quot;,
+      &quot;checks&quot;: {
+        &quot;title_matches&quot;: true,
+        &quot;description_matches&quot;: true,
+        &quot;price_matches&quot;: true,
+        &quot;stock_matches&quot;: true,
+        &quot;table_cells_match&quot;: true,
+        &quot;evidence_and_order_valid&quot;: true,
+        &quot;cart_or_recommendations_in_body&quot;: false,
+        &quot;heading_text_retained&quot;: true,
+        &quot;heading_types_correct&quot;: false
+      },
+      &quot;blocks&quot;: 6,
+      &quot;table_rows&quot;: 7,
+      &quot;excluded_review&quot;: [
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        }
+      ],
+      &quot;remaining&quot;: [
+        &quot;Product headings retained as paragraph, not subheading.&quot;,
+        &quot;Position-based div selectors are fragile under layout changes.&quot;,
+        &quot;Cover pixels not extracted; overall image completeness unknown.&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;book_product_05&quot;,
+      &quot;role&quot;: &quot;generation&quot;,
+      &quot;title&quot;: &quot;Sapiens: A Brief History of Humankind&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html&quot;,
+      &quot;checks&quot;: {
+        &quot;title_matches&quot;: true,
+        &quot;description_matches&quot;: true,
+        &quot;price_matches&quot;: true,
+        &quot;stock_matches&quot;: true,
+        &quot;table_cells_match&quot;: true,
+        &quot;evidence_and_order_valid&quot;: true,
+        &quot;cart_or_recommendations_in_body&quot;: false,
+        &quot;heading_text_retained&quot;: true,
+        &quot;heading_types_correct&quot;: false
+      },
+      &quot;blocks&quot;: 6,
+      &quot;table_rows&quot;: 7,
+      &quot;excluded_review&quot;: [
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        }
+      ],
+      &quot;remaining&quot;: [
+        &quot;Product headings retained as paragraph, not subheading.&quot;,
+        &quot;Position-based div selectors are fragile under layout changes.&quot;,
+        &quot;Cover pixels not extracted; overall image completeness unknown.&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;book_product_07&quot;,
+      &quot;role&quot;: &quot;development_feedback&quot;,
+      &quot;title&quot;: &quot;The Dirty Little Secrets of Getting Your Dream Job&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html&quot;,
+      &quot;checks&quot;: {
+        &quot;title_matches&quot;: true,
+        &quot;description_matches&quot;: true,
+        &quot;price_matches&quot;: true,
+        &quot;stock_matches&quot;: true,
+        &quot;table_cells_match&quot;: true,
+        &quot;evidence_and_order_valid&quot;: true,
+        &quot;cart_or_recommendations_in_body&quot;: false,
+        &quot;heading_text_retained&quot;: true,
+        &quot;heading_types_correct&quot;: false
+      },
+      &quot;blocks&quot;: 6,
+      &quot;table_rows&quot;: 7,
+      &quot;excluded_review&quot;: [
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        }
+      ],
+      &quot;remaining&quot;: [
+        &quot;Product headings retained as paragraph, not subheading.&quot;,
+        &quot;Position-based div selectors are fragile under layout changes.&quot;,
+        &quot;Cover pixels not extracted; overall image completeness unknown.&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;book_product_09&quot;,
+      &quot;role&quot;: &quot;generation&quot;,
+      &quot;title&quot;: &quot;The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html&quot;,
+      &quot;checks&quot;: {
+        &quot;title_matches&quot;: true,
+        &quot;description_matches&quot;: true,
+        &quot;price_matches&quot;: true,
+        &quot;stock_matches&quot;: true,
+        &quot;table_cells_match&quot;: true,
+        &quot;evidence_and_order_valid&quot;: true,
+        &quot;cart_or_recommendations_in_body&quot;: false,
+        &quot;heading_text_retained&quot;: true,
+        &quot;heading_types_correct&quot;: false
+      },
+      &quot;blocks&quot;: 6,
+      &quot;table_rows&quot;: 7,
+      &quot;excluded_review&quot;: [
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        }
+      ],
+      &quot;remaining&quot;: [
+        &quot;Product headings retained as paragraph, not subheading.&quot;,
+        &quot;Position-based div selectors are fragile under layout changes.&quot;,
+        &quot;Cover pixels not extracted; overall image completeness unknown.&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;book_product_02&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;title&quot;: &quot;Tipping the Velvet&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html&quot;,
+      &quot;checks&quot;: {
+        &quot;title_matches&quot;: true,
+        &quot;description_matches&quot;: true,
+        &quot;price_matches&quot;: true,
+        &quot;stock_matches&quot;: true,
+        &quot;table_cells_match&quot;: true,
+        &quot;evidence_and_order_valid&quot;: true,
+        &quot;cart_or_recommendations_in_body&quot;: false,
+        &quot;heading_text_retained&quot;: true,
+        &quot;heading_types_correct&quot;: false
+      },
+      &quot;blocks&quot;: 6,
+      &quot;table_rows&quot;: 7,
+      &quot;excluded_review&quot;: [
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        }
+      ],
+      &quot;remaining&quot;: [
+        &quot;Product headings retained as paragraph, not subheading.&quot;,
+        &quot;Position-based div selectors are fragile under layout changes.&quot;,
+        &quot;Cover pixels not extracted; overall image completeness unknown.&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;book_product_04&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;title&quot;: &quot;Sharp Objects&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/sharp-objects_997/index.html&quot;,
+      &quot;checks&quot;: {
+        &quot;title_matches&quot;: true,
+        &quot;description_matches&quot;: true,
+        &quot;price_matches&quot;: true,
+        &quot;stock_matches&quot;: true,
+        &quot;table_cells_match&quot;: true,
+        &quot;evidence_and_order_valid&quot;: true,
+        &quot;cart_or_recommendations_in_body&quot;: false,
+        &quot;heading_text_retained&quot;: true,
+        &quot;heading_types_correct&quot;: false
+      },
+      &quot;blocks&quot;: 6,
+      &quot;table_rows&quot;: 7,
+      &quot;excluded_review&quot;: [
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        }
+      ],
+      &quot;remaining&quot;: [
+        &quot;Product headings retained as paragraph, not subheading.&quot;,
+        &quot;Position-based div selectors are fragile under layout changes.&quot;,
+        &quot;Cover pixels not extracted; overall image completeness unknown.&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;book_product_06&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;title&quot;: &quot;The Requiem Red&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-requiem-red_995/index.html&quot;,
+      &quot;checks&quot;: {
+        &quot;title_matches&quot;: true,
+        &quot;description_matches&quot;: true,
+        &quot;price_matches&quot;: true,
+        &quot;stock_matches&quot;: true,
+        &quot;table_cells_match&quot;: true,
+        &quot;evidence_and_order_valid&quot;: true,
+        &quot;cart_or_recommendations_in_body&quot;: false,
+        &quot;heading_text_retained&quot;: true,
+        &quot;heading_types_correct&quot;: false
+      },
+      &quot;blocks&quot;: 6,
+      &quot;table_rows&quot;: 7,
+      &quot;excluded_review&quot;: [
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        }
+      ],
+      &quot;remaining&quot;: [
+        &quot;Product headings retained as paragraph, not subheading.&quot;,
+        &quot;Position-based div selectors are fragile under layout changes.&quot;,
+        &quot;Cover pixels not extracted; overall image completeness unknown.&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;book_product_08&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;title&quot;: &quot;The Coming Woman: A Novel Based on the Life of the Infamous Feminist, Victoria Woodhull&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html&quot;,
+      &quot;checks&quot;: {
+        &quot;title_matches&quot;: true,
+        &quot;description_matches&quot;: true,
+        &quot;price_matches&quot;: true,
+        &quot;stock_matches&quot;: true,
+        &quot;table_cells_match&quot;: true,
+        &quot;evidence_and_order_valid&quot;: true,
+        &quot;cart_or_recommendations_in_body&quot;: false,
+        &quot;heading_text_retained&quot;: true,
+        &quot;heading_types_correct&quot;: false
+      },
+      &quot;blocks&quot;: 6,
+      &quot;table_rows&quot;: 7,
+      &quot;excluded_review&quot;: [
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        }
+      ],
+      &quot;remaining&quot;: [
+        &quot;Product headings retained as paragraph, not subheading.&quot;,
+        &quot;Position-based div selectors are fragile under layout changes.&quot;,
+        &quot;Cover pixels not extracted; overall image completeness unknown.&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;book_product_10&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;title&quot;: &quot;The Black Maria&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-black-maria_991/index.html&quot;,
+      &quot;checks&quot;: {
+        &quot;title_matches&quot;: true,
+        &quot;description_matches&quot;: true,
+        &quot;price_matches&quot;: true,
+        &quot;stock_matches&quot;: true,
+        &quot;table_cells_match&quot;: true,
+        &quot;evidence_and_order_valid&quot;: true,
+        &quot;cart_or_recommendations_in_body&quot;: false,
+        &quot;heading_text_retained&quot;: true,
+        &quot;heading_types_correct&quot;: false
+      },
+      &quot;blocks&quot;: 6,
+      &quot;table_rows&quot;: 7,
+      &quot;excluded_review&quot;: [
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        },
+        {
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+          &quot;assessment&quot;: &quot;Appropriate exclusion: recently viewed products are recommendations, not current book content.&quot;
+        }
+      ],
+      &quot;remaining&quot;: [
+        &quot;Product headings retained as paragraph, not subheading.&quot;,
+        &quot;Position-based div selectors are fragile under layout changes.&quot;,
+        &quot;Cover pixels not extracted; overall image completeness unknown.&quot;
+      ]
+    }
+  ],
+  &quot;holdout_target_documents_in_prompt&quot;: false,
+  &quot;related_target_links_in_generation&quot;: [
+    {
+      &quot;generation_page&quot;: &quot;book_product_05&quot;,
+      &quot;related_target&quot;: &quot;book_product_02&quot;
+    },
+    {
+      &quot;generation_page&quot;: &quot;book_product_05&quot;,
+      &quot;related_target&quot;: &quot;book_product_04&quot;
+    },
+    {
+      &quot;generation_page&quot;: &quot;book_product_09&quot;,
+      &quot;related_target&quot;: &quot;book_product_04&quot;
+    },
+    {
+      &quot;generation_page&quot;: &quot;book_product_09&quot;,
+      &quot;related_target&quot;: &quot;book_product_06&quot;
+    },
+    {
+      &quot;generation_page&quot;: &quot;book_product_09&quot;,
+      &quot;related_target&quot;: &quot;book_product_08&quot;
+    }
+  ],
+  &quot;limitations&quot;: [
+    &quot;Same-site, same-template sample only; no cross-layout accuracy claim.&quot;,
+    &quot;Recently-viewed widgets expose some other target titles/prices in generation input. Target descriptions/tables were not separately supplied as holdout documents.&quot;,
+    &quot;XPath data interpreted by trusted lxml engine; not arbitrary Python generation or model weight training.&quot;
+  ],
+  &quot;cpu_replay_seconds&quot;: 0.054,
+  &quot;cpu_timing_scope&quot;: &quot;In-process re-extraction plus source checks; includes file reads and parsing, not an industrial throughput benchmark.&quot;,
+  &quot;summary&quot;: &quot;10/10 页的标题、描述、价格、库存及 7 行表格与原始 DOM 对应；正文未混入购物按钮或最近浏览推荐。10/10 页的小标题仍被标为 paragraph，图片完整性 unknown。自动检查状态保留 needs_review。&quot;
+}</pre></details></div>
+<div class="panel"><h2>样本与结果汇总</h2><p class="muted small">点击标题进入正文。生成页可影响规则；开发页可提供修复反馈；最终测试页只在冻结候选后执行。</p><div class="table-wrap"><table><thead><tr><th>文章 / 样本</th><th>角色</th><th>状态</th><th>正文块</th><th>页面信息</th><th>排除项</th></tr></thead><tbody>
+<tr><td><button class="quiet" data-jump="page-0">A Light in the Attic</button><br><span class="muted small">book_product_01</span></td><td>生成样本</td><td><span class="badge good">检查通过</span></td><td>6</td><td>0</td><td>0</td></tr>
+<tr><td><button class="quiet" data-jump="page-1">Soumission</button><br><span class="muted small">book_product_03</span></td><td>开发反馈</td><td><span class="badge warn">待审核</span></td><td>6</td><td>0</td><td>2</td></tr>
+<tr><td><button class="quiet" data-jump="page-2">Sapiens: A Brief History of Humankind</button><br><span class="muted small">book_product_05</span></td><td>生成样本</td><td><span class="badge warn">待审核</span></td><td>6</td><td>0</td><td>2</td></tr>
+<tr><td><button class="quiet" data-jump="page-3">The Dirty Little Secrets of Getting Your Dream Job</button><br><span class="muted small">book_product_07</span></td><td>开发反馈</td><td><span class="badge warn">待审核</span></td><td>6</td><td>0</td><td>2</td></tr>
+<tr><td><button class="quiet" data-jump="page-4">The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics</button><br><span class="muted small">book_product_09</span></td><td>生成样本</td><td><span class="badge warn">待审核</span></td><td>6</td><td>0</td><td>2</td></tr>
+<tr><td><button class="quiet" data-jump="page-5">Tipping the Velvet</button><br><span class="muted small">book_product_02</span></td><td>最终测试</td><td><span class="badge warn">待审核</span></td><td>6</td><td>0</td><td>2</td></tr>
+<tr><td><button class="quiet" data-jump="page-6">Sharp Objects</button><br><span class="muted small">book_product_04</span></td><td>最终测试</td><td><span class="badge warn">待审核</span></td><td>6</td><td>0</td><td>2</td></tr>
+<tr><td><button class="quiet" data-jump="page-7">The Requiem Red</button><br><span class="muted small">book_product_06</span></td><td>最终测试</td><td><span class="badge warn">待审核</span></td><td>6</td><td>0</td><td>2</td></tr>
+<tr><td><button class="quiet" data-jump="page-8">The Coming Woman: A Novel Based on the Life of the Infamous Feminist, Victoria Woodhull</button><br><span class="muted small">book_product_08</span></td><td>最终测试</td><td><span class="badge warn">待审核</span></td><td>6</td><td>0</td><td>2</td></tr>
+<tr><td><button class="quiet" data-jump="page-9">The Black Maria</button><br><span class="muted small">book_product_10</span></td><td>最终测试</td><td><span class="badge warn">待审核</span></td><td>6</td><td>0</td><td>2</td></tr>
+</tbody></table></div></div><div class="workspace"><aside class="sidebar"><h3>浏览文章</h3><label class="small" for="page-search">搜索标题或样本</label><input id="page-search" type="search" placeholder="输入关键词…"><label class="small" for="role-filter">样本角色</label><select id="role-filter"><option value="">全部角色</option><option value="generation">生成样本</option><option value="development_feedback">开发反馈</option><option value="final_holdout">最终测试</option></select><p class="muted small" id="nav-count">10 篇</p><div class="page-nav"><button class="page-button" data-target="page-0" data-role="generation" aria-pressed="false">A Light in the Attic<small>生成样本 · 6 块</small></button><button class="page-button" data-target="page-1" data-role="development_feedback" aria-pressed="false">Soumission<small>开发反馈 · 6 块</small></button><button class="page-button" data-target="page-2" data-role="generation" aria-pressed="false">Sapiens: A Brief History of Humankind<small>生成样本 · 6 块</small></button><button class="page-button" data-target="page-3" data-role="development_feedback" aria-pressed="false">The Dirty Little Secrets of Getting Your Dream Job<small>开发反馈 · 6 块</small></button><button class="page-button" data-target="page-4" data-role="generation" aria-pressed="false">The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics<small>生成样本 · 6 块</small></button><button class="page-button" data-target="page-5" data-role="final_holdout" aria-pressed="false">Tipping the Velvet<small>最终测试 · 6 块</small></button><button class="page-button" data-target="page-6" data-role="final_holdout" aria-pressed="false">Sharp Objects<small>最终测试 · 6 块</small></button><button class="page-button" data-target="page-7" data-role="final_holdout" aria-pressed="false">The Requiem Red<small>最终测试 · 6 块</small></button><button class="page-button" data-target="page-8" data-role="final_holdout" aria-pressed="false">The Coming Woman: A Novel Based on the Life of the Infamous Feminist, Victoria Woodhull<small>最终测试 · 6 块</small></button><button class="page-button" data-target="page-9" data-role="final_holdout" aria-pressed="false">The Black Maria<small>最终测试 · 6 块</small></button></div><p id="no-pages" class="muted small" hidden>没有匹配的文章，请更换关键词或角色。</p></aside><div><article class="panel article" id="page-0"><div class="article-meta"><span>生成样本</span><span>book_product_01</span><span class="badge good">检查通过</span></div><h2>A Light in the Attic</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/a-light-in-the-attic_1000/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="r0"><h3>页面信息 <span class="muted small">与正文分离</span></h3><p class="muted">本次未提取独立页面信息。</p><div class="content-title"><h3>提取正文 <span class="muted small">6 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>£51.77</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>In stock (22 available)</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">段落</span></div><p>Product Description</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>It&#x27;s hard to imagine a world without A Light in the Attic. This now-classic collection of poetry and drawings from Shel Silverstein celebrates its 20th anniversary with this special edition. Silverstein&#x27;s humorous and creative verse can amuse the dowdiest of readers. Lemon-faced adults and fidgety kids sit still and read these rhythmic words and laugh and smile and love th It&#x27;s hard to imagine a world without A Light in the Attic. This now-classic collection of poetry and drawings from Shel Silverstein celebrates its 20th anniversary with this special edition. Silverstein&#x27;s humorous and creative verse can amuse the dowdiest of readers. Lemon-faced adults and fidgety kids sit still and read these rhythmic words and laugh and smile and love that Silverstein. Need proof of his genius? RockabyeRockabye baby, in the treetopDon&#x27;t you know a treetopIs no safe place to rock?And who put you up there,And your cradle, too?Baby, I think someone down here&#x27;sGot it in for you. Shel, you never sounded so good. ...more</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/p</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>Product Information</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">表格</span></div><div class="table-wrap"><table class="body-table"><tbody><tr><td>UPC</td><td>a897fe39b1053632</td></tr><tr><td>Product Type</td><td>Books</td></tr><tr><td>Price (excl. tax)</td><td>£51.77</td></tr><tr><td>Price (incl. tax)</td><td>£51.77</td></tr><tr><td>Tax</td><td>£0.00</td></tr><tr><td>Availability</td><td>In stock (22 available)</td></tr><tr><td>Number of reviews</td><td>0</td></tr></tbody></table></div><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/table</pre></details></li></ol><details><summary>排除记录 · 0 项</summary><p class="muted">本次未提取独立页面信息。</p></details><details><summary>检查问题 · 0 项</summary><p class="muted">未记录结构检查问题。语义完整性仍需单独评估。</p></details><details><summary>局限与警告 · 3 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li><li>images_present_pixels_not_extracted_completeness_unknown</li></ul></details><details><summary>完整原始结果</summary><a href="round_0_book_product_01.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;A Light in the Attic&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;£51.77&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;In stock (22 available)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Description&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;It&#x27;s hard to imagine a world without A Light in the Attic. This now-classic collection of poetry and drawings from Shel Silverstein celebrates its 20th anniversary with this special edition. Silverstein&#x27;s humorous and creative verse can amuse the dowdiest of readers. Lemon-faced adults and fidgety kids sit still and read these rhythmic words and laugh and smile and love th It&#x27;s hard to imagine a world without A Light in the Attic. This now-classic collection of poetry and drawings from Shel Silverstein celebrates its 20th anniversary with this special edition. Silverstein&#x27;s humorous and creative verse can amuse the dowdiest of readers. Lemon-faced adults and fidgety kids sit still and read these rhythmic words and laugh and smile and love that Silverstein. Need proof of his genius? RockabyeRockabye baby, in the treetopDon&#x27;t you know a treetopIs no safe place to rock?And who put you up there,And your cradle, too?Baby, I think someone down here&#x27;sGot it in for you. Shel, you never sounded so good. ...more&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/p&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Information&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;table&quot;,
+      &quot;kind&quot;: &quot;table&quot;,
+      &quot;text&quot;: &quot;UPCa897fe39b1053632 Product TypeBooks Price (excl. tax)£51.77 Price (incl. tax)£51.77 Tax£0.00 Availability In stock (22 available) Number of reviews 0&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/table&quot;,
+      &quot;rows&quot;: [
+        [
+          &quot;UPC&quot;,
+          &quot;a897fe39b1053632&quot;
+        ],
+        [
+          &quot;Product Type&quot;,
+          &quot;Books&quot;
+        ],
+        [
+          &quot;Price (excl. tax)&quot;,
+          &quot;£51.77&quot;
+        ],
+        [
+          &quot;Price (incl. tax)&quot;,
+          &quot;£51.77&quot;
+        ],
+        [
+          &quot;Tax&quot;,
+          &quot;£0.00&quot;
+        ],
+        [
+          &quot;Availability&quot;,
+          &quot;In stock (22 available)&quot;
+        ],
+        [
+          &quot;Number of reviews&quot;,
+          &quot;0&quot;
+        ]
+      ]
+    }
+  ],
+  &quot;metadata&quot;: [],
+  &quot;excluded&quot;: [],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+    &quot;images_present_pixels_not_extracted_completeness_unknown&quot;
+  ]
+}</pre></details></div></article><article class="panel article" id="page-1"><div class="article-meta"><span>开发反馈</span><span>book_product_03</span><span class="badge warn">待审核</span></div><h2>Soumission</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/soumission_998/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/soumission_998/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="r0"><h3>页面信息 <span class="muted small">与正文分离</span></h3><p class="muted">本次未提取独立页面信息。</p><div class="content-title"><h3>提取正文 <span class="muted small">6 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>£50.10</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>In stock (20 available)</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">段落</span></div><p>Product Description</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>Dans une France assez proche de la nôtre, un homme s’engage dans la carrière universitaire. Peu motivé par l’enseignement, il s’attend à une vie ennuyeuse mais calme, protégée des grands drames historiques. Cependant les forces en jeu dans le pays ont fissuré le système politique jusqu’à provoquer son effondrement. Cette implosion sans soubresauts, sans vraie révolution, s Dans une France assez proche de la nôtre, un homme s’engage dans la carrière universitaire. Peu motivé par l’enseignement, il s’attend à une vie ennuyeuse mais calme, protégée des grands drames historiques. Cependant les forces en jeu dans le pays ont fissuré le système politique jusqu’à provoquer son effondrement. Cette implosion sans soubresauts, sans vraie révolution, se développe comme un mauvais rêve.Le talent de l’auteur, sa force visionnaire nous entraînent sur un terrain ambigu et glissant ; son regard sur notre civilisation vieillissante fait coexister dans ce roman les intuitions poétiques, les effets comiques, une mélancolie fataliste.Ce livre est une saisissante fable politique et morale. ...more</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/p</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>Product Information</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">表格</span></div><div class="table-wrap"><table class="body-table"><tbody><tr><td>UPC</td><td>6957f44c3847a760</td></tr><tr><td>Product Type</td><td>Books</td></tr><tr><td>Price (excl. tax)</td><td>£50.10</td></tr><tr><td>Price (incl. tax)</td><td>£50.10</td></tr><tr><td>Tax</td><td>£0.00</td></tr><tr><td>Availability</td><td>In stock (20 available)</td></tr><tr><td>Number of reviews</td><td>0</td></tr></tbody></table></div><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/table</pre></details></li></ol><details><summary>排除记录 · 2 项</summary><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">排除项</span></td><td>Products you recently viewed</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></td></tr><tr><td><span class="kind">排除项</span></td><td>Tipping the Velvet £53.74 In stock Add to basket A Light in the ... £51.77 In stock Add to basket</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></td></tr></tbody></table></div></details><details><summary>检查问题 · 2 项</summary><ul class="issues"><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></li></ul></details><details><summary>局限与警告 · 3 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li><li>images_present_pixels_not_extracted_completeness_unknown</li></ul></details><details><summary>完整原始结果</summary><a href="round_0_book_product_03.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;Soumission&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;£50.10&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;In stock (20 available)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Description&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Dans une France assez proche de la nôtre, un homme s’engage dans la carrière universitaire. Peu motivé par l’enseignement, il s’attend à une vie ennuyeuse mais calme, protégée des grands drames historiques. Cependant les forces en jeu dans le pays ont fissuré le système politique jusqu’à provoquer son effondrement. Cette implosion sans soubresauts, sans vraie révolution, s Dans une France assez proche de la nôtre, un homme s’engage dans la carrière universitaire. Peu motivé par l’enseignement, il s’attend à une vie ennuyeuse mais calme, protégée des grands drames historiques. Cependant les forces en jeu dans le pays ont fissuré le système politique jusqu’à provoquer son effondrement. Cette implosion sans soubresauts, sans vraie révolution, se développe comme un mauvais rêve.Le talent de l’auteur, sa force visionnaire nous entraînent sur un terrain ambigu et glissant ; son regard sur notre civilisation vieillissante fait coexister dans ce roman les intuitions poétiques, les effets comiques, une mélancolie fataliste.Ce livre est une saisissante fable politique et morale. ...more&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/p&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Information&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;table&quot;,
+      &quot;kind&quot;: &quot;table&quot;,
+      &quot;text&quot;: &quot;UPC6957f44c3847a760 Product TypeBooks Price (excl. tax)£50.10 Price (incl. tax)£50.10 Tax£0.00 Availability In stock (20 available) Number of reviews 0&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/table&quot;,
+      &quot;rows&quot;: [
+        [
+          &quot;UPC&quot;,
+          &quot;6957f44c3847a760&quot;
+        ],
+        [
+          &quot;Product Type&quot;,
+          &quot;Books&quot;
+        ],
+        [
+          &quot;Price (excl. tax)&quot;,
+          &quot;£50.10&quot;
+        ],
+        [
+          &quot;Price (incl. tax)&quot;,
+          &quot;£50.10&quot;
+        ],
+        [
+          &quot;Tax&quot;,
+          &quot;£0.00&quot;
+        ],
+        [
+          &quot;Availability&quot;,
+          &quot;In stock (20 available)&quot;
+        ],
+        [
+          &quot;Number of reviews&quot;,
+          &quot;0&quot;
+        ]
+      ]
+    }
+  ],
+  &quot;metadata&quot;: [],
+  &quot;excluded&quot;: [
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;Products you recently viewed&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;Tipping the Velvet £53.74 In stock Add to basket A Light in the ... £51.77 In stock Add to basket&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;
+    }
+  ],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+    &quot;images_present_pixels_not_extracted_completeness_unknown&quot;
+  ]
+}</pre></details></div></article><article class="panel article" id="page-2"><div class="article-meta"><span>生成样本</span><span>book_product_05</span><span class="badge warn">待审核</span></div><h2>Sapiens: A Brief History of Humankind</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/sapiens-a-brief-history-of-humankind_996/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="r0"><h3>页面信息 <span class="muted small">与正文分离</span></h3><p class="muted">本次未提取独立页面信息。</p><div class="content-title"><h3>提取正文 <span class="muted small">6 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>£54.23</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>In stock (20 available)</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">段落</span></div><p>Product Description</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>From a renowned historian comes a groundbreaking narrative of humanity’s creation and evolution—a #1 international bestseller—that explores the ways in which biology and history have defined us and enhanced our understanding of what it means to be “human.”One hundred thousand years ago, at least six different species of humans inhabited Earth. Yet today there is only one—h From a renowned historian comes a groundbreaking narrative of humanity’s creation and evolution—a #1 international bestseller—that explores the ways in which biology and history have defined us and enhanced our understanding of what it means to be “human.”One hundred thousand years ago, at least six different species of humans inhabited Earth. Yet today there is only one—homo sapiens. What happened to the others? And what may happen to us?Most books about the history of humanity pursue either a historical or a biological approach, but Dr. Yuval Noah Harari breaks the mold with this highly original book that begins about 70,000 years ago with the appearance of modern cognition. From examining the role evolving humans have played in the global ecosystem to charting the rise of empires, Sapiens integrates history and science to reconsider accepted narratives, connect past developments with contemporary concerns, and examine specific events within the context of larger ideas.Dr. Harari also compels us to look ahead, because over the last few decades humans have begun to bend laws of natural selection that have governed life for the past four billion years. We are acquiring the ability to design not only the world around us, but also ourselves. Where is this leading us, and what do we want to become?Featuring 27 photographs, 6 maps, and 25 illustrations/diagrams, this provocative and insightful work is sure to spark debate and is essential reading for aficionados of Jared Diamond, James Gleick, Matt Ridley, Robert Wright, and Sharon Moalem. ...more</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/p</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>Product Information</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">表格</span></div><div class="table-wrap"><table class="body-table"><tbody><tr><td>UPC</td><td>4165285e1663650f</td></tr><tr><td>Product Type</td><td>Books</td></tr><tr><td>Price (excl. tax)</td><td>£54.23</td></tr><tr><td>Price (incl. tax)</td><td>£54.23</td></tr><tr><td>Tax</td><td>£0.00</td></tr><tr><td>Availability</td><td>In stock (20 available)</td></tr><tr><td>Number of reviews</td><td>0</td></tr></tbody></table></div><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/table</pre></details></li></ol><details><summary>排除记录 · 2 项</summary><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">排除项</span></td><td>Products you recently viewed</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></td></tr><tr><td><span class="kind">排除项</span></td><td>Sharp Objects £47.82 In stock Add to basket Soumission £50.10 In stock Add to basket Tipping the Velvet £53.74 In stock Add to basket A Light in the ... £51.77 In stock Add to basket</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></td></tr></tbody></table></div></details><details><summary>检查问题 · 2 项</summary><ul class="issues"><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></li></ul></details><details><summary>局限与警告 · 3 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li><li>images_present_pixels_not_extracted_completeness_unknown</li></ul></details><details><summary>完整原始结果</summary><a href="round_0_book_product_05.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;Sapiens: A Brief History of Humankind&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;£54.23&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;In stock (20 available)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Description&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;From a renowned historian comes a groundbreaking narrative of humanity’s creation and evolution—a #1 international bestseller—that explores the ways in which biology and history have defined us and enhanced our understanding of what it means to be “human.”One hundred thousand years ago, at least six different species of humans inhabited Earth. Yet today there is only one—h From a renowned historian comes a groundbreaking narrative of humanity’s creation and evolution—a #1 international bestseller—that explores the ways in which biology and history have defined us and enhanced our understanding of what it means to be “human.”One hundred thousand years ago, at least six different species of humans inhabited Earth. Yet today there is only one—homo sapiens. What happened to the others? And what may happen to us?Most books about the history of humanity pursue either a historical or a biological approach, but Dr. Yuval Noah Harari breaks the mold with this highly original book that begins about 70,000 years ago with the appearance of modern cognition. From examining the role evolving humans have played in the global ecosystem to charting the rise of empires, Sapiens integrates history and science to reconsider accepted narratives, connect past developments with contemporary concerns, and examine specific events within the context of larger ideas.Dr. Harari also compels us to look ahead, because over the last few decades humans have begun to bend laws of natural selection that have governed life for the past four billion years. We are acquiring the ability to design not only the world around us, but also ourselves. Where is this leading us, and what do we want to become?Featuring 27 photographs, 6 maps, and 25 illustrations/diagrams, this provocative and insightful work is sure to spark debate and is essential reading for aficionados of Jared Diamond, James Gleick, Matt Ridley, Robert Wright, and Sharon Moalem. ...more&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/p&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Information&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;table&quot;,
+      &quot;kind&quot;: &quot;table&quot;,
+      &quot;text&quot;: &quot;UPC4165285e1663650f Product TypeBooks Price (excl. tax)£54.23 Price (incl. tax)£54.23 Tax£0.00 Availability In stock (20 available) Number of reviews 0&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/table&quot;,
+      &quot;rows&quot;: [
+        [
+          &quot;UPC&quot;,
+          &quot;4165285e1663650f&quot;
+        ],
+        [
+          &quot;Product Type&quot;,
+          &quot;Books&quot;
+        ],
+        [
+          &quot;Price (excl. tax)&quot;,
+          &quot;£54.23&quot;
+        ],
+        [
+          &quot;Price (incl. tax)&quot;,
+          &quot;£54.23&quot;
+        ],
+        [
+          &quot;Tax&quot;,
+          &quot;£0.00&quot;
+        ],
+        [
+          &quot;Availability&quot;,
+          &quot;In stock (20 available)&quot;
+        ],
+        [
+          &quot;Number of reviews&quot;,
+          &quot;0&quot;
+        ]
+      ]
+    }
+  ],
+  &quot;metadata&quot;: [],
+  &quot;excluded&quot;: [
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;Products you recently viewed&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;Sharp Objects £47.82 In stock Add to basket Soumission £50.10 In stock Add to basket Tipping the Velvet £53.74 In stock Add to basket A Light in the ... £51.77 In stock Add to basket&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;
+    }
+  ],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+    &quot;images_present_pixels_not_extracted_completeness_unknown&quot;
+  ]
+}</pre></details></div></article><article class="panel article" id="page-3"><div class="article-meta"><span>开发反馈</span><span>book_product_07</span><span class="badge warn">待审核</span></div><h2>The Dirty Little Secrets of Getting Your Dream Job</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="r0"><h3>页面信息 <span class="muted small">与正文分离</span></h3><p class="muted">本次未提取独立页面信息。</p><div class="content-title"><h3>提取正文 <span class="muted small">6 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>£33.34</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>In stock (19 available)</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">段落</span></div><p>Product Description</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>Drawing on his extensive experience evaluating applicants for his marketing agency, and featuring stories based on real-life situations, sample cover letters, resumes, and straightforward advice, Don Raskin’s The Dirty Little Secrets of Getting Your Dream Job offers all the necessary tools for navigating the tough job market and securing your dream job.Don Raskin owns and Drawing on his extensive experience evaluating applicants for his marketing agency, and featuring stories based on real-life situations, sample cover letters, resumes, and straightforward advice, Don Raskin’s The Dirty Little Secrets of Getting Your Dream Job offers all the necessary tools for navigating the tough job market and securing your dream job.Don Raskin owns and operates MME, an advertising and marketing agency in New York City. During his twenty-five years at the agency he has interviewed hundreds of new college graduates for positions within his agency and has placed a strong emphasis on entry-level recruitment for positions in creative, account management, traffic, and production. Raskin has also mentored countless students and their parents on best practices for the job search. Over the years, Raskin has kept exceptionally detailed notes on the interviews he has conducted, observing the good, the bad, the ridiculous, the irreverent. He also has a treasure trove of over-the-top cover letters, resumes, interviews, and post interview follow-ups he has conducted and received. Now, he wants to share all the wisdom and insider secrets he has gathered to help students and first-time job seekers find a job in this economy.Based on his remarkable expertise, Raskin&#x27;s book provides exclusive insight into the job search process and lets readers in on all of the dirty little secrets to landing their first job—or a new one—and finding career success. ...more</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/p</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>Product Information</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">表格</span></div><div class="table-wrap"><table class="body-table"><tbody><tr><td>UPC</td><td>2597b5a345f45e1b</td></tr><tr><td>Product Type</td><td>Books</td></tr><tr><td>Price (excl. tax)</td><td>£33.34</td></tr><tr><td>Price (incl. tax)</td><td>£33.34</td></tr><tr><td>Tax</td><td>£0.00</td></tr><tr><td>Availability</td><td>In stock (19 available)</td></tr><tr><td>Number of reviews</td><td>0</td></tr></tbody></table></div><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/table</pre></details></li></ol><details><summary>排除记录 · 2 项</summary><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">排除项</span></td><td>Products you recently viewed</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></td></tr><tr><td><span class="kind">排除项</span></td><td>The Requiem Red £22.65 In stock Add to basket Sapiens: A Brief History ... £54.23 In stock Add to basket Sharp Objects £47.82 In stock Add to basket Soumission £50.10 In stock Add to basket Tipping the Velvet £53.74 In stock Add to basket A Light in the ... £51.77 In stock Add to basket</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></td></tr></tbody></table></div></details><details><summary>检查问题 · 2 项</summary><ul class="issues"><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></li></ul></details><details><summary>局限与警告 · 3 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li><li>images_present_pixels_not_extracted_completeness_unknown</li></ul></details><details><summary>完整原始结果</summary><a href="round_0_book_product_07.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;The Dirty Little Secrets of Getting Your Dream Job&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;£33.34&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;In stock (19 available)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Description&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Drawing on his extensive experience evaluating applicants for his marketing agency, and featuring stories based on real-life situations, sample cover letters, resumes, and straightforward advice, Don Raskin’s The Dirty Little Secrets of Getting Your Dream Job offers all the necessary tools for navigating the tough job market and securing your dream job.Don Raskin owns and Drawing on his extensive experience evaluating applicants for his marketing agency, and featuring stories based on real-life situations, sample cover letters, resumes, and straightforward advice, Don Raskin’s The Dirty Little Secrets of Getting Your Dream Job offers all the necessary tools for navigating the tough job market and securing your dream job.Don Raskin owns and operates MME, an advertising and marketing agency in New York City. During his twenty-five years at the agency he has interviewed hundreds of new college graduates for positions within his agency and has placed a strong emphasis on entry-level recruitment for positions in creative, account management, traffic, and production. Raskin has also mentored countless students and their parents on best practices for the job search. Over the years, Raskin has kept exceptionally detailed notes on the interviews he has conducted, observing the good, the bad, the ridiculous, the irreverent. He also has a treasure trove of over-the-top cover letters, resumes, interviews, and post interview follow-ups he has conducted and received. Now, he wants to share all the wisdom and insider secrets he has gathered to help students and first-time job seekers find a job in this economy.Based on his remarkable expertise, Raskin&#x27;s book provides exclusive insight into the job search process and lets readers in on all of the dirty little secrets to landing their first job—or a new one—and finding career success. ...more&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/p&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Information&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;table&quot;,
+      &quot;kind&quot;: &quot;table&quot;,
+      &quot;text&quot;: &quot;UPC2597b5a345f45e1b Product TypeBooks Price (excl. tax)£33.34 Price (incl. tax)£33.34 Tax£0.00 Availability In stock (19 available) Number of reviews 0&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/table&quot;,
+      &quot;rows&quot;: [
+        [
+          &quot;UPC&quot;,
+          &quot;2597b5a345f45e1b&quot;
+        ],
+        [
+          &quot;Product Type&quot;,
+          &quot;Books&quot;
+        ],
+        [
+          &quot;Price (excl. tax)&quot;,
+          &quot;£33.34&quot;
+        ],
+        [
+          &quot;Price (incl. tax)&quot;,
+          &quot;£33.34&quot;
+        ],
+        [
+          &quot;Tax&quot;,
+          &quot;£0.00&quot;
+        ],
+        [
+          &quot;Availability&quot;,
+          &quot;In stock (19 available)&quot;
+        ],
+        [
+          &quot;Number of reviews&quot;,
+          &quot;0&quot;
+        ]
+      ]
+    }
+  ],
+  &quot;metadata&quot;: [],
+  &quot;excluded&quot;: [
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;Products you recently viewed&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;The Requiem Red £22.65 In stock Add to basket Sapiens: A Brief History ... £54.23 In stock Add to basket Sharp Objects £47.82 In stock Add to basket Soumission £50.10 In stock Add to basket Tipping the Velvet £53.74 In stock Add to basket A Light in the ... £51.77 In stock Add to basket&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;
+    }
+  ],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+    &quot;images_present_pixels_not_extracted_completeness_unknown&quot;
+  ]
+}</pre></details></div></article><article class="panel article" id="page-4"><div class="article-meta"><span>生成样本</span><span>book_product_09</span><span class="badge warn">待审核</span></div><h2>The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="r0"><h3>页面信息 <span class="muted small">与正文分离</span></h3><p class="muted">本次未提取独立页面信息。</p><div class="content-title"><h3>提取正文 <span class="muted small">6 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>£22.60</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>In stock (19 available)</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">段落</span></div><p>Product Description</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>For readers of Laura Hillenbrand&#x27;s Seabiscuit and Unbroken, the dramatic story of the American rowing team that stunned the world at Hitler&#x27;s 1936 Berlin Olympics Daniel James Brown’s robust book tells the story of the University of Washington’s 1936 eight-oar crew and their epic quest for an Olympic gold medal, a team that transformed the sport and grabbed the attention o For readers of Laura Hillenbrand&#x27;s Seabiscuit and Unbroken, the dramatic story of the American rowing team that stunned the world at Hitler&#x27;s 1936 Berlin Olympics Daniel James Brown’s robust book tells the story of the University of Washington’s 1936 eight-oar crew and their epic quest for an Olympic gold medal, a team that transformed the sport and grabbed the attention of millions of Americans. The sons of loggers, shipyard workers, and farmers, the boys defeated elite rivals first from eastern and British universities and finally the German crew rowing for Adolf Hitler in the Olympic games in Berlin, 1936. The emotional heart of the story lies with one rower, Joe Rantz, a teenager without family or prospects, who rows not for glory, but to regain his shattered self-regard and to find a place he can call home. The crew is assembled by an enigmatic coach and mentored by a visionary, eccentric British boat builder, but it is their trust in each other that makes them a victorious team. They remind the country of what can be done when everyone quite literally pulls together—a perfect melding of commitment, determination, and optimism. Drawing on the boys’ own diaries and journals, their photos and memories of a once-in-a-lifetime shared dream, The Boys in the Boat is an irresistible story about beating the odds and finding hope in the most desperate of times—the improbable, intimate story of nine working-class boys from the American west who, in the depths of the Great Depression, showed the world what true grit really meant. It will appeal to readers of Erik Larson, Timothy Egan, James Bradley, and David Halberstam&#x27;s The Amateurs. ...more</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/p</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>Product Information</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">表格</span></div><div class="table-wrap"><table class="body-table"><tbody><tr><td>UPC</td><td>e10e1e165dc8be4a</td></tr><tr><td>Product Type</td><td>Books</td></tr><tr><td>Price (excl. tax)</td><td>£22.60</td></tr><tr><td>Price (incl. tax)</td><td>£22.60</td></tr><tr><td>Tax</td><td>£0.00</td></tr><tr><td>Availability</td><td>In stock (19 available)</td></tr><tr><td>Number of reviews</td><td>0</td></tr></tbody></table></div><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/table</pre></details></li></ol><details><summary>排除记录 · 2 项</summary><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">排除项</span></td><td>Products you recently viewed</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></td></tr><tr><td><span class="kind">排除项</span></td><td>The Coming Woman: A ... £17.93 In stock Add to basket The Dirty Little Secrets ... £33.34 In stock Add to basket The Requiem Red £22.65 In stock Add to basket Sapiens: A Brief History ... £54.23 In stock Add to basket Sharp Objects £47.82 In stock Add to basket Soumission £50.10 In stock Add to basket</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></td></tr></tbody></table></div></details><details><summary>检查问题 · 2 项</summary><ul class="issues"><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></li></ul></details><details><summary>局限与警告 · 3 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li><li>images_present_pixels_not_extracted_completeness_unknown</li></ul></details><details><summary>完整原始结果</summary><a href="round_0_book_product_09.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;£22.60&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;In stock (19 available)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Description&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;For readers of Laura Hillenbrand&#x27;s Seabiscuit and Unbroken, the dramatic story of the American rowing team that stunned the world at Hitler&#x27;s 1936 Berlin Olympics Daniel James Brown’s robust book tells the story of the University of Washington’s 1936 eight-oar crew and their epic quest for an Olympic gold medal, a team that transformed the sport and grabbed the attention o For readers of Laura Hillenbrand&#x27;s Seabiscuit and Unbroken, the dramatic story of the American rowing team that stunned the world at Hitler&#x27;s 1936 Berlin Olympics Daniel James Brown’s robust book tells the story of the University of Washington’s 1936 eight-oar crew and their epic quest for an Olympic gold medal, a team that transformed the sport and grabbed the attention of millions of Americans. The sons of loggers, shipyard workers, and farmers, the boys defeated elite rivals first from eastern and British universities and finally the German crew rowing for Adolf Hitler in the Olympic games in Berlin, 1936. The emotional heart of the story lies with one rower, Joe Rantz, a teenager without family or prospects, who rows not for glory, but to regain his shattered self-regard and to find a place he can call home. The crew is assembled by an enigmatic coach and mentored by a visionary, eccentric British boat builder, but it is their trust in each other that makes them a victorious team. They remind the country of what can be done when everyone quite literally pulls together—a perfect melding of commitment, determination, and optimism. Drawing on the boys’ own diaries and journals, their photos and memories of a once-in-a-lifetime shared dream, The Boys in the Boat is an irresistible story about beating the odds and finding hope in the most desperate of times—the improbable, intimate story of nine working-class boys from the American west who, in the depths of the Great Depression, showed the world what true grit really meant. It will appeal to readers of Erik Larson, Timothy Egan, James Bradley, and David Halberstam&#x27;s The Amateurs. ...more&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/p&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Information&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;table&quot;,
+      &quot;kind&quot;: &quot;table&quot;,
+      &quot;text&quot;: &quot;UPCe10e1e165dc8be4a Product TypeBooks Price (excl. tax)£22.60 Price (incl. tax)£22.60 Tax£0.00 Availability In stock (19 available) Number of reviews 0&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/table&quot;,
+      &quot;rows&quot;: [
+        [
+          &quot;UPC&quot;,
+          &quot;e10e1e165dc8be4a&quot;
+        ],
+        [
+          &quot;Product Type&quot;,
+          &quot;Books&quot;
+        ],
+        [
+          &quot;Price (excl. tax)&quot;,
+          &quot;£22.60&quot;
+        ],
+        [
+          &quot;Price (incl. tax)&quot;,
+          &quot;£22.60&quot;
+        ],
+        [
+          &quot;Tax&quot;,
+          &quot;£0.00&quot;
+        ],
+        [
+          &quot;Availability&quot;,
+          &quot;In stock (19 available)&quot;
+        ],
+        [
+          &quot;Number of reviews&quot;,
+          &quot;0&quot;
+        ]
+      ]
+    }
+  ],
+  &quot;metadata&quot;: [],
+  &quot;excluded&quot;: [
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;Products you recently viewed&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;The Coming Woman: A ... £17.93 In stock Add to basket The Dirty Little Secrets ... £33.34 In stock Add to basket The Requiem Red £22.65 In stock Add to basket Sapiens: A Brief History ... £54.23 In stock Add to basket Sharp Objects £47.82 In stock Add to basket Soumission £50.10 In stock Add to basket&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;
+    }
+  ],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+    &quot;images_present_pixels_not_extracted_completeness_unknown&quot;
+  ]
+}</pre></details></div></article><article class="panel article" id="page-5"><div class="article-meta"><span>最终测试</span><span>book_product_02</span><span class="badge warn">待审核</span></div><h2>Tipping the Velvet</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/tipping-the-velvet_999/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="holdout"><h3>页面信息 <span class="muted small">与正文分离</span></h3><p class="muted">本次未提取独立页面信息。</p><div class="content-title"><h3>提取正文 <span class="muted small">6 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>£53.74</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>In stock (20 available)</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">段落</span></div><p>Product Description</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>&quot;Erotic and absorbing...Written with starling power.&quot;--&quot;The New York Times Book Review &quot; Nan King, an oyster girl, is captivated by the music hall phenomenon Kitty Butler, a male impersonator extraordinaire treading the boards in Canterbury. Through a friend at the box office, Nan manages to visit all her shows and finally meet her heroine. Soon after, she becomes Kitty&#x27;s &quot;Erotic and absorbing...Written with starling power.&quot;--&quot;The New York Times Book Review &quot; Nan King, an oyster girl, is captivated by the music hall phenomenon Kitty Butler, a male impersonator extraordinaire treading the boards in Canterbury. Through a friend at the box office, Nan manages to visit all her shows and finally meet her heroine. Soon after, she becomes Kitty&#x27;s dresser and the two head for the bright lights of Leicester Square where they begin a glittering career as music-hall stars in an all-singing and dancing double act. At the same time, behind closed doors, they admit their attraction to each other and their affair begins. ...more</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/p</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>Product Information</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">表格</span></div><div class="table-wrap"><table class="body-table"><tbody><tr><td>UPC</td><td>90fa61229261140a</td></tr><tr><td>Product Type</td><td>Books</td></tr><tr><td>Price (excl. tax)</td><td>£53.74</td></tr><tr><td>Price (incl. tax)</td><td>£53.74</td></tr><tr><td>Tax</td><td>£0.00</td></tr><tr><td>Availability</td><td>In stock (20 available)</td></tr><tr><td>Number of reviews</td><td>0</td></tr></tbody></table></div><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/table</pre></details></li></ol><details><summary>排除记录 · 2 项</summary><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">排除项</span></td><td>Products you recently viewed</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></td></tr><tr><td><span class="kind">排除项</span></td><td>A Light in the ... £51.77 In stock Add to basket</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></td></tr></tbody></table></div></details><details><summary>检查问题 · 2 项</summary><ul class="issues"><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></li></ul></details><details><summary>局限与警告 · 3 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li><li>images_present_pixels_not_extracted_completeness_unknown</li></ul></details><details><summary>完整原始结果</summary><a href="holdout_book_product_02.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;Tipping the Velvet&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;£53.74&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;In stock (20 available)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Description&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;\&quot;Erotic and absorbing...Written with starling power.\&quot;--\&quot;The New York Times Book Review \&quot; Nan King, an oyster girl, is captivated by the music hall phenomenon Kitty Butler, a male impersonator extraordinaire treading the boards in Canterbury. Through a friend at the box office, Nan manages to visit all her shows and finally meet her heroine. Soon after, she becomes Kitty&#x27;s \&quot;Erotic and absorbing...Written with starling power.\&quot;--\&quot;The New York Times Book Review \&quot; Nan King, an oyster girl, is captivated by the music hall phenomenon Kitty Butler, a male impersonator extraordinaire treading the boards in Canterbury. Through a friend at the box office, Nan manages to visit all her shows and finally meet her heroine. Soon after, she becomes Kitty&#x27;s dresser and the two head for the bright lights of Leicester Square where they begin a glittering career as music-hall stars in an all-singing and dancing double act. At the same time, behind closed doors, they admit their attraction to each other and their affair begins. ...more&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/p&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Information&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;table&quot;,
+      &quot;kind&quot;: &quot;table&quot;,
+      &quot;text&quot;: &quot;UPC90fa61229261140a Product TypeBooks Price (excl. tax)£53.74 Price (incl. tax)£53.74 Tax£0.00 Availability In stock (20 available) Number of reviews 0&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/table&quot;,
+      &quot;rows&quot;: [
+        [
+          &quot;UPC&quot;,
+          &quot;90fa61229261140a&quot;
+        ],
+        [
+          &quot;Product Type&quot;,
+          &quot;Books&quot;
+        ],
+        [
+          &quot;Price (excl. tax)&quot;,
+          &quot;£53.74&quot;
+        ],
+        [
+          &quot;Price (incl. tax)&quot;,
+          &quot;£53.74&quot;
+        ],
+        [
+          &quot;Tax&quot;,
+          &quot;£0.00&quot;
+        ],
+        [
+          &quot;Availability&quot;,
+          &quot;In stock (20 available)&quot;
+        ],
+        [
+          &quot;Number of reviews&quot;,
+          &quot;0&quot;
+        ]
+      ]
+    }
+  ],
+  &quot;metadata&quot;: [],
+  &quot;excluded&quot;: [
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;Products you recently viewed&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;A Light in the ... £51.77 In stock Add to basket&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;
+    }
+  ],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+    &quot;images_present_pixels_not_extracted_completeness_unknown&quot;
+  ]
+}</pre></details></div></article><article class="panel article" id="page-6"><div class="article-meta"><span>最终测试</span><span>book_product_04</span><span class="badge warn">待审核</span></div><h2>Sharp Objects</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/sharp-objects_997/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/sharp-objects_997/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="holdout"><h3>页面信息 <span class="muted small">与正文分离</span></h3><p class="muted">本次未提取独立页面信息。</p><div class="content-title"><h3>提取正文 <span class="muted small">6 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>£47.82</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>In stock (20 available)</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">段落</span></div><p>Product Description</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>WICKED above her hipbone, GIRL across her heart Words are like a road map to reporter Camille Preaker’s troubled past. Fresh from a brief stay at a psych hospital, Camille’s first assignment from the second-rate daily paper where she works brings her reluctantly back to her hometown to cover the murders of two preteen girls. NASTY on her kneecap, BABYDOLL on her leg Since WICKED above her hipbone, GIRL across her heart Words are like a road map to reporter Camille Preaker’s troubled past. Fresh from a brief stay at a psych hospital, Camille’s first assignment from the second-rate daily paper where she works brings her reluctantly back to her hometown to cover the murders of two preteen girls. NASTY on her kneecap, BABYDOLL on her leg Since she left town eight years ago, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed again in her family’s Victorian mansion, Camille is haunted by the childhood tragedy she has spent her whole life trying to cut from her memory. HARMFUL on her wrist, WHORE on her ankle As Camille works to uncover the truth about these violent crimes, she finds herself identifying with the young victims—a bit too strongly. Clues keep leading to dead ends, forcing Camille to unravel the psychological puzzle of her own past to get at the story. Dogged by her own demons, Camille will have to confront what happened to her years before if she wants to survive this homecoming.With its taut, crafted writing, Sharp Objects is addictive, haunting, and unforgettable. ...more</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/p</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>Product Information</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">表格</span></div><div class="table-wrap"><table class="body-table"><tbody><tr><td>UPC</td><td>e00eb4fd7b871a48</td></tr><tr><td>Product Type</td><td>Books</td></tr><tr><td>Price (excl. tax)</td><td>£47.82</td></tr><tr><td>Price (incl. tax)</td><td>£47.82</td></tr><tr><td>Tax</td><td>£0.00</td></tr><tr><td>Availability</td><td>In stock (20 available)</td></tr><tr><td>Number of reviews</td><td>0</td></tr></tbody></table></div><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/table</pre></details></li></ol><details><summary>排除记录 · 2 项</summary><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">排除项</span></td><td>Products you recently viewed</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></td></tr><tr><td><span class="kind">排除项</span></td><td>Soumission £50.10 In stock Add to basket Tipping the Velvet £53.74 In stock Add to basket A Light in the ... £51.77 In stock Add to basket</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></td></tr></tbody></table></div></details><details><summary>检查问题 · 2 项</summary><ul class="issues"><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></li></ul></details><details><summary>局限与警告 · 3 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li><li>images_present_pixels_not_extracted_completeness_unknown</li></ul></details><details><summary>完整原始结果</summary><a href="holdout_book_product_04.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;Sharp Objects&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;£47.82&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;In stock (20 available)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Description&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;WICKED above her hipbone, GIRL across her heart Words are like a road map to reporter Camille Preaker’s troubled past. Fresh from a brief stay at a psych hospital, Camille’s first assignment from the second-rate daily paper where she works brings her reluctantly back to her hometown to cover the murders of two preteen girls. NASTY on her kneecap, BABYDOLL on her leg Since WICKED above her hipbone, GIRL across her heart Words are like a road map to reporter Camille Preaker’s troubled past. Fresh from a brief stay at a psych hospital, Camille’s first assignment from the second-rate daily paper where she works brings her reluctantly back to her hometown to cover the murders of two preteen girls. NASTY on her kneecap, BABYDOLL on her leg Since she left town eight years ago, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed again in her family’s Victorian mansion, Camille is haunted by the childhood tragedy she has spent her whole life trying to cut from her memory. HARMFUL on her wrist, WHORE on her ankle As Camille works to uncover the truth about these violent crimes, she finds herself identifying with the young victims—a bit too strongly. Clues keep leading to dead ends, forcing Camille to unravel the psychological puzzle of her own past to get at the story. Dogged by her own demons, Camille will have to confront what happened to her years before if she wants to survive this homecoming.With its taut, crafted writing, Sharp Objects is addictive, haunting, and unforgettable. ...more&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/p&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Information&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;table&quot;,
+      &quot;kind&quot;: &quot;table&quot;,
+      &quot;text&quot;: &quot;UPCe00eb4fd7b871a48 Product TypeBooks Price (excl. tax)£47.82 Price (incl. tax)£47.82 Tax£0.00 Availability In stock (20 available) Number of reviews 0&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/table&quot;,
+      &quot;rows&quot;: [
+        [
+          &quot;UPC&quot;,
+          &quot;e00eb4fd7b871a48&quot;
+        ],
+        [
+          &quot;Product Type&quot;,
+          &quot;Books&quot;
+        ],
+        [
+          &quot;Price (excl. tax)&quot;,
+          &quot;£47.82&quot;
+        ],
+        [
+          &quot;Price (incl. tax)&quot;,
+          &quot;£47.82&quot;
+        ],
+        [
+          &quot;Tax&quot;,
+          &quot;£0.00&quot;
+        ],
+        [
+          &quot;Availability&quot;,
+          &quot;In stock (20 available)&quot;
+        ],
+        [
+          &quot;Number of reviews&quot;,
+          &quot;0&quot;
+        ]
+      ]
+    }
+  ],
+  &quot;metadata&quot;: [],
+  &quot;excluded&quot;: [
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;Products you recently viewed&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;Soumission £50.10 In stock Add to basket Tipping the Velvet £53.74 In stock Add to basket A Light in the ... £51.77 In stock Add to basket&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;
+    }
+  ],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+    &quot;images_present_pixels_not_extracted_completeness_unknown&quot;
+  ]
+}</pre></details></div></article><article class="panel article" id="page-7"><div class="article-meta"><span>最终测试</span><span>book_product_06</span><span class="badge warn">待审核</span></div><h2>The Requiem Red</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/the-requiem-red_995/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/the-requiem-red_995/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="holdout"><h3>页面信息 <span class="muted small">与正文分离</span></h3><p class="muted">本次未提取独立页面信息。</p><div class="content-title"><h3>提取正文 <span class="muted small">6 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>£22.65</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>In stock (19 available)</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">段落</span></div><p>Product Description</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>Patient Twenty-nine.A monster roams the halls of Soothing Hills Asylum. Three girls dead. 29 is endowed with the curse…or gift of perception. She hears messages in music, sees lyrics in paintings. And the corn. A lifetime asylum resident, the orchestral corn music is the only constant in her life.Mason, a new, kind orderly, sees 29 as a woman, not a lunatic. And as his bel Patient Twenty-nine.A monster roams the halls of Soothing Hills Asylum. Three girls dead. 29 is endowed with the curse…or gift of perception. She hears messages in music, sees lyrics in paintings. And the corn. A lifetime asylum resident, the orchestral corn music is the only constant in her life.Mason, a new, kind orderly, sees 29 as a woman, not a lunatic. And as his belief in her grows, so does her self- confidence. That perhaps she might escape, might see the outside world. But the monster has other plans. The missing girls share one common thread...each was twenty-nine&#x27;s cell mate. Will she be next? ...more</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/p</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>Product Information</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">表格</span></div><div class="table-wrap"><table class="body-table"><tbody><tr><td>UPC</td><td>f77dbf2323deb740</td></tr><tr><td>Product Type</td><td>Books</td></tr><tr><td>Price (excl. tax)</td><td>£22.65</td></tr><tr><td>Price (incl. tax)</td><td>£22.65</td></tr><tr><td>Tax</td><td>£0.00</td></tr><tr><td>Availability</td><td>In stock (19 available)</td></tr><tr><td>Number of reviews</td><td>0</td></tr></tbody></table></div><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/table</pre></details></li></ol><details><summary>排除记录 · 2 项</summary><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">排除项</span></td><td>Products you recently viewed</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></td></tr><tr><td><span class="kind">排除项</span></td><td>Sapiens: A Brief History ... £54.23 In stock Add to basket Sharp Objects £47.82 In stock Add to basket Soumission £50.10 In stock Add to basket Tipping the Velvet £53.74 In stock Add to basket A Light in the ... £51.77 In stock Add to basket</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></td></tr></tbody></table></div></details><details><summary>检查问题 · 2 项</summary><ul class="issues"><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></li></ul></details><details><summary>局限与警告 · 3 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li><li>images_present_pixels_not_extracted_completeness_unknown</li></ul></details><details><summary>完整原始结果</summary><a href="holdout_book_product_06.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;The Requiem Red&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;£22.65&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;In stock (19 available)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Description&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Patient Twenty-nine.A monster roams the halls of Soothing Hills Asylum. Three girls dead. 29 is endowed with the curse…or gift of perception. She hears messages in music, sees lyrics in paintings. And the corn. A lifetime asylum resident, the orchestral corn music is the only constant in her life.Mason, a new, kind orderly, sees 29 as a woman, not a lunatic. And as his bel Patient Twenty-nine.A monster roams the halls of Soothing Hills Asylum. Three girls dead. 29 is endowed with the curse…or gift of perception. She hears messages in music, sees lyrics in paintings. And the corn. A lifetime asylum resident, the orchestral corn music is the only constant in her life.Mason, a new, kind orderly, sees 29 as a woman, not a lunatic. And as his belief in her grows, so does her self- confidence. That perhaps she might escape, might see the outside world. But the monster has other plans. The missing girls share one common thread...each was twenty-nine&#x27;s cell mate. Will she be next? ...more&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/p&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Information&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;table&quot;,
+      &quot;kind&quot;: &quot;table&quot;,
+      &quot;text&quot;: &quot;UPCf77dbf2323deb740 Product TypeBooks Price (excl. tax)£22.65 Price (incl. tax)£22.65 Tax£0.00 Availability In stock (19 available) Number of reviews 0&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/table&quot;,
+      &quot;rows&quot;: [
+        [
+          &quot;UPC&quot;,
+          &quot;f77dbf2323deb740&quot;
+        ],
+        [
+          &quot;Product Type&quot;,
+          &quot;Books&quot;
+        ],
+        [
+          &quot;Price (excl. tax)&quot;,
+          &quot;£22.65&quot;
+        ],
+        [
+          &quot;Price (incl. tax)&quot;,
+          &quot;£22.65&quot;
+        ],
+        [
+          &quot;Tax&quot;,
+          &quot;£0.00&quot;
+        ],
+        [
+          &quot;Availability&quot;,
+          &quot;In stock (19 available)&quot;
+        ],
+        [
+          &quot;Number of reviews&quot;,
+          &quot;0&quot;
+        ]
+      ]
+    }
+  ],
+  &quot;metadata&quot;: [],
+  &quot;excluded&quot;: [
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;Products you recently viewed&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;Sapiens: A Brief History ... £54.23 In stock Add to basket Sharp Objects £47.82 In stock Add to basket Soumission £50.10 In stock Add to basket Tipping the Velvet £53.74 In stock Add to basket A Light in the ... £51.77 In stock Add to basket&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;
+    }
+  ],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+    &quot;images_present_pixels_not_extracted_completeness_unknown&quot;
+  ]
+}</pre></details></div></article><article class="panel article" id="page-8"><div class="article-meta"><span>最终测试</span><span>book_product_08</span><span class="badge warn">待审核</span></div><h2>The Coming Woman: A Novel Based on the Life of the Infamous Feminist, Victoria Woodhull</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="holdout"><h3>页面信息 <span class="muted small">与正文分离</span></h3><p class="muted">本次未提取独立页面信息。</p><div class="content-title"><h3>提取正文 <span class="muted small">6 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>£17.93</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>In stock (19 available)</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">段落</span></div><p>Product Description</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>&quot;If you have a heart, if you have a soul, Karen Hicks&#x27; The Coming Woman will make you fall in love with Victoria Woodhull.&quot;-Kinky Friedman, author and Governor of the Heart of Texas &quot;What kind of confidence would it take for a woman to buck the old boy&#x27;s club of politics in 1872? More than 140 years pre-Hillary, there was Victoria Woodhull. This book takes you back with a &quot;If you have a heart, if you have a soul, Karen Hicks&#x27; The Coming Woman will make you fall in love with Victoria Woodhull.&quot;-Kinky Friedman, author and Governor of the Heart of Texas &quot;What kind of confidence would it take for a woman to buck the old boy&#x27;s club of politics in 1872? More than 140 years pre-Hillary, there was Victoria Woodhull. This book takes you back with a breathtaking, present-tense bird&#x27;s eye view into a time when women&#x27;s liberation was primarily confined to one woman&#x27;s very capable, independent mind. I couldn&#x27;t put it down.&quot;---Ruth Buzzi, Golden Globe Award winner and Television Hall of Fame inductee&quot;Sadly, too many Americans have never heard of Victoria Woodhull, let alone learned of her story: her revolutionary campaign for the presidency at a time when women weren&#x27;t even allowed to vote, her support for worker&#x27;s rights, or her feminist commitment to equality, a century before the official battle over the Equal Rights Amendment. But in The Coming Woman, Karen Hicks brings Woodhull&#x27;s efforts to life, and reminds us that some of our nation&#x27;s greatest figures aren&#x27;t always featured in the history books. It is a riveting account of an amazing woman and her struggle for justice and human dignity, told in an engaging and eminently readable style.&quot;-Tim Wise, author, &quot;White Like Me: Reflections on Race from a Privileged Son&quot;&quot;The Coming Woman&quot; is a novel based on the life of feminist Victoria Woodhull, the first woman to run for U.S. President, 50 years before women could even vote!Running for President wasn&#x27;t Victoria&#x27;s only first as a woman. She was also the first to own a successful Wall Street firm, the first to publish a successful national newspaper, and the first to head the two-million-member Spiritualist Association. She was the first woman to enter the Senate Judiciary Committee chambers to petition for woman&#x27;s suffrage, her argument changing the entire focus of the suffragist movement by pointing out that the 14th and 15th Amendments already gave women the vote.In her campaign for the Presidency, Victoria Woodhull boldly addressed many of the issues we still face today: equal pay for equal work; freedom in love; corporate greed and political corruption fueled by powerful lobbyists; and the increasing disparity between the rich and the poor, to name only a few. Her outspoken and common-sense ideas may shed a new perspective on the parallel conundrums of today&#x27;s world.This bold, beautiful, and sexually progressive woman dared to take on society and religion. To make an example of the hypocrisy in what Mark Twain dubbed The Gilded Age, she exposed the extramarital affairs of the most popular religious figure of the day (Henry Ward Beecher). This led to her persecution and imprisonment and the longest, most infamous trial of the 19th century. But it did not stop her fight for equality.Victoria&#x27;s epic story, set in the late 1800s, comes to life in a modern, fictional style, while staying true to the actual words and views of the many well-known characters. ...more</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/p</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>Product Information</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">表格</span></div><div class="table-wrap"><table class="body-table"><tbody><tr><td>UPC</td><td>e72a5dfc7e9267b2</td></tr><tr><td>Product Type</td><td>Books</td></tr><tr><td>Price (excl. tax)</td><td>£17.93</td></tr><tr><td>Price (incl. tax)</td><td>£17.93</td></tr><tr><td>Tax</td><td>£0.00</td></tr><tr><td>Availability</td><td>In stock (19 available)</td></tr><tr><td>Number of reviews</td><td>0</td></tr></tbody></table></div><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/table</pre></details></li></ol><details><summary>排除记录 · 2 项</summary><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">排除项</span></td><td>Products you recently viewed</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></td></tr><tr><td><span class="kind">排除项</span></td><td>The Dirty Little Secrets ... £33.34 In stock Add to basket The Requiem Red £22.65 In stock Add to basket Sapiens: A Brief History ... £54.23 In stock Add to basket Sharp Objects £47.82 In stock Add to basket Soumission £50.10 In stock Add to basket Tipping the Velvet £53.74 In stock Add to basket</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></td></tr></tbody></table></div></details><details><summary>检查问题 · 2 项</summary><ul class="issues"><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></li></ul></details><details><summary>局限与警告 · 3 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li><li>images_present_pixels_not_extracted_completeness_unknown</li></ul></details><details><summary>完整原始结果</summary><a href="holdout_book_product_08.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;The Coming Woman: A Novel Based on the Life of the Infamous Feminist, Victoria Woodhull&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;£17.93&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;In stock (19 available)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Description&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;\&quot;If you have a heart, if you have a soul, Karen Hicks&#x27; The Coming Woman will make you fall in love with Victoria Woodhull.\&quot;-Kinky Friedman, author and Governor of the Heart of Texas \&quot;What kind of confidence would it take for a woman to buck the old boy&#x27;s club of politics in 1872? More than 140 years pre-Hillary, there was Victoria Woodhull. This book takes you back with a \&quot;If you have a heart, if you have a soul, Karen Hicks&#x27; The Coming Woman will make you fall in love with Victoria Woodhull.\&quot;-Kinky Friedman, author and Governor of the Heart of Texas \&quot;What kind of confidence would it take for a woman to buck the old boy&#x27;s club of politics in 1872? More than 140 years pre-Hillary, there was Victoria Woodhull. This book takes you back with a breathtaking, present-tense bird&#x27;s eye view into a time when women&#x27;s liberation was primarily confined to one woman&#x27;s very capable, independent mind. I couldn&#x27;t put it down.\&quot;---Ruth Buzzi, Golden Globe Award winner and Television Hall of Fame inductee\&quot;Sadly, too many Americans have never heard of Victoria Woodhull, let alone learned of her story: her revolutionary campaign for the presidency at a time when women weren&#x27;t even allowed to vote, her support for worker&#x27;s rights, or her feminist commitment to equality, a century before the official battle over the Equal Rights Amendment. But in The Coming Woman, Karen Hicks brings Woodhull&#x27;s efforts to life, and reminds us that some of our nation&#x27;s greatest figures aren&#x27;t always featured in the history books. It is a riveting account of an amazing woman and her struggle for justice and human dignity, told in an engaging and eminently readable style.\&quot;-Tim Wise, author, \&quot;White Like Me: Reflections on Race from a Privileged Son\&quot;\&quot;The Coming Woman\&quot; is a novel based on the life of feminist Victoria Woodhull, the first woman to run for U.S. President, 50 years before women could even vote!Running for President wasn&#x27;t Victoria&#x27;s only first as a woman. She was also the first to own a successful Wall Street firm, the first to publish a successful national newspaper, and the first to head the two-million-member Spiritualist Association. She was the first woman to enter the Senate Judiciary Committee chambers to petition for woman&#x27;s suffrage, her argument changing the entire focus of the suffragist movement by pointing out that the 14th and 15th Amendments already gave women the vote.In her campaign for the Presidency, Victoria Woodhull boldly addressed many of the issues we still face today: equal pay for equal work; freedom in love; corporate greed and political corruption fueled by powerful lobbyists; and the increasing disparity between the rich and the poor, to name only a few. Her outspoken and common-sense ideas may shed a new perspective on the parallel conundrums of today&#x27;s world.This bold, beautiful, and sexually progressive woman dared to take on society and religion. To make an example of the hypocrisy in what Mark Twain dubbed The Gilded Age, she exposed the extramarital affairs of the most popular religious figure of the day (Henry Ward Beecher). This led to her persecution and imprisonment and the longest, most infamous trial of the 19th century. But it did not stop her fight for equality.Victoria&#x27;s epic story, set in the late 1800s, comes to life in a modern, fictional style, while staying true to the actual words and views of the many well-known characters. ...more&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/p&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Information&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;table&quot;,
+      &quot;kind&quot;: &quot;table&quot;,
+      &quot;text&quot;: &quot;UPCe72a5dfc7e9267b2 Product TypeBooks Price (excl. tax)£17.93 Price (incl. tax)£17.93 Tax£0.00 Availability In stock (19 available) Number of reviews 0&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/table&quot;,
+      &quot;rows&quot;: [
+        [
+          &quot;UPC&quot;,
+          &quot;e72a5dfc7e9267b2&quot;
+        ],
+        [
+          &quot;Product Type&quot;,
+          &quot;Books&quot;
+        ],
+        [
+          &quot;Price (excl. tax)&quot;,
+          &quot;£17.93&quot;
+        ],
+        [
+          &quot;Price (incl. tax)&quot;,
+          &quot;£17.93&quot;
+        ],
+        [
+          &quot;Tax&quot;,
+          &quot;£0.00&quot;
+        ],
+        [
+          &quot;Availability&quot;,
+          &quot;In stock (19 available)&quot;
+        ],
+        [
+          &quot;Number of reviews&quot;,
+          &quot;0&quot;
+        ]
+      ]
+    }
+  ],
+  &quot;metadata&quot;: [],
+  &quot;excluded&quot;: [
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;Products you recently viewed&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;The Dirty Little Secrets ... £33.34 In stock Add to basket The Requiem Red £22.65 In stock Add to basket Sapiens: A Brief History ... £54.23 In stock Add to basket Sharp Objects £47.82 In stock Add to basket Soumission £50.10 In stock Add to basket Tipping the Velvet £53.74 In stock Add to basket&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;
+    }
+  ],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+    &quot;images_present_pixels_not_extracted_completeness_unknown&quot;
+  ]
+}</pre></details></div></article><article class="panel article" id="page-9"><div class="article-meta"><span>最终测试</span><span>book_product_10</span><span class="badge warn">待审核</span></div><h2>The Black Maria</h2><div class="article-links"><a href="http://books.toscrape.com/catalogue/the-black-maria_991/index.html" target="_blank" rel="noopener">原站地址</a><a href="../../../data/project2/books_product_v1/site/catalogue/the-black-maria_991/index.html" target="_blank" rel="noopener">原始 HTML 快照</a></div><div data-version="holdout"><h3>页面信息 <span class="muted small">与正文分离</span></h3><p class="muted">本次未提取独立页面信息。</p><div class="content-title"><h3>提取正文 <span class="muted small">6 块，按原文顺序</span></h3><button class="quiet" data-evidence-toggle>展开全部原文定位</button></div><ol class="body-list"><li class="body-block"><div class="block-label"><span class="block-number">1</span><span class="kind">段落</span></div><p>£52.15</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">2</span><span class="kind">段落</span></div><p>In stock (19 available)</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">3</span><span class="kind">段落</span></div><p>Product Description</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[2]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">4</span><span class="kind">段落</span></div><p>Praise for Aracelis Girmay:&quot;[Girmay&#x27;s] every loss—she calls them estrangements—is a yearning for connection across time and place; her every fragment is a bulwark against ruin.&quot; — O, The Oprah Magazine &quot;In Aracelis Girmay we have a poet who collects, polishes, and shares stories with such brilliant invention, tenderness, and intellectual liveliness that it is understandabl Praise for Aracelis Girmay:&quot;[Girmay&#x27;s] every loss—she calls them estrangements—is a yearning for connection across time and place; her every fragment is a bulwark against ruin.&quot; — O, The Oprah Magazine &quot;In Aracelis Girmay we have a poet who collects, polishes, and shares stories with such brilliant invention, tenderness, and intellectual liveliness that it is understandable that we think of her as the blessed curator of our collective histories. There is in her art the vulnerability of one who lives inside of the stories that she gathers in this remarkable collection. Her poems set off alarms even as they transform the world she inhabits, showing us, in the process, exactly what she asks of Romare Bearden’s art: ‘…how not to // assign all blackness near the sea / a captivity.’ This is one of the many sweet contradictions in the black maria, which ‘is a black flag / wounding the pastoral.’ I am deeply thankful that we have a poet of her unique and singular talent writing today.&quot; —Kwame DawesTaking its name from the moon&#x27;s dark plains, misidentified as seas by early astronomers, the black maria investigates African diasporic histories, the consequences of racism within American culture, and the question of human identity. Central to this project is a desire to recognize the lives of Eritrean refugees who have been made invisible by years of immigration crisis, refugee status, exile, and resulting statelessness. The recipient of a 2015 Whiting Award for Poetry, Girmay&#x27;s newest collection elegizes and celebrates life, while wrestling with the humanistic notion of seeing beyond: seeing violence, seeing grace, and seeing each other better.&quot;to the sea&quot;great storage house, historyon which we rode, we touchedthe brief pulse of your flutteringpages, spelled with salt &amp; life,your rage, your indifferenceyour gentleness washing our feet,all of you going onwhether or not we live,to you we bring our carnationsyellow &amp; pink, how they floatlike bright sentences atopyour memory&#x27;s dark hairAracelis Girmay is the author of three poetry collections, the black maria; Kingdom Animalia, which won the Isabella Gardner Award and was a finalist for the NBCC Award; and Teeth. The recipient of a 2015 Whiting Award, she has received grants and fellowships from the Jerome, Cave Canem, and Watson foundations, as well as Civitella Ranieri and the NEA. She currently teaches at Hampshire College&#x27;s School for Interdisciplinary Arts and in Drew University&#x27;s low residency MFA program. Originally from Santa Ana, California, she splits her time between New York and Amherst, Massachusetts. ...more</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/p</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">5</span><span class="kind">段落</span></div><p>Product Information</p><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[3]</pre></details></li><li class="body-block"><div class="block-label"><span class="block-number">6</span><span class="kind">表格</span></div><div class="table-wrap"><table class="body-table"><tbody><tr><td>UPC</td><td>1dfe412b8ac00530</td></tr><tr><td>Product Type</td><td>Books</td></tr><tr><td>Price (excl. tax)</td><td>£52.15</td></tr><tr><td>Price (incl. tax)</td><td>£52.15</td></tr><tr><td>Tax</td><td>£0.00</td></tr><tr><td>Availability</td><td>In stock (19 available)</td></tr><tr><td>Number of reviews</td><td>0</td></tr></tbody></table></div><details><summary>XPath 原文定位</summary><pre>/html/body/div/div/div[2]/div[2]/article/table</pre></details></li></ol><details><summary>排除记录 · 2 项</summary><div class="table-wrap"><table><thead><tr><th>类别</th><th>内容</th><th>原文证据</th></tr></thead><tbody><tr><td><span class="kind">排除项</span></td><td>Products you recently viewed</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></td></tr><tr><td><span class="kind">排除项</span></td><td>The Boys in the ... £22.60 In stock Add to basket The Coming Woman: A ... £17.93 In stock Add to basket The Dirty Little Secrets ... £33.34 In stock Add to basket The Requiem Red £22.65 In stock Add to basket Sapiens: A Brief History ... £54.23 In stock Add to basket Sharp Objects £47.82 In stock Add to basket</td><td><details><summary>查看 XPath</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></td></tr></tbody></table></div></details><details><summary>检查问题 · 2 项</summary><ul class="issues"><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></li></ul></details><details><summary>局限与警告 · 3 项</summary><ul><li>Text-only extraction; image pixels and semantic completeness are not evaluated.</li><li>static_dom_only_no_css_visibility_javascript_or_ocr</li><li>images_present_pixels_not_extracted_completeness_unknown</li></ul></details><details><summary>完整原始结果</summary><a href="holdout_book_product_10.json" target="_blank" rel="noopener">打开结果 JSON</a><pre>{
+  &quot;title&quot;: &quot;The Black Maria&quot;,
+  &quot;container_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article&quot;,
+  &quot;title_xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;£52.15&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;In stock (19 available)&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Description&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[2]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Praise for Aracelis Girmay:\&quot;[Girmay&#x27;s] every loss—she calls them estrangements—is a yearning for connection across time and place; her every fragment is a bulwark against ruin.\&quot; — O, The Oprah Magazine \&quot;In Aracelis Girmay we have a poet who collects, polishes, and shares stories with such brilliant invention, tenderness, and intellectual liveliness that it is understandabl Praise for Aracelis Girmay:\&quot;[Girmay&#x27;s] every loss—she calls them estrangements—is a yearning for connection across time and place; her every fragment is a bulwark against ruin.\&quot; — O, The Oprah Magazine \&quot;In Aracelis Girmay we have a poet who collects, polishes, and shares stories with such brilliant invention, tenderness, and intellectual liveliness that it is understandable that we think of her as the blessed curator of our collective histories. There is in her art the vulnerability of one who lives inside of the stories that she gathers in this remarkable collection. Her poems set off alarms even as they transform the world she inhabits, showing us, in the process, exactly what she asks of Romare Bearden’s art: ‘…how not to // assign all blackness near the sea / a captivity.’ This is one of the many sweet contradictions in the black maria, which ‘is a black flag / wounding the pastoral.’ I am deeply thankful that we have a poet of her unique and singular talent writing today.\&quot; —Kwame DawesTaking its name from the moon&#x27;s dark plains, misidentified as seas by early astronomers, the black maria investigates African diasporic histories, the consequences of racism within American culture, and the question of human identity. Central to this project is a desire to recognize the lives of Eritrean refugees who have been made invisible by years of immigration crisis, refugee status, exile, and resulting statelessness. The recipient of a 2015 Whiting Award for Poetry, Girmay&#x27;s newest collection elegizes and celebrates life, while wrestling with the humanistic notion of seeing beyond: seeing violence, seeing grace, and seeing each other better.\&quot;to the sea\&quot;great storage house, historyon which we rode, we touchedthe brief pulse of your flutteringpages, spelled with salt &amp; life,your rage, your indifferenceyour gentleness washing our feet,all of you going onwhether or not we live,to you we bring our carnationsyellow &amp; pink, how they floatlike bright sentences atopyour memory&#x27;s dark hairAracelis Girmay is the author of three poetry collections, the black maria; Kingdom Animalia, which won the Isabella Gardner Award and was a finalist for the NBCC Award; and Teeth. The recipient of a 2015 Whiting Award, she has received grants and fellowships from the Jerome, Cave Canem, and Watson foundations, as well as Civitella Ranieri and the NEA. She currently teaches at Hampshire College&#x27;s School for Interdisciplinary Arts and in Drew University&#x27;s low residency MFA program. Originally from Santa Ana, California, she splits her time between New York and Amherst, Massachusetts. ...more&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/p&quot;
+    },
+    {
+      &quot;type&quot;: &quot;paragraph&quot;,
+      &quot;kind&quot;: &quot;paragraph&quot;,
+      &quot;text&quot;: &quot;Product Information&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[3]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;table&quot;,
+      &quot;kind&quot;: &quot;table&quot;,
+      &quot;text&quot;: &quot;UPC1dfe412b8ac00530 Product TypeBooks Price (excl. tax)£52.15 Price (incl. tax)£52.15 Tax£0.00 Availability In stock (19 available) Number of reviews 0&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/table&quot;,
+      &quot;rows&quot;: [
+        [
+          &quot;UPC&quot;,
+          &quot;1dfe412b8ac00530&quot;
+        ],
+        [
+          &quot;Product Type&quot;,
+          &quot;Books&quot;
+        ],
+        [
+          &quot;Price (excl. tax)&quot;,
+          &quot;£52.15&quot;
+        ],
+        [
+          &quot;Price (incl. tax)&quot;,
+          &quot;£52.15&quot;
+        ],
+        [
+          &quot;Tax&quot;,
+          &quot;£0.00&quot;
+        ],
+        [
+          &quot;Availability&quot;,
+          &quot;In stock (19 available)&quot;
+        ],
+        [
+          &quot;Number of reviews&quot;,
+          &quot;0&quot;
+        ]
+      ]
+    }
+  ],
+  &quot;metadata&quot;: [],
+  &quot;excluded&quot;: [
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;Products you recently viewed&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;
+    },
+    {
+      &quot;type&quot;: &quot;excluded&quot;,
+      &quot;kind&quot;: &quot;excluded&quot;,
+      &quot;text&quot;: &quot;The Boys in the ... £22.60 In stock Add to basket The Coming Woman: A ... £17.93 In stock Add to basket The Dirty Little Secrets ... £33.34 In stock Add to basket The Requiem Red £22.65 In stock Add to basket Sapiens: A Brief History ... £54.23 In stock Add to basket Sharp Objects £47.82 In stock Add to basket&quot;,
+      &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;
+    }
+  ],
+  &quot;warnings&quot;: [
+    &quot;Text-only extraction; image pixels and semantic completeness are not evaluated.&quot;,
+    &quot;static_dom_only_no_css_visibility_javascript_or_ocr&quot;,
+    &quot;images_present_pixels_not_extracted_completeness_unknown&quot;
+  ]
+}</pre></details></div></article></div></div></section>
+<section class="view" role="tabpanel" aria-labelledby="tab-process" id="view-process" data-view="process"><div class="panel"><h2>生成与修复过程</h2><p class="muted">首轮执行 → 收集实际问题 → 在预算内修复 → 冻结候选 → 执行最终测试。最终测试反馈不回传模型。</p><div class="step"><h3>首轮候选</h3><p>执行 5 篇；检查通过 1 篇；反馈记录 4 组。</p><div class="table-wrap"><table><thead><tr><th>页面</th><th>角色</th><th>正文块</th><th>检查状态</th><th>问题数</th></tr></thead><tbody><tr><td>book_product_01</td><td>生成样本</td><td>6</td><td><span class="badge good">检查通过</span></td><td>0</td></tr><tr><td>book_product_03</td><td>开发反馈</td><td>6</td><td><span class="badge warn">待审核</span></td><td>2</td></tr><tr><td>book_product_05</td><td>生成样本</td><td>6</td><td><span class="badge warn">待审核</span></td><td>2</td></tr><tr><td>book_product_07</td><td>开发反馈</td><td>6</td><td><span class="badge warn">待审核</span></td><td>2</td></tr><tr><td>book_product_09</td><td>生成样本</td><td>6</td><td><span class="badge warn">待审核</span></td><td>2</td></tr></tbody></table></div><details><summary>反馈证据 · book_product_03</summary><ul class="issues"><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></li></ul></details><details><summary>反馈证据 · book_product_05</summary><ul class="issues"><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></li></ul></details><details><summary>反馈证据 · book_product_07</summary><ul class="issues"><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></li></ul></details><details><summary>反馈证据 · book_product_09</summary><ul class="issues"><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/div[4]</pre></details></li><li><strong>exclusion_requires_review</strong><p>This structure-only probe cannot certify exclusion semantics</p><details><summary>查看位置</summary><pre>/html/body/div/div/div[2]/div[2]/article/ul</pre></details></li></ul></details><p><a href="prompt_round_0.json" target="_blank" rel="noopener">本轮模型输入</a> · <a href="response_round_0.txt" target="_blank" rel="noopener">本轮模型响应</a></p></div><div class="step"><h3>冻结候选后测试</h3><p>最终测试 5 篇。冻结哈希：</p><pre>05e9d2e83dca5573bb131d5a53019bb2ed71f7e9ed994700fe3c54af551498f9</pre></div></div></section>
+<section class="view" role="tabpanel" aria-labelledby="tab-rules" id="view-rules" data-view="rules"><div class="panel"><h2>生成规则与复用代码</h2><p class="muted">模型生成 XPath 配置，固定模板导出 Python 模块，随后在 CPU 上复用。</p><div class="step"><h3>首轮规则</h3><div class="rule-row"><strong>标题定位</strong> <span class="muted small">title_xpath</span><pre>//article[@class=&#x27;product_page&#x27;]/div[1]/div[2]/h1</pre></div><div class="rule-row"><strong>正文容器</strong> <span class="muted small">container_xpath</span><pre>//article[@class=&#x27;product_page&#x27;]</pre></div><div class="rule-row"><strong>正文块选择</strong> <span class="muted small">block_xpath</span><pre>div[1]/div[2]/p | div[2] | p | div[3] | table</pre></div><div class="rule-row"><strong>排除规则</strong> <span class="muted small">exclude_xpath</span><pre>div[@class=&#x27;alert alert-warning&#x27;] | section | div[4] | ul</pre></div><div class="rule-row"><strong>页面信息定位</strong> <span class="muted small">metadata_xpath</span><pre>（空：本轮未设置）</pre></div><div class="rule-row"><strong>细分页面信息</strong> <span class="muted small">metadata_fields</span><pre>{}</pre></div><p><a href="candidate_round_0.json" target="_blank" rel="noopener">下载规则 JSON</a> · <a href="candidate_round_0.py" target="_blank" rel="noopener">打开本轮 Python</a></p><details><summary>查看 Python 模块</summary><pre>&quot;&quot;&quot;Generated reusable XPath extractor; trusted engine interprets data.&quot;&quot;&quot;
+import json
+from project2_engine import extract as _engine
+RULES = json.loads(&#x27;{&quot;title_xpath&quot;: &quot;//article[@class=\&#x27;product_page\&#x27;]/div[1]/div[2]/h1&quot;, &quot;container_xpath&quot;: &quot;//article[@class=\&#x27;product_page\&#x27;]&quot;, &quot;block_xpath&quot;: &quot;div[1]/div[2]/p | div[2] | p | div[3] | table&quot;, &quot;exclude_xpath&quot;: &quot;div[@class=\&#x27;alert alert-warning\&#x27;] | section | div[4] | ul&quot;, &quot;metadata_xpath&quot;: &quot;&quot;, &quot;metadata_fields&quot;: {}}&#x27;)
+def extract(data):
+    return _engine(RULES, data)
+</pre></details></div><p><a href="extractor.py" target="_blank" rel="noopener">冻结的 Python 模块</a> · <a href="rules.json" target="_blank" rel="noopener">冻结的规则</a></p></div></section>
+<section class="view" role="tabpanel" aria-labelledby="tab-calls" id="view-calls" data-view="calls"><div class="panel"><h2>API 调用与运行证据</h2><p>模型：<strong>qwen3.8-27b</strong> · 提供方：dashscope · API 尝试：1</p><p class="muted">全流程耗时：7.369 秒 · 修复预算：2 次</p><div class="table-wrap"><table><thead><tr><th>候选轮次</th><th>状态</th><th>输入 tokens</th><th>输出 tokens</th><th>合计 tokens</th><th>耗时</th></tr></thead><tbody><tr><td>0</td><td><span class="badge good">成功</span></td><td>15391</td><td>118</td><td>15509</td><td>6.219 s</td></tr></tbody></table></div><p class="muted">用量仅汇总服务端已返回的记录；失败请求可能没有返回用量。未配置价格，不计算金额。耗时为单次运行记录，不是性能基准。</p><details><summary>任务与执行器版本</summary><pre>{
+  &quot;task_id&quot;: &quot;books-product-v2&quot;,
+  &quot;engine_protocol&quot;: &quot;v2: original DOM evidence, typed metadata, scoped summaries, rich blocks&quot;,
+  &quot;engine_sha256&quot;: &quot;134dbacd1568e9a4a69f81da484fe60cad934324751604146e46109912909851&quot;,
+  &quot;worker_sha256&quot;: &quot;9d9418800e9461a3758f02209cbbc022dcb2c7d32029b4fe74eb2469cd217364&quot;,
+  &quot;frozen_candidate_sha256&quot;: &quot;05e9d2e83dca5573bb131d5a53019bb2ed71f7e9ed994700fe3c54af551498f9&quot;,
+  &quot;evaluation_scope&quot;: &quot;10 new book product detail pages; 3 generation, 2 development, 5 final holdout; same product layout, different from Python release blogs.&quot;,
+  &quot;holdout_policy&quot;: &quot;Executed only after candidate freeze; never sent to generation or repair.&quot;,
+  &quot;candidate_hash_scheme&quot;: &quot;SHA256 of canonical UTF-8 LF source&quot;
+}</pre></details><details><summary>完整运行轨迹</summary><a href="trace.json" target="_blank" rel="noopener">打开 trace.json</a><pre>{
+  &quot;task_id&quot;: &quot;books-product-v2&quot;,
+  &quot;provider&quot;: &quot;dashscope&quot;,
+  &quot;model&quot;: &quot;qwen3.8-27b&quot;,
+  &quot;input_pages&quot;: [
+    {
+      &quot;id&quot;: &quot;book_product_01&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/a-light-in-the-attic_1000/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html&quot;,
+      &quot;role&quot;: &quot;generation&quot;,
+      &quot;sha256&quot;: &quot;a6e572bec156bf80ff3149b89b6d218cdcf8866ccc26ccf69a5431db8e142c6a&quot;,
+      &quot;bytes&quot;: 9279,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_02&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/tipping-the-velvet_999/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;sha256&quot;: &quot;3ebbc9a6c904a9f3420fd770b24a4c2ff9958fdb1359108fe37b951452f3d8da&quot;,
+      &quot;bytes&quot;: 10918,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_03&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/soumission_998/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/soumission_998/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/soumission_998/index.html&quot;,
+      &quot;role&quot;: &quot;development_feedback&quot;,
+      &quot;sha256&quot;: &quot;62b7d234ea2ef1052553914ad1c17f2ae984449c7325e753d07963adf5c4cbe1&quot;,
+      &quot;bytes&quot;: 12431,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_04&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/sharp-objects_997/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/sharp-objects_997/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/sharp-objects_997/index.html&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;sha256&quot;: &quot;41ae9ef1bc17c9984b8e452c61f3370fc6e1868e9b699c803c7336136f57c0ef&quot;,
+      &quot;bytes&quot;: 14847,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_05&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/sapiens-a-brief-history-of-humankind_996/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html&quot;,
+      &quot;role&quot;: &quot;generation&quot;,
+      &quot;sha256&quot;: &quot;7cc763d13e3645f3f2aa981971c6442fe9b1a7dc85372799d2e3e5acb64fc223&quot;,
+      &quot;bytes&quot;: 17026,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_06&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-requiem-red_995/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-requiem-red_995/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/the-requiem-red_995/index.html&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;sha256&quot;: &quot;0d5b5198aa904b2a6fac14544d70d27cf4a723a710b8745caaaad9bdc8c358a1&quot;,
+      &quot;bytes&quot;: 16468,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_07&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html&quot;,
+      &quot;role&quot;: &quot;development_feedback&quot;,
+      &quot;sha256&quot;: &quot;7659ec0efd845c6c2cc207ac0ea29051885de9e12b216f2e28181c61560c42d8&quot;,
+      &quot;bytes&quot;: 19806,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_08&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;sha256&quot;: &quot;42db4e6ee661bcdd66958ceda5444386a44253bdf6b8581ef73c273ceff32bf8&quot;,
+      &quot;bytes&quot;: 23375,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_09&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html&quot;,
+      &quot;role&quot;: &quot;generation&quot;,
+      &quot;sha256&quot;: &quot;72258efc46a720c185038658c744f8f78234970e4344c77a25fc0a610a5c5245&quot;,
+      &quot;bytes&quot;: 20872,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_10&quot;,
+      &quot;path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-black-maria_991/index.html&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-black-maria_991/index.html&quot;,
+      &quot;final_url&quot;: &quot;http://books.toscrape.com/catalogue/the-black-maria_991/index.html&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;sha256&quot;: &quot;fc563bec423f34054e5ca6440cd131c095e9eea00e7a01c06da6bae7dcd7bb48&quot;,
+      &quot;bytes&quot;: 22698,
+      &quot;http_status&quot;: 200,
+      &quot;source_exposure&quot;: &quot;new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim&quot;
+    }
+  ],
+  &quot;rounds&quot;: [
+    {
+      &quot;round&quot;: 0,
+      &quot;pages&quot;: [
+        {
+          &quot;id&quot;: &quot;book_product_01&quot;,
+          &quot;role&quot;: &quot;generation&quot;,
+          &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html&quot;,
+          &quot;source_path&quot;: &quot;data/project2/books_product_v1/site/catalogue/a-light-in-the-attic_1000/index.html&quot;,
+          &quot;status&quot;: &quot;pass&quot;,
+          &quot;blocks&quot;: 6,
+          &quot;metadata&quot;: 0,
+          &quot;issues&quot;: [],
+          &quot;result&quot;: &quot;round_0_book_product_01.json&quot;
+        },
+        {
+          &quot;id&quot;: &quot;book_product_03&quot;,
+          &quot;role&quot;: &quot;development_feedback&quot;,
+          &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/soumission_998/index.html&quot;,
+          &quot;source_path&quot;: &quot;data/project2/books_product_v1/site/catalogue/soumission_998/index.html&quot;,
+          &quot;status&quot;: &quot;needs_review&quot;,
+          &quot;blocks&quot;: 6,
+          &quot;metadata&quot;: 0,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            },
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            }
+          ],
+          &quot;result&quot;: &quot;round_0_book_product_03.json&quot;
+        },
+        {
+          &quot;id&quot;: &quot;book_product_05&quot;,
+          &quot;role&quot;: &quot;generation&quot;,
+          &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html&quot;,
+          &quot;source_path&quot;: &quot;data/project2/books_product_v1/site/catalogue/sapiens-a-brief-history-of-humankind_996/index.html&quot;,
+          &quot;status&quot;: &quot;needs_review&quot;,
+          &quot;blocks&quot;: 6,
+          &quot;metadata&quot;: 0,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            },
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            }
+          ],
+          &quot;result&quot;: &quot;round_0_book_product_05.json&quot;
+        },
+        {
+          &quot;id&quot;: &quot;book_product_07&quot;,
+          &quot;role&quot;: &quot;development_feedback&quot;,
+          &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html&quot;,
+          &quot;source_path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html&quot;,
+          &quot;status&quot;: &quot;needs_review&quot;,
+          &quot;blocks&quot;: 6,
+          &quot;metadata&quot;: 0,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            },
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            }
+          ],
+          &quot;result&quot;: &quot;round_0_book_product_07.json&quot;
+        },
+        {
+          &quot;id&quot;: &quot;book_product_09&quot;,
+          &quot;role&quot;: &quot;generation&quot;,
+          &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html&quot;,
+          &quot;source_path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html&quot;,
+          &quot;status&quot;: &quot;needs_review&quot;,
+          &quot;blocks&quot;: 6,
+          &quot;metadata&quot;: 0,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            },
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            }
+          ],
+          &quot;result&quot;: &quot;round_0_book_product_09.json&quot;
+        }
+      ],
+      &quot;issues&quot;: [
+        {
+          &quot;id&quot;: &quot;book_product_03&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            },
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_05&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            },
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_07&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            },
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            }
+          ]
+        },
+        {
+          &quot;id&quot;: &quot;book_product_09&quot;,
+          &quot;issues&quot;: [
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            },
+            {
+              &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+              &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+              &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+            }
+          ]
+        }
+      ],
+      &quot;candidate_sha256&quot;: &quot;05e9d2e83dca5573bb131d5a53019bb2ed71f7e9ed994700fe3c54af551498f9&quot;
+    }
+  ],
+  &quot;api_attempts&quot;: [
+    {
+      &quot;round&quot;: 0,
+      &quot;status&quot;: &quot;succeeded&quot;,
+      &quot;usage&quot;: {
+        &quot;completion_tokens&quot;: 118,
+        &quot;completion_tokens_details&quot;: {},
+        &quot;prompt_tokens&quot;: 15391,
+        &quot;prompt_tokens_details&quot;: {
+          &quot;cached_tokens&quot;: 0,
+          &quot;text_tokens&quot;: 15391
+        },
+        &quot;total_tokens&quot;: 15509
+      },
+      &quot;seconds&quot;: 6.219
+    }
+  ],
+  &quot;holdout&quot;: [
+    {
+      &quot;id&quot;: &quot;book_product_02&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html&quot;,
+      &quot;source_path&quot;: &quot;data/project2/books_product_v1/site/catalogue/tipping-the-velvet_999/index.html&quot;,
+      &quot;status&quot;: &quot;needs_review&quot;,
+      &quot;blocks&quot;: 6,
+      &quot;metadata&quot;: 0,
+      &quot;issues&quot;: [
+        {
+          &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+          &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+        },
+        {
+          &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+          &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+        }
+      ],
+      &quot;result&quot;: &quot;holdout_book_product_02.json&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_04&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/sharp-objects_997/index.html&quot;,
+      &quot;source_path&quot;: &quot;data/project2/books_product_v1/site/catalogue/sharp-objects_997/index.html&quot;,
+      &quot;status&quot;: &quot;needs_review&quot;,
+      &quot;blocks&quot;: 6,
+      &quot;metadata&quot;: 0,
+      &quot;issues&quot;: [
+        {
+          &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+          &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+        },
+        {
+          &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+          &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+        }
+      ],
+      &quot;result&quot;: &quot;holdout_book_product_04.json&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_06&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-requiem-red_995/index.html&quot;,
+      &quot;source_path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-requiem-red_995/index.html&quot;,
+      &quot;status&quot;: &quot;needs_review&quot;,
+      &quot;blocks&quot;: 6,
+      &quot;metadata&quot;: 0,
+      &quot;issues&quot;: [
+        {
+          &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+          &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+        },
+        {
+          &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+          &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+        }
+      ],
+      &quot;result&quot;: &quot;holdout_book_product_06.json&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_08&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html&quot;,
+      &quot;source_path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html&quot;,
+      &quot;status&quot;: &quot;needs_review&quot;,
+      &quot;blocks&quot;: 6,
+      &quot;metadata&quot;: 0,
+      &quot;issues&quot;: [
+        {
+          &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+          &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+        },
+        {
+          &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+          &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+        }
+      ],
+      &quot;result&quot;: &quot;holdout_book_product_08.json&quot;
+    },
+    {
+      &quot;id&quot;: &quot;book_product_10&quot;,
+      &quot;role&quot;: &quot;final_holdout&quot;,
+      &quot;url&quot;: &quot;http://books.toscrape.com/catalogue/the-black-maria_991/index.html&quot;,
+      &quot;source_path&quot;: &quot;data/project2/books_product_v1/site/catalogue/the-black-maria_991/index.html&quot;,
+      &quot;status&quot;: &quot;needs_review&quot;,
+      &quot;blocks&quot;: 6,
+      &quot;metadata&quot;: 0,
+      &quot;issues&quot;: [
+        {
+          &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/div[4]&quot;,
+          &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+        },
+        {
+          &quot;kind&quot;: &quot;exclusion_requires_review&quot;,
+          &quot;xpath&quot;: &quot;/html/body/div/div/div[2]/div[2]/article/ul&quot;,
+          &quot;message&quot;: &quot;This structure-only probe cannot certify exclusion semantics&quot;
+        }
+      ],
+      &quot;result&quot;: &quot;holdout_book_product_10.json&quot;
+    }
+  ],
+  &quot;semantic_accuracy&quot;: &quot;unknown&quot;,
+  &quot;holdout_policy&quot;: &quot;Executed only after candidate freeze; never sent to generation or repair.&quot;,
+  &quot;max_repairs&quot;: 2,
+  &quot;final_status&quot;: &quot;needs_review&quot;,
+  &quot;engine_sha256&quot;: &quot;134dbacd1568e9a4a69f81da484fe60cad934324751604146e46109912909851&quot;,
+  &quot;worker_sha256&quot;: &quot;9d9418800e9461a3758f02209cbbc022dcb2c7d32029b4fe74eb2469cd217364&quot;,
+  &quot;initial_candidate&quot;: &quot;model_generated&quot;,
+  &quot;evaluation_scope&quot;: &quot;10 new book product detail pages; 3 generation, 2 development, 5 final holdout; same product layout, different from Python release blogs.&quot;,
+  &quot;candidate_hash_scheme&quot;: &quot;SHA256 of canonical UTF-8 LF source&quot;,
+  &quot;engine_protocol&quot;: &quot;v2: original DOM evidence, typed metadata, scoped summaries, rich blocks&quot;,
+  &quot;elapsed_seconds&quot;: 7.369,
+  &quot;frozen_candidate_sha256&quot;: &quot;05e9d2e83dca5573bb131d5a53019bb2ed71f7e9ed994700fe3c54af551498f9&quot;,
+  &quot;artifact_byte_hashes&quot;: {
+    &quot;candidate_round_0.py&quot;: &quot;05e9d2e83dca5573bb131d5a53019bb2ed71f7e9ed994700fe3c54af551498f9&quot;,
+    &quot;extractor.py&quot;: &quot;05e9d2e83dca5573bb131d5a53019bb2ed71f7e9ed994700fe3c54af551498f9&quot;,
+    &quot;project2_engine.py&quot;: &quot;134dbacd1568e9a4a69f81da484fe60cad934324751604146e46109912909851&quot;
+  },
+  &quot;frozen_before_holdout&quot;: true
+}</pre></details></div></section></main><footer class="foot">此页面仅展示已保存的实验记录。筛选、切换与展开不会发起 API 请求，也不会修改标注或提取结果。</footer></div><script>
+(()=>{
+const tabs=[...document.querySelectorAll('[data-tab]')], views=[...document.querySelectorAll('[data-view]')];
+function showTab(name){tabs.forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===name)));views.forEach(v=>v.hidden=v.dataset.view!==name)}
+tabs.forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));
+const nav=[...document.querySelectorAll('.page-button')], articles=[...document.querySelectorAll('.article')];
+const input=document.getElementById('page-search'),role=document.getElementById('role-filter');
+function selectPage(id,scroll=false){articles.forEach(a=>a.hidden=a.id!==id);nav.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.target===id)));if(scroll)document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'})}
+nav.forEach(b=>b.addEventListener('click',()=>selectPage(b.dataset.target)));
+function filter(){const q=input.value.trim().toLowerCase();nav.forEach(b=>b.hidden=!(b.textContent.toLowerCase().includes(q)&&(!role.value||b.dataset.role===role.value)));const visible=nav.filter(b=>!b.hidden);document.getElementById('nav-count').textContent=visible.length+' / '+nav.length+' 篇';document.getElementById('no-pages').hidden=visible.length>0;if(!visible.some(b=>b.getAttribute('aria-pressed')==='true')){if(visible.length)selectPage(visible[0].dataset.target);else articles.forEach(a=>a.hidden=true)}}
+input.addEventListener('input',filter);role.addEventListener('change',filter);
+document.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>{showTab('results');input.value='';role.value='';filter();selectPage(b.dataset.jump,true)}));
+document.querySelectorAll('[data-round-picker]').forEach(s=>{function choose(){const a=s.closest('.article');a.querySelectorAll('[data-version]').forEach(v=>v.hidden=v.dataset.version!==s.value)}s.addEventListener('change',choose);choose()});
+document.querySelectorAll('[data-evidence-toggle]').forEach(b=>b.addEventListener('click',()=>{const a=b.closest('[data-version]'),ds=[...a.querySelectorAll('.body-block details')],open=ds.some(d=>!d.open);ds.forEach(d=>d.open=open);b.textContent=open?'收起全部原文定位':'展开全部原文定位'}));
+showTab('results');if(nav.length)selectPage(nav[0].dataset.target);filter();
+})();
+</script></body></html>

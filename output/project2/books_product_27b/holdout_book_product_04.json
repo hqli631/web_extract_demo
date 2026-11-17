@@ -1,0 +1,93 @@
+{
+  "title": "Sharp Objects",
+  "container_xpath": "/html/body/div/div/div[2]/div[2]/article",
+  "title_xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "£47.82",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "In stock (20 available)",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Product Description",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[2]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "WICKED above her hipbone, GIRL across her heart Words are like a road map to reporter Camille Preaker’s troubled past. Fresh from a brief stay at a psych hospital, Camille’s first assignment from the second-rate daily paper where she works brings her reluctantly back to her hometown to cover the murders of two preteen girls. NASTY on her kneecap, BABYDOLL on her leg Since WICKED above her hipbone, GIRL across her heart Words are like a road map to reporter Camille Preaker’s troubled past. Fresh from a brief stay at a psych hospital, Camille’s first assignment from the second-rate daily paper where she works brings her reluctantly back to her hometown to cover the murders of two preteen girls. NASTY on her kneecap, BABYDOLL on her leg Since she left town eight years ago, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed again in her family’s Victorian mansion, Camille is haunted by the childhood tragedy she has spent her whole life trying to cut from her memory. HARMFUL on her wrist, WHORE on her ankle As Camille works to uncover the truth about these violent crimes, she finds herself identifying with the young victims—a bit too strongly. Clues keep leading to dead ends, forcing Camille to unravel the psychological puzzle of her own past to get at the story. Dogged by her own demons, Camille will have to confront what happened to her years before if she wants to survive this homecoming.With its taut, crafted writing, Sharp Objects is addictive, haunting, and unforgettable. ...more",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/p"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Product Information",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[3]"
+    },
+    {
+      "type": "table",
+      "kind": "table",
+      "text": "UPCe00eb4fd7b871a48 Product TypeBooks Price (excl. tax)£47.82 Price (incl. tax)£47.82 Tax£0.00 Availability In stock (20 available) Number of reviews 0",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/table",
+      "rows": [
+        [
+          "UPC",
+          "e00eb4fd7b871a48"
+        ],
+        [
+          "Product Type",
+          "Books"
+        ],
+        [
+          "Price (excl. tax)",
+          "£47.82"
+        ],
+        [
+          "Price (incl. tax)",
+          "£47.82"
+        ],
+        [
+          "Tax",
+          "£0.00"
+        ],
+        [
+          "Availability",
+          "In stock (20 available)"
+        ],
+        [
+          "Number of reviews",
+          "0"
+        ]
+      ]
+    }
+  ],
+  "metadata": [],
+  "excluded": [
+    {
+      "type": "excluded",
+      "kind": "excluded",
+      "text": "Products you recently viewed",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[4]"
+    },
+    {
+      "type": "excluded",
+      "kind": "excluded",
+      "text": "Soumission £50.10 In stock Add to basket Tipping the Velvet £53.74 In stock Add to basket A Light in the ... £51.77 In stock Add to basket",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/ul"
+    }
+  ],
+  "warnings": [
+    "Text-only extraction; image pixels and semantic completeness are not evaluated.",
+    "static_dom_only_no_css_visibility_javascript_or_ocr",
+    "images_present_pixels_not_extracted_completeness_unknown"
+  ]
+}

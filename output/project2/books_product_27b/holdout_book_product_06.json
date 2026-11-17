@@ -1,0 +1,93 @@
+{
+  "title": "The Requiem Red",
+  "container_xpath": "/html/body/div/div/div[2]/div[2]/article",
+  "title_xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "£22.65",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "In stock (19 available)",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Product Description",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[2]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Patient Twenty-nine.A monster roams the halls of Soothing Hills Asylum. Three girls dead. 29 is endowed with the curse…or gift of perception. She hears messages in music, sees lyrics in paintings. And the corn. A lifetime asylum resident, the orchestral corn music is the only constant in her life.Mason, a new, kind orderly, sees 29 as a woman, not a lunatic. And as his bel Patient Twenty-nine.A monster roams the halls of Soothing Hills Asylum. Three girls dead. 29 is endowed with the curse…or gift of perception. She hears messages in music, sees lyrics in paintings. And the corn. A lifetime asylum resident, the orchestral corn music is the only constant in her life.Mason, a new, kind orderly, sees 29 as a woman, not a lunatic. And as his belief in her grows, so does her self- confidence. That perhaps she might escape, might see the outside world. But the monster has other plans. The missing girls share one common thread...each was twenty-nine's cell mate. Will she be next? ...more",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/p"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Product Information",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[3]"
+    },
+    {
+      "type": "table",
+      "kind": "table",
+      "text": "UPCf77dbf2323deb740 Product TypeBooks Price (excl. tax)£22.65 Price (incl. tax)£22.65 Tax£0.00 Availability In stock (19 available) Number of reviews 0",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/table",
+      "rows": [
+        [
+          "UPC",
+          "f77dbf2323deb740"
+        ],
+        [
+          "Product Type",
+          "Books"
+        ],
+        [
+          "Price (excl. tax)",
+          "£22.65"
+        ],
+        [
+          "Price (incl. tax)",
+          "£22.65"
+        ],
+        [
+          "Tax",
+          "£0.00"
+        ],
+        [
+          "Availability",
+          "In stock (19 available)"
+        ],
+        [
+          "Number of reviews",
+          "0"
+        ]
+      ]
+    }
+  ],
+  "metadata": [],
+  "excluded": [
+    {
+      "type": "excluded",
+      "kind": "excluded",
+      "text": "Products you recently viewed",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[4]"
+    },
+    {
+      "type": "excluded",
+      "kind": "excluded",
+      "text": "Sapiens: A Brief History ... £54.23 In stock Add to basket Sharp Objects £47.82 In stock Add to basket Soumission £50.10 In stock Add to basket Tipping the Velvet £53.74 In stock Add to basket A Light in the ... £51.77 In stock Add to basket",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/ul"
+    }
+  ],
+  "warnings": [
+    "Text-only extraction; image pixels and semantic completeness are not evaluated.",
+    "static_dom_only_no_css_visibility_javascript_or_ocr",
+    "images_present_pixels_not_extracted_completeness_unknown"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "title": "The Black Maria",
+  "container_xpath": "/html/body/div/div/div[2]/div[2]/article",
+  "title_xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/h1",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "£52.15",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[1]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "In stock (19 available)",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[1]/div[2]/p[2]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Product Description",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[2]"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Praise for Aracelis Girmay:\"[Girmay's] every loss—she calls them estrangements—is a yearning for connection across time and place; her every fragment is a bulwark against ruin.\" — O, The Oprah Magazine \"In Aracelis Girmay we have a poet who collects, polishes, and shares stories with such brilliant invention, tenderness, and intellectual liveliness that it is understandabl Praise for Aracelis Girmay:\"[Girmay's] every loss—she calls them estrangements—is a yearning for connection across time and place; her every fragment is a bulwark against ruin.\" — O, The Oprah Magazine \"In Aracelis Girmay we have a poet who collects, polishes, and shares stories with such brilliant invention, tenderness, and intellectual liveliness that it is understandable that we think of her as the blessed curator of our collective histories. There is in her art the vulnerability of one who lives inside of the stories that she gathers in this remarkable collection. Her poems set off alarms even as they transform the world she inhabits, showing us, in the process, exactly what she asks of Romare Bearden’s art: ‘…how not to // assign all blackness near the sea / a captivity.’ This is one of the many sweet contradictions in the black maria, which ‘is a black flag / wounding the pastoral.’ I am deeply thankful that we have a poet of her unique and singular talent writing today.\" —Kwame DawesTaking its name from the moon's dark plains, misidentified as seas by early astronomers, the black maria investigates African diasporic histories, the consequences of racism within American culture, and the question of human identity. Central to this project is a desire to recognize the lives of Eritrean refugees who have been made invisible by years of immigration crisis, refugee status, exile, and resulting statelessness. The recipient of a 2015 Whiting Award for Poetry, Girmay's newest collection elegizes and celebrates life, while wrestling with the humanistic notion of seeing beyond: seeing violence, seeing grace, and seeing each other better.\"to the sea\"great storage house, historyon which we rode, we touchedthe brief pulse of your flutteringpages, spelled with salt & life,your rage, your indifferenceyour gentleness washing our feet,all of you going onwhether or not we live,to you we bring our carnationsyellow & pink, how they floatlike bright sentences atopyour memory's dark hairAracelis Girmay is the author of three poetry collections, the black maria; Kingdom Animalia, which won the Isabella Gardner Award and was a finalist for the NBCC Award; and Teeth. The recipient of a 2015 Whiting Award, she has received grants and fellowships from the Jerome, Cave Canem, and Watson foundations, as well as Civitella Ranieri and the NEA. She currently teaches at Hampshire College's School for Interdisciplinary Arts and in Drew University's low residency MFA program. Originally from Santa Ana, California, she splits her time between New York and Amherst, Massachusetts. ...more",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/p"
+    },
+    {
+      "type": "paragraph",
+      "kind": "paragraph",
+      "text": "Product Information",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[3]"
+    },
+    {
+      "type": "table",
+      "kind": "table",
+      "text": "UPC1dfe412b8ac00530 Product TypeBooks Price (excl. tax)£52.15 Price (incl. tax)£52.15 Tax£0.00 Availability In stock (19 available) Number of reviews 0",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/table",
+      "rows": [
+        [
+          "UPC",
+          "1dfe412b8ac00530"
+        ],
+        [
+          "Product Type",
+          "Books"
+        ],
+        [
+          "Price (excl. tax)",
+          "£52.15"
+        ],
+        [
+          "Price (incl. tax)",
+          "£52.15"
+        ],
+        [
+          "Tax",
+          "£0.00"
+        ],
+        [
+          "Availability",
+          "In stock (19 available)"
+        ],
+        [
+          "Number of reviews",
+          "0"
+        ]
+      ]
+    }
+  ],
+  "metadata": [],
+  "excluded": [
+    {
+      "type": "excluded",
+      "kind": "excluded",
+      "text": "Products you recently viewed",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/div[4]"
+    },
+    {
+      "type": "excluded",
+      "kind": "excluded",
+      "text": "The Boys in the ... £22.60 In stock Add to basket The Coming Woman: A ... £17.93 In stock Add to basket The Dirty Little Secrets ... £33.34 In stock Add to basket The Requiem Red £22.65 In stock Add to basket Sapiens: A Brief History ... £54.23 In stock Add to basket Sharp Objects £47.82 In stock Add to basket",
+      "xpath": "/html/body/div/div/div[2]/div[2]/article/ul"
+    }
+  ],
+  "warnings": [
+    "Text-only extraction; image pixels and semantic completeness are not evaluated.",
+    "static_dom_only_no_css_visibility_javascript_or_ocr",
+    "images_present_pixels_not_extracted_completeness_unknown"
+  ]
+}

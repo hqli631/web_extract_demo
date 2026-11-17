@@ -143,7 +143,9 @@ def extract(rules, data):
     if any(n.tag in SKIP_TAGS or any(a.tag in SKIP_TAGS for a in n.iterancestors()) for n in selected):
         raise ValueError('Non-content elements cannot be selected as body blocks')
     if any(within(e, n) for n in selected for e in excluded + metadata):
-        raise ValueError('Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks')
+        pairs = [(tree.getroottree().getpath(n), tree.getroottree().getpath(e))
+                 for n in selected for e in excluded + metadata if within(e, n)]
+        raise ValueError('Partial exclusion inside a selected block is unsupported; select smaller nonoverlapping blocks. Selected/excluded XPath pairs: ' + repr(pairs[:2]))
     if any(a is not b and within(a, b) for a in selected for b in selected):
         raise ValueError('Overlapping body selections would duplicate content')
     order = {n: i for i, n in enumerate(tree.iter())}

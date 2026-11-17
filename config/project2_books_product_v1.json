@@ -1,0 +1,121 @@
+{
+  "schema_version": 2,
+  "task_id": "books-product-v1",
+  "scope": "10 new book product detail pages; 3 generation, 2 development, 5 final holdout; same product layout, different from Python release blogs.",
+  "summary_scope_xpath": "//article[contains(concat(\" \",normalize-space(@class),\" \"),\" product_page \")]",
+  "evaluation_scope_xpath": "//article[contains(concat(\" \",normalize-space(@class),\" \"),\" product_page \")]",
+  "prompt": "Extract book product content: title, ordered description, product facts table, price and stock text. Keep meaningful product headings. Do not invent author/date when absent. Cart controls and global navigation are UI rather than book description. Return shared XPath JSON rules, not page-specific answers. No OCR is provided.",
+  "retrieved_at_utc": "2026-11-17T09:58:46.874458+00:00",
+  "pages": [
+    {
+      "id": "book_product_01",
+      "path": "data/project2/books_product_v1/site/catalogue/a-light-in-the-attic_1000/index.html",
+      "url": "http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html",
+      "final_url": "http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html",
+      "role": "generation",
+      "sha256": "a6e572bec156bf80ff3149b89b6d218cdcf8866ccc26ccf69a5431db8e142c6a",
+      "bytes": 9279,
+      "http_status": 200,
+      "source_exposure": "new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim"
+    },
+    {
+      "id": "book_product_02",
+      "path": "data/project2/books_product_v1/site/catalogue/tipping-the-velvet_999/index.html",
+      "url": "http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html",
+      "final_url": "http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html",
+      "role": "final_holdout",
+      "sha256": "3ebbc9a6c904a9f3420fd770b24a4c2ff9958fdb1359108fe37b951452f3d8da",
+      "bytes": 10918,
+      "http_status": 200,
+      "source_exposure": "new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim"
+    },
+    {
+      "id": "book_product_03",
+      "path": "data/project2/books_product_v1/site/catalogue/soumission_998/index.html",
+      "url": "http://books.toscrape.com/catalogue/soumission_998/index.html",
+      "final_url": "http://books.toscrape.com/catalogue/soumission_998/index.html",
+      "role": "development_feedback",
+      "sha256": "62b7d234ea2ef1052553914ad1c17f2ae984449c7325e753d07963adf5c4cbe1",
+      "bytes": 12431,
+      "http_status": 200,
+      "source_exposure": "new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim"
+    },
+    {
+      "id": "book_product_04",
+      "path": "data/project2/books_product_v1/site/catalogue/sharp-objects_997/index.html",
+      "url": "http://books.toscrape.com/catalogue/sharp-objects_997/index.html",
+      "final_url": "http://books.toscrape.com/catalogue/sharp-objects_997/index.html",
+      "role": "final_holdout",
+      "sha256": "41ae9ef1bc17c9984b8e452c61f3370fc6e1868e9b699c803c7336136f57c0ef",
+      "bytes": 14847,
+      "http_status": 200,
+      "source_exposure": "new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim"
+    },
+    {
+      "id": "book_product_05",
+      "path": "data/project2/books_product_v1/site/catalogue/sapiens-a-brief-history-of-humankind_996/index.html",
+      "url": "http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html",
+      "final_url": "http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html",
+      "role": "generation",
+      "sha256": "7cc763d13e3645f3f2aa981971c6442fe9b1a7dc85372799d2e3e5acb64fc223",
+      "bytes": 17026,
+      "http_status": 200,
+      "source_exposure": "new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim"
+    },
+    {
+      "id": "book_product_06",
+      "path": "data/project2/books_product_v1/site/catalogue/the-requiem-red_995/index.html",
+      "url": "http://books.toscrape.com/catalogue/the-requiem-red_995/index.html",
+      "final_url": "http://books.toscrape.com/catalogue/the-requiem-red_995/index.html",
+      "role": "final_holdout",
+      "sha256": "0d5b5198aa904b2a6fac14544d70d27cf4a723a710b8745caaaad9bdc8c358a1",
+      "bytes": 16468,
+      "http_status": 200,
+      "source_exposure": "new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim"
+    },
+    {
+      "id": "book_product_07",
+      "path": "data/project2/books_product_v1/site/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html",
+      "url": "http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html",
+      "final_url": "http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html",
+      "role": "development_feedback",
+      "sha256": "7659ec0efd845c6c2cc207ac0ea29051885de9e12b216f2e28181c61560c42d8",
+      "bytes": 19806,
+      "http_status": 200,
+      "source_exposure": "new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim"
+    },
+    {
+      "id": "book_product_08",
+      "path": "data/project2/books_product_v1/site/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html",
+      "url": "http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html",
+      "final_url": "http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html",
+      "role": "final_holdout",
+      "sha256": "42db4e6ee661bcdd66958ceda5444386a44253bdf6b8581ef73c273ceff32bf8",
+      "bytes": 23375,
+      "http_status": 200,
+      "source_exposure": "new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim"
+    },
+    {
+      "id": "book_product_09",
+      "path": "data/project2/books_product_v1/site/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html",
+      "url": "http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html",
+      "final_url": "http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html",
+      "role": "generation",
+      "sha256": "72258efc46a720c185038658c744f8f78234970e4344c77a25fc0a610a5c5245",
+      "bytes": 20872,
+      "http_status": 200,
+      "source_exposure": "new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim"
+    },
+    {
+      "id": "book_product_10",
+      "path": "data/project2/books_product_v1/site/catalogue/the-black-maria_991/index.html",
+      "url": "http://books.toscrape.com/catalogue/the-black-maria_991/index.html",
+      "final_url": "http://books.toscrape.com/catalogue/the-black-maria_991/index.html",
+      "role": "final_holdout",
+      "sha256": "fc563bec423f34054e5ca6440cd131c095e9eea00e7a01c06da6bae7dcd7bb48",
+      "bytes": 22698,
+      "http_status": 200,
+      "source_exposure": "new_product_layout_task; heldout excluded from prompt and repair; not a pretraining claim"
+    }
+  ]
+}

@@ -108,6 +108,23 @@ class Project2Tests(unittest.TestCase):
         result=extract(self.rules(exclude_xpath='./p[@class="ad"]'),data)
         issues=structural_feedback(result,data)
         self.assertEqual([i['kind'] for i in issues],['exclusion_requires_review'])
+        self.assertEqual(agent.quality_status(issues), 'needs_review')
+        self.assertEqual(agent.quality_status(issues + [{'kind':'empty_output'}]), 'failed')
+
+    def test_pending_semantics_do_not_block_holdout_or_become_pass(self):
+        original = agent.evaluate
+        def evaluation(item,*args):
+            row = original(item,*args)
+            if not row['issues']:
+                row['issues'] = [{'kind':'exclusion_requires_review'}]
+                row['status'] = 'needs_review'
+            return row
+        with tempfile.TemporaryDirectory() as tmp, patch.object(agent,'evaluate',side_effect=evaluation):
+            trace = agent.run(self.task(),tmp)
+            self.assertEqual(trace['final_status'],'needs_review')
+            self.assertTrue(trace['frozen_before_holdout'])
+            self.assertEqual(len(trace['holdout']),2)
+            self.assertEqual(len(trace['rounds']),2)
 
     def test_hidden_inline_caption_table_and_order(self):
         data=b'<h1>T</h1><article><p>Before <a>link</a></p><p hidden>Folded text</p><figcaption>Caption</figcaption><table><tr><td>A</td><td>B</td></tr></table></article>'
